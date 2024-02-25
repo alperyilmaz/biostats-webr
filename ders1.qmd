@@ -1,0 +1,106 @@
+---
+title: "quarto-webr Demo RevealJS Document"
+format: revealjs
+webr:
+  packages: ['ggplot2', 'dplyr'] # Install R packages on document open
+# autoload-packages: false       # Disable automatic loading of packages
+# show-startup-message: false    # Disable displaying status of webR initialization
+filters:
+- webr
+---
+
+## Welcome
+
+Welcome to a demo RevealJS presentation that uses the [`quarto-webr`](https://github.com/coatless/quarto-webr) extension to generate interactive code cells with [Quarto](https://quarto.org) and [webR](https://docs.r-wasm.org/webr/latest/).
+
+:::{.callout-important}
+This template requires a [**pre-release** version of Quarto that is 1.4.502 or greater](https://quarto.org/docs/download/prerelease)  that contains an updated copy of `pandoc`. For more details, please see [Issue #14](https://github.com/coatless/quarto-webr/issues/14). 
+:::
+
+Not the right template? Let's go back to the [documentation portal](../../)
+
+## webR in RevealJS 
+
+This is a webR-enabled code cell in a Quarto RevealJS document.
+
+```{webr-r}
+fit = lm(mpg ~ wt, data = mtcars)
+
+summary(fit)
+```
+
+## Base R Graphing with webR
+
+```{webr-r}
+plot(pressure)
+```
+
+## ggplot2 in webR
+
+```{webr-r}
+ggplot(mpg, aes(displ, hwy, colour = class)) + 
+  geom_point()
+```
+
+## Help Documentation
+
+```{webr-r}
+?mean
+```
+
+
+## Prints, Warnings, and Errors
+
+```{webr-r}
+cat("Hello there!\n")
+
+x = c(1, 2, 3)
+print(x)
+
+warning("Uh-oh, something is amiss")
+
+stop("I'm sorry Dave, I'm afraid I can't do that")
+```
+
+
+## Keyboard Shortcuts
+
+- Run selected code using either:
+  - macOS: <kbd>⌘</kbd> + <kbd>↩/Return</kbd>
+  - Windows/Linux: <kbd>Ctrl</kbd> + <kbd>↩/Enter</kbd>
+- Run the entire code by clicking the "Run code" button or pressing <kbd>Shift</kbd>+<kbd>↩</kbd>. 
+
+```{webr-r}
+print("Hello quarto-webr RevealJS world!")
+
+3 + 5
+```
+
+## Embedded Slides
+
+You can embed the slide deck inside of a Quarto Website or Book by using:
+
+````html
+<style>
+.slide-deck {
+    border: 3px solid #dee2e6;
+    width: 100%;
+    height: 475px;
+}
+</style>
+
+<div>
+```{=html}
+<iframe class="slide-deck" src="path/to/presentation/"></iframe>
+```
+</div>
+````
+
+:::{.callout-note}
+Avoid using _within_ a RevealJS presentation. Only 1 instance of webR should be running.
+:::
+
+## Fin
+
+Thanks for checking out the demo! Let's head back to
+the [documentation portal](../../).
