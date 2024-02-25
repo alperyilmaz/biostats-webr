@@ -4,7 +4,14 @@
     "href": "index.html",
     "title": "Ders Listesi",
     "section": "",
-    "text": "Ders Listesi\n\nDers1 uygulama"
+    "text": "Ders Listesi\n\nDers1 uygulama\n\nDerste kullanılacak dosyalar: mtcars (Excel)"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "MBG1032 Ders Notları",
+    "section": "",
+    "text": "MBG1032 Ders Notları\nYTÜ MBG Bölümü Biyoistatistik ders içerikleri ve uygulamaları sayfasıdır."
   },
   {
     "objectID": "ders1.html#welcome",
@@ -70,10 +77,10 @@
     "text": "Fin\nThanks for checking out the demo! Let’s head back to the documentation portal."
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "MBG1032 Ders Notları",
-    "section": "",
-    "text": "MBG1032 Ders Notları\nYTÜ MBG Bölümü Biyoistatistik ders içerikleri ve uygulamaları sayfasıdır."
+    "objectID": "ders1.html#images",
+    "href": "ders1.html#images",
+    "title": "quarto-webr Demo RevealJS Document",
+    "section": "Images",
+    "text": "Images"
   }
 ]

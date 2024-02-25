@@ -1,3 +1,4 @@
 # Ders Listesi
 
 * [Ders1 uygulama](ders1.qmd)
+  * Derste kullanılacak dosyalar: [mtcars (Excel)](files/mtcars.xlsx)

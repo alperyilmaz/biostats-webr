@@ -104,3 +104,7 @@ Avoid using _within_ a RevealJS presentation. Only 1 instance of webR should be 
 
 Thanks for checking out the demo! Let's head back to
 the [documentation portal](../../).
+
+## Images
+
+![](images/Rlogo.png)
