@@ -3,15 +3,15 @@ project:
   output-dir: docs
 
 website:
-  title: "MBG1032 Biyoistatistik Ders Notları"
+  title: "MBG1032 Biyoistatistik"
   navbar:
     left:
       - href: index.qmd
         text: Home
-      - about.qmd
-
+      - href: about.qmd
+        text: Hakkında
 format:
   html:
     theme: cosmo
-    css: styles.css
+    #css: styles.css
     toc: true

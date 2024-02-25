@@ -1,4 +1,11 @@
-# Ders Listesi
+# MBG1032 Biyoistatistik Ders Notları
 
-* [Ders1 uygulama](ders1.qmd)
-  * Derste kullanılacak dosyalar: [mtcars (Excel)](files/mtcars.xlsx)
+## Ders1
+
+İlk derste, R programı çalıştırılabilecek ortamlar tanıtıldı. Ayrıca "[Is Most Published Research Wrong?](https://www.youtube.com/watch?v=42QuXLucH3Q)" başlıklı videodan bahsedildi. Söz konusu videoda *p-value* değerlerinin istatistik gücü oldukça zayıf şekilde bilimsel makalelerde kullanıldığı ve bu yüzden makalelerin tekrarlanabilirliğinin (*reproducability) düşük olduğundan bahsedildi.
+
+## Ders2
+
+Descriptive istatistik. [Sunum](ders1.qmd)
+
+* Uygulamada kullanılacak dosyalar: [mtcars (Excel)](files/mtcars.xlsx)

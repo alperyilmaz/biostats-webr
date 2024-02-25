@@ -2,9 +2,9 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Ders Listesi",
+    "title": "MBG1032 Biyoistatistik Ders Notları",
     "section": "",
-    "text": "Ders Listesi\n\nDers1 uygulama\n\nDerste kullanılacak dosyalar: mtcars (Excel)"
+    "text": "İlk derste, R programı çalıştırılabilecek ortamlar tanıtıldı. Ayrıca “Is Most Published Research Wrong?” başlıklı videodan bahsedildi. Söz konusu videoda p-value değerlerinin istatistik gücü oldukça zayıf şekilde bilimsel makalelerde kullanıldığı ve bu yüzden makalelerin tekrarlanabilirliğinin (*reproducability) düşük olduğundan bahsedildi.\n\n\n\nDescriptive istatistik. Sunum\n\nUygulamada kullanılacak dosyalar: mtcars (Excel)"
   },
   {
     "objectID": "about.html",
@@ -82,5 +82,19 @@
     "title": "quarto-webr Demo RevealJS Document",
     "section": "Images",
     "text": "Images"
+  },
+  {
+    "objectID": "index.html#ders1",
+    "href": "index.html#ders1",
+    "title": "MBG1032 Biyoistatistik Ders Notları",
+    "section": "",
+    "text": "İlk derste, R programı çalıştırılabilecek ortamlar tanıtıldı. Ayrıca “Is Most Published Research Wrong?” başlıklı videodan bahsedildi. Söz konusu videoda p-value değerlerinin istatistik gücü oldukça zayıf şekilde bilimsel makalelerde kullanıldığı ve bu yüzden makalelerin tekrarlanabilirliğinin (*reproducability) düşük olduğundan bahsedildi."
+  },
+  {
+    "objectID": "index.html#ders2",
+    "href": "index.html#ders2",
+    "title": "MBG1032 Biyoistatistik Ders Notları",
+    "section": "",
+    "text": "Descriptive istatistik. Sunum\n\nUygulamada kullanılacak dosyalar: mtcars (Excel)"
   }
 ]
