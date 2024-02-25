@@ -1,5 +1,12 @@
 [
   {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Ders Listesi",
+    "section": "",
+    "text": "Ders Listesi\n\nDers1 uygulama"
+  },
+  {
     "objectID": "ders1.html#welcome",
     "href": "ders1.html#welcome",
     "title": "quarto-webr Demo RevealJS Document",
@@ -61,5 +68,12 @@
     "title": "quarto-webr Demo RevealJS Document",
     "section": "Fin",
     "text": "Fin\nThanks for checking out the demo! Let’s head back to the documentation portal."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "MBG1032 Ders Notları",
+    "section": "",
+    "text": "MBG1032 Ders Notları\nYTÜ MBG Bölümü Biyoistatistik ders içerikleri ve uygulamaları sayfasıdır."
   }
 ]
