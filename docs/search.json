@@ -4,7 +4,42 @@
     "href": "index.html",
     "title": "MBG1032 Biyoistatistik Ders Notları",
     "section": "",
-    "text": "İlk derste, R programı çalıştırılabilecek ortamlar tanıtıldı. Ayrıca “Is Most Published Research Wrong?” başlıklı videodan bahsedildi. Söz konusu videoda p-value değerlerinin istatistik gücü oldukça zayıf şekilde bilimsel makalelerde kullanıldığı ve bu yüzden makalelerin tekrarlanabilirliğinin (*reproducability) düşük olduğundan bahsedildi.\n\n\n\nDescriptive istatistik. Sunum\n\nUygulamada kullanılacak dosyalar: mtcars (Excel)"
+    "text": "Kitap1: Principles of Biostatistics (Marcello Pagano, Kimberlee Gauvreau)\nKitap2: Biostatistics for the Biological and Health Sciences (Mario F. Triola, Marc M. Triola,Jason Roy)\nKitap3: Introduction to Biostatistics Using R (Mohsen Nady)\n\n\n\n\nTeorik (21 Şubat 2024): İlk derste, R programı çalıştırılabilecek ortamlar tanıtıldı. Ayrıca “Is Most Published Research Wrong?” başlıklı videodan bahsedildi. Söz konusu videoda p-value değerlerinin istatistik gücü oldukça zayıf şekilde bilimsel makalelerde kullanıldığı ve bu yüzden makalelerin tekrarlanabilirliğinin (reproducability) düşük olduğundan bahsedildi.\nUygulama (26 Şubat 2024): R Temelleri Sunum. Uygulamada kullanılacak dosyalar: mtcars (Excel). Bu içerik için kullanılan ek kaynak, “An Introduction to R” adlı online kitap."
+  },
+  {
+    "objectID": "index.html#kaynaklar",
+    "href": "index.html#kaynaklar",
+    "title": "MBG1032 Biyoistatistik Ders Notları",
+    "section": "",
+    "text": "Kitap1: Principles of Biostatistics (Marcello Pagano, Kimberlee Gauvreau)\nKitap2: Biostatistics for the Biological and Health Sciences (Mario F. Triola, Marc M. Triola,Jason Roy)\nKitap3: Introduction to Biostatistics Using R (Mohsen Nady)"
+  },
+  {
+    "objectID": "index.html#ders1",
+    "href": "index.html#ders1",
+    "title": "MBG1032 Biyoistatistik Ders Notları",
+    "section": "",
+    "text": "Teorik (21 Şubat 2024): İlk derste, R programı çalıştırılabilecek ortamlar tanıtıldı. Ayrıca “Is Most Published Research Wrong?” başlıklı videodan bahsedildi. Söz konusu videoda p-value değerlerinin istatistik gücü oldukça zayıf şekilde bilimsel makalelerde kullanıldığı ve bu yüzden makalelerin tekrarlanabilirliğinin (reproducability) düşük olduğundan bahsedildi.\nUygulama (26 Şubat 2024): R Temelleri Sunum. Uygulamada kullanılacak dosyalar: mtcars (Excel). Bu içerik için kullanılan ek kaynak, “An Introduction to R” adlı online kitap."
+  },
+  {
+    "objectID": "uygulama01.html#aritmetik",
+    "href": "uygulama01.html#aritmetik",
+    "title": "R Temelleri",
+    "section": "Aritmetik",
+    "text": "Aritmetik\nR ile aritmetik yapılabilir. (Run Code butonunu tıklayınız)\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nYukarıdaki kutuya herhangi bir işlem yazıp çalıştırabilirsiniz.\n \n8 / 2 + 4 * 5 şeklindeki bir ifadede, işlem sırası doğru olarak izleniyor mu?"
+  },
+  {
+    "objectID": "uygulama01.html#matematik-fonksiyonları",
+    "href": "uygulama01.html#matematik-fonksiyonları",
+    "title": "R Temelleri",
+    "section": "Matematik fonksiyonları",
+    "text": "Matematik fonksiyonları\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nCtrl + Enter ile tek satır, Shift + Enter ile bütün satırlar çalıştırılabilir"
+  },
+  {
+    "objectID": "uygulama01.html#değişkenler-objeler",
+    "href": "uygulama01.html#değişkenler-objeler",
+    "title": "R Temelleri",
+    "section": "Değişkenler / Objeler",
+    "text": "Değişkenler / Objeler\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nBu değişken, oturum boyunca geçerlidir, başka bir slaytta tekrar kullanılabilir.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
   },
   {
     "objectID": "about.html",
@@ -12,89 +47,5 @@
     "title": "MBG1032 Ders Notları",
     "section": "",
     "text": "MBG1032 Ders Notları\nYTÜ MBG Bölümü Biyoistatistik ders içerikleri ve uygulamaları sayfasıdır."
-  },
-  {
-    "objectID": "ders1.html#welcome",
-    "href": "ders1.html#welcome",
-    "title": "quarto-webr Demo RevealJS Document",
-    "section": "Welcome",
-    "text": "Welcome\nWelcome to a demo RevealJS presentation that uses the quarto-webr extension to generate interactive code cells with Quarto and webR.\n\n\n\n\n\n\nImportant\n\n\nThis template requires a pre-release version of Quarto that is 1.4.502 or greater that contains an updated copy of pandoc. For more details, please see Issue #14.\n\n\n\nNot the right template? Let’s go back to the documentation portal"
-  },
-  {
-    "objectID": "ders1.html#webr-in-revealjs",
-    "href": "ders1.html#webr-in-revealjs",
-    "title": "quarto-webr Demo RevealJS Document",
-    "section": "webR in RevealJS",
-    "text": "webR in RevealJS\nThis is a webR-enabled code cell in a Quarto RevealJS document.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "ders1.html#base-r-graphing-with-webr",
-    "href": "ders1.html#base-r-graphing-with-webr",
-    "title": "quarto-webr Demo RevealJS Document",
-    "section": "Base R Graphing with webR",
-    "text": "Base R Graphing with webR\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "ders1.html#ggplot2-in-webr",
-    "href": "ders1.html#ggplot2-in-webr",
-    "title": "quarto-webr Demo RevealJS Document",
-    "section": "ggplot2 in webR",
-    "text": "ggplot2 in webR\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "ders1.html#help-documentation",
-    "href": "ders1.html#help-documentation",
-    "title": "quarto-webr Demo RevealJS Document",
-    "section": "Help Documentation",
-    "text": "Help Documentation\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "ders1.html#prints-warnings-and-errors",
-    "href": "ders1.html#prints-warnings-and-errors",
-    "title": "quarto-webr Demo RevealJS Document",
-    "section": "Prints, Warnings, and Errors",
-    "text": "Prints, Warnings, and Errors\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "ders1.html#keyboard-shortcuts",
-    "href": "ders1.html#keyboard-shortcuts",
-    "title": "quarto-webr Demo RevealJS Document",
-    "section": "Keyboard Shortcuts",
-    "text": "Keyboard Shortcuts\n\nRun selected code using either:\n\nmacOS: ⌘ + ↩︎/Return\nWindows/Linux: Ctrl + ↩︎/Enter\n\nRun the entire code by clicking the “Run code” button or pressing Shift+↩︎.\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "ders1.html#embedded-slides",
-    "href": "ders1.html#embedded-slides",
-    "title": "quarto-webr Demo RevealJS Document",
-    "section": "Embedded Slides",
-    "text": "Embedded Slides\nYou can embed the slide deck inside of a Quarto Website or Book by using:\n&lt;style&gt;\n.slide-deck {\n    border: 3px solid #dee2e6;\n    width: 100%;\n    height: 475px;\n}\n&lt;/style&gt;\n\n&lt;div&gt;\n```{=html}\n&lt;iframe class=\"slide-deck\" src=\"path/to/presentation/\"&gt;&lt;/iframe&gt;\n```\n&lt;/div&gt;\n\n\n\n\n\n\nNote\n\n\nAvoid using within a RevealJS presentation. Only 1 instance of webR should be running."
-  },
-  {
-    "objectID": "ders1.html#fin",
-    "href": "ders1.html#fin",
-    "title": "quarto-webr Demo RevealJS Document",
-    "section": "Fin",
-    "text": "Fin\nThanks for checking out the demo! Let’s head back to the documentation portal."
-  },
-  {
-    "objectID": "ders1.html#images",
-    "href": "ders1.html#images",
-    "title": "quarto-webr Demo RevealJS Document",
-    "section": "Images",
-    "text": "Images"
-  },
-  {
-    "objectID": "index.html#ders1",
-    "href": "index.html#ders1",
-    "title": "MBG1032 Biyoistatistik Ders Notları",
-    "section": "",
-    "text": "İlk derste, R programı çalıştırılabilecek ortamlar tanıtıldı. Ayrıca “Is Most Published Research Wrong?” başlıklı videodan bahsedildi. Söz konusu videoda p-value değerlerinin istatistik gücü oldukça zayıf şekilde bilimsel makalelerde kullanıldığı ve bu yüzden makalelerin tekrarlanabilirliğinin (*reproducability) düşük olduğundan bahsedildi."
-  },
-  {
-    "objectID": "index.html#ders2",
-    "href": "index.html#ders2",
-    "title": "MBG1032 Biyoistatistik Ders Notları",
-    "section": "",
-    "text": "Descriptive istatistik. Sunum\n\nUygulamada kullanılacak dosyalar: mtcars (Excel)"
   }
 ]

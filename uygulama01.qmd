@@ -1,0 +1,55 @@
+---
+title: "R Temelleri"
+format: 
+  revealjs:
+    css: custom.css
+
+#webr:
+#  packages: ['survival','datasets'] # Install R packages on document open
+# autoload-packages: false       # Disable automatic loading of packages
+# show-startup-message: false    # Disable displaying status of webR initialization
+filters:
+- webr
+---
+
+## Aritmetik
+
+R ile aritmetik yapılabilir. (*Run Code* butonunu tıklayınız)
+
+```{webr-r}
+2 + 2
+```
+
+Yukarıdaki kutuya herhangi bir işlem yazıp çalıştırabilirsiniz.
+
+&nbsp;
+
+`8 / 2 + 4 * 5` şeklindeki bir ifadede, işlem sırası doğru olarak izleniyor mu?
+
+## Matematik fonksiyonları
+
+
+```{webr-r}
+log(10)               # doğal logaritma
+log10(100)            # 10 tabında logaritma
+exp(1)                # e üzeri
+sqrt(4)               # kare kök
+4^2                   # 4 üzeri 2
+pi                    # pi sayısı
+```
+
+::: footer
+<kbd>Ctrl + Enter</kbd> ile tek satır, <kbd>Shift + Enter</kbd> ile bütün satırlar çalıştırılabilir
+:::
+
+## Değişkenler / Objeler
+
+```{webr-r}
+my_obj <- 48
+```
+
+Bu değişken, oturum boyunca geçerlidir, başka bir slaytta tekrar kullanılabilir.
+
+```{webr-r}
+my_obj
+```
