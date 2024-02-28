@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "MBG1032 Biyoistatistik Ders Notları",
     "section": "",
-    "text": "Kitap1: Principles of Biostatistics (Marcello Pagano, Kimberlee Gauvreau)\nKitap2: Biostatistics for the Biological and Health Sciences (Mario F. Triola, Marc M. Triola,Jason Roy)\nKitap3: Introduction to Biostatistics Using R (Mohsen Nady)\n\n\n\n\nTeorik (21 Şubat 2024): İlk derste, R programı çalıştırılabilecek ortamlar tanıtıldı. Ayrıca “Is Most Published Research Wrong?” başlıklı videodan bahsedildi. Söz konusu videoda p-value değerlerinin istatistik gücü oldukça zayıf şekilde bilimsel makalelerde kullanıldığı ve bu yüzden makalelerin tekrarlanabilirliğinin (reproducability) düşük olduğundan bahsedildi.\nUygulama (26 Şubat 2024): R Temelleri Sunum. Uygulamada kullanılacak dosyalar: mtcars (Excel). Bu içerik için kullanılan ek kaynak, “An Introduction to R” adlı online kitap.\n\n\n\nTeorik (28 Şubat 2024): Temel istatistik fonksiyonlarından bahsedildi. Sunum linki\nUygulama (4 Mart 2024):"
+    "text": "Kitap1: Principles of Biostatistics (Marcello Pagano, Kimberlee Gauvreau)\nKitap2: Biostatistics for the Biological and Health Sciences (Mario F. Triola, Marc M. Triola,Jason Roy)\nKitap3: Introduction to Biostatistics Using R (Mohsen Nady)\n\n\n\n\nTeorik (21 Şubat 2024): İlk derste, R programı çalıştırılabilecek ortamlar tanıtıldı. Ayrıca “Is Most Published Research Wrong?” başlıklı videodan bahsedildi. Söz konusu videoda p-value değerlerinin istatistik gücü oldukça zayıf şekilde bilimsel makalelerde kullanıldığı ve bu yüzden makalelerin tekrarlanabilirliğinin (reproducability) düşük olduğundan bahsedildi.\nUygulama (26 Şubat 2024): R Temelleri Sunum. Bu içerik için kullanılan ek kaynak, “An Introduction to R” adlı online kitap.\n\n\n\n\nTeorik (28 Şubat 2024): Veri setinin merkezini belirleyen ortalama ve mediandan bahsedildi. Veri setinin dağınıklığını özetleyen sayısal yöntemler (varyans, standart sapma) ve görsel yöntemler (histogram, boxplot) tanıtıldı. Sunum linki\nUygulama (4 Mart 2024):"
   },
   {
     "objectID": "index.html#kaynaklar",
@@ -18,14 +18,14 @@
     "href": "index.html#ders1",
     "title": "MBG1032 Biyoistatistik Ders Notları",
     "section": "",
-    "text": "Teorik (21 Şubat 2024): İlk derste, R programı çalıştırılabilecek ortamlar tanıtıldı. Ayrıca “Is Most Published Research Wrong?” başlıklı videodan bahsedildi. Söz konusu videoda p-value değerlerinin istatistik gücü oldukça zayıf şekilde bilimsel makalelerde kullanıldığı ve bu yüzden makalelerin tekrarlanabilirliğinin (reproducability) düşük olduğundan bahsedildi.\nUygulama (26 Şubat 2024): R Temelleri Sunum. Uygulamada kullanılacak dosyalar: mtcars (Excel). Bu içerik için kullanılan ek kaynak, “An Introduction to R” adlı online kitap."
+    "text": "Teorik (21 Şubat 2024): İlk derste, R programı çalıştırılabilecek ortamlar tanıtıldı. Ayrıca “Is Most Published Research Wrong?” başlıklı videodan bahsedildi. Söz konusu videoda p-value değerlerinin istatistik gücü oldukça zayıf şekilde bilimsel makalelerde kullanıldığı ve bu yüzden makalelerin tekrarlanabilirliğinin (reproducability) düşük olduğundan bahsedildi.\nUygulama (26 Şubat 2024): R Temelleri Sunum. Bu içerik için kullanılan ek kaynak, “An Introduction to R” adlı online kitap."
   },
   {
     "objectID": "index.html#ders2",
     "href": "index.html#ders2",
     "title": "MBG1032 Biyoistatistik Ders Notları",
     "section": "",
-    "text": "Teorik (28 Şubat 2024): Temel istatistik fonksiyonlarından bahsedildi. Sunum linki\nUygulama (4 Mart 2024):"
+    "text": "Teorik (28 Şubat 2024): Veri setinin merkezini belirleyen ortalama ve mediandan bahsedildi. Veri setinin dağınıklığını özetleyen sayısal yöntemler (varyans, standart sapma) ve görsel yöntemler (histogram, boxplot) tanıtıldı. Sunum linki\nUygulama (4 Mart 2024):"
   },
   {
     "objectID": "uygulama01.html#aritmetik",
@@ -149,8 +149,99 @@
   {
     "objectID": "ders02.html#özet",
     "href": "ders02.html#özet",
-    "title": "Ders2: Temel İstatistik Fonksiyonları",
+    "title": "Ders2: Sayısal ve Görsel Özetleme",
     "section": "Özet",
-    "text": "Özet"
+    "text": "Özet\n\nortalama ve standart sapma\ndağılımların çeşitli ölçümleri\n\nrange, IQR\nhistogram\nboxplot"
+  },
+  {
+    "objectID": "ders02.html#ortalama-ve-median",
+    "href": "ders02.html#ortalama-ve-median",
+    "title": "Ders2: Sayısal ve Görsel Özetleme",
+    "section": "Ortalama ve median",
+    "text": "Ortalama ve median\nOrtalama: Değerler toplamının değer sayısına bölünmesi ile hesaplanır.\n\\[\n\\overline{x} = \\frac{\\displaystyle\\sum_{i=1}^{n} x_i}{n}\n\\]\nMedian: Sıralı değerlerin orta noktasıdır. Çift sayıda değer varsa, median, ortadaki iki sayının ortalamasıdır."
+  },
+  {
+    "objectID": "ders02.html#ortalama-ve-median-1",
+    "href": "ders02.html#ortalama-ve-median-1",
+    "title": "Ders2: Sayısal ve Görsel Özetleme",
+    "section": "Ortalama ve median",
+    "text": "Ortalama ve median\n\n\n\n\n\n\nSoru\n\n\nBir veri setine çok büyük veya çok küçük bir sayı eklendiğinde, hangisi daha çok etkilenir, ortalama mı, median mı?\n\n\n\nAşağıdaki örnekte, deneme vektörüne 100 sayısını ekleyip ortalama ve median değerlerini hesaplayın ve karşılaştırın.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders02.html#dağılımların-çeşitli-ölçümleri",
+    "href": "ders02.html#dağılımların-çeşitli-ölçümleri",
+    "title": "Ders2: Sayısal ve Görsel Özetleme",
+    "section": "Dağılımların çeşitli ölçümleri",
+    "text": "Dağılımların çeşitli ölçümleri\nRange/Aralık: En küçük ve büyük değer arasındaki farktır. R’da range() fonskiyonu en düşük ve yüksek değerleri gösterir. Farkı bulmak için max() ve min() fonksiyon çıktıları kullanılabilir.\nIQR: (Interquartile range veya Çeyrekler Arası Aralık) verilerin 1. ve 3. çeyreğinin arasındaki farkı gösterir. R’da IQR() fonksiyonu bu değerleri hesaplar.\n\nrange(iris$Sepal.Length)\n\n[1] 4.3 7.9\n\nIQR(iris$Sepal.Length)\n\n[1] 1.3\n\nquantile(iris$Sepal.Length)\n\n  0%  25%  50%  75% 100% \n 4.3  5.1  5.8  6.4  7.9"
+  },
+  {
+    "objectID": "ders02.html#varyans-ve-standart-sapma",
+    "href": "ders02.html#varyans-ve-standart-sapma",
+    "title": "Ders2: Sayısal ve Görsel Özetleme",
+    "section": "Varyans ve standart sapma",
+    "text": "Varyans ve standart sapma\nVaryans: \\(s^2\\) ile gösterilir, veri setindeki sayıların ortalamadan ne kadar uzak/yakın olduğunu gösterir.\n\\[\ns^2 = \\frac{\\sum_{i=1}^n (x_i - \\overline{x})^2}{n-1}\n\\]\nStandard sapma: Varyansın kareköküdür.\n\\[\ns = \\sqrt{s^2} = \\sqrt{\\frac{\\sum_{i=1}^n (x_i - \\overline{x})^2}{n-1}}\n\\]\nFormülden anlaşılacağı üzere, veri setindeki dağınıklık, ortalamadan uzaklık arttıkça varyans da artmaktadır. Varyans var() fonskiyonu ile, standart sapma ise sd() fonksiyonu ile hesaplanır."
+  },
+  {
+    "objectID": "ders02.html#görsel-özetleme",
+    "href": "ders02.html#görsel-özetleme",
+    "title": "Ders2: Sayısal ve Görsel Özetleme",
+    "section": "Görsel Özetleme",
+    "text": "Görsel Özetleme\nHistogram: Bir veri setindeki değerlerin dağılımını göstermak için, belirli aralıktaki değerlerin frekansını gösteren grafiklerdir. hist() fonksiyonu ile çizilebilir."
+  },
+  {
+    "objectID": "ders02.html#histogram-ayarlar",
+    "href": "ders02.html#histogram-ayarlar",
+    "title": "Ders2: Sayısal ve Görsel Özetleme",
+    "section": "Histogram ayarlar",
+    "text": "Histogram ayarlar\nbreaks parametresi ile histogramın ayrılacağı aralık sayısı ayarlanabilir\n\n\n\nhist(iris$Sepal.Length)\n\n\n\n\n\n\n\n\n\n\nhist(iris$Sepal.Length, \n     breaks = 15)"
+  },
+  {
+    "objectID": "ders02.html#histogram",
+    "href": "ders02.html#histogram",
+    "title": "Ders2: Sayısal ve Görsel Özetleme",
+    "section": "Histogram",
+    "text": "Histogram\nDaha güzel ve karmaşık bir görselleştirme için ggplot2 paketi kullanılabilir.\n\nlibrary(ggplot2)\nggplot(iris, aes(Sepal.Length)) +\n  geom_histogram(color = \"#000000\", fill = \"#0099F8\")"
+  },
+  {
+    "objectID": "ders02.html#ggplot2-ile-histogram",
+    "href": "ders02.html#ggplot2-ile-histogram",
+    "title": "Ders2: Sayısal ve Görsel Özetleme",
+    "section": "ggplot2 ile histogram",
+    "text": "ggplot2 ile histogram\n\nggplot(iris, aes(Sepal.Length)) +\n  geom_histogram(color = \"#000000\", fill = \"#0099F8\") +\n  geom_vline(aes(xintercept = mean(Sepal.Length)), color = \"#000000\", size = 1.25) +\n  geom_vline(aes(xintercept = mean(Sepal.Length) + sd(Sepal.Length)), color = \"#000000\", size = 1, linetype = \"dashed\") +\n  geom_vline(aes(xintercept = mean(Sepal.Length) - sd(Sepal.Length)), color = \"#000000\", size = 1, linetype = \"dashed\") +\n  theme_bw()"
+  },
+  {
+    "objectID": "ders02.html#boxplot",
+    "href": "ders02.html#boxplot",
+    "title": "Ders2: Sayısal ve Görsel Özetleme",
+    "section": "Boxplot",
+    "text": "Boxplot\n\n\nGörsel kaynak: Box Plot with Minitab"
+  },
+  {
+    "objectID": "ders02.html#r-ile-boxplot",
+    "href": "ders02.html#r-ile-boxplot",
+    "title": "Ders2: Sayısal ve Görsel Özetleme",
+    "section": "R ile Boxplot",
+    "text": "R ile Boxplot\nboxplot() fonksiyonu bir vektör (sütün) veya veri tablosu (data frame) için çalıştırılabilir.\n\nboxplot(iris$Sepal.Length)"
+  },
+  {
+    "objectID": "ders02.html#r-ile-boxplot---veri-tablosu",
+    "href": "ders02.html#r-ile-boxplot---veri-tablosu",
+    "title": "Ders2: Sayısal ve Görsel Özetleme",
+    "section": "R ile Boxplot - veri tablosu",
+    "text": "R ile Boxplot - veri tablosu\n\nboxplot(iris)"
+  },
+  {
+    "objectID": "ders02.html#farklı-görselleştirmeler",
+    "href": "ders02.html#farklı-görselleştirmeler",
+    "title": "Ders2: Sayısal ve Görsel Özetleme",
+    "section": "Farklı görselleştirmeler",
+    "text": "Farklı görselleştirmeler\nggplot2 veya temel R’da farklı görselleştirmeler yapılabilir.\n\n\nGörsel kaynak: Plot Grouped Data: Box plot, Bar Plot and More"
+  },
+  {
+    "objectID": "ders02.html#ek-kaynaklar",
+    "href": "ders02.html#ek-kaynaklar",
+    "title": "Ders2: Sayısal ve Görsel Özetleme",
+    "section": "Ek kaynaklar",
+    "text": "Ek kaynaklar\n\nSTHDA sitesinde “Descriptive Statistics and Graphics” adlı sayfa, bu sunumdaki bilgilere ek bilgiler içerir."
   }
 ]
