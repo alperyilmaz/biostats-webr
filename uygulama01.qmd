@@ -53,3 +53,140 @@ Bu değişken, oturum boyunca geçerlidir, başka bir slaytta tekrar kullanılab
 ```{webr-r}
 my_obj
 ```
+
+## Vektörler
+
+R dilinde vektörler önemli bir veri yapısıdır. Aynı tipteki (tamsayı, ondaliklı sayı, karakter, vb.) verilerin toplu şekilde saklandığı bir yapıdır. Başka dillerde "liste", "dizi" olarak adlandırılır. R dilinde vektörler `c()` fonksiyonu ile oluşturulur.
+
+```{webr-r}
+my_vec <- c(2, 3, 1, 6, 4, 3, 3, 7)
+```
+
+## İndeks
+
+Bir vektördeki elemanlara indeksler yardımıyla erişim sağlanır. R dilinde indeks 1'den başlar. 5. elemanına ulaşmak için `my_vec[5]` şeklinde komut yazılmalıdır.
+
+```{webr-r}
+my_vec[5]
+```
+
+İndeksler aralıklarla da kullanılabilir. Örneğin, 1. ve 2. elemanına ulaşmak için `my_vec[1:2]` komutu kullanılabilir.
+
+```{webr-r}
+my_vec[1:2]
+```
+
+## İndeks vektörü
+
+Bir vektördeki belirli elemanlara erişim için indekslerden oluşan bir vektör kullanılabilir. 5. ve 3. elemanlara (bu sırada) erişilmek isteniyorsa `c(5,3)` vektörü indeks olarak kullanılabilir
+
+```{webr-r}
+my_vec[c(5,3)]
+```
+
+## Vektörlerle işlemler
+
+Normalde bir liste veya dizinin işlenmesi için `for` döngüsü kullanılır. R'de ise vektörlerle işlem yapılırken, bir fonksiyon veya işlem otomatik olarak bütün elemanlara uygulanır.
+
+Ayrıca, R'daki çoğu fonksiyon vektörler ile uyumludur, her bir eleman için *veya* tüm vektör için çalışabilirler.
+
+```{webr-r}
+my_vec * 2
+log(my_vec)
+
+mean(my_vec)
+```
+
+## Karşılaştırma operatörleri
+
+Eşitlik `==`, büyüktür `>`, küçüktür `<`, eşit değil `!=` operatörleri bir vektöre uygulandığında, her bir eleman için karşılaştırma yapılır.
+
+```{webr-r}
+my_vec > 4
+```
+
+Sonuçlar logical/mantıksal (*TRUE/FALSE*) vektör olarak döndürülür. Bu sonuç vektörü, *maske* olarak kullanılabilir, yani indeks olarak kullanıldığında, "TRUE" değerlerin denk geldiği elemanlar gösterilebilir.
+
+```{webr-r}
+my_vec[my_vec > 4]
+```
+
+Farkedildiği üzere, bu işlem sayesinde veri kümesinde *filtreleme* yapılmıştır.
+
+## Sıralama
+
+`sort()` fonksiyonu ile vektörler sıralanabilir.
+
+```{webr-r}
+sort(my_vec)
+```
+
+**Soru:** ters yönde sıralama yapmak için ne yapılmalıdır?
+
+`order()` fonksiyonu ile de sıralama yapılabilir. Ancak bu fonksiyon doğrudan elemanları sıralamaz; bunun yerine, sıralı elemanların orijinal vektördeki indekslerini döndürür. 
+
+> Tablolarda sütunları veya satırları sıralamak gerektiğinde kullanılır.
+
+## Sıralama
+
+Aşağıdaki kutuda `my_vec[order(my_vec)]` komutunu çalıştıp çıktısını `sort()` ile karşılaştırınız.
+
+```{webr-r}
+order(my_vec)
+```
+
+## NA 
+
+NA "not available" anlamına gelir. Herhangi bir vektörde NA olması durumunda toplama, min/max  gibi işlemlerin de NA olarak sonuçlanmasına neden olur.
+
+```{webr-r}
+temp  <- c(7.2, NA, 7.1, 6.9, 6.5, 5.8, 5.8, 5.5, NA, 5.5)
+mean(temp)
+min(temp)
+```
+
+Bu sorunu aşmak için `na.rm=TRUE` parametresi kullanılabilir.
+```{webr-r}
+min(temp, na.rm=TRUE)
+```
+
+## Data Frame / veri tablosu/çerçevesi
+
+Bir veri tablosu, aynı boydaki farklı vektörlerin sütun olarak birleşmesi olarak düşünülebilir. Bu veri yapısı en çok kullanılan veri yapısıdır. Aşağıdaki örnekte, `iris` veri seti kullanılmıştır.
+
+```{webr-r}
+iris
+```
+
+## Veri tablosu / erişim
+
+Bir veri tablosundaki herhangi bir sütunun tamamına `$sütun_adı` şeklinde ulaşılabilir.
+
+Veri tablosunun belirli bir kısmına erişmek için `[satır, sütun]` şeklinde kullanılabilir.
+
+`iris$Species` komutu *Species* sütununu vektör olarak elde eder. `iris[1:5,]` ilk 5 satırı elde eder. `iris[1:5,1:2]` şeklindeki komut, ilk 2 sütunu  ve ilk 5 satırı elde eder.
+
+Bir sonraki slaytta bahsi geçen komutları deneyiniz.
+
+## Veri tablosu / erişim
+
+```{webr-r}
+iris$Species
+```
+
+## Veri tablosu / işlemler
+
+* `dim(iris)` komutu, veri setinin boyutlarını verir.(satır, sütun) şeklinde
+* `nrow(iris)` komutu, veri setindeki satır sayısını verir.
+* `ncol(iris)` komutu, veri setindeki sütun sayısını verir.
+* `str(iris)` komutu, veri setinin yapısını, sütun tipleri ve ilk verileri gösterir.
+* `summary(iris)` komutu, veri setindeki istatistiksel ölçümleri verir.
+
+Bir sonraki slaytta bahsi geçen komutları deneyiniz.
+
+## Veri tablosu / işlemler
+
+```{webr-r}
+dim(iris)
+```
+
