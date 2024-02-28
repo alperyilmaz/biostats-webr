@@ -10,4 +10,13 @@
 
 **Teorik** (*21 Şubat 2024*): İlk derste, R programı çalıştırılabilecek ortamlar tanıtıldı. Ayrıca "[Is Most Published Research Wrong?](https://www.youtube.com/watch?v=42QuXLucH3Q)" başlıklı videodan bahsedildi. Söz konusu videoda *p-value* değerlerinin istatistik gücü oldukça zayıf şekilde bilimsel makalelerde kullanıldığı ve bu yüzden makalelerin tekrarlanabilirliğinin (*reproducability*) düşük olduğundan bahsedildi.
 
-**Uygulama** (*26 Şubat 2024*): R Temelleri [Sunum](uygulama01.qmd). Uygulamada kullanılacak dosyalar: [mtcars (Excel)](files/mtcars.xlsx). Bu içerik için kullanılan ek kaynak, "[An Introduction to R](https://intro2r.com/getting-started.html)" adlı online kitap.
+**Uygulama** (*26 Şubat 2024*): R Temelleri [Sunum](uygulama01.qmd). Bu içerik için kullanılan ek kaynak, "[An Introduction to R](https://intro2r.com/getting-started.html)" adlı online kitap.
+
+<!--  Uygulamada kullanılacak dosyalar: [mtcars (Excel)](files/mtcars.xlsx) -->
+
+## Ders2
+
+**Teorik** (*28 Şubat 2024*): Veri setinin merkezini belirleyen ortalama ve mediandan bahsedildi. Veri setinin dağınıklığını özetleyen sayısal yöntemler (varyans, standart sapma) ve görsel yöntemler (histogram, boxplot) tanıtıldı. [Sunum linki](ders02.qmd)
+
+**Uygulama** (*4 Mart 2024*):
+

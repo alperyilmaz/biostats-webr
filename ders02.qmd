@@ -1,0 +1,175 @@
+---
+title: "Ders2: Sayısal ve Görsel Özetleme"
+subtitle: "MBG1032 - Doç.Dr.Alper YILMAZ - *28 Şubat 2024*"
+format:
+  revealjs:
+    css: custom.css
+    smaller: true
+    scrollable: true
+
+#webr:
+#  packages: ['ggplot2'] # Install R packages on document open
+# autoload-packages: false       # Disable automatic loading of packages
+# show-startup-message: false    # Disable displaying status of webR initialization
+filters:
+  - webr
+---
+
+## Özet
+
+* ortalama ve standart sapma
+* dağılımların çeşitli ölçümleri
+  * range, IQR
+  * histogram
+  * boxplot
+  
+## Ortalama ve median
+
+**Ortalama**: Değerler toplamının değer sayısına bölünmesi ile hesaplanır.
+
+$$
+\overline{x} = \frac{\displaystyle\sum_{i=1}^{n} x_i}{n}
+$$
+
+
+**Median**: Sıralı değerlerin orta noktasıdır. Çift sayıda değer varsa, median, ortadaki iki sayının ortalamasıdır.
+
+## Ortalama ve median
+
+:::{.callout-important}
+## Soru
+Bir veri setine çok büyük veya çok küçük bir sayı eklendiğinde, hangisi daha çok etkilenir, ortalama mı, median mı?
+:::
+
+Aşağıdaki örnekte, `deneme` vektörüne *100* sayısını ekleyip ortalama ve median değerlerini hesaplayın ve karşılaştırın.
+
+```{webr-r}
+deneme <- c(4,2,3,1,5,9,7,4,2,11)
+mean(deneme)
+median(deneme)
+```
+
+## Dağılımların çeşitli ölçümleri
+
+**Range/Aralık**: En küçük ve büyük değer arasındaki farktır. R'da `range()` fonskiyonu en düşük ve yüksek değerleri gösterir. Farkı bulmak için `max()` ve `min()` fonksiyon çıktıları kullanılabilir.
+
+**IQR**: (*Interquartile range* veya *Çeyrekler Arası Aralık*) verilerin 1. ve 3. çeyreğinin arasındaki farkı gösterir. R'da `IQR()` fonksiyonu bu değerleri hesaplar.
+
+```{r}
+#| echo: true
+range(iris$Sepal.Length)
+IQR(iris$Sepal.Length)
+quantile(iris$Sepal.Length)
+```
+
+## Varyans ve standart sapma 
+
+**Varyans**: $s^2$ ile gösterilir, veri setindeki sayıların ortalamadan ne kadar uzak/yakın olduğunu gösterir.
+
+$$
+s^2 = \frac{\sum_{i=1}^n (x_i - \overline{x})^2}{n-1}
+$$
+
+**Standard sapma**: Varyansın kareköküdür.
+
+$$
+s = \sqrt{s^2} = \sqrt{\frac{\sum_{i=1}^n (x_i - \overline{x})^2}{n-1}}
+$$
+
+
+Formülden anlaşılacağı üzere, veri setindeki dağınıklık, ortalamadan uzaklık arttıkça varyans da artmaktadır. Varyans `var()` fonskiyonu ile, standart sapma ise `sd()` fonksiyonu ile hesaplanır.
+
+## Görsel Özetleme
+
+**Histogram**: Bir veri setindeki değerlerin dağılımını göstermak için, belirli aralıktaki değerlerin frekansını gösteren grafiklerdir. `hist()` fonksiyonu ile çizilebilir.
+
+```{r}
+hist(iris$Sepal.Length)
+```
+
+## Histogram ayarlar
+
+`breaks` parametresi ile histogramın ayrılacağı aralık sayısı ayarlanabilir
+
+:::: {.columns}
+
+::: {.column width="50%"}
+```{r}
+#| echo: true
+hist(iris$Sepal.Length)
+```
+:::
+
+::: {.column width="50%"}
+```{r}
+#| echo: true
+hist(iris$Sepal.Length, 
+     breaks = 15)
+```
+:::
+
+::::
+
+## Histogram
+
+Daha güzel ve karmaşık bir görselleştirme için `ggplot2` paketi kullanılabilir.
+
+```{r}
+#| echo: true
+library(ggplot2)
+ggplot(iris, aes(Sepal.Length)) +
+  geom_histogram(color = "#000000", fill = "#0099F8") 
+```
+
+
+
+## ggplot2 ile histogram
+```{r}
+#| echo: true
+ggplot(iris, aes(Sepal.Length)) +
+  geom_histogram(color = "#000000", fill = "#0099F8") +
+  geom_vline(aes(xintercept = mean(Sepal.Length)), color = "#000000", size = 1.25) +
+  geom_vline(aes(xintercept = mean(Sepal.Length) + sd(Sepal.Length)), color = "#000000", size = 1, linetype = "dashed") +
+  geom_vline(aes(xintercept = mean(Sepal.Length) - sd(Sepal.Length)), color = "#000000", size = 1, linetype = "dashed") +
+  theme_bw()
+```
+
+
+## Boxplot
+
+
+![](images/boxplot.png)
+
+:::footer
+Görsel kaynak: [Box Plot with Minitab](https://leansigmacorporation.com/box-plot-with-minitab/)
+:::
+
+## R ile Boxplot
+
+`boxplot()` fonksiyonu bir vektör (sütün) veya veri tablosu (data frame) için çalıştırılabilir.
+
+```{r}
+#| echo: true
+boxplot(iris$Sepal.Length)
+```
+
+## R ile Boxplot - veri tablosu
+
+```{r}
+#| echo: true
+boxplot(iris)
+```
+
+## Farklı görselleştirmeler
+
+`ggplot2` veya temel R'da farklı görselleştirmeler yapılabilir.
+
+![](images/farkli-gorseller.png)
+
+:::footer
+Görsel kaynak: [Plot Grouped Data: Box plot, Bar Plot and More](http://www.sthda.com/english/articles/32-r-graphics-essentials/132-plot-grouped-data-box-plot-bar-plot-and-more/)
+:::
+
+## Ek kaynaklar
+
+* [STHDA](http://www.sthda.com/english/wiki/descriptive-statistics-and-graphics) sitesinde "Descriptive Statistics and Graphics" adlı sayfa, bu sunumdaki bilgilere ek bilgiler içerir.
