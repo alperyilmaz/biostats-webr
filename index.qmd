@@ -18,5 +18,10 @@
 
 **Teorik** (*28 Şubat 2024*): Veri setinin merkezini belirleyen ortalama ve mediandan bahsedildi. Veri setinin dağınıklığını özetleyen sayısal yöntemler (varyans, standart sapma) ve görsel yöntemler (histogram, boxplot) tanıtıldı. [Sunum linki](ders02.qmd)
 
-**Uygulama** (*4 Mart 2024*):
+**Uygulama** (*4 Mart 2024*): [iris.xlsx](files/iris.xlsx) dosyasını kullanarak, Excel'de hücre aralıklarını seçme, <kbd>Ctrl</kbd> ve <kbd>Shift</kbd> tuşları ile hızlı seçim ve gezinme gösterildi. Tek bir sütün için ortalama, medyan, 1. ve 3. çeyrek dilim hesaplama ve standard sapma hesabı yapıldı. Excel'de formüllerin başka hücrelere uygulanması gösterildi. Excel'in yeni versiyonunda Boxplot ve Histogram grafikleri çizilebileceği tartışıldı.
 
+## Ders03
+
+**Teorik** (*6 Mart 2024*):
+
+**Uygulama** (*11 Mart 2024*):
