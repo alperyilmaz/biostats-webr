@@ -165,7 +165,7 @@
     "href": "ders03.html#normal-dağılım-fonksiyonu",
     "title": "Ders3: İhtimal hesabı ve dağılım",
     "section": "Normal dağılım fonksiyonu",
-    "text": "Normal dağılım fonksiyonu\nR’da rnorm, dnorm, pnorm ve qnorm fonksiyonları ile normal dağılım gösteren veri üretilebilir ve belirli aralıkların ihtimal hesabı hesaplanabilir."
+    "text": "Normal dağılım fonksiyonu\nR’da rnorm, dnorm, pnorm ve qnorm fonksiyonları ile normal dağılım gösteren veri üretilebilir ve belirli aralıkların ihtimal hesabı hesaplanabilir.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
   },
   {
     "objectID": "ders02.html#özet",

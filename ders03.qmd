@@ -22,6 +22,8 @@ filters:
 
 R'da rnorm, dnorm, pnorm ve qnorm fonksiyonları ile normal dağılım gösteren veri üretilebilir ve belirli aralıkların ihtimal hesabı hesaplanabilir.
 
-```{web-r}
+```{webr-r}
+rnorm()
+
 
 ```
