@@ -1,0 +1,27 @@
+---
+title: "Ders3: İhtimal hesabı ve dağılım"
+subtitle: "MBG1032 - Doç.Dr.Alper YILMAZ - *28 Şubat 2024*"
+format:
+  revealjs:
+    css: custom.css
+    smaller: true
+    scrollable: true
+
+#webr:
+#  packages: ['ggplot2'] # Install R packages on document open
+# autoload-packages: false       # Disable automatic loading of packages
+# show-startup-message: false    # Disable displaying status of webR initialization
+filters:
+  - webr
+---
+
+## Özet
+
+
+## Normal dağılım fonksiyonu
+
+R'da rnorm, dnorm, pnorm ve qnorm fonksiyonları ile normal dağılım gösteren veri üretilebilir ve belirli aralıkların ihtimal hesabı hesaplanabilir.
+
+```{web-r}
+
+```
