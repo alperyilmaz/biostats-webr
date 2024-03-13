@@ -158,11 +158,11 @@ rpois(n = 365, 4.4)
 
 *k* olay olma ihtimali
 
-![](images/image-20240313060426417.png){.nostretch fig-align="center" width="80%"}
+![](images/image-20240313060426417.png){.nostretch fig-align="center" width="50%"}
 
 *t* zaman içinde gerçekleşen *k* olay ihtimali
 
-![](images/image-20240313060542543.png){.nostretch fig-align="center" width="80%"}
+![](images/image-20240313060542543.png){.nostretch fig-align="center" width="50%"}
 
 ## Örnek
 
