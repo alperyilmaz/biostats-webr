@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "MBG1032 Biyoistatistik Ders Notları",
     "section": "",
-    "text": "Kitap1: Principles of Biostatistics (Marcello Pagano, Kimberlee Gauvreau)\nKitap2: Biostatistics for the Biological and Health Sciences (Mario F. Triola, Marc M. Triola,Jason Roy)\nKitap3: Introduction to Biostatistics Using R (Mohsen Nady)\nKitap4: R Programı İle Temel İstatistiksel Yöntemler Uygulamalı İstatistik Turcademy üzerinden ücretsiz olarak erişilebilir.\n\n\n\n\nTeorik (21 Şubat 2024): İlk derste, R programı çalıştırılabilecek ortamlar tanıtıldı. Ayrıca “Is Most Published Research Wrong?” başlıklı videodan bahsedildi. Söz konusu videoda p-value değerlerinin istatistik gücü oldukça zayıf şekilde bilimsel makalelerde kullanıldığı ve bu yüzden makalelerin tekrarlanabilirliğinin (reproducability) düşük olduğundan bahsedildi.\nUygulama (26 Şubat 2024): R Temelleri Sunum. Bu içerik için kullanılan ek kaynak, “An Introduction to R” adlı online kitap.\n\n\n\n\nTeorik (28 Şubat 2024): Veri setinin merkezini belirleyen ortalama ve mediandan bahsedildi. Veri setinin dağınıklığını özetleyen sayısal yöntemler (varyans, standart sapma) ve görsel yöntemler (histogram, boxplot) tanıtıldı. Sunum linki\nUygulama (4 Mart 2024): iris.xlsx dosyasını kullanarak, Excel’de hücre aralıklarını seçme, Ctrl ve Shift tuşları ile hızlı seçim ve gezinme gösterildi. Tek bir sütün için ortalama, medyan, 1. ve 3. çeyrek dilim hesaplama ve standard sapma hesabı yapıldı. Excel’de formüllerin başka hücrelere uygulanması gösterildi. Excel’in yeni versiyonunda Boxplot ve Histogram grafikleri çizilebileceği tartışıldı.\n\n\n\nTeorik (6 Mart 2024): Olaslık hesabına dair özellikler, küme prensibi üzerinden anlatıldı. Normal dağılımın özellikleri tanıtıldı.\nUygulama (11 Mart 2024):"
+    "text": "Kitap1: Principles of Biostatistics (Marcello Pagano, Kimberlee Gauvreau)\nKitap2: Biostatistics for the Biological and Health Sciences (Mario F. Triola, Marc M. Triola,Jason Roy)\nKitap3: Introduction to Biostatistics Using R (Mohsen Nady)\nKitap4: R Programı İle Temel İstatistiksel Yöntemler Uygulamalı İstatistik Turcademy üzerinden ücretsiz olarak erişilebilir.\n\n\n\n\nTeorik (21 Şubat 2024): İlk derste, R programı çalıştırılabilecek ortamlar tanıtıldı. Ayrıca “Is Most Published Research Wrong?” başlıklı videodan bahsedildi. Söz konusu videoda p-value değerlerinin istatistik gücü oldukça zayıf şekilde bilimsel makalelerde kullanıldığı ve bu yüzden makalelerin tekrarlanabilirliğinin (reproducability) düşük olduğundan bahsedildi.\nUygulama (26 Şubat 2024): R Temelleri Sunum. Bu içerik için kullanılan ek kaynak, “An Introduction to R” adlı online kitap.\n\n\n\n\nTeorik (28 Şubat 2024): Veri setinin merkezini belirleyen ortalama ve mediandan bahsedildi. Veri setinin dağınıklığını özetleyen sayısal yöntemler (varyans, standart sapma) ve görsel yöntemler (histogram, boxplot) tanıtıldı. Sunum linki\nUygulama (4 Mart 2024): iris.xlsx dosyasını kullanarak, Excel’de hücre aralıklarını seçme, Ctrl ve Shift tuşları ile hızlı seçim ve gezinme gösterildi. Tek bir sütün için ortalama, medyan, 1. ve 3. çeyrek dilim hesaplama ve standard sapma hesabı yapıldı. Excel’de formüllerin başka hücrelere uygulanması gösterildi. Excel’in yeni versiyonunda Boxplot ve Histogram grafikleri çizilebileceği tartışıldı.\n\n\n\nTeorik (6 Mart 2024): Olaslık hesabına dair özellikler, küme prensibi üzerinden anlatıldı. Normal dağılımın özellikleri tanıtıldı. Sunum linki\nUygulama (11 Mart 2024): R’da pnorm(), qnorm() ve dnorm() fonksiyonları kullanarak ihtimal hesapları yapıldı ve normal dağılıma uygun rastgele sayılar üretildi. Excel’de normal dağılıma uygun sayılar üreten formüller kullanıldı.\n\n\n\nTeorik (13 Mart 2024): Poisson ve Bernoulli dağılımları tanıtıldı. Sunum linki\nPratik (18 Mart 2024):"
   },
   {
     "objectID": "index.html#kaynaklar",
@@ -32,7 +32,14 @@
     "href": "index.html#ders03",
     "title": "MBG1032 Biyoistatistik Ders Notları",
     "section": "",
-    "text": "Teorik (6 Mart 2024): Olaslık hesabına dair özellikler, küme prensibi üzerinden anlatıldı. Normal dağılımın özellikleri tanıtıldı.\nUygulama (11 Mart 2024):"
+    "text": "Teorik (6 Mart 2024): Olaslık hesabına dair özellikler, küme prensibi üzerinden anlatıldı. Normal dağılımın özellikleri tanıtıldı. Sunum linki\nUygulama (11 Mart 2024): R’da pnorm(), qnorm() ve dnorm() fonksiyonları kullanarak ihtimal hesapları yapıldı ve normal dağılıma uygun rastgele sayılar üretildi. Excel’de normal dağılıma uygun sayılar üreten formüller kullanıldı."
+  },
+  {
+    "objectID": "index.html#ders04",
+    "href": "index.html#ders04",
+    "title": "MBG1032 Biyoistatistik Ders Notları",
+    "section": "",
+    "text": "Teorik (13 Mart 2024): Poisson ve Bernoulli dağılımları tanıtıldı. Sunum linki\nPratik (18 Mart 2024):"
   },
   {
     "objectID": "uygulama01.html#aritmetik",
@@ -158,14 +165,112 @@
     "href": "ders03.html#özet",
     "title": "Ders3: İhtimal hesabı ve dağılım",
     "section": "Özet",
-    "text": "Özet"
+    "text": "Özet\n\nOlasılık hesapları\nNormal dağılım\nPoisson dağılımı\nBernoulli dağılımı"
   },
   {
-    "objectID": "ders03.html#normal-dağılım-fonksiyonu",
-    "href": "ders03.html#normal-dağılım-fonksiyonu",
+    "objectID": "ders03.html#olasılık-hesapları",
+    "href": "ders03.html#olasılık-hesapları",
     "title": "Ders3: İhtimal hesabı ve dağılım",
-    "section": "Normal dağılım fonksiyonu",
-    "text": "Normal dağılım fonksiyonu\nR’da rnorm, dnorm, pnorm ve qnorm fonksiyonları ile normal dağılım gösteren veri üretilebilir ve belirli aralıkların ihtimal hesabı hesaplanabilir.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+    "section": "Olasılık hesapları",
+    "text": "Olasılık hesapları"
+  },
+  {
+    "objectID": "ders03.html#normal-dağılım-modeli",
+    "href": "ders03.html#normal-dağılım-modeli",
+    "title": "Ders3: İhtimal hesabı ve dağılım",
+    "section": "Normal dağılım modeli",
+    "text": "Normal dağılım modeli"
+  },
+  {
+    "objectID": "ders03.html#normal-dağılım-kuralı",
+    "href": "ders03.html#normal-dağılım-kuralı",
+    "title": "Ders3: İhtimal hesabı ve dağılım",
+    "section": "Normal dağılım kuralı",
+    "text": "Normal dağılım kuralı"
+  },
+  {
+    "objectID": "ders03.html#z-skor",
+    "href": "ders03.html#z-skor",
+    "title": "Ders3: İhtimal hesabı ve dağılım",
+    "section": "Z skor",
+    "text": "Z skor\nOrtalamaya kaç standard sapma uzak olunduğunu gösterir ve normal dağılım değerlerini standart hale getirir (~ -3,3)\n\\[ Z = \\frac{x-\\mu}{\\sigma}  \\]"
+  },
+  {
+    "objectID": "ders03.html#normal-dağılım-tablosu",
+    "href": "ders03.html#normal-dağılım-tablosu",
+    "title": "Ders3: İhtimal hesabı ve dağılım",
+    "section": "Normal dağılım tablosu",
+    "text": "Normal dağılım tablosu"
+  },
+  {
+    "objectID": "ders03.html#örnek",
+    "href": "ders03.html#örnek",
+    "title": "Ders3: İhtimal hesabı ve dağılım",
+    "section": "Örnek",
+    "text": "Örnek\nSAT skorları için ortalama 1500, standart sapma 300 iken 1800’den düşük puan alma ihtimali kaçtır? 1800 puan yüzde kaçlık dilime denk gelmektedir?\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nZ-skor açısından\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders03.html#örnek-2",
+    "href": "ders03.html#örnek-2",
+    "title": "Ders3: İhtimal hesabı ve dağılım",
+    "section": "Örnek 2",
+    "text": "Örnek 2\nBir öğrencinin SAT skoru 1630’tan yüksek olma ihtimali nedir?\n\n\n\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders03.html#soru",
+    "href": "ders03.html#soru",
+    "title": "Ders3: İhtimal hesabı ve dağılım",
+    "section": "Soru",
+    "text": "Soru\n20-62 yaş erkeklerin boy dağılımı ortalaması 70 inç ve standart sapması 3.3 inç iken, rastgele seçilen bir erkeğin boyunun 69 inç ve 74 inç arasında olması ihtimali nedir?\n\n\n\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders03.html#soru-1",
+    "href": "ders03.html#soru-1",
+    "title": "Ders3: İhtimal hesabı ve dağılım",
+    "section": "Soru",
+    "text": "Soru\nBoyu 40 yüzdelik dilimde olan bir kişinin boyu kaçtır?\n\n\n\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders03.html#poisson-dağılımı",
+    "href": "ders03.html#poisson-dağılımı",
+    "title": "Ders3: İhtimal hesabı ve dağılım",
+    "section": "Poisson dağılımı",
+    "text": "Poisson dağılımı\nPoisson dağılımı, nadiren meydana gelen olayların, belirli bir zaman aralığında veya belirli bir alanda kaç kere gerçekleşeceğini tahmin etmek için kullanılan bir olasılık dağılımıdır.\nAşağıdaki grafik 8 milyon nüfuslu bir şehirde bir yıl boyunca hastaneye gelen günlük Akut Miyokard İnfarktüsü (AMI) vaka sayısını göstermektedir (ortalama=4.4 kişi)"
+  },
+  {
+    "objectID": "ders03.html#örnekler",
+    "href": "ders03.html#örnekler",
+    "title": "Ders3: İhtimal hesabı ve dağılım",
+    "section": "Örnekler",
+    "text": "Örnekler\nPoisson dağılımı gösteren biyolojik veriler, genellikle nadir ve rastgele meydana gelen olaylara odaklanır. Bu tür veriler, çeşitli biyolojik disiplinler ve uygulama alanları üzerinden örneklerle açıklanabilir:\n\nMikrobiyoloji ve Bakteriyoloji:\n\nBakteri Kolonilerinin Sayımı: Petri kabında belirli bir süre ve koşullar altında büyüyen bakteri kolonilerinin sayımı. Örneğin, bir laboratuvar ortamında standart bir hacimdeki besiyeri üzerine ekilen bakteri spesifik bir zaman diliminde kaç koloni oluşturur.\nVirüs Titrelemeleri: Bir hacimdeki virüs partikülleri sayısı. Bu, özellikle su örneklerinde veya biyolojik sıvılarda yapılan ölçümler için geçerlidir.\n\nEkoloji ve Koruma Biyolojisi:\n\nEnder Türlerin Birey Sayısı: Belirli bir alandaki nadir görülen türlerin birey sayıları. Bu, büyük koruma alanlarında veya özel ekosistemlerde endemik türler için kullanılabilir.\nParazit Sayımı: Belirli bir konakçı popülasyonunda parazitlerin dağılımı. Örneğin, bir balık popülasyonunda bulunan parazit türlerinin sayısı.\n\nMoleküler Biyoloji ve Genetik:\n\nDNA Mutasyonları: Belirli bir gen uzunluğu boyunca meydana gelen mutasyonların sayısı. Özellikle büyük genomlar üzerinde nadiren meydana gelen olaylar için kullanılır.\nTranskripsiyonel Olaylar: Belirli bir zaman diliminde hücrede meydana gelen mRNA transkripsiyon olaylarının sayısı.\n\nHalk Sağlığı ve Epidemiyoloji:\n\nNadir Hastalık Vakaları: Bir bölgede belirli bir zaman diliminde görülen nadir hastalık vakalarının sayısı. Özellikle düşük prevalanslı hastalıklar için geçerlidir.\nSalgın Olayları: Belirli bir zaman aralığında bir popülasyonda meydana gelen salgın hastalık vakalarının sayısı.\n\nNörobilim ve Fizyoloji:\n\nNöronal Ateşleme Olayları: Belirli bir zaman diliminde bir veya birden fazla nöronun ateşleme (aksiyon potansiyeli) olaylarının sayısı. Özellikle düşük ateşleme hızlarına sahip nöronlar için Poisson dağılımı uygulanabilir.\nSinaptik Olaylar: Sinapslarda meydana gelen nörotransmitter salınım olaylarının sayısı."
+  },
+  {
+    "objectID": "ders03.html#poisson-dağılımı-1",
+    "href": "ders03.html#poisson-dağılımı-1",
+    "title": "Ders3: İhtimal hesabı ve dağılım",
+    "section": "Poisson dağılımı",
+    "text": "Poisson dağılımı\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders03.html#poisson-fonksiyonu",
+    "href": "ders03.html#poisson-fonksiyonu",
+    "title": "Ders3: İhtimal hesabı ve dağılım",
+    "section": "Poisson fonksiyonu",
+    "text": "Poisson fonksiyonu\nk olay olma ihtimali\n\n\n\n\n\nt zaman içinde gerçekleşen k olay ihtimali"
+  },
+  {
+    "objectID": "ders03.html#örnek-1",
+    "href": "ders03.html#örnek-1",
+    "title": "Ders3: İhtimal hesabı ve dağılım",
+    "section": "Örnek",
+    "text": "Örnek\n\n7 gün içinde 2 hastanın AMI tesşhisi ile hastanelik olma ihtimali nedir? ($ $​=4.4, k=2, t=7)\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n7 gün içinde en fazla 2 kişinin hastanelik olması ihtimali nedir?\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nEn az 3 kişinin 7 gün içinde hastanelik olma ihtimali kaçtır?"
+  },
+  {
+    "objectID": "ders03.html#bernoulli-dağılımı",
+    "href": "ders03.html#bernoulli-dağılımı",
+    "title": "Ders3: İhtimal hesabı ve dağılım",
+    "section": "Bernoulli dağılımı",
+    "text": "Bernoulli dağılımı\nBernoulli dağılımı, yalnızca iki sonuçtan (başarı veya başarısızlık, evet veya hayır, 1 veya 0 gibi) birini alabilen rastgele bir deneyi modellemek için kullanılan bir olasılık dağılımıdır. Binomial dağılımında n defa gerçekleşen, ikili sonucu olan olayların ihtimali hesaplanırken, Bernoulli dağılımında k=1’dir.\nMadeni para atışı, hastalık testi sonucu, bitki tohumu çimlenmesi, ilaç tepkisi gibi örnekler Bernoulli dağılımı için örnek gösterilebilir."
   },
   {
     "objectID": "ders02.html#özet",

@@ -487,7 +487,7 @@
   };
 
   // Store cell data
-  globalThis.qwebrCellDetails = [{"options":{"out-height":"","fig-width":7,"label":"unnamed-chunk-1","warning":"true","context":"interactive","out-width":"700px","dpi":72,"output":"true","results":"markup","fig-cap":"","comment":"","message":"true","fig-height":5,"read-only":"false","classes":"","autorun":"false"},"code":"rnorm()\n","id":1}];
+  globalThis.qwebrCellDetails = [{"id":1,"code":"pnorm(q = 1800, 1500, 300)","options":{"dpi":72,"fig-cap":"","message":"true","out-height":"","label":"unnamed-chunk-1","fig-height":5,"context":"interactive","classes":"","out-width":"700px","output":"true","read-only":"false","autorun":"false","results":"markup","comment":"","fig-width":7,"warning":"true"}},{"id":2,"code":"pnorm(q = 1, 0, 1)","options":{"dpi":72,"fig-cap":"","message":"true","out-height":"","label":"unnamed-chunk-2","fig-height":5,"context":"interactive","classes":"","out-width":"700px","output":"true","read-only":"false","autorun":"false","results":"markup","comment":"","fig-width":7,"warning":"true"}},{"id":3,"code":"pnorm(1630, 1500, 300)\n1 - pnorm(1630, 1500, 300)","options":{"dpi":72,"fig-cap":"","message":"true","out-height":"","label":"unnamed-chunk-3","fig-height":5,"context":"interactive","classes":"","out-width":"700px","output":"true","read-only":"false","autorun":"false","results":"markup","comment":"","fig-width":7,"warning":"true"}},{"id":4,"code":"# Çözümünüzü buraya yazıp çalıştırınız","options":{"dpi":72,"fig-cap":"","message":"true","out-height":"","label":"unnamed-chunk-4","fig-height":5,"context":"interactive","classes":"","out-width":"700px","output":"true","read-only":"false","autorun":"false","results":"markup","comment":"","fig-width":7,"warning":"true"}},{"id":5,"code":"qnorm(0.4, 70, 3.3)","options":{"dpi":72,"fig-cap":"","message":"true","out-height":"","label":"unnamed-chunk-5","fig-height":5,"context":"interactive","classes":"","out-width":"700px","output":"true","read-only":"false","autorun":"false","results":"markup","comment":"","fig-width":7,"warning":"true"}},{"id":6,"code":"# hist() fonskiyonu ile histogram görüntüleyiniz\nrpois(n = 365, 4.4)","options":{"dpi":72,"fig-cap":"","message":"true","out-height":"","label":"unnamed-chunk-6","fig-height":5,"context":"interactive","classes":"","out-width":"700px","output":"true","read-only":"false","autorun":"false","results":"markup","comment":"","fig-width":7,"warning":"true"}},{"id":7,"code":"dpois(lambda = 30.8, x = 2)","options":{"dpi":72,"fig-cap":"","message":"true","out-height":"","label":"unnamed-chunk-7","fig-height":5,"context":"interactive","classes":"","out-width":"700px","output":"true","read-only":"false","autorun":"false","results":"markup","comment":"","fig-width":7,"warning":"true"}},{"id":8,"code":"dpois(lambda = 30.8, x = 0) + dpois(lambda = 30.8, x = 1) + dpois(lambda = 30.8, x = 2)\n\n# VEYA\n\nppois(q = 2, lambda = 30.8)","options":{"dpi":72,"fig-cap":"","message":"true","out-height":"","label":"unnamed-chunk-8","fig-height":5,"context":"interactive","classes":"","out-width":"700px","output":"true","read-only":"false","autorun":"false","results":"markup","comment":"","fig-width":7,"warning":"true"}}];
 
   </script>
   <script type="module">
@@ -1392,12 +1392,166 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
 </section>
 <section id="özet" class="slide level2">
 <h2>Özet</h2>
+<ul>
+<li>Olasılık hesapları</li>
+<li>Normal dağılım</li>
+<li>Poisson dağılımı</li>
+<li>Bernoulli dağılımı</li>
+</ul>
 </section>
-<section id="normal-dağılım-fonksiyonu" class="slide level2">
-<h2>Normal dağılım fonksiyonu</h2>
-<p>R’da rnorm, dnorm, pnorm ve qnorm fonksiyonları ile normal dağılım gösteren veri üretilebilir ve belirli aralıkların ihtimal hesabı hesaplanabilir.</p>
+<section id="olasılık-hesapları" class="slide level2">
+<h2>Olasılık hesapları</h2>
+</section>
+<section id="normal-dağılım-modeli" class="slide level2">
+<h2>Normal dağılım modeli</h2>
+
+<img data-src="images/norm-dagilim.png" class="r-stretch"></section>
+<section id="normal-dağılım-kuralı" class="slide level2">
+<h2>Normal dağılım kuralı</h2>
+
+<img data-src="images/68-95-99.png" class="r-stretch"></section>
+<section id="z-skor" class="slide level2">
+<h2>Z skor</h2>
+<p>Ortalamaya kaç standard sapma uzak olunduğunu gösterir ve normal dağılım değerlerini standart hale getirir (~ -3,3)</p>
+<p><span class="math display">\[ Z = \frac{x-\mu}{\sigma}  \]</span></p>
+
+<img data-src="images/arti-eksi-z.png" class="r-stretch"></section>
+<section id="normal-dağılım-tablosu" class="slide level2">
+<h2>Normal dağılım tablosu</h2>
+
+<img data-src="images/zskor-tablosu.png" class="r-stretch"></section>
+<section id="örnek" class="slide level2">
+<h2>Örnek</h2>
+<p>SAT skorları için ortalama 1500, standart sapma 300 iken 1800’den düşük puan alma ihtimali kaçtır? 1800 puan yüzde kaçlık dilime denk gelmektedir?</p>
 <div id="qwebr-insertion-location-1"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<p>Z-skor açısından</p>
+<div id="qwebr-insertion-location-2"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/sat-1800.png" class="quarto-figure quarto-figure-center" style="width:70.0%"></p>
+</figure>
+</div>
+</section>
+<section id="örnek-2" class="slide level2">
+<h2>Örnek 2</h2>
+<p>Bir öğrencinin SAT skoru 1630’tan yüksek olma ihtimali nedir?</p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/sat-1630.png" class="quarto-figure quarto-figure-center" style="width:80.0%"></p>
+</figure>
+</div>
+<div id="qwebr-insertion-location-3"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+</section>
+<section id="section" class="slide level2">
+<h2></h2>
+
+<img data-src="images/above1630.png" class="r-stretch"></section>
+<section id="soru" class="slide level2">
+<h2>Soru</h2>
+<p>20-62 yaş erkeklerin boy dağılımı ortalaması 70 inç ve standart sapması 3.3 inç iken, rastgele seçilen bir erkeğin boyunun 69 inç ve 74 inç arasında olması ihtimali nedir?</p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/soru-aralik.png" class="quarto-figure quarto-figure-center" style="width:80.0%"></p>
+</figure>
+</div>
+<div id="qwebr-insertion-location-4"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+</section>
+<section id="soru-1" class="slide level2">
+<h2>Soru</h2>
+<p>Boyu 40 yüzdelik dilimde olan bir kişinin boyu kaçtır?</p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/tersten-40.png" class="quarto-figure quarto-figure-center" style="width:80.0%"></p>
+</figure>
+</div>
+<div id="qwebr-insertion-location-5"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+</section>
+<section id="poisson-dağılımı" class="slide level2">
+<h2>Poisson dağılımı</h2>
+<p>Poisson dağılımı, nadiren meydana gelen olayların, belirli bir zaman aralığında veya belirli bir alanda kaç kere gerçekleşeceğini tahmin etmek için kullanılan bir olasılık dağılımıdır.</p>
+<p>Aşağıdaki grafik 8 milyon nüfuslu bir şehirde bir yıl boyunca hastaneye gelen günlük Akut Miyokard İnfarktüsü (AMI) vaka sayısını göstermektedir (ortalama=4.4 kişi)</p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/poisson.png" class="quarto-figure quarto-figure-center" style="width:80.0%"></p>
+</figure>
+</div>
+</section>
+<section id="örnekler" class="slide level2 scrollable">
+<h2>Örnekler</h2>
+<p>Poisson dağılımı gösteren biyolojik veriler, genellikle nadir ve rastgele meydana gelen olaylara odaklanır. Bu tür veriler, çeşitli biyolojik disiplinler ve uygulama alanları üzerinden örneklerle açıklanabilir:</p>
+<ol type="1">
+<li><strong>Mikrobiyoloji ve Bakteriyoloji</strong>:
+<ul>
+<li><strong>Bakteri Kolonilerinin Sayımı</strong>: Petri kabında belirli bir süre ve koşullar altında büyüyen bakteri kolonilerinin sayımı. Örneğin, bir laboratuvar ortamında standart bir hacimdeki besiyeri üzerine ekilen bakteri spesifik bir zaman diliminde kaç koloni oluşturur.</li>
+<li><strong>Virüs Titrelemeleri</strong>: Bir hacimdeki virüs partikülleri sayısı. Bu, özellikle su örneklerinde veya biyolojik sıvılarda yapılan ölçümler için geçerlidir.</li>
+</ul></li>
+<li><strong>Ekoloji ve Koruma Biyolojisi</strong>:
+<ul>
+<li><strong>Ender Türlerin Birey Sayısı</strong>: Belirli bir alandaki nadir görülen türlerin birey sayıları. Bu, büyük koruma alanlarında veya özel ekosistemlerde endemik türler için kullanılabilir.</li>
+<li><strong>Parazit Sayımı</strong>: Belirli bir konakçı popülasyonunda parazitlerin dağılımı. Örneğin, bir balık popülasyonunda bulunan parazit türlerinin sayısı.</li>
+</ul></li>
+<li><strong>Moleküler Biyoloji ve Genetik</strong>:
+<ul>
+<li><strong>DNA Mutasyonları</strong>: Belirli bir gen uzunluğu boyunca meydana gelen mutasyonların sayısı. Özellikle büyük genomlar üzerinde nadiren meydana gelen olaylar için kullanılır.</li>
+<li><strong>Transkripsiyonel Olaylar</strong>: Belirli bir zaman diliminde hücrede meydana gelen mRNA transkripsiyon olaylarının sayısı.</li>
+</ul></li>
+<li><strong>Halk Sağlığı ve Epidemiyoloji</strong>:
+<ul>
+<li><strong>Nadir Hastalık Vakaları</strong>: Bir bölgede belirli bir zaman diliminde görülen nadir hastalık vakalarının sayısı. Özellikle düşük prevalanslı hastalıklar için geçerlidir.</li>
+<li><strong>Salgın Olayları</strong>: Belirli bir zaman aralığında bir popülasyonda meydana gelen salgın hastalık vakalarının sayısı.</li>
+</ul></li>
+<li><strong>Nörobilim ve Fizyoloji</strong>:
+<ul>
+<li><strong>Nöronal Ateşleme Olayları</strong>: Belirli bir zaman diliminde bir veya birden fazla nöronun ateşleme (aksiyon potansiyeli) olaylarının sayısı. Özellikle düşük ateşleme hızlarına sahip nöronlar için Poisson dağılımı uygulanabilir.</li>
+<li><strong>Sinaptik Olaylar</strong>: Sinapslarda meydana gelen nörotransmitter salınım olaylarının sayısı.</li>
+</ul></li>
+</ol>
+</section>
+<section id="poisson-dağılımı-1" class="slide level2">
+<h2>Poisson dağılımı</h2>
+<div id="qwebr-insertion-location-6"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+</section>
+<section id="poisson-fonksiyonu" class="slide level2">
+<h2>Poisson fonksiyonu</h2>
+<p><em>k</em> olay olma ihtimali</p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/image-20240313060426417.png" class="nostretch quarto-figure quarto-figure-center" style="width:80.0%"></p>
+</figure>
+</div>
+<p><em>t</em> zaman içinde gerçekleşen <em>k</em> olay ihtimali</p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/image-20240313060542543.png" class="nostretch quarto-figure quarto-figure-center" style="width:80.0%"></p>
+</figure>
+</div>
+</section>
+<section id="örnek-1" class="slide level2">
+<h2>Örnek</h2>
+<ul>
+<li>7 gün içinde 2 hastanın AMI tesşhisi ile hastanelik olma ihtimali nedir? ($ $​=4.4, <em>k</em>=2, <em>t</em>=7)</li>
+</ul>
+<div id="qwebr-insertion-location-7"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<ul>
+<li>7 gün içinde en fazla 2 kişinin hastanelik olması ihtimali nedir?</li>
+</ul>
+<div id="qwebr-insertion-location-8"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<ul>
+<li>En az 3 kişinin 7 gün içinde hastanelik olma ihtimali kaçtır?</li>
+</ul>
+</section>
+<section id="bernoulli-dağılımı" class="slide level2">
+<h2>Bernoulli dağılımı</h2>
+<p>Bernoulli dağılımı, yalnızca iki sonuçtan (başarı veya başarısızlık, evet veya hayır, 1 veya 0 gibi) birini alabilen rastgele bir deneyi modellemek için kullanılan bir olasılık dağılımıdır. Binomial dağılımında <em>n</em> defa gerçekleşen, ikili sonucu olan olayların ihtimali hesaplanırken, Bernoulli dağılımında <em>k</em>=1’dir.</p>
+<p>Madeni para atışı, hastalık testi sonucu, bitki tohumu çimlenmesi, ilaç tepkisi gibi örnekler Bernoulli dağılımı için örnek gösterilebilir.</p>
 
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
