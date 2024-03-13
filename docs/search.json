@@ -263,7 +263,7 @@
     "href": "ders03.html#örnek-1",
     "title": "Ders3: İhtimal hesabı ve dağılım",
     "section": "Örnek",
-    "text": "Örnek\n\n7 gün içinde 2 hastanın AMI tesşhisi ile hastanelik olma ihtimali nedir? ($ $​=4.4, k=2, t=7)\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n7 gün içinde en fazla 2 kişinin hastanelik olması ihtimali nedir?\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nEn az 3 kişinin 7 gün içinde hastanelik olma ihtimali kaçtır?"
+    "text": "Örnek\n\n7 gün içinde 2 hastanın AMI tesşhisi ile hastanelik olma ihtimali nedir? (\\(\\lambda\\)​=4.4, k=2, t=7)\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n7 gün içinde en fazla 2 kişinin hastanelik olması ihtimali nedir?\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nEn az 3 kişinin 7 gün içinde hastanelik olma ihtimali kaçtır?"
   },
   {
     "objectID": "ders03.html#bernoulli-dağılımı",

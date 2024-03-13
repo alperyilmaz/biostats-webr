@@ -166,7 +166,7 @@ rpois(n = 365, 4.4)
 
 ## Örnek
 
-* 7 gün içinde 2 hastanın AMI tesşhisi ile hastanelik olma ihtimali nedir? ($ \lambda $​=4.4, *k*=2, *t*=7) 
+* 7 gün içinde 2 hastanın AMI tesşhisi ile hastanelik olma ihtimali nedir? ($\lambda$​=4.4, *k*=2, *t*=7) 
 
 ```{webr-r}
 dpois(lambda = 30.8, x = 2)
