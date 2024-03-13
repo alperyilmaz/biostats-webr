@@ -6,7 +6,7 @@ format:
     css: custom.css
     smaller: true
     scrollable: true
-
+typora-copy-images-to: images
 #webr:
 #  packages: ['ggplot2'] # Install R packages on document open
 # autoload-packages: false       # Disable automatic loading of packages
@@ -17,13 +17,181 @@ filters:
 
 ## Özet
 
+* Olasılık hesapları
+* Normal dağılım
+* Poisson dağılımı
+* Bernoulli dağılımı
 
-## Normal dağılım fonksiyonu
+## Olasılık hesapları
 
-R'da rnorm, dnorm, pnorm ve qnorm fonksiyonları ile normal dağılım gösteren veri üretilebilir ve belirli aralıkların ihtimal hesabı hesaplanabilir.
+
+
+## Normal dağılım modeli
+
+![](images/norm-dagilim.png)
+
+
+
+## Normal dağılım kuralı
+
+![](images/68-95-99.png)
+
+## Z skor
+
+Ortalamaya kaç standard sapma uzak olunduğunu gösterir ve normal dağılım değerlerini standart hale getirir (~ -3,3)
+
+$$ Z = \frac{x-\mu}{\sigma}  $$
+
+
+
+![](images/arti-eksi-z.png)
+
+
+
+## Normal dağılım tablosu
+![](images/zskor-tablosu.png)
+
+## Örnek
+
+SAT skorları için ortalama 1500, standart sapma 300 iken 1800'den düşük puan alma ihtimali kaçtır? 1800 puan yüzde kaçlık dilime denk gelmektedir?
 
 ```{webr-r}
-rnorm()
+pnorm(q = 1800, 1500, 300)
+```
 
+Z-skor açısından
+
+```{webr-r}
+pnorm(q = 1, 0, 1)
+```
+
+
+
+![](images/sat-1800.png){.nostretch fig-align="center" width="70%"}
+
+## Örnek 2
+
+Bir öğrencinin SAT skoru 1630'tan yüksek olma ihtimali nedir?
+
+![](images/sat-1630.png){.nostretch fig-align="center" width="80%"}
+
+```{webr-r}
+pnorm(1630, 1500, 300)
+1 - pnorm(1630, 1500, 300)
+```
+
+
+
+## 
+
+![](images/above1630.png)
+
+
+
+## Soru
+
+20-62 yaş erkeklerin boy dağılımı ortalaması 70 inç ve standart sapması 3.3 inç iken, rastgele seçilen bir erkeğin boyunun 69 inç ve 74 inç arasında olması ihtimali nedir?
+
+![](images/soru-aralik.png){.nostretch fig-align="center" width="80%"}
+
+```{webr-r}
+# Çözümünüzü buraya yazıp çalıştırınız
 
 ```
+
+
+
+## Soru
+
+Boyu 40 yüzdelik dilimde olan bir kişinin boyu kaçtır?
+
+![](images/tersten-40.png){.nostretch fig-align="center" width="80%"}
+
+```{webr-r}
+qnorm(0.4, 70, 3.3)
+```
+
+
+
+## Poisson dağılımı
+
+Poisson dağılımı, nadiren meydana gelen olayların, belirli bir zaman  aralığında veya belirli bir alanda kaç kere gerçekleşeceğini tahmin  etmek için kullanılan bir olasılık dağılımıdır.
+
+Aşağıdaki grafik 8 milyon nüfuslu bir şehirde bir yıl boyunca hastaneye gelen günlük Akut Miyokard İnfarktüsü (AMI) vaka sayısını göstermektedir (ortalama=4.4 kişi) 
+
+![](images/poisson.png){.nostretch fig-align="center" width="80%"}
+
+## Örnekler {.scrollable}
+
+Poisson dağılımı gösteren biyolojik veriler, genellikle nadir ve rastgele meydana gelen olaylara odaklanır. Bu tür veriler, çeşitli biyolojik disiplinler ve uygulama alanları üzerinden örneklerle açıklanabilir:
+
+1. **Mikrobiyoloji ve Bakteriyoloji**:
+   - **Bakteri Kolonilerinin Sayımı**: Petri kabında belirli bir süre ve koşullar altında büyüyen bakteri kolonilerinin sayımı. Örneğin, bir laboratuvar ortamında standart bir hacimdeki besiyeri üzerine ekilen bakteri spesifik bir zaman diliminde kaç koloni oluşturur.
+   - **Virüs Titrelemeleri**: Bir hacimdeki virüs partikülleri sayısı. Bu, özellikle su örneklerinde veya biyolojik sıvılarda yapılan ölçümler için geçerlidir.
+
+2. **Ekoloji ve Koruma Biyolojisi**:
+   - **Ender Türlerin Birey Sayısı**: Belirli bir alandaki nadir görülen türlerin birey sayıları. Bu, büyük koruma alanlarında veya özel ekosistemlerde endemik türler için kullanılabilir.
+   - **Parazit Sayımı**: Belirli bir konakçı popülasyonunda parazitlerin dağılımı. Örneğin, bir balık popülasyonunda bulunan parazit türlerinin sayısı.
+
+3. **Moleküler Biyoloji ve Genetik**:
+   - **DNA Mutasyonları**: Belirli bir gen uzunluğu boyunca meydana gelen mutasyonların sayısı. Özellikle büyük genomlar üzerinde nadiren meydana gelen olaylar için kullanılır.
+   - **Transkripsiyonel Olaylar**: Belirli bir zaman diliminde hücrede meydana gelen mRNA transkripsiyon olaylarının sayısı.
+
+4. **Halk Sağlığı ve Epidemiyoloji**:
+   - **Nadir Hastalık Vakaları**: Bir bölgede belirli bir zaman diliminde görülen nadir hastalık vakalarının sayısı. Özellikle düşük prevalanslı hastalıklar için geçerlidir.
+   - **Salgın Olayları**: Belirli bir zaman aralığında bir popülasyonda meydana gelen salgın hastalık vakalarının sayısı.
+
+5. **Nörobilim ve Fizyoloji**:
+   - **Nöronal Ateşleme Olayları**: Belirli bir zaman diliminde bir veya birden fazla nöronun ateşleme (aksiyon potansiyeli) olaylarının sayısı. Özellikle düşük ateşleme hızlarına sahip nöronlar için Poisson dağılımı uygulanabilir.
+   - **Sinaptik Olaylar**: Sinapslarda meydana gelen nörotransmitter salınım olaylarının sayısı.
+
+## Poisson dağılımı
+
+```{webr-r}
+# hist() fonskiyonu ile histogram görüntüleyiniz
+rpois(n = 365, 4.4)
+```
+
+
+
+## Poisson fonksiyonu
+
+*k* olay olma ihtimali
+
+![](images/image-20240313060426417.png){.nostretch fig-align="center" width="80%"}
+
+*t* zaman içinde gerçekleşen *k* olay ihtimali
+
+![](images/image-20240313060542543.png){.nostretch fig-align="center" width="80%"}
+
+## Örnek
+
+* 7 gün içinde 2 hastanın AMI tesşhisi ile hastanelik olma ihtimali nedir? ($ \lambda $​=4.4, *k*=2, *t*=7) 
+
+```{webr-r}
+dpois(lambda = 30.8, x = 2)
+```
+
+* 7 gün içinde en fazla 2 kişinin hastanelik olması ihtimali nedir?
+
+```{webr-r}
+dpois(lambda = 30.8, x = 0) + dpois(lambda = 30.8, x = 1) + dpois(lambda = 30.8, x = 2)
+
+# VEYA
+
+ppois(q = 2, lambda = 30.8)
+```
+
+* En az 3 kişinin 7 gün içinde hastanelik olma ihtimali kaçtır?
+
+
+
+## Bernoulli dağılımı
+
+Bernoulli dağılımı, yalnızca iki sonuçtan (başarı veya başarısızlık,  evet veya hayır, 1 veya 0 gibi) birini alabilen rastgele bir deneyi  modellemek için kullanılan bir olasılık dağılımıdır. Binomial dağılımında *n* defa gerçekleşen, ikili sonucu olan olayların ihtimali hesaplanırken, Bernoulli dağılımında *k*=1'dir.
+
+Madeni para atışı, hastalık testi sonucu, bitki tohumu çimlenmesi, ilaç tepkisi gibi örnekler Bernoulli dağılımı için örnek gösterilebilir.
+
+
+
+

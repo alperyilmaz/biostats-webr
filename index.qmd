@@ -23,6 +23,12 @@
 
 ## Ders03
 
-**Teorik** (*6 Mart 2024*): Olaslık hesabına dair özellikler, küme prensibi üzerinden anlatıldı. Normal dağılımın özellikleri tanıtıldı.
+**Teorik** (*6 Mart 2024*): Olaslık hesabına dair özellikler, küme prensibi üzerinden anlatıldı. Normal dağılımın özellikleri tanıtıldı. [Sunum linki](ders03.qmd)
 
-**Uygulama** (*11 Mart 2024*):
+**Uygulama** (*11 Mart 2024*): R'da `pnorm()`, `qnorm()` ve `dnorm()` fonksiyonları kullanarak ihtimal hesapları yapıldı ve normal dağılıma uygun rastgele sayılar üretildi. Excel'de normal dağılıma uygun sayılar üreten formüller kullanıldı.
+
+## Ders04
+
+**Teorik** (*13 Mart 2024*): Poisson ve Bernoulli dağılımları  tanıtıldı. [Sunum linki](ders03.qmd)
+
+**Pratik** (*18 Mart 2024*): 
