@@ -2,9 +2,9 @@
 
 ## Kaynaklar
 
-* Kitap1: [Principles of Biostatistics](https://www.taylorfrancis.com/books/mono/10.1201/9780429489624/principles-biostatistics-marcello-pagano-kimberlee-gauvreau) (*Marcello Pagano, Kimberlee Gauvreau*)
-* Kitap2: [Biostatistics for the Biological and Health Sciences](https://www.pearson.com/en-us/subject-catalog/p/biostatistics-for-the-biological-and-health-sciences/P200000007576/9780137863792) (*Mario F. Triola, Marc M. Triola,Jason Roy*)
-* Kitap3: [Introduction to Biostatistics Using R](https://books.google.com.tr/books/about/Introduction_to_Biostatistics_Using_R.html?id=MLO0zgEACAAJ&redir_esc=y) (*Mohsen Nady*)
+* Kitap1: [Introductory Statistics for the Life and Biomedical Sciences](https://www.openintro.org/book/biostat/) (*Julie Vu, David Harrington*) [Leanpub sitesinden](https://leanpub.com/biostat) ücretsiz olarak (*You Pay* kısmını 0'a çekerek) indirebilirsiniz. 
+* Kitap2: [Principles of Biostatistics](https://www.taylorfrancis.com/books/mono/10.1201/9780429489624/principles-biostatistics-marcello-pagano-kimberlee-gauvreau) (*Marcello Pagano, Kimberlee Gauvreau*)
+* Kitap3: [Biostatistics for the Biological and Health Sciences](https://www.pearson.com/en-us/subject-catalog/p/biostatistics-for-the-biological-and-health-sciences/P200000007576/9780137863792) (*Mario F. Triola, Marc M. Triola,Jason Roy*)
 * Kitap4: [R Programı İle Temel İstatistiksel Yöntemler Uygulamalı İstatistik](https://www.turcademy.com/tr/kitap/r-programi-ile-temel-istatistiksel-yontemler-uygulamali-istatistik-istatistik-yontemler-9789750263682) *Turcademy* üzerinden ücretsiz olarak erişilebilir.
 
 ## Ders1
@@ -29,6 +29,6 @@
 
 ## Ders04
 
-**Teorik** (*13 Mart 2024*): Poisson ve Bernoulli dağılımları  tanıtıldı. [Sunum linki](ders03.qmd)
+**Teorik** (*13 Mart 2024*): Poisson ve Bernoulli dağılımları tanıtıldı. [Sunum linki](ders03.qmd)
 
-**Pratik** (*18 Mart 2024*): 
+**Pratik** (*18 Mart 2024*): [Uygulama sunum linki](ders03-uygulama.qmd)

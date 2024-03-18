@@ -1,0 +1,128 @@
+---
+title: "Ders3: Dağılımlar - Uygulama"
+subtitle: "MBG1032 - Doç.Dr.Alper YILMAZ - *18 Mart 2024*"
+format:
+  revealjs:
+    css: custom.css
+    smaller: true
+    scrollable: true
+typora-copy-images-to: images
+#webr:
+#  packages: ['ggplot2'] # Install R packages on document open
+# autoload-packages: false       # Disable automatic loading of packages
+# show-startup-message: false    # Disable displaying status of webR initialization
+filters:
+  - webr
+---
+
+## Normal dağılım soruları
+
+Taralı bölgenin alanını bulunuz. Kemik yoğunluğu verisinde ortalama 0 ve standart sapma 1 olduğunu kabul ediniz.
+
+:::: {.columns}
+::: {.column width="65%"}
+![](images/image-20240318053615004.png)
+:::
+::: {.column width="35%"}
+
+Önce, [Z skor tablosunu](https://www.z-table.com/) kullanarak çözünüz.
+
+<br>
+
+Daha sonra R ile çözünüz.
+```{webr-r}
+# R ile çözünüz
+```
+:::
+:::: 
+<!-- end columns -->
+
+##
+
+Yine aynı veride, işaretli Z skorunu bulunuz.
+
+<br>
+
+:::: {.columns}
+::: {.column width="65%"}
+![](images/image-20240318054032803.png)
+:::
+::: {.column width="35%"}
+
+Önce, [Z skor tablosunu](https://www.z-table.com/) kullanarak çözünüz.
+
+<br>
+
+Daha sonra R ile çözünüz.
+```{webr-r}
+# R ile çözünüz
+```
+:::
+:::: 
+
+##
+
+Taralı bölgenin alanını bulunuz. Toplanan veriler *IQ* değerlerine aittir ve ortalaması 100 ve standart sapması 15'tir.
+
+<br>
+
+:::: {.columns}
+::: {.column width="65%"}
+![](images/image-20240318054546557.png)
+:::
+::: {.column width="35%"}
+
+[Z skor tablosunu](https://www.z-table.com/) kullanarak nasıl çözebiliriz?
+
+<br>
+
+R ile çözünüz.
+```{webr-r}
+# R ile çözünüz
+```
+:::
+:::: 
+
+##
+
+Aşağıda işaret edilen *IQ* değerini bulunuz
+
+<br>
+
+:::: {.columns}
+::: {.column width="65%"}
+![](images/image-20240318054635066.png)
+:::
+::: {.column width="35%"}
+
+[Z skor tablosunu](https://www.z-table.com/) kullanarak nasıl çözebiliriz?
+
+<br>
+
+R ile çözünüz.
+```{webr-r}
+# R ile çözünüz
+```
+:::
+:::: 
+
+## 
+
+13-20 yaş arası kadınlarda kalp atış hızı ortalama 74 ve standart sapması 12.5'tir. Rastgele seçilen bir kadının;
+
+* kalp atış hızının 100'den az olması,
+* kalp atış hızının 80'den çok olması,
+* kalp atış hızının 70 ile 90 arasında olması, ihtimallerini hesaplayınız.
+
+* P<sub>90</sub> değerini bulunuz (alttaki 90% ile üstteki 10% ayıran değer)
+* İlk çeyrek dilime (*Q*<sub>1</sub>) denk gelen kalp atış hızı değerini bulunuz.
+
+
+## Poisson dağılımı
+
+## Bernoulli dağılımı
+
+## Geometrik dağılım
+
+## Negatif binomial dağılım
+
