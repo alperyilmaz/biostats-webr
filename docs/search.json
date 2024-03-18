@@ -4,14 +4,14 @@
     "href": "index.html",
     "title": "MBG1032 Biyoistatistik Ders Notları",
     "section": "",
-    "text": "Kitap1: Principles of Biostatistics (Marcello Pagano, Kimberlee Gauvreau)\nKitap2: Biostatistics for the Biological and Health Sciences (Mario F. Triola, Marc M. Triola,Jason Roy)\nKitap3: Introduction to Biostatistics Using R (Mohsen Nady)\nKitap4: R Programı İle Temel İstatistiksel Yöntemler Uygulamalı İstatistik Turcademy üzerinden ücretsiz olarak erişilebilir.\n\n\n\n\nTeorik (21 Şubat 2024): İlk derste, R programı çalıştırılabilecek ortamlar tanıtıldı. Ayrıca “Is Most Published Research Wrong?” başlıklı videodan bahsedildi. Söz konusu videoda p-value değerlerinin istatistik gücü oldukça zayıf şekilde bilimsel makalelerde kullanıldığı ve bu yüzden makalelerin tekrarlanabilirliğinin (reproducability) düşük olduğundan bahsedildi.\nUygulama (26 Şubat 2024): R Temelleri Sunum. Bu içerik için kullanılan ek kaynak, “An Introduction to R” adlı online kitap.\n\n\n\n\nTeorik (28 Şubat 2024): Veri setinin merkezini belirleyen ortalama ve mediandan bahsedildi. Veri setinin dağınıklığını özetleyen sayısal yöntemler (varyans, standart sapma) ve görsel yöntemler (histogram, boxplot) tanıtıldı. Sunum linki\nUygulama (4 Mart 2024): iris.xlsx dosyasını kullanarak, Excel’de hücre aralıklarını seçme, Ctrl ve Shift tuşları ile hızlı seçim ve gezinme gösterildi. Tek bir sütün için ortalama, medyan, 1. ve 3. çeyrek dilim hesaplama ve standard sapma hesabı yapıldı. Excel’de formüllerin başka hücrelere uygulanması gösterildi. Excel’in yeni versiyonunda Boxplot ve Histogram grafikleri çizilebileceği tartışıldı.\n\n\n\nTeorik (6 Mart 2024): Olaslık hesabına dair özellikler, küme prensibi üzerinden anlatıldı. Normal dağılımın özellikleri tanıtıldı. Sunum linki\nUygulama (11 Mart 2024): R’da pnorm(), qnorm() ve dnorm() fonksiyonları kullanarak ihtimal hesapları yapıldı ve normal dağılıma uygun rastgele sayılar üretildi. Excel’de normal dağılıma uygun sayılar üreten formüller kullanıldı.\n\n\n\nTeorik (13 Mart 2024): Poisson ve Bernoulli dağılımları tanıtıldı. Sunum linki\nPratik (18 Mart 2024):"
+    "text": "Kitap1: Introductory Statistics for the Life and Biomedical Sciences (Julie Vu, David Harrington) Leanpub sitesinden ücretsiz olarak (You Pay kısmını 0’a çekerek) indirebilirsiniz.\nKitap2: Principles of Biostatistics (Marcello Pagano, Kimberlee Gauvreau)\nKitap3: Biostatistics for the Biological and Health Sciences (Mario F. Triola, Marc M. Triola,Jason Roy)\nKitap4: R Programı İle Temel İstatistiksel Yöntemler Uygulamalı İstatistik Turcademy üzerinden ücretsiz olarak erişilebilir.\n\n\n\n\nTeorik (21 Şubat 2024): İlk derste, R programı çalıştırılabilecek ortamlar tanıtıldı. Ayrıca “Is Most Published Research Wrong?” başlıklı videodan bahsedildi. Söz konusu videoda p-value değerlerinin istatistik gücü oldukça zayıf şekilde bilimsel makalelerde kullanıldığı ve bu yüzden makalelerin tekrarlanabilirliğinin (reproducability) düşük olduğundan bahsedildi.\nUygulama (26 Şubat 2024): R Temelleri Sunum. Bu içerik için kullanılan ek kaynak, “An Introduction to R” adlı online kitap.\n\n\n\n\nTeorik (28 Şubat 2024): Veri setinin merkezini belirleyen ortalama ve mediandan bahsedildi. Veri setinin dağınıklığını özetleyen sayısal yöntemler (varyans, standart sapma) ve görsel yöntemler (histogram, boxplot) tanıtıldı. Sunum linki\nUygulama (4 Mart 2024): iris.xlsx dosyasını kullanarak, Excel’de hücre aralıklarını seçme, Ctrl ve Shift tuşları ile hızlı seçim ve gezinme gösterildi. Tek bir sütün için ortalama, medyan, 1. ve 3. çeyrek dilim hesaplama ve standard sapma hesabı yapıldı. Excel’de formüllerin başka hücrelere uygulanması gösterildi. Excel’in yeni versiyonunda Boxplot ve Histogram grafikleri çizilebileceği tartışıldı.\n\n\n\nTeorik (6 Mart 2024): Olaslık hesabına dair özellikler, küme prensibi üzerinden anlatıldı. Normal dağılımın özellikleri tanıtıldı. Sunum linki\nUygulama (11 Mart 2024): R’da pnorm(), qnorm() ve dnorm() fonksiyonları kullanarak ihtimal hesapları yapıldı ve normal dağılıma uygun rastgele sayılar üretildi. Excel’de normal dağılıma uygun sayılar üreten formüller kullanıldı.\n\n\n\nTeorik (13 Mart 2024): Poisson ve Bernoulli dağılımları tanıtıldı. Sunum linki\nPratik (18 Mart 2024): Uygulama sunum linki"
   },
   {
     "objectID": "index.html#kaynaklar",
     "href": "index.html#kaynaklar",
     "title": "MBG1032 Biyoistatistik Ders Notları",
     "section": "",
-    "text": "Kitap1: Principles of Biostatistics (Marcello Pagano, Kimberlee Gauvreau)\nKitap2: Biostatistics for the Biological and Health Sciences (Mario F. Triola, Marc M. Triola,Jason Roy)\nKitap3: Introduction to Biostatistics Using R (Mohsen Nady)\nKitap4: R Programı İle Temel İstatistiksel Yöntemler Uygulamalı İstatistik Turcademy üzerinden ücretsiz olarak erişilebilir."
+    "text": "Kitap1: Introductory Statistics for the Life and Biomedical Sciences (Julie Vu, David Harrington) Leanpub sitesinden ücretsiz olarak (You Pay kısmını 0’a çekerek) indirebilirsiniz.\nKitap2: Principles of Biostatistics (Marcello Pagano, Kimberlee Gauvreau)\nKitap3: Biostatistics for the Biological and Health Sciences (Mario F. Triola, Marc M. Triola,Jason Roy)\nKitap4: R Programı İle Temel İstatistiksel Yöntemler Uygulamalı İstatistik Turcademy üzerinden ücretsiz olarak erişilebilir."
   },
   {
     "objectID": "index.html#ders1",
@@ -39,7 +39,7 @@
     "href": "index.html#ders04",
     "title": "MBG1032 Biyoistatistik Ders Notları",
     "section": "",
-    "text": "Teorik (13 Mart 2024): Poisson ve Bernoulli dağılımları tanıtıldı. Sunum linki\nPratik (18 Mart 2024):"
+    "text": "Teorik (13 Mart 2024): Poisson ve Bernoulli dağılımları tanıtıldı. Sunum linki\nPratik (18 Mart 2024): Uygulama sunum linki"
   },
   {
     "objectID": "uygulama01.html#aritmetik",
@@ -161,6 +161,69 @@
     "text": "MBG1032 Ders Notları\nYTÜ MBG Bölümü Biyoistatistik ders içerikleri ve uygulamaları sayfasıdır."
   },
   {
+    "objectID": "ders03-uygulama.html#normal-dağılım-soruları",
+    "href": "ders03-uygulama.html#normal-dağılım-soruları",
+    "title": "Ders3: Dağılımlar - Uygulama",
+    "section": "Normal dağılım soruları",
+    "text": "Normal dağılım soruları\nTaralı bölgenin alanını bulunuz. Kemik yoğunluğu verisinde ortalama 0 ve standart sapma 1 olduğunu kabul ediniz.\n\n\n\n\nÖnce, Z skor tablosunu kullanarak çözünüz.\n\nDaha sonra R ile çözünüz.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders03-uygulama.html#section",
+    "href": "ders03-uygulama.html#section",
+    "title": "Ders3: Dağılımlar - Uygulama",
+    "section": "",
+    "text": "Yine aynı veride, işaretli Z skorunu bulunuz.\n\n\n\n\n\nÖnce, Z skor tablosunu kullanarak çözünüz.\n\nDaha sonra R ile çözünüz.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders03-uygulama.html#section-1",
+    "href": "ders03-uygulama.html#section-1",
+    "title": "Ders3: Dağılımlar - Uygulama",
+    "section": "",
+    "text": "Taralı bölgenin alanını bulunuz. Toplanan veriler IQ değerlerine aittir ve ortalaması 100 ve standart sapması 15’tir.\n\n\n\n\n\nZ skor tablosunu kullanarak nasıl çözebiliriz?\n\nR ile çözünüz.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders03-uygulama.html#section-2",
+    "href": "ders03-uygulama.html#section-2",
+    "title": "Ders3: Dağılımlar - Uygulama",
+    "section": "",
+    "text": "Aşağıda işaret edilen IQ değerini bulunuz\n\n\n\n\n\nZ skor tablosunu kullanarak nasıl çözebiliriz?\n\nR ile çözünüz.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders03-uygulama.html#section-3",
+    "href": "ders03-uygulama.html#section-3",
+    "title": "Ders3: Dağılımlar - Uygulama",
+    "section": "",
+    "text": "13-20 yaş arası kadınlarda kalp atış hızı ortalama 74 ve standart sapması 12.5’tir. Rastgele seçilen bir kadının;\n\nkalp atış hızının 100’den az olması,\nkalp atış hızının 80’den çok olması,\nkalp atış hızının 70 ile 90 arasında olması, ihtimallerini hesaplayınız.\nP90 değerini bulunuz (alttaki 90% ile üstteki 10% ayıran değer)\nİlk çeyrek dilime (Q1) denk gelen kalp atış hızı değerini bulunuz."
+  },
+  {
+    "objectID": "ders03-uygulama.html#poisson-dağılımı",
+    "href": "ders03-uygulama.html#poisson-dağılımı",
+    "title": "Ders3: Dağılımlar - Uygulama",
+    "section": "Poisson dağılımı",
+    "text": "Poisson dağılımı"
+  },
+  {
+    "objectID": "ders03-uygulama.html#bernoulli-dağılımı",
+    "href": "ders03-uygulama.html#bernoulli-dağılımı",
+    "title": "Ders3: Dağılımlar - Uygulama",
+    "section": "Bernoulli dağılımı",
+    "text": "Bernoulli dağılımı"
+  },
+  {
+    "objectID": "ders03-uygulama.html#geometrik-dağılım",
+    "href": "ders03-uygulama.html#geometrik-dağılım",
+    "title": "Ders3: Dağılımlar - Uygulama",
+    "section": "Geometrik dağılım",
+    "text": "Geometrik dağılım"
+  },
+  {
+    "objectID": "ders03-uygulama.html#negatif-binomial-dağılım",
+    "href": "ders03-uygulama.html#negatif-binomial-dağılım",
+    "title": "Ders3: Dağılımlar - Uygulama",
+    "section": "Negatif binomial dağılım",
+    "text": "Negatif binomial dağılım"
+  },
+  {
     "objectID": "ders03.html#özet",
     "href": "ders03.html#özet",
     "title": "Ders3: İhtimal hesabı ve dağılım",
@@ -273,6 +336,41 @@
     "text": "Bernoulli dağılımı\nBernoulli dağılımı, yalnızca iki sonuçtan (başarı veya başarısızlık, evet veya hayır, 1 veya 0 gibi) birini alabilen rastgele bir deneyi modellemek için kullanılan bir olasılık dağılımıdır. Binomial dağılımında n defa gerçekleşen, ikili sonucu olan olayların ihtimali hesaplanırken, Bernoulli dağılımında k=1’dir.\nMadeni para atışı, hastalık testi sonucu, bitki tohumu çimlenmesi, ilaç tepkisi gibi örnekler Bernoulli dağılımı için örnek gösterilebilir.\nBernoulli dağılımının tekrarı ile sadece Binomial dağılım ortaya çıkmaz; geometrik, negatif binomial ve hipergeometrik dağılımlar Bernoulli dağılımı temel alır."
   },
   {
+    "objectID": "ders03.html#geometik-dağılım",
+    "href": "ders03.html#geometik-dağılım",
+    "title": "Ders3: İhtimal hesabı ve dağılım",
+    "section": "Geometik dağılım",
+    "text": "Geometik dağılım\nGeometrik dağılım, bağımsız ve aynı şekilde dağılmış Bernoulli denemeleri serisinde, ilk başarının elde edilmesi için gereken deneme sayısını modelleyen bir olasılık dağılımıdır. Diğer bir deyişle, bir dizi denemede ilk başarıya ulaşana kadar yapılan deneme sayısının dağılımını tanımlar.\nÖrnekler\nGeometrik dağılım, biyolojik süreçler ve fenomenler içinde çeşitli örneklerle temsil edilebilir. Bu tür dağılımlar, belirli bir olayın meydana gelmesi için gereken deneme sayısını veya bir başarı elde edene kadar geçen süreyi modellemek için özellikle uygun olabilir. İşte geometrik dağılımı kullanarak modelleyebileceğiniz biyolojik örnekler:\n\nHastalığa Dirençli Bitki Bulma: Bir araştırmacı, belirli bir hastalığa dirençli bir bitki çeşidi geliştirmek üzere rastgele mutasyonlar oluşturuyor. Her bir mutasyonun, istenilen direnci gösterme olasılığı düşük olabilir. Bu durumda, araştırmacının dirençli bir mutasyon elde etmesi için gereken deneme sayısı geometrik dağılımla modelleyebilir.\nNadir Görülen Türlerin Tespiti: Bir ekolog, nadir görülen bir türün üyelerini bulmak için rastgele örnekler alıyor. Her bir örnekleme denemesinde bu türden bir birey bulma şansı düşükse, bu tür bir bireyin ilk kez tespit edilmesi için gereken örnekleme sayısı geometrik dağılımla modelleyebilir.\nAntibiyotik Direnci: Bir mikrobiyolog, bir bakteri popülasyonundan rastgele seçilen bir bakterinin belirli bir antibiyotiğe dirençli olup olmadığını test eder. Eğer popülasyon içinde dirençli bakterilerin oranı düşükse, ilk dirençli bakterinin tespit edilmesi için yapılması gereken test sayısı geometrik dağılımla ifade edilebilir.\nGenetik Çaprazlamalar: Genetik bir özelliğin baskın olduğu durumda, belirli bir çaprazlama sonucunda istenilen genetik yapıya (örneğin, bir hastalığa karşı dirençli bir genotip) sahip bir yavru elde edilene kadar gereken çaprazlama sayısı. Her bir çaprazlamanın bağımsız ve sabit bir başarı şansı varsa, bu durum geometrik dağılımla modellenebilir."
+  },
+  {
+    "objectID": "ders03.html#geometrik-dağılım",
+    "href": "ders03.html#geometrik-dağılım",
+    "title": "Ders3: İhtimal hesabı ve dağılım",
+    "section": "Geometrik dağılım",
+    "text": "Geometrik dağılım\n\n\n\n\n\nGerçekleşme ihtimali p= 0.35 iken, ilk denemede başarılı olma ihtimali yine 0.35’tir. İkinci denemede başarılı olma ihtimali ise 0.65 x 0.35 = 0.228i’dir. Üçüncü denemede başarılı olma ihtimali ise 0.65 x 0.65 x 0.35 = 0.148’tir.\nGeometric dağılımda olasılık üssel şekilde azalır."
+  },
+  {
+    "objectID": "ders03.html#geometrik-dağılım-1",
+    "href": "ders03.html#geometrik-dağılım-1",
+    "title": "Ders3: İhtimal hesabı ve dağılım",
+    "section": "Geometrik dağılım",
+    "text": "Geometrik dağılım\nk. denemede ilk başarıyı elde etme ihtimali\n\n\n\n\n\nBekleme süresinin ortalaması, varyansı ve standard sapması"
+  },
+  {
+    "objectID": "ders03.html#soru-2",
+    "href": "ders03.html#soru-2",
+    "title": "Ders3: İhtimal hesabı ve dağılım",
+    "section": "Soru",
+    "text": "Soru\nBaşarının ilk 4 denemede gerçekleşme ihtimali kaçtır?\nP(X=1) + P(X=2) + P(X=3) + P(X=4) = 0.82\nBaşarının ilk 4 denemede gerçekleşmeme ihtimali kaçtır?\n1- 0.82 = 0.18\n\nR’da geometrik fonksiyon “başarıdan öncde gerekli deneme sayısını” dikkate alır\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders03.html#negatif-binomial-dağılım",
+    "href": "ders03.html#negatif-binomial-dağılım",
+    "title": "Ders3: İhtimal hesabı ve dağılım",
+    "section": "Negatif binomial dağılım",
+    "text": "Negatif binomial dağılım\nGeometrik dağılım ilk başarının k. denemede gerçekleşmesi ihtimalini hesaplarken Negatif Binomial Dağılım daha geneldir, R. başarının K. denemede gerçekleşme ihtimalini hesaplar."
+  },
+  {
     "objectID": "ders02.html#özet",
     "href": "ders02.html#özet",
     "title": "Ders2: Sayısal ve Görsel Özetleme",
@@ -369,68 +467,5 @@
     "title": "Ders2: Sayısal ve Görsel Özetleme",
     "section": "Ek kaynaklar",
     "text": "Ek kaynaklar\n\nSTHDA sitesinde “Descriptive Statistics and Graphics” adlı sayfa, bu sunumdaki bilgilere ek bilgiler içerir."
-  },
-  {
-    "objectID": "ders03.html#geometik-dağılım",
-    "href": "ders03.html#geometik-dağılım",
-    "title": "Ders3: İhtimal hesabı ve dağılım",
-    "section": "Geometik dağılım",
-    "text": "Geometik dağılım\nGeometrik dağılım, bağımsız ve aynı şekilde dağılmış Bernoulli denemeleri serisinde, ilk başarının elde edilmesi için gereken deneme sayısını modelleyen bir olasılık dağılımıdır. Diğer bir deyişle, bir dizi denemede ilk başarıya ulaşana kadar yapılan deneme sayısının dağılımını tanımlar.\nÖrnekler\nGeometrik dağılım, biyolojik süreçler ve fenomenler içinde çeşitli örneklerle temsil edilebilir. Bu tür dağılımlar, belirli bir olayın meydana gelmesi için gereken deneme sayısını veya bir başarı elde edene kadar geçen süreyi modellemek için özellikle uygun olabilir. İşte geometrik dağılımı kullanarak modelleyebileceğiniz biyolojik örnekler:\n\nHastalığa Dirençli Bitki Bulma: Bir araştırmacı, belirli bir hastalığa dirençli bir bitki çeşidi geliştirmek üzere rastgele mutasyonlar oluşturuyor. Her bir mutasyonun, istenilen direnci gösterme olasılığı düşük olabilir. Bu durumda, araştırmacının dirençli bir mutasyon elde etmesi için gereken deneme sayısı geometrik dağılımla modelleyebilir.\nNadir Görülen Türlerin Tespiti: Bir ekolog, nadir görülen bir türün üyelerini bulmak için rastgele örnekler alıyor. Her bir örnekleme denemesinde bu türden bir birey bulma şansı düşükse, bu tür bir bireyin ilk kez tespit edilmesi için gereken örnekleme sayısı geometrik dağılımla modelleyebilir.\nAntibiyotik Direnci: Bir mikrobiyolog, bir bakteri popülasyonundan rastgele seçilen bir bakterinin belirli bir antibiyotiğe dirençli olup olmadığını test eder. Eğer popülasyon içinde dirençli bakterilerin oranı düşükse, ilk dirençli bakterinin tespit edilmesi için yapılması gereken test sayısı geometrik dağılımla ifade edilebilir.\nGenetik Çaprazlamalar: Genetik bir özelliğin baskın olduğu durumda, belirli bir çaprazlama sonucunda istenilen genetik yapıya (örneğin, bir hastalığa karşı dirençli bir genotip) sahip bir yavru elde edilene kadar gereken çaprazlama sayısı. Her bir çaprazlamanın bağımsız ve sabit bir başarı şansı varsa, bu durum geometrik dağılımla modellenebilir."
-  },
-  {
-    "objectID": "ders03.html#geometrik-dağılım",
-    "href": "ders03.html#geometrik-dağılım",
-    "title": "Ders3: İhtimal hesabı ve dağılım",
-    "section": "Geometrik dağılım",
-    "text": "Geometrik dağılım\n\n\n\n\n\nGerçekleşme ihtimali p= 0.35 iken, ilk denemede başarılı olma ihtimali yine 0.35’tir. İkinci denemede başarılı olma ihtimali ise 0.65 x 0.35 = 0.228i’dir. Üçüncü denemede başarılı olma ihtimali ise 0.65 x 0.65 x 0.35 = 0.148’tir.\nGeometric dağılımda olasılık üssel şekilde azalır."
-  },
-  {
-    "objectID": "ders03.html#geometrik-dağılım-1",
-    "href": "ders03.html#geometrik-dağılım-1",
-    "title": "Ders3: İhtimal hesabı ve dağılım",
-    "section": "Geometrik dağılım",
-    "text": "Geometrik dağılım\nk. denemede ilk başarıyı elde etme ihtimali\n\n\n\n\n\nBekleme süresinin ortalaması, varyansı ve standard sapması"
-  },
-  {
-    "objectID": "ders03.html#soru-2",
-    "href": "ders03.html#soru-2",
-    "title": "Ders3: İhtimal hesabı ve dağılım",
-    "section": "Soru",
-    "text": "Soru\nBaşarının ilk 4 denemede gerçekleşme ihtimali kaçtır?\nP(X=1) + P(X=2) + P(X=3) + P(X=4) = 0.82\nBaşarının ilk 4 denemede gerçekleşmeme ihtimali kaçtır?\n1- 0.82 = 0.18\n\nR’da geometrik fonksiyon “başarıdan öncde gerekli deneme sayısını” dikkate alır\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "ders03.html#negati",
-    "href": "ders03.html#negati",
-    "title": "Ders3: İhtimal hesabı ve dağılım",
-    "section": "Negati",
-    "text": "Negati"
-  },
-  {
-    "objectID": "ders03.html#negatif",
-    "href": "ders03.html#negatif",
-    "title": "Ders3: İhtimal hesabı ve dağılım",
-    "section": "Negatif",
-    "text": "Negatif"
-  },
-  {
-    "objectID": "ders03.html#negatif-binomial",
-    "href": "ders03.html#negatif-binomial",
-    "title": "Ders3: İhtimal hesabı ve dağılım",
-    "section": "Negatif binomial",
-    "text": "Negatif binomial"
-  },
-  {
-    "objectID": "ders03.html#negatif-binomial-dağılı",
-    "href": "ders03.html#negatif-binomial-dağılı",
-    "title": "Ders3: İhtimal hesabı ve dağılım",
-    "section": "Negatif binomial dağılı",
-    "text": "Negatif binomial dağılı"
-  },
-  {
-    "objectID": "ders03.html#negatif-binomial-dağılım",
-    "href": "ders03.html#negatif-binomial-dağılım",
-    "title": "Ders3: İhtimal hesabı ve dağılım",
-    "section": "Negatif binomial dağılım",
-    "text": "Negatif binomial dağılım\nGeometrik dağılım ilk başarının k. denemede gerçekleşmesi ihtimalini hesaplarken Negatif Binomial Dağılım daha geneldir, R. başarının K. denemede gerçekleşme ihtimalini hesaplar."
   }
 ]
