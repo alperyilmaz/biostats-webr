@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "MBG1032 Biyoistatistik Ders Notları",
     "section": "",
-    "text": "Kitap1: Introductory Statistics for the Life and Biomedical Sciences (Julie Vu, David Harrington) Leanpub sitesinden ücretsiz olarak (You Pay kısmını 0’a çekerek) indirebilirsiniz.\nKitap2: Principles of Biostatistics (Marcello Pagano, Kimberlee Gauvreau)\nKitap3: Biostatistics for the Biological and Health Sciences (Mario F. Triola, Marc M. Triola,Jason Roy)\nKitap4: R Programı İle Temel İstatistiksel Yöntemler Uygulamalı İstatistik Turcademy üzerinden ücretsiz olarak erişilebilir.\n\n\n\n\nTeorik (21 Şubat 2024): İlk derste, R programı çalıştırılabilecek ortamlar tanıtıldı. Ayrıca “Is Most Published Research Wrong?” başlıklı videodan bahsedildi. Söz konusu videoda p-value değerlerinin istatistik gücü oldukça zayıf şekilde bilimsel makalelerde kullanıldığı ve bu yüzden makalelerin tekrarlanabilirliğinin (reproducability) düşük olduğundan bahsedildi.\nUygulama (26 Şubat 2024): R Temelleri Sunum. Bu içerik için kullanılan ek kaynak, “An Introduction to R” adlı online kitap.\n\n\n\n\nTeorik (28 Şubat 2024): Veri setinin merkezini belirleyen ortalama ve mediandan bahsedildi. Veri setinin dağınıklığını özetleyen sayısal yöntemler (varyans, standart sapma) ve görsel yöntemler (histogram, boxplot) tanıtıldı. Sunum linki\nUygulama (4 Mart 2024): iris.xlsx dosyasını kullanarak, Excel’de hücre aralıklarını seçme, Ctrl ve Shift tuşları ile hızlı seçim ve gezinme gösterildi. Tek bir sütün için ortalama, medyan, 1. ve 3. çeyrek dilim hesaplama ve standard sapma hesabı yapıldı. Excel’de formüllerin başka hücrelere uygulanması gösterildi. Excel’in yeni versiyonunda Boxplot ve Histogram grafikleri çizilebileceği tartışıldı.\n\n\n\nTeorik (6 Mart 2024): Olaslık hesabına dair özellikler, küme prensibi üzerinden anlatıldı. Normal dağılımın özellikleri tanıtıldı. Sunum linki\nUygulama (11 Mart 2024): R’da pnorm(), qnorm() ve dnorm() fonksiyonları kullanarak ihtimal hesapları yapıldı ve normal dağılıma uygun rastgele sayılar üretildi. Excel’de normal dağılıma uygun sayılar üreten formüller kullanıldı.\n\n\n\nTeorik (13 Mart 2024): Poisson ve Bernoulli dağılımları tanıtıldı. Sunum linki\nPratik (18 Mart 2024): Uygulama sunum linki"
+    "text": "Kitap1: Introductory Statistics for the Life and Biomedical Sciences (Julie Vu, David Harrington) Leanpub sitesinden ücretsiz olarak (You Pay kısmını 0’a çekerek) indirebilirsiniz.\nKitap2: Principles of Biostatistics (Marcello Pagano, Kimberlee Gauvreau)\nKitap3: Biostatistics for the Biological and Health Sciences (Mario F. Triola, Marc M. Triola,Jason Roy)\nKitap4: R Programı İle Temel İstatistiksel Yöntemler Uygulamalı İstatistik Turcademy üzerinden ücretsiz olarak erişilebilir.\n\n\n\n\nTeorik (21 Şubat 2024): İlk derste, R programı çalıştırılabilecek ortamlar tanıtıldı. Ayrıca “Is Most Published Research Wrong?” başlıklı videodan bahsedildi. Söz konusu videoda p-value değerlerinin istatistik gücü oldukça zayıf şekilde bilimsel makalelerde kullanıldığı ve bu yüzden makalelerin tekrarlanabilirliğinin (reproducability) düşük olduğundan bahsedildi.\nUygulama (26 Şubat 2024): R Temelleri Sunum. Bu içerik için kullanılan ek kaynak, “An Introduction to R” adlı online kitap.\n\n\n\n\nTeorik (28 Şubat 2024): Veri setinin merkezini belirleyen ortalama ve mediandan bahsedildi. Veri setinin dağınıklığını özetleyen sayısal yöntemler (varyans, standart sapma) ve görsel yöntemler (histogram, boxplot) tanıtıldı. Sunum linki\nUygulama (4 Mart 2024): iris.xlsx dosyasını kullanarak, Excel’de hücre aralıklarını seçme, Ctrl ve Shift tuşları ile hızlı seçim ve gezinme gösterildi. Tek bir sütün için ortalama, medyan, 1. ve 3. çeyrek dilim hesaplama ve standard sapma hesabı yapıldı. Excel’de formüllerin başka hücrelere uygulanması gösterildi. Excel’in yeni versiyonunda Boxplot ve Histogram grafikleri çizilebileceği tartışıldı.\n\n\n\nTeorik (6 Mart 2024): Olaslık hesabına dair özellikler, küme prensibi üzerinden anlatıldı. Normal dağılımın özellikleri tanıtıldı. Sunum linki\nUygulama (11 Mart 2024): R’da pnorm(), qnorm() ve dnorm() fonksiyonları kullanarak ihtimal hesapları yapıldı ve normal dağılıma uygun rastgele sayılar üretildi. Excel’de normal dağılıma uygun sayılar üreten formüller kullanıldı.\n\n\n\nTeorik (13 Mart 2024): Poisson ve Bernoulli dağılımları (Poisson dağılımı ve Geometrik dağılım) tanıtıldı. Sunum linki\nPratik (18 Mart 2024): Normal dağılım örnekleri çözüldü. Uygulama sunum linki\n\n\n\nTeorik (20 Mart 2024): t statistik. Sunum linki\nPratik (25 Mart 2024): Poisson dağılımı ve Geometrik dağılım örnekleri çözüldü Uygulama sunum linki"
   },
   {
     "objectID": "index.html#kaynaklar",
@@ -39,7 +39,14 @@
     "href": "index.html#ders04",
     "title": "MBG1032 Biyoistatistik Ders Notları",
     "section": "",
-    "text": "Teorik (13 Mart 2024): Poisson ve Bernoulli dağılımları tanıtıldı. Sunum linki\nPratik (18 Mart 2024): Uygulama sunum linki"
+    "text": "Teorik (13 Mart 2024): Poisson ve Bernoulli dağılımları (Poisson dağılımı ve Geometrik dağılım) tanıtıldı. Sunum linki\nPratik (18 Mart 2024): Normal dağılım örnekleri çözüldü. Uygulama sunum linki"
+  },
+  {
+    "objectID": "index.html#ders05",
+    "href": "index.html#ders05",
+    "title": "MBG1032 Biyoistatistik Ders Notları",
+    "section": "",
+    "text": "Teorik (20 Mart 2024): t statistik. Sunum linki\nPratik (25 Mart 2024): Poisson dağılımı ve Geometrik dağılım örnekleri çözüldü Uygulama sunum linki"
   },
   {
     "objectID": "uygulama01.html#aritmetik",
@@ -161,6 +168,13 @@
     "text": "MBG1032 Ders Notları\nYTÜ MBG Bölümü Biyoistatistik ders içerikleri ve uygulamaları sayfasıdır."
   },
   {
+    "objectID": "ders04.html#özet",
+    "href": "ders04.html#özet",
+    "title": "Ders4:",
+    "section": "Özet",
+    "text": "Özet\n\n."
+  },
+  {
     "objectID": "ders03-uygulama.html#normal-dağılım-soruları",
     "href": "ders03-uygulama.html#normal-dağılım-soruları",
     "title": "Ders3: Dağılımlar - Uygulama",
@@ -193,35 +207,63 @@
     "href": "ders03-uygulama.html#section-3",
     "title": "Ders3: Dağılımlar - Uygulama",
     "section": "",
-    "text": "13-20 yaş arası kadınlarda kalp atış hızı ortalama 74 ve standart sapması 12.5’tir. Rastgele seçilen bir kadının;\n\nkalp atış hızının 100’den az olması,\nkalp atış hızının 80’den çok olması,\nkalp atış hızının 70 ile 90 arasında olması, ihtimallerini hesaplayınız.\nP90 değerini bulunuz (alttaki 90% ile üstteki 10% ayıran değer)\nİlk çeyrek dilime (Q1) denk gelen kalp atış hızı değerini bulunuz."
+    "text": "13-20 yaş arası kadınlarda kalp atış hızı ortalama 74 ve standart sapması 12.5’tir. Rastgele seçilen bir kadının;\n\nkalp atış hızının 100’den az olması,\nkalp atış hızının 80’den çok olması,\nkalp atış hızının 70 ile 90 arasında olması, ihtimallerini hesaplayınız.\nP90 değerini bulunuz (alttaki 90% ile üstteki 10% ayıran değer)\nİlk çeyrek dilime (Q1) denk gelen kalp atış hızı değerini bulunuz.\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
   },
   {
-    "objectID": "ders03-uygulama.html#poisson-dağılımı",
-    "href": "ders03-uygulama.html#poisson-dağılımı",
+    "objectID": "ders03-uygulama.html#poisson-dağılımı---soru1",
+    "href": "ders03-uygulama.html#poisson-dağılımı---soru1",
     "title": "Ders3: Dağılımlar - Uygulama",
-    "section": "Poisson dağılımı",
-    "text": "Poisson dağılımı"
+    "section": "Poisson dağılımı - Soru1",
+    "text": "Poisson dağılımı - Soru1\nBir DNA dizisinde ortalama mutasyon sayısı 1000 baz çifti başına 3’tür. 1000 baz çifti uzunluğundaki bir dizide tam olarak 2 mutasyon gözlemleme olasılığı nedir?\nFormül:\n\n\n\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
   },
   {
-    "objectID": "ders03-uygulama.html#bernoulli-dağılımı",
-    "href": "ders03-uygulama.html#bernoulli-dağılımı",
+    "objectID": "ders03-uygulama.html#soru-2",
+    "href": "ders03-uygulama.html#soru-2",
     "title": "Ders3: Dağılımlar - Uygulama",
-    "section": "Bernoulli dağılımı",
-    "text": "Bernoulli dağılımı"
+    "section": "Soru 2",
+    "text": "Soru 2\nBir DNA dizisinde ortalama mutasyon sayısı 1000 baz çifti başına 3’tür. 5000 baz çifti uzunluğundaki bir dizide tam olarak 2 mutasyon gözlemleme olasılığı nedir?\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
   },
   {
-    "objectID": "ders03-uygulama.html#geometrik-dağılım",
-    "href": "ders03-uygulama.html#geometrik-dağılım",
+    "objectID": "ders03-uygulama.html#soru-3",
+    "href": "ders03-uygulama.html#soru-3",
     "title": "Ders3: Dağılımlar - Uygulama",
-    "section": "Geometrik dağılım",
-    "text": "Geometrik dağılım"
+    "section": "Soru 3",
+    "text": "Soru 3\nBir doku kesitindeki hücrelerin ortalama sayısı 100 ise, bir doku kesitinde 120’den fazla hücre gözlemleme olasılığı nedir?\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
   },
   {
-    "objectID": "ders03-uygulama.html#negatif-binomial-dağılım",
-    "href": "ders03-uygulama.html#negatif-binomial-dağılım",
+    "objectID": "ders03-uygulama.html#soru-4",
+    "href": "ders03-uygulama.html#soru-4",
     "title": "Ders3: Dağılımlar - Uygulama",
-    "section": "Negatif binomial dağılım",
-    "text": "Negatif binomial dağılım"
+    "section": "Soru 4",
+    "text": "Soru 4\nBelirli bir deney sonrasında ortaya çıkan örneklerdeki ortalama virüs parçacığı sayısı 5’tir. Bir örnekte 3’ten az virüs parçacığı gözlemleme olasılığı nedir?\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders03-uygulama.html#soru-5",
+    "href": "ders03-uygulama.html#soru-5",
+    "title": "Ders3: Dağılımlar - Uygulama",
+    "section": "Soru 5",
+    "text": "Soru 5\nBir kasabada belirli bir hastalığın ortalama yeni vaka sayısı yılda 5 ise, önümüzdeki 6 ay içinde hiç yeni vaka olmama olasılığı nedir? (Yıllık yeni vaka sayısının Poisson dağılımı izlediği varsayılarak)\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders03-uygulama.html#geometrik-dağılım---soru-1",
+    "href": "ders03-uygulama.html#geometrik-dağılım---soru-1",
+    "title": "Ders3: Dağılımlar - Uygulama",
+    "section": "Geometrik dağılım - Soru 1",
+    "text": "Geometrik dağılım - Soru 1\nBelirli bir tıbbi testte başarı olasılığının 0.8 olduğunu varsayalım. İlk başarılı test sonucunun üçüncü denemede olma olasılığı nedir?\nFormül:\n\n\n\n\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders03-uygulama.html#soru-2-1",
+    "href": "ders03-uygulama.html#soru-2-1",
+    "title": "Ders3: Dağılımlar - Uygulama",
+    "section": "Soru 2",
+    "text": "Soru 2\nBir DNA dizisinde mutasyon oluşma olasılığının 0.001 olduğunu varsayalım. Mutasyonsuz bir DNA segmentinin başarılı bir şekilde dizilenmesinin ilk kez onuncu denemede olma olasılığı nedir?\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders03-uygulama.html#soru-3-1",
+    "href": "ders03-uygulama.html#soru-3-1",
+    "title": "Ders3: Dağılımlar - Uygulama",
+    "section": "Soru 3",
+    "text": "Soru 3\nBir DNA parçasının başarılı bir şekilde PCR ile çoğaltılma olasılığının 0.9 olduğunu varsayalım. İlk başarılı çoğaltmanın ilk 5 denemede olma olasılığı nedir?\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
   },
   {
     "objectID": "ders03.html#özet",
@@ -355,6 +397,13 @@
     "title": "Ders3: İhtimal hesabı ve dağılım",
     "section": "Geometrik dağılım",
     "text": "Geometrik dağılım\nk. denemede ilk başarıyı elde etme ihtimali\n\n\n\n\n\nBekleme süresinin ortalaması, varyansı ve standard sapması"
+  },
+  {
+    "objectID": "ders03.html#geometrik-dağılım---formüller",
+    "href": "ders03.html#geometrik-dağılım---formüller",
+    "title": "Ders3: İhtimal hesabı ve dağılım",
+    "section": "Geometrik dağılım - formüller",
+    "text": "Geometrik dağılım - formüller"
   },
   {
     "objectID": "ders03.html#soru-2",

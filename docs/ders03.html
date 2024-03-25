@@ -34,6 +34,8 @@
   <link href="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="site_libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
+  <link href="site_libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
   <link href="site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
   <style type="text/css">
 
@@ -487,7 +489,7 @@
   };
 
   // Store cell data
-  globalThis.qwebrCellDetails = [{"code":"pnorm(q = 1800, 1500, 300)","options":{"context":"interactive","comment":"","read-only":"false","fig-cap":"","autorun":"false","warning":"true","message":"true","fig-height":5,"results":"markup","dpi":72,"classes":"","fig-width":7,"output":"true","label":"unnamed-chunk-1","out-height":"","out-width":"700px"},"id":1},{"code":"pnorm(q = 1, 0, 1)","options":{"context":"interactive","comment":"","read-only":"false","fig-cap":"","autorun":"false","warning":"true","message":"true","fig-height":5,"results":"markup","dpi":72,"classes":"","fig-width":7,"output":"true","label":"unnamed-chunk-2","out-height":"","out-width":"700px"},"id":2},{"code":"pnorm(1630, 1500, 300)\n1 - pnorm(1630, 1500, 300)","options":{"context":"interactive","comment":"","read-only":"false","fig-cap":"","autorun":"false","warning":"true","message":"true","fig-height":5,"results":"markup","dpi":72,"classes":"","fig-width":7,"output":"true","label":"unnamed-chunk-3","out-height":"","out-width":"700px"},"id":3},{"code":"# Çözümünüzü buraya yazıp çalıştırınız","options":{"context":"interactive","comment":"","read-only":"false","fig-cap":"","autorun":"false","warning":"true","message":"true","fig-height":5,"results":"markup","dpi":72,"classes":"","fig-width":7,"output":"true","label":"unnamed-chunk-4","out-height":"","out-width":"700px"},"id":4},{"code":"qnorm(0.4, 70, 3.3)","options":{"context":"interactive","comment":"","read-only":"false","fig-cap":"","autorun":"false","warning":"true","message":"true","fig-height":5,"results":"markup","dpi":72,"classes":"","fig-width":7,"output":"true","label":"unnamed-chunk-5","out-height":"","out-width":"700px"},"id":5},{"code":"# hist() fonskiyonu ile histogram görüntüleyiniz\nrpois(n = 365, 4.4)","options":{"context":"interactive","comment":"","read-only":"false","fig-cap":"","autorun":"false","warning":"true","message":"true","fig-height":5,"results":"markup","dpi":72,"classes":"","fig-width":7,"output":"true","label":"unnamed-chunk-6","out-height":"","out-width":"700px"},"id":6},{"code":"dpois(lambda = 30.8, x = 2)","options":{"context":"interactive","comment":"","read-only":"false","fig-cap":"","autorun":"false","warning":"true","message":"true","fig-height":5,"results":"markup","dpi":72,"classes":"","fig-width":7,"output":"true","label":"unnamed-chunk-7","out-height":"","out-width":"700px"},"id":7},{"code":"dpois(lambda = 30.8, x = 0) + dpois(lambda = 30.8, x = 1) + dpois(lambda = 30.8, x = 2)\n\n# VEYA\n\nppois(q = 2, lambda = 30.8)","options":{"context":"interactive","comment":"","read-only":"false","fig-cap":"","autorun":"false","warning":"true","message":"true","fig-height":5,"results":"markup","dpi":72,"classes":"","fig-width":7,"output":"true","label":"unnamed-chunk-8","out-height":"","out-width":"700px"},"id":8},{"code":"pgeom(q = 3, prob = 0.35)","options":{"context":"interactive","comment":"","read-only":"false","fig-cap":"","autorun":"false","warning":"true","message":"true","fig-height":5,"results":"markup","dpi":72,"classes":"","fig-width":7,"output":"true","label":"unnamed-chunk-9","out-height":"","out-width":"700px"},"id":9}];
+  globalThis.qwebrCellDetails = [{"code":"pnorm(q = 1800, 1500, 300)","id":1,"options":{"warning":"true","message":"true","autorun":"false","comment":"","out-width":"700px","out-height":"","fig-width":7,"label":"unnamed-chunk-1","results":"markup","classes":"","output":"true","fig-cap":"","read-only":"false","context":"interactive","dpi":72,"fig-height":5}},{"code":"pnorm(q = 1, 0, 1)","id":2,"options":{"warning":"true","message":"true","autorun":"false","comment":"","out-width":"700px","out-height":"","fig-width":7,"label":"unnamed-chunk-2","results":"markup","classes":"","output":"true","fig-cap":"","read-only":"false","context":"interactive","dpi":72,"fig-height":5}},{"code":"pnorm(1630, 1500, 300)\n1 - pnorm(1630, 1500, 300)","id":3,"options":{"warning":"true","message":"true","autorun":"false","comment":"","out-width":"700px","out-height":"","fig-width":7,"label":"unnamed-chunk-3","results":"markup","classes":"","output":"true","fig-cap":"","read-only":"false","context":"interactive","dpi":72,"fig-height":5}},{"code":"# Çözümünüzü buraya yazıp çalıştırınız","id":4,"options":{"warning":"true","message":"true","autorun":"false","comment":"","out-width":"700px","out-height":"","fig-width":7,"label":"unnamed-chunk-4","results":"markup","classes":"","output":"true","fig-cap":"","read-only":"false","context":"interactive","dpi":72,"fig-height":5}},{"code":"qnorm(0.4, 70, 3.3)","id":5,"options":{"warning":"true","message":"true","autorun":"false","comment":"","out-width":"700px","out-height":"","fig-width":7,"label":"unnamed-chunk-5","results":"markup","classes":"","output":"true","fig-cap":"","read-only":"false","context":"interactive","dpi":72,"fig-height":5}},{"code":"# hist() fonskiyonu ile histogram görüntüleyiniz\nrpois(n = 365, 4.4)","id":6,"options":{"warning":"true","message":"true","autorun":"false","comment":"","out-width":"700px","out-height":"","fig-width":7,"label":"unnamed-chunk-6","results":"markup","classes":"","output":"true","fig-cap":"","read-only":"false","context":"interactive","dpi":72,"fig-height":5}},{"code":"dpois(lambda = 30.8, x = 2)","id":7,"options":{"warning":"true","message":"true","autorun":"false","comment":"","out-width":"700px","out-height":"","fig-width":7,"label":"unnamed-chunk-7","results":"markup","classes":"","output":"true","fig-cap":"","read-only":"false","context":"interactive","dpi":72,"fig-height":5}},{"code":"dpois(lambda = 30.8, x = 0) + dpois(lambda = 30.8, x = 1) + dpois(lambda = 30.8, x = 2)\n\n# VEYA\n\nppois(q = 2, lambda = 30.8)","id":8,"options":{"warning":"true","message":"true","autorun":"false","comment":"","out-width":"700px","out-height":"","fig-width":7,"label":"unnamed-chunk-8","results":"markup","classes":"","output":"true","fig-cap":"","read-only":"false","context":"interactive","dpi":72,"fig-height":5}},{"code":"pgeom(q = 3, prob = 0.35)","id":9,"options":{"warning":"true","message":"true","autorun":"false","comment":"","out-width":"700px","out-height":"","fig-width":7,"label":"unnamed-chunk-9","results":"markup","classes":"","output":"true","fig-cap":"","read-only":"false","context":"interactive","dpi":72,"fig-height":5}}];
 
   </script>
   <script type="module">
@@ -1570,7 +1572,7 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
 <h2>Geometrik dağılım</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/geometrik.png" class="quarto-figure quarto-figure-center" style="width:80.0%"></p>
+<p><img data-src="images/geometrik.png" class="quarto-figure quarto-figure-center" style="width:65.0%"></p>
 </figure>
 </div>
 <p>Gerçekleşme ihtimali <em>p</em>= 0.35 iken, ilk denemede başarılı olma ihtimali yine 0.35’tir. İkinci denemede başarılı olma ihtimali ise 0.65 x 0.35 = 0.228i’dir. Üçüncü denemede başarılı olma ihtimali ise 0.65 x 0.65 x 0.35 = 0.148’tir.</p>
@@ -1588,6 +1590,14 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
 <div class="quarto-figure quarto-figure-center">
 <figure>
 <p><img data-src="images/image-20240313090540456.png" class="nostretch quarto-figure quarto-figure-center" style="width:60.0%"></p>
+</figure>
+</div>
+</section>
+<section id="geometrik-dağılım---formüller" class="slide level2">
+<h2>Geometrik dağılım - formüller</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/geometic-formulas.png" class="quarto-figure quarto-figure-center" style="width:60.0%"></p>
 </figure>
 </div>
 </section>
@@ -1623,6 +1633,7 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
   <script src="site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
   <script src="site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
   <script src="site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="site_libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
   <script src="site_libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
@@ -1643,7 +1654,8 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
 'autoAnimateEasing': "ease",
 'autoAnimateDuration': 1,
 'autoAnimateUnmatched': true,
-'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleChalkboard(event)\"><kbd>b</kbd> Toggle Chalkboard</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleNotesCanvas(event)\"><kbd>c</kbd> Toggle Notes Canvas</a></li>\n<li class=\"slide-tool-item\" data-item=\"6\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.downloadDrawings(event)\"><kbd>d</kbd> Download Drawings</a></li>\n<li class=\"slide-tool-item\" data-item=\"7\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'chalkboard': {"buttons":true},
 'smaller': true,
  
         // Display controls in the bottom right corner
@@ -1814,7 +1826,7 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
         },
 
         // reveal.js plugins
-        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, RevealChalkboard, QuartoSupport,
 
           RevealMath,
           RevealNotes,

@@ -34,6 +34,8 @@
   <link href="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="site_libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
+  <link href="site_libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
   <link href="site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
   <style type="text/css">
 
@@ -487,7 +489,7 @@
   };
 
   // Store cell data
-  globalThis.qwebrCellDetails = [{"code":"# R ile çözünüz","options":{"autorun":"false","comment":"","message":"true","fig-height":5,"out-height":"","classes":"","output":"true","warning":"true","context":"interactive","dpi":72,"fig-cap":"","read-only":"false","out-width":"700px","results":"markup","fig-width":7,"label":"unnamed-chunk-1"},"id":1},{"code":"# R ile çözünüz","options":{"autorun":"false","comment":"","message":"true","fig-height":5,"out-height":"","classes":"","output":"true","warning":"true","context":"interactive","dpi":72,"fig-cap":"","read-only":"false","out-width":"700px","results":"markup","fig-width":7,"label":"unnamed-chunk-2"},"id":2},{"code":"# R ile çözünüz","options":{"autorun":"false","comment":"","message":"true","fig-height":5,"out-height":"","classes":"","output":"true","warning":"true","context":"interactive","dpi":72,"fig-cap":"","read-only":"false","out-width":"700px","results":"markup","fig-width":7,"label":"unnamed-chunk-3"},"id":3},{"code":"# R ile çözünüz","options":{"autorun":"false","comment":"","message":"true","fig-height":5,"out-height":"","classes":"","output":"true","warning":"true","context":"interactive","dpi":72,"fig-cap":"","read-only":"false","out-width":"700px","results":"markup","fig-width":7,"label":"unnamed-chunk-4"},"id":4}];
+  globalThis.qwebrCellDetails = [{"id":1,"code":"# R ile çözünüz","options":{"output":"true","label":"unnamed-chunk-1","autorun":"false","out-width":"700px","fig-cap":"","context":"interactive","comment":"","message":"true","fig-height":5,"warning":"true","results":"markup","classes":"","out-height":"","read-only":"false","dpi":72,"fig-width":7}},{"id":2,"code":"# R ile çözünüz","options":{"output":"true","label":"unnamed-chunk-2","autorun":"false","out-width":"700px","fig-cap":"","context":"interactive","comment":"","message":"true","fig-height":5,"warning":"true","results":"markup","classes":"","out-height":"","read-only":"false","dpi":72,"fig-width":7}},{"id":3,"code":"# R ile çözünüz","options":{"output":"true","label":"unnamed-chunk-3","autorun":"false","out-width":"700px","fig-cap":"","context":"interactive","comment":"","message":"true","fig-height":5,"warning":"true","results":"markup","classes":"","out-height":"","read-only":"false","dpi":72,"fig-width":7}},{"id":4,"code":"# R ile çözünüz","options":{"output":"true","label":"unnamed-chunk-4","autorun":"false","out-width":"700px","fig-cap":"","context":"interactive","comment":"","message":"true","fig-height":5,"warning":"true","results":"markup","classes":"","out-height":"","read-only":"false","dpi":72,"fig-width":7}},{"id":5,"code":"# R ile çözünüz","options":{"output":"true","label":"unnamed-chunk-5","autorun":"false","out-width":"700px","fig-cap":"","context":"interactive","comment":"","message":"true","fig-height":5,"warning":"true","results":"markup","classes":"","out-height":"","read-only":"false","dpi":72,"fig-width":7}},{"id":6,"code":"# R ile çözünüz","options":{"output":"true","label":"unnamed-chunk-6","autorun":"false","out-width":"700px","fig-cap":"","context":"interactive","comment":"","message":"true","fig-height":5,"warning":"true","results":"markup","classes":"","out-height":"","read-only":"false","dpi":72,"fig-width":7}},{"id":7,"code":"# R ile çözünüz","options":{"output":"true","label":"unnamed-chunk-7","autorun":"false","out-width":"700px","fig-cap":"","context":"interactive","comment":"","message":"true","fig-height":5,"warning":"true","results":"markup","classes":"","out-height":"","read-only":"false","dpi":72,"fig-width":7}},{"id":8,"code":"# R ile çözünüz","options":{"output":"true","label":"unnamed-chunk-8","autorun":"false","out-width":"700px","fig-cap":"","context":"interactive","comment":"","message":"true","fig-height":5,"warning":"true","results":"markup","classes":"","out-height":"","read-only":"false","dpi":72,"fig-width":7}},{"id":9,"code":"# R ile çözünüz","options":{"output":"true","label":"unnamed-chunk-9","autorun":"false","out-width":"700px","fig-cap":"","context":"interactive","comment":"","message":"true","fig-height":5,"warning":"true","results":"markup","classes":"","out-height":"","read-only":"false","dpi":72,"fig-width":7}},{"id":10,"code":"# R ile çözünüz","options":{"output":"true","label":"unnamed-chunk-10","autorun":"false","out-width":"700px","fig-cap":"","context":"interactive","comment":"","message":"true","fig-height":5,"warning":"true","results":"markup","classes":"","out-height":"","read-only":"false","dpi":72,"fig-width":7}},{"id":11,"code":"# R ile çözünüz","options":{"output":"true","label":"unnamed-chunk-11","autorun":"false","out-width":"700px","fig-cap":"","context":"interactive","comment":"","message":"true","fig-height":5,"warning":"true","results":"markup","classes":"","out-height":"","read-only":"false","dpi":72,"fig-width":7}},{"id":12,"code":"# R ile çözünüz","options":{"output":"true","label":"unnamed-chunk-12","autorun":"false","out-width":"700px","fig-cap":"","context":"interactive","comment":"","message":"true","fig-height":5,"warning":"true","results":"markup","classes":"","out-height":"","read-only":"false","dpi":72,"fig-width":7}},{"id":13,"code":"# R ile çözünüz","options":{"output":"true","label":"unnamed-chunk-13","autorun":"false","out-width":"700px","fig-cap":"","context":"interactive","comment":"","message":"true","fig-height":5,"warning":"true","results":"markup","classes":"","out-height":"","read-only":"false","dpi":72,"fig-width":7}}];
 
   </script>
   <script type="module">
@@ -1464,18 +1466,89 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
 <li><p>P<sub>90</sub> değerini bulunuz (alttaki 90% ile üstteki 10% ayıran değer)</p></li>
 <li><p>İlk çeyrek dilime (<em>Q</em><sub>1</sub>) denk gelen kalp atış hızı değerini bulunuz.</p></li>
 </ul>
+<div id="qwebr-insertion-location-5"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<!-- 
+pnorm(100, mean=74, sd=12.5)
+1 - pnorm(80, mean=74, sd=12.5)
+pnorm(90, mean=74, sd=12.5) - pnorm(70, mean=74, sd=12.5)   
+qnorm(p = 0.9, mean = 74, sd=12.5)
+qnorm(p = 0.25, mean = 74, sd=12.5)             -->
 </section>
-<section id="poisson-dağılımı" class="slide level2">
-<h2>Poisson dağılımı</h2>
+<section id="poisson-dağılımı---soru1" class="slide level2">
+<h2>Poisson dağılımı - Soru1</h2>
+<p>Bir DNA dizisinde ortalama mutasyon sayısı 1000 baz çifti başına 3’tür. 1000 baz çifti uzunluğundaki bir dizide tam olarak 2 mutasyon gözlemleme olasılığı nedir?</p>
+<p>Formül:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/image-20240313060426417.png" class="quarto-figure quarto-figure-center" style="width:40.0%"></p>
+</figure>
+</div>
+<div id="qwebr-insertion-location-6"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<!-- dpois(2, lambda = 3) -->
 </section>
-<section id="bernoulli-dağılımı" class="slide level2">
-<h2>Bernoulli dağılımı</h2>
+<section id="soru-2" class="slide level2">
+<h2>Soru 2</h2>
+<p>Bir DNA dizisinde ortalama mutasyon sayısı 1000 baz çifti başına 3’tür. <strong>5000 baz çifti</strong> uzunluğundaki bir dizide tam olarak 2 mutasyon gözlemleme olasılığı nedir?</p>
+<p><br></p>
+<div id="qwebr-insertion-location-7"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<!-- dpois(2, lambda = 15) -->
 </section>
-<section id="geometrik-dağılım" class="slide level2">
-<h2>Geometrik dağılım</h2>
+<section id="soru-3" class="slide level2">
+<h2>Soru 3</h2>
+<p>Bir doku kesitindeki hücrelerin ortalama sayısı 100 ise, bir doku kesitinde 120’den fazla hücre gözlemleme olasılığı nedir?</p>
+<p><br></p>
+<div id="qwebr-insertion-location-8"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<!--  1 - ppois(120, lambda = 100) -->
 </section>
-<section id="negatif-binomial-dağılım" class="slide level2">
-<h2>Negatif binomial dağılım</h2>
+<section id="soru-4" class="slide level2">
+<h2>Soru 4</h2>
+<p>Belirli bir deney sonrasında ortaya çıkan örneklerdeki ortalama virüs parçacığı sayısı 5’tir. Bir örnekte 3’ten az virüs parçacığı gözlemleme olasılığı nedir?</p>
+<p><br></p>
+<div id="qwebr-insertion-location-9"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<!-- ppois(2, lambda = 5) -->
+</section>
+<section id="soru-5" class="slide level2">
+<h2>Soru 5</h2>
+<p>Bir kasabada belirli bir hastalığın ortalama yeni vaka sayısı yılda 5 ise, önümüzdeki 6 ay içinde hiç yeni vaka olmama olasılığı nedir? (Yıllık yeni vaka sayısının Poisson dağılımı izlediği varsayılarak)</p>
+<p><br></p>
+<div id="qwebr-insertion-location-10"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<!-- ppois(0, lambda = 5/2) -->
+</section>
+<section id="geometrik-dağılım---soru-1" class="slide level2">
+<h2>Geometrik dağılım - Soru 1</h2>
+<p>Belirli bir tıbbi testte başarı olasılığının 0.8 olduğunu varsayalım. İlk başarılı test sonucunun üçüncü denemede olma olasılığı nedir?</p>
+<p>Formül:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/geometic-formulas.png" class="quarto-figure quarto-figure-center" style="width:40.0%"></p>
+</figure>
+</div>
+<p><br></p>
+<div id="qwebr-insertion-location-11"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<!-- dgeom(3, prob = 0.8) (#CHECK 2 olması gerekebilir) -->
+</section>
+<section id="soru-2-1" class="slide level2">
+<h2>Soru 2</h2>
+<p>Bir DNA dizisinde mutasyon oluşma olasılığının 0.001 olduğunu varsayalım. <strong>Mutasyonsuz</strong> bir DNA segmentinin başarılı bir şekilde dizilenmesinin ilk kez onuncu denemede olma olasılığı nedir?</p>
+<p><br></p>
+<div id="qwebr-insertion-location-12"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<!-- dgeom(10, prob = 0.999) -->
+</section>
+<section id="soru-3-1" class="slide level2">
+<h2>Soru 3</h2>
+<p>Bir DNA parçasının başarılı bir şekilde PCR ile çoğaltılma olasılığının 0.9 olduğunu varsayalım. İlk başarılı çoğaltmanın ilk 5 denemede olma olasılığı nedir?</p>
+<p><br></p>
+<div id="qwebr-insertion-location-13"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<!-- pgeom(5-1, prob = 0.9) -->
 
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
@@ -1493,6 +1566,7 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
   <script src="site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
   <script src="site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
   <script src="site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="site_libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
   <script src="site_libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
@@ -1513,7 +1587,8 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
 'autoAnimateEasing': "ease",
 'autoAnimateDuration': 1,
 'autoAnimateUnmatched': true,
-'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleChalkboard(event)\"><kbd>b</kbd> Toggle Chalkboard</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleNotesCanvas(event)\"><kbd>c</kbd> Toggle Notes Canvas</a></li>\n<li class=\"slide-tool-item\" data-item=\"6\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.downloadDrawings(event)\"><kbd>d</kbd> Download Drawings</a></li>\n<li class=\"slide-tool-item\" data-item=\"7\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'chalkboard': {"buttons":true},
 'smaller': true,
  
         // Display controls in the bottom right corner
@@ -1684,7 +1759,7 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
         },
 
         // reveal.js plugins
-        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, RevealChalkboard, QuartoSupport,
 
           RevealMath,
           RevealNotes,
