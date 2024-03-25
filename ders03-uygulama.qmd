@@ -3,6 +3,7 @@ title: "Ders3: Dağılımlar - Uygulama"
 subtitle: "MBG1032 - Doç.Dr.Alper YILMAZ - *18 Mart 2024*"
 format:
   revealjs:
+    chalkboard: true
     css: custom.css
     smaller: true
     scrollable: true
@@ -117,12 +118,116 @@ R ile çözünüz.
 * P<sub>90</sub> değerini bulunuz (alttaki 90% ile üstteki 10% ayıran değer)
 * İlk çeyrek dilime (*Q*<sub>1</sub>) denk gelen kalp atış hızı değerini bulunuz.
 
+```{webr-r}
+# R ile çözünüz
+```
 
-## Poisson dağılımı
+<!-- 
+pnorm(100, mean=74, sd=12.5)
+1 - pnorm(80, mean=74, sd=12.5)
+pnorm(90, mean=74, sd=12.5) - pnorm(70, mean=74, sd=12.5)   
+qnorm(p = 0.9, mean = 74, sd=12.5)
+qnorm(p = 0.25, mean = 74, sd=12.5)             -->
 
-## Bernoulli dağılımı
+## Poisson dağılımı - Soru1
 
-## Geometrik dağılım
+Bir DNA dizisinde ortalama mutasyon sayısı 1000 baz çifti başına 3'tür. 1000 baz çifti uzunluğundaki bir dizide tam olarak 2 mutasyon gözlemleme olasılığı nedir?
 
-## Negatif binomial dağılım
+Formül: 
+
+![](images/image-20240313060426417.png){.nostretch fig-align="center" width="40%"}
+
+```{webr-r}
+# R ile çözünüz
+```
+
+<!-- dpois(2, lambda = 3) -->
+
+## Soru 2
+
+Bir DNA dizisinde ortalama mutasyon sayısı 1000 baz çifti başına 3'tür. **5000 baz çifti** uzunluğundaki bir dizide tam olarak 2 mutasyon gözlemleme olasılığı nedir?
+
+<br>
+
+```{webr-r}
+# R ile çözünüz
+```
+
+<!-- dpois(2, lambda = 15) -->
+
+## Soru 3
+
+Bir doku kesitindeki hücrelerin ortalama sayısı 100 ise, bir doku kesitinde 120'den fazla hücre gözlemleme olasılığı nedir?
+
+<br>
+
+```{webr-r}
+# R ile çözünüz
+```
+
+<!--  1 - ppois(120, lambda = 100) -->
+
+## Soru 4
+
+Belirli bir deney sonrasında ortaya çıkan örneklerdeki ortalama virüs parçacığı sayısı 5'tir. Bir örnekte 3'ten az virüs parçacığı gözlemleme olasılığı nedir?
+
+<br>
+
+```{webr-r}
+# R ile çözünüz
+```
+
+<!-- ppois(2, lambda = 5) -->
+
+## Soru 5
+
+Bir kasabada belirli bir hastalığın ortalama yeni vaka sayısı yılda 5 ise, önümüzdeki 6 ay içinde hiç yeni vaka olmama olasılığı nedir? (Yıllık yeni vaka sayısının Poisson dağılımı izlediği varsayılarak)
+
+<br>
+
+```{webr-r}
+# R ile çözünüz
+```
+
+<!-- ppois(0, lambda = 5/2) -->
+
+
+## Geometrik dağılım - Soru 1
+
+Belirli bir tıbbi testte başarı olasılığının 0.8 olduğunu varsayalım. İlk başarılı test sonucunun üçüncü denemede olma olasılığı nedir?
+
+Formül: 
+
+![](images/geometic-formulas.png){.nostretch fig-align="center" width="40%"}
+
+<br>
+
+```{webr-r}
+# R ile çözünüz
+```
+
+<!-- dgeom(3, prob = 0.8) (#CHECK 2 olması gerekebilir) -->
+
+## Soru 2
+
+Bir DNA dizisinde mutasyon oluşma olasılığının 0.001 olduğunu varsayalım. **Mutasyonsuz** bir DNA segmentinin başarılı bir şekilde dizilenmesinin ilk kez onuncu denemede olma olasılığı nedir?
+
+<br>
+
+```{webr-r}
+# R ile çözünüz
+```
+
+<!-- dgeom(10, prob = 0.999) -->
+
+## Soru 3
+
+Bir DNA parçasının başarılı bir şekilde PCR ile çoğaltılma olasılığının 0.9 olduğunu varsayalım. İlk başarılı çoğaltmanın ilk 5 denemede olma olasılığı nedir?
+
+<br>
+
+```{webr-r}
+# R ile çözünüz
+```
+<!-- pgeom(5-1, prob = 0.9) -->
 

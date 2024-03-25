@@ -1,0 +1,21 @@
+---
+title: "Ders4: "
+subtitle: "MBG1032 - Doç.Dr.Alper YILMAZ - *20 Mart 2024*"
+format:
+  revealjs:
+    css: custom.css
+    smaller: true
+    scrollable: true
+typora-copy-images-to: images
+#webr:
+#  packages: ['ggplot2'] # Install R packages on document open
+# autoload-packages: false       # Disable automatic loading of packages
+# show-startup-message: false    # Disable displaying status of webR initialization
+filters:
+  - webr
+---
+
+## Özet
+
+* .
+

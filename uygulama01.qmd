@@ -2,6 +2,7 @@
 title: "R Temelleri"
 format: 
   revealjs:
+    chalkboard: true
     css: custom.css
 
 #webr:

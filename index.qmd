@@ -29,6 +29,12 @@
 
 ## Ders04
 
-**Teorik** (*13 Mart 2024*): Poisson ve Bernoulli dağılımları tanıtıldı. [Sunum linki](ders03.qmd)
+**Teorik** (*13 Mart 2024*): Poisson ve Bernoulli dağılımları (Poisson dağılımı ve Geometrik dağılım) tanıtıldı. [Sunum linki](ders03.qmd)
 
-**Pratik** (*18 Mart 2024*): [Uygulama sunum linki](ders03-uygulama.qmd)
+**Pratik** (*18 Mart 2024*): Normal dağılım örnekleri çözüldü. [Uygulama sunum linki](ders03-uygulama.qmd)
+
+## Ders05
+
+**Teorik** (*20 Mart 2024*): t statistik. [Sunum linki](ders04.qmd)
+
+**Pratik** (*25 Mart 2024*): Poisson dağılımı ve Geometrik dağılım örnekleri çözüldü [Uygulama sunum linki](ders03-uygulama.qmd)

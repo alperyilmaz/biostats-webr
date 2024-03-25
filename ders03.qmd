@@ -3,6 +3,7 @@ title: "Ders3: İhtimal hesabı ve dağılım"
 subtitle: "MBG1032 - Doç.Dr.Alper YILMAZ - *28 Şubat 2024*"
 format:
   revealjs:
+    chalkboard: true
     css: custom.css
     smaller: true
     scrollable: true
@@ -209,7 +210,7 @@ Geometrik dağılım, biyolojik süreçler ve fenomenler içinde çeşitli örne
 
 ## Geometrik dağılım
 
-![](images/geometrik.png){.nostretch fig-align="center" width="80%"}
+![](images/geometrik.png){.nostretch fig-align="center" width="65%"}
 
 Gerçekleşme ihtimali  *p*= 0.35 iken, ilk denemede başarılı olma ihtimali yine 0.35'tir. İkinci denemede başarılı olma ihtimali ise 0.65 x 0.35 = 0.228i'dir. Üçüncü denemede başarılı olma ihtimali ise 0.65 x 0.65 x 0.35 = 0.148'tir.
 
@@ -224,6 +225,10 @@ Geometric dağılımda olasılık üssel şekilde azalır.
 Bekleme süresinin ortalaması, varyansı ve standard sapması
 
 ![](images/image-20240313090540456.png){.nostretch fig-align="center" width="60%"}
+
+## Geometrik dağılım - formüller
+
+![](images/geometic-formulas.png){.nostretch fig-align="center" width="60%"}
 
 ## Soru
 
