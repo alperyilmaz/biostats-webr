@@ -3,6 +3,7 @@ title: "Ders4: "
 subtitle: "MBG1032 - Doç.Dr.Alper YILMAZ - *20 Mart 2024*"
 format:
   revealjs:
+    chalkboard: true
     css: custom.css
     smaller: true
     scrollable: true

@@ -3,6 +3,7 @@ title: "Ders2: Sayısal ve Görsel Özetleme"
 subtitle: "MBG1032 - Doç.Dr.Alper YILMAZ - *28 Şubat 2024*"
 format:
   revealjs:
+    chalkboard: true
     css: custom.css
     smaller: true
     scrollable: true
