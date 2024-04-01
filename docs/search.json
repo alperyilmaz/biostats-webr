@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "MBG1032 Biyoistatistik Ders Notları",
     "section": "",
-    "text": "Kitap1: Introductory Statistics for the Life and Biomedical Sciences (Julie Vu, David Harrington) Leanpub sitesinden ücretsiz olarak (You Pay kısmını 0’a çekerek) indirebilirsiniz.\nKitap2: Principles of Biostatistics (Marcello Pagano, Kimberlee Gauvreau)\nKitap3: Biostatistics for the Biological and Health Sciences (Mario F. Triola, Marc M. Triola,Jason Roy)\nKitap4: R Programı İle Temel İstatistiksel Yöntemler Uygulamalı İstatistik Turcademy üzerinden ücretsiz olarak erişilebilir.\n\n\n\n\nTeorik (21 Şubat 2024): İlk derste, R programı çalıştırılabilecek ortamlar tanıtıldı. Ayrıca “Is Most Published Research Wrong?” başlıklı videodan bahsedildi. Söz konusu videoda p-value değerlerinin istatistik gücü oldukça zayıf şekilde bilimsel makalelerde kullanıldığı ve bu yüzden makalelerin tekrarlanabilirliğinin (reproducability) düşük olduğundan bahsedildi.\nUygulama (26 Şubat 2024): R Temelleri Sunum. Bu içerik için kullanılan ek kaynak, “An Introduction to R” adlı online kitap.\n\n\n\n\nTeorik (28 Şubat 2024): Veri setinin merkezini belirleyen ortalama ve mediandan bahsedildi. Veri setinin dağınıklığını özetleyen sayısal yöntemler (varyans, standart sapma) ve görsel yöntemler (histogram, boxplot) tanıtıldı. Sunum linki\nUygulama (4 Mart 2024): iris.xlsx dosyasını kullanarak, Excel’de hücre aralıklarını seçme, Ctrl ve Shift tuşları ile hızlı seçim ve gezinme gösterildi. Tek bir sütün için ortalama, medyan, 1. ve 3. çeyrek dilim hesaplama ve standard sapma hesabı yapıldı. Excel’de formüllerin başka hücrelere uygulanması gösterildi. Excel’in yeni versiyonunda Boxplot ve Histogram grafikleri çizilebileceği tartışıldı.\n\n\n\nTeorik (6 Mart 2024): Olaslık hesabına dair özellikler, küme prensibi üzerinden anlatıldı. Normal dağılımın özellikleri tanıtıldı. Sunum linki\nUygulama (11 Mart 2024): R’da pnorm(), qnorm() ve dnorm() fonksiyonları kullanarak ihtimal hesapları yapıldı ve normal dağılıma uygun rastgele sayılar üretildi. Excel’de normal dağılıma uygun sayılar üreten formüller kullanıldı.\n\n\n\nTeorik (13 Mart 2024): Poisson ve Bernoulli dağılımları (Poisson dağılımı ve Geometrik dağılım) tanıtıldı. Sunum linki\nPratik (18 Mart 2024): Normal dağılım örnekleri çözüldü. Uygulama sunum linki\n\n\n\nTeorik (20 Mart 2024): t statistik. Sunum linki\nPratik (25 Mart 2024): Poisson dağılımı ve Geometrik dağılım örnekleri çözüldü Uygulama sunum linki"
+    "text": "Kitap1: Introductory Statistics for the Life and Biomedical Sciences (Julie Vu, David Harrington) Leanpub sitesinden ücretsiz olarak (You Pay kısmını 0’a çekerek) indirebilirsiniz.\nKitap2: Principles of Biostatistics (Marcello Pagano, Kimberlee Gauvreau)\nKitap3: Biostatistics for the Biological and Health Sciences (Mario F. Triola, Marc M. Triola,Jason Roy)\nKitap4: R Programı İle Temel İstatistiksel Yöntemler Uygulamalı İstatistik Turcademy üzerinden ücretsiz olarak erişilebilir.\n\n\n\n\nTeorik (21 Şubat 2024): İlk derste, R programı çalıştırılabilecek ortamlar tanıtıldı. Ayrıca “Is Most Published Research Wrong?” başlıklı videodan bahsedildi. Söz konusu videoda p-value değerlerinin istatistik gücü oldukça zayıf şekilde bilimsel makalelerde kullanıldığı ve bu yüzden makalelerin tekrarlanabilirliğinin (reproducability) düşük olduğundan bahsedildi.\nUygulama (26 Şubat 2024): R Temelleri Sunum. Bu içerik için kullanılan ek kaynak, “An Introduction to R” adlı online kitap.\n\n\n\n\nTeorik (28 Şubat 2024): Veri setinin merkezini belirleyen ortalama ve mediandan bahsedildi. Veri setinin dağınıklığını özetleyen sayısal yöntemler (varyans, standart sapma) ve görsel yöntemler (histogram, boxplot) tanıtıldı. Sunum linki\nUygulama (4 Mart 2024): iris.xlsx dosyasını kullanarak, Excel’de hücre aralıklarını seçme, Ctrl ve Shift tuşları ile hızlı seçim ve gezinme gösterildi. Tek bir sütün için ortalama, medyan, 1. ve 3. çeyrek dilim hesaplama ve standard sapma hesabı yapıldı. Excel’de formüllerin başka hücrelere uygulanması gösterildi. Excel’in yeni versiyonunda Boxplot ve Histogram grafikleri çizilebileceği tartışıldı.\n\n\n\nTeorik (6 Mart 2024): Olaslık hesabına dair özellikler, küme prensibi üzerinden anlatıldı. Normal dağılımın özellikleri tanıtıldı. Sunum linki\nUygulama (11 Mart 2024): R’da pnorm(), qnorm() ve dnorm() fonksiyonları kullanarak ihtimal hesapları yapıldı ve normal dağılıma uygun rastgele sayılar üretildi. Excel’de normal dağılıma uygun sayılar üreten formüller kullanıldı.\n\n\n\nTeorik (13 Mart 2024): Poisson ve Bernoulli dağılımları (Poisson dağılımı ve Geometrik dağılım) tanıtıldı. Sunum linki\nPratik (18 Mart 2024): Normal dağılım örnekleri çözüldü. Uygulama sunum linki\n\n\n\nTeorik (20 Mart 2024): t statistik. Sunum linki\nPratik (25 Mart 2024): Poisson dağılımı ve Geometrik dağılım örnekleri çözüldü Uygulama sunum linki\n\n\n\nTeorik (27 Mart 2024): T-testi. Sunum linki\nPratik (01 Nisan 2024): T-testi uygulamaları Uygulama sunum linki"
   },
   {
     "objectID": "index.html#kaynaklar",
@@ -47,6 +47,13 @@
     "title": "MBG1032 Biyoistatistik Ders Notları",
     "section": "",
     "text": "Teorik (20 Mart 2024): t statistik. Sunum linki\nPratik (25 Mart 2024): Poisson dağılımı ve Geometrik dağılım örnekleri çözüldü Uygulama sunum linki"
+  },
+  {
+    "objectID": "index.html#ders06",
+    "href": "index.html#ders06",
+    "title": "MBG1032 Biyoistatistik Ders Notları",
+    "section": "",
+    "text": "Teorik (27 Mart 2024): T-testi. Sunum linki\nPratik (01 Nisan 2024): T-testi uygulamaları Uygulama sunum linki"
   },
   {
     "objectID": "uygulama01.html#aritmetik",
@@ -264,6 +271,55 @@
     "title": "Ders3: Dağılımlar - Uygulama",
     "section": "Soru 3",
     "text": "Soru 3\nBir DNA parçasının başarılı bir şekilde PCR ile çoğaltılma olasılığının 0.9 olduğunu varsayalım. İlk başarılı çoğaltmanın ilk 5 denemede olma olasılığı nedir?\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders05.html#slide1",
+    "href": "ders05.html#slide1",
+    "title": "Ders5: Başlık",
+    "section": "slide1",
+    "text": "slide1\n\nt-dağılımı (düz çizgi) ve normal dağılım karşılaştırması"
+  },
+  {
+    "objectID": "ders05.html#slide2",
+    "href": "ders05.html#slide2",
+    "title": "Ders5: Başlık",
+    "section": "slide2",
+    "text": "slide2\n\nimage-20240327044422037df (serbestlik derecesi ) arttıkça, t-dağılımı normal dağılıma yaklaşmaktadır"
+  },
+  {
+    "objectID": "ders05.html#slide3",
+    "href": "ders05.html#slide3",
+    "title": "Ders5: Başlık",
+    "section": "slide3",
+    "text": "slide3\n\nimage-20240327044528724t-tablosu"
+  },
+  {
+    "objectID": "ders05.html#slide4",
+    "href": "ders05.html#slide4",
+    "title": "Ders5: Başlık",
+    "section": "slide4",
+    "text": "slide4\n\ndf=18 için, -2.10 altında kalan alan boyanmıştır. t-dağılımının ne kadarı -2.10 altında kalır?\n\ndf=20 iken, t-dağılımının ne kadarı -1.60’tan küçük ve 1.60’tan büyüktür?\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders05.html#slide5",
+    "href": "ders05.html#slide5",
+    "title": "Ders5: Başlık",
+    "section": "slide5",
+    "text": "slide5\nçift yönlü 100(1-\\(\\alpha\\))% güven aralığı için formül:\n\nSE = s / \\(\\sqrt{n}\\)\nTek yönlü olması durumunda\n\n\n\nimage-20240327051040495"
+  },
+  {
+    "objectID": "ders05.html#slide6",
+    "href": "ders05.html#slide6",
+    "title": "Ders5: Başlık",
+    "section": "slide6",
+    "text": "slide6\nYunuslarda civa miktarı üzerine yapılan çalışmada, Japonya’nın Taiji bölgesinden rastgele seçilen 19 adet yunusta civa miktarına dair bilgiler şu şekildedir.\n\nOrtalama civa miktarı için %95 güven aralığını hesaplayınız.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders05.html#slide7",
+    "href": "ders05.html#slide7",
+    "title": "Ders5: Başlık",
+    "section": "slide7",
+    "text": "slide7"
   },
   {
     "objectID": "ders03.html#özet",
