@@ -1,0 +1,18 @@
+---
+title: "Ders6: T-testi"
+subtitle: "MBG1032 Biyoistatistik - Doç.Dr.Alper YILMAZ - *27 Mart 2024*"
+format:
+  revealjs:
+    chalkboard: true
+    css: custom.css
+    smaller: true
+    slide-number: c/t
+    scrollable: true
+typora-copy-images-to: images
+#webr:
+#  packages: ['ggplot2'] # Install R packages on document open
+# autoload-packages: false       # Disable automatic loading of packages
+# show-startup-message: false    # Disable displaying status of webR initialization
+filters:
+  - webr
+---

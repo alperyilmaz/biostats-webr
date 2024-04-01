@@ -38,3 +38,9 @@
 **Teorik** (*20 Mart 2024*): t statistik. [Sunum linki](ders04.qmd)
 
 **Pratik** (*25 Mart 2024*): Poisson dağılımı ve Geometrik dağılım örnekleri çözüldü [Uygulama sunum linki](ders03-uygulama.qmd)
+
+## Ders06
+
+**Teorik** (*27 Mart 2024*): T-testi. [Sunum linki](ders06.qmd)
+
+**Pratik** (*01 Nisan 2024*): T-testi uygulamaları [Uygulama sunum linki](ders06-uygulama.qmd)
