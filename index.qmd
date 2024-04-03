@@ -44,3 +44,8 @@
 **Teorik** (*27 Mart 2024*): T-testi. [Sunum linki](ders06.qmd)
 
 **Pratik** (*01 Nisan 2024*): T-testi uygulamaları [Uygulama sunum linki](ders06-uygulama.qmd)
+
+## Ders07
+
+**Teorik** (*03 Nisan 2024*): T-testi uygulamaları  [Sunum linki](ders06-uygulama.qmd)
+

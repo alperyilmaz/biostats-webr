@@ -9,10 +9,50 @@ format:
     slide-number: c/t
     scrollable: true
 typora-copy-images-to: images
-#webr:
-#  packages: ['ggplot2'] # Install R packages on document open
+webr:
+  packages: ['ISwR'] # Install R packages on document open
 # autoload-packages: false       # Disable automatic loading of packages
 # show-startup-message: false    # Disable displaying status of webR initialization
 filters:
   - webr
 ---
+
+
+## Tek örnek t-testi
+Aşağıdaki veri, 11 kadına ait günlük enerji alımını (kJ) gösterir. Bu grubun değerleri tavisye edilen 7725 kJ değerinden farklı mıdır?
+
+```{webr-r}
+daily.intake <- c(5260,5470,5640,6180,6390,6515,6805,7515,7515,8230,8770)
+```
+
+<!-- t.test(daily.intake,mu=7725) -->
+
+## İki örnek t-testi
+İki grup arasında enerji tüketimi açısından fark var mıdır?
+
+```{webr-r}
+energy
+
+```
+
+<!-- t.test(expend~stature, data=energy) -->
+
+:::footer
+*Introductory Statistics with R* adlı kitaptan alınmıştır
+:::
+
+## İki örnek t-testi
+
+```{webr-r}
+#var.equal=T ile tekrar hesaplayınız
+```
+
+## İki örnek t-testi (bağımlı/ilişkili)
+
+Bir grup kadında pre ve post menstruasyon enerji alımı verisi. Pre ve Post ölçümler arasında fark var mıdır?
+
+```{webr-r}
+intake
+```
+
+<!-- t.test(intake$pre, intake$post, paired=T) -->
