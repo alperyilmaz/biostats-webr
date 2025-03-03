@@ -174,3 +174,4 @@ Görsel kaynak: [Plot Grouped Data: Box plot, Bar Plot and More](http://www.sthd
 ## Ek kaynaklar
 
 * [STHDA](http://www.sthda.com/english/wiki/descriptive-statistics-and-graphics) sitesinde "Descriptive Statistics and Graphics" adlı sayfa, bu sunumdaki bilgilere ek bilgiler içerir.
+* Sadece sayısal özet yeterli olmayabilir. Veriyi her zaman görselleştirmek gerekir. [Same Stats, Different Graphs](https://www.research.autodesk.com/publications/same-stats-different-graphs/)

@@ -1,180 +1,5 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "MBG1032 Biyoistatistik Ders Notları",
-    "section": "",
-    "text": "Kitap1: Introductory Statistics for the Life and Biomedical Sciences (Julie Vu, David Harrington) Leanpub sitesinden ücretsiz olarak (You Pay kısmını 0’a çekerek) indirebilirsiniz.\nKitap2: Principles of Biostatistics (Marcello Pagano, Kimberlee Gauvreau)\nKitap3: Biostatistics for the Biological and Health Sciences (Mario F. Triola, Marc M. Triola,Jason Roy)\nKitap4: R Programı İle Temel İstatistiksel Yöntemler Uygulamalı İstatistik Turcademy üzerinden ücretsiz olarak erişilebilir.\n\n\n\n\nTeorik (21 Şubat 2024): İlk derste, R programı çalıştırılabilecek ortamlar tanıtıldı. Ayrıca “Is Most Published Research Wrong?” başlıklı videodan bahsedildi. Söz konusu videoda p-value değerlerinin istatistik gücü oldukça zayıf şekilde bilimsel makalelerde kullanıldığı ve bu yüzden makalelerin tekrarlanabilirliğinin (reproducability) düşük olduğundan bahsedildi.\nUygulama (26 Şubat 2024): R Temelleri Sunum. Bu içerik için kullanılan ek kaynak, “An Introduction to R” adlı online kitap.\n\n\n\n\nTeorik (28 Şubat 2024): Veri setinin merkezini belirleyen ortalama ve mediandan bahsedildi. Veri setinin dağınıklığını özetleyen sayısal yöntemler (varyans, standart sapma) ve görsel yöntemler (histogram, boxplot) tanıtıldı. Sunum linki\nUygulama (4 Mart 2024): iris.xlsx dosyasını kullanarak, Excel’de hücre aralıklarını seçme, Ctrl ve Shift tuşları ile hızlı seçim ve gezinme gösterildi. Tek bir sütün için ortalama, medyan, 1. ve 3. çeyrek dilim hesaplama ve standard sapma hesabı yapıldı. Excel’de formüllerin başka hücrelere uygulanması gösterildi. Excel’in yeni versiyonunda Boxplot ve Histogram grafikleri çizilebileceği tartışıldı.\n\n\n\nTeorik (6 Mart 2024): Olaslık hesabına dair özellikler, küme prensibi üzerinden anlatıldı. Normal dağılımın özellikleri tanıtıldı. Sunum linki\nUygulama (11 Mart 2024): R’da pnorm(), qnorm() ve dnorm() fonksiyonları kullanarak ihtimal hesapları yapıldı ve normal dağılıma uygun rastgele sayılar üretildi. Excel’de normal dağılıma uygun sayılar üreten formüller kullanıldı.\n\n\n\nTeorik (13 Mart 2024): Poisson ve Bernoulli dağılımları (Poisson dağılımı ve Geometrik dağılım) tanıtıldı. Sunum linki\nPratik (18 Mart 2024): Normal dağılım örnekleri çözüldü. Uygulama sunum linki\n\n\n\nTeorik (20 Mart 2024): t statistik. Sunum linki\nPratik (25 Mart 2024): Poisson dağılımı ve Geometrik dağılım örnekleri çözüldü Uygulama sunum linki\n\n\n\nTeorik (27 Mart 2024): T-testi. Sunum linki\nPratik (01 Nisan 2024): T-testi uygulamaları Uygulama sunum linki\n\n\n\nTeorik (03 Nisan 2024): T-testi uygulamaları Sunum linki"
-  },
-  {
-    "objectID": "index.html#kaynaklar",
-    "href": "index.html#kaynaklar",
-    "title": "MBG1032 Biyoistatistik Ders Notları",
-    "section": "",
-    "text": "Kitap1: Introductory Statistics for the Life and Biomedical Sciences (Julie Vu, David Harrington) Leanpub sitesinden ücretsiz olarak (You Pay kısmını 0’a çekerek) indirebilirsiniz.\nKitap2: Principles of Biostatistics (Marcello Pagano, Kimberlee Gauvreau)\nKitap3: Biostatistics for the Biological and Health Sciences (Mario F. Triola, Marc M. Triola,Jason Roy)\nKitap4: R Programı İle Temel İstatistiksel Yöntemler Uygulamalı İstatistik Turcademy üzerinden ücretsiz olarak erişilebilir."
-  },
-  {
-    "objectID": "index.html#ders1",
-    "href": "index.html#ders1",
-    "title": "MBG1032 Biyoistatistik Ders Notları",
-    "section": "",
-    "text": "Teorik (21 Şubat 2024): İlk derste, R programı çalıştırılabilecek ortamlar tanıtıldı. Ayrıca “Is Most Published Research Wrong?” başlıklı videodan bahsedildi. Söz konusu videoda p-value değerlerinin istatistik gücü oldukça zayıf şekilde bilimsel makalelerde kullanıldığı ve bu yüzden makalelerin tekrarlanabilirliğinin (reproducability) düşük olduğundan bahsedildi.\nUygulama (26 Şubat 2024): R Temelleri Sunum. Bu içerik için kullanılan ek kaynak, “An Introduction to R” adlı online kitap."
-  },
-  {
-    "objectID": "index.html#ders2",
-    "href": "index.html#ders2",
-    "title": "MBG1032 Biyoistatistik Ders Notları",
-    "section": "",
-    "text": "Teorik (28 Şubat 2024): Veri setinin merkezini belirleyen ortalama ve mediandan bahsedildi. Veri setinin dağınıklığını özetleyen sayısal yöntemler (varyans, standart sapma) ve görsel yöntemler (histogram, boxplot) tanıtıldı. Sunum linki\nUygulama (4 Mart 2024): iris.xlsx dosyasını kullanarak, Excel’de hücre aralıklarını seçme, Ctrl ve Shift tuşları ile hızlı seçim ve gezinme gösterildi. Tek bir sütün için ortalama, medyan, 1. ve 3. çeyrek dilim hesaplama ve standard sapma hesabı yapıldı. Excel’de formüllerin başka hücrelere uygulanması gösterildi. Excel’in yeni versiyonunda Boxplot ve Histogram grafikleri çizilebileceği tartışıldı."
-  },
-  {
-    "objectID": "index.html#ders03",
-    "href": "index.html#ders03",
-    "title": "MBG1032 Biyoistatistik Ders Notları",
-    "section": "",
-    "text": "Teorik (6 Mart 2024): Olaslık hesabına dair özellikler, küme prensibi üzerinden anlatıldı. Normal dağılımın özellikleri tanıtıldı. Sunum linki\nUygulama (11 Mart 2024): R’da pnorm(), qnorm() ve dnorm() fonksiyonları kullanarak ihtimal hesapları yapıldı ve normal dağılıma uygun rastgele sayılar üretildi. Excel’de normal dağılıma uygun sayılar üreten formüller kullanıldı."
-  },
-  {
-    "objectID": "index.html#ders04",
-    "href": "index.html#ders04",
-    "title": "MBG1032 Biyoistatistik Ders Notları",
-    "section": "",
-    "text": "Teorik (13 Mart 2024): Poisson ve Bernoulli dağılımları (Poisson dağılımı ve Geometrik dağılım) tanıtıldı. Sunum linki\nPratik (18 Mart 2024): Normal dağılım örnekleri çözüldü. Uygulama sunum linki"
-  },
-  {
-    "objectID": "index.html#ders05",
-    "href": "index.html#ders05",
-    "title": "MBG1032 Biyoistatistik Ders Notları",
-    "section": "",
-    "text": "Teorik (20 Mart 2024): t statistik. Sunum linki\nPratik (25 Mart 2024): Poisson dağılımı ve Geometrik dağılım örnekleri çözüldü Uygulama sunum linki"
-  },
-  {
-    "objectID": "index.html#ders06",
-    "href": "index.html#ders06",
-    "title": "MBG1032 Biyoistatistik Ders Notları",
-    "section": "",
-    "text": "Teorik (27 Mart 2024): T-testi. Sunum linki\nPratik (01 Nisan 2024): T-testi uygulamaları Uygulama sunum linki"
-  },
-  {
-    "objectID": "index.html#ders07",
-    "href": "index.html#ders07",
-    "title": "MBG1032 Biyoistatistik Ders Notları",
-    "section": "",
-    "text": "Teorik (03 Nisan 2024): T-testi uygulamaları Sunum linki"
-  },
-  {
-    "objectID": "uygulama01.html#aritmetik",
-    "href": "uygulama01.html#aritmetik",
-    "title": "R Temelleri",
-    "section": "Aritmetik",
-    "text": "Aritmetik\nR ile aritmetik yapılabilir. (Run Code butonunu tıklayınız)\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nYukarıdaki kutuya herhangi bir işlem yazıp çalıştırabilirsiniz.\n \n8 / 2 + 4 * 5 şeklindeki bir ifadede, işlem sırası doğru olarak izleniyor mu?"
-  },
-  {
-    "objectID": "uygulama01.html#matematik-fonksiyonları",
-    "href": "uygulama01.html#matematik-fonksiyonları",
-    "title": "R Temelleri",
-    "section": "Matematik fonksiyonları",
-    "text": "Matematik fonksiyonları\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nCtrl + Enter ile tek satır, Shift + Enter ile bütün satırlar çalıştırılabilir"
-  },
-  {
-    "objectID": "uygulama01.html#değişkenler-objeler",
-    "href": "uygulama01.html#değişkenler-objeler",
-    "title": "R Temelleri",
-    "section": "Değişkenler / Objeler",
-    "text": "Değişkenler / Objeler\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nBu değişken, oturum boyunca geçerlidir, başka bir slaytta tekrar kullanılabilir.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "uygulama01.html#vektörler",
-    "href": "uygulama01.html#vektörler",
-    "title": "R Temelleri",
-    "section": "Vektörler",
-    "text": "Vektörler\nR dilinde vektörler önemli bir veri yapısıdır. Aynı tipteki (tamsayı, ondaliklı sayı, karakter, vb.) verilerin toplu şekilde saklandığı bir yapıdır. Başka dillerde “liste”, “dizi” olarak adlandırılır. R dilinde vektörler c() fonksiyonu ile oluşturulur.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "uygulama01.html#indeks",
-    "href": "uygulama01.html#indeks",
-    "title": "R Temelleri",
-    "section": "İndeks",
-    "text": "İndeks\nBir vektördeki elemanlara indeksler yardımıyla erişim sağlanır. R dilinde indeks 1’den başlar. 5. elemanına ulaşmak için my_vec[5] şeklinde komut yazılmalıdır.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nİndeksler aralıklarla da kullanılabilir. Örneğin, 1. ve 2. elemanına ulaşmak için my_vec[1:2] komutu kullanılabilir.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "uygulama01.html#indeks-vektörü",
-    "href": "uygulama01.html#indeks-vektörü",
-    "title": "R Temelleri",
-    "section": "İndeks vektörü",
-    "text": "İndeks vektörü\nBir vektördeki belirli elemanlara erişim için indekslerden oluşan bir vektör kullanılabilir. 5. ve 3. elemanlara (bu sırada) erişilmek isteniyorsa c(5,3) vektörü indeks olarak kullanılabilir\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "uygulama01.html#vektörlerle-işlemler",
-    "href": "uygulama01.html#vektörlerle-işlemler",
-    "title": "R Temelleri",
-    "section": "Vektörlerle işlemler",
-    "text": "Vektörlerle işlemler\nNormalde bir liste veya dizinin işlenmesi için for döngüsü kullanılır. R’de ise vektörlerle işlem yapılırken, bir fonksiyon veya işlem otomatik olarak bütün elemanlara uygulanır.\nAyrıca, R’daki çoğu fonksiyon vektörler ile uyumludur, her bir eleman için veya tüm vektör için çalışabilirler.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "uygulama01.html#karşılaştırma-operatörleri",
-    "href": "uygulama01.html#karşılaştırma-operatörleri",
-    "title": "R Temelleri",
-    "section": "Karşılaştırma operatörleri",
-    "text": "Karşılaştırma operatörleri\nEşitlik ==, büyüktür &gt;, küçüktür &lt;, eşit değil != operatörleri bir vektöre uygulandığında, her bir eleman için karşılaştırma yapılır.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nSonuçlar logical/mantıksal (TRUE/FALSE) vektör olarak döndürülür. Bu sonuç vektörü, maske olarak kullanılabilir, yani indeks olarak kullanıldığında, “TRUE” değerlerin denk geldiği elemanlar gösterilebilir.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nFarkedildiği üzere, bu işlem sayesinde veri kümesinde filtreleme yapılmıştır."
-  },
-  {
-    "objectID": "uygulama01.html#sıralama",
-    "href": "uygulama01.html#sıralama",
-    "title": "R Temelleri",
-    "section": "Sıralama",
-    "text": "Sıralama\nsort() fonksiyonu ile vektörler sıralanabilir.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nSoru: ters yönde sıralama yapmak için ne yapılmalıdır?\norder() fonksiyonu ile de sıralama yapılabilir. Ancak bu fonksiyon doğrudan elemanları sıralamaz; bunun yerine, sıralı elemanların orijinal vektördeki indekslerini döndürür.\n\nTablolarda sütunları veya satırları sıralamak gerektiğinde kullanılır."
-  },
-  {
-    "objectID": "uygulama01.html#sıralama-1",
-    "href": "uygulama01.html#sıralama-1",
-    "title": "R Temelleri",
-    "section": "Sıralama",
-    "text": "Sıralama\nAşağıdaki kutuda my_vec[order(my_vec)] komutunu çalıştıp çıktısını sort() ile karşılaştırınız.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "uygulama01.html#na",
-    "href": "uygulama01.html#na",
-    "title": "R Temelleri",
-    "section": "NA",
-    "text": "NA\nNA “not available” anlamına gelir. Herhangi bir vektörde NA olması durumunda toplama, min/max gibi işlemlerin de NA olarak sonuçlanmasına neden olur.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nBu sorunu aşmak için na.rm=TRUE parametresi kullanılabilir.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "uygulama01.html#data-frame-veri-tablosuçerçevesi",
-    "href": "uygulama01.html#data-frame-veri-tablosuçerçevesi",
-    "title": "R Temelleri",
-    "section": "Data Frame / veri tablosu/çerçevesi",
-    "text": "Data Frame / veri tablosu/çerçevesi\nBir veri tablosu, aynı boydaki farklı vektörlerin sütun olarak birleşmesi olarak düşünülebilir. Bu veri yapısı en çok kullanılan veri yapısıdır. Aşağıdaki örnekte, iris veri seti kullanılmıştır.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "uygulama01.html#veri-tablosu-erişim",
-    "href": "uygulama01.html#veri-tablosu-erişim",
-    "title": "R Temelleri",
-    "section": "Veri tablosu / erişim",
-    "text": "Veri tablosu / erişim\nBir veri tablosundaki herhangi bir sütunun tamamına $sütun_adı şeklinde ulaşılabilir.\nVeri tablosunun belirli bir kısmına erişmek için [satır, sütun] şeklinde kullanılabilir.\niris$Species komutu Species sütununu vektör olarak elde eder. iris[1:5,] ilk 5 satırı elde eder. iris[1:5,1:2] şeklindeki komut, ilk 2 sütunu ve ilk 5 satırı elde eder.\nBir sonraki slaytta bahsi geçen komutları deneyiniz."
-  },
-  {
-    "objectID": "uygulama01.html#veri-tablosu-erişim-1",
-    "href": "uygulama01.html#veri-tablosu-erişim-1",
-    "title": "R Temelleri",
-    "section": "Veri tablosu / erişim",
-    "text": "Veri tablosu / erişim\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "uygulama01.html#veri-tablosu-işlemler",
-    "href": "uygulama01.html#veri-tablosu-işlemler",
-    "title": "R Temelleri",
-    "section": "Veri tablosu / işlemler",
-    "text": "Veri tablosu / işlemler\n\ndim(iris) komutu, veri setinin boyutlarını verir.(satır, sütun) şeklinde\nnrow(iris) komutu, veri setindeki satır sayısını verir.\nncol(iris) komutu, veri setindeki sütun sayısını verir.\nstr(iris) komutu, veri setinin yapısını, sütun tipleri ve ilk verileri gösterir.\nsummary(iris) komutu, veri setindeki istatistiksel ölçümleri verir.\n\nBir sonraki slaytta bahsi geçen komutları deneyiniz."
-  },
-  {
-    "objectID": "uygulama01.html#veri-tablosu-işlemler-1",
-    "href": "uygulama01.html#veri-tablosu-işlemler-1",
-    "title": "R Temelleri",
-    "section": "Veri tablosu / işlemler",
-    "text": "Veri tablosu / işlemler\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
     "objectID": "about.html",
     "href": "about.html",
     "title": "MBG1032 Ders Notları",
@@ -182,179 +7,109 @@
     "text": "MBG1032 Ders Notları\nYTÜ MBG Bölümü Biyoistatistik ders içerikleri ve uygulamaları sayfasıdır."
   },
   {
+    "objectID": "ders02.html#özet",
+    "href": "ders02.html#özet",
+    "title": "Ders2: Sayısal ve Görsel Özetleme",
+    "section": "Özet",
+    "text": "Özet\n\nortalama ve standart sapma\ndağılımların çeşitli ölçümleri\n\nrange, IQR\nhistogram\nboxplot"
+  },
+  {
+    "objectID": "ders02.html#ortalama-ve-median",
+    "href": "ders02.html#ortalama-ve-median",
+    "title": "Ders2: Sayısal ve Görsel Özetleme",
+    "section": "Ortalama ve median",
+    "text": "Ortalama ve median\nOrtalama: Değerler toplamının değer sayısına bölünmesi ile hesaplanır.\n\\[\n\\overline{x} = \\frac{\\displaystyle\\sum_{i=1}^{n} x_i}{n}\n\\]\nMedian: Sıralı değerlerin orta noktasıdır. Çift sayıda değer varsa, median, ortadaki iki sayının ortalamasıdır."
+  },
+  {
+    "objectID": "ders02.html#ortalama-ve-median-1",
+    "href": "ders02.html#ortalama-ve-median-1",
+    "title": "Ders2: Sayısal ve Görsel Özetleme",
+    "section": "Ortalama ve median",
+    "text": "Ortalama ve median\n\n\n\n\n\n\nSoru\n\n\nBir veri setine çok büyük veya çok küçük bir sayı eklendiğinde, hangisi daha çok etkilenir, ortalama mı, median mı?\n\n\n\nAşağıdaki örnekte, deneme vektörüne 100 sayısını ekleyip ortalama ve median değerlerini hesaplayın ve karşılaştırın.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders02.html#dağılımların-çeşitli-ölçümleri",
+    "href": "ders02.html#dağılımların-çeşitli-ölçümleri",
+    "title": "Ders2: Sayısal ve Görsel Özetleme",
+    "section": "Dağılımların çeşitli ölçümleri",
+    "text": "Dağılımların çeşitli ölçümleri\nRange/Aralık: En küçük ve büyük değer arasındaki farktır. R’da range() fonskiyonu en düşük ve yüksek değerleri gösterir. Farkı bulmak için max() ve min() fonksiyon çıktıları kullanılabilir.\nIQR: (Interquartile range veya Çeyrekler Arası Aralık) verilerin 1. ve 3. çeyreğinin arasındaki farkı gösterir. R’da IQR() fonksiyonu bu değerleri hesaplar.\n\nrange(iris$Sepal.Length)\n\n[1] 4.3 7.9\n\nIQR(iris$Sepal.Length)\n\n[1] 1.3\n\nquantile(iris$Sepal.Length)\n\n  0%  25%  50%  75% 100% \n 4.3  5.1  5.8  6.4  7.9"
+  },
+  {
+    "objectID": "ders02.html#varyans-ve-standart-sapma",
+    "href": "ders02.html#varyans-ve-standart-sapma",
+    "title": "Ders2: Sayısal ve Görsel Özetleme",
+    "section": "Varyans ve standart sapma",
+    "text": "Varyans ve standart sapma\nVaryans: \\(s^2\\) ile gösterilir, veri setindeki sayıların ortalamadan ne kadar uzak/yakın olduğunu gösterir.\n\\[\ns^2 = \\frac{\\sum_{i=1}^n (x_i - \\overline{x})^2}{n-1}\n\\]\nStandard sapma: Varyansın kareköküdür.\n\\[\ns = \\sqrt{s^2} = \\sqrt{\\frac{\\sum_{i=1}^n (x_i - \\overline{x})^2}{n-1}}\n\\]\nFormülden anlaşılacağı üzere, veri setindeki dağınıklık, ortalamadan uzaklık arttıkça varyans da artmaktadır. Varyans var() fonskiyonu ile, standart sapma ise sd() fonksiyonu ile hesaplanır."
+  },
+  {
+    "objectID": "ders02.html#görsel-özetleme",
+    "href": "ders02.html#görsel-özetleme",
+    "title": "Ders2: Sayısal ve Görsel Özetleme",
+    "section": "Görsel Özetleme",
+    "text": "Görsel Özetleme\nHistogram: Bir veri setindeki değerlerin dağılımını göstermak için, belirli aralıktaki değerlerin frekansını gösteren grafiklerdir. hist() fonksiyonu ile çizilebilir."
+  },
+  {
+    "objectID": "ders02.html#histogram-ayarlar",
+    "href": "ders02.html#histogram-ayarlar",
+    "title": "Ders2: Sayısal ve Görsel Özetleme",
+    "section": "Histogram ayarlar",
+    "text": "Histogram ayarlar\nbreaks parametresi ile histogramın ayrılacağı aralık sayısı ayarlanabilir\n\n\n\nhist(iris$Sepal.Length)\n\n\n\n\n\n\n\n\n\n\nhist(iris$Sepal.Length, \n     breaks = 15)"
+  },
+  {
+    "objectID": "ders02.html#histogram",
+    "href": "ders02.html#histogram",
+    "title": "Ders2: Sayısal ve Görsel Özetleme",
+    "section": "Histogram",
+    "text": "Histogram\nDaha güzel ve karmaşık bir görselleştirme için ggplot2 paketi kullanılabilir.\n\nlibrary(ggplot2)\nggplot(iris, aes(Sepal.Length)) +\n  geom_histogram(color = \"#000000\", fill = \"#0099F8\")"
+  },
+  {
+    "objectID": "ders02.html#ggplot2-ile-histogram",
+    "href": "ders02.html#ggplot2-ile-histogram",
+    "title": "Ders2: Sayısal ve Görsel Özetleme",
+    "section": "ggplot2 ile histogram",
+    "text": "ggplot2 ile histogram\n\nggplot(iris, aes(Sepal.Length)) +\n  geom_histogram(color = \"#000000\", fill = \"#0099F8\") +\n  geom_vline(aes(xintercept = mean(Sepal.Length)), color = \"#000000\", size = 1.25) +\n  geom_vline(aes(xintercept = mean(Sepal.Length) + sd(Sepal.Length)), color = \"#000000\", size = 1, linetype = \"dashed\") +\n  geom_vline(aes(xintercept = mean(Sepal.Length) - sd(Sepal.Length)), color = \"#000000\", size = 1, linetype = \"dashed\") +\n  theme_bw()"
+  },
+  {
+    "objectID": "ders02.html#boxplot",
+    "href": "ders02.html#boxplot",
+    "title": "Ders2: Sayısal ve Görsel Özetleme",
+    "section": "Boxplot",
+    "text": "Boxplot\n\n\nGörsel kaynak: Box Plot with Minitab"
+  },
+  {
+    "objectID": "ders02.html#r-ile-boxplot",
+    "href": "ders02.html#r-ile-boxplot",
+    "title": "Ders2: Sayısal ve Görsel Özetleme",
+    "section": "R ile Boxplot",
+    "text": "R ile Boxplot\nboxplot() fonksiyonu bir vektör (sütün) veya veri tablosu (data frame) için çalıştırılabilir.\n\nboxplot(iris$Sepal.Length)"
+  },
+  {
+    "objectID": "ders02.html#r-ile-boxplot---veri-tablosu",
+    "href": "ders02.html#r-ile-boxplot---veri-tablosu",
+    "title": "Ders2: Sayısal ve Görsel Özetleme",
+    "section": "R ile Boxplot - veri tablosu",
+    "text": "R ile Boxplot - veri tablosu\n\nboxplot(iris)"
+  },
+  {
+    "objectID": "ders02.html#farklı-görselleştirmeler",
+    "href": "ders02.html#farklı-görselleştirmeler",
+    "title": "Ders2: Sayısal ve Görsel Özetleme",
+    "section": "Farklı görselleştirmeler",
+    "text": "Farklı görselleştirmeler\nggplot2 veya temel R’da farklı görselleştirmeler yapılabilir.\n\n\nGörsel kaynak: Plot Grouped Data: Box plot, Bar Plot and More"
+  },
+  {
+    "objectID": "ders02.html#ek-kaynaklar",
+    "href": "ders02.html#ek-kaynaklar",
+    "title": "Ders2: Sayısal ve Görsel Özetleme",
+    "section": "Ek kaynaklar",
+    "text": "Ek kaynaklar\n\nSTHDA sitesinde “Descriptive Statistics and Graphics” adlı sayfa, bu sunumdaki bilgilere ek bilgiler içerir.\nSadece sayısal özet yeterli olmayabilir. Veriyi her zaman görselleştirmek gerekir. Same Stats, Different Graphs"
+  },
+  {
     "objectID": "ders04.html#özet",
     "href": "ders04.html#özet",
     "title": "Ders4:",
     "section": "Özet",
     "text": "Özet\n\n."
-  },
-  {
-    "objectID": "ders03-uygulama.html#normal-dağılım-soruları",
-    "href": "ders03-uygulama.html#normal-dağılım-soruları",
-    "title": "Ders3: Dağılımlar - Uygulama",
-    "section": "Normal dağılım soruları",
-    "text": "Normal dağılım soruları\nTaralı bölgenin alanını bulunuz. Kemik yoğunluğu verisinde ortalama 0 ve standart sapma 1 olduğunu kabul ediniz.\n\n\n\n\nÖnce, Z skor tablosunu kullanarak çözünüz.\n\nDaha sonra R ile çözünüz.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "ders03-uygulama.html#section",
-    "href": "ders03-uygulama.html#section",
-    "title": "Ders3: Dağılımlar - Uygulama",
-    "section": "",
-    "text": "Yine aynı veride, işaretli Z skorunu bulunuz.\n\n\n\n\n\nÖnce, Z skor tablosunu kullanarak çözünüz.\n\nDaha sonra R ile çözünüz.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "ders03-uygulama.html#section-1",
-    "href": "ders03-uygulama.html#section-1",
-    "title": "Ders3: Dağılımlar - Uygulama",
-    "section": "",
-    "text": "Taralı bölgenin alanını bulunuz. Toplanan veriler IQ değerlerine aittir ve ortalaması 100 ve standart sapması 15’tir.\n\n\n\n\n\nZ skor tablosunu kullanarak nasıl çözebiliriz?\n\nR ile çözünüz.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "ders03-uygulama.html#section-2",
-    "href": "ders03-uygulama.html#section-2",
-    "title": "Ders3: Dağılımlar - Uygulama",
-    "section": "",
-    "text": "Aşağıda işaret edilen IQ değerini bulunuz\n\n\n\n\n\nZ skor tablosunu kullanarak nasıl çözebiliriz?\n\nR ile çözünüz.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "ders03-uygulama.html#section-3",
-    "href": "ders03-uygulama.html#section-3",
-    "title": "Ders3: Dağılımlar - Uygulama",
-    "section": "",
-    "text": "13-20 yaş arası kadınlarda kalp atış hızı ortalama 74 ve standart sapması 12.5’tir. Rastgele seçilen bir kadının;\n\nkalp atış hızının 100’den az olması,\nkalp atış hızının 80’den çok olması,\nkalp atış hızının 70 ile 90 arasında olması, ihtimallerini hesaplayınız.\nP90 değerini bulunuz (alttaki 90% ile üstteki 10% ayıran değer)\nİlk çeyrek dilime (Q1) denk gelen kalp atış hızı değerini bulunuz.\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "ders03-uygulama.html#poisson-dağılımı---soru1",
-    "href": "ders03-uygulama.html#poisson-dağılımı---soru1",
-    "title": "Ders3: Dağılımlar - Uygulama",
-    "section": "Poisson dağılımı - Soru1",
-    "text": "Poisson dağılımı - Soru1\nBir DNA dizisinde ortalama mutasyon sayısı 1000 baz çifti başına 3’tür. 1000 baz çifti uzunluğundaki bir dizide tam olarak 2 mutasyon gözlemleme olasılığı nedir?\nFormül:\n\n\n\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "ders03-uygulama.html#soru-2",
-    "href": "ders03-uygulama.html#soru-2",
-    "title": "Ders3: Dağılımlar - Uygulama",
-    "section": "Soru 2",
-    "text": "Soru 2\nBir DNA dizisinde ortalama mutasyon sayısı 1000 baz çifti başına 3’tür. 5000 baz çifti uzunluğundaki bir dizide tam olarak 2 mutasyon gözlemleme olasılığı nedir?\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "ders03-uygulama.html#soru-3",
-    "href": "ders03-uygulama.html#soru-3",
-    "title": "Ders3: Dağılımlar - Uygulama",
-    "section": "Soru 3",
-    "text": "Soru 3\nBir doku kesitindeki hücrelerin ortalama sayısı 100 ise, bir doku kesitinde 120’den fazla hücre gözlemleme olasılığı nedir?\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "ders03-uygulama.html#soru-4",
-    "href": "ders03-uygulama.html#soru-4",
-    "title": "Ders3: Dağılımlar - Uygulama",
-    "section": "Soru 4",
-    "text": "Soru 4\nBelirli bir deney sonrasında ortaya çıkan örneklerdeki ortalama virüs parçacığı sayısı 5’tir. Bir örnekte 3’ten az virüs parçacığı gözlemleme olasılığı nedir?\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "ders03-uygulama.html#soru-5",
-    "href": "ders03-uygulama.html#soru-5",
-    "title": "Ders3: Dağılımlar - Uygulama",
-    "section": "Soru 5",
-    "text": "Soru 5\nBir kasabada belirli bir hastalığın ortalama yeni vaka sayısı yılda 5 ise, önümüzdeki 6 ay içinde hiç yeni vaka olmama olasılığı nedir? (Yıllık yeni vaka sayısının Poisson dağılımı izlediği varsayılarak)\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "ders03-uygulama.html#geometrik-dağılım---soru-1",
-    "href": "ders03-uygulama.html#geometrik-dağılım---soru-1",
-    "title": "Ders3: Dağılımlar - Uygulama",
-    "section": "Geometrik dağılım - Soru 1",
-    "text": "Geometrik dağılım - Soru 1\nBelirli bir tıbbi testte başarı olasılığının 0.8 olduğunu varsayalım. İlk başarılı test sonucunun üçüncü denemede olma olasılığı nedir?\nFormül:\n\n\n\n\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "ders03-uygulama.html#soru-2-1",
-    "href": "ders03-uygulama.html#soru-2-1",
-    "title": "Ders3: Dağılımlar - Uygulama",
-    "section": "Soru 2",
-    "text": "Soru 2\nBir DNA dizisinde mutasyon oluşma olasılığının 0.001 olduğunu varsayalım. Mutasyonsuz bir DNA segmentinin başarılı bir şekilde dizilenmesinin ilk kez onuncu denemede olma olasılığı nedir?\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "ders03-uygulama.html#soru-3-1",
-    "href": "ders03-uygulama.html#soru-3-1",
-    "title": "Ders3: Dağılımlar - Uygulama",
-    "section": "Soru 3",
-    "text": "Soru 3\nBir DNA parçasının başarılı bir şekilde PCR ile çoğaltılma olasılığının 0.9 olduğunu varsayalım. İlk başarılı çoğaltmanın ilk 5 denemede olma olasılığı nedir?\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "ders05.html#slide1",
-    "href": "ders05.html#slide1",
-    "title": "Ders5: Başlık",
-    "section": "slide1",
-    "text": "slide1\n\nt-dağılımı (düz çizgi) ve normal dağılım karşılaştırması"
-  },
-  {
-    "objectID": "ders05.html#slide2",
-    "href": "ders05.html#slide2",
-    "title": "Ders5: Başlık",
-    "section": "slide2",
-    "text": "slide2\n\nimage-20240327044422037df (serbestlik derecesi ) arttıkça, t-dağılımı normal dağılıma yaklaşmaktadır"
-  },
-  {
-    "objectID": "ders05.html#slide3",
-    "href": "ders05.html#slide3",
-    "title": "Ders5: Başlık",
-    "section": "slide3",
-    "text": "slide3\n\nimage-20240327044528724t-tablosu"
-  },
-  {
-    "objectID": "ders05.html#slide4",
-    "href": "ders05.html#slide4",
-    "title": "Ders5: Başlık",
-    "section": "slide4",
-    "text": "slide4\n\ndf=18 için, -2.10 altında kalan alan boyanmıştır. t-dağılımının ne kadarı -2.10 altında kalır?\n\ndf=20 iken, t-dağılımının ne kadarı -1.60’tan küçük ve 1.60’tan büyüktür?\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "ders05.html#slide5",
-    "href": "ders05.html#slide5",
-    "title": "Ders5: Başlık",
-    "section": "slide5",
-    "text": "slide5\nçift yönlü 100(1-\\(\\alpha\\))% güven aralığı için formül:\n\nSE = s / \\(\\sqrt{n}\\)\nTek yönlü olması durumunda\n\n\n\nimage-20240327051040495"
-  },
-  {
-    "objectID": "ders05.html#slide6",
-    "href": "ders05.html#slide6",
-    "title": "Ders5: Başlık",
-    "section": "slide6",
-    "text": "slide6\nYunuslarda civa miktarı üzerine yapılan çalışmada, Japonya’nın Taiji bölgesinden rastgele seçilen 19 adet yunusta civa miktarına dair bilgiler şu şekildedir.\n\nOrtalama civa miktarı için %95 güven aralığını hesaplayınız.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "ders05.html#slide7",
-    "href": "ders05.html#slide7",
-    "title": "Ders5: Başlık",
-    "section": "slide7",
-    "text": "slide7"
-  },
-  {
-    "objectID": "ders06-uygulama.html#tek-örnek-t-testi",
-    "href": "ders06-uygulama.html#tek-örnek-t-testi",
-    "title": "Ders6 Uygulama: T-testi",
-    "section": "Tek örnek t-testi",
-    "text": "Tek örnek t-testi\nAşağıdaki veri, 11 kadına ait günlük enerji alımını (kJ) gösterir. Bu grubun değerleri tavisye edilen 7725 kJ değerinden farklı mıdır?\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "ders06-uygulama.html#iki-örnek-t-testi",
-    "href": "ders06-uygulama.html#iki-örnek-t-testi",
-    "title": "Ders6 Uygulama: T-testi",
-    "section": "İki örnek t-testi",
-    "text": "İki örnek t-testi\nİki grup arasında enerji tüketimi açısından fark var mıdır?\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\nIntroductory Statistics with R adlı kitaptan alınmıştır"
-  },
-  {
-    "objectID": "ders06-uygulama.html#iki-örnek-t-testi-1",
-    "href": "ders06-uygulama.html#iki-örnek-t-testi-1",
-    "title": "Ders6 Uygulama: T-testi",
-    "section": "İki örnek t-testi",
-    "text": "İki örnek t-testi\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "ders06-uygulama.html#iki-örnek-t-testi-bağımlıilişkili",
-    "href": "ders06-uygulama.html#iki-örnek-t-testi-bağımlıilişkili",
-    "title": "Ders6 Uygulama: T-testi",
-    "section": "İki örnek t-testi (bağımlı/ilişkili)",
-    "text": "İki örnek t-testi (bağımlı/ilişkili)\nBir grup kadında pre ve post menstruasyon enerji alımı verisi. Pre ve Post ölçümler arasında fark var mıdır?\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
   },
   {
     "objectID": "ders03.html#özet",
@@ -511,101 +266,346 @@
     "text": "Negatif binomial dağılım\nGeometrik dağılım ilk başarının k. denemede gerçekleşmesi ihtimalini hesaplarken Negatif Binomial Dağılım daha geneldir, R. başarının K. denemede gerçekleşme ihtimalini hesaplar."
   },
   {
-    "objectID": "ders02.html#özet",
-    "href": "ders02.html#özet",
-    "title": "Ders2: Sayısal ve Görsel Özetleme",
-    "section": "Özet",
-    "text": "Özet\n\nortalama ve standart sapma\ndağılımların çeşitli ölçümleri\n\nrange, IQR\nhistogram\nboxplot"
+    "objectID": "uygulama01.html#aritmetik",
+    "href": "uygulama01.html#aritmetik",
+    "title": "R Temelleri",
+    "section": "Aritmetik",
+    "text": "Aritmetik\nR ile aritmetik yapılabilir. (Run Code butonunu tıklayınız)\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nYukarıdaki kutuya herhangi bir işlem yazıp çalıştırabilirsiniz.\n \n8 / 2 + 4 * 5 şeklindeki bir ifadede, işlem sırası doğru olarak izleniyor mu?"
   },
   {
-    "objectID": "ders02.html#ortalama-ve-median",
-    "href": "ders02.html#ortalama-ve-median",
-    "title": "Ders2: Sayısal ve Görsel Özetleme",
-    "section": "Ortalama ve median",
-    "text": "Ortalama ve median\nOrtalama: Değerler toplamının değer sayısına bölünmesi ile hesaplanır.\n\\[\n\\overline{x} = \\frac{\\displaystyle\\sum_{i=1}^{n} x_i}{n}\n\\]\nMedian: Sıralı değerlerin orta noktasıdır. Çift sayıda değer varsa, median, ortadaki iki sayının ortalamasıdır."
+    "objectID": "uygulama01.html#matematik-fonksiyonları",
+    "href": "uygulama01.html#matematik-fonksiyonları",
+    "title": "R Temelleri",
+    "section": "Matematik fonksiyonları",
+    "text": "Matematik fonksiyonları\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nCtrl + Enter ile tek satır, Shift + Enter ile bütün satırlar çalıştırılabilir"
   },
   {
-    "objectID": "ders02.html#ortalama-ve-median-1",
-    "href": "ders02.html#ortalama-ve-median-1",
-    "title": "Ders2: Sayısal ve Görsel Özetleme",
-    "section": "Ortalama ve median",
-    "text": "Ortalama ve median\n\n\n\n\n\n\nSoru\n\n\nBir veri setine çok büyük veya çok küçük bir sayı eklendiğinde, hangisi daha çok etkilenir, ortalama mı, median mı?\n\n\n\nAşağıdaki örnekte, deneme vektörüne 100 sayısını ekleyip ortalama ve median değerlerini hesaplayın ve karşılaştırın.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+    "objectID": "uygulama01.html#değişkenler-objeler",
+    "href": "uygulama01.html#değişkenler-objeler",
+    "title": "R Temelleri",
+    "section": "Değişkenler / Objeler",
+    "text": "Değişkenler / Objeler\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nBu değişken, oturum boyunca geçerlidir, başka bir slaytta tekrar kullanılabilir.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
   },
   {
-    "objectID": "ders02.html#dağılımların-çeşitli-ölçümleri",
-    "href": "ders02.html#dağılımların-çeşitli-ölçümleri",
-    "title": "Ders2: Sayısal ve Görsel Özetleme",
-    "section": "Dağılımların çeşitli ölçümleri",
-    "text": "Dağılımların çeşitli ölçümleri\nRange/Aralık: En küçük ve büyük değer arasındaki farktır. R’da range() fonskiyonu en düşük ve yüksek değerleri gösterir. Farkı bulmak için max() ve min() fonksiyon çıktıları kullanılabilir.\nIQR: (Interquartile range veya Çeyrekler Arası Aralık) verilerin 1. ve 3. çeyreğinin arasındaki farkı gösterir. R’da IQR() fonksiyonu bu değerleri hesaplar.\n\nrange(iris$Sepal.Length)\n\n[1] 4.3 7.9\n\nIQR(iris$Sepal.Length)\n\n[1] 1.3\n\nquantile(iris$Sepal.Length)\n\n  0%  25%  50%  75% 100% \n 4.3  5.1  5.8  6.4  7.9"
+    "objectID": "uygulama01.html#vektörler",
+    "href": "uygulama01.html#vektörler",
+    "title": "R Temelleri",
+    "section": "Vektörler",
+    "text": "Vektörler\nR dilinde vektörler önemli bir veri yapısıdır. Aynı tipteki (tamsayı, ondaliklı sayı, karakter, vb.) verilerin toplu şekilde saklandığı bir yapıdır. Başka dillerde “liste”, “dizi” olarak adlandırılır. R dilinde vektörler c() fonksiyonu ile oluşturulur.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
   },
   {
-    "objectID": "ders02.html#varyans-ve-standart-sapma",
-    "href": "ders02.html#varyans-ve-standart-sapma",
-    "title": "Ders2: Sayısal ve Görsel Özetleme",
-    "section": "Varyans ve standart sapma",
-    "text": "Varyans ve standart sapma\nVaryans: \\(s^2\\) ile gösterilir, veri setindeki sayıların ortalamadan ne kadar uzak/yakın olduğunu gösterir.\n\\[\ns^2 = \\frac{\\sum_{i=1}^n (x_i - \\overline{x})^2}{n-1}\n\\]\nStandard sapma: Varyansın kareköküdür.\n\\[\ns = \\sqrt{s^2} = \\sqrt{\\frac{\\sum_{i=1}^n (x_i - \\overline{x})^2}{n-1}}\n\\]\nFormülden anlaşılacağı üzere, veri setindeki dağınıklık, ortalamadan uzaklık arttıkça varyans da artmaktadır. Varyans var() fonskiyonu ile, standart sapma ise sd() fonksiyonu ile hesaplanır."
+    "objectID": "uygulama01.html#indeks",
+    "href": "uygulama01.html#indeks",
+    "title": "R Temelleri",
+    "section": "İndeks",
+    "text": "İndeks\nBir vektördeki elemanlara indeksler yardımıyla erişim sağlanır. R dilinde indeks 1’den başlar. 5. elemanına ulaşmak için my_vec[5] şeklinde komut yazılmalıdır.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nİndeksler aralıklarla da kullanılabilir. Örneğin, 1. ve 2. elemanına ulaşmak için my_vec[1:2] komutu kullanılabilir.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
   },
   {
-    "objectID": "ders02.html#görsel-özetleme",
-    "href": "ders02.html#görsel-özetleme",
-    "title": "Ders2: Sayısal ve Görsel Özetleme",
-    "section": "Görsel Özetleme",
-    "text": "Görsel Özetleme\nHistogram: Bir veri setindeki değerlerin dağılımını göstermak için, belirli aralıktaki değerlerin frekansını gösteren grafiklerdir. hist() fonksiyonu ile çizilebilir."
+    "objectID": "uygulama01.html#indeks-vektörü",
+    "href": "uygulama01.html#indeks-vektörü",
+    "title": "R Temelleri",
+    "section": "İndeks vektörü",
+    "text": "İndeks vektörü\nBir vektördeki belirli elemanlara erişim için indekslerden oluşan bir vektör kullanılabilir. 5. ve 3. elemanlara (bu sırada) erişilmek isteniyorsa c(5,3) vektörü indeks olarak kullanılabilir\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
   },
   {
-    "objectID": "ders02.html#histogram-ayarlar",
-    "href": "ders02.html#histogram-ayarlar",
-    "title": "Ders2: Sayısal ve Görsel Özetleme",
-    "section": "Histogram ayarlar",
-    "text": "Histogram ayarlar\nbreaks parametresi ile histogramın ayrılacağı aralık sayısı ayarlanabilir\n\n\n\nhist(iris$Sepal.Length)\n\n\n\n\n\n\n\n\n\n\nhist(iris$Sepal.Length, \n     breaks = 15)"
+    "objectID": "uygulama01.html#vektörlerle-işlemler",
+    "href": "uygulama01.html#vektörlerle-işlemler",
+    "title": "R Temelleri",
+    "section": "Vektörlerle işlemler",
+    "text": "Vektörlerle işlemler\nNormalde bir liste veya dizinin işlenmesi için for döngüsü kullanılır. R’de ise vektörlerle işlem yapılırken, bir fonksiyon veya işlem otomatik olarak bütün elemanlara uygulanır.\nAyrıca, R’daki çoğu fonksiyon vektörler ile uyumludur, her bir eleman için veya tüm vektör için çalışabilirler.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
   },
   {
-    "objectID": "ders02.html#histogram",
-    "href": "ders02.html#histogram",
-    "title": "Ders2: Sayısal ve Görsel Özetleme",
-    "section": "Histogram",
-    "text": "Histogram\nDaha güzel ve karmaşık bir görselleştirme için ggplot2 paketi kullanılabilir.\n\nlibrary(ggplot2)\nggplot(iris, aes(Sepal.Length)) +\n  geom_histogram(color = \"#000000\", fill = \"#0099F8\")"
+    "objectID": "uygulama01.html#karşılaştırma-operatörleri",
+    "href": "uygulama01.html#karşılaştırma-operatörleri",
+    "title": "R Temelleri",
+    "section": "Karşılaştırma operatörleri",
+    "text": "Karşılaştırma operatörleri\nEşitlik ==, büyüktür &gt;, küçüktür &lt;, eşit değil != operatörleri bir vektöre uygulandığında, her bir eleman için karşılaştırma yapılır.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nSonuçlar logical/mantıksal (TRUE/FALSE) vektör olarak döndürülür. Bu sonuç vektörü, maske olarak kullanılabilir, yani indeks olarak kullanıldığında, “TRUE” değerlerin denk geldiği elemanlar gösterilebilir.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nFarkedildiği üzere, bu işlem sayesinde veri kümesinde filtreleme yapılmıştır."
   },
   {
-    "objectID": "ders02.html#ggplot2-ile-histogram",
-    "href": "ders02.html#ggplot2-ile-histogram",
-    "title": "Ders2: Sayısal ve Görsel Özetleme",
-    "section": "ggplot2 ile histogram",
-    "text": "ggplot2 ile histogram\n\nggplot(iris, aes(Sepal.Length)) +\n  geom_histogram(color = \"#000000\", fill = \"#0099F8\") +\n  geom_vline(aes(xintercept = mean(Sepal.Length)), color = \"#000000\", size = 1.25) +\n  geom_vline(aes(xintercept = mean(Sepal.Length) + sd(Sepal.Length)), color = \"#000000\", size = 1, linetype = \"dashed\") +\n  geom_vline(aes(xintercept = mean(Sepal.Length) - sd(Sepal.Length)), color = \"#000000\", size = 1, linetype = \"dashed\") +\n  theme_bw()"
+    "objectID": "uygulama01.html#sıralama",
+    "href": "uygulama01.html#sıralama",
+    "title": "R Temelleri",
+    "section": "Sıralama",
+    "text": "Sıralama\nsort() fonksiyonu ile vektörler sıralanabilir.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nSoru: ters yönde sıralama yapmak için ne yapılmalıdır?\norder() fonksiyonu ile de sıralama yapılabilir. Ancak bu fonksiyon doğrudan elemanları sıralamaz; bunun yerine, sıralı elemanların orijinal vektördeki indekslerini döndürür.\n\nTablolarda sütunları veya satırları sıralamak gerektiğinde kullanılır."
   },
   {
-    "objectID": "ders02.html#boxplot",
-    "href": "ders02.html#boxplot",
-    "title": "Ders2: Sayısal ve Görsel Özetleme",
-    "section": "Boxplot",
-    "text": "Boxplot\n\n\nGörsel kaynak: Box Plot with Minitab"
+    "objectID": "uygulama01.html#sıralama-1",
+    "href": "uygulama01.html#sıralama-1",
+    "title": "R Temelleri",
+    "section": "Sıralama",
+    "text": "Sıralama\nAşağıdaki kutuda my_vec[order(my_vec)] komutunu çalıştıp çıktısını sort() ile karşılaştırınız.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
   },
   {
-    "objectID": "ders02.html#r-ile-boxplot",
-    "href": "ders02.html#r-ile-boxplot",
-    "title": "Ders2: Sayısal ve Görsel Özetleme",
-    "section": "R ile Boxplot",
-    "text": "R ile Boxplot\nboxplot() fonksiyonu bir vektör (sütün) veya veri tablosu (data frame) için çalıştırılabilir.\n\nboxplot(iris$Sepal.Length)"
+    "objectID": "uygulama01.html#na",
+    "href": "uygulama01.html#na",
+    "title": "R Temelleri",
+    "section": "NA",
+    "text": "NA\nNA “not available” anlamına gelir. Herhangi bir vektörde NA olması durumunda toplama, min/max gibi işlemlerin de NA olarak sonuçlanmasına neden olur.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nBu sorunu aşmak için na.rm=TRUE parametresi kullanılabilir.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
   },
   {
-    "objectID": "ders02.html#r-ile-boxplot---veri-tablosu",
-    "href": "ders02.html#r-ile-boxplot---veri-tablosu",
-    "title": "Ders2: Sayısal ve Görsel Özetleme",
-    "section": "R ile Boxplot - veri tablosu",
-    "text": "R ile Boxplot - veri tablosu\n\nboxplot(iris)"
+    "objectID": "uygulama01.html#data-frame-veri-tablosuçerçevesi",
+    "href": "uygulama01.html#data-frame-veri-tablosuçerçevesi",
+    "title": "R Temelleri",
+    "section": "Data Frame / veri tablosu/çerçevesi",
+    "text": "Data Frame / veri tablosu/çerçevesi\nBir veri tablosu, aynı boydaki farklı vektörlerin sütun olarak birleşmesi olarak düşünülebilir. Bu veri yapısı en çok kullanılan veri yapısıdır. Aşağıdaki örnekte, iris veri seti kullanılmıştır.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
   },
   {
-    "objectID": "ders02.html#farklı-görselleştirmeler",
-    "href": "ders02.html#farklı-görselleştirmeler",
-    "title": "Ders2: Sayısal ve Görsel Özetleme",
-    "section": "Farklı görselleştirmeler",
-    "text": "Farklı görselleştirmeler\nggplot2 veya temel R’da farklı görselleştirmeler yapılabilir.\n\n\nGörsel kaynak: Plot Grouped Data: Box plot, Bar Plot and More"
+    "objectID": "uygulama01.html#veri-tablosu-erişim",
+    "href": "uygulama01.html#veri-tablosu-erişim",
+    "title": "R Temelleri",
+    "section": "Veri tablosu / erişim",
+    "text": "Veri tablosu / erişim\nBir veri tablosundaki herhangi bir sütunun tamamına $sütun_adı şeklinde ulaşılabilir.\nVeri tablosunun belirli bir kısmına erişmek için [satır, sütun] şeklinde kullanılabilir.\niris$Species komutu Species sütununu vektör olarak elde eder. iris[1:5,] ilk 5 satırı elde eder. iris[1:5,1:2] şeklindeki komut, ilk 2 sütunu ve ilk 5 satırı elde eder.\nBir sonraki slaytta bahsi geçen komutları deneyiniz."
   },
   {
-    "objectID": "ders02.html#ek-kaynaklar",
-    "href": "ders02.html#ek-kaynaklar",
-    "title": "Ders2: Sayısal ve Görsel Özetleme",
-    "section": "Ek kaynaklar",
-    "text": "Ek kaynaklar\n\nSTHDA sitesinde “Descriptive Statistics and Graphics” adlı sayfa, bu sunumdaki bilgilere ek bilgiler içerir."
+    "objectID": "uygulama01.html#veri-tablosu-erişim-1",
+    "href": "uygulama01.html#veri-tablosu-erişim-1",
+    "title": "R Temelleri",
+    "section": "Veri tablosu / erişim",
+    "text": "Veri tablosu / erişim\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "uygulama01.html#veri-tablosu-işlemler",
+    "href": "uygulama01.html#veri-tablosu-işlemler",
+    "title": "R Temelleri",
+    "section": "Veri tablosu / işlemler",
+    "text": "Veri tablosu / işlemler\n\ndim(iris) komutu, veri setinin boyutlarını verir.(satır, sütun) şeklinde\nnrow(iris) komutu, veri setindeki satır sayısını verir.\nncol(iris) komutu, veri setindeki sütun sayısını verir.\nstr(iris) komutu, veri setinin yapısını, sütun tipleri ve ilk verileri gösterir.\nsummary(iris) komutu, veri setindeki istatistiksel ölçümleri verir.\n\nBir sonraki slaytta bahsi geçen komutları deneyiniz."
+  },
+  {
+    "objectID": "uygulama01.html#veri-tablosu-işlemler-1",
+    "href": "uygulama01.html#veri-tablosu-işlemler-1",
+    "title": "R Temelleri",
+    "section": "Veri tablosu / işlemler",
+    "text": "Veri tablosu / işlemler\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "MBG1032 Biyoistatistik Ders Notları",
+    "section": "",
+    "text": "Kitap1: Introductory Statistics for the Life and Biomedical Sciences (Julie Vu, David Harrington) Leanpub sitesinden ücretsiz olarak (You Pay kısmını 0’a çekerek) indirebilirsiniz.\nKitap2: Principles of Biostatistics (Marcello Pagano, Kimberlee Gauvreau)\nKitap3: Biostatistics for the Biological and Health Sciences (Mario F. Triola, Marc M. Triola,Jason Roy)\nKitap4: R Programı İle Temel İstatistiksel Yöntemler Uygulamalı İstatistik Turcademy üzerinden ücretsiz olarak erişilebilir.\n\n\n\n\nTeorik (21 Şubat 2024): İlk derste, R programı çalıştırılabilecek ortamlar tanıtıldı. Ayrıca “Is Most Published Research Wrong?” başlıklı videodan bahsedildi. Söz konusu videoda p-value değerlerinin istatistik gücü oldukça zayıf şekilde bilimsel makalelerde kullanıldığı ve bu yüzden makalelerin tekrarlanabilirliğinin (reproducability) düşük olduğundan bahsedildi.\nUygulama (26 Şubat 2024): R Temelleri Sunum. Bu içerik için kullanılan ek kaynak, “An Introduction to R” adlı online kitap.\n\n\n\n\nTeorik (28 Şubat 2024): Veri setinin merkezini belirleyen ortalama ve mediandan bahsedildi. Veri setinin dağınıklığını özetleyen sayısal yöntemler (varyans, standart sapma) ve görsel yöntemler (histogram, boxplot) tanıtıldı. Sunum linki\nUygulama (4 Mart 2024): iris.xlsx dosyasını kullanarak, Excel’de hücre aralıklarını seçme, Ctrl ve Shift tuşları ile hızlı seçim ve gezinme gösterildi. Tek bir sütün için ortalama, medyan, 1. ve 3. çeyrek dilim hesaplama ve standard sapma hesabı yapıldı. Excel’de formüllerin başka hücrelere uygulanması gösterildi. Excel’in yeni versiyonunda Boxplot ve Histogram grafikleri çizilebileceği tartışıldı.\n\n\n\nTeorik (6 Mart 2024): Olaslık hesabına dair özellikler, küme prensibi üzerinden anlatıldı. Normal dağılımın özellikleri tanıtıldı. Sunum linki\nUygulama (11 Mart 2024): R’da pnorm(), qnorm() ve dnorm() fonksiyonları kullanarak ihtimal hesapları yapıldı ve normal dağılıma uygun rastgele sayılar üretildi. Excel’de normal dağılıma uygun sayılar üreten formüller kullanıldı.\n\n\n\nTeorik (13 Mart 2024): Poisson ve Bernoulli dağılımları (Poisson dağılımı ve Geometrik dağılım) tanıtıldı. Sunum linki\nPratik (18 Mart 2024): Normal dağılım örnekleri çözüldü. Uygulama sunum linki\n\n\n\nTeorik (20 Mart 2024): t statistik. Sunum linki\nPratik (25 Mart 2024): Poisson dağılımı ve Geometrik dağılım örnekleri çözüldü Uygulama sunum linki\n\n\n\nTeorik (27 Mart 2024): T-testi. Sunum linki\nPratik (01 Nisan 2024): T-testi uygulamaları Uygulama sunum linki\n\n\n\nTeorik (03 Nisan 2024): T-testi uygulamaları Sunum linki"
+  },
+  {
+    "objectID": "index.html#kaynaklar",
+    "href": "index.html#kaynaklar",
+    "title": "MBG1032 Biyoistatistik Ders Notları",
+    "section": "",
+    "text": "Kitap1: Introductory Statistics for the Life and Biomedical Sciences (Julie Vu, David Harrington) Leanpub sitesinden ücretsiz olarak (You Pay kısmını 0’a çekerek) indirebilirsiniz.\nKitap2: Principles of Biostatistics (Marcello Pagano, Kimberlee Gauvreau)\nKitap3: Biostatistics for the Biological and Health Sciences (Mario F. Triola, Marc M. Triola,Jason Roy)\nKitap4: R Programı İle Temel İstatistiksel Yöntemler Uygulamalı İstatistik Turcademy üzerinden ücretsiz olarak erişilebilir."
+  },
+  {
+    "objectID": "index.html#ders1",
+    "href": "index.html#ders1",
+    "title": "MBG1032 Biyoistatistik Ders Notları",
+    "section": "",
+    "text": "Teorik (21 Şubat 2024): İlk derste, R programı çalıştırılabilecek ortamlar tanıtıldı. Ayrıca “Is Most Published Research Wrong?” başlıklı videodan bahsedildi. Söz konusu videoda p-value değerlerinin istatistik gücü oldukça zayıf şekilde bilimsel makalelerde kullanıldığı ve bu yüzden makalelerin tekrarlanabilirliğinin (reproducability) düşük olduğundan bahsedildi.\nUygulama (26 Şubat 2024): R Temelleri Sunum. Bu içerik için kullanılan ek kaynak, “An Introduction to R” adlı online kitap."
+  },
+  {
+    "objectID": "index.html#ders2",
+    "href": "index.html#ders2",
+    "title": "MBG1032 Biyoistatistik Ders Notları",
+    "section": "",
+    "text": "Teorik (28 Şubat 2024): Veri setinin merkezini belirleyen ortalama ve mediandan bahsedildi. Veri setinin dağınıklığını özetleyen sayısal yöntemler (varyans, standart sapma) ve görsel yöntemler (histogram, boxplot) tanıtıldı. Sunum linki\nUygulama (4 Mart 2024): iris.xlsx dosyasını kullanarak, Excel’de hücre aralıklarını seçme, Ctrl ve Shift tuşları ile hızlı seçim ve gezinme gösterildi. Tek bir sütün için ortalama, medyan, 1. ve 3. çeyrek dilim hesaplama ve standard sapma hesabı yapıldı. Excel’de formüllerin başka hücrelere uygulanması gösterildi. Excel’in yeni versiyonunda Boxplot ve Histogram grafikleri çizilebileceği tartışıldı."
+  },
+  {
+    "objectID": "index.html#ders03",
+    "href": "index.html#ders03",
+    "title": "MBG1032 Biyoistatistik Ders Notları",
+    "section": "",
+    "text": "Teorik (6 Mart 2024): Olaslık hesabına dair özellikler, küme prensibi üzerinden anlatıldı. Normal dağılımın özellikleri tanıtıldı. Sunum linki\nUygulama (11 Mart 2024): R’da pnorm(), qnorm() ve dnorm() fonksiyonları kullanarak ihtimal hesapları yapıldı ve normal dağılıma uygun rastgele sayılar üretildi. Excel’de normal dağılıma uygun sayılar üreten formüller kullanıldı."
+  },
+  {
+    "objectID": "index.html#ders04",
+    "href": "index.html#ders04",
+    "title": "MBG1032 Biyoistatistik Ders Notları",
+    "section": "",
+    "text": "Teorik (13 Mart 2024): Poisson ve Bernoulli dağılımları (Poisson dağılımı ve Geometrik dağılım) tanıtıldı. Sunum linki\nPratik (18 Mart 2024): Normal dağılım örnekleri çözüldü. Uygulama sunum linki"
+  },
+  {
+    "objectID": "index.html#ders05",
+    "href": "index.html#ders05",
+    "title": "MBG1032 Biyoistatistik Ders Notları",
+    "section": "",
+    "text": "Teorik (20 Mart 2024): t statistik. Sunum linki\nPratik (25 Mart 2024): Poisson dağılımı ve Geometrik dağılım örnekleri çözüldü Uygulama sunum linki"
+  },
+  {
+    "objectID": "index.html#ders06",
+    "href": "index.html#ders06",
+    "title": "MBG1032 Biyoistatistik Ders Notları",
+    "section": "",
+    "text": "Teorik (27 Mart 2024): T-testi. Sunum linki\nPratik (01 Nisan 2024): T-testi uygulamaları Uygulama sunum linki"
+  },
+  {
+    "objectID": "index.html#ders07",
+    "href": "index.html#ders07",
+    "title": "MBG1032 Biyoistatistik Ders Notları",
+    "section": "",
+    "text": "Teorik (03 Nisan 2024): T-testi uygulamaları Sunum linki"
+  },
+  {
+    "objectID": "ders05.html#slide1",
+    "href": "ders05.html#slide1",
+    "title": "Ders5: Başlık",
+    "section": "slide1",
+    "text": "slide1\n\nt-dağılımı (düz çizgi) ve normal dağılım karşılaştırması"
+  },
+  {
+    "objectID": "ders05.html#slide2",
+    "href": "ders05.html#slide2",
+    "title": "Ders5: Başlık",
+    "section": "slide2",
+    "text": "slide2\n\nimage-20240327044422037df (serbestlik derecesi ) arttıkça, t-dağılımı normal dağılıma yaklaşmaktadır"
+  },
+  {
+    "objectID": "ders05.html#slide3",
+    "href": "ders05.html#slide3",
+    "title": "Ders5: Başlık",
+    "section": "slide3",
+    "text": "slide3\n\nimage-20240327044528724t-tablosu"
+  },
+  {
+    "objectID": "ders05.html#slide4",
+    "href": "ders05.html#slide4",
+    "title": "Ders5: Başlık",
+    "section": "slide4",
+    "text": "slide4\n\ndf=18 için, -2.10 altında kalan alan boyanmıştır. t-dağılımının ne kadarı -2.10 altında kalır?\n\ndf=20 iken, t-dağılımının ne kadarı -1.60’tan küçük ve 1.60’tan büyüktür?\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders05.html#slide5",
+    "href": "ders05.html#slide5",
+    "title": "Ders5: Başlık",
+    "section": "slide5",
+    "text": "slide5\nçift yönlü 100(1-\\(\\alpha\\))% güven aralığı için formül:\n\nSE = s / \\(\\sqrt{n}\\)\nTek yönlü olması durumunda\n\n\n\nimage-20240327051040495"
+  },
+  {
+    "objectID": "ders05.html#slide6",
+    "href": "ders05.html#slide6",
+    "title": "Ders5: Başlık",
+    "section": "slide6",
+    "text": "slide6\nYunuslarda civa miktarı üzerine yapılan çalışmada, Japonya’nın Taiji bölgesinden rastgele seçilen 19 adet yunusta civa miktarına dair bilgiler şu şekildedir.\n\nOrtalama civa miktarı için %95 güven aralığını hesaplayınız.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders05.html#slide7",
+    "href": "ders05.html#slide7",
+    "title": "Ders5: Başlık",
+    "section": "slide7",
+    "text": "slide7"
+  },
+  {
+    "objectID": "ders06-uygulama.html#tek-örnek-t-testi",
+    "href": "ders06-uygulama.html#tek-örnek-t-testi",
+    "title": "Ders6 Uygulama: T-testi",
+    "section": "Tek örnek t-testi",
+    "text": "Tek örnek t-testi\nAşağıdaki veri, 11 kadına ait günlük enerji alımını (kJ) gösterir. Bu grubun değerleri tavisye edilen 7725 kJ değerinden farklı mıdır?\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders06-uygulama.html#iki-örnek-t-testi",
+    "href": "ders06-uygulama.html#iki-örnek-t-testi",
+    "title": "Ders6 Uygulama: T-testi",
+    "section": "İki örnek t-testi",
+    "text": "İki örnek t-testi\nİki grup arasında enerji tüketimi açısından fark var mıdır?\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\nIntroductory Statistics with R adlı kitaptan alınmıştır"
+  },
+  {
+    "objectID": "ders06-uygulama.html#iki-örnek-t-testi-1",
+    "href": "ders06-uygulama.html#iki-örnek-t-testi-1",
+    "title": "Ders6 Uygulama: T-testi",
+    "section": "İki örnek t-testi",
+    "text": "İki örnek t-testi\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders06-uygulama.html#iki-örnek-t-testi-bağımlıilişkili",
+    "href": "ders06-uygulama.html#iki-örnek-t-testi-bağımlıilişkili",
+    "title": "Ders6 Uygulama: T-testi",
+    "section": "İki örnek t-testi (bağımlı/ilişkili)",
+    "text": "İki örnek t-testi (bağımlı/ilişkili)\nBir grup kadında pre ve post menstruasyon enerji alımı verisi. Pre ve Post ölçümler arasında fark var mıdır?\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders03-uygulama.html#normal-dağılım-soruları",
+    "href": "ders03-uygulama.html#normal-dağılım-soruları",
+    "title": "Ders3: Dağılımlar - Uygulama",
+    "section": "Normal dağılım soruları",
+    "text": "Normal dağılım soruları\nTaralı bölgenin alanını bulunuz. Kemik yoğunluğu verisinde ortalama 0 ve standart sapma 1 olduğunu kabul ediniz.\n\n\n\n\nÖnce, Z skor tablosunu kullanarak çözünüz.\n\nDaha sonra R ile çözünüz.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders03-uygulama.html#section",
+    "href": "ders03-uygulama.html#section",
+    "title": "Ders3: Dağılımlar - Uygulama",
+    "section": "",
+    "text": "Yine aynı veride, işaretli Z skorunu bulunuz.\n\n\n\n\n\nÖnce, Z skor tablosunu kullanarak çözünüz.\n\nDaha sonra R ile çözünüz.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders03-uygulama.html#section-1",
+    "href": "ders03-uygulama.html#section-1",
+    "title": "Ders3: Dağılımlar - Uygulama",
+    "section": "",
+    "text": "Taralı bölgenin alanını bulunuz. Toplanan veriler IQ değerlerine aittir ve ortalaması 100 ve standart sapması 15’tir.\n\n\n\n\n\nZ skor tablosunu kullanarak nasıl çözebiliriz?\n\nR ile çözünüz.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders03-uygulama.html#section-2",
+    "href": "ders03-uygulama.html#section-2",
+    "title": "Ders3: Dağılımlar - Uygulama",
+    "section": "",
+    "text": "Aşağıda işaret edilen IQ değerini bulunuz\n\n\n\n\n\nZ skor tablosunu kullanarak nasıl çözebiliriz?\n\nR ile çözünüz.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders03-uygulama.html#section-3",
+    "href": "ders03-uygulama.html#section-3",
+    "title": "Ders3: Dağılımlar - Uygulama",
+    "section": "",
+    "text": "13-20 yaş arası kadınlarda kalp atış hızı ortalama 74 ve standart sapması 12.5’tir. Rastgele seçilen bir kadının;\n\nkalp atış hızının 100’den az olması,\nkalp atış hızının 80’den çok olması,\nkalp atış hızının 70 ile 90 arasında olması, ihtimallerini hesaplayınız.\nP90 değerini bulunuz (alttaki 90% ile üstteki 10% ayıran değer)\nİlk çeyrek dilime (Q1) denk gelen kalp atış hızı değerini bulunuz.\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders03-uygulama.html#poisson-dağılımı---soru1",
+    "href": "ders03-uygulama.html#poisson-dağılımı---soru1",
+    "title": "Ders3: Dağılımlar - Uygulama",
+    "section": "Poisson dağılımı - Soru1",
+    "text": "Poisson dağılımı - Soru1\nBir DNA dizisinde ortalama mutasyon sayısı 1000 baz çifti başına 3’tür. 1000 baz çifti uzunluğundaki bir dizide tam olarak 2 mutasyon gözlemleme olasılığı nedir?\nFormül:\n\n\n\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders03-uygulama.html#soru-2",
+    "href": "ders03-uygulama.html#soru-2",
+    "title": "Ders3: Dağılımlar - Uygulama",
+    "section": "Soru 2",
+    "text": "Soru 2\nBir DNA dizisinde ortalama mutasyon sayısı 1000 baz çifti başına 3’tür. 5000 baz çifti uzunluğundaki bir dizide tam olarak 2 mutasyon gözlemleme olasılığı nedir?\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders03-uygulama.html#soru-3",
+    "href": "ders03-uygulama.html#soru-3",
+    "title": "Ders3: Dağılımlar - Uygulama",
+    "section": "Soru 3",
+    "text": "Soru 3\nBir doku kesitindeki hücrelerin ortalama sayısı 100 ise, bir doku kesitinde 120’den fazla hücre gözlemleme olasılığı nedir?\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders03-uygulama.html#soru-4",
+    "href": "ders03-uygulama.html#soru-4",
+    "title": "Ders3: Dağılımlar - Uygulama",
+    "section": "Soru 4",
+    "text": "Soru 4\nBelirli bir deney sonrasında ortaya çıkan örneklerdeki ortalama virüs parçacığı sayısı 5’tir. Bir örnekte 3’ten az virüs parçacığı gözlemleme olasılığı nedir?\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders03-uygulama.html#soru-5",
+    "href": "ders03-uygulama.html#soru-5",
+    "title": "Ders3: Dağılımlar - Uygulama",
+    "section": "Soru 5",
+    "text": "Soru 5\nBir kasabada belirli bir hastalığın ortalama yeni vaka sayısı yılda 5 ise, önümüzdeki 6 ay içinde hiç yeni vaka olmama olasılığı nedir? (Yıllık yeni vaka sayısının Poisson dağılımı izlediği varsayılarak)\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders03-uygulama.html#geometrik-dağılım---soru-1",
+    "href": "ders03-uygulama.html#geometrik-dağılım---soru-1",
+    "title": "Ders3: Dağılımlar - Uygulama",
+    "section": "Geometrik dağılım - Soru 1",
+    "text": "Geometrik dağılım - Soru 1\nBelirli bir tıbbi testte başarı olasılığının 0.8 olduğunu varsayalım. İlk başarılı test sonucunun üçüncü denemede olma olasılığı nedir?\nFormül:\n\n\n\n\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders03-uygulama.html#soru-2-1",
+    "href": "ders03-uygulama.html#soru-2-1",
+    "title": "Ders3: Dağılımlar - Uygulama",
+    "section": "Soru 2",
+    "text": "Soru 2\nBir DNA dizisinde mutasyon oluşma olasılığının 0.001 olduğunu varsayalım. Mutasyonsuz bir DNA segmentinin başarılı bir şekilde dizilenmesinin ilk kez onuncu denemede olma olasılığı nedir?\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders03-uygulama.html#soru-3-1",
+    "href": "ders03-uygulama.html#soru-3-1",
+    "title": "Ders3: Dağılımlar - Uygulama",
+    "section": "Soru 3",
+    "text": "Soru 3\nBir DNA parçasının başarılı bir şekilde PCR ile çoğaltılma olasılığının 0.9 olduğunu varsayalım. İlk başarılı çoğaltmanın ilk 5 denemede olma olasılığı nedir?\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
   }
 ]
