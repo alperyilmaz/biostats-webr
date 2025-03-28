@@ -179,14 +179,14 @@
     "href": "ders04.html#r-ile-güven-aralığı-hesabı-ortalama",
     "title": "Ders 4: Güven Aralıkları ve Hipotez Testi",
     "section": "R ile Güven Aralığı Hesabı (Ortalama)",
-    "text": "R ile Güven Aralığı Hesabı (Ortalama)\nR’da t.test() fonksiyonu, bir vektörün ortalaması için güven aralığını kolayca hesaplar. Varsayılan güven düzeyi %95’tir. iris veri setindeki Sepal.Length (Çanak Yaprak Uzunluğu) için %95 güven aralığını hesaplayalım:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nYorum: Iris çiçeği popülasyonundaki ortalama çanak yaprak uzunluğunun (\\(\\mu\\)) [5.76 , 5.93] cm aralığında olduğuna %95 güveniyoruz."
+    "text": "R ile Güven Aralığı Hesabı (Ortalama)\nR’da t.test() fonksiyonu, bir vektörün ortalaması için güven aralığını kolayca hesaplar. Varsayılan güven düzeyi %95’tir. iris veri setindeki Sepal.Length (Çanak Yaprak Uzunluğu) için %95 güven aralığını hesaplayalım:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nYorum: Iris çiçeği popülasyonundaki ortalama çanak yaprak uzunluğunun (\\(\\mu\\)) [5.71, 5.97] cm aralığında olduğuna %95 güveniyoruz."
   },
   {
     "objectID": "ders04.html#farklı-güven-düzeyi-ile-hesaplama",
     "href": "ders04.html#farklı-güven-düzeyi-ile-hesaplama",
     "title": "Ders 4: Güven Aralıkları ve Hipotez Testi",
     "section": "Farklı Güven Düzeyi ile Hesaplama",
-    "text": "Farklı Güven Düzeyi ile Hesaplama\n%99 güven düzeyi ile hesaplamak için conf.level argümanını kullanırız:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nGördüğünüz gibi, güven düzeyi %95’ten %99’a çıktığında aralık genişledi ([5.76, 5.93] vs [5.72, 5.95])."
+    "text": "Farklı Güven Düzeyi ile Hesaplama\n%99 güven düzeyi ile hesaplamak için conf.level argümanını kullanırız:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nGördüğünüz gibi, güven düzeyi %95’ten %99’a çıktığında aralık genişledi ([5.71, 5.97] vs [5.66, 6.01])."
   },
   {
     "objectID": "ders04.html#görselleştirme",
