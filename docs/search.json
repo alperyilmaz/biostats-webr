@@ -107,9 +107,205 @@
   {
     "objectID": "ders04.html#özet",
     "href": "ders04.html#özet",
-    "title": "Ders4:",
+    "title": "Ders 4: Güven Aralıkları ve Hipotez Testi",
     "section": "Özet",
-    "text": "Özet\n\n."
+    "text": "Özet\n\nNokta tahmini vs. Aralık tahmini\nGüven aralığı nedir?\nGüven aralığının yorumlanması\nGüven aralığını etkileyen faktörler\nOrtalama için güven aralığı hesaplama (R ile)"
+  },
+  {
+    "objectID": "ders04.html#tahmin-etme-ihtiyacı",
+    "href": "ders04.html#tahmin-etme-ihtiyacı",
+    "title": "Ders 4: Güven Aralıkları ve Hipotez Testi",
+    "section": "Tahmin Etme İhtiyacı",
+    "text": "Tahmin Etme İhtiyacı\nBiyolojide genellikle tüm popülasyonu (evreni) incelemek yerine, popülasyondan alınan bir örneklem üzerinden çıkarımlar yaparız.\n\nPopülasyon Parametresi: Popülasyonun tamamını tanımlayan sayısal bir değer (örn. popülasyondaki tüm insanların ortalama boyu - \\(\\mu\\)). Genellikle bilinmez.\nÖrneklem İstatistiği: Örneklemden hesaplanan ve popülasyon parametresini tahmin etmek için kullanılan sayısal bir değer (örn. örneklemdeki insanların ortalama boyu - \\(\\overline{x}\\)).\n\nAmacımız, örneklem istatistiğini kullanarak bilinmeyen popülasyon parametresi hakkında bilgi edinmektir."
+  },
+  {
+    "objectID": "ders04.html#nokta-tahmini-vs.-aralık-tahmini",
+    "href": "ders04.html#nokta-tahmini-vs.-aralık-tahmini",
+    "title": "Ders 4: Güven Aralıkları ve Hipotez Testi",
+    "section": "Nokta Tahmini vs. Aralık Tahmini",
+    "text": "Nokta Tahmini vs. Aralık Tahmini\n\nNokta Tahmini: Popülasyon parametresi için tek bir değer tahmini (örn. \\(\\overline{x}\\), \\(\\mu\\)’nün nokta tahminidir).\n\nBasittir ancak tahminin ne kadar hassas olduğu hakkında bilgi vermez. Örneklemden örnekleme değişir.\n\nAralık Tahmini (Güven Aralığı): Popülasyon parametresini belirli bir güvenilirlik seviyesiyle içermesi beklenen bir değer aralığıdır.\n\nTahminin belirsizliğini veya hassasiyetini gösterir."
+  },
+  {
+    "objectID": "ders04.html#section",
+    "href": "ders04.html#section",
+    "title": "Ders 4: Güven Aralıkları ve Hipotez Testi",
+    "section": "",
+    "text": "Görsel Kaynak: Medium - Understanding Confidence Intervals"
+  },
+  {
+    "objectID": "ders04.html#güven-aralığı-nedir",
+    "href": "ders04.html#güven-aralığı-nedir",
+    "title": "Ders 4: Güven Aralıkları ve Hipotez Testi",
+    "section": "Güven Aralığı Nedir?",
+    "text": "Güven Aralığı Nedir?\nBir güven aralığı, örneklem verilerine dayanarak hesaplanan ve bilinmeyen popülasyon parametresini (örneğin, ortalama \\(\\mu\\) veya oran p) belirli bir olasılıkla içerdiği düşünülen bir değer aralığıdır.\nGenel formül genellikle şöyledir:\nNokta Tahmini ± Hata Payı\n\nNokta Tahmini: Örneklemden hesaplanan istatistik (örn. \\(\\overline{x}\\)).\nHata Payı: Tahminin ne kadar hassas olduğunu gösterir. Örnekleme değişkenliğine ve istenen güven düzeyine bağlıdır."
+  },
+  {
+    "objectID": "ders04.html#güven-düzeyi-ve-yorumlama",
+    "href": "ders04.html#güven-düzeyi-ve-yorumlama",
+    "title": "Ders 4: Güven Aralıkları ve Hipotez Testi",
+    "section": "Güven Düzeyi ve Yorumlama",
+    "text": "Güven Düzeyi ve Yorumlama\n\nGüven Düzeyi: Genellikle %90, %95 veya %99 olarak seçilir. Bu, aynı popülasyondan tekrar tekrar örneklemler alıp her biri için bir güven aralığı hesaplarsak, bu aralıkların ne kadarının gerçek popülasyon parametresini içereceğini gösteren yüzdedir.\nYaygın Yanlış Yorum: “%95 güven aralığı, popülasyon parametresinin %95 olasılıkla bu aralıkta olduğu anlamına gelir.” BU YANLIŞTIR! Popülasyon parametresi sabit bir değerdir, rastgele değildir. Aralık rastgeledir.\nDoğru Yorum: “Bu popülasyondan alınacak örneklemlerle oluşturulacak %95 güven aralıklarının yaklaşık %95’inin, gerçek popülasyon parametresini içermesini bekleriz.” veya daha pratik olarak “Popülasyon parametresinin bu aralıkta olduğuna %95 güveniyoruz.”"
+  },
+  {
+    "objectID": "ders04.html#section-1",
+    "href": "ders04.html#section-1",
+    "title": "Ders 4: Güven Aralıkları ve Hipotez Testi",
+    "section": "",
+    "text": "Görsel Kaynak:"
+  },
+  {
+    "objectID": "ders04.html#güven-aralığının-genişliğini-etkileyen-faktörler",
+    "href": "ders04.html#güven-aralığının-genişliğini-etkileyen-faktörler",
+    "title": "Ders 4: Güven Aralıkları ve Hipotez Testi",
+    "section": "Güven Aralığının Genişliğini Etkileyen Faktörler",
+    "text": "Güven Aralığının Genişliğini Etkileyen Faktörler\n\nGüven Düzeyi: Güven düzeyi arttıkça (örn. %95’ten %99’a), aralık genişler. Daha emin olmak için daha geniş bir aralığa ihtiyaç duyarız.\nÖrneklem Büyüklüğü (n): Örneklem büyüklüğü arttıkça, aralık daralır. Daha fazla veri, daha hassas tahmin sağlar.\nVerinin Değişkenliği (Standart Sapma - s): Verideki değişkenlik (standart sapma) arttıkça, aralık genişler. Daha dağınık veriler daha fazla belirsizlik anlamına gelir."
+  },
+  {
+    "objectID": "ders04.html#section-2",
+    "href": "ders04.html#section-2",
+    "title": "Ders 4: Güven Aralıkları ve Hipotez Testi",
+    "section": "",
+    "text": "Görsel Kaynak:"
+  },
+  {
+    "objectID": "ders04.html#ortalama-için-güven-aralığı-mu",
+    "href": "ders04.html#ortalama-için-güven-aralığı-mu",
+    "title": "Ders 4: Güven Aralıkları ve Hipotez Testi",
+    "section": "Ortalama İçin Güven Aralığı (\\(\\mu\\))",
+    "text": "Ortalama İçin Güven Aralığı (\\(\\mu\\))\nPopülasyon standart sapması (\\(\\sigma\\)) bilinmiyorsa (genellikle durum budur), t-dağılımını kullanırız:\n\\[ \\overline{x} \\pm t_{\\alpha/2, n-1} \\times \\frac{s}{\\sqrt{n}} \\]\n\n\\(\\overline{x}\\): Örneklem ortalaması\n\\(s\\): Örneklem standart sapması\n\\(n\\): Örneklem büyüklüğü\n\\(t_{\\alpha/2, n-1}\\): Belirli bir güven düzeyi (\\(\\alpha\\)) ve serbestlik derecesi (\\(n-1\\)) için t-kritik değeri.\n\\(\\frac{s}{\\sqrt{n}}\\): Standart Hata (SE - Standard Error)"
+  },
+  {
+    "objectID": "ders04.html#r-ile-güven-aralığı-hesabı-ortalama",
+    "href": "ders04.html#r-ile-güven-aralığı-hesabı-ortalama",
+    "title": "Ders 4: Güven Aralıkları ve Hipotez Testi",
+    "section": "R ile Güven Aralığı Hesabı (Ortalama)",
+    "text": "R ile Güven Aralığı Hesabı (Ortalama)\nR’da t.test() fonksiyonu, bir vektörün ortalaması için güven aralığını kolayca hesaplar. Varsayılan güven düzeyi %95’tir. iris veri setindeki Sepal.Length (Çanak Yaprak Uzunluğu) için %95 güven aralığını hesaplayalım:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nYorum: Iris çiçeği popülasyonundaki ortalama çanak yaprak uzunluğunun (\\(\\mu\\)) [5.76 , 5.93] cm aralığında olduğuna %95 güveniyoruz."
+  },
+  {
+    "objectID": "ders04.html#farklı-güven-düzeyi-ile-hesaplama",
+    "href": "ders04.html#farklı-güven-düzeyi-ile-hesaplama",
+    "title": "Ders 4: Güven Aralıkları ve Hipotez Testi",
+    "section": "Farklı Güven Düzeyi ile Hesaplama",
+    "text": "Farklı Güven Düzeyi ile Hesaplama\n%99 güven düzeyi ile hesaplamak için conf.level argümanını kullanırız:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nGördüğünüz gibi, güven düzeyi %95’ten %99’a çıktığında aralık genişledi ([5.76, 5.93] vs [5.72, 5.95])."
+  },
+  {
+    "objectID": "ders04.html#görselleştirme",
+    "href": "ders04.html#görselleştirme",
+    "title": "Ders 4: Güven Aralıkları ve Hipotez Testi",
+    "section": "Görselleştirme",
+    "text": "Görselleştirme\nGüven aralığını görselleştirmek, anlamayı kolaylaştırabilir. Ortalama ve güven aralığını bir grafik üzerinde gösterebiliriz.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders04.html#ek-kaynaklar",
+    "href": "ders04.html#ek-kaynaklar",
+    "title": "Ders 4: Güven Aralıkları ve Hipotez Testi",
+    "section": "Ek Kaynaklar",
+    "text": "Ek Kaynaklar\n\nKhan Academy - Confidence Intervals (İngilizce)\nStat Trek - Confidence Interval for Mean (İngilizce)\nVeri Bilimi Okulu - Güven Aralığı (Türkçe)"
+  },
+  {
+    "objectID": "ders04.html#hipotez-testleri-özet",
+    "href": "ders04.html#hipotez-testleri-özet",
+    "title": "Ders 4: Güven Aralıkları ve Hipotez Testi",
+    "section": "Hipotez testleri özet",
+    "text": "Hipotez testleri özet\n\nHipotez testi nedir? Mantığı.\nSıfır (H₀) ve Alternatif (H₁) Hipotezler\nHipotez Testi Adımları\nAnlamlılık Düzeyi (\\(\\alpha\\)) ve P-değeri\nTip I ve Tip II Hatalar\nÖrnek: Tek Örneklem t-Testi (R ile)"
+  },
+  {
+    "objectID": "ders04.html#hipotez-testi-nedir",
+    "href": "ders04.html#hipotez-testi-nedir",
+    "title": "Ders 4: Güven Aralıkları ve Hipotez Testi",
+    "section": "Hipotez Testi Nedir?",
+    "text": "Hipotez Testi Nedir?\nHipotez testi, örneklem verilerini kullanarak bir popülasyon hakkındaki iddiaları (hipotezleri) değerlendirmek için kullanılan istatistiksel bir yöntemdir.\nAmaç: Örneklemden elde edilen kanıtların, popülasyon hakkındaki belirli bir iddiayı (sıfır hipotezi) reddetmek için yeterince güçlü olup olmadığına karar vermek.\nÖrnek Sorular:\n\nYeni bir gübre, bitki boyunu ortalamada artırıyor mu?\nBelirli bir gen mutasyonu, hastalığa yakalanma riskini değiştiriyor mu?\nİki farklı tedavi yönteminin iyileşme oranları arasında fark var mı?"
+  },
+  {
+    "objectID": "ders04.html#sıfır-ve-alternatif-hipotezler",
+    "href": "ders04.html#sıfır-ve-alternatif-hipotezler",
+    "title": "Ders 4: Güven Aralıkları ve Hipotez Testi",
+    "section": "Sıfır ve Alternatif Hipotezler",
+    "text": "Sıfır ve Alternatif Hipotezler\nHer hipotez testinde iki hipotez kurulur:\n\nSıfır Hipotezi (H₀): Genellikle “fark yoktur”, “etki yoktur” veya “değişiklik yoktur” şeklinde ifade edilen, test edilmek istenen mevcut durum veya varsayımdır. Popülasyon parametresi hakkında belirli bir değeri öne sürer (örn. \\(H_0: \\mu = 50\\)). Eşitlik içerir (=, ≤, ≥).\nAlternatif Hipotez (H₁ veya Hₐ): Sıfır hipotezinin yanlış olduğuna inanıldığında kabul edilecek olan iddiadır. Araştırmacının kanıtlamaya çalıştığı şeyi temsil eder (örn. \\(H_1: \\mu \\neq 50\\), \\(H_1: \\mu &gt; 50\\), veya \\(H_1: \\mu &lt; 50\\)). Eşitlik içermez (≠, &gt;, &lt;).\n\nÖnemli: H₀ ve H₁ birbirini dışlayan ve tüm olasılıkları kapsayan ifadeler olmalıdır."
+  },
+  {
+    "objectID": "ders04.html#hipotez-örnekleri",
+    "href": "ders04.html#hipotez-örnekleri",
+    "title": "Ders 4: Güven Aralıkları ve Hipotez Testi",
+    "section": "Hipotez Örnekleri",
+    "text": "Hipotez Örnekleri\nDurum 1: Bir biyolog, belirli bir göldeki balıkların ortalama uzunluğunun 30 cm olup olmadığını test etmek istiyor.\n\n\\(H_0: \\mu = 30\\) cm (Ortalama uzunluk 30 cm’dir)\n\\(H_1: \\mu \\neq 30\\) cm (Ortalama uzunluk 30 cm değildir - Çift Yönlü)\n\nDurum 2: Bir ilaç firması, yeni geliştirdiği ilacın kan basıncını düşürüp düşürmediğini test etmek istiyor (mevcut ortalama 140 mmHg).\n\n\\(H_0: \\mu \\ge 140\\) mmHg (İlaç kan basıncını düşürmüyor veya artırıyor)\n\\(H_1: \\mu &lt; 140\\) mmHg (İlaç kan basıncını düşürüyor - Tek Yönlü)\n\nDurum 3: Bir ziraat mühendisi, yeni bir gübrenin mısır verimini artırıp artırmadığını araştırıyor (mevcut ortalama verim 5 ton/hektar).\n\n\\(H_0: \\mu \\le 5\\) ton/hektar (Yeni gübre verimi artırmıyor veya azaltıyor)\n\\(H_1: \\mu &gt; 5\\) ton/hektar (Yeni gübre verimi artırıyor - Tek Yönlü)"
+  },
+  {
+    "objectID": "ders04.html#hipotez-testi-adımları",
+    "href": "ders04.html#hipotez-testi-adımları",
+    "title": "Ders 4: Güven Aralıkları ve Hipotez Testi",
+    "section": "Hipotez Testi Adımları",
+    "text": "Hipotez Testi Adımları\n\nHipotezleri Belirle: Sıfır (H₀) ve Alternatif (H₁) hipotezleri kur.\nAnlamlılık Düzeyini Seç (\\(\\alpha\\)): H₀’ı yanlışlıkla reddetme riskini belirle (genellikle 0.05, 0.01 veya 0.10).\nUygun Test İstatistiğini Seç: Veri tipine ve hipoteze uygun testi seç (örn. t-testi, Z-testi, ki-kare testi).\nKarar Kuralını Belirle: Test istatistiğinin hangi değerlerde H₀’ın reddedileceğini belirle (kritik değerler veya p-değeri yaklaşımı).\nTest İstatistiğini Hesapla: Örneklem verilerini kullanarak test istatistiğinin değerini hesapla.\nKarar Ver: Hesaplanan test istatistiğini karar kuralıyla karşılaştırarak H₀’ı reddet veya reddetme.\nSonucu Yorumla: Test sonucunu problem bağlamında yorumla."
+  },
+  {
+    "objectID": "ders04.html#section-3",
+    "href": "ders04.html#section-3",
+    "title": "Ders 4: Güven Aralıkları ve Hipotez Testi",
+    "section": "",
+    "text": "Görsel Kaynak:"
+  },
+  {
+    "objectID": "ders04.html#anlamlılık-düzeyi-alpha",
+    "href": "ders04.html#anlamlılık-düzeyi-alpha",
+    "title": "Ders 4: Güven Aralıkları ve Hipotez Testi",
+    "section": "Anlamlılık Düzeyi (\\(\\alpha\\))",
+    "text": "Anlamlılık Düzeyi (\\(\\alpha\\))\n\nAlfa (\\(\\alpha\\)), sıfır hipotezi (H₀) doğruyken onu reddetme olasılığıdır (Tip I Hata olasılığı).\nAraştırmacı tarafından testten önce belirlenir. Yaygın değerler:\n\n\\(\\alpha = 0.05\\) (%5 anlamlılık düzeyi)\n\\(\\alpha = 0.01\\) (%1 anlamlılık düzeyi)\n\\(\\alpha = 0.10\\) (%10 anlamlılık düzeyi)\n\n\\(\\alpha = 0.05\\) demek, H₀ doğru olsa bile, 100 deneyin 5’inde yanlışlıkla H₀’ı reddetme riskini göze almak demektir."
+  },
+  {
+    "objectID": "ders04.html#p-değeri-p-value",
+    "href": "ders04.html#p-değeri-p-value",
+    "title": "Ders 4: Güven Aralıkları ve Hipotez Testi",
+    "section": "P-değeri (P-value)",
+    "text": "P-değeri (P-value)\n\nP-değeri, sıfır hipotezi (H₀) doğru varsayıldığında, örneklemden elde edilen sonuç kadar veya daha aşırı (H₁ yönünde) sonuçların gözlenme olasılığıdır.\n\nEğer sıfır hipotezi doğruysa, şansın bu verileri ne kadar iyi açıklayabileceğini belirtir.\nÖrnek: Diyelim ki bir ilacın etkili olmadığını iddia eden bir sıfır hipotezimiz var (H₀: “İlaç etkisizdir”). 30 hasta üzerinde bir deney yaptık ve olumlu bir sonuç gözlemledik. P-değeri şu soruya cevap verir: “Eğer ilaç gerçekten etkisiz olsaydı (H₀ doğru olsaydı), bizim gördüğümüz kadar veya daha fazla olumlu sonucu şans eseri gözlemleme olasılığı nedir?”\n\nKüçük p-değeri (≤ \\(\\alpha\\)): Gözlenen veri H₀ altında pek olası değildir. H₀’a karşı güçlü kanıt sunar. H₀ reddedilir.\nBüyük p-değeri (&gt; \\(\\alpha\\)): Gözlenen veri H₀ altında makul bir şekilde olasıdır. H₀’ı reddetmek için yeterli kanıt yoktur. H₀ reddedilemez (ama “kabul edildi” demekten kaçınılır)."
+  },
+  {
+    "objectID": "ders04.html#section-4",
+    "href": "ders04.html#section-4",
+    "title": "Ders 4: Güven Aralıkları ve Hipotez Testi",
+    "section": "",
+    "text": "Görsel Kaynak:"
+  },
+  {
+    "objectID": "ders04.html#karar-verme",
+    "href": "ders04.html#karar-verme",
+    "title": "Ders 4: Güven Aralıkları ve Hipotez Testi",
+    "section": "Karar Verme",
+    "text": "Karar Verme\nP-değeri yaklaşımı en yaygın olanıdır:\n\nEğer p-değeri ≤ \\(\\alpha\\) ise, sonuç istatistiksel olarak anlamlıdır ve H₀ reddedilir. Alternatif hipotez (H₁) desteklenir.\nEğer p-değeri &gt; \\(\\alpha\\) ise, sonuç istatistiksel olarak anlamlı değildir ve H₀ reddedilemez. Alternatif hipotezi (H₁) desteklemek için yeterli kanıt yoktur."
+  },
+  {
+    "objectID": "ders04.html#tip-i-ve-tip-ii-hatalar",
+    "href": "ders04.html#tip-i-ve-tip-ii-hatalar",
+    "title": "Ders 4: Güven Aralıkları ve Hipotez Testi",
+    "section": "Tip I ve Tip II Hatalar",
+    "text": "Tip I ve Tip II Hatalar\nHipotez testlerinde iki tür hata yapılabilir:\n\nTip I Hata: Gerçekte doğru olan H₀ hipotezini reddetmek.\n\nOlasılığı \\(\\alpha\\) (anlamlılık düzeyi) ile gösterilir.\n“Yalancı Pozitif” - olmayan bir etkiyi var kabul etmek.\n\nTip II Hata: Gerçekte yanlış olan H₀ hipotezini reddetmemek (yani yanlış H₀’ı kabul etmek).\n\nOlasılığı \\(\\beta\\) ile gösterilir.\n“Yalancı Negatif” - var olan bir etkiyi gözden kaçırmak.\n\n\nTestin Gücü (Power): Yanlış bir H₀ hipotezini doğru bir şekilde reddetme olasılığıdır (1 - \\(\\beta\\))."
+  },
+  {
+    "objectID": "ders04.html#section-5",
+    "href": "ders04.html#section-5",
+    "title": "Ders 4: Güven Aralıkları ve Hipotez Testi",
+    "section": "",
+    "text": "Görsel Kaynak:"
+  },
+  {
+    "objectID": "ders04.html#örnek-tek-örneklem-t-testi",
+    "href": "ders04.html#örnek-tek-örneklem-t-testi",
+    "title": "Ders 4: Güven Aralıkları ve Hipotez Testi",
+    "section": "Örnek: Tek Örneklem t-Testi",
+    "text": "Örnek: Tek Örneklem t-Testi\nSenaryo: Bir araştırmacı, iris veri setindeki ‘setosa’ türü çiçeklerin ortalama çanak yaprak uzunluğunun (\\(\\mu\\)) 5.0 cm olup olmadığını test etmek istiyor. Anlamlılık düzeyi \\(\\alpha = 0.05\\).\n\n\\(H_0: \\mu = 5.0\\) cm\n\\(H_1: \\mu \\neq 5.0\\) cm (Çift yönlü test)\n\nR’da t.test() fonksiyonunu kullanabiliriz. mu argümanı ile H₀’daki değeri belirtiriz.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders04.html#sonuçların-yorumlanması-t-testi",
+    "href": "ders04.html#sonuçların-yorumlanması-t-testi",
+    "title": "Ders 4: Güven Aralıkları ve Hipotez Testi",
+    "section": "Sonuçların Yorumlanması (t-Testi)",
+    "text": "Sonuçların Yorumlanması (t-Testi)\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nYorum: Hesaplanan p-değeri (yaklaşık 0.85) belirlediğimiz anlamlılık düzeyi \\(\\alpha=0.05\\)’ten çok daha büyüktür. Bu nedenle, H₀ hipotezini (yani setosa türünün ortalama çanak yaprak uzunluğunun 5.0 cm olduğu iddiasını) reddetmek için yeterli istatistiksel kanıt yoktur. Örneklem ortalaması (5.006 cm) 5.0 cm’den farklı olsa da, bu fark istatistiksel olarak anlamlı değildir ve örnekleme şansından kaynaklanıyor olabilir."
+  },
+  {
+    "objectID": "ders04.html#ek-kaynaklar-1",
+    "href": "ders04.html#ek-kaynaklar-1",
+    "title": "Ders 4: Güven Aralıkları ve Hipotez Testi",
+    "section": "Ek Kaynaklar",
+    "text": "Ek Kaynaklar\n\nKhan Academy - Hypothesis Testing (İngilizce)\nYale Statlab - Hypothesis Testing (İngilizce)\nScribbr - Hypothesis Testing Explained (İngilizce)\nVeri Bilimi Okulu - Hipotez Testi (Türkçe)"
   },
   {
     "objectID": "ders03.html#özet",
@@ -378,11 +574,158 @@
     "text": "Veri tablosu / işlemler\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
   },
   {
+    "objectID": "ders04-claude.html#özet",
+    "href": "ders04-claude.html#özet",
+    "title": "Ders8: Güven Aralıkları ve Hipotez Testi",
+    "section": "Özet",
+    "text": "Özet\n\nGüven Aralığı (Confidence Interval) Kavramı\nGüven Aralığı Hesaplama\nHipotez Testi Temelleri\nTip I ve Tip II Hatalar\np-değeri Kavramı\nTek Örneklem Hipotez Testi"
+  },
+  {
+    "objectID": "ders04-claude.html#güven-aralığı-kavramı",
+    "href": "ders04-claude.html#güven-aralığı-kavramı",
+    "title": "Ders8: Güven Aralıkları ve Hipotez Testi",
+    "section": "Güven Aralığı Kavramı",
+    "text": "Güven Aralığı Kavramı\nGüven aralığı, bir popülasyon parametresi için olası değerlerin bir aralığıdır.\n\nBelirli bir güven düzeyi (genellikle %95) ile ifade edilir\nÖrneklem verisinden hesaplanır\nTahmin edilen parametre hakkında belirsizliği gösterir\n\n\n\n\nGüven aralığı örneklemi popülasyonla ilişkilendirir"
+  },
+  {
+    "objectID": "ders04-claude.html#güven-aralığının-yorumlanması",
+    "href": "ders04-claude.html#güven-aralığının-yorumlanması",
+    "title": "Ders8: Güven Aralıkları ve Hipotez Testi",
+    "section": "Güven Aralığının Yorumlanması",
+    "text": "Güven Aralığının Yorumlanması\n%95 güven aralığı şu anlama gelir:\n\nEğer aynı popülasyondan yüzlerce örneklem alıp her biri için güven aralığı hesaplarsak, bu aralıkların %95’i gerçek popülasyon parametresini içerecektir\nYanlış yorumlama: “Gerçek değerin bu aralıkta olma olasılığı %95’tir”\n\n\n\n\nFarklı örneklemlerden elde edilen güven aralıkları"
+  },
+  {
+    "objectID": "ders04-claude.html#ortalama-için-güven-aralığı-formülü",
+    "href": "ders04-claude.html#ortalama-için-güven-aralığı-formülü",
+    "title": "Ders8: Güven Aralıkları ve Hipotez Testi",
+    "section": "Ortalama için Güven Aralığı Formülü",
+    "text": "Ortalama için Güven Aralığı Formülü\nBir popülasyon ortalaması için %95 güven aralığı:\n\\[ \\bar{x} \\pm 1.96 \\times \\frac{\\sigma}{\\sqrt{n}} \\]\nBurada: * \\(\\bar{x}\\) = örneklem ortalaması * \\(\\sigma\\) = popülasyon standart sapması (bilinmiyorsa örneklem standart sapması \\(s\\) kullanılır) * \\(n\\) = örneklem büyüklüğü * \\(1.96\\) = %95 güven düzeyi için z-değeri\nPopülasyon standart sapması bilinmediğinde (genellikle):\n\\[ \\bar{x} \\pm t_{\\alpha/2, n-1} \\times \\frac{s}{\\sqrt{n}} \\]"
+  },
+  {
+    "objectID": "ders04-claude.html#rda-güven-aralığı-hesaplama",
+    "href": "ders04-claude.html#rda-güven-aralığı-hesaplama",
+    "title": "Ders8: Güven Aralıkları ve Hipotez Testi",
+    "section": "R’da Güven Aralığı Hesaplama",
+    "text": "R’da Güven Aralığı Hesaplama\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders04-claude.html#t.test-fonksiyonu-ile-güven-aralığı",
+    "href": "ders04-claude.html#t.test-fonksiyonu-ile-güven-aralığı",
+    "title": "Ders8: Güven Aralıkları ve Hipotez Testi",
+    "section": "t.test Fonksiyonu ile Güven Aralığı",
+    "text": "t.test Fonksiyonu ile Güven Aralığı\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders04-claude.html#güven-düzeyinin-etkisi",
+    "href": "ders04-claude.html#güven-düzeyinin-etkisi",
+    "title": "Ders8: Güven Aralıkları ve Hipotez Testi",
+    "section": "Güven Düzeyinin Etkisi",
+    "text": "Güven Düzeyinin Etkisi\nGüven düzeyi arttıkça güven aralığı genişler:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nFarklı güven düzeyleri için aralıklar"
+  },
+  {
+    "objectID": "ders04-claude.html#örneklem-büyüklüğünün-etkisi",
+    "href": "ders04-claude.html#örneklem-büyüklüğünün-etkisi",
+    "title": "Ders8: Güven Aralıkları ve Hipotez Testi",
+    "section": "Örneklem Büyüklüğünün Etkisi",
+    "text": "Örneklem Büyüklüğünün Etkisi\nÖrneklem büyüklüğü arttıkça güven aralığı daralır:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders04-claude.html#hipotez-testi-kavramı",
+    "href": "ders04-claude.html#hipotez-testi-kavramı",
+    "title": "Ders8: Güven Aralıkları ve Hipotez Testi",
+    "section": "Hipotez Testi Kavramı",
+    "text": "Hipotez Testi Kavramı\nHipotez testi, bir popülasyon parametresi hakkındaki iddianın (hipotezin) verilerle desteklenip desteklenmediğini belirlemek için kullanılan istatistiksel bir yöntemdir.\nTemel bileşenler:\n\nSıfır Hipotezi (H₀): Test edilen iddia (genellikle “fark yok” veya “etki yok” şeklinde)\nAlternatif Hipotez (H₁): Sıfır hipotezi doğru değilse geçerli olan alternatif\nTest İstatistiği: Verilerden hesaplanan bir değer\nKritik Değer veya p-değeri: Hipotezi reddetme veya kabul etme kararını verme kriteri"
+  },
+  {
+    "objectID": "ders04-claude.html#hipotez-testi-adımları",
+    "href": "ders04-claude.html#hipotez-testi-adımları",
+    "title": "Ders8: Güven Aralıkları ve Hipotez Testi",
+    "section": "Hipotez Testi Adımları",
+    "text": "Hipotez Testi Adımları\n\nHipotezleri belirle (H₀ ve H₁)\nAnlamlılık düzeyini seç (genellikle α = 0.05)\nUygun test istatistiğini seç ve hesapla\np-değerini hesapla\nKarar ver: p-değeri &lt; α ise H₀ reddedilir\n\n\n\n\nHipotez testi akış şeması"
+  },
+  {
+    "objectID": "ders04-claude.html#tip-i-ve-tip-ii-hatalar",
+    "href": "ders04-claude.html#tip-i-ve-tip-ii-hatalar",
+    "title": "Ders8: Güven Aralıkları ve Hipotez Testi",
+    "section": "Tip I ve Tip II Hatalar",
+    "text": "Tip I ve Tip II Hatalar\n\nTip I Hata (α): Doğru olan sıfır hipotezini yanlışlıkla reddetmek\n\n“Yanlış pozitif” olarak da bilinir\nOlasılığı anlamlılık düzeyi (α) ile kontrol edilir\n\nTip II Hata (β): Yanlış olan sıfır hipotezini reddetmeme\n\n“Yanlış negatif” olarak da bilinir\nİstatistiksel güç = 1 - β\n\n\n\n\n\nTip I ve Tip II hatalar"
+  },
+  {
+    "objectID": "ders04-claude.html#p-değeri-kavramı",
+    "href": "ders04-claude.html#p-değeri-kavramı",
+    "title": "Ders8: Güven Aralıkları ve Hipotez Testi",
+    "section": "p-değeri Kavramı",
+    "text": "p-değeri Kavramı\np-değeri, gözlenen sonuçların (veya daha aşırı sonuçların) sıfır hipotezi doğru olduğunda meydana gelme olasılığıdır.\n\nKüçük p-değeri (genellikle &lt; 0.05): Gözlenen veri sıfır hipotezi ile tutarsız\nBüyük p-değeri: Gözlenen veri sıfır hipotezi ile tutarlı\n\n\n\n\np-değeri kavramı"
+  },
+  {
+    "objectID": "ders04-claude.html#p-değeri-yorumlama",
+    "href": "ders04-claude.html#p-değeri-yorumlama",
+    "title": "Ders8: Güven Aralıkları ve Hipotez Testi",
+    "section": "p-değeri Yorumlama",
+    "text": "p-değeri Yorumlama\n\np &lt; 0.05: “İstatistiksel olarak anlamlı” (H₀ reddedilir)\np ≥ 0.05: “İstatistiksel olarak anlamlı değil” (H₀ reddedilemez)\n\nYaygın Yanlış Anlamalar: * p-değeri, hipotezin doğru olma olasılığı değildir * İstatistiksel anlamlılık her zaman pratik anlamlılık demek değildir * p-değeri büyükse “fark yok” kanıtlanmış olmaz"
+  },
+  {
+    "objectID": "ders04-claude.html#tek-örneklem-t-testi",
+    "href": "ders04-claude.html#tek-örneklem-t-testi",
+    "title": "Ders8: Güven Aralıkları ve Hipotez Testi",
+    "section": "Tek Örneklem t-testi",
+    "text": "Tek Örneklem t-testi\nBir örneklemin ortalamasının belirli bir değerden farklı olup olmadığını test eder.\nHipotezler: * H₀: μ = μ₀ (popülasyon ortalaması belirli bir değere eşittir) * H₁: μ ≠ μ₀ (iki yönlü) veya μ &gt; μ₀ ya da μ &lt; μ₀ (tek yönlü)\nTest İstatistiği: \\[ t = \\frac{\\bar{x} - \\mu_0}{\\frac{s}{\\sqrt{n}}} \\]"
+  },
+  {
+    "objectID": "ders04-claude.html#rda-tek-örneklem-t-testi",
+    "href": "ders04-claude.html#rda-tek-örneklem-t-testi",
+    "title": "Ders8: Güven Aralıkları ve Hipotez Testi",
+    "section": "R’da Tek Örneklem t-testi",
+    "text": "R’da Tek Örneklem t-testi\nÖrnek: Bir grup farenin ortalama ağırlığının 25 gram olduğu hipotezini test edelim.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders04-claude.html#hipotez-testi-çeşitleri",
+    "href": "ders04-claude.html#hipotez-testi-çeşitleri",
+    "title": "Ders8: Güven Aralıkları ve Hipotez Testi",
+    "section": "Hipotez Testi Çeşitleri",
+    "text": "Hipotez Testi Çeşitleri\n\n\n\nYaygın hipotez testleri"
+  },
+  {
+    "objectID": "ders04-claude.html#örnek-senaryo-gen-ekspresyonu",
+    "href": "ders04-claude.html#örnek-senaryo-gen-ekspresyonu",
+    "title": "Ders8: Güven Aralıkları ve Hipotez Testi",
+    "section": "Örnek Senaryo: Gen Ekspresyonu",
+    "text": "Örnek Senaryo: Gen Ekspresyonu\nBir gen terapisinin bir genin ekspresyon seviyesini artırdığı iddia ediliyor. Normal ekspresyon seviyesi 15 birim olarak biliniyor. 12 hasta üzerinde yapılan tedavi sonrası ölçümler:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nSonuç yorumu: p-değeri 0.05’ten küçük olduğu için, tedavinin gen ekspresyonunu artırdığı hipotezini desteklemekteyiz."
+  },
+  {
+    "objectID": "ders04-claude.html#güven-aralığı-ve-hipotez-testi-ilişkisi",
+    "href": "ders04-claude.html#güven-aralığı-ve-hipotez-testi-ilişkisi",
+    "title": "Ders8: Güven Aralıkları ve Hipotez Testi",
+    "section": "Güven Aralığı ve Hipotez Testi İlişkisi",
+    "text": "Güven Aralığı ve Hipotez Testi İlişkisi\nGüven aralığı ve hipotez testi birbirini tamamlayıcı yaklaşımlardır:\n\nEğer %95 güven aralığı test edilen değeri (μ₀) içermiyorsa, α = 0.05 için hipotez testi de H₀’ı reddeder\nGüven aralığı, etki büyüklüğü hakkında daha fazla bilgi verir\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders04-claude.html#biyolojik-bilimler-için-önemi",
+    "href": "ders04-claude.html#biyolojik-bilimler-için-önemi",
+    "title": "Ders8: Güven Aralıkları ve Hipotez Testi",
+    "section": "Biyolojik Bilimler için Önemi",
+    "text": "Biyolojik Bilimler için Önemi\nGüven aralıkları ve hipotez testleri biyolojik bilimlerde çok önemlidir:\n\nİlaç çalışmaları: Bir ilacın etkili olup olmadığını belirlemek\nGen ekspresyon analizleri: Farklı koşullar altında gen ekspresyonunu karşılaştırmak\nKlinik araştırmalar: Tedavi etkinliğini değerlendirmek\nEkolojik çalışmalar: Tür çeşitliliğindeki değişimleri incelemek\n\nAncak p-değerine aşırı bağımlılık, tekrarlanabilirlik krizi gibi sorunlara yol açmıştır."
+  },
+  {
+    "objectID": "ders04-claude.html#pratik-ipuçları",
+    "href": "ders04-claude.html#pratik-ipuçları",
+    "title": "Ders8: Güven Aralıkları ve Hipotez Testi",
+    "section": "Pratik İpuçları",
+    "text": "Pratik İpuçları\n\nHipotez testi tek başına yeterli değildir - etki büyüklüğü ve güven aralıklarını da raporlayın\nDüşük p-değeri her zaman büyük etki anlamına gelmez\nÖrneklem büyüklüğü arttıkça küçük etkiler bile istatistiksel olarak anlamlı görünebilir\nÇoklu test düzeltmesi (Bonferroni, FDR, vb.) kullanmayı unutmayın\nSonuçları biyolojik bağlamda yorumlayın"
+  },
+  {
+    "objectID": "ders04-claude.html#soru",
+    "href": "ders04-claude.html#soru",
+    "title": "Ders8: Güven Aralıkları ve Hipotez Testi",
+    "section": "Soru",
+    "text": "Soru\nBir laboratuvar, geliştirdiği yeni bir ilacın hücre büyümesini arttırdığını iddia ediyor. Standart koşullarda hücre büyümesi ortalama 12 μm/saat’tir. Yeni ilaçla tedavi edilen 15 hücre örneğinde elde edilen büyüme oranları (μm/saat):\n14.2, 13.7, 13.1, 12.8, 14.5, 15.2, 13.4, 14.3, 12.9, 13.6, 14.8, 13.9, 14.1, 13.5, 13.3\nİlacın hücre büyümesini arttırdığını α = 0.05 düzeyinde test edin ve sonuçları yorumlayın.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "MBG1032 Biyoistatistik Ders Notları",
     "section": "",
-    "text": "Kitap1: Introductory Statistics for the Life and Biomedical Sciences (Julie Vu, David Harrington) Leanpub sitesinden ücretsiz olarak (You Pay kısmını 0’a çekerek) indirebilirsiniz.\nKitap2: Principles of Biostatistics (Marcello Pagano, Kimberlee Gauvreau)\nKitap3: Biostatistics for the Biological and Health Sciences (Mario F. Triola, Marc M. Triola,Jason Roy)\nKitap4: R Programı İle Temel İstatistiksel Yöntemler Uygulamalı İstatistik Turcademy üzerinden ücretsiz olarak erişilebilir.\n\n\n\n\nTeorik (21 Şubat 2024): İlk derste, R programı çalıştırılabilecek ortamlar tanıtıldı. Ayrıca “Is Most Published Research Wrong?” başlıklı videodan bahsedildi. Söz konusu videoda p-value değerlerinin istatistik gücü oldukça zayıf şekilde bilimsel makalelerde kullanıldığı ve bu yüzden makalelerin tekrarlanabilirliğinin (reproducability) düşük olduğundan bahsedildi.\nUygulama (26 Şubat 2024): R Temelleri Sunum. Bu içerik için kullanılan ek kaynak, “An Introduction to R” adlı online kitap.\n\n\n\n\nTeorik (28 Şubat 2024): Veri setinin merkezini belirleyen ortalama ve mediandan bahsedildi. Veri setinin dağınıklığını özetleyen sayısal yöntemler (varyans, standart sapma) ve görsel yöntemler (histogram, boxplot) tanıtıldı. Sunum linki\nUygulama (4 Mart 2024): iris.xlsx dosyasını kullanarak, Excel’de hücre aralıklarını seçme, Ctrl ve Shift tuşları ile hızlı seçim ve gezinme gösterildi. Tek bir sütün için ortalama, medyan, 1. ve 3. çeyrek dilim hesaplama ve standard sapma hesabı yapıldı. Excel’de formüllerin başka hücrelere uygulanması gösterildi. Excel’in yeni versiyonunda Boxplot ve Histogram grafikleri çizilebileceği tartışıldı.\n\n\n\nTeorik (6 Mart 2024): Olaslık hesabına dair özellikler, küme prensibi üzerinden anlatıldı. Normal dağılımın özellikleri tanıtıldı. Sunum linki\nUygulama (11 Mart 2024): R’da pnorm(), qnorm() ve dnorm() fonksiyonları kullanarak ihtimal hesapları yapıldı ve normal dağılıma uygun rastgele sayılar üretildi. Excel’de normal dağılıma uygun sayılar üreten formüller kullanıldı.\n\n\n\nTeorik (13 Mart 2024): Poisson ve Bernoulli dağılımları (Poisson dağılımı ve Geometrik dağılım) tanıtıldı. Sunum linki\nPratik (18 Mart 2024): Normal dağılım örnekleri çözüldü. Uygulama sunum linki\n\n\n\nTeorik (20 Mart 2024): t statistik. Sunum linki\nPratik (25 Mart 2024): Poisson dağılımı ve Geometrik dağılım örnekleri çözüldü Uygulama sunum linki\n\n\n\nTeorik (27 Mart 2024): T-testi. Sunum linki\nPratik (01 Nisan 2024): T-testi uygulamaları Uygulama sunum linki\n\n\n\nTeorik (03 Nisan 2024): T-testi uygulamaları Sunum linki"
+    "text": "Kitap1: Introductory Statistics for the Life and Biomedical Sciences (Julie Vu, David Harrington) Leanpub sitesinden ücretsiz olarak (You Pay kısmını 0’a çekerek) indirebilirsiniz.\nKitap2: Principles of Biostatistics (Marcello Pagano, Kimberlee Gauvreau)\nKitap3: Biostatistics for the Biological and Health Sciences (Mario F. Triola, Marc M. Triola,Jason Roy)\nKitap4: R Programı İle Temel İstatistiksel Yöntemler Uygulamalı İstatistik Turcademy üzerinden ücretsiz olarak erişilebilir.\n\n\n\n\nTeorik (21 Şubat 2024): İlk derste, R programı çalıştırılabilecek ortamlar tanıtıldı. Ayrıca “Is Most Published Research Wrong?” başlıklı videodan bahsedildi. Söz konusu videoda p-value değerlerinin istatistik gücü oldukça zayıf şekilde bilimsel makalelerde kullanıldığı ve bu yüzden makalelerin tekrarlanabilirliğinin (reproducability) düşük olduğundan bahsedildi.\nUygulama (26 Şubat 2024): R Temelleri Sunum. Bu içerik için kullanılan ek kaynak, “An Introduction to R” adlı online kitap.\n\n\n\n\nTeorik (28 Şubat 2024): Veri setinin merkezini belirleyen ortalama ve mediandan bahsedildi. Veri setinin dağınıklığını özetleyen sayısal yöntemler (varyans, standart sapma) ve görsel yöntemler (histogram, boxplot) tanıtıldı. Sunum linki\nUygulama (4 Mart 2024): iris.xlsx dosyasını kullanarak, Excel’de hücre aralıklarını seçme, Ctrl ve Shift tuşları ile hızlı seçim ve gezinme gösterildi. Tek bir sütün için ortalama, medyan, 1. ve 3. çeyrek dilim hesaplama ve standard sapma hesabı yapıldı. Excel’de formüllerin başka hücrelere uygulanması gösterildi. Excel’in yeni versiyonunda Boxplot ve Histogram grafikleri çizilebileceği tartışıldı.\n\n\n\nTeorik (6 Mart 2024): Olaslık hesabına dair özellikler, küme prensibi üzerinden anlatıldı. Normal dağılımın özellikleri tanıtıldı. Sunum linki\nUygulama (11 Mart 2024): R’da pnorm(), qnorm() ve dnorm() fonksiyonları kullanarak ihtimal hesapları yapıldı ve normal dağılıma uygun rastgele sayılar üretildi. Excel’de normal dağılıma uygun sayılar üreten formüller kullanıldı.\n\n\n\nTeorik (13 Mart 2024): Poisson ve Bernoulli dağılımları (Poisson dağılımı ve Geometrik dağılım) tanıtıldı. Sunum linki\nPratik (18 Mart 2024): Normal dağılım örnekleri çözüldü. Uygulama sunum linki\n\n\n\nTeorik (20 Mart 2024): Güven aralığı ve hipotez testi. Sunum linki\nPratik (25 Mart 2024): Güven aralığı ve hipotez testi örnekleri &lt;––&gt;\n\n\n\nTeorik (27 Mart 2024): T-testi. Sunum linki\nPratik (01 Nisan 2024): T-testi uygulamaları Uygulama sunum linki\n\n\n\nTeorik (03 Nisan 2024): T-testi uygulamaları Sunum linki"
   },
   {
     "objectID": "index.html#kaynaklar",
@@ -424,7 +767,7 @@
     "href": "index.html#ders05",
     "title": "MBG1032 Biyoistatistik Ders Notları",
     "section": "",
-    "text": "Teorik (20 Mart 2024): t statistik. Sunum linki\nPratik (25 Mart 2024): Poisson dağılımı ve Geometrik dağılım örnekleri çözüldü Uygulama sunum linki"
+    "text": "Teorik (20 Mart 2024): Güven aralığı ve hipotez testi. Sunum linki\nPratik (25 Mart 2024): Güven aralığı ve hipotez testi örnekleri &lt;––&gt;"
   },
   {
     "objectID": "index.html#ders06",

@@ -9,7 +9,7 @@
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.6.40">
 
-  <title>MBG1032 Biyoistatistik – Ders 4: Güven Aralıkları ve Hipotez Testi</title>
+  <title>MBG1032 Biyoistatistik – Ders8: Güven Aralıkları ve Hipotez Testi</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -268,7 +268,7 @@
   // Document level settings ----
 
   // Determine if we need to install R packages
-  globalThis.qwebrInstallRPackagesList = ['ggplot2'];
+  globalThis.qwebrInstallRPackagesList = [''];
 
   // Specify possible locations to search for the repository
   globalThis.qwebrPackageRepoURLS = ['https://repo.r-wasm.org/'];
@@ -290,7 +290,7 @@
   };
 
   // Store cell data
-  globalThis.qwebrCellDetails = [{"code":"# iris veri setinden Sepal.Length sütununu alalım\nsepal_lengths <- iris$Sepal.Length\n\n# t.test fonksiyonunu kullanarak %95 güven aralığını hesaplayalım\ntest_result <- t.test(sepal_lengths)\n\n# Sonucu görelim (özellikle confidence interval kısmına bakalım)\nprint(test_result)\n\n# Sadece güven aralığını almak için:\nprint(test_result$conf.int)","id":1,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-1","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# %99 güven aralığı\nt.test(iris$Sepal.Length, conf.level = 0.99)$conf.int","id":2,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-2","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"library(ggplot2)\n\n# Özet istatistikleri hesapla (ortalama, güven aralığı sınırları)\n# t.test sonucu içinden değerleri alabiliriz\ntest_res <- t.test(iris$Sepal.Length)\nmean_val <- test_res$estimate\nci_lower <- test_res$conf.int[1]\nci_upper <- test_res$conf.int[2]\n\n# Basit bir data frame oluşturalım\nplot_data <- data.frame(\n  variable = \"Sepal.Length\",\n  mean = mean_val,\n  lower = ci_lower,\n  upper = ci_upper\n)\n\n# ggplot ile görselleştirme\nggplot(plot_data, aes(x = variable, y = mean)) +\n  geom_point(size = 4, color = \"blue\") + # Ortalama noktası\n  geom_errorbar(aes(ymin = lower, ymax = upper), width = 0.2, size=1, color=\"blue\") + # Güven Aralığı çubuğu\n  labs(title = \"Iris Sepal.Length için %95 Güven Aralığı\",\n       x = \"Değişken\",\n       y = \"Uzunluk (cm)\") +\n  theme_bw() +\n  ylim(5.5, 6.2) # Y eksenini aralığa odaklamak için","id":3,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"echo":"true","fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-3","message":"false","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# Sadece setosa türünü filtrele\nsetosa_data <- iris[iris$Species == \"setosa\", ]\n\n# Sepal.Length sütununu al\nsetosa_sepal_length <- setosa_data$Sepal.Length\n\n# Tek örneklem t-testi yap (H0: mu = 5.0)\ntest_result <- t.test(setosa_sepal_length, mu = 5.0)\n\n# Sonucu yazdır\nprint(test_result)","id":4,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-4","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# Sadece p-değerini görmek için:\nprint(test_result$p.value)\n\n# Anlamlılık düzeyi\nalpha <- 0.05\n\n# Karşılaştırma\nif (test_result$p.value <= alpha) {\n  print(\"P-değeri <= alpha. H0 reddedilir.\")\n} else {\n  print(\"P-değeri > alpha. H0 reddedilemez.\")\n}","id":5,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-5","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}}];
+  globalThis.qwebrCellDetails = [{"code":"# Örnek veri\nveri <- c(12.5, 13.2, 11.8, 14.5, 12.7, 13.5, 12.9, 13.8, 12.2, 14.1)\n\n# Ortalama için %95 güven aralığı hesaplama\nortalama <- mean(veri)\nstandart_hata <- sd(veri) / sqrt(length(veri))\nt_kritik <- qt(0.975, df = length(veri) - 1)  # %95 güven için 0.975 (iki yönlü)\n\nalt_sinir <- ortalama - t_kritik * standart_hata\nust_sinir <- ortalama + t_kritik * standart_hata\n\ncat(\"Ortalama:\", ortalama, \"\\n\")\ncat(\"Standart hata:\", standart_hata, \"\\n\")\ncat(\"t kritik değeri:\", t_kritik, \"\\n\")\ncat(\"95% güven aralığı:\", alt_sinir, \"ile\", ust_sinir, \"\\n\")","id":1,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-1","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# Aynı veri için t.test fonksiyonu kullanarak güven aralığı\nt.test(veri, conf.level = 0.95)","id":2,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-2","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# Farklı güven düzeyleri karşılaştırma\nt.test(veri, conf.level = 0.90)$conf.int  # %90 güven aralığı\nt.test(veri, conf.level = 0.95)$conf.int  # %95 güven aralığı\nt.test(veri, conf.level = 0.99)$conf.int  # %99 güven aralığı","id":3,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-3","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# Örneklem büyüklüğünün etkisini simüle etme\nset.seed(123)\npopulasyon <- rnorm(10000, mean = 100, sd = 15)\n\n# Farklı örneklem büyüklükleri\nn10 <- sample(populasyon, 10)\nn30 <- sample(populasyon, 30)\nn100 <- sample(populasyon, 100)\n\n# Güven aralıkları hesaplama\nt.test(n10)$conf.int\nt.test(n30)$conf.int\nt.test(n100)$conf.int","id":4,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-4","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# Fare ağırlık verileri (gram)\nagirliklar <- c(26.3, 24.8, 25.7, 23.9, 26.4, 25.8, 24.7, 25.1, 26.9, 24.5)\n\n# Tek örneklem t-testi\nt.test(agirliklar, mu = 25)\n\n# Tek yönlü test örnekleri\nt.test(agirliklar, mu = 25, alternative = \"greater\")  # μ > 25\nt.test(agirliklar, mu = 25, alternative = \"less\")     # μ < 25","id":5,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-5","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"gen_ekspresyonu <- c(17.2, 16.8, 18.1, 15.4, 14.9, 19.3, 16.5, 17.7, 18.5, 16.2, 15.8, 17.6)\n\n# Hipotez testi\nt.test(gen_ekspresyonu, mu = 15, alternative = \"greater\")","id":6,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-6","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# Önceki gen ekspresyonu verisi için\ntest_sonucu <- t.test(gen_ekspresyonu, mu = 15)\ntest_sonucu$conf.int  # Güven aralığı\ntest_sonucu$p.value   # p-değeri","id":7,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-7","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# Çözümünüzü buraya yazıp çalıştırınız","id":8,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-8","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}}];
 
   </script>
   <script type="module">
@@ -1186,8 +1186,8 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Ders 4: Güven Aralıkları ve Hipotez Testi</h1>
-  <p class="subtitle">MBG1032 - Doç.Dr. Alper YILMAZ - <em>28 Mart 2024</em></p>
+  <h1 class="title">Ders8: Güven Aralıkları ve Hipotez Testi</h1>
+  <p class="subtitle">MBG1032 Biyoistatistik - Doç.Dr.Alper YILMAZ - <em>29 Mart 2024</em></p>
 
 <div class="quarto-title-authors">
 </div>
@@ -1196,279 +1196,215 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
 <section id="özet" class="slide level2">
 <h2>Özet</h2>
 <ul>
-<li>Nokta tahmini vs.&nbsp;Aralık tahmini</li>
-<li>Güven aralığı nedir?</li>
-<li>Güven aralığının yorumlanması</li>
-<li>Güven aralığını etkileyen faktörler</li>
-<li>Ortalama için güven aralığı hesaplama (R ile)</li>
+<li>Güven Aralığı (Confidence Interval) Kavramı</li>
+<li>Güven Aralığı Hesaplama</li>
+<li>Hipotez Testi Temelleri</li>
+<li>Tip I ve Tip II Hatalar</li>
+<li>p-değeri Kavramı</li>
+<li>Tek Örneklem Hipotez Testi</li>
 </ul>
 </section>
-<section id="tahmin-etme-ihtiyacı" class="slide level2">
-<h2>Tahmin Etme İhtiyacı</h2>
-<p>Biyolojide genellikle tüm popülasyonu (evreni) incelemek yerine, popülasyondan alınan bir örneklem üzerinden çıkarımlar yaparız.</p>
+<section id="güven-aralığı-kavramı" class="slide level2">
+<h2>Güven Aralığı Kavramı</h2>
+<p>Güven aralığı, bir popülasyon parametresi için olası değerlerin bir aralığıdır.</p>
 <ul>
-<li><strong>Popülasyon Parametresi:</strong> Popülasyonun tamamını tanımlayan sayısal bir değer (örn. popülasyondaki tüm insanların ortalama boyu - <span class="math inline">\(\mu\)</span>). Genellikle bilinmez.</li>
-<li><strong>Örneklem İstatistiği:</strong> Örneklemden hesaplanan ve popülasyon parametresini tahmin etmek için kullanılan sayısal bir değer (örn. örneklemdeki insanların ortalama boyu - <span class="math inline">\(\overline{x}\)</span>).</li>
+<li>Belirli bir <strong>güven düzeyi</strong> (genellikle %95) ile ifade edilir</li>
+<li>Örneklem verisinden hesaplanır</li>
+<li>Tahmin edilen parametre hakkında belirsizliği gösterir</li>
 </ul>
-<p>Amacımız, örneklem istatistiğini kullanarak bilinmeyen popülasyon parametresi hakkında bilgi edinmektir.</p>
-</section>
-<section id="nokta-tahmini-vs.-aralık-tahmini" class="slide level2">
-<h2>Nokta Tahmini vs.&nbsp;Aralık Tahmini</h2>
-<ul>
-<li><strong>Nokta Tahmini:</strong> Popülasyon parametresi için tek bir değer tahmini (örn. <span class="math inline">\(\overline{x}\)</span>, <span class="math inline">\(\mu\)</span>’nün nokta tahminidir).
-<ul>
-<li>Basittir ancak tahminin ne kadar hassas olduğu hakkında bilgi vermez. Örneklemden örnekleme değişir.</li>
-</ul></li>
-<li><strong>Aralık Tahmini (Güven Aralığı):</strong> Popülasyon parametresini belirli bir güvenilirlik seviyesiyle içermesi beklenen bir değer aralığıdır.
-<ul>
-<li>Tahminin belirsizliğini veya hassasiyetini gösterir.</li>
-</ul></li>
-</ul>
-</section>
-<section id="section" class="slide level2">
-<h2></h2>
-
-<img data-src="https://editor.analyticsvidhya.com/uploads/91072Group%209.jpg" class="quarto-figure quarto-figure-center r-stretch"><div class="footer">
-<p>Görsel Kaynak: <a href="https://medium.com/analytics-vidhya/understanding-confidence-intervals-33e7b7e0a9a">Medium - Understanding Confidence Intervals</a></p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/ci-concept.png" class="" style="width:70.0%"></p>
+<figcaption>Güven aralığı örneklemi popülasyonla ilişkilendirir</figcaption>
+</figure>
 </div>
 </section>
-<section id="güven-aralığı-nedir" class="slide level2">
-<h2>Güven Aralığı Nedir?</h2>
-<p>Bir güven aralığı, örneklem verilerine dayanarak hesaplanan ve bilinmeyen popülasyon parametresini (örneğin, ortalama <span class="math inline">\(\mu\)</span> veya oran <em>p</em>) belirli bir olasılıkla içerdiği düşünülen bir değer aralığıdır.</p>
-<p>Genel formül genellikle şöyledir:</p>
-<p><strong>Nokta Tahmini ± Hata Payı</strong></p>
+<section id="güven-aralığının-yorumlanması" class="slide level2">
+<h2>Güven Aralığının Yorumlanması</h2>
+<p>%95 güven aralığı şu anlama gelir:</p>
 <ul>
-<li><strong>Nokta Tahmini:</strong> Örneklemden hesaplanan istatistik (örn. <span class="math inline">\(\overline{x}\)</span>).</li>
-<li><strong>Hata Payı:</strong> Tahminin ne kadar hassas olduğunu gösterir. Örnekleme değişkenliğine ve istenen güven düzeyine bağlıdır.</li>
+<li>Eğer aynı popülasyondan yüzlerce örneklem alıp her biri için güven aralığı hesaplarsak, bu aralıkların %95’i gerçek popülasyon parametresini içerecektir</li>
+<li><strong>Yanlış yorumlama</strong>: “Gerçek değerin bu aralıkta olma olasılığı %95’tir”</li>
 </ul>
-</section>
-<section id="güven-düzeyi-ve-yorumlama" class="slide level2">
-<h2>Güven Düzeyi ve Yorumlama</h2>
-<ul>
-<li><p><strong>Güven Düzeyi:</strong> Genellikle %90, %95 veya %99 olarak seçilir. Bu, aynı popülasyondan tekrar tekrar örneklemler alıp her biri için bir güven aralığı hesaplarsak, bu aralıkların ne kadarının gerçek popülasyon parametresini içereceğini gösteren yüzdedir.</p></li>
-<li><p><strong>Yaygın Yanlış Yorum:</strong> “%95 güven aralığı, popülasyon parametresinin %95 olasılıkla bu aralıkta olduğu anlamına gelir.” <strong>BU YANLIŞTIR!</strong> Popülasyon parametresi sabit bir değerdir, rastgele değildir. Aralık rastgeledir.</p></li>
-<li><p><strong>Doğru Yorum:</strong> “Bu popülasyondan alınacak örneklemlerle oluşturulacak %95 güven aralıklarının yaklaşık %95’inin, gerçek popülasyon parametresini içermesini bekleriz.” veya daha pratik olarak “Popülasyon parametresinin bu aralıkta olduğuna %95 güveniyoruz.”</p></li>
-</ul>
-</section>
-<section id="section-1" class="slide level2">
-<h2></h2>
-
-<img data-src=".png" class="r-stretch"><div class="footer">
-<p>Görsel Kaynak: <a href=""></a></p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/multiple-ci.png" class="" style="width:70.0%"></p>
+<figcaption>Farklı örneklemlerden elde edilen güven aralıkları</figcaption>
+</figure>
 </div>
 </section>
-<section id="güven-aralığının-genişliğini-etkileyen-faktörler" class="slide level2 scrollable">
-<h2>Güven Aralığının Genişliğini Etkileyen Faktörler</h2>
-<ol type="1">
-<li><strong>Güven Düzeyi:</strong> Güven düzeyi arttıkça (örn. %95’ten %99’a), aralık genişler. Daha emin olmak için daha geniş bir aralığa ihtiyaç duyarız.</li>
-<li><strong>Örneklem Büyüklüğü (n):</strong> Örneklem büyüklüğü arttıkça, aralık daralır. Daha fazla veri, daha hassas tahmin sağlar.</li>
-<li><strong>Verinin Değişkenliği (Standart Sapma - s):</strong> Verideki değişkenlik (standart sapma) arttıkça, aralık genişler. Daha dağınık veriler daha fazla belirsizlik anlamına gelir.</li>
-</ol>
+<section id="ortalama-için-güven-aralığı-formülü" class="slide level2">
+<h2>Ortalama için Güven Aralığı Formülü</h2>
+<p>Bir popülasyon ortalaması için %95 güven aralığı:</p>
+<p><span class="math display">\[ \bar{x} \pm 1.96 \times \frac{\sigma}{\sqrt{n}} \]</span></p>
+<p>Burada: * <span class="math inline">\(\bar{x}\)</span> = örneklem ortalaması * <span class="math inline">\(\sigma\)</span> = popülasyon standart sapması (bilinmiyorsa örneklem standart sapması <span class="math inline">\(s\)</span> kullanılır) * <span class="math inline">\(n\)</span> = örneklem büyüklüğü * <span class="math inline">\(1.96\)</span> = %95 güven düzeyi için z-değeri</p>
+<p>Popülasyon standart sapması bilinmediğinde (genellikle):</p>
+<p><span class="math display">\[ \bar{x} \pm t_{\alpha/2, n-1} \times \frac{s}{\sqrt{n}} \]</span></p>
 </section>
-<section id="section-2" class="slide level2">
-<h2></h2>
-
-<img data-src=".png" class="r-stretch"><div class="footer">
-<p>Görsel Kaynak: <a href=""></a></p>
-</div>
-</section>
-<section id="ortalama-için-güven-aralığı-mu" class="slide level2">
-<h2>Ortalama İçin Güven Aralığı (<span class="math inline">\(\mu\)</span>)</h2>
-<p>Popülasyon standart sapması (<span class="math inline">\(\sigma\)</span>) bilinmiyorsa (genellikle durum budur), t-dağılımını kullanırız:</p>
-<p><span class="math display">\[ \overline{x} \pm t_{\alpha/2, n-1} \times \frac{s}{\sqrt{n}} \]</span></p>
-<ul>
-<li><span class="math inline">\(\overline{x}\)</span>: Örneklem ortalaması</li>
-<li><span class="math inline">\(s\)</span>: Örneklem standart sapması</li>
-<li><span class="math inline">\(n\)</span>: Örneklem büyüklüğü</li>
-<li><span class="math inline">\(t_{\alpha/2, n-1}\)</span>: Belirli bir güven düzeyi (<span class="math inline">\(\alpha\)</span>) ve serbestlik derecesi (<span class="math inline">\(n-1\)</span>) için t-kritik değeri.</li>
-<li><span class="math inline">\(\frac{s}{\sqrt{n}}\)</span>: Standart Hata (SE - Standard Error)</li>
-</ul>
-</section>
-<section id="r-ile-güven-aralığı-hesabı-ortalama" class="slide level2">
-<h2>R ile Güven Aralığı Hesabı (Ortalama)</h2>
-<p>R’da <code>t.test()</code> fonksiyonu, bir vektörün ortalaması için güven aralığını kolayca hesaplar. Varsayılan güven düzeyi %95’tir. <code>iris</code> veri setindeki Sepal.Length (Çanak Yaprak Uzunluğu) için %95 güven aralığını hesaplayalım:</p>
+<section id="rda-güven-aralığı-hesaplama" class="slide level2">
+<h2>R’da Güven Aralığı Hesaplama</h2>
 <div id="qwebr-insertion-location-1"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p><strong>Yorum:</strong> Iris çiçeği popülasyonundaki ortalama çanak yaprak uzunluğunun (<span class="math inline">\(\mu\)</span>) [5.76 , 5.93] cm aralığında olduğuna %95 güveniyoruz.</p>
 </section>
-<section id="farklı-güven-düzeyi-ile-hesaplama" class="slide level2">
-<h2>Farklı Güven Düzeyi ile Hesaplama</h2>
-<p>%99 güven düzeyi ile hesaplamak için <code>conf.level</code> argümanını kullanırız:</p>
+<section id="t.test-fonksiyonu-ile-güven-aralığı" class="slide level2">
+<h2>t.test Fonksiyonu ile Güven Aralığı</h2>
 <div id="qwebr-insertion-location-2"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p>Gördüğünüz gibi, güven düzeyi %95’ten %99’a çıktığında aralık genişledi ([5.76, 5.93] vs [5.72, 5.95]).</p>
 </section>
-<section id="görselleştirme" class="slide level2">
-<h2>Görselleştirme</h2>
-<p>Güven aralığını görselleştirmek, anlamayı kolaylaştırabilir. Ortalama ve güven aralığını bir grafik üzerinde gösterebiliriz.</p>
+<section id="güven-düzeyinin-etkisi" class="slide level2">
+<h2>Güven Düzeyinin Etkisi</h2>
+<p>Güven düzeyi arttıkça güven aralığı genişler:</p>
 <div id="qwebr-insertion-location-3"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/ci-levels.png" class="" style="width:70.0%"></p>
+<figcaption>Farklı güven düzeyleri için aralıklar</figcaption>
+</figure>
+</div>
 </section>
-<section id="ek-kaynaklar" class="slide level2">
-<h2>Ek Kaynaklar</h2>
-<ul>
-<li><a href="https://www.khanacademy.org/math/statistics-probability/confidence-intervals-one-sample">Khan Academy - Confidence Intervals</a> (İngilizce)</li>
-<li><a href="https://stattrek.com/estimation/confidence-interval-mean">Stat Trek - Confidence Interval for Mean</a> (İngilizce)</li>
-<li>Veri Bilimi Okulu - <a href="https://www.veribilimiokulu.com/guven-araligi-nedir-nasil-hesaplanir/">Güven Aralığı</a> (Türkçe)</li>
-</ul>
+<section id="örneklem-büyüklüğünün-etkisi" class="slide level2">
+<h2>Örneklem Büyüklüğünün Etkisi</h2>
+<p>Örneklem büyüklüğü arttıkça güven aralığı daralır:</p>
+<div id="qwebr-insertion-location-4"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 </section>
-<section id="hipotez-testleri-özet" class="slide level2">
-<h2>Hipotez testleri özet</h2>
-<ul>
-<li>Hipotez testi nedir? Mantığı.</li>
-<li>Sıfır (H₀) ve Alternatif (H₁) Hipotezler</li>
-<li>Hipotez Testi Adımları</li>
-<li>Anlamlılık Düzeyi (<span class="math inline">\(\alpha\)</span>) ve P-değeri</li>
-<li>Tip I ve Tip II Hatalar</li>
-<li>Örnek: Tek Örneklem t-Testi (R ile)</li>
-</ul>
-</section>
-<section id="hipotez-testi-nedir" class="slide level2">
-<h2>Hipotez Testi Nedir?</h2>
-<p>Hipotez testi, örneklem verilerini kullanarak bir popülasyon hakkındaki iddiaları (hipotezleri) değerlendirmek için kullanılan istatistiksel bir yöntemdir.</p>
-<p><strong>Amaç:</strong> Örneklemden elde edilen kanıtların, popülasyon hakkındaki belirli bir iddiayı (sıfır hipotezi) reddetmek için yeterince güçlü olup olmadığına karar vermek.</p>
-<p><strong>Örnek Sorular:</strong></p>
-<ul>
-<li>Yeni bir gübre, bitki boyunu ortalamada artırıyor mu?</li>
-<li>Belirli bir gen mutasyonu, hastalığa yakalanma riskini değiştiriyor mu?</li>
-<li>İki farklı tedavi yönteminin iyileşme oranları arasında fark var mı?</li>
-</ul>
-</section>
-<section id="sıfır-ve-alternatif-hipotezler" class="slide level2 scrollable">
-<h2>Sıfır ve Alternatif Hipotezler</h2>
-<p>Her hipotez testinde iki hipotez kurulur:</p>
+<section id="hipotez-testi-kavramı" class="slide level2 scrollable">
+<h2>Hipotez Testi Kavramı</h2>
+<p>Hipotez testi, bir popülasyon parametresi hakkındaki iddianın (hipotezin) verilerle desteklenip desteklenmediğini belirlemek için kullanılan istatistiksel bir yöntemdir.</p>
+<p>Temel bileşenler:</p>
 <ol type="1">
-<li><strong>Sıfır Hipotezi (H₀):</strong> Genellikle “fark yoktur”, “etki yoktur” veya “değişiklik yoktur” şeklinde ifade edilen, test edilmek istenen mevcut durum veya varsayımdır. Popülasyon parametresi hakkında belirli bir değeri öne sürer (örn. <span class="math inline">\(H_0: \mu = 50\)</span>). Eşitlik içerir (=, ≤, ≥).</li>
-<li><strong>Alternatif Hipotez (H₁ veya Hₐ):</strong> Sıfır hipotezinin yanlış olduğuna inanıldığında kabul edilecek olan iddiadır. Araştırmacının kanıtlamaya çalıştığı şeyi temsil eder (örn. <span class="math inline">\(H_1: \mu \neq 50\)</span>, <span class="math inline">\(H_1: \mu &gt; 50\)</span>, veya <span class="math inline">\(H_1: \mu &lt; 50\)</span>). Eşitlik içermez (≠, &gt;, &lt;).</li>
+<li><strong>Sıfır Hipotezi (H₀)</strong>: Test edilen iddia (genellikle “fark yok” veya “etki yok” şeklinde)</li>
+<li><strong>Alternatif Hipotez (H₁)</strong>: Sıfır hipotezi doğru değilse geçerli olan alternatif</li>
+<li><strong>Test İstatistiği</strong>: Verilerden hesaplanan bir değer</li>
+<li><strong>Kritik Değer</strong> veya <strong>p-değeri</strong>: Hipotezi reddetme veya kabul etme kararını verme kriteri</li>
 </ol>
-<p><strong>Önemli:</strong> H₀ ve H₁ birbirini dışlayan ve tüm olasılıkları kapsayan ifadeler olmalıdır.</p>
-</section>
-<section id="hipotez-örnekleri" class="slide level2">
-<h2>Hipotez Örnekleri</h2>
-<p><strong>Durum 1:</strong> Bir biyolog, belirli bir göldeki balıkların ortalama uzunluğunun 30 cm olup olmadığını test etmek istiyor.</p>
-<ul>
-<li><span class="math inline">\(H_0: \mu = 30\)</span> cm (Ortalama uzunluk 30 cm’dir)</li>
-<li><span class="math inline">\(H_1: \mu \neq 30\)</span> cm (Ortalama uzunluk 30 cm değildir - <em>Çift Yönlü</em>)</li>
-</ul>
-<p><strong>Durum 2:</strong> Bir ilaç firması, yeni geliştirdiği ilacın kan basıncını düşürüp düşürmediğini test etmek istiyor (mevcut ortalama 140 mmHg).</p>
-<ul>
-<li><span class="math inline">\(H_0: \mu \ge 140\)</span> mmHg (İlaç kan basıncını düşürmüyor veya artırıyor)</li>
-<li><span class="math inline">\(H_1: \mu &lt; 140\)</span> mmHg (İlaç kan basıncını düşürüyor - <em>Tek Yönlü</em>)</li>
-</ul>
-<p><strong>Durum 3:</strong> Bir ziraat mühendisi, yeni bir gübrenin mısır verimini artırıp artırmadığını araştırıyor (mevcut ortalama verim 5 ton/hektar).</p>
-<ul>
-<li><span class="math inline">\(H_0: \mu \le 5\)</span> ton/hektar (Yeni gübre verimi artırmıyor veya azaltıyor)</li>
-<li><span class="math inline">\(H_1: \mu &gt; 5\)</span> ton/hektar (Yeni gübre verimi artırıyor - <em>Tek Yönlü</em>)</li>
-</ul>
 </section>
 <section id="hipotez-testi-adımları" class="slide level2 scrollable">
 <h2>Hipotez Testi Adımları</h2>
 <ol type="1">
-<li><strong>Hipotezleri Belirle:</strong> Sıfır (H₀) ve Alternatif (H₁) hipotezleri kur.</li>
-<li><strong>Anlamlılık Düzeyini Seç (<span class="math inline">\(\alpha\)</span>):</strong> H₀’ı yanlışlıkla reddetme riskini belirle (genellikle 0.05, 0.01 veya 0.10).</li>
-<li><strong>Uygun Test İstatistiğini Seç:</strong> Veri tipine ve hipoteze uygun testi seç (örn. t-testi, Z-testi, ki-kare testi).</li>
-<li><strong>Karar Kuralını Belirle:</strong> Test istatistiğinin hangi değerlerde H₀’ın reddedileceğini belirle (kritik değerler veya p-değeri yaklaşımı).</li>
-<li><strong>Test İstatistiğini Hesapla:</strong> Örneklem verilerini kullanarak test istatistiğinin değerini hesapla.</li>
-<li><strong>Karar Ver:</strong> Hesaplanan test istatistiğini karar kuralıyla karşılaştırarak H₀’ı reddet veya reddetme.</li>
-<li><strong>Sonucu Yorumla:</strong> Test sonucunu problem bağlamında yorumla.</li>
+<li>Hipotezleri belirle (H₀ ve H₁)</li>
+<li>Anlamlılık düzeyini seç (genellikle α = 0.05)</li>
+<li>Uygun test istatistiğini seç ve hesapla</li>
+<li>p-değerini hesapla</li>
+<li>Karar ver: p-değeri &lt; α ise H₀ reddedilir</li>
 </ol>
-</section>
-<section id="section-3" class="slide level2">
-<h2></h2>
-
-<img data-src=".png" class="r-stretch"><div class="footer">
-<p>Görsel Kaynak: <a href=""></a></p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/hypothesis-flow.png" class="" style="width:60.0%"></p>
+<figcaption>Hipotez testi akış şeması</figcaption>
+</figure>
 </div>
-</section>
-<section id="anlamlılık-düzeyi-alpha" class="slide level2">
-<h2>Anlamlılık Düzeyi (<span class="math inline">\(\alpha\)</span>)</h2>
-<ul>
-<li>Alfa (<span class="math inline">\(\alpha\)</span>), sıfır hipotezi (H₀) doğruyken onu reddetme olasılığıdır (Tip I Hata olasılığı).</li>
-<li>Araştırmacı tarafından testten önce belirlenir. Yaygın değerler:
-<ul>
-<li><span class="math inline">\(\alpha = 0.05\)</span> (%5 anlamlılık düzeyi)</li>
-<li><span class="math inline">\(\alpha = 0.01\)</span> (%1 anlamlılık düzeyi)</li>
-<li><span class="math inline">\(\alpha = 0.10\)</span> (%10 anlamlılık düzeyi)</li>
-</ul></li>
-<li><span class="math inline">\(\alpha = 0.05\)</span> demek, H₀ doğru olsa bile, 100 deneyin 5’inde yanlışlıkla H₀’ı reddetme riskini göze almak demektir.</li>
-</ul>
-</section>
-<section id="p-değeri-p-value" class="slide level2">
-<h2>P-değeri (P-value)</h2>
-<ul>
-<li>P-değeri, sıfır hipotezi (H₀) doğru varsayıldığında, örneklemden elde edilen sonuç kadar veya daha aşırı (H₁ yönünde) sonuçların gözlenme olasılığıdır.
-<ul>
-<li>Eğer sıfır hipotezi doğruysa, şansın bu verileri ne kadar iyi açıklayabileceğini belirtir.</li>
-<li><strong>Örnek:</strong> Diyelim ki bir ilacın etkili olmadığını iddia eden bir sıfır hipotezimiz var (H₀: “İlaç etkisizdir”). 30 hasta üzerinde bir deney yaptık ve olumlu bir sonuç gözlemledik. P-değeri şu soruya cevap verir: “Eğer ilaç gerçekten etkisiz olsaydı (H₀ doğru olsaydı), bizim gördüğümüz kadar veya daha fazla olumlu sonucu şans eseri gözlemleme olasılığı nedir?”</li>
-</ul></li>
-<li><strong>Küçük p-değeri (≤ <span class="math inline">\(\alpha\)</span>):</strong> Gözlenen veri H₀ altında pek olası değildir. H₀’a karşı güçlü kanıt sunar. H₀ reddedilir.</li>
-<li><strong>Büyük p-değeri (&gt; <span class="math inline">\(\alpha\)</span>):</strong> Gözlenen veri H₀ altında makul bir şekilde olasıdır. H₀’ı reddetmek için yeterli kanıt yoktur. H₀ reddedilemez (ama “kabul edildi” demekten kaçınılır).</li>
-</ul>
-</section>
-<section id="section-4" class="slide level2">
-<h2></h2>
-
-<img data-src=".png" class="r-stretch"><div class="footer">
-<p>Görsel Kaynak: <a href=""></a></p>
-</div>
-</section>
-<section id="karar-verme" class="slide level2">
-<h2>Karar Verme</h2>
-<p>P-değeri yaklaşımı en yaygın olanıdır:</p>
-<ul>
-<li>Eğer <strong>p-değeri ≤ <span class="math inline">\(\alpha\)</span></strong> ise, sonuç istatistiksel olarak anlamlıdır ve <strong>H₀ reddedilir</strong>. Alternatif hipotez (H₁) desteklenir.</li>
-<li>Eğer <strong>p-değeri &gt; <span class="math inline">\(\alpha\)</span></strong> ise, sonuç istatistiksel olarak anlamlı değildir ve <strong>H₀ reddedilemez</strong>. Alternatif hipotezi (H₁) desteklemek için yeterli kanıt yoktur.</li>
-</ul>
 </section>
 <section id="tip-i-ve-tip-ii-hatalar" class="slide level2">
 <h2>Tip I ve Tip II Hatalar</h2>
-<p>Hipotez testlerinde iki tür hata yapılabilir:</p>
 <ul>
-<li><strong>Tip I Hata:</strong> Gerçekte doğru olan H₀ hipotezini reddetmek.
+<li><strong>Tip I Hata (α)</strong>: Doğru olan sıfır hipotezini yanlışlıkla reddetmek
 <ul>
-<li>Olasılığı <span class="math inline">\(\alpha\)</span> (anlamlılık düzeyi) ile gösterilir.</li>
-<li>“Yalancı Pozitif” - olmayan bir etkiyi var kabul etmek.</li>
+<li>“Yanlış pozitif” olarak da bilinir</li>
+<li>Olasılığı anlamlılık düzeyi (α) ile kontrol edilir</li>
 </ul></li>
-<li><strong>Tip II Hata:</strong> Gerçekte yanlış olan H₀ hipotezini reddetmemek (yani yanlış H₀’ı kabul etmek).
+<li><strong>Tip II Hata (β)</strong>: Yanlış olan sıfır hipotezini reddetmeme
 <ul>
-<li>Olasılığı <span class="math inline">\(\beta\)</span> ile gösterilir.</li>
-<li>“Yalancı Negatif” - var olan bir etkiyi gözden kaçırmak.</li>
+<li>“Yanlış negatif” olarak da bilinir</li>
+<li>İstatistiksel güç = 1 - β</li>
 </ul></li>
 </ul>
-<p><strong>Testin Gücü (Power):</strong> Yanlış bir H₀ hipotezini doğru bir şekilde reddetme olasılığıdır (1 - <span class="math inline">\(\beta\)</span>).</p>
-</section>
-<section id="section-5" class="slide level2">
-<h2></h2>
-
-<img data-src=".png" class="r-stretch"><div class="footer">
-<p>Görsel Kaynak: <a href=""></a></p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/type1-type2.png" class="" style="width:70.0%"></p>
+<figcaption>Tip I ve Tip II hatalar</figcaption>
+</figure>
 </div>
 </section>
-<section id="örnek-tek-örneklem-t-testi" class="slide level2">
-<h2>Örnek: Tek Örneklem t-Testi</h2>
-<p><strong>Senaryo:</strong> Bir araştırmacı, <code>iris</code> veri setindeki ‘setosa’ türü çiçeklerin ortalama çanak yaprak uzunluğunun (<span class="math inline">\(\mu\)</span>) 5.0 cm olup olmadığını test etmek istiyor. Anlamlılık düzeyi <span class="math inline">\(\alpha = 0.05\)</span>.</p>
+<section id="p-değeri-kavramı" class="slide level2">
+<h2>p-değeri Kavramı</h2>
+<p>p-değeri, gözlenen sonuçların (veya daha aşırı sonuçların) sıfır hipotezi doğru olduğunda meydana gelme olasılığıdır.</p>
 <ul>
-<li><span class="math inline">\(H_0: \mu = 5.0\)</span> cm</li>
-<li><span class="math inline">\(H_1: \mu \neq 5.0\)</span> cm (Çift yönlü test)</li>
+<li>Küçük p-değeri (genellikle &lt; 0.05): Gözlenen veri sıfır hipotezi ile tutarsız</li>
+<li>Büyük p-değeri: Gözlenen veri sıfır hipotezi ile tutarlı</li>
 </ul>
-<p>R’da <code>t.test()</code> fonksiyonunu kullanabiliriz. <code>mu</code> argümanı ile H₀’daki değeri belirtiriz.</p>
-<div id="qwebr-insertion-location-4"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/p-value.png" class="" style="width:70.0%"></p>
+<figcaption>p-değeri kavramı</figcaption>
+</figure>
+</div>
 </section>
-<section id="sonuçların-yorumlanması-t-testi" class="slide level2">
-<h2>Sonuçların Yorumlanması (t-Testi)</h2>
+<section id="p-değeri-yorumlama" class="slide level2">
+<h2>p-değeri Yorumlama</h2>
+<ul>
+<li>p &lt; 0.05: “İstatistiksel olarak anlamlı” (H₀ reddedilir)</li>
+<li>p ≥ 0.05: “İstatistiksel olarak anlamlı değil” (H₀ reddedilemez)</li>
+</ul>
+<p><strong>Yaygın Yanlış Anlamalar</strong>: * p-değeri, hipotezin doğru olma olasılığı değildir * İstatistiksel anlamlılık her zaman pratik anlamlılık demek değildir * p-değeri büyükse “fark yok” kanıtlanmış olmaz</p>
+</section>
+<section id="tek-örneklem-t-testi" class="slide level2">
+<h2>Tek Örneklem t-testi</h2>
+<p>Bir örneklemin ortalamasının belirli bir değerden farklı olup olmadığını test eder.</p>
+<p><strong>Hipotezler</strong>: * H₀: μ = μ₀ (popülasyon ortalaması belirli bir değere eşittir) * H₁: μ ≠ μ₀ (iki yönlü) veya μ &gt; μ₀ ya da μ &lt; μ₀ (tek yönlü)</p>
+<p><strong>Test İstatistiği</strong>: <span class="math display">\[ t = \frac{\bar{x} - \mu_0}{\frac{s}{\sqrt{n}}} \]</span></p>
+</section>
+<section id="rda-tek-örneklem-t-testi" class="slide level2">
+<h2>R’da Tek Örneklem t-testi</h2>
+<p>Örnek: Bir grup farenin ortalama ağırlığının 25 gram olduğu hipotezini test edelim.</p>
 <div id="qwebr-insertion-location-5"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p><strong>Yorum:</strong> Hesaplanan p-değeri (yaklaşık 0.85) belirlediğimiz anlamlılık düzeyi <span class="math inline">\(\alpha=0.05\)</span>’ten çok daha büyüktür. Bu nedenle, H₀ hipotezini (yani setosa türünün ortalama çanak yaprak uzunluğunun 5.0 cm olduğu iddiasını) reddetmek için yeterli istatistiksel kanıt yoktur. Örneklem ortalaması (5.006 cm) 5.0 cm’den farklı olsa da, bu fark istatistiksel olarak anlamlı değildir ve örnekleme şansından kaynaklanıyor olabilir.</p>
 </section>
-<section id="ek-kaynaklar-1" class="slide level2">
-<h2>Ek Kaynaklar</h2>
+<section id="hipotez-testi-çeşitleri" class="slide level2">
+<h2>Hipotez Testi Çeşitleri</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/common-tests.png" class="" style="width:85.0%"></p>
+<figcaption>Yaygın hipotez testleri</figcaption>
+</figure>
+</div>
+</section>
+<section id="örnek-senaryo-gen-ekspresyonu" class="slide level2">
+<h2>Örnek Senaryo: Gen Ekspresyonu</h2>
+<p>Bir gen terapisinin bir genin ekspresyon seviyesini artırdığı iddia ediliyor. Normal ekspresyon seviyesi 15 birim olarak biliniyor. 12 hasta üzerinde yapılan tedavi sonrası ölçümler:</p>
+<div id="qwebr-insertion-location-6"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<p><strong>Sonuç yorumu</strong>: p-değeri 0.05’ten küçük olduğu için, tedavinin gen ekspresyonunu artırdığı hipotezini desteklemekteyiz.</p>
+</section>
+<section id="güven-aralığı-ve-hipotez-testi-ilişkisi" class="slide level2">
+<h2>Güven Aralığı ve Hipotez Testi İlişkisi</h2>
+<p>Güven aralığı ve hipotez testi birbirini tamamlayıcı yaklaşımlardır:</p>
 <ul>
-<li><a href="https://www.khanacademy.org/math/statistics-probability/hypothesis-testing-one-sample">Khan Academy - Hypothesis Testing</a> (İngilizce)</li>
-<li><a href="http://www.stat.yale.edu/Courses/1997-98/101/sigtest.htm">Yale Statlab - Hypothesis Testing</a> (İngilizce)</li>
-<li><a href="https://www.scribbr.com/statistics/hypothesis-testing/">Scribbr - Hypothesis Testing Explained</a> (İngilizce)</li>
-<li>Veri Bilimi Okulu - <a href="https://www.veribilimiokulu.com/hipotez-testi-nedir/">Hipotez Testi</a> (Türkçe)</li>
+<li>Eğer %95 güven aralığı test edilen değeri (μ₀) içermiyorsa, α = 0.05 için hipotez testi de H₀’ı reddeder</li>
+<li>Güven aralığı, etki büyüklüğü hakkında daha fazla bilgi verir</li>
 </ul>
+<div id="qwebr-insertion-location-7"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+</section>
+<section id="biyolojik-bilimler-için-önemi" class="slide level2">
+<h2>Biyolojik Bilimler için Önemi</h2>
+<p>Güven aralıkları ve hipotez testleri biyolojik bilimlerde çok önemlidir:</p>
+<ul>
+<li><strong>İlaç çalışmaları</strong>: Bir ilacın etkili olup olmadığını belirlemek</li>
+<li><strong>Gen ekspresyon analizleri</strong>: Farklı koşullar altında gen ekspresyonunu karşılaştırmak</li>
+<li><strong>Klinik araştırmalar</strong>: Tedavi etkinliğini değerlendirmek</li>
+<li><strong>Ekolojik çalışmalar</strong>: Tür çeşitliliğindeki değişimleri incelemek</li>
+</ul>
+<p>Ancak p-değerine aşırı bağımlılık, tekrarlanabilirlik krizi gibi sorunlara yol açmıştır.</p>
+</section>
+<section id="pratik-ipuçları" class="slide level2">
+<h2>Pratik İpuçları</h2>
+<ul>
+<li>Hipotez testi <strong>tek başına yeterli değildir</strong> - etki büyüklüğü ve güven aralıklarını da raporlayın</li>
+<li>Düşük p-değeri her zaman büyük etki anlamına gelmez</li>
+<li>Örneklem büyüklüğü arttıkça küçük etkiler bile istatistiksel olarak anlamlı görünebilir</li>
+<li>Çoklu test düzeltmesi (Bonferroni, FDR, vb.) kullanmayı unutmayın</li>
+<li>Sonuçları biyolojik bağlamda yorumlayın</li>
+</ul>
+</section>
+<section id="soru" class="slide level2">
+<h2>Soru</h2>
+<p>Bir laboratuvar, geliştirdiği yeni bir ilacın hücre büyümesini arttırdığını iddia ediyor. Standart koşullarda hücre büyümesi ortalama 12 μm/saat’tir. Yeni ilaçla tedavi edilen 15 hücre örneğinde elde edilen büyüme oranları (μm/saat):</p>
+<p>14.2, 13.7, 13.1, 12.8, 14.5, 15.2, 13.4, 14.3, 12.9, 13.6, 14.8, 13.9, 14.1, 13.5, 13.3</p>
+<p>İlacın hücre büyümesini arttırdığını α = 0.05 düzeyinde test edin ve sonuçları yorumlayın.</p>
+<div id="qwebr-insertion-location-8"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 
 
 </section>
@@ -1530,7 +1466,7 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
         progress: true,
 
         // Display the page number of the current slide
-        slideNumber: false,
+        slideNumber: 'c/t',
 
         // 'all', 'print', or 'speaker'
         showSlideNumber: 'all',
@@ -1689,44 +1625,6 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
         ]
       });
     </script>
-    
-    <script>
-      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
-      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
-      // slide changes (different for each slide format).
-      (function () {
-        // dispatch for htmlwidgets
-        function fireSlideEnter() {
-          const event = window.document.createEvent("Event");
-          event.initEvent("slideenter", true, true);
-          window.document.dispatchEvent(event);
-        }
-
-        function fireSlideChanged(previousSlide, currentSlide) {
-          fireSlideEnter();
-
-          // dispatch for shiny
-          if (window.jQuery) {
-            if (previousSlide) {
-              window.jQuery(previousSlide).trigger("hidden");
-            }
-            if (currentSlide) {
-              window.jQuery(currentSlide).trigger("shown");
-            }
-          }
-        }
-
-        // hookup for slidy
-        if (window.w3c_slidy) {
-          window.w3c_slidy.add_observer(function (slide_num) {
-            // slide_num starts at position 1
-            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
-          });
-        }
-
-      })();
-    </script>
-
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {
