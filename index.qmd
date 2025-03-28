@@ -35,9 +35,10 @@
 
 ## Ders05
 
-**Teorik** (*20 Mart 2024*): t statistik. [Sunum linki](ders04.qmd)
+**Teorik** (*20 Mart 2024*): Güven aralığı ve hipotez testi. [Sunum linki](ders04.qmd)
 
-**Pratik** (*25 Mart 2024*): Poisson dağılımı ve Geometrik dağılım örnekleri çözüldü [Uygulama sunum linki](ders03-uygulama.qmd)
+**Pratik** (*25 Mart 2024*): Güven aralığı ve hipotez testi örnekleri 
+<--![Uygulama sunum linki](ders04-uygulama.qmd)-->
 
 ## Ders06
 
