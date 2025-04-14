@@ -9,7 +9,7 @@
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.6.40">
 
-  <title>MBG1032 Biyoistatistik – Ders5: Başlık</title>
+  <title>MBG1032 Biyoistatistik – Ders 5: t-Testi ve Örneklerle Uygulamaları</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -268,7 +268,7 @@
   // Document level settings ----
 
   // Determine if we need to install R packages
-  globalThis.qwebrInstallRPackagesList = [''];
+  globalThis.qwebrInstallRPackagesList = ['ggplot2', 'dplyr'];
 
   // Specify possible locations to search for the repository
   globalThis.qwebrPackageRepoURLS = ['https://repo.r-wasm.org/'];
@@ -290,7 +290,7 @@
   };
 
   // Store cell data
-  globalThis.qwebrCellDetails = [{"code":"# R'da çözüm","id":1,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-1","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"qt()","id":2,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-2","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}}];
+  globalThis.qwebrCellDetails = [{"code":"# Kan glikoz değerlerini içeren vektör oluşturalım (mg/dL)\nglikoz_seviyeleri <- c(92, 97, 94, 90, 89, 96, 91, 88, 93, 95, 89, 94, 91, 92, 90)\n\n# Verilerin özet istatistiklerini inceleyelim\nsummary(glikoz_seviyeleri)\nsd(glikoz_seviyeleri)\n\n# Tek örneklem t-testi yapalım (H0: mu = 100 mg/dL)\ntest_sonuc <- t.test(glikoz_seviyeleri, mu = 100)\n\n# Sonucu yazdıralım\nprint(test_sonuc)","id":1,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-1","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# Özet grafiği çizelim\nboxplot(glikoz_seviyeleri, main=\"Farelerin Kan Glikoz Seviyeleri\", \n        ylab=\"Glikoz Seviyesi (mg/dL)\",\n        ylim=c(85, 105))  # Y eksenini 85-105 aralığında ayarlıyoruz\nabline(h=100, col=\"red\", lwd=2, lty=2)  # Referans değer çizgisi\ntext(1.3, 100, \"Referans (100 mg/dL)\", col=\"red\", pos=3)","id":2,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-2","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# Her iki gübre ile yetiştirilen domates bitkilerinin boyları (cm)\ngubre_A <- c(65, 72, 78, 69, 71, 75, 68, 74, 70, 73)\ngubre_B <- c(72, 79, 83, 77, 81, 80, 75, 78, 76, 82)\n\n# Verilerin özet istatistiklerini inceleyelim\ncat(\"Gübre A Özet İstatistikler:\\n\")\nsummary(gubre_A)\ncat(\"Standart Sapma:\", sd(gubre_A), \"\\n\\n\")\n\ncat(\"Gübre B Özet İstatistikler:\\n\")\nsummary(gubre_B)\ncat(\"Standart Sapma:\", sd(gubre_B), \"\\n\")","id":3,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-3","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# Bağımsız iki örneklem t-testi\ntest_sonuc <- t.test(gubre_A, gubre_B, var.equal = TRUE)\nprint(test_sonuc)","id":4,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-4","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# Kutu grafiği ile karşılaştırma\nboxplot(gubre_A, gubre_B, names=c(\"Gübre A\", \"Gübre B\"), \n        main=\"Gübre Türlerine Göre Domates Bitki Boyları\",\n        ylab=\"Bitki Boyu (cm)\")","id":5,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-5","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# 10 hastanın tedavi öncesi ve sonrası kolesterol seviyeleri (mg/dL)\ntedavi_oncesi <- c(245, 252, 240, 258, 262, 247, 250, 255, 243, 260)\ntedavi_sonrasi <- c(220, 235, 218, 240, 245, 230, 225, 238, 215, 242)\n\n# Farkları hesaplayalım\nfarklar <- tedavi_oncesi - tedavi_sonrasi\ncat(\"Farklar:\", farklar, \"\\n\")\ncat(\"Farkların ortalaması:\", mean(farklar), \"\\n\")\ncat(\"Farkların standart sapması:\", sd(farklar), \"\\n\\n\")\n\n# Eşleştirilmiş t-testi\ntest_sonuc <- t.test(tedavi_oncesi, tedavi_sonrasi, paired = TRUE)\nprint(test_sonuc)","id":6,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-6","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# Çubuk grafiği ile karşılaştırma\npatient_ids <- 1:10\npar(mfrow=c(1,1))\nplot(patient_ids, tedavi_oncesi, type=\"b\", col=\"red\", ylim=c(210, 270),\n     xlab=\"Hasta ID\", ylab=\"Kolesterol Seviyesi (mg/dL)\",\n     main=\"Tedavi Öncesi ve Sonrası Kolesterol Seviyeleri\")\nlines(patient_ids, tedavi_sonrasi, type=\"b\", col=\"blue\")\nlegend(\"topright\", legend=c(\"Tedavi Öncesi\", \"Tedavi Sonrası\"), \n       col=c(\"red\", \"blue\"), lty=1, pch=1)","id":7,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-7","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# iris veri setini yükleyelim ve yapısını inceleyelim\ndata(iris)\nstr(iris)\n\n# setosa ve versicolor türlerinin taç yaprak boyları\nsetosa_petal <- iris[iris$Species == \"setosa\", \"Petal.Length\"]\nversicolor_petal <- iris[iris$Species == \"versicolor\", \"Petal.Length\"]\n\n# Özet istatistikler\ncat(\"Setosa Taç Yaprak Boyu:\\n\")\nsummary(setosa_petal)\ncat(\"Standart Sapma:\", sd(setosa_petal), \"\\n\\n\")\n\ncat(\"Versicolor Taç Yaprak Boyu:\\n\")\nsummary(versicolor_petal)\ncat(\"Standart Sapma:\", sd(versicolor_petal), \"\\n\\n\")\n\n# Bağımsız iki örneklem t-testi\ntest_sonuc <- t.test(setosa_petal, versicolor_petal)\nprint(test_sonuc)","id":8,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-8","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# Kutu grafiği\nboxplot(setosa_petal, versicolor_petal, \n        names=c(\"Setosa\", \"Versicolor\"),\n        main=\"Iris Türlerine Göre Taç Yaprak Boyları\",\n        ylab=\"Taç Yaprak Boyu (cm)\")","id":9,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-9","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}}];
 
   </script>
   <script type="module">
@@ -1186,60 +1186,380 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Ders5: Başlık</h1>
-  <p class="subtitle">MBG1032 - Doç.Dr.Alper YILMAZ - <em>27 Mart 2024</em></p>
+  <h1 class="title">Ders 5: t-Testi ve Örneklerle Uygulamaları</h1>
+  <p class="subtitle">MBG1032 - Doç.Dr. Alper YILMAZ</p>
 
 <div class="quarto-title-authors">
 </div>
 
 </section>
-<section id="slide1" class="slide level2">
-<h2>slide1</h2>
-
-<img data-src="attachments/image-20240327044301243.png" class="r-stretch"><p>t-dağılımı (düz çizgi) ve normal dağılım karşılaştırması</p>
+<section id="özet" class="slide level2">
+<h2>Özet</h2>
+<ul>
+<li>t-testi nedir ve ne zaman kullanılır?</li>
+<li>t-dağılımı ve normal dağılım arasındaki fark</li>
+<li>t-testi türleri (tek örneklem, bağımsız örneklemler, eşleştirilmiş örneklemler)</li>
+<li>t-testi varsayımları</li>
+<li>R ile t-testi uygulamaları</li>
+<li>t-testi sonuçlarının yorumlanması ve raporlanması</li>
+<li>Biyolojide t-testi uygulamaları</li>
+</ul>
 </section>
-<section id="slide2" class="slide level2">
-<h2>slide2</h2>
-
-<img data-src="attachments/image-20240327044422037.png" class="r-stretch quarto-figure-center"><p class="caption">image-20240327044422037</p><p>df (serbestlik derecesi ) arttıkça, t-dağılımı normal dağılıma yaklaşmaktadır</p>
+<section id="t-testi-nedir" class="slide level2">
+<h2>t-testi Nedir?</h2>
+<p>t-testi, iki grup ortalaması arasındaki farkın istatistiksel anlamlılığını değerlendirmek için kullanılan yaygın bir parametrik testtir.</p>
+<p><strong>Kullanım Amacı:</strong> * Popülasyon standart sapması bilinmediğinde ortalamaları karşılaştırmak * Küçük örneklem boyutlarında (n &lt; 30) bile kullanılabilir * Deneysel verilerin istatistiksel analizinde sıklıkla kullanılır</p>
+<p><strong>Temel Fikir:</strong> Gözlemlenen farkın, rastgele şans eseri ortaya çıkıp çıkmadığını değerlendirmek.</p>
 </section>
-<section id="slide3" class="slide level2">
-<h2>slide3</h2>
-
-<img data-src="attachments/image-20240327044528724.png" class="r-stretch quarto-figure-center"><p class="caption">image-20240327044528724</p><p>t-tablosu</p>
+<section id="normal-dağılım-vs.-t-dağılımı" class="slide level2">
+<h2>Normal Dağılım vs.&nbsp;t-Dağılımı</h2>
+<ul>
+<li><strong>Normal Dağılım (Z-dağılımı):</strong>
+<ul>
+<li>Popülasyon parametreleri (μ, σ) bilindiğinde kullanılır</li>
+<li>Simetrik, çan şeklindedir</li>
+<li>Standart normal dağılım: N(0,1)</li>
+</ul></li>
+<li><strong>t-Dağılımı:</strong>
+<ul>
+<li>Popülasyon standart sapması (σ) bilinmediğinde kullanılır</li>
+<li>Normal dağılıma benzer ancak “kuyrukları” daha kalındır</li>
+<li>Örneklem büyüklüğüne (serbestlik derecesine) bağlıdır</li>
+<li>n büyüdükçe normal dağılıma yakınsar</li>
+</ul></li>
+</ul>
 </section>
-<section id="slide4" class="slide level2">
-<h2>slide4</h2>
-<p><img data-src="attachments/image-20240327044915179.png"></p>
-<p>df=18 için, -2.10 altında kalan alan boyanmıştır. t-dağılımının ne kadarı -2.10 altında kalır?</p>
-<p><img data-src="images/image-20240327045201834.png"></p>
-<p>df=20 iken, t-dağılımının ne kadarı -1.60’tan küçük ve 1.60’tan büyüktür?</p>
+<section id="t-dağılımı-ve-serbestlik-derecesi" class="slide level2">
+<h2>t-Dağılımı ve Serbestlik Derecesi</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Student_t_pdf.svg/650px-Student_t_pdf.svg.png" class="quarto-figure quarto-figure-center" height="350"></p>
+</figure>
+</div>
+<p><strong>Serbestlik Derecesi (SD = n-1):</strong> Veriler üzerinde yapılabilen bağımsız karşılaştırmaların sayısı.</p>
+<div class="footer">
+<p>Görsel Kaynak: <a href="https://commons.wikimedia.org/wiki/File:Student_t_pdf.svg">Wikimedia Commons</a></p>
+</div>
+</section>
+<section id="t-testi-çeşitleri" class="slide level2 scrollable">
+<h2>t-testi Çeşitleri</h2>
+<ol type="1">
+<li><strong>Tek Örneklem t-testi:</strong>
+<ul>
+<li>Bir örneklem ortalamasının bilinen bir değerle karşılaştırılması</li>
+<li>Örnek: “İlaç verilen hastaların ortalama kan şekeri 100 mg/dL’den farklı mı?”</li>
+</ul></li>
+<li><strong>Bağımsız Örneklemler t-testi (İki Örneklem t-testi):</strong>
+<ul>
+<li>İki bağımsız grubun ortalamalarının karşılaştırılması</li>
+<li>Örnek: “İlaç A ve İlaç B’nin ortalama etkinliği arasında fark var mı?”</li>
+</ul></li>
+<li><strong>Eşleştirilmiş Örneklemler t-testi (Bağımlı t-testi):</strong>
+<ul>
+<li>Aynı örneklemdeki farklı koşulların karşılaştırılması</li>
+<li>Örnek: “Hastaların tedavi öncesi ve sonrası değerleri arasında fark var mı?”</li>
+</ul></li>
+</ol>
+</section>
+<section id="section" class="slide level2">
+<h2></h2>
+
+<img data-src="https://datatab.net/assets/tutorial/t-test/t-Test.png" class="r-stretch"><div class="footer">
+<p>Kaynak: <a href="https://datatab.net/tutorial/t-test">t-Test DATAtab</a></p>
+</div>
+</section>
+<section id="section-1" class="slide level2">
+<h2></h2>
+
+<img data-src="https://datatab.net/assets/tutorial/t-test/Types_of_t-test.png" class="r-stretch"><div class="footer">
+<p>Kaynak: <a href="https://datatab.net/tutorial/t-test">t-Test DATAtab</a></p>
+</div>
+</section>
+<section id="t-testi-formülleri" class="slide level2">
+<h2>t-testi Formülleri</h2>
+<p><strong>1. Tek Örneklem t-testi:</strong> <span class="math display">\[ t = \frac{\bar{x} - \mu_0}{s/\sqrt{n}} \]</span></p>
+<p><strong>2. Bağımsız Örneklemler t-testi:</strong> <span class="math display">\[ t = \frac{\bar{x}_1 - \bar{x}_2}{\sqrt{\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}}} \]</span></p>
+<p><strong>3. Eşleştirilmiş Örneklemler t-testi:</strong> <span class="math display">\[ t = \frac{\bar{d}}{s_d/\sqrt{n}} \]</span></p>
+</section>
+<section id="formüller" class="slide level2">
+<h2>Formüller</h2>
+<p>Burada:</p>
+<ul>
+<li><span class="math inline">\(\bar{x}\)</span>: Örneklem ortalaması</li>
+<li><span class="math inline">\(\mu_0\)</span>: Test edilen popülasyon değeri</li>
+<li><span class="math inline">\(s\)</span>: Örneklem standart sapması</li>
+<li><span class="math inline">\(n\)</span>: Örneklem büyüklüğü</li>
+<li><span class="math inline">\(\bar{d}\)</span>: Eşleştirilmiş farklılıkların ortalaması</li>
+<li><span class="math inline">\(s_d\)</span>: Eşleştirilmiş farklılıkların standart sapması</li>
+</ul>
+</section>
+<section id="t-testi-varsayımları" class="slide level2 scrollable">
+<h2>t-testi Varsayımları</h2>
+<p>t-testi parametrik bir testtir ve bazı varsayımlar üzerine kuruludur:</p>
+<ol type="1">
+<li><p><strong>Normallik:</strong> Verilerin normal dağılıma sahip olması veya örneklem boyutunun yeterince büyük olması (n&gt;30)</p></li>
+<li><p><strong>Varyansların homojenliği:</strong> Bağımsız örneklemler t-testinde, grupların varyanslarının benzer olması</p></li>
+<li><p><strong>Bağımsızlık:</strong> Gözlemlerin birbirinden bağımsız olması</p></li>
+<li><p><strong>Ölçüm düzeyi:</strong> Verilerin aralıklı veya oransal ölçek düzeyinde olması</p></li>
+</ol>
+<p><em>Not: Eğer varsayımlar karşılanmazsa, parametrik olmayan alternatifler düşünülmelidir (ör. Mann-Whitney U testi, Wilcoxon işaretli sıra testi).</em></p>
+</section>
+<section id="t-testi-varsayımları-bağımsızlık" class="slide level2">
+<h2>t-testi Varsayımları (Bağımsızlık)</h2>
+<p>Bu varsayım, t-testi için toplanan verilerdeki bir ölçümün, diğer ölçümleri etkilememesi gerektiği anlamına gelir. Yani bir deney katılımcısının veya örneğin verdiği sonuç, diğer katılımcıların veya örneklerin sonuçlarını etkilememelidir.</p>
+<ul>
+<li>Bağımsız gözlemlere örnekler
+<ul>
+<li>Farklı farelerden alınan kan örnekleri (her fare bağımsız bir birey)</li>
+<li>Farklı petri kaplarında yetiştirilen bakteri kolonileri</li>
+<li>Farklı hastalardan alınan doku örnekleri</li>
+<li>Rastgele seçilen 20 ağaçtan ölçülen yaprak büyüklükleri</li>
+</ul></li>
+<li>Bağımsız OLMAYAN gözlemlere örnekler
+<ul>
+<li>Aynı fareden günlük olarak alınan ardışık kan örnekleri (bir gündeki ölçüm, diğer günü etkileyebilir)</li>
+<li>Aynı bakterinin farklı zamanlardaki üreme hızları</li>
+<li>Aynı aileden alınan genetik örnekler (genetik yakınlık nedeniyle bağımsız değil)</li>
+<li>Yan yana büyüyen bitkilerden alınan ölçümler (birbirlerinin büyümesini etkileyebilirler)</li>
+</ul></li>
+</ul>
+</section>
+<section id="tek-yönlü-ve-çift-yönlü-t-testi" class="slide level2">
+<h2>Tek Yönlü ve Çift Yönlü t-testi</h2>
+<p>Her t-testi, alternatif hipotezin yapısına göre tek yönlü veya çift yönlü olabilir:</p>
+<p><strong>Çift Yönlü t-testi (Two-sided):</strong></p>
+<ul>
+<li>Alternatif hipotez: “eşit değildir” (<span class="math inline">\(\neq\)</span>)</li>
+<li>Örnek: <span class="math inline">\(H_1: \mu \neq \mu_0\)</span> veya <span class="math inline">\(H_1: \mu_1 \neq \mu_2\)</span></li>
+<li>İlgilendiğimiz şey farkın yönü değil, sadece bir fark olup olmadığıdır</li>
+<li>R’da varsayılan seçenek: <code>alternative = "two.sided"</code></li>
+</ul>
+<p><strong>Tek Yönlü t-testi (One-sided):</strong></p>
+<ul>
+<li>Alternatif hipotez: “küçüktür” (&lt;) ya da “büyüktür” (&gt;)</li>
+<li>Örnekler:
+<ul>
+<li><span class="math inline">\(H_1: \mu &lt; \mu_0\)</span> (<code>alternative = "less"</code>)</li>
+<li><span class="math inline">\(H_1: \mu &gt; \mu_0\)</span> (<code>alternative = "greater"</code>)</li>
+</ul></li>
+<li>İlgilendiğimiz durum farkın belirli bir yönde olup olmadığıdır</li>
+<li>Tek yönlü testler, belirli bir yönde fark beklediğimizde daha güçlüdür</li>
+</ul>
+<p><strong>Önemli Not:</strong> Tek yönlü test kullanmak için, hipotez kurulmadan önce farkın yönüne dair güçlü bir teorik gerekçe olmalıdır. Veriler incelendikten sonra tek yönlü test seçmek, tip I hata olasılığını artırır.</p>
+</section>
+<section id="tek-örneklem-t-testi" class="slide level2">
+<h2>Tek Örneklem t-testi</h2>
+<p>Bir örneklemin ortalamasını, bilinen veya hipotez edilen bir popülasyon değeriyle karşılaştırır.</p>
+<p><strong>Örnek Senaryo:</strong> Yeni geliştirilen bir bitkisel ilacın, farelerde ortalama kan glikoz seviyesini referans değer olan 100 mg/dL’den farklı bir seviyeye değiştirip değiştirmediğini test etmek istiyoruz.</p>
+<ul>
+<li><span class="math inline">\(H_0: \mu = 100\)</span> mg/dL (İlaç, kan glikoz seviyesini değiştirmez)</li>
+<li><span class="math inline">\(H_1: \mu \neq 100\)</span> mg/dL (İlaç, kan glikoz seviyesini değiştirir)</li>
+</ul>
+</section>
+<section id="r-ile-tek-örneklem-t-testi" class="slide level2">
+<h2>R ile Tek Örneklem t-testi</h2>
+<p>İlacın test edildiği 15 farenin kan glikoz seviyelerini analiz edelim:</p>
 <div id="qwebr-insertion-location-1"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 </section>
-<section id="slide5" class="slide level2">
-<h2>slide5</h2>
-<p>çift yönlü 100(1-<span class="math inline">\(\alpha\)</span>)% güven aralığı için formül:</p>
-<p><img data-src="images/image-20240327050401224.png"></p>
-<p>SE = s / <span class="math inline">\(\sqrt{n}\)</span></p>
-<p>Tek yönlü olması durumunda</p>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/image-20240327051040495.png"></p>
-<figcaption>image-20240327051040495</figcaption>
-</figure>
-</div>
-</section>
-<section id="slide6" class="slide level2">
-<h2>slide6</h2>
-<p>Yunuslarda civa miktarı üzerine yapılan çalışmada, Japonya’nın Taiji bölgesinden rastgele seçilen 19 adet yunusta civa miktarına dair bilgiler şu şekildedir.</p>
-
-<img data-src="images/image-20240327051515589.png" class="r-stretch"><p>Ortalama civa miktarı için %95 güven aralığını hesaplayınız.</p>
+<section id="sonucun-yorumlanması" class="slide level2">
+<h2>Sonucun Yorumlanması</h2>
 <div id="qwebr-insertion-location-2"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<p><strong>Yorum:</strong> p-değeri 0.05’ten küçük olduğu için H0 hipotezini reddediyoruz. Bitkisel ilacın, farelerin kan glikoz seviyelerini, referans değer olan 100 mg/dL’den anlamlı şekilde düşürdüğünü söyleyebiliriz (t(14) = -11.94, p &lt; 0.001).</p>
 </section>
-<section id="slide7" class="slide level2">
-<h2>slide7</h2>
+<section id="bağımsız-iki-örneklem-t-testi" class="slide level2">
+<h2>Bağımsız İki Örneklem t-Testi</h2>
+<p>İki farklı, bağımsız grubun ortalamalarını karşılaştırmak için kullanılır.</p>
+<p><strong>Örnek Senaryo:</strong> İki farklı gübre türünün (A ve B) domates bitkilerinin boyları üzerindeki etkisini karşılaştırmak istiyoruz.</p>
+<ul>
+<li><span class="math inline">\(H_0: \mu_A = \mu_B\)</span> (İki gübre arasında fark yok)</li>
+<li><span class="math inline">\(H_1: \mu_A \neq \mu_B\)</span> (İki gübre arasında fark var)</li>
+</ul>
+</section>
+<section id="r-ile-bağımsız-iki-örneklem-t-testi" class="slide level2">
+<h2>R ile Bağımsız İki Örneklem t-Testi</h2>
+<div id="qwebr-insertion-location-3"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+</section>
+<section id="section-2" class="slide level2">
+<h2></h2>
+<div id="qwebr-insertion-location-4"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+</section>
+<section id="görselleştirme-ve-yorum" class="slide level2">
+<h2>Görselleştirme ve Yorum</h2>
+<div id="qwebr-insertion-location-5"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<p><strong>Yorum:</strong> p-değeri 0.05’ten küçük olduğundan H0 hipotezini reddediyoruz. Gübre B’nin, domates bitkilerinin boyunu, Gübre A’ya göre istatistiksel olarak anlamlı şekilde daha fazla artırdığını söyleyebiliriz (t(18) = -5.14, p &lt; 0.001).</p>
+</section>
+<section id="eşleştirilmiş-örneklemler-t-testi" class="slide level2">
+<h2>Eşleştirilmiş Örneklemler t-Testi</h2>
+<p>Aynı deneklerin/örneklerin iki farklı durumda ölçülen değerlerini karşılaştırmak için kullanılır.</p>
+<p><strong>Örnek Senaryo:</strong> 10 hastanın, belirli bir ilaç tedavisinden önce ve sonra kolesterol seviyelerini karşılaştırmak istiyoruz.</p>
+<ul>
+<li><span class="math inline">\(H_0: \mu_d = 0\)</span> (Tedavi öncesi ve sonrası arasında fark yok)</li>
+<li><span class="math inline">\(H_1: \mu_d \neq 0\)</span> (Tedavi öncesi ve sonrası arasında fark var)</li>
+</ul>
+<p>Burada <span class="math inline">\(\mu_d\)</span>, tedavi öncesi ve sonrası değerler arasındaki farkların ortalamasıdır.</p>
+</section>
+<section id="r-ile-eşleştirilmiş-örneklemler-t-testi" class="slide level2">
+<h2>R ile Eşleştirilmiş Örneklemler t-Testi</h2>
+<div id="qwebr-insertion-location-6"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+</section>
+<section id="görselleştirme-ve-yorum-1" class="slide level2">
+<h2>Görselleştirme ve Yorum</h2>
+<div id="qwebr-insertion-location-7"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<p><strong>Yorum:</strong> p-değeri 0.05’ten küçük olduğundan H0 hipotezini reddediyoruz. İlaç tedavisinin, hastaların kolesterol seviyelerini istatistiksel olarak anlamlı şekilde düşürdüğünü söyleyebiliriz (t(9) = 14.41, p &lt; 0.001). Ortalama düşüş 19.2 mg/dL’dir.</p>
+</section>
+<section id="t-testi-sonuçlarının-raporlanması" class="slide level2">
+<h2>t-Testi Sonuçlarının Raporlanması</h2>
+<p><strong>Akademik yayınlarda t-testi sonuçlarını nasıl raporlamalıyız?</strong></p>
+<p><strong>1. Tek Örneklem t-Testi:</strong> <em>“Bitkisel ilacın farelerin kan glikoz seviyelerine etkisi, tek örneklem t-testi ile değerlendirilmiştir. Farelerin ortalama kan glikoz seviyesi (M = 92.1, SD = 2.6) referans değerden (100 mg/dL) anlamlı şekilde düşüktür, t(14) = -11.94, p &lt; 0.001.”</em></p>
+<p><strong>2. Bağımsız İki Örneklem t-Testi:</strong> <em>“Gübre B ile yetiştirilen domates bitkilerinin boyları (M = 78.3 cm, SD = 3.4), Gübre A ile yetiştirilen bitkilerden (M = 71.5 cm, SD = 3.7) anlamlı şekilde daha yüksektir, t(18) = -5.14, p &lt; 0.001.”</em></p>
+<p><strong>3. Eşleştirilmiş Örneklemler t-Testi:</strong> <em>“İlaç tedavisi sonrası hastaların kolesterol seviyeleri (M = 230.8 mg/dL, SD = 11.0), tedavi öncesine (M = 250.0 mg/dL, SD = 7.6) göre anlamlı şekilde daha düşüktür, t(9) = 14.41, p &lt; 0.001. Ortalama azalma 19.2 mg/dL’dir (%95 GA [16.2, 22.2]).”</em></p>
+</section>
+<section id="biyolojide-t-testi-uygulamaları" class="slide level2">
+<h2>Biyolojide t-Testi Uygulamaları</h2>
+<ul>
+<li><strong>Gen ekspresyonu:</strong> İki farklı koşulda gen ekspresyon seviyelerini karşılaştırma</li>
+<li><strong>İlaç etkinliği:</strong> Tedavi grubunun kontrol grubuyla karşılaştırılması</li>
+<li><strong>Büyüme çalışmaları:</strong> Farklı besin ortamlarında bakterilerin büyüme hızlarının karşılaştırılması</li>
+<li><strong>Enzim aktivitesi:</strong> Farklı pH değerlerinde enzim aktivitelerinin karşılaştırılması</li>
+<li><strong>Biyobelirteç seviyeleri:</strong> Hasta ve sağlıklı gruplar arasındaki biyobelirteç seviyelerinin karşılaştırılması</li>
+</ul>
+<p><strong>Örnek:</strong> “miR-21 ekspresyon seviyesi, kanser hastalarında (M = 4.2, SD = 1.1) sağlıklı kontrollere (M = 1.8, SD = 0.7) göre anlamlı şekilde daha yüksekti, t(58) = 10.73, p &lt; 0.001, ortalama fark = 2.4 kat (%95 GA [2.0, 2.8]).”</p>
+</section>
+<section id="gerçek-veri-üzerinde-uygulama-iris-veri-seti" class="slide level2">
+<h2>Gerçek Veri Üzerinde Uygulama: iris Veri Seti</h2>
+<p>Şimdi, <code>iris</code> veri setinde farklı türlerdeki çiçeklerin taç yaprak (petal) boylarını karşılaştıralım.</p>
+<div id="qwebr-insertion-location-8"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+</section>
+<section id="görselleştirme-ve-yorum-2" class="slide level2">
+<h2>Görselleştirme ve Yorum</h2>
+<div id="qwebr-insertion-location-9"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<p><strong>Yorum:</strong> İki Iris türü arasındaki taç yaprak boyu farkı istatistiksel olarak anlamlıdır, t(86.7) = -39.5, p &lt; 0.001. Versicolor türünün taç yaprakları (M = 4.26 cm, SD = 0.47), setosa türünün taç yapraklarından (M = 1.46 cm, SD = 0.17) ortalama 2.8 cm daha uzundur (%95 GA [2.66, 2.94]).</p>
+</section>
+<section id="t-testi-için-pratik-ipuçları" class="slide level2 scrollable">
+<h2>t-Testi için Pratik İpuçları</h2>
+<ol type="1">
+<li><strong>Veri Hazırlığı:</strong>
+<ul>
+<li>Aykırı değerleri belirleyin ve nasıl ele alacağınıza karar verin</li>
+<li>Verilerin normal dağılıma uygunluğunu kontrol edin (histogram, Q-Q plot, Shapiro-Wilk testi)</li>
+</ul></li>
+<li><strong>Test Seçimi:</strong>
+<ul>
+<li>Doğru t-testi türünü seçin (tek örneklem, bağımsız, eşleştirilmiş)</li>
+<li>Varsayımlar karşılanmıyorsa, parametrik olmayan alternatifleri düşünün</li>
+</ul></li>
+<li><strong>Sonuçların Yorumlanması:</strong>
+<ul>
+<li>Sadece p-değerine değil, etki büyüklüğüne de bakın (Cohen’s d)</li>
+<li>Güven aralıklarını rapor edin</li>
+<li>Bulgularınızı biyolojik bağlamda yorumlayın</li>
+</ul></li>
+</ol>
+</section>
+<section id="t-testi-ile-ilgili-yaygın-yanılgılar" class="slide level2 scrollable">
+<h2>t-Testi ile İlgili Yaygın Yanılgılar</h2>
+<ol type="1">
+<li><strong>“p &gt; 0.05 ise, iki grup arasında fark yoktur”</strong>
+<ul>
+<li>Doğrusu: H0’ı reddedemeyiz, ancak bu “fark yoktur” anlamına gelmez</li>
+</ul></li>
+<li><strong>“p &lt; 0.05 ise, sonuç pratik olarak önemlidir”</strong>
+<ul>
+<li>Doğrusu: İstatistiksel anlamlılık, pratik önemi garanti etmez</li>
+</ul></li>
+<li><strong>“t-testi, her tür veri için uygundur”</strong>
+<ul>
+<li>Doğrusu: t-testi, varsayımları karşılayan verilerde kullanılmalıdır</li>
+</ul></li>
+<li><strong>“Örneklem büyüklüğü arttıkça, sonuçlar daha doğru olur”</strong>
+<ul>
+<li>Doğrusu: Büyük örneklemler küçük farkları bile anlamlı gösterebilir</li>
+</ul></li>
+</ol>
+</section>
+<section id="rda-t-testi-kullanımı-özet" class="slide level2">
+<h2>R’da t-Testi Kullanımı (Özet)</h2>
+<pre><code># 1. Tek Örneklem t-Testi
+# a. Çift yönlü test (varsayılan)
+t.test(x, mu = 0)
+# b. Tek yönlü test (küçüktür)
+t.test(x, mu = 0, alternative = "less")
+# c. Tek yönlü test (büyüktür)
+t.test(x, mu = 0, alternative = "greater")</code></pre>
+</section>
+<section id="rda-t-testi-kullanımı-özet-1" class="slide level2">
+<h2>R’da t-Testi Kullanımı (Özet)</h2>
+<pre><code># 2. Bağımsız İki Örneklem t-Testi
+# a. Varyansların eşit olduğu varsayımıyla
+t.test(x, y, var.equal = TRUE)
+# b. Varyansların eşit olmadığı varsayımıyla (Welch t-testi, var
+sayılan)
+t.test(x, y)
+# c. Tek yönlü test ile (örneğin x'in y'den büyük olup olmadığın
+ı test etmek için)
+t.test(x, y, alternative = "greater")</code></pre>
+</section>
+<section id="rda-t-testi-kullanımı-özet-2" class="slide level2">
+<h2>R’da t-Testi Kullanımı (Özet)</h2>
+<pre><code># 3. Eşleştirilmiş Örneklemler t-Testi
+t.test(x, y, paired = TRUE)
+# Tek yönlü seçeneği ile
+t.test(x, y, paired = TRUE, alternative = "greater")</code></pre>
+</section>
+<section id="rda-t-testi-kullanımı-özet-3" class="slide level2">
+<h2>R’da t-Testi Kullanımı (Özet)</h2>
+<pre><code># 4. Formül kullanımı (veritabanları ile çalışırken)
+t.test(value ~ group, data = mydata)
+t.test(value ~ group, data = mydata, paired = TRUE)
+t.test(value ~ group, data = mydata, alternative = "less")</code></pre>
+</section>
+<section id="farklı-t-test-türleri-için-varsayımlar-ve-r-kod-örnekleri" class="slide level2">
+<h2>Farklı t-Test Türleri için Varsayımlar ve R Kod Örnekleri</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 34%">
+<col style="width: 46%">
+<col style="width: 19%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>t-Testi Türü</th>
+<th>Temel Varsayımlar</th>
+<th>R Kodu</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Tek Örneklem</td>
+<td>- Verilerin normal dağılması veya n&gt;30<br>- Bağımsız gözlemler</td>
+<td><code>t.test(x, mu = 0)</code></td>
+</tr>
+<tr class="even">
+<td>Bağımsız İki Örneklem<br>(eşit varyans)</td>
+<td>- İki grupta da normal dağılım<br>- Varyansların homojenliği<br>- Bağımsız gözlemler</td>
+<td><code>t.test(x, y, var.equal = TRUE)</code></td>
+</tr>
+<tr class="odd">
+<td>Bağımsız İki Örneklem<br>(Welch/eşit olmayan varyans)</td>
+<td>- İki grupta da normal dağılım<br>- Varyanslar farklı olabilir<br>- Bağımsız gözlemler</td>
+<td><code>t.test(x, y)</code></td>
+</tr>
+<tr class="even">
+<td>Eşleştirilmiş Örneklemler</td>
+<td>- Farkların normal dağılması<br>- Eşleştirilmiş gözlemler</td>
+<td><code>t.test(x, y, paired = TRUE)</code></td>
+</tr>
+</tbody>
+</table>
 
 
 </section>
@@ -1460,6 +1780,44 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
         ]
       });
     </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {
