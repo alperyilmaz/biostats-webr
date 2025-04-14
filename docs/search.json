@@ -844,7 +844,7 @@
     "href": "ders05.html#t-testi-nedir",
     "title": "Ders 5: t-Testi ve Örneklerle Uygulamaları",
     "section": "t-testi Nedir?",
-    "text": "t-testi Nedir?\nt-testi, iki grup ortalaması arasındaki farkın istatistiksel anlamlılığını değerlendirmek için kullanılan yaygın bir parametrik testtir.\nKullanım Amacı: * Popülasyon standart sapması bilinmediğinde ortalamaları karşılaştırmak * Küçük örneklem boyutlarında (n &lt; 30) bile kullanılabilir * Deneysel verilerin istatistiksel analizinde sıklıkla kullanılır\nTemel Fikir: Gözlemlenen farkın, rastgele şans eseri ortaya çıkıp çıkmadığını değerlendirmek."
+    "text": "t-testi Nedir?\nt-testi, iki grup ortalaması arasındaki farkın istatistiksel anlamlılığını değerlendirmek için kullanılan yaygın bir parametrik testtir.\nKullanım Amacı:\n\nPopülasyon standart sapması bilinmediğinde ortalamaları karşılaştırmak\nKüçük örneklem boyutlarında (n &lt; 30) bile kullanılabilir\nDeneysel verilerin istatistiksel analizinde sıklıkla kullanılır\n\nTemel Fikir:\nGözlemlenen farkın, rastgele şans eseri ortaya çıkıp çıkmadığını değerlendirmek."
   },
   {
     "objectID": "ders05.html#normal-dağılım-vs.-t-dağılımı",
@@ -1027,6 +1027,13 @@
     "title": "Ders 5: t-Testi ve Örneklerle Uygulamaları",
     "section": "t-Testi ile İlgili Yaygın Yanılgılar",
     "text": "t-Testi ile İlgili Yaygın Yanılgılar\n\n“p &gt; 0.05 ise, iki grup arasında fark yoktur”\n\nDoğrusu: H0’ı reddedemeyiz, ancak bu “fark yoktur” anlamına gelmez\n\n“p &lt; 0.05 ise, sonuç pratik olarak önemlidir”\n\nDoğrusu: İstatistiksel anlamlılık, pratik önemi garanti etmez\n\n“t-testi, her tür veri için uygundur”\n\nDoğrusu: t-testi, varsayımları karşılayan verilerde kullanılmalıdır\n\n“Örneklem büyüklüğü arttıkça, sonuçlar daha doğru olur”\n\nDoğrusu: Büyük örneklemler küçük farkları bile anlamlı gösterebilir"
+  },
+  {
+    "objectID": "ders05.html#yanılgı-4",
+    "href": "ders05.html#yanılgı-4",
+    "title": "Ders 5: t-Testi ve Örneklerle Uygulamaları",
+    "section": "Yanılgı 4",
+    "text": "Yanılgı 4\nBu yanılgıyla ilgili doğru açıklama: “Büyük örneklemler küçük farkları bile anlamlı gösterebilir” şeklindedir. İstatistiksel açıdan bakıldığında, örneklem büyüklüğü arttıkça istatistiksel testlerin gücü (power) artar. Yani, gerçekten var olan bir etkiyi tespit etme olasılığımız yükselir. Bu doğrudur ve istatistiğin temel ilkelerinden biridir. Ancak buradaki yanılgı şudur:\n\nİstatistiksel anlamlılık ≠ Pratik anlamlılık: Örneklem büyüklüğü arttıkça, çok küçük ve pratikte önemsiz farklar bile istatistiksel olarak anlamlı çıkabilir. Örneğin:\n\n10 fare ile yapılan bir deneyde 5 mg/dL’lik bir kan şekeri farkı istatistiksel olarak anlamlı çıkmayabilir.\n1000 fare ile aynı deneyi yaptığınızda 1 mg/dL’lik bir fark bile istatistiksel olarak anlamlı çıkabilir. Ancak 1 mg/dL’lik fark biyolojik olarak anlamlı mıdır? Bu kadar küçük bir fark gerçekten önemli midir?\n\nYanlılık (bias) sorunu: Örneklem büyüklüğü, sistematik hatayı (bias) azaltmaz. Eğer örneklem seçiminizde bir yanlılık varsa, örneklem büyüklüğünü artırmak bu sorunu çözmez, hatta daha da belirginleştirebilir."
   },
   {
     "objectID": "ders05.html#rda-t-testi-kullanımı-özet",

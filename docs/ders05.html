@@ -1208,8 +1208,14 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
 <section id="t-testi-nedir" class="slide level2">
 <h2>t-testi Nedir?</h2>
 <p>t-testi, iki grup ortalaması arasındaki farkın istatistiksel anlamlılığını değerlendirmek için kullanılan yaygın bir parametrik testtir.</p>
-<p><strong>Kullanım Amacı:</strong> * Popülasyon standart sapması bilinmediğinde ortalamaları karşılaştırmak * Küçük örneklem boyutlarında (n &lt; 30) bile kullanılabilir * Deneysel verilerin istatistiksel analizinde sıklıkla kullanılır</p>
-<p><strong>Temel Fikir:</strong> Gözlemlenen farkın, rastgele şans eseri ortaya çıkıp çıkmadığını değerlendirmek.</p>
+<p><strong>Kullanım Amacı:</strong></p>
+<ul>
+<li>Popülasyon standart sapması bilinmediğinde ortalamaları karşılaştırmak</li>
+<li>Küçük örneklem boyutlarında (n &lt; 30) bile kullanılabilir</li>
+<li>Deneysel verilerin istatistiksel analizinde sıklıkla kullanılır</li>
+</ul>
+<p><strong>Temel Fikir:</strong></p>
+<p>Gözlemlenen farkın, rastgele şans eseri ortaya çıkıp çıkmadığını değerlendirmek.</p>
 </section>
 <section id="normal-dağılım-vs.-t-dağılımı" class="slide level2">
 <h2>Normal Dağılım vs.&nbsp;t-Dağılımı</h2>
@@ -1485,6 +1491,18 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
 <li>Doğrusu: Büyük örneklemler küçük farkları bile anlamlı gösterebilir</li>
 </ul></li>
 </ol>
+</section>
+<section id="yanılgı-4" class="slide level2">
+<h2>Yanılgı 4</h2>
+<p>Bu yanılgıyla ilgili doğru açıklama: “Büyük örneklemler küçük farkları bile anlamlı gösterebilir” şeklindedir. İstatistiksel açıdan bakıldığında, örneklem büyüklüğü arttıkça istatistiksel testlerin gücü (power) artar. Yani, gerçekten var olan bir etkiyi tespit etme olasılığımız yükselir. Bu doğrudur ve istatistiğin temel ilkelerinden biridir. Ancak buradaki yanılgı şudur:</p>
+<ul>
+<li><strong>İstatistiksel anlamlılık ≠ Pratik anlamlılık</strong>: Örneklem büyüklüğü arttıkça, çok küçük ve pratikte önemsiz farklar bile istatistiksel olarak anlamlı çıkabilir. Örneğin:
+<ul>
+<li>10 fare ile yapılan bir deneyde 5 mg/dL’lik bir kan şekeri farkı istatistiksel olarak anlamlı çıkmayabilir.</li>
+<li>1000 fare ile aynı deneyi yaptığınızda 1 mg/dL’lik bir fark bile istatistiksel olarak anlamlı çıkabilir. Ancak 1 mg/dL’lik fark biyolojik olarak anlamlı mıdır? Bu kadar küçük bir fark gerçekten önemli midir?</li>
+</ul></li>
+<li><strong>Yanlılık (bias) sorunu</strong>: Örneklem büyüklüğü, sistematik hatayı (bias) azaltmaz. Eğer örneklem seçiminizde bir yanlılık varsa, örneklem büyüklüğünü artırmak bu sorunu çözmez, hatta daha da belirginleştirebilir.</li>
+</ul>
 </section>
 <section id="rda-t-testi-kullanımı-özet" class="slide level2">
 <h2>R’da t-Testi Kullanımı (Özet)</h2>

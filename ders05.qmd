@@ -29,11 +29,13 @@ engine: knitr
 t-testi, iki grup ortalaması arasındaki farkın istatistiksel anlamlılığını değerlendirmek için kullanılan yaygın bir parametrik testtir.
 
 **Kullanım Amacı:**
+
 * Popülasyon standart sapması bilinmediğinde ortalamaları karşılaştırmak
 * Küçük örneklem boyutlarında (n < 30) bile kullanılabilir
 * Deneysel verilerin istatistiksel analizinde sıklıkla kullanılır
 
 **Temel Fikir:**
+
 Gözlemlenen farkın, rastgele şans eseri ortaya çıkıp çıkmadığını değerlendirmek.
 
 ## Normal Dağılım vs. t-Dağılımı
@@ -385,6 +387,16 @@ boxplot(setosa_petal, versicolor_petal,
 
 4. **"Örneklem büyüklüğü arttıkça, sonuçlar daha doğru olur"**
    * Doğrusu: Büyük örneklemler küçük farkları bile anlamlı gösterebilir
+
+## Yanılgı 4
+
+Bu yanılgıyla ilgili doğru açıklama: "Büyük örneklemler küçük farkları bile anlamlı gösterebilir" şeklindedir. İstatistiksel açıdan bakıldığında, örneklem büyüklüğü arttıkça istatistiksel testlerin gücü (power) artar. Yani, gerçekten var olan bir etkiyi tespit etme olasılığımız yükselir. Bu doğrudur ve istatistiğin temel ilkelerinden biridir.
+Ancak buradaki yanılgı şudur:
+
+- **İstatistiksel anlamlılık ≠ Pratik anlamlılık**: Örneklem büyüklüğü arttıkça, çok küçük ve pratikte önemsiz farklar bile istatistiksel olarak anlamlı çıkabilir. Örneğin:
+  - 10 fare ile yapılan bir deneyde 5 mg/dL'lik bir kan şekeri farkı istatistiksel olarak anlamlı çıkmayabilir.
+  - 1000 fare ile aynı deneyi yaptığınızda 1 mg/dL'lik bir fark bile istatistiksel olarak anlamlı çıkabilir. Ancak 1 mg/dL'lik fark biyolojik olarak anlamlı mıdır? Bu kadar küçük bir fark gerçekten önemli midir?
+- **Yanlılık (bias) sorunu**: Örneklem büyüklüğü, sistematik hatayı (bias) azaltmaz. Eğer örneklem seçiminizde bir yanlılık varsa, örneklem büyüklüğünü artırmak bu sorunu çözmez, hatta daha da belirginleştirebilir.
 
 ## R'da t-Testi Kullanımı (Özet)
 
