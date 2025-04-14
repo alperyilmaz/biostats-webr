@@ -1,80 +1,441 @@
 ---
-title: "Ders5: Başlık"
-subtitle: "MBG1032 - Doç.Dr.Alper YILMAZ - *27 Mart 2024*"
+title: "Ders 5: t-Testi ve Örneklerle Uygulamaları"
+subtitle: "MBG1032 - Doç.Dr. Alper YILMAZ"
 format:
   revealjs:
     chalkboard: true
     css: custom.css
     smaller: true
     scrollable: true
-typora-copy-images-to: images
-#webr:
-#  packages: ['ggplot2'] # Install R packages on document open
-# autoload-packages: false       # Disable automatic loading of packages
-# show-startup-message: false    # Disable displaying status of webR initialization
+webr:
+  packages: ['ggplot2', 'dplyr'] # Install R packages on document open
 filters:
   - webr
+engine: knitr
 ---
 
-## slide1
+## Özet
 
-![](attachments/image-20240327044301243.png)
+* t-testi nedir ve ne zaman kullanılır?
+* t-dağılımı ve normal dağılım arasındaki fark
+* t-testi türleri (tek örneklem, bağımsız örneklemler, eşleştirilmiş örneklemler)
+* t-testi varsayımları
+* R ile t-testi uygulamaları
+* t-testi sonuçlarının yorumlanması ve raporlanması
+* Biyolojide t-testi uygulamaları
 
-t-dağılımı (düz çizgi) ve normal dağılım karşılaştırması
+## t-testi Nedir?
 
-## slide2
+t-testi, iki grup ortalaması arasındaki farkın istatistiksel anlamlılığını değerlendirmek için kullanılan yaygın bir parametrik testtir.
 
-![image-20240327044422037](attachments/image-20240327044422037.png)
+**Kullanım Amacı:**
+* Popülasyon standart sapması bilinmediğinde ortalamaları karşılaştırmak
+* Küçük örneklem boyutlarında (n < 30) bile kullanılabilir
+* Deneysel verilerin istatistiksel analizinde sıklıkla kullanılır
 
-df (serbestlik derecesi ) arttıkça, t-dağılımı normal dağılıma yaklaşmaktadır
+**Temel Fikir:**
+Gözlemlenen farkın, rastgele şans eseri ortaya çıkıp çıkmadığını değerlendirmek.
 
-## slide3
+## Normal Dağılım vs. t-Dağılımı
 
-![image-20240327044528724](attachments/image-20240327044528724.png)
+* **Normal Dağılım (Z-dağılımı):**
+  * Popülasyon parametreleri (μ, σ) bilindiğinde kullanılır
+  * Simetrik, çan şeklindedir
+  * Standart normal dağılım: N(0,1)
 
-t-tablosu
+* **t-Dağılımı:**
+  * Popülasyon standart sapması (σ) bilinmediğinde kullanılır
+  * Normal dağılıma benzer ancak "kuyrukları" daha kalındır
+  * Örneklem büyüklüğüne (serbestlik derecesine) bağlıdır
+  * n büyüdükçe normal dağılıma yakınsar
 
-## slide4
+## t-Dağılımı ve Serbestlik Derecesi
 
-![](attachments/image-20240327044915179.png)
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Student_t_pdf.svg/650px-Student_t_pdf.svg.png){fig-align="center" height="350px"}
 
-df=18 için, -2.10 altında kalan alan boyanmıştır. t-dağılımının ne kadarı -2.10 altında kalır?
+**Serbestlik Derecesi (SD = n-1):** Veriler üzerinde yapılabilen bağımsız karşılaştırmaların sayısı.
 
-![](images/image-20240327045201834.png)
+:::footer
+Görsel Kaynak: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Student_t_pdf.svg)
+:::
 
-df=20 iken, t-dağılımının ne kadarı -1.60'tan küçük ve 1.60'tan büyüktür?
+## t-testi Çeşitleri
+
+1. **Tek Örneklem t-testi:**
+   * Bir örneklem ortalamasının bilinen bir değerle karşılaştırılması
+   * Örnek: "İlaç verilen hastaların ortalama kan şekeri 100 mg/dL'den farklı mı?"
+
+2. **Bağımsız Örneklemler t-testi (İki Örneklem t-testi):**
+   * İki bağımsız grubun ortalamalarının karşılaştırılması
+   * Örnek: "İlaç A ve İlaç B'nin ortalama etkinliği arasında fark var mı?"
+
+3. **Eşleştirilmiş Örneklemler t-testi (Bağımlı t-testi):**
+   * Aynı örneklemdeki farklı koşulların karşılaştırılması
+   * Örnek: "Hastaların tedavi öncesi ve sonrası değerleri arasında fark var mı?"
+
+## 
+
+![](https://datatab.net/assets/tutorial/t-test/t-Test.png)
+
+:::footer
+Kaynak: [t-Test DATAtab](https://datatab.net/tutorial/t-test)
+:::
+
+##
+
+![](https://datatab.net/assets/tutorial/t-test/Types_of_t-test.png)
+
+:::footer
+Kaynak: [t-Test DATAtab](https://datatab.net/tutorial/t-test)
+:::
+
+## t-testi Formülleri
+
+**1. Tek Örneklem t-testi:**
+$$ t = \frac{\bar{x} - \mu_0}{s/\sqrt{n}} $$
+
+**2. Bağımsız Örneklemler t-testi:**
+$$ t = \frac{\bar{x}_1 - \bar{x}_2}{\sqrt{\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}}} $$
+
+**3. Eşleştirilmiş Örneklemler t-testi:**
+$$ t = \frac{\bar{d}}{s_d/\sqrt{n}} $$
+
+## Formüller
+
+Burada:
+
+- $\bar{x}$: Örneklem ortalaması
+- $\mu_0$: Test edilen popülasyon değeri
+- $s$: Örneklem standart sapması
+- $n$: Örneklem büyüklüğü
+- $\bar{d}$: Eşleştirilmiş farklılıkların ortalaması
+- $s_d$: Eşleştirilmiş farklılıkların standart sapması
+
+## t-testi Varsayımları
+
+t-testi parametrik bir testtir ve bazı varsayımlar üzerine kuruludur:
+
+1. **Normallik:** Verilerin normal dağılıma sahip olması veya örneklem boyutunun yeterince büyük olması (n>30)
+   
+2. **Varyansların homojenliği:** Bağımsız örneklemler t-testinde, grupların varyanslarının benzer olması
+   
+3. **Bağımsızlık:** Gözlemlerin birbirinden bağımsız olması 
+
+4. **Ölçüm düzeyi:** Verilerin aralıklı veya oransal ölçek düzeyinde olması
+
+*Not: Eğer varsayımlar karşılanmazsa, parametrik olmayan alternatifler düşünülmelidir (ör. Mann-Whitney U testi, Wilcoxon işaretli sıra testi).*
+
+## t-testi Varsayımları (Bağımsızlık)
+
+Bu varsayım, t-testi için toplanan verilerdeki bir ölçümün, diğer ölçümleri etkilememesi gerektiği anlamına gelir. Yani bir deney katılımcısının veya örneğin verdiği sonuç, diğer katılımcıların veya örneklerin sonuçlarını etkilememelidir.
+
+- Bağımsız gözlemlere örnekler
+  - Farklı farelerden alınan kan örnekleri (her fare bağımsız bir birey)
+  - Farklı petri kaplarında yetiştirilen bakteri kolonileri
+  - Farklı hastalardan alınan doku örnekleri
+  - Rastgele seçilen 20 ağaçtan ölçülen yaprak büyüklükleri
+
+- Bağımsız OLMAYAN gözlemlere örnekler
+  - Aynı fareden günlük olarak alınan ardışık kan örnekleri (bir gündeki ölçüm, diğer günü etkileyebilir)
+  - Aynı bakterinin farklı zamanlardaki üreme hızları
+  - Aynı aileden alınan genetik örnekler (genetik yakınlık nedeniyle bağımsız değil)
+  - Yan yana büyüyen bitkilerden alınan ölçümler (birbirlerinin büyümesini etkileyebilirler)
+
+
+## Tek Yönlü ve Çift Yönlü t-testi
+
+Her t-testi, alternatif hipotezin yapısına göre tek yönlü veya çift yönlü olabilir:
+
+**Çift Yönlü t-testi (Two-sided):**
+
+* Alternatif hipotez: "eşit değildir" ($\neq$)
+* Örnek: $H_1: \mu \neq \mu_0$ veya $H_1: \mu_1 \neq \mu_2$
+* İlgilendiğimiz şey farkın yönü değil, sadece bir fark olup olmadığıdır
+* R'da varsayılan seçenek: `alternative = "two.sided"`
+
+**Tek Yönlü t-testi (One-sided):**
+
+* Alternatif hipotez: "küçüktür" (<) ya da "büyüktür" (>)
+* Örnekler:
+  * $H_1: \mu < \mu_0$ (`alternative = "less"`)
+  * $H_1: \mu > \mu_0$ (`alternative = "greater"`)
+* İlgilendiğimiz durum farkın belirli bir yönde olup olmadığıdır
+* Tek yönlü testler, belirli bir yönde fark beklediğimizde daha güçlüdür
+
+**Önemli Not:** Tek yönlü test kullanmak için, hipotez kurulmadan önce farkın yönüne dair güçlü bir teorik gerekçe olmalıdır. Veriler incelendikten sonra tek yönlü test seçmek, tip I hata olasılığını artırır.
+
+## Tek Örneklem t-testi
+
+Bir örneklemin ortalamasını, bilinen veya hipotez edilen bir popülasyon değeriyle karşılaştırır.
+
+**Örnek Senaryo:** Yeni geliştirilen bir bitkisel ilacın, farelerde ortalama kan glikoz seviyesini referans değer olan 100 mg/dL'den farklı bir seviyeye değiştirip değiştirmediğini test etmek istiyoruz.
+
+* $H_0: \mu = 100$ mg/dL (İlaç, kan glikoz seviyesini değiştirmez)
+* $H_1: \mu \neq 100$ mg/dL (İlaç, kan glikoz seviyesini değiştirir)
+
+## R ile Tek Örneklem t-testi
+
+İlacın test edildiği 15 farenin kan glikoz seviyelerini analiz edelim:
 
 ```{webr-r}
-# R'da çözüm
+# Kan glikoz değerlerini içeren vektör oluşturalım (mg/dL)
+glikoz_seviyeleri <- c(92, 97, 94, 90, 89, 96, 91, 88, 93, 95, 89, 94, 91, 92, 90)
+
+# Verilerin özet istatistiklerini inceleyelim
+summary(glikoz_seviyeleri)
+sd(glikoz_seviyeleri)
+
+# Tek örneklem t-testi yapalım (H0: mu = 100 mg/dL)
+test_sonuc <- t.test(glikoz_seviyeleri, mu = 100)
+
+# Sonucu yazdıralım
+print(test_sonuc)
+```
+
+## Sonucun Yorumlanması
+
+```{webr-r}
+# Özet grafiği çizelim
+boxplot(glikoz_seviyeleri, main="Farelerin Kan Glikoz Seviyeleri", 
+        ylab="Glikoz Seviyesi (mg/dL)",
+        ylim=c(85, 105))  # Y eksenini 85-105 aralığında ayarlıyoruz
+abline(h=100, col="red", lwd=2, lty=2)  # Referans değer çizgisi
+text(1.3, 100, "Referans (100 mg/dL)", col="red", pos=3)
+```
+
+**Yorum:** p-değeri 0.05'ten küçük olduğu için H0 hipotezini reddediyoruz. Bitkisel ilacın, farelerin kan glikoz seviyelerini, referans değer olan 100 mg/dL'den anlamlı şekilde düşürdüğünü söyleyebiliriz (t(14) = -11.94, p < 0.001).
+
+## Bağımsız İki Örneklem t-Testi
+
+İki farklı, bağımsız grubun ortalamalarını karşılaştırmak için kullanılır.
+
+**Örnek Senaryo:** İki farklı gübre türünün (A ve B) domates bitkilerinin boyları üzerindeki etkisini karşılaştırmak istiyoruz.
+
+* $H_0: \mu_A = \mu_B$ (İki gübre arasında fark yok)
+* $H_1: \mu_A \neq \mu_B$ (İki gübre arasında fark var)
+
+## R ile Bağımsız İki Örneklem t-Testi
+
+```{webr-r}
+# Her iki gübre ile yetiştirilen domates bitkilerinin boyları (cm)
+gubre_A <- c(65, 72, 78, 69, 71, 75, 68, 74, 70, 73)
+gubre_B <- c(72, 79, 83, 77, 81, 80, 75, 78, 76, 82)
+
+# Verilerin özet istatistiklerini inceleyelim
+cat("Gübre A Özet İstatistikler:\n")
+summary(gubre_A)
+cat("Standart Sapma:", sd(gubre_A), "\n\n")
+
+cat("Gübre B Özet İstatistikler:\n")
+summary(gubre_B)
+cat("Standart Sapma:", sd(gubre_B), "\n")
+```
+
+##
+
+```{webr-r}
+# Bağımsız iki örneklem t-testi
+test_sonuc <- t.test(gubre_A, gubre_B, var.equal = TRUE)
+print(test_sonuc)
+```
+
+## Görselleştirme ve Yorum
+
+```{webr-r}
+# Kutu grafiği ile karşılaştırma
+boxplot(gubre_A, gubre_B, names=c("Gübre A", "Gübre B"), 
+        main="Gübre Türlerine Göre Domates Bitki Boyları",
+        ylab="Bitki Boyu (cm)")
+```
+
+**Yorum:** p-değeri 0.05'ten küçük olduğundan H0 hipotezini reddediyoruz. Gübre B'nin, domates bitkilerinin boyunu, Gübre A'ya göre istatistiksel olarak anlamlı şekilde daha fazla artırdığını söyleyebiliriz (t(18) = -5.14, p < 0.001).
+
+## Eşleştirilmiş Örneklemler t-Testi
+
+Aynı deneklerin/örneklerin iki farklı durumda ölçülen değerlerini karşılaştırmak için kullanılır.
+
+**Örnek Senaryo:** 10 hastanın, belirli bir ilaç tedavisinden önce ve sonra kolesterol seviyelerini karşılaştırmak istiyoruz.
+
+* $H_0: \mu_d = 0$ (Tedavi öncesi ve sonrası arasında fark yok)
+* $H_1: \mu_d \neq 0$ (Tedavi öncesi ve sonrası arasında fark var)
+
+Burada $\mu_d$, tedavi öncesi ve sonrası değerler arasındaki farkların ortalamasıdır.
+
+## R ile Eşleştirilmiş Örneklemler t-Testi
+
+```{webr-r}
+# 10 hastanın tedavi öncesi ve sonrası kolesterol seviyeleri (mg/dL)
+tedavi_oncesi <- c(245, 252, 240, 258, 262, 247, 250, 255, 243, 260)
+tedavi_sonrasi <- c(220, 235, 218, 240, 245, 230, 225, 238, 215, 242)
+
+# Farkları hesaplayalım
+farklar <- tedavi_oncesi - tedavi_sonrasi
+cat("Farklar:", farklar, "\n")
+cat("Farkların ortalaması:", mean(farklar), "\n")
+cat("Farkların standart sapması:", sd(farklar), "\n\n")
+
+# Eşleştirilmiş t-testi
+test_sonuc <- t.test(tedavi_oncesi, tedavi_sonrasi, paired = TRUE)
+print(test_sonuc)
+```
+
+## Görselleştirme ve Yorum
+
+```{webr-r}
+# Çubuk grafiği ile karşılaştırma
+patient_ids <- 1:10
+par(mfrow=c(1,1))
+plot(patient_ids, tedavi_oncesi, type="b", col="red", ylim=c(210, 270),
+     xlab="Hasta ID", ylab="Kolesterol Seviyesi (mg/dL)",
+     main="Tedavi Öncesi ve Sonrası Kolesterol Seviyeleri")
+lines(patient_ids, tedavi_sonrasi, type="b", col="blue")
+legend("topright", legend=c("Tedavi Öncesi", "Tedavi Sonrası"), 
+       col=c("red", "blue"), lty=1, pch=1)
+```
+
+**Yorum:** p-değeri 0.05'ten küçük olduğundan H0 hipotezini reddediyoruz. İlaç tedavisinin, hastaların kolesterol seviyelerini istatistiksel olarak anlamlı şekilde düşürdüğünü söyleyebiliriz (t(9) = 14.41, p < 0.001). Ortalama düşüş 19.2 mg/dL'dir.
+
+## t-Testi Sonuçlarının Raporlanması
+
+**Akademik yayınlarda t-testi sonuçlarını nasıl raporlamalıyız?**
+
+**1. Tek Örneklem t-Testi:**
+*"Bitkisel ilacın farelerin kan glikoz seviyelerine etkisi, tek örneklem t-testi ile değerlendirilmiştir. Farelerin ortalama kan glikoz seviyesi (M = 92.1, SD = 2.6) referans değerden (100 mg/dL) anlamlı şekilde düşüktür, t(14) = -11.94, p < 0.001."*
+
+**2. Bağımsız İki Örneklem t-Testi:**
+*"Gübre B ile yetiştirilen domates bitkilerinin boyları (M = 78.3 cm, SD = 3.4), Gübre A ile yetiştirilen bitkilerden (M = 71.5 cm, SD = 3.7) anlamlı şekilde daha yüksektir, t(18) = -5.14, p < 0.001."*
+
+**3. Eşleştirilmiş Örneklemler t-Testi:**
+*"İlaç tedavisi sonrası hastaların kolesterol seviyeleri (M = 230.8 mg/dL, SD = 11.0), tedavi öncesine (M = 250.0 mg/dL, SD = 7.6) göre anlamlı şekilde daha düşüktür, t(9) = 14.41, p < 0.001. Ortalama azalma 19.2 mg/dL'dir (%95 GA [16.2, 22.2])."*
+
+## Biyolojide t-Testi Uygulamaları
+
+* **Gen ekspresyonu:** İki farklı koşulda gen ekspresyon seviyelerini karşılaştırma
+* **İlaç etkinliği:** Tedavi grubunun kontrol grubuyla karşılaştırılması
+* **Büyüme çalışmaları:** Farklı besin ortamlarında bakterilerin büyüme hızlarının karşılaştırılması
+* **Enzim aktivitesi:** Farklı pH değerlerinde enzim aktivitelerinin karşılaştırılması
+* **Biyobelirteç seviyeleri:** Hasta ve sağlıklı gruplar arasındaki biyobelirteç seviyelerinin karşılaştırılması
+
+**Örnek:** "miR-21 ekspresyon seviyesi, kanser hastalarında (M = 4.2, SD = 1.1) sağlıklı kontrollere (M = 1.8, SD = 0.7) göre anlamlı şekilde daha yüksekti, t(58) = 10.73, p < 0.001, ortalama fark = 2.4 kat (%95 GA [2.0, 2.8])."
+
+## Gerçek Veri Üzerinde Uygulama: iris Veri Seti
+
+Şimdi, `iris` veri setinde farklı türlerdeki çiçeklerin taç yaprak (petal) boylarını karşılaştıralım.
+
+```{webr-r}
+# iris veri setini yükleyelim ve yapısını inceleyelim
+data(iris)
+str(iris)
+
+# setosa ve versicolor türlerinin taç yaprak boyları
+setosa_petal <- iris[iris$Species == "setosa", "Petal.Length"]
+versicolor_petal <- iris[iris$Species == "versicolor", "Petal.Length"]
+
+# Özet istatistikler
+cat("Setosa Taç Yaprak Boyu:\n")
+summary(setosa_petal)
+cat("Standart Sapma:", sd(setosa_petal), "\n\n")
+
+cat("Versicolor Taç Yaprak Boyu:\n")
+summary(versicolor_petal)
+cat("Standart Sapma:", sd(versicolor_petal), "\n\n")
+
+# Bağımsız iki örneklem t-testi
+test_sonuc <- t.test(setosa_petal, versicolor_petal)
+print(test_sonuc)
+```
+
+## Görselleştirme ve Yorum
+
+```{webr-r}
+# Kutu grafiği
+boxplot(setosa_petal, versicolor_petal, 
+        names=c("Setosa", "Versicolor"),
+        main="Iris Türlerine Göre Taç Yaprak Boyları",
+        ylab="Taç Yaprak Boyu (cm)")
+```
+
+**Yorum:** İki Iris türü arasındaki taç yaprak boyu farkı istatistiksel olarak anlamlıdır, t(86.7) = -39.5, p < 0.001. Versicolor türünün taç yaprakları (M = 4.26 cm, SD = 0.47), setosa türünün taç yapraklarından (M = 1.46 cm, SD = 0.17) ortalama 2.8 cm daha uzundur (%95 GA [2.66, 2.94]).
+
+## t-Testi için Pratik İpuçları
+
+1. **Veri Hazırlığı:**
+   * Aykırı değerleri belirleyin ve nasıl ele alacağınıza karar verin
+   * Verilerin normal dağılıma uygunluğunu kontrol edin (histogram, Q-Q plot, Shapiro-Wilk testi)
+
+2. **Test Seçimi:**
+   * Doğru t-testi türünü seçin (tek örneklem, bağımsız, eşleştirilmiş)
+   * Varsayımlar karşılanmıyorsa, parametrik olmayan alternatifleri düşünün
+
+3. **Sonuçların Yorumlanması:**
+   * Sadece p-değerine değil, etki büyüklüğüne de bakın (Cohen's d)
+   * Güven aralıklarını rapor edin
+   * Bulgularınızı biyolojik bağlamda yorumlayın
+
+## t-Testi ile İlgili Yaygın Yanılgılar
+
+1. **"p > 0.05 ise, iki grup arasında fark yoktur"**
+   * Doğrusu: H0'ı reddedemeyiz, ancak bu "fark yoktur" anlamına gelmez
+
+2. **"p < 0.05 ise, sonuç pratik olarak önemlidir"**
+   * Doğrusu: İstatistiksel anlamlılık, pratik önemi garanti etmez
+
+3. **"t-testi, her tür veri için uygundur"**
+   * Doğrusu: t-testi, varsayımları karşılayan verilerde kullanılmalıdır
+
+4. **"Örneklem büyüklüğü arttıkça, sonuçlar daha doğru olur"**
+   * Doğrusu: Büyük örneklemler küçük farkları bile anlamlı gösterebilir
+
+## R'da t-Testi Kullanımı (Özet)
+
+```
+# 1. Tek Örneklem t-Testi
+# a. Çift yönlü test (varsayılan)
+t.test(x, mu = 0)
+# b. Tek yönlü test (küçüktür)
+t.test(x, mu = 0, alternative = "less")
+# c. Tek yönlü test (büyüktür)
+t.test(x, mu = 0, alternative = "greater")
+```
+
+## R'da t-Testi Kullanımı (Özet)
+
+```
+# 2. Bağımsız İki Örneklem t-Testi
+# a. Varyansların eşit olduğu varsayımıyla
+t.test(x, y, var.equal = TRUE)
+# b. Varyansların eşit olmadığı varsayımıyla (Welch t-testi, var
+sayılan)
+t.test(x, y)
+# c. Tek yönlü test ile (örneğin x'in y'den büyük olup olmadığın
+ı test etmek için)
+t.test(x, y, alternative = "greater")
 ```
 
 
+## R'da t-Testi Kullanımı (Özet)
 
-## slide5 
-
-çift yönlü 100(1-$\alpha$)% güven aralığı için formül:
-
-![](images/image-20240327050401224.png)
-
-SE = s / $\sqrt{n}$
-
-Tek yönlü olması durumunda 
-
-![image-20240327051040495](images/image-20240327051040495.png)
-
-## slide6
-
-Yunuslarda civa miktarı üzerine yapılan çalışmada, Japonya'nın Taiji bölgesinden rastgele seçilen 19 adet yunusta civa miktarına dair bilgiler şu şekildedir.
-
-![](images/image-20240327051515589.png)
-
-Ortalama civa miktarı için %95 güven aralığını hesaplayınız.
-
-
-
-```{webr-r}
-qt()
+```
+# 3. Eşleştirilmiş Örneklemler t-Testi
+t.test(x, y, paired = TRUE)
+# Tek yönlü seçeneği ile
+t.test(x, y, paired = TRUE, alternative = "greater")
 ```
 
-## slide7
+## R'da t-Testi Kullanımı (Özet)
 
+```
+# 4. Formül kullanımı (veritabanları ile çalışırken)
+t.test(value ~ group, data = mydata)
+t.test(value ~ group, data = mydata, paired = TRUE)
+t.test(value ~ group, data = mydata, alternative = "less")
+```
+
+## Farklı t-Test Türleri için Varsayımlar ve R Kod Örnekleri
+
+| t-Testi Türü | Temel Varsayımlar | R Kodu |
+|--------------|-------------------|--------|
+| Tek Örneklem | - Verilerin normal dağılması veya n>30<br>- Bağımsız gözlemler | `t.test(x, mu = 0)` |
+| Bağımsız İki Örneklem<br>(eşit varyans) | - İki grupta da normal dağılım<br>- Varyansların homojenliği<br>- Bağımsız gözlemler | `t.test(x, y, var.equal = TRUE)` |
+| Bağımsız İki Örneklem<br>(Welch/eşit olmayan varyans) | - İki grupta da normal dağılım<br>- Varyanslar farklı olabilir<br>- Bağımsız gözlemler | `t.test(x, y)` |
+| Eşleştirilmiş Örneklemler | - Farkların normal dağılması<br>- Eşleştirilmiş gözlemler | `t.test(x, y, paired = TRUE)` |
