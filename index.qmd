@@ -42,9 +42,9 @@
 
 ## Ders06
 
-**Teorik** (*27 Mart 2024*): T-testi. [Sunum linki](ders06.qmd)
+**Teorik** (*27 Mart 2024*): T-testi. [Sunum linki](ders05.qmd)
 
-**Pratik** (*01 Nisan 2024*): T-testi uygulamaları [Uygulama sunum linki](ders06-uygulama.qmd)
+**Pratik** (*01 Nisan 2024*): T-testi uygulamaları [Uygulama sunum linki](ders05-uygulama.qmd)
 
 ## Ders07
 
