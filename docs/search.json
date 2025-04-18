@@ -308,312 +308,88 @@
     "text": "Ek Kaynaklar\n\nKhan Academy - Hypothesis Testing (İngilizce)\nYale Statlab - Hypothesis Testing (İngilizce)\nScribbr - Hypothesis Testing Explained (İngilizce)\nVeri Bilimi Okulu - Hipotez Testi (Türkçe)"
   },
   {
-    "objectID": "ders05-old.html#slide1",
-    "href": "ders05-old.html#slide1",
-    "title": "Ders5: Başlık",
-    "section": "slide1",
-    "text": "slide1\n\nt-dağılımı (düz çizgi) ve normal dağılım karşılaştırması"
+    "objectID": "ders05-uygulama.html#iris-verisi",
+    "href": "ders05-uygulama.html#iris-verisi",
+    "title": "Ders 5 Uygulama: t-Testi ve Örneklerle Uygulamaları",
+    "section": "Iris verisi",
+    "text": "Iris verisi\n\n\nVersicolor Sepal genişlik 3’ten farklı mıdır?\nVersicolor ve Virginica arasında fark var mıdır?"
   },
   {
-    "objectID": "ders05-old.html#slide2",
-    "href": "ders05-old.html#slide2",
-    "title": "Ders5: Başlık",
-    "section": "slide2",
-    "text": "slide2\n\nimage-20240327044422037df (serbestlik derecesi ) arttıkça, t-dağılımı normal dağılıma yaklaşmaktadır"
+    "objectID": "ders05-uygulama.html#tek-örnek-t-testi",
+    "href": "ders05-uygulama.html#tek-örnek-t-testi",
+    "title": "Ders 5 Uygulama: t-Testi ve Örneklerle Uygulamaları",
+    "section": "Tek örnek t-testi",
+    "text": "Tek örnek t-testi\nSadece Versicolor Sepal genişlik verisini alıp 3 ile karşılaştıralım\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
   },
   {
-    "objectID": "ders05-old.html#slide3",
-    "href": "ders05-old.html#slide3",
-    "title": "Ders5: Başlık",
-    "section": "slide3",
-    "text": "slide3\n\nimage-20240327044528724t-tablosu"
+    "objectID": "ders05-uygulama.html#iki-örnek-t-testi",
+    "href": "ders05-uygulama.html#iki-örnek-t-testi",
+    "title": "Ders 5 Uygulama: t-Testi ve Örneklerle Uygulamaları",
+    "section": "İki örnek t-testi",
+    "text": "İki örnek t-testi\nR’da t-testi\nİki yaklaşım var\n\nt.test(data1, data2)\nt.test(Olcum ~ Grup)"
   },
   {
-    "objectID": "ders05-old.html#slide4",
-    "href": "ders05-old.html#slide4",
-    "title": "Ders5: Başlık",
-    "section": "slide4",
-    "text": "slide4\n\ndf=18 için, -2.10 altında kalan alan boyanmıştır. t-dağılımının ne kadarı -2.10 altında kalır?\n\ndf=20 iken, t-dağılımının ne kadarı -1.60’tan küçük ve 1.60’tan büyüktür?\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+    "objectID": "ders05-uygulama.html#section",
+    "href": "ders05-uygulama.html#section",
+    "title": "Ders 5 Uygulama: t-Testi ve Örneklerle Uygulamaları",
+    "section": "",
+    "text": "Please enable JavaScript to experience the dynamic code cell content on this page."
   },
   {
-    "objectID": "ders05-old.html#slide5",
-    "href": "ders05-old.html#slide5",
-    "title": "Ders5: Başlık",
-    "section": "slide5",
-    "text": "slide5\nçift yönlü 100(1-\\(\\alpha\\))% güven aralığı için formül:\n\nSE = s / \\(\\sqrt{n}\\)\nTek yönlü olması durumunda\n\n\n\nimage-20240327051040495"
+    "objectID": "ders05-uygulama.html#section-1",
+    "href": "ders05-uygulama.html#section-1",
+    "title": "Ders 5 Uygulama: t-Testi ve Örneklerle Uygulamaları",
+    "section": "",
+    "text": "Please enable JavaScript to experience the dynamic code cell content on this page."
   },
   {
-    "objectID": "ders05-old.html#slide6",
-    "href": "ders05-old.html#slide6",
-    "title": "Ders5: Başlık",
-    "section": "slide6",
-    "text": "slide6\nYunuslarda civa miktarı üzerine yapılan çalışmada, Japonya’nın Taiji bölgesinden rastgele seçilen 19 adet yunusta civa miktarına dair bilgiler şu şekildedir.\n\nOrtalama civa miktarı için %95 güven aralığını hesaplayınız.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+    "objectID": "ders05-uygulama.html#excelde-t.test",
+    "href": "ders05-uygulama.html#excelde-t.test",
+    "title": "Ders 5 Uygulama: t-Testi ve Örneklerle Uygulamaları",
+    "section": "Excel’de T.test",
+    "text": "Excel’de T.test\nAynı testleri iris verisi için yapınız. Dosya link"
   },
   {
-    "objectID": "ders05-old.html#slide7",
-    "href": "ders05-old.html#slide7",
-    "title": "Ders5: Başlık",
-    "section": "slide7",
-    "text": "slide7"
+    "objectID": "ders05-uygulama.html#iki-örnek-t-testi-bağımlıilişkili",
+    "href": "ders05-uygulama.html#iki-örnek-t-testi-bağımlıilişkili",
+    "title": "Ders 5 Uygulama: t-Testi ve Örneklerle Uygulamaları",
+    "section": "İki örnek t-testi (bağımlı/ilişkili)",
+    "text": "İki örnek t-testi (bağımlı/ilişkili)\nİlaç1 ve ilaç2 arasında uykuya etki açısından fark var mıdır?\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nVeriyi düzenlemek gerek"
   },
   {
-    "objectID": "ders04-claude.html#özet",
-    "href": "ders04-claude.html#özet",
-    "title": "Ders8: Güven Aralıkları ve Hipotez Testi",
-    "section": "Özet",
-    "text": "Özet\n\nGüven Aralığı (Confidence Interval) Kavramı\nGüven Aralığı Hesaplama\nHipotez Testi Temelleri\nTip I ve Tip II Hatalar\np-değeri Kavramı\nTek Örneklem Hipotez Testi"
+    "objectID": "ders05-uygulama.html#section-2",
+    "href": "ders05-uygulama.html#section-2",
+    "title": "Ders 5 Uygulama: t-Testi ve Örneklerle Uygulamaları",
+    "section": "",
+    "text": "Please enable JavaScript to experience the dynamic code cell content on this page."
   },
   {
-    "objectID": "ders04-claude.html#güven-aralığı-kavramı",
-    "href": "ders04-claude.html#güven-aralığı-kavramı",
-    "title": "Ders8: Güven Aralıkları ve Hipotez Testi",
-    "section": "Güven Aralığı Kavramı",
-    "text": "Güven Aralığı Kavramı\nGüven aralığı, bir popülasyon parametresi için olası değerlerin bir aralığıdır.\n\nBelirli bir güven düzeyi (genellikle %95) ile ifade edilir\nÖrneklem verisinden hesaplanır\nTahmin edilen parametre hakkında belirsizliği gösterir\n\n\n\n\nGüven aralığı örneklemi popülasyonla ilişkilendirir"
+    "objectID": "ders05-uygulama.html#tek-yönlü-bağımlı-test",
+    "href": "ders05-uygulama.html#tek-yönlü-bağımlı-test",
+    "title": "Ders 5 Uygulama: t-Testi ve Örneklerle Uygulamaları",
+    "section": "Tek yönlü bağımlı test",
+    "text": "Tek yönlü bağımlı test\nİlaç2 uykuya etkisi “daha çok” şeklindeki hipotez için t.test uygulayınız.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
   },
   {
-    "objectID": "ders04-claude.html#güven-aralığının-yorumlanması",
-    "href": "ders04-claude.html#güven-aralığının-yorumlanması",
-    "title": "Ders8: Güven Aralıkları ve Hipotez Testi",
-    "section": "Güven Aralığının Yorumlanması",
-    "text": "Güven Aralığının Yorumlanması\n%95 güven aralığı şu anlama gelir:\n\nEğer aynı popülasyondan yüzlerce örneklem alıp her biri için güven aralığı hesaplarsak, bu aralıkların %95’i gerçek popülasyon parametresini içerecektir\nYanlış yorumlama: “Gerçek değerin bu aralıkta olma olasılığı %95’tir”\n\n\n\n\nFarklı örneklemlerden elde edilen güven aralıkları"
+    "objectID": "ders05-uygulama.html#ekstra-sorular",
+    "href": "ders05-uygulama.html#ekstra-sorular",
+    "title": "Ders 5 Uygulama: t-Testi ve Örneklerle Uygulamaları",
+    "section": "Ekstra sorular",
+    "text": "Ekstra sorular\nPlantGrowth verisinde, ctrl ve trt1 arasında fark olup olmadığını test ediniz.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
   },
   {
-    "objectID": "ders04-claude.html#ortalama-için-güven-aralığı-formülü",
-    "href": "ders04-claude.html#ortalama-için-güven-aralığı-formülü",
-    "title": "Ders8: Güven Aralıkları ve Hipotez Testi",
-    "section": "Ortalama için Güven Aralığı Formülü",
-    "text": "Ortalama için Güven Aralığı Formülü\nBir popülasyon ortalaması için %95 güven aralığı:\n\\[ \\bar{x} \\pm 1.96 \\times \\frac{\\sigma}{\\sqrt{n}} \\]\nBurada: * \\(\\bar{x}\\) = örneklem ortalaması * \\(\\sigma\\) = popülasyon standart sapması (bilinmiyorsa örneklem standart sapması \\(s\\) kullanılır) * \\(n\\) = örneklem büyüklüğü * \\(1.96\\) = %95 güven düzeyi için z-değeri\nPopülasyon standart sapması bilinmediğinde (genellikle):\n\\[ \\bar{x} \\pm t_{\\alpha/2, n-1} \\times \\frac{s}{\\sqrt{n}} \\]"
+    "objectID": "ders05-uygulama.html#ekstra-sorular2",
+    "href": "ders05-uygulama.html#ekstra-sorular2",
+    "title": "Ders 5 Uygulama: t-Testi ve Örneklerle Uygulamaları",
+    "section": "Ekstra sorular2",
+    "text": "Ekstra sorular2\nchickwts verisinde soybean veya casein ile besleme arasında fark var mıdır, test ediniz.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
   },
   {
-    "objectID": "ders04-claude.html#rda-güven-aralığı-hesaplama",
-    "href": "ders04-claude.html#rda-güven-aralığı-hesaplama",
-    "title": "Ders8: Güven Aralıkları ve Hipotez Testi",
-    "section": "R’da Güven Aralığı Hesaplama",
-    "text": "R’da Güven Aralığı Hesaplama\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "ders04-claude.html#t.test-fonksiyonu-ile-güven-aralığı",
-    "href": "ders04-claude.html#t.test-fonksiyonu-ile-güven-aralığı",
-    "title": "Ders8: Güven Aralıkları ve Hipotez Testi",
-    "section": "t.test Fonksiyonu ile Güven Aralığı",
-    "text": "t.test Fonksiyonu ile Güven Aralığı\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "ders04-claude.html#güven-düzeyinin-etkisi",
-    "href": "ders04-claude.html#güven-düzeyinin-etkisi",
-    "title": "Ders8: Güven Aralıkları ve Hipotez Testi",
-    "section": "Güven Düzeyinin Etkisi",
-    "text": "Güven Düzeyinin Etkisi\nGüven düzeyi arttıkça güven aralığı genişler:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nFarklı güven düzeyleri için aralıklar"
-  },
-  {
-    "objectID": "ders04-claude.html#örneklem-büyüklüğünün-etkisi",
-    "href": "ders04-claude.html#örneklem-büyüklüğünün-etkisi",
-    "title": "Ders8: Güven Aralıkları ve Hipotez Testi",
-    "section": "Örneklem Büyüklüğünün Etkisi",
-    "text": "Örneklem Büyüklüğünün Etkisi\nÖrneklem büyüklüğü arttıkça güven aralığı daralır:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "ders04-claude.html#hipotez-testi-kavramı",
-    "href": "ders04-claude.html#hipotez-testi-kavramı",
-    "title": "Ders8: Güven Aralıkları ve Hipotez Testi",
-    "section": "Hipotez Testi Kavramı",
-    "text": "Hipotez Testi Kavramı\nHipotez testi, bir popülasyon parametresi hakkındaki iddianın (hipotezin) verilerle desteklenip desteklenmediğini belirlemek için kullanılan istatistiksel bir yöntemdir.\nTemel bileşenler:\n\nSıfır Hipotezi (H₀): Test edilen iddia (genellikle “fark yok” veya “etki yok” şeklinde)\nAlternatif Hipotez (H₁): Sıfır hipotezi doğru değilse geçerli olan alternatif\nTest İstatistiği: Verilerden hesaplanan bir değer\nKritik Değer veya p-değeri: Hipotezi reddetme veya kabul etme kararını verme kriteri"
-  },
-  {
-    "objectID": "ders04-claude.html#hipotez-testi-adımları",
-    "href": "ders04-claude.html#hipotez-testi-adımları",
-    "title": "Ders8: Güven Aralıkları ve Hipotez Testi",
-    "section": "Hipotez Testi Adımları",
-    "text": "Hipotez Testi Adımları\n\nHipotezleri belirle (H₀ ve H₁)\nAnlamlılık düzeyini seç (genellikle α = 0.05)\nUygun test istatistiğini seç ve hesapla\np-değerini hesapla\nKarar ver: p-değeri &lt; α ise H₀ reddedilir\n\n\n\n\nHipotez testi akış şeması"
-  },
-  {
-    "objectID": "ders04-claude.html#tip-i-ve-tip-ii-hatalar",
-    "href": "ders04-claude.html#tip-i-ve-tip-ii-hatalar",
-    "title": "Ders8: Güven Aralıkları ve Hipotez Testi",
-    "section": "Tip I ve Tip II Hatalar",
-    "text": "Tip I ve Tip II Hatalar\n\nTip I Hata (α): Doğru olan sıfır hipotezini yanlışlıkla reddetmek\n\n“Yanlış pozitif” olarak da bilinir\nOlasılığı anlamlılık düzeyi (α) ile kontrol edilir\n\nTip II Hata (β): Yanlış olan sıfır hipotezini reddetmeme\n\n“Yanlış negatif” olarak da bilinir\nİstatistiksel güç = 1 - β\n\n\n\n\n\nTip I ve Tip II hatalar"
-  },
-  {
-    "objectID": "ders04-claude.html#p-değeri-kavramı",
-    "href": "ders04-claude.html#p-değeri-kavramı",
-    "title": "Ders8: Güven Aralıkları ve Hipotez Testi",
-    "section": "p-değeri Kavramı",
-    "text": "p-değeri Kavramı\np-değeri, gözlenen sonuçların (veya daha aşırı sonuçların) sıfır hipotezi doğru olduğunda meydana gelme olasılığıdır.\n\nKüçük p-değeri (genellikle &lt; 0.05): Gözlenen veri sıfır hipotezi ile tutarsız\nBüyük p-değeri: Gözlenen veri sıfır hipotezi ile tutarlı\n\n\n\n\np-değeri kavramı"
-  },
-  {
-    "objectID": "ders04-claude.html#p-değeri-yorumlama",
-    "href": "ders04-claude.html#p-değeri-yorumlama",
-    "title": "Ders8: Güven Aralıkları ve Hipotez Testi",
-    "section": "p-değeri Yorumlama",
-    "text": "p-değeri Yorumlama\n\np &lt; 0.05: “İstatistiksel olarak anlamlı” (H₀ reddedilir)\np ≥ 0.05: “İstatistiksel olarak anlamlı değil” (H₀ reddedilemez)\n\nYaygın Yanlış Anlamalar: * p-değeri, hipotezin doğru olma olasılığı değildir * İstatistiksel anlamlılık her zaman pratik anlamlılık demek değildir * p-değeri büyükse “fark yok” kanıtlanmış olmaz"
-  },
-  {
-    "objectID": "ders04-claude.html#tek-örneklem-t-testi",
-    "href": "ders04-claude.html#tek-örneklem-t-testi",
-    "title": "Ders8: Güven Aralıkları ve Hipotez Testi",
-    "section": "Tek Örneklem t-testi",
-    "text": "Tek Örneklem t-testi\nBir örneklemin ortalamasının belirli bir değerden farklı olup olmadığını test eder.\nHipotezler: * H₀: μ = μ₀ (popülasyon ortalaması belirli bir değere eşittir) * H₁: μ ≠ μ₀ (iki yönlü) veya μ &gt; μ₀ ya da μ &lt; μ₀ (tek yönlü)\nTest İstatistiği: \\[ t = \\frac{\\bar{x} - \\mu_0}{\\frac{s}{\\sqrt{n}}} \\]"
-  },
-  {
-    "objectID": "ders04-claude.html#rda-tek-örneklem-t-testi",
-    "href": "ders04-claude.html#rda-tek-örneklem-t-testi",
-    "title": "Ders8: Güven Aralıkları ve Hipotez Testi",
-    "section": "R’da Tek Örneklem t-testi",
-    "text": "R’da Tek Örneklem t-testi\nÖrnek: Bir grup farenin ortalama ağırlığının 25 gram olduğu hipotezini test edelim.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "ders04-claude.html#hipotez-testi-çeşitleri",
-    "href": "ders04-claude.html#hipotez-testi-çeşitleri",
-    "title": "Ders8: Güven Aralıkları ve Hipotez Testi",
-    "section": "Hipotez Testi Çeşitleri",
-    "text": "Hipotez Testi Çeşitleri\n\n\n\nYaygın hipotez testleri"
-  },
-  {
-    "objectID": "ders04-claude.html#örnek-senaryo-gen-ekspresyonu",
-    "href": "ders04-claude.html#örnek-senaryo-gen-ekspresyonu",
-    "title": "Ders8: Güven Aralıkları ve Hipotez Testi",
-    "section": "Örnek Senaryo: Gen Ekspresyonu",
-    "text": "Örnek Senaryo: Gen Ekspresyonu\nBir gen terapisinin bir genin ekspresyon seviyesini artırdığı iddia ediliyor. Normal ekspresyon seviyesi 15 birim olarak biliniyor. 12 hasta üzerinde yapılan tedavi sonrası ölçümler:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nSonuç yorumu: p-değeri 0.05’ten küçük olduğu için, tedavinin gen ekspresyonunu artırdığı hipotezini desteklemekteyiz."
-  },
-  {
-    "objectID": "ders04-claude.html#güven-aralığı-ve-hipotez-testi-ilişkisi",
-    "href": "ders04-claude.html#güven-aralığı-ve-hipotez-testi-ilişkisi",
-    "title": "Ders8: Güven Aralıkları ve Hipotez Testi",
-    "section": "Güven Aralığı ve Hipotez Testi İlişkisi",
-    "text": "Güven Aralığı ve Hipotez Testi İlişkisi\nGüven aralığı ve hipotez testi birbirini tamamlayıcı yaklaşımlardır:\n\nEğer %95 güven aralığı test edilen değeri (μ₀) içermiyorsa, α = 0.05 için hipotez testi de H₀’ı reddeder\nGüven aralığı, etki büyüklüğü hakkında daha fazla bilgi verir\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "ders04-claude.html#biyolojik-bilimler-için-önemi",
-    "href": "ders04-claude.html#biyolojik-bilimler-için-önemi",
-    "title": "Ders8: Güven Aralıkları ve Hipotez Testi",
-    "section": "Biyolojik Bilimler için Önemi",
-    "text": "Biyolojik Bilimler için Önemi\nGüven aralıkları ve hipotez testleri biyolojik bilimlerde çok önemlidir:\n\nİlaç çalışmaları: Bir ilacın etkili olup olmadığını belirlemek\nGen ekspresyon analizleri: Farklı koşullar altında gen ekspresyonunu karşılaştırmak\nKlinik araştırmalar: Tedavi etkinliğini değerlendirmek\nEkolojik çalışmalar: Tür çeşitliliğindeki değişimleri incelemek\n\nAncak p-değerine aşırı bağımlılık, tekrarlanabilirlik krizi gibi sorunlara yol açmıştır."
-  },
-  {
-    "objectID": "ders04-claude.html#pratik-ipuçları",
-    "href": "ders04-claude.html#pratik-ipuçları",
-    "title": "Ders8: Güven Aralıkları ve Hipotez Testi",
-    "section": "Pratik İpuçları",
-    "text": "Pratik İpuçları\n\nHipotez testi tek başına yeterli değildir - etki büyüklüğü ve güven aralıklarını da raporlayın\nDüşük p-değeri her zaman büyük etki anlamına gelmez\nÖrneklem büyüklüğü arttıkça küçük etkiler bile istatistiksel olarak anlamlı görünebilir\nÇoklu test düzeltmesi (Bonferroni, FDR, vb.) kullanmayı unutmayın\nSonuçları biyolojik bağlamda yorumlayın"
-  },
-  {
-    "objectID": "ders04-claude.html#soru",
-    "href": "ders04-claude.html#soru",
-    "title": "Ders8: Güven Aralıkları ve Hipotez Testi",
-    "section": "Soru",
-    "text": "Soru\nBir laboratuvar, geliştirdiği yeni bir ilacın hücre büyümesini arttırdığını iddia ediyor. Standart koşullarda hücre büyümesi ortalama 12 μm/saat’tir. Yeni ilaçla tedavi edilen 15 hücre örneğinde elde edilen büyüme oranları (μm/saat):\n14.2, 13.7, 13.1, 12.8, 14.5, 15.2, 13.4, 14.3, 12.9, 13.6, 14.8, 13.9, 14.1, 13.5, 13.3\nİlacın hücre büyümesini arttırdığını α = 0.05 düzeyinde test edin ve sonuçları yorumlayın.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "uygulama01.html#aritmetik",
-    "href": "uygulama01.html#aritmetik",
-    "title": "R Temelleri",
-    "section": "Aritmetik",
-    "text": "Aritmetik\nR ile aritmetik yapılabilir. (Run Code butonunu tıklayınız)\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nYukarıdaki kutuya herhangi bir işlem yazıp çalıştırabilirsiniz.\n \n8 / 2 + 4 * 5 şeklindeki bir ifadede, işlem sırası doğru olarak izleniyor mu?"
-  },
-  {
-    "objectID": "uygulama01.html#matematik-fonksiyonları",
-    "href": "uygulama01.html#matematik-fonksiyonları",
-    "title": "R Temelleri",
-    "section": "Matematik fonksiyonları",
-    "text": "Matematik fonksiyonları\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nCtrl + Enter ile tek satır, Shift + Enter ile bütün satırlar çalıştırılabilir"
-  },
-  {
-    "objectID": "uygulama01.html#değişkenler-objeler",
-    "href": "uygulama01.html#değişkenler-objeler",
-    "title": "R Temelleri",
-    "section": "Değişkenler / Objeler",
-    "text": "Değişkenler / Objeler\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nBu değişken, oturum boyunca geçerlidir, başka bir slaytta tekrar kullanılabilir.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "uygulama01.html#vektörler",
-    "href": "uygulama01.html#vektörler",
-    "title": "R Temelleri",
-    "section": "Vektörler",
-    "text": "Vektörler\nR dilinde vektörler önemli bir veri yapısıdır. Aynı tipteki (tamsayı, ondaliklı sayı, karakter, vb.) verilerin toplu şekilde saklandığı bir yapıdır. Başka dillerde “liste”, “dizi” olarak adlandırılır. R dilinde vektörler c() fonksiyonu ile oluşturulur.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "uygulama01.html#indeks",
-    "href": "uygulama01.html#indeks",
-    "title": "R Temelleri",
-    "section": "İndeks",
-    "text": "İndeks\nBir vektördeki elemanlara indeksler yardımıyla erişim sağlanır. R dilinde indeks 1’den başlar. 5. elemanına ulaşmak için my_vec[5] şeklinde komut yazılmalıdır.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nİndeksler aralıklarla da kullanılabilir. Örneğin, 1. ve 2. elemanına ulaşmak için my_vec[1:2] komutu kullanılabilir.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "uygulama01.html#indeks-vektörü",
-    "href": "uygulama01.html#indeks-vektörü",
-    "title": "R Temelleri",
-    "section": "İndeks vektörü",
-    "text": "İndeks vektörü\nBir vektördeki belirli elemanlara erişim için indekslerden oluşan bir vektör kullanılabilir. 5. ve 3. elemanlara (bu sırada) erişilmek isteniyorsa c(5,3) vektörü indeks olarak kullanılabilir\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "uygulama01.html#vektörlerle-işlemler",
-    "href": "uygulama01.html#vektörlerle-işlemler",
-    "title": "R Temelleri",
-    "section": "Vektörlerle işlemler",
-    "text": "Vektörlerle işlemler\nNormalde bir liste veya dizinin işlenmesi için for döngüsü kullanılır. R’de ise vektörlerle işlem yapılırken, bir fonksiyon veya işlem otomatik olarak bütün elemanlara uygulanır.\nAyrıca, R’daki çoğu fonksiyon vektörler ile uyumludur, her bir eleman için veya tüm vektör için çalışabilirler.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "uygulama01.html#karşılaştırma-operatörleri",
-    "href": "uygulama01.html#karşılaştırma-operatörleri",
-    "title": "R Temelleri",
-    "section": "Karşılaştırma operatörleri",
-    "text": "Karşılaştırma operatörleri\nEşitlik ==, büyüktür &gt;, küçüktür &lt;, eşit değil != operatörleri bir vektöre uygulandığında, her bir eleman için karşılaştırma yapılır.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nSonuçlar logical/mantıksal (TRUE/FALSE) vektör olarak döndürülür. Bu sonuç vektörü, maske olarak kullanılabilir, yani indeks olarak kullanıldığında, “TRUE” değerlerin denk geldiği elemanlar gösterilebilir.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nFarkedildiği üzere, bu işlem sayesinde veri kümesinde filtreleme yapılmıştır."
-  },
-  {
-    "objectID": "uygulama01.html#sıralama",
-    "href": "uygulama01.html#sıralama",
-    "title": "R Temelleri",
-    "section": "Sıralama",
-    "text": "Sıralama\nsort() fonksiyonu ile vektörler sıralanabilir.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nSoru: ters yönde sıralama yapmak için ne yapılmalıdır?\norder() fonksiyonu ile de sıralama yapılabilir. Ancak bu fonksiyon doğrudan elemanları sıralamaz; bunun yerine, sıralı elemanların orijinal vektördeki indekslerini döndürür.\n\nTablolarda sütunları veya satırları sıralamak gerektiğinde kullanılır."
-  },
-  {
-    "objectID": "uygulama01.html#sıralama-1",
-    "href": "uygulama01.html#sıralama-1",
-    "title": "R Temelleri",
-    "section": "Sıralama",
-    "text": "Sıralama\nAşağıdaki kutuda my_vec[order(my_vec)] komutunu çalıştıp çıktısını sort() ile karşılaştırınız.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "uygulama01.html#na",
-    "href": "uygulama01.html#na",
-    "title": "R Temelleri",
-    "section": "NA",
-    "text": "NA\nNA “not available” anlamına gelir. Herhangi bir vektörde NA olması durumunda toplama, min/max gibi işlemlerin de NA olarak sonuçlanmasına neden olur.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nBu sorunu aşmak için na.rm=TRUE parametresi kullanılabilir.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "uygulama01.html#data-frame-veri-tablosuçerçevesi",
-    "href": "uygulama01.html#data-frame-veri-tablosuçerçevesi",
-    "title": "R Temelleri",
-    "section": "Data Frame / veri tablosu/çerçevesi",
-    "text": "Data Frame / veri tablosu/çerçevesi\nBir veri tablosu, aynı boydaki farklı vektörlerin sütun olarak birleşmesi olarak düşünülebilir. Bu veri yapısı en çok kullanılan veri yapısıdır. Aşağıdaki örnekte, iris veri seti kullanılmıştır.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "uygulama01.html#veri-tablosu-erişim",
-    "href": "uygulama01.html#veri-tablosu-erişim",
-    "title": "R Temelleri",
-    "section": "Veri tablosu / erişim",
-    "text": "Veri tablosu / erişim\nBir veri tablosundaki herhangi bir sütunun tamamına $sütun_adı şeklinde ulaşılabilir.\nVeri tablosunun belirli bir kısmına erişmek için [satır, sütun] şeklinde kullanılabilir.\niris$Species komutu Species sütununu vektör olarak elde eder. iris[1:5,] ilk 5 satırı elde eder. iris[1:5,1:2] şeklindeki komut, ilk 2 sütunu ve ilk 5 satırı elde eder.\nBir sonraki slaytta bahsi geçen komutları deneyiniz."
-  },
-  {
-    "objectID": "uygulama01.html#veri-tablosu-erişim-1",
-    "href": "uygulama01.html#veri-tablosu-erişim-1",
-    "title": "R Temelleri",
-    "section": "Veri tablosu / erişim",
-    "text": "Veri tablosu / erişim\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "uygulama01.html#veri-tablosu-işlemler",
-    "href": "uygulama01.html#veri-tablosu-işlemler",
-    "title": "R Temelleri",
-    "section": "Veri tablosu / işlemler",
-    "text": "Veri tablosu / işlemler\n\ndim(iris) komutu, veri setinin boyutlarını verir.(satır, sütun) şeklinde\nnrow(iris) komutu, veri setindeki satır sayısını verir.\nncol(iris) komutu, veri setindeki sütun sayısını verir.\nstr(iris) komutu, veri setinin yapısını, sütun tipleri ve ilk verileri gösterir.\nsummary(iris) komutu, veri setindeki istatistiksel ölçümleri verir.\n\nBir sonraki slaytta bahsi geçen komutları deneyiniz."
-  },
-  {
-    "objectID": "uygulama01.html#veri-tablosu-işlemler-1",
-    "href": "uygulama01.html#veri-tablosu-işlemler-1",
-    "title": "R Temelleri",
-    "section": "Veri tablosu / işlemler",
-    "text": "Veri tablosu / işlemler\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+    "objectID": "ders05-uygulama.html#section-3",
+    "href": "ders05-uygulama.html#section-3",
+    "title": "Ders 5 Uygulama: t-Testi ve Örneklerle Uygulamaları",
+    "section": "",
+    "text": "soybean ve linseed ile besleme arasında fark var mıdır?\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
   },
   {
     "objectID": "ders03.html#özet",
@@ -768,6 +544,314 @@
     "title": "Ders3: İhtimal hesabı ve dağılım",
     "section": "Negatif binomial dağılım",
     "text": "Negatif binomial dağılım\nGeometrik dağılım ilk başarının k. denemede gerçekleşmesi ihtimalini hesaplarken Negatif Binomial Dağılım daha geneldir, R. başarının K. denemede gerçekleşme ihtimalini hesaplar."
+  },
+  {
+    "objectID": "uygulama01.html#aritmetik",
+    "href": "uygulama01.html#aritmetik",
+    "title": "R Temelleri",
+    "section": "Aritmetik",
+    "text": "Aritmetik\nR ile aritmetik yapılabilir. (Run Code butonunu tıklayınız)\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nYukarıdaki kutuya herhangi bir işlem yazıp çalıştırabilirsiniz.\n \n8 / 2 + 4 * 5 şeklindeki bir ifadede, işlem sırası doğru olarak izleniyor mu?"
+  },
+  {
+    "objectID": "uygulama01.html#matematik-fonksiyonları",
+    "href": "uygulama01.html#matematik-fonksiyonları",
+    "title": "R Temelleri",
+    "section": "Matematik fonksiyonları",
+    "text": "Matematik fonksiyonları\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nCtrl + Enter ile tek satır, Shift + Enter ile bütün satırlar çalıştırılabilir"
+  },
+  {
+    "objectID": "uygulama01.html#değişkenler-objeler",
+    "href": "uygulama01.html#değişkenler-objeler",
+    "title": "R Temelleri",
+    "section": "Değişkenler / Objeler",
+    "text": "Değişkenler / Objeler\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nBu değişken, oturum boyunca geçerlidir, başka bir slaytta tekrar kullanılabilir.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "uygulama01.html#vektörler",
+    "href": "uygulama01.html#vektörler",
+    "title": "R Temelleri",
+    "section": "Vektörler",
+    "text": "Vektörler\nR dilinde vektörler önemli bir veri yapısıdır. Aynı tipteki (tamsayı, ondaliklı sayı, karakter, vb.) verilerin toplu şekilde saklandığı bir yapıdır. Başka dillerde “liste”, “dizi” olarak adlandırılır. R dilinde vektörler c() fonksiyonu ile oluşturulur.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "uygulama01.html#indeks",
+    "href": "uygulama01.html#indeks",
+    "title": "R Temelleri",
+    "section": "İndeks",
+    "text": "İndeks\nBir vektördeki elemanlara indeksler yardımıyla erişim sağlanır. R dilinde indeks 1’den başlar. 5. elemanına ulaşmak için my_vec[5] şeklinde komut yazılmalıdır.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nİndeksler aralıklarla da kullanılabilir. Örneğin, 1. ve 2. elemanına ulaşmak için my_vec[1:2] komutu kullanılabilir.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "uygulama01.html#indeks-vektörü",
+    "href": "uygulama01.html#indeks-vektörü",
+    "title": "R Temelleri",
+    "section": "İndeks vektörü",
+    "text": "İndeks vektörü\nBir vektördeki belirli elemanlara erişim için indekslerden oluşan bir vektör kullanılabilir. 5. ve 3. elemanlara (bu sırada) erişilmek isteniyorsa c(5,3) vektörü indeks olarak kullanılabilir\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "uygulama01.html#vektörlerle-işlemler",
+    "href": "uygulama01.html#vektörlerle-işlemler",
+    "title": "R Temelleri",
+    "section": "Vektörlerle işlemler",
+    "text": "Vektörlerle işlemler\nNormalde bir liste veya dizinin işlenmesi için for döngüsü kullanılır. R’de ise vektörlerle işlem yapılırken, bir fonksiyon veya işlem otomatik olarak bütün elemanlara uygulanır.\nAyrıca, R’daki çoğu fonksiyon vektörler ile uyumludur, her bir eleman için veya tüm vektör için çalışabilirler.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "uygulama01.html#karşılaştırma-operatörleri",
+    "href": "uygulama01.html#karşılaştırma-operatörleri",
+    "title": "R Temelleri",
+    "section": "Karşılaştırma operatörleri",
+    "text": "Karşılaştırma operatörleri\nEşitlik ==, büyüktür &gt;, küçüktür &lt;, eşit değil != operatörleri bir vektöre uygulandığında, her bir eleman için karşılaştırma yapılır.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nSonuçlar logical/mantıksal (TRUE/FALSE) vektör olarak döndürülür. Bu sonuç vektörü, maske olarak kullanılabilir, yani indeks olarak kullanıldığında, “TRUE” değerlerin denk geldiği elemanlar gösterilebilir.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nFarkedildiği üzere, bu işlem sayesinde veri kümesinde filtreleme yapılmıştır."
+  },
+  {
+    "objectID": "uygulama01.html#sıralama",
+    "href": "uygulama01.html#sıralama",
+    "title": "R Temelleri",
+    "section": "Sıralama",
+    "text": "Sıralama\nsort() fonksiyonu ile vektörler sıralanabilir.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nSoru: ters yönde sıralama yapmak için ne yapılmalıdır?\norder() fonksiyonu ile de sıralama yapılabilir. Ancak bu fonksiyon doğrudan elemanları sıralamaz; bunun yerine, sıralı elemanların orijinal vektördeki indekslerini döndürür.\n\nTablolarda sütunları veya satırları sıralamak gerektiğinde kullanılır."
+  },
+  {
+    "objectID": "uygulama01.html#sıralama-1",
+    "href": "uygulama01.html#sıralama-1",
+    "title": "R Temelleri",
+    "section": "Sıralama",
+    "text": "Sıralama\nAşağıdaki kutuda my_vec[order(my_vec)] komutunu çalıştıp çıktısını sort() ile karşılaştırınız.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "uygulama01.html#na",
+    "href": "uygulama01.html#na",
+    "title": "R Temelleri",
+    "section": "NA",
+    "text": "NA\nNA “not available” anlamına gelir. Herhangi bir vektörde NA olması durumunda toplama, min/max gibi işlemlerin de NA olarak sonuçlanmasına neden olur.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nBu sorunu aşmak için na.rm=TRUE parametresi kullanılabilir.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "uygulama01.html#data-frame-veri-tablosuçerçevesi",
+    "href": "uygulama01.html#data-frame-veri-tablosuçerçevesi",
+    "title": "R Temelleri",
+    "section": "Data Frame / veri tablosu/çerçevesi",
+    "text": "Data Frame / veri tablosu/çerçevesi\nBir veri tablosu, aynı boydaki farklı vektörlerin sütun olarak birleşmesi olarak düşünülebilir. Bu veri yapısı en çok kullanılan veri yapısıdır. Aşağıdaki örnekte, iris veri seti kullanılmıştır.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "uygulama01.html#veri-tablosu-erişim",
+    "href": "uygulama01.html#veri-tablosu-erişim",
+    "title": "R Temelleri",
+    "section": "Veri tablosu / erişim",
+    "text": "Veri tablosu / erişim\nBir veri tablosundaki herhangi bir sütunun tamamına $sütun_adı şeklinde ulaşılabilir.\nVeri tablosunun belirli bir kısmına erişmek için [satır, sütun] şeklinde kullanılabilir.\niris$Species komutu Species sütununu vektör olarak elde eder. iris[1:5,] ilk 5 satırı elde eder. iris[1:5,1:2] şeklindeki komut, ilk 2 sütunu ve ilk 5 satırı elde eder.\nBir sonraki slaytta bahsi geçen komutları deneyiniz."
+  },
+  {
+    "objectID": "uygulama01.html#veri-tablosu-erişim-1",
+    "href": "uygulama01.html#veri-tablosu-erişim-1",
+    "title": "R Temelleri",
+    "section": "Veri tablosu / erişim",
+    "text": "Veri tablosu / erişim\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "uygulama01.html#veri-tablosu-işlemler",
+    "href": "uygulama01.html#veri-tablosu-işlemler",
+    "title": "R Temelleri",
+    "section": "Veri tablosu / işlemler",
+    "text": "Veri tablosu / işlemler\n\ndim(iris) komutu, veri setinin boyutlarını verir.(satır, sütun) şeklinde\nnrow(iris) komutu, veri setindeki satır sayısını verir.\nncol(iris) komutu, veri setindeki sütun sayısını verir.\nstr(iris) komutu, veri setinin yapısını, sütun tipleri ve ilk verileri gösterir.\nsummary(iris) komutu, veri setindeki istatistiksel ölçümleri verir.\n\nBir sonraki slaytta bahsi geçen komutları deneyiniz."
+  },
+  {
+    "objectID": "uygulama01.html#veri-tablosu-işlemler-1",
+    "href": "uygulama01.html#veri-tablosu-işlemler-1",
+    "title": "R Temelleri",
+    "section": "Veri tablosu / işlemler",
+    "text": "Veri tablosu / işlemler\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders04-claude.html#özet",
+    "href": "ders04-claude.html#özet",
+    "title": "Ders8: Güven Aralıkları ve Hipotez Testi",
+    "section": "Özet",
+    "text": "Özet\n\nGüven Aralığı (Confidence Interval) Kavramı\nGüven Aralığı Hesaplama\nHipotez Testi Temelleri\nTip I ve Tip II Hatalar\np-değeri Kavramı\nTek Örneklem Hipotez Testi"
+  },
+  {
+    "objectID": "ders04-claude.html#güven-aralığı-kavramı",
+    "href": "ders04-claude.html#güven-aralığı-kavramı",
+    "title": "Ders8: Güven Aralıkları ve Hipotez Testi",
+    "section": "Güven Aralığı Kavramı",
+    "text": "Güven Aralığı Kavramı\nGüven aralığı, bir popülasyon parametresi için olası değerlerin bir aralığıdır.\n\nBelirli bir güven düzeyi (genellikle %95) ile ifade edilir\nÖrneklem verisinden hesaplanır\nTahmin edilen parametre hakkında belirsizliği gösterir\n\n\n\n\nGüven aralığı örneklemi popülasyonla ilişkilendirir"
+  },
+  {
+    "objectID": "ders04-claude.html#güven-aralığının-yorumlanması",
+    "href": "ders04-claude.html#güven-aralığının-yorumlanması",
+    "title": "Ders8: Güven Aralıkları ve Hipotez Testi",
+    "section": "Güven Aralığının Yorumlanması",
+    "text": "Güven Aralığının Yorumlanması\n%95 güven aralığı şu anlama gelir:\n\nEğer aynı popülasyondan yüzlerce örneklem alıp her biri için güven aralığı hesaplarsak, bu aralıkların %95’i gerçek popülasyon parametresini içerecektir\nYanlış yorumlama: “Gerçek değerin bu aralıkta olma olasılığı %95’tir”\n\n\n\n\nFarklı örneklemlerden elde edilen güven aralıkları"
+  },
+  {
+    "objectID": "ders04-claude.html#ortalama-için-güven-aralığı-formülü",
+    "href": "ders04-claude.html#ortalama-için-güven-aralığı-formülü",
+    "title": "Ders8: Güven Aralıkları ve Hipotez Testi",
+    "section": "Ortalama için Güven Aralığı Formülü",
+    "text": "Ortalama için Güven Aralığı Formülü\nBir popülasyon ortalaması için %95 güven aralığı:\n\\[ \\bar{x} \\pm 1.96 \\times \\frac{\\sigma}{\\sqrt{n}} \\]\nBurada: * \\(\\bar{x}\\) = örneklem ortalaması * \\(\\sigma\\) = popülasyon standart sapması (bilinmiyorsa örneklem standart sapması \\(s\\) kullanılır) * \\(n\\) = örneklem büyüklüğü * \\(1.96\\) = %95 güven düzeyi için z-değeri\nPopülasyon standart sapması bilinmediğinde (genellikle):\n\\[ \\bar{x} \\pm t_{\\alpha/2, n-1} \\times \\frac{s}{\\sqrt{n}} \\]"
+  },
+  {
+    "objectID": "ders04-claude.html#rda-güven-aralığı-hesaplama",
+    "href": "ders04-claude.html#rda-güven-aralığı-hesaplama",
+    "title": "Ders8: Güven Aralıkları ve Hipotez Testi",
+    "section": "R’da Güven Aralığı Hesaplama",
+    "text": "R’da Güven Aralığı Hesaplama\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders04-claude.html#t.test-fonksiyonu-ile-güven-aralığı",
+    "href": "ders04-claude.html#t.test-fonksiyonu-ile-güven-aralığı",
+    "title": "Ders8: Güven Aralıkları ve Hipotez Testi",
+    "section": "t.test Fonksiyonu ile Güven Aralığı",
+    "text": "t.test Fonksiyonu ile Güven Aralığı\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders04-claude.html#güven-düzeyinin-etkisi",
+    "href": "ders04-claude.html#güven-düzeyinin-etkisi",
+    "title": "Ders8: Güven Aralıkları ve Hipotez Testi",
+    "section": "Güven Düzeyinin Etkisi",
+    "text": "Güven Düzeyinin Etkisi\nGüven düzeyi arttıkça güven aralığı genişler:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nFarklı güven düzeyleri için aralıklar"
+  },
+  {
+    "objectID": "ders04-claude.html#örneklem-büyüklüğünün-etkisi",
+    "href": "ders04-claude.html#örneklem-büyüklüğünün-etkisi",
+    "title": "Ders8: Güven Aralıkları ve Hipotez Testi",
+    "section": "Örneklem Büyüklüğünün Etkisi",
+    "text": "Örneklem Büyüklüğünün Etkisi\nÖrneklem büyüklüğü arttıkça güven aralığı daralır:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders04-claude.html#hipotez-testi-kavramı",
+    "href": "ders04-claude.html#hipotez-testi-kavramı",
+    "title": "Ders8: Güven Aralıkları ve Hipotez Testi",
+    "section": "Hipotez Testi Kavramı",
+    "text": "Hipotez Testi Kavramı\nHipotez testi, bir popülasyon parametresi hakkındaki iddianın (hipotezin) verilerle desteklenip desteklenmediğini belirlemek için kullanılan istatistiksel bir yöntemdir.\nTemel bileşenler:\n\nSıfır Hipotezi (H₀): Test edilen iddia (genellikle “fark yok” veya “etki yok” şeklinde)\nAlternatif Hipotez (H₁): Sıfır hipotezi doğru değilse geçerli olan alternatif\nTest İstatistiği: Verilerden hesaplanan bir değer\nKritik Değer veya p-değeri: Hipotezi reddetme veya kabul etme kararını verme kriteri"
+  },
+  {
+    "objectID": "ders04-claude.html#hipotez-testi-adımları",
+    "href": "ders04-claude.html#hipotez-testi-adımları",
+    "title": "Ders8: Güven Aralıkları ve Hipotez Testi",
+    "section": "Hipotez Testi Adımları",
+    "text": "Hipotez Testi Adımları\n\nHipotezleri belirle (H₀ ve H₁)\nAnlamlılık düzeyini seç (genellikle α = 0.05)\nUygun test istatistiğini seç ve hesapla\np-değerini hesapla\nKarar ver: p-değeri &lt; α ise H₀ reddedilir\n\n\n\n\nHipotez testi akış şeması"
+  },
+  {
+    "objectID": "ders04-claude.html#tip-i-ve-tip-ii-hatalar",
+    "href": "ders04-claude.html#tip-i-ve-tip-ii-hatalar",
+    "title": "Ders8: Güven Aralıkları ve Hipotez Testi",
+    "section": "Tip I ve Tip II Hatalar",
+    "text": "Tip I ve Tip II Hatalar\n\nTip I Hata (α): Doğru olan sıfır hipotezini yanlışlıkla reddetmek\n\n“Yanlış pozitif” olarak da bilinir\nOlasılığı anlamlılık düzeyi (α) ile kontrol edilir\n\nTip II Hata (β): Yanlış olan sıfır hipotezini reddetmeme\n\n“Yanlış negatif” olarak da bilinir\nİstatistiksel güç = 1 - β\n\n\n\n\n\nTip I ve Tip II hatalar"
+  },
+  {
+    "objectID": "ders04-claude.html#p-değeri-kavramı",
+    "href": "ders04-claude.html#p-değeri-kavramı",
+    "title": "Ders8: Güven Aralıkları ve Hipotez Testi",
+    "section": "p-değeri Kavramı",
+    "text": "p-değeri Kavramı\np-değeri, gözlenen sonuçların (veya daha aşırı sonuçların) sıfır hipotezi doğru olduğunda meydana gelme olasılığıdır.\n\nKüçük p-değeri (genellikle &lt; 0.05): Gözlenen veri sıfır hipotezi ile tutarsız\nBüyük p-değeri: Gözlenen veri sıfır hipotezi ile tutarlı\n\n\n\n\np-değeri kavramı"
+  },
+  {
+    "objectID": "ders04-claude.html#p-değeri-yorumlama",
+    "href": "ders04-claude.html#p-değeri-yorumlama",
+    "title": "Ders8: Güven Aralıkları ve Hipotez Testi",
+    "section": "p-değeri Yorumlama",
+    "text": "p-değeri Yorumlama\n\np &lt; 0.05: “İstatistiksel olarak anlamlı” (H₀ reddedilir)\np ≥ 0.05: “İstatistiksel olarak anlamlı değil” (H₀ reddedilemez)\n\nYaygın Yanlış Anlamalar: * p-değeri, hipotezin doğru olma olasılığı değildir * İstatistiksel anlamlılık her zaman pratik anlamlılık demek değildir * p-değeri büyükse “fark yok” kanıtlanmış olmaz"
+  },
+  {
+    "objectID": "ders04-claude.html#tek-örneklem-t-testi",
+    "href": "ders04-claude.html#tek-örneklem-t-testi",
+    "title": "Ders8: Güven Aralıkları ve Hipotez Testi",
+    "section": "Tek Örneklem t-testi",
+    "text": "Tek Örneklem t-testi\nBir örneklemin ortalamasının belirli bir değerden farklı olup olmadığını test eder.\nHipotezler: * H₀: μ = μ₀ (popülasyon ortalaması belirli bir değere eşittir) * H₁: μ ≠ μ₀ (iki yönlü) veya μ &gt; μ₀ ya da μ &lt; μ₀ (tek yönlü)\nTest İstatistiği: \\[ t = \\frac{\\bar{x} - \\mu_0}{\\frac{s}{\\sqrt{n}}} \\]"
+  },
+  {
+    "objectID": "ders04-claude.html#rda-tek-örneklem-t-testi",
+    "href": "ders04-claude.html#rda-tek-örneklem-t-testi",
+    "title": "Ders8: Güven Aralıkları ve Hipotez Testi",
+    "section": "R’da Tek Örneklem t-testi",
+    "text": "R’da Tek Örneklem t-testi\nÖrnek: Bir grup farenin ortalama ağırlığının 25 gram olduğu hipotezini test edelim.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders04-claude.html#hipotez-testi-çeşitleri",
+    "href": "ders04-claude.html#hipotez-testi-çeşitleri",
+    "title": "Ders8: Güven Aralıkları ve Hipotez Testi",
+    "section": "Hipotez Testi Çeşitleri",
+    "text": "Hipotez Testi Çeşitleri\n\n\n\nYaygın hipotez testleri"
+  },
+  {
+    "objectID": "ders04-claude.html#örnek-senaryo-gen-ekspresyonu",
+    "href": "ders04-claude.html#örnek-senaryo-gen-ekspresyonu",
+    "title": "Ders8: Güven Aralıkları ve Hipotez Testi",
+    "section": "Örnek Senaryo: Gen Ekspresyonu",
+    "text": "Örnek Senaryo: Gen Ekspresyonu\nBir gen terapisinin bir genin ekspresyon seviyesini artırdığı iddia ediliyor. Normal ekspresyon seviyesi 15 birim olarak biliniyor. 12 hasta üzerinde yapılan tedavi sonrası ölçümler:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nSonuç yorumu: p-değeri 0.05’ten küçük olduğu için, tedavinin gen ekspresyonunu artırdığı hipotezini desteklemekteyiz."
+  },
+  {
+    "objectID": "ders04-claude.html#güven-aralığı-ve-hipotez-testi-ilişkisi",
+    "href": "ders04-claude.html#güven-aralığı-ve-hipotez-testi-ilişkisi",
+    "title": "Ders8: Güven Aralıkları ve Hipotez Testi",
+    "section": "Güven Aralığı ve Hipotez Testi İlişkisi",
+    "text": "Güven Aralığı ve Hipotez Testi İlişkisi\nGüven aralığı ve hipotez testi birbirini tamamlayıcı yaklaşımlardır:\n\nEğer %95 güven aralığı test edilen değeri (μ₀) içermiyorsa, α = 0.05 için hipotez testi de H₀’ı reddeder\nGüven aralığı, etki büyüklüğü hakkında daha fazla bilgi verir\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders04-claude.html#biyolojik-bilimler-için-önemi",
+    "href": "ders04-claude.html#biyolojik-bilimler-için-önemi",
+    "title": "Ders8: Güven Aralıkları ve Hipotez Testi",
+    "section": "Biyolojik Bilimler için Önemi",
+    "text": "Biyolojik Bilimler için Önemi\nGüven aralıkları ve hipotez testleri biyolojik bilimlerde çok önemlidir:\n\nİlaç çalışmaları: Bir ilacın etkili olup olmadığını belirlemek\nGen ekspresyon analizleri: Farklı koşullar altında gen ekspresyonunu karşılaştırmak\nKlinik araştırmalar: Tedavi etkinliğini değerlendirmek\nEkolojik çalışmalar: Tür çeşitliliğindeki değişimleri incelemek\n\nAncak p-değerine aşırı bağımlılık, tekrarlanabilirlik krizi gibi sorunlara yol açmıştır."
+  },
+  {
+    "objectID": "ders04-claude.html#pratik-ipuçları",
+    "href": "ders04-claude.html#pratik-ipuçları",
+    "title": "Ders8: Güven Aralıkları ve Hipotez Testi",
+    "section": "Pratik İpuçları",
+    "text": "Pratik İpuçları\n\nHipotez testi tek başına yeterli değildir - etki büyüklüğü ve güven aralıklarını da raporlayın\nDüşük p-değeri her zaman büyük etki anlamına gelmez\nÖrneklem büyüklüğü arttıkça küçük etkiler bile istatistiksel olarak anlamlı görünebilir\nÇoklu test düzeltmesi (Bonferroni, FDR, vb.) kullanmayı unutmayın\nSonuçları biyolojik bağlamda yorumlayın"
+  },
+  {
+    "objectID": "ders04-claude.html#soru",
+    "href": "ders04-claude.html#soru",
+    "title": "Ders8: Güven Aralıkları ve Hipotez Testi",
+    "section": "Soru",
+    "text": "Soru\nBir laboratuvar, geliştirdiği yeni bir ilacın hücre büyümesini arttırdığını iddia ediyor. Standart koşullarda hücre büyümesi ortalama 12 μm/saat’tir. Yeni ilaçla tedavi edilen 15 hücre örneğinde elde edilen büyüme oranları (μm/saat):\n14.2, 13.7, 13.1, 12.8, 14.5, 15.2, 13.4, 14.3, 12.9, 13.6, 14.8, 13.9, 14.1, 13.5, 13.3\nİlacın hücre büyümesini arttırdığını α = 0.05 düzeyinde test edin ve sonuçları yorumlayın.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders05-old.html#slide1",
+    "href": "ders05-old.html#slide1",
+    "title": "Ders5: Başlık",
+    "section": "slide1",
+    "text": "slide1\n\nt-dağılımı (düz çizgi) ve normal dağılım karşılaştırması"
+  },
+  {
+    "objectID": "ders05-old.html#slide2",
+    "href": "ders05-old.html#slide2",
+    "title": "Ders5: Başlık",
+    "section": "slide2",
+    "text": "slide2\n\nimage-20240327044422037df (serbestlik derecesi ) arttıkça, t-dağılımı normal dağılıma yaklaşmaktadır"
+  },
+  {
+    "objectID": "ders05-old.html#slide3",
+    "href": "ders05-old.html#slide3",
+    "title": "Ders5: Başlık",
+    "section": "slide3",
+    "text": "slide3\n\nimage-20240327044528724t-tablosu"
+  },
+  {
+    "objectID": "ders05-old.html#slide4",
+    "href": "ders05-old.html#slide4",
+    "title": "Ders5: Başlık",
+    "section": "slide4",
+    "text": "slide4\n\ndf=18 için, -2.10 altında kalan alan boyanmıştır. t-dağılımının ne kadarı -2.10 altında kalır?\n\ndf=20 iken, t-dağılımının ne kadarı -1.60’tan küçük ve 1.60’tan büyüktür?\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders05-old.html#slide5",
+    "href": "ders05-old.html#slide5",
+    "title": "Ders5: Başlık",
+    "section": "slide5",
+    "text": "slide5\nçift yönlü 100(1-\\(\\alpha\\))% güven aralığı için formül:\n\nSE = s / \\(\\sqrt{n}\\)\nTek yönlü olması durumunda\n\n\n\nimage-20240327051040495"
+  },
+  {
+    "objectID": "ders05-old.html#slide6",
+    "href": "ders05-old.html#slide6",
+    "title": "Ders5: Başlık",
+    "section": "slide6",
+    "text": "slide6\nYunuslarda civa miktarı üzerine yapılan çalışmada, Japonya’nın Taiji bölgesinden rastgele seçilen 19 adet yunusta civa miktarına dair bilgiler şu şekildedir.\n\nOrtalama civa miktarı için %95 güven aralığını hesaplayınız.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders05-old.html#slide7",
+    "href": "ders05-old.html#slide7",
+    "title": "Ders5: Başlık",
+    "section": "slide7",
+    "text": "slide7"
   },
   {
     "objectID": "index.html",
@@ -1188,5 +1272,12 @@
     "title": "Ders3: Dağılımlar - Uygulama",
     "section": "Soru 3",
     "text": "Soru 3\nBir DNA parçasının başarılı bir şekilde PCR ile çoğaltılma olasılığının 0.9 olduğunu varsayalım. İlk başarılı çoğaltmanın ilk 5 denemede olma olasılığı nedir?\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders05-uygulama.html",
+    "href": "ders05-uygulama.html",
+    "title": "Ders 5 Uygulama: t-Testi ve Örneklerle Uygulamaları",
+    "section": "",
+    "text": "boxplot(Sepal.Width ~ Species, data=iris)\n\n\n\n\n\n\n\n\n\nVersicolor Sepal genişlik 3’ten farklı mıdır?\nVersicolor ve Virginica arasında fark var mıdır?"
   }
 ]
