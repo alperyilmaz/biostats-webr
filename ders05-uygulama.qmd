@@ -1,0 +1,129 @@
+---
+title: "Ders 5 Uygulama: t-Testi ve Örneklerle Uygulamaları"
+subtitle: "MBG1032 - Doç.Dr. Alper YILMAZ"
+format:
+  revealjs:
+    chalkboard: true
+    css: custom.css
+    smaller: true
+    scrollable: true
+webr:
+  packages: ['ggplot2', 'dplyr'] # Install R packages on document open
+filters:
+  - webr
+engine: knitr
+---
+
+## Iris verisi
+
+```{r}
+boxplot(Sepal.Width ~ Species, data=iris)
+```
+
+* Versicolor Sepal genişlik 3'ten farklı mıdır?
+* Versicolor ve Virginica arasında fark var mıdır?
+
+## Tek örnek t-testi
+
+Sadece Versicolor Sepal genişlik verisini alıp 3 ile karşılaştıralım
+
+```{webr-r}
+versi <- subset(iris,Species=="versicolor")
+
+# tek örnek test data$Sepal.Width için
+```
+
+<!-- t.test(versi$Sepal.Width, mu=3) -->
+
+## İki örnek t-testi
+
+### R'da t-testi
+
+İki yaklaşım var
+
+* t.test(data1, data2)
+* t.test(Olcum ~ Grup)
+
+## 
+
+```{webr-r}
+versi <- subset(iris,Species=="versicolor")
+virgi <- subset(iris,Species=="virginica")
+
+# her iksi için Sepal.Width ölçümlerini karşılaştrınız
+```
+<!-- t.test(versi$Sepal.Width, virgi$Sepal.Width) -->
+
+##
+
+```{webr-r}
+data <- subset(iris,Species!="setosa")
+
+# data tablosundan, Species grupları arasında Sepal.Width için fark var mıdır?
+
+
+```
+<!-- t.test(Sepal.Width ~ Species, data=data) -->
+
+## Excel'de T.test
+
+Aynı testleri iris verisi için yapınız. [Dosya link](files/iris.xlsx)
+
+## İki örnek t-testi (bağımlı/ilişkili)
+
+İlaç1 ve ilaç2 arasında uykuya etki açısından fark var mıdır?
+
+```{webr-r}
+sleep
+```
+
+Veriyi düzenlemek gerek
+
+##
+
+```{webr-r}
+group1 <- sleep$extra[sleep$group == 1]
+group2 <- sleep$extra[sleep$group == 2]
+
+#bağımlı t-test gerçekleştiriniz
+```
+
+<!-- t.test(group1, group2, paired = TRUE) -->
+
+## Tek yönlü bağımlı test
+
+İlaç2 uykuya etkisi "daha çok" şeklindeki hipotez için t.test uygulayınız.
+
+```{webr-r}
+t.test(____, ____, _____)
+
+
+```
+<!-- t.test(group2, group1, paired = TRUE, alternative = "greater") -->
+
+## Ekstra sorular
+
+`PlantGrowth` verisinde, `ctrl` ve `trt1` arasında fark olup olmadığını test ediniz.
+
+```{webr-r}
+PlantGrowth
+
+```
+
+## Ekstra sorular2
+
+`chickwts` verisinde **soybean** veya **casein** ile besleme arasında fark var mıdır, test ediniz.
+
+```{webr-r}
+chickwts
+
+```
+
+## 
+
+**soybean** ve **linseed** ile besleme arasında fark var mıdır?
+
+```{webr-r}
+boxplot(weight ~ feed, data=chickwts)
+
+```
