@@ -9,7 +9,7 @@
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.6.40">
 
-  <title>MBG1032 Biyoistatistik – Ders6: T-testi</title>
+  <title>MBG1032 Biyoistatistik – Ders 7: ANOVA (Varyans Analizi)</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -124,21 +124,1429 @@
       margin-right: 0; 
     }
   </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/monaco-editor@0.45.0/min/vs/editor/editor.main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    
+  <style type="text/css">
+  .monaco-editor pre {
+    background-color: unset !important;
+  }
+
+  .qwebr-editor-toolbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+  }
+
+  .qwebr-editor-toolbar-left-buttons, .qwebr-editor-toolbar-right-buttons {
+    display: flex;
+  }
+
+  .qwebr-non-interactive-loading-container.qwebr-cell-needs-evaluation, .qwebr-non-interactive-loading-container.qwebr-cell-evaluated {
+    justify-content: center;
+    display: flex;
+    background-color: rgba(250, 250, 250, 0.65);
+    border: 1px solid rgba(233, 236, 239, 0.65);
+    border-radius: 0.5rem;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+
+  .qwebr-r-project-logo {
+    color: #2767B0; /* R Project's blue color */
+  }
+
+  .qwebr-icon-status-spinner {
+    color: #7894c4;
+  }
+
+  .qwebr-icon-run-code {
+    color: #0d9c29
+  }
+
+  .qwebr-output-code-stdout {
+    color: #111;
+  }
+
+  .qwebr-output-code-stderr {
+    color: #db4133;
+  }
+
+  .qwebr-editor {
+    border: 1px solid #EEEEEE;
+  }
+
+  .qwebr-editor-toolbar {
+    background-color: #EEEEEE;
+    padding: 0.2rem 0.5rem;
+  }
+
+  .qwebr-button {
+    background-color: #EEEEEE;
+    display: inline-block;
+    font-weight: 400;
+    line-height: 1;
+    text-decoration: none;
+    text-align: center;
+    color: #000;
+    border-color: #dee2e6;
+    border: 1px solid rgba(0,0,0,0);
+    padding: 0.375rem 0.75rem;
+    font-size: .9rem;
+    border-radius: 0.25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  }
+
+  .qwebr-button:hover {
+    color: #000;
+    background-color: #d9dce0;
+    border-color: #c8ccd0;
+  }
+
+  .qwebr-button:disabled,.qwebr-button.disabled,fieldset:disabled .qwebr-button {
+    pointer-events: none;
+    opacity: .65
+  }
+
+  .qwebr-button-reset {
+    color: #696969; /*#4682b4;*/
+  }
+
+  .qwebr-button-copy {
+    color: #696969;
+  }
+
+
+  /* Custom styling for RevealJS Presentations*/
+
+  /* Reset the style of the interactive area */
+  .reveal div.qwebr-interactive-area {
+    display: block;
+    box-shadow: none;
+    max-width: 100%;
+    max-height: 100%;
+    margin: 0;
+    padding: 0;
+  } 
+
+  /* Provide space to entries */
+  .reveal div.qwebr-output-code-area pre div {
+    margin: 1px 2px 1px 10px;
+  }
+
+  /* Collapse the inside code tags to avoid extra space between line outputs */
+  .reveal pre div code.qwebr-output-code-stdout, .reveal pre div code.qwebr-output-code-stderr {
+    padding: 0;
+    display: contents;
+  }
+
+  .reveal pre div code.qwebr-output-code-stdout {
+    color: #111;
+  }
+
+  .reveal pre div code.qwebr-output-code-stderr {
+    color: #db4133;
+  }
+
+
+  /* Create a border around console and output (does not effect graphs) */
+  .reveal div.qwebr-console-area {
+    border: 1px solid #EEEEEE;
+    box-shadow: 2px 2px 10px #EEEEEE;
+  }
+
+  /* Cap output height and allow text to scroll */
+  /* TODO: Is there a better way to fit contents/max it parallel to the monaco editor size? */
+  .reveal div.qwebr-output-code-area pre {
+    max-height: 400px;
+    overflow: scroll;
+  }
+
+  </style>
+  <script type="module">
+  // Document level settings ----
+
+  // Determine if we need to install R packages
+  globalThis.qwebrInstallRPackagesList = ['ggplot2'];
+
+  // Specify possible locations to search for the repository
+  globalThis.qwebrPackageRepoURLS = ['https://repo.r-wasm.org/'];
+
+  // Check to see if we have an empty array, if we do set to skip the installation.
+  globalThis.qwebrSetupRPackages = !(qwebrInstallRPackagesList.indexOf("") !== -1);
+  globalThis.qwebrAutoloadRPackages = true;
+
+  // Display a startup message?
+  globalThis.qwebrShowStartupMessage = true;
+  globalThis.qwebrShowHeaderMessage = false;
+
+  // Describe the webR settings that should be used
+  globalThis.qwebrCustomizedWebROptions = {
+    "baseURL": "https://webr.r-wasm.org/v0.2.2/",
+    "serviceWorkerUrl": "",
+    "homedir": "/home/web_user", 
+    "channelType": "ChannelType.Automatic"
+  };
+
+  // Store cell data
+  globalThis.qwebrCellDetails = [{"code":"# Veri setimiizi oluşturalım\ngubreler <- c(rep(\"A\", 8), rep(\"B\", 8), rep(\"C\", 8))\nboylar <- c(\n  # Gübre A ile büyütülen bitkiler\n  65, 72, 68, 70, 69, 71, 65, 67,\n  # Gübre B ile büyütülen bitkiler\n  75, 79, 78, 80, 82, 75, 77, 76,\n  # Gübre C ile büyütülen bitkiler\n  70, 72, 74, 71, 69, 68, 75, 73\n)\n\n# Verileri bir data frame'e dönüştürelim\nveriler <- data.frame(\n  Gübre = factor(gubreler),\n  Boy = boylar\n)","id":1,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-1","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# Verilere göz atalım\nhead(veriler)\n\n# Gruplar için özet istatistikler\ntapply(veriler$Boy, veriler$Gübre, summary)\ntapply(veriler$Boy, veriler$Gübre, sd)","id":2,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-2","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# Tek Yönlü ANOVA\nanova_sonuc <- aov(Boy ~ Gübre, data = veriler)\n\n# ANOVA tablosunu görelim\nsummary(anova_sonuc)","id":3,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-3","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# ANOVA detaylarını görelim\nmodel <- anova_sonuc\n\n# ANOVA tablosundaki değerleri manuel olarak görelim\nSSB <- sum((tapply(veriler$Boy, veriler$Gübre, mean) - mean(veriler$Boy))^2 * table(veriler$Gübre))\nSSW <- sum(resid(model)^2)\nSST <- SSB + SSW\n\ncat(\\\"Gruplar Arası Kareler Toplamı (SSB):\\\", round(SSB, 2), \\\"\\\n\\\")\ncat(\\\"Gruplar İçi Kareler Toplamı (SSW):\\\", round(SSW, 2), \\\"\\\n\\\")\ncat(\\\"Toplam Kareler Toplamı (SST):\\\", round(SST, 2), \\\"\\\n\\\n\\\")\n\ncat(\\\"Gruplar Arası Serbestlik Derecesi:\\\", length(unique(veriler$Gübre)) - 1, \\\"\\\n\\\")\ncat(\\\"Gruplar İçi Serbestlik Derecesi:\\\", nrow(veriler) - length(unique(veriler$Gübre)), \\\"\\\n\\\")\ncat(\\\"Toplam Serbestlik Derecesi:\\\", nrow(veriler) - 1, \\\"\\\n\\\n\\\")\n\nMSB <- SSB / (length(unique(veriler$Gübre)) - 1)\nMSW <- SSW / (nrow(veriler) - length(unique(veriler$Gübre)))\n\ncat(\\\"Gruplar Arası Ortalama Kareler (MSB):\\\", round(MSB, 2), \\\"\\\n\\\")\ncat(\\\"Gruplar İçi Ortalama Kareler (MSW):\\\", round(MSW, 2), \\\"\\\n\\\n\\\")\n\nF_value <- MSB / MSW\ncat(\\\"F değeri:\\\", round(F_value, 2), \\\"\\\n\\\")\n\np_value <- summary(model)[[1]]$'Pr(>F)'[1]\ncat(\\\"p değeri:\\\", format.pval(p_value, digits = 3), \\\"\\\n\\\")","id":4,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-4","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# Grup ortalamalarını görelim\nmeans <- tapply(veriler$Boy, veriler$Gübre, mean)\nsds <- tapply(veriler$Boy, veriler$Gübre, sd)\n\n# Barplot\nbarplot(means, ylim=c(0, max(means) + max(sds) + 5),\n        col=c(\\\"lightgreen\\\", \\\"lightblue\\\", \\\"lightyellow\\\"),\n        main=\\\"Gübre Türlerine Göre Ortalama Bitki Boyları\\\",\n        ylab=\\\"Ortalama Boy (cm)\\\", xlab=\\\"Gübre Türü\\\")\n\n# Standart sapmalar için hata çubukları\narrows(x0 = 1:3 * 0.7, y0 = means - sds, \n       x1 = 1:3 * 0.7, y1 = means + sds, \n       angle=90, code=3, length=0.1)","id":5,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-5","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# Tukey HSD testi uygulayalım\ntukey_sonuc <- TukeyHSD(anova_sonuc)\nprint(tukey_sonuc)\n\n# Güven aralıkları ile görselleştirelim\nplot(tukey_sonuc, las=1)","id":6,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-6","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# iris veri setini yükleyelim\ndata(iris)\n\n# Özet istatistikler\ntapply(iris$Petal.Length, iris$Species, summary)\ntapply(iris$Petal.Length, iris$Species, sd)\n\n# ANOVA analizi\niris_anova <- aov(Petal.Length ~ Species, data = iris)\nsummary(iris_anova)","id":7,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-7","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# Boxplot\nboxplot(Petal.Length ~ Species, data = iris, \n        col=c(\\\"pink\\\", \\\"lightblue\\\", \\\"lightgreen\\\"),\n        main=\\\"Iris Türlerine Göre Taç Yaprak Boyları\\\",\n        ylab=\\\"Taç Yaprak Boyu (cm)\\\")\n\n# Post-hoc test\ntukey_sonuc <- TukeyHSD(iris_anova)\nprint(tukey_sonuc)","id":8,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-8","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}}];
+
+  </script>
+  <script type="module">
+  // Declare startupMessageQWebR globally
+  globalThis.qwebrStartupMessage = document.createElement("p");
+
+
+  // Function to set the button text
+  globalThis.qwebrSetInteractiveButtonState = function(buttonText, enableCodeButton = true) {
+    document.querySelectorAll(".qwebr-button-run").forEach((btn) => {
+      btn.innerHTML = buttonText;
+      btn.disabled = !enableCodeButton;
+    });
+  }
+
+  // Function to update the status message in non-interactive cells
+  globalThis.qwebrUpdateStatusMessage = function(message) {
+    document.querySelectorAll(".qwebr-status-text.qwebr-cell-needs-evaluation").forEach((elem) => {
+      elem.innerText = message;
+    });
+  }
+
+  // Function to update the status message
+  globalThis.qwebrUpdateStatusHeader = function(message) {
+    qwebrStartupMessage.innerHTML = `
+      <i class="fa-solid fa-spinner fa-spin qwebr-icon-status-spinner"></i>
+      <span>${message}</span>`;
+  }
+
+  // Function that attaches the document status message and diagnostics
+  function displayStartupMessage(showStartupMessage, showHeaderMessage) {
+    if (!showStartupMessage) {
+      return;
+    }
+
+    // Get references to header elements
+    const headerHTML = document.getElementById("title-block-header");
+    const headerRevealJS = document.getElementById("title-slide");
+
+    // Create the outermost div element for metadata
+    const quartoTitleMeta = document.createElement("div");
+    quartoTitleMeta.classList.add("quarto-title-meta");
+
+    // Create the first inner div element
+    const firstInnerDiv = document.createElement("div");
+    firstInnerDiv.setAttribute("id", "qwebr-status-message-area");
+
+    // Create the second inner div element for "WebR Status" heading and contents
+    const secondInnerDiv = document.createElement("div");
+    secondInnerDiv.setAttribute("id", "qwebr-status-message-title");
+    secondInnerDiv.classList.add("quarto-title-meta-heading");
+    secondInnerDiv.innerText = "WebR Status";
+
+    // Create another inner div for contents
+    const secondInnerDivContents = document.createElement("div");
+    secondInnerDivContents.setAttribute("id", "qwebr-status-message-body");
+    secondInnerDivContents.classList.add("quarto-title-meta-contents");
+
+    // Describe the WebR state
+    qwebrStartupMessage.innerText = "🟡 Loading...";
+    qwebrStartupMessage.setAttribute("id", "qwebr-status-message-text");
+    // Add `aria-live` to auto-announce the startup status to screen readers
+    qwebrStartupMessage.setAttribute("aria-live", "assertive");
+
+    // Append the startup message to the contents
+    secondInnerDivContents.appendChild(qwebrStartupMessage);
+
+    // Add a status indicator for COOP and COEP Headers if needed
+    if (showHeaderMessage) {
+      const crossOriginMessage = document.createElement("p");
+      crossOriginMessage.innerText = `${crossOriginIsolated ? '🟢' : '🟡'} COOP & COEP Headers`;
+      crossOriginMessage.setAttribute("id", "qwebr-coop-coep-header");
+      secondInnerDivContents.appendChild(crossOriginMessage);
+    }
+
+    // Combine the inner divs and contents
+    firstInnerDiv.appendChild(secondInnerDiv);
+    firstInnerDiv.appendChild(secondInnerDivContents);
+    quartoTitleMeta.appendChild(firstInnerDiv);
+
+    // Determine where to insert the quartoTitleMeta element
+    if (headerHTML || headerRevealJS) {
+      // Append to the existing "title-block-header" element or "title-slide" div
+      (headerHTML || headerRevealJS).appendChild(quartoTitleMeta);
+    } else {
+      // If neither headerHTML nor headerRevealJS is found, insert after "webr-monaco-editor-init" script
+      const monacoScript = document.getElementById("qwebr-monaco-editor-init");
+      const header = document.createElement("header");
+      header.setAttribute("id", "title-block-header");
+      header.appendChild(quartoTitleMeta);
+      monacoScript.after(header);
+    }
+  }
+
+  displayStartupMessage(qwebrShowStartupMessage, qwebrShowHeaderMessage);
+  </script>
+  <script type="module">
+  // Supported Evaluation Types for Context
+  globalThis.EvalTypes = Object.freeze({
+    Interactive: 'interactive',
+    Setup: 'setup',
+    Output: 'output',
+  });
+
+  // Function that dispatches the creation request
+  globalThis.qwebrCreateHTMLElement = function (
+    cellData
+  ) {
+
+    // Extract key components
+    const evalType = cellData.options.context;
+    const qwebrCounter = cellData.id;
+
+    // We make an assumption that insertion points are defined by the Lua filter as:
+    // qwebr-insertion-location-{qwebrCounter} 
+    const elementLocator = document.getElementById(`qwebr-insertion-location-${qwebrCounter}`);
+
+    // Figure out the routine to use to insert the element.
+    let qwebrElement;
+    switch ( evalType ) {
+      case EvalTypes.Interactive:
+        qwebrElement = qwebrCreateInteractiveElement(qwebrCounter, cellData.options);
+        break;
+      case EvalTypes.Output: 
+        qwebrElement = qwebrCreateNonInteractiveOutputElement(qwebrCounter, cellData.options);
+        break;
+      case EvalTypes.Setup: 
+        qwebrElement = qwebrCreateNonInteractiveSetupElement(qwebrCounter, cellData.options);
+        break;
+      default: 
+        qwebrElement = document.createElement('div');
+        qwebrElement.textContent = 'Error creating `quarto-webr` element';
+    }
+
+    // Insert the dynamically generated object at the document location.
+    elementLocator.appendChild(qwebrElement);
+  };
+
+  // Function that setups the interactive element creation
+  globalThis.qwebrCreateInteractiveElement = function (qwebrCounter, qwebrOptions) {
+
+    // Create main div element
+    var mainDiv = document.createElement('div');
+    mainDiv.id = 'qwebr-interactive-area-' + qwebrCounter;
+    mainDiv.className = `qwebr-interactive-area`;
+    if (qwebrOptions.classes) {
+      mainDiv.className += " " + qwebrOptions.classes
+    }
+
+    // Add a unique cell identifier that users can customize
+    if (qwebrOptions.label) {
+      mainDiv.setAttribute('data-id', qwebrOptions.label);
+    }
+
+    // Create toolbar div
+    var toolbarDiv = document.createElement('div');
+    toolbarDiv.className = 'qwebr-editor-toolbar';
+    toolbarDiv.id = 'qwebr-editor-toolbar-' + qwebrCounter;
+
+    // Create a div to hold the left buttons
+    var leftButtonsDiv = document.createElement('div');
+    leftButtonsDiv.className = 'qwebr-editor-toolbar-left-buttons';
+
+    // Create a div to hold the right buttons
+    var rightButtonsDiv = document.createElement('div');
+    rightButtonsDiv.className = 'qwebr-editor-toolbar-right-buttons';
+
+    // Create Run Code button
+    var runCodeButton = document.createElement('button');
+    runCodeButton.className = 'btn btn-default qwebr-button qwebr-button-run';
+    runCodeButton.disabled = true;
+    runCodeButton.type = 'button';
+    runCodeButton.id = 'qwebr-button-run-' + qwebrCounter;
+    runCodeButton.textContent = '🟡 Loading webR...';
+    runCodeButton.title = `Run code (Shift + Enter)`;
+
+    // Append buttons to the leftButtonsDiv
+    leftButtonsDiv.appendChild(runCodeButton);
+
+    // Create Reset button
+    var resetButton = document.createElement('button');
+    resetButton.className = 'btn btn-light btn-xs qwebr-button qwebr-button-reset';
+    resetButton.type = 'button';
+    resetButton.id = 'qwebr-button-reset-' + qwebrCounter;
+    resetButton.title = 'Start over';
+    resetButton.innerHTML = '<i class="fa-solid fa-arrows-rotate"></i>';
+
+    // Create Copy button
+    var copyButton = document.createElement('button');
+    copyButton.className = 'btn btn-light btn-xs qwebr-button qwebr-button-copy';
+    copyButton.type = 'button';
+    copyButton.id = 'qwebr-button-copy-' + qwebrCounter;
+    copyButton.title = 'Copy code';
+    copyButton.innerHTML = '<i class="fa-regular fa-copy"></i>';
+
+    // Append buttons to the rightButtonsDiv
+    rightButtonsDiv.appendChild(resetButton);
+    rightButtonsDiv.appendChild(copyButton);
+
+    // Create console area div
+    var consoleAreaDiv = document.createElement('div');
+    consoleAreaDiv.id = 'qwebr-console-area-' + qwebrCounter;
+    consoleAreaDiv.className = 'qwebr-console-area';
+
+    // Create editor div
+    var editorDiv = document.createElement('div');
+    editorDiv.id = 'qwebr-editor-' + qwebrCounter;
+    editorDiv.className = 'qwebr-editor';
+
+    // Create output code area div
+    var outputCodeAreaDiv = document.createElement('div');
+    outputCodeAreaDiv.id = 'qwebr-output-code-area-' + qwebrCounter;
+    outputCodeAreaDiv.className = 'qwebr-output-code-area';
+    outputCodeAreaDiv.setAttribute('aria-live', 'assertive');
+
+    // Create pre element inside output code area
+    var preElement = document.createElement('pre');
+    preElement.style.visibility = 'hidden';
+    outputCodeAreaDiv.appendChild(preElement);
+
+    // Create output graph area div
+    var outputGraphAreaDiv = document.createElement('div');
+    outputGraphAreaDiv.id = 'qwebr-output-graph-area-' + qwebrCounter;
+    outputGraphAreaDiv.className = 'qwebr-output-graph-area';
+
+    // Append buttons to the toolbar
+    toolbarDiv.appendChild(leftButtonsDiv);
+    toolbarDiv.appendChild(rightButtonsDiv);
+
+    // Append all elements to the main div
+    mainDiv.appendChild(toolbarDiv);
+    consoleAreaDiv.appendChild(editorDiv);
+    consoleAreaDiv.appendChild(outputCodeAreaDiv);
+    mainDiv.appendChild(consoleAreaDiv);
+    mainDiv.appendChild(outputGraphAreaDiv);
+
+    return mainDiv;
+  }
+
+  // Function that adds output structure for non-interactive output
+  globalThis.qwebrCreateNonInteractiveOutputElement = function(qwebrCounter, qwebrOptions) {
+    // Create main div element
+    var mainDiv = document.createElement('div');
+    mainDiv.id = 'qwebr-noninteractive-area-' + qwebrCounter;
+    mainDiv.className = `qwebr-noninteractive-area`;
+    if (qwebrOptions.classes) {
+      mainDiv.className += " " + qwebrOptions.classes
+    }
+    
+    // Add a unique cell identifier that users can customize
+    if (qwebrOptions.label) {
+      mainDiv.setAttribute('data-id', qwebrOptions.label);
+    }
+    
+    // Create a status container div
+    var statusContainer = createLoadingContainer(qwebrCounter);
+
+    // Create output code area div
+    var outputCodeAreaDiv = document.createElement('div');
+    outputCodeAreaDiv.id = 'qwebr-output-code-area-' + qwebrCounter;
+    outputCodeAreaDiv.className = 'qwebr-output-code-area';
+    outputCodeAreaDiv.setAttribute('aria-live', 'assertive');
+
+    // Create pre element inside output code area
+    var preElement = document.createElement('pre');
+    preElement.style.visibility = 'hidden';
+    outputCodeAreaDiv.appendChild(preElement);
+
+    // Create output graph area div
+    var outputGraphAreaDiv = document.createElement('div');
+    outputGraphAreaDiv.id = 'qwebr-output-graph-area-' + qwebrCounter;
+    outputGraphAreaDiv.className = 'qwebr-output-graph-area';
+
+    // Append all elements to the main div
+    mainDiv.appendChild(statusContainer);
+    mainDiv.appendChild(outputCodeAreaDiv);
+    mainDiv.appendChild(outputGraphAreaDiv);
+
+    return mainDiv;
+  };
+
+  // Function that adds a stub in the page to indicate a setup cell was used.
+  globalThis.qwebrCreateNonInteractiveSetupElement = function(qwebrCounter, qwebrOptions) {
+    // Create main div element
+    var mainDiv = document.createElement('div');
+    mainDiv.id = `qwebr-noninteractive-setup-area-${qwebrCounter}`;
+    mainDiv.className = `qwebr-noninteractive-setup-area`;
+    if (qwebrOptions.classes) {
+      mainDiv.className += " " + qwebrOptions.classes
+    }
+
+
+    // Add a unique cell identifier that users can customize
+    if (qwebrOptions.label) {
+      mainDiv.setAttribute('data-id', qwebrOptions.label);
+    }
+
+    // Create a status container div
+    var statusContainer = createLoadingContainer(qwebrCounter);
+
+    // Append status onto the main div
+    mainDiv.appendChild(statusContainer);
+
+    return mainDiv;
+  }
+
+
+  // Function to create loading container with specified ID
+  globalThis.createLoadingContainer = function(qwebrCounter) {
+
+    // Create a status container
+    const container = document.createElement('div');
+    container.id = `qwebr-non-interactive-loading-container-${qwebrCounter}`;
+    container.className = 'qwebr-non-interactive-loading-container qwebr-cell-needs-evaluation';
+
+    // Create an R project logo to indicate its a code space
+    const rProjectIcon = document.createElement('i');
+    rProjectIcon.className = 'fa-brands fa-r-project fa-3x qwebr-r-project-logo';
+
+    // Setup a loading icon from font awesome
+    const spinnerIcon = document.createElement('i');
+    spinnerIcon.className = 'fa-solid fa-spinner fa-spin fa-1x qwebr-icon-status-spinner';
+
+    // Add a section for status text
+    const statusText = document.createElement('p');
+    statusText.id = `qwebr-status-text-${qwebrCounter}`;
+    statusText.className = `qwebr-status-text qwebr-cell-needs-evaluation`;
+    statusText.innerText = 'Loading webR...';
+
+    // Incorporate an inner container
+    const innerContainer = document.createElement('div');
+
+    // Append elements to the inner container
+    innerContainer.appendChild(spinnerIcon);
+    innerContainer.appendChild(statusText);
+
+    // Append elements to the main container
+    container.appendChild(rProjectIcon);
+    container.appendChild(innerContainer);
+
+    return container;
+  }
+  </script>
+  <script type="module">
+  // Function to install a single package
+  async function qwebrInstallRPackage(packageName) {
+    await mainWebR.evalRVoid(`webr::install('${packageName}');`);
+  }
+
+  // Function to load a single package
+  async function qwebrLoadRPackage(packageName) {
+    await mainWebR.evalRVoid(`require('${packageName}', quietly = TRUE)`);
+  }
+
+  // Generic function to process R packages
+  async function qwebrProcessRPackagesWithStatus(packages, processType, displayStatusMessageUpdate = true) {
+    // Switch between contexts
+    const messagePrefix = processType === 'install' ? 'Installing' : 'Loading';
+
+    // Modify button state
+    qwebrSetInteractiveButtonState(`🟡 ${messagePrefix} package ...`, false);
+
+    // Iterate over packages
+    for (let i = 0; i < packages.length; i++) {
+      const activePackage = packages[i];
+      const formattedMessage = `${messagePrefix} package ${i + 1} out of ${packages.length}: ${activePackage}`;
+
+      // Display the update in header
+      if (displayStatusMessageUpdate) {
+        qwebrUpdateStatusHeader(formattedMessage);
+      }
+
+      // Display the update in non-active areas
+      qwebrUpdateStatusMessage(formattedMessage);
+
+      // Run package installation
+      if (processType === 'install') {
+        await qwebrInstallRPackage(activePackage);
+      } else {
+        await qwebrLoadRPackage(activePackage);
+      }
+    }
+
+    // Clean slate
+    if (processType === 'load') {
+      await mainWebR.flush();
+    }
+  }
+
+  // Start a timer
+  const initializeWebRTimerStart = performance.now();
+
+  // Encase with a dynamic import statement
+  globalThis.qwebrInstance = import(qwebrCustomizedWebROptions.baseURL + "webr.mjs").then(
+    async ({ WebR, ChannelType }) => {
+      // Populate WebR options with defaults or new values based on `webr` meta
+      globalThis.mainWebR = new WebR(qwebrCustomizedWebROptions);
+
+      // Initialization WebR
+      await mainWebR.init();
+
+      // Setup a shelter
+      globalThis.mainWebRCodeShelter = await new mainWebR.Shelter();
+
+      // Setup a pager to allow processing help documentation 
+      await mainWebR.evalRVoid('webr::pager_install()'); 
+
+      // Override the existing install.packages() to use webr::install()
+      await mainWebR.evalRVoid('webr::shim_install()'); 
+
+      // Specify the repositories to pull from
+      // Note: webR does not use the `repos` option, but instead uses `webr_pkg_repos`
+      // inside of `install()`. However, other R functions still pull from `repos`.
+      await mainWebR.evalRVoid(`
+        options(
+          webr_pkg_repos = c(${qwebrPackageRepoURLS.map(repoURL => `'${repoURL}'`).join(',')}),
+          repos = c(${qwebrPackageRepoURLS.map(repoURL => `'${repoURL}'`).join(',')})
+        )
+      `);
+
+      // Check to see if any packages need to be installed
+      if (qwebrSetupRPackages) {
+        // Obtain only a unique list of packages
+        const uniqueRPackageList = Array.from(new Set(qwebrInstallRPackagesList));
+
+        // Install R packages one at a time (either silently or with a status update)
+        await qwebrProcessRPackagesWithStatus(uniqueRPackageList, 'install', qwebrShowStartupMessage);
+
+        if (qwebrAutoloadRPackages) {
+          // Load R packages one at a time (either silently or with a status update)
+          await qwebrProcessRPackagesWithStatus(uniqueRPackageList, 'load', qwebrShowStartupMessage);
+        }
+      }
+    }
+  );
+
+  // Stop timer
+  const initializeWebRTimerEnd = performance.now();
+
+  </script>
+  <script type="module">
+  // Function to verify a given JavaScript Object is empty
+  globalThis.qwebrIsObjectEmpty = function (arr) {
+      return Object.keys(arr).length === 0;
+  }
+
+  // Global version of the Escape HTML function that converts HTML 
+  // characters to their HTML entities.
+  globalThis.qwebrEscapeHTMLCharacters = function(unsafe) {
+      return unsafe
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+    };
+
+  // Passthrough results
+  globalThis.qwebrIdentity = function(x) {
+      return x;
+  };
+
+  // Append a comment
+  globalThis.qwebrPrefixComment = function(x, comment) {
+      return `${comment}${x}`;
+  };
+
+  // Function to parse the pager results
+  globalThis.qwebrParseTypePager = async function (msg) { 
+
+      // Split out the event data
+      const { path, title, deleteFile } = msg.data; 
+
+      // Process the pager data by reading the information from disk
+      const paged_data = await mainWebR.FS.readFile(path).then((data) => {
+          // Obtain the file content
+          let content = new TextDecoder().decode(data);
+
+          // Remove excessive backspace characters until none remain
+          while(content.match(/.[\b]/)){
+          content = content.replace(/.[\b]/g, '');
+          }
+
+          // Returned cleaned data
+          return content;
+      });
+
+      // Unlink file if needed
+      if (deleteFile) { 
+          await mainWebR.FS.unlink(path); 
+      } 
+
+      // Return extracted data with spaces
+      return paged_data;
+  } 
+
+  // Function to run the code using webR and parse the output
+  globalThis.qwebrComputeEngine = async function(
+      codeToRun, 
+      elements, 
+      options) {
+
+      // Call into the R compute engine that persists within the document scope.
+      // To be prepared for all scenarios, the following happens: 
+      // 1. We setup a canvas device to write to by making a namespace call into the {webr} package
+      // 2. We use values inside of the options array to set the figure size.
+      // 3. We capture the output stream information (STDOUT and STERR)
+      // 4. While parsing the results, we disable image creation.
+
+      // Create a canvas variable for graphics
+      let canvas = undefined;
+
+      // Create a pager variable for help/file contents
+      let pager = [];
+
+      // Handle how output is processed
+      let showMarkup = options.results === "markup" && options.output !== "asis";
+      let processOutput;
+
+      if (showMarkup) {
+          processOutput = qwebrEscapeHTMLCharacters;
+      } else {
+          processOutput = qwebrIdentity;
+      }
+
+      // ---- 
+      // Convert from Inches to Pixels by using DPI (dots per inch)
+      // for bitmap devices (dpi * inches = pixels)
+      let fig_width = options["fig-width"] * options["dpi"]
+      let fig_height = options["fig-height"] * options["dpi"]
+
+      // Initialize webR
+      await mainWebR.init();
+
+      // Setup a webR canvas by making a namespace call into the {webr} package
+      await mainWebR.evalRVoid(`webr::canvas(width=${fig_width}, height=${fig_height})`);
+
+      const result = await mainWebRCodeShelter.captureR(codeToRun, {
+          withAutoprint: true,
+          captureStreams: true,
+          captureConditions: false//,
+          // env: webR.objs.emptyEnv, // maintain a global environment for webR v0.2.0
+      });
+
+      // -----
+
+      // Start attempting to parse the result data
+      processResultOutput:try {
+
+          // Stop creating images
+          await mainWebR.evalRVoid("dev.off()");
+          
+          // Avoid running through output processing
+          if (options.results === "hide" || options.output === "false") { 
+              break processResultOutput; 
+          }
+
+          // Merge output streams of STDOUT and STDErr (messages and errors are combined.)
+          // Require both `warning` and `message` to be true to display `STDErr`. 
+          const out = result.output
+          .filter(
+              evt => evt.type === "stdout" || 
+              ( evt.type === "stderr" && (options.warning === "true" && options.message === "true")) 
+          )
+          .map((evt, index) => {
+              const className = `qwebr-output-code-${evt.type}`;
+              const outputResult = qwebrPrefixComment(processOutput(evt.data), options.comment);
+              return `<code id="${className}-editor-${elements.id}-result-${index + 1}" class="${className}">${outputResult}</code>`;
+          })
+          .join("\n");
+
+
+          // Clean the state
+          // We're now able to process both graphics and pager events.
+          // As a result, we cannot maintain a true 1-to-1 output order 
+          // without individually feeding each line
+          const msgs = await mainWebR.flush();
+
+          // Output each image event stored
+          msgs.forEach((msg) => {
+          // Determine if old canvas can be used or a new canvas is required.
+          if (msg.type === 'canvas'){
+              // Add image to the current canvas
+              if (msg.data.event === 'canvasImage') {
+                  canvas.getContext('2d').drawImage(msg.data.image, 0, 0);
+              } else if (msg.data.event === 'canvasNewPage') {
+
+                  // Generate a new canvas element
+                  canvas = document.createElement("canvas");
+                  canvas.setAttribute("width", 2 * fig_width);
+                  canvas.setAttribute("height", 2 * fig_height);
+                  canvas.style.width = options["out-width"] ? options["out-width"] : `${fig_width}px`;
+                  if (options["out-height"]) {
+                      canvas.style.height = options["out-height"];
+                  }
+                  canvas.style.display = "block";
+                  canvas.style.margin = "auto";
+              }
+          } 
+          });
+
+          // Use `map` to process the filtered "pager" events asynchronously
+          const pager = await Promise.all(
+              msgs.filter(msg => msg.type === 'pager').map(
+                  async (msg) => {
+                      return await qwebrParseTypePager(msg);
+                  }
+              )
+          );
+
+          // Nullify the output area of content
+          elements.outputCodeDiv.innerHTML = "";
+          elements.outputGraphDiv.innerHTML = "";
+
+          // Design an output object for messages
+          const pre = document.createElement("pre");
+          if (/\S/.test(out)) {
+              // Display results as HTML elements to retain output styling
+              const div = document.createElement("div");
+              div.innerHTML = out;
+              pre.appendChild(div);
+          } else {
+              // If nothing is present, hide the element.
+              pre.style.visibility = "hidden";
+          }
+
+          elements.outputCodeDiv.appendChild(pre);
+
+          // Place the graphics on the canvas
+          if (canvas) {
+              // Create figure element
+              const figureElement = document.createElement('figure');
+
+              // Append canvas to figure
+              figureElement.appendChild(canvas);
+
+              if (options['fig-cap']) {
+                  // Create figcaption element
+                  const figcaptionElement = document.createElement('figcaption');
+                  figcaptionElement.innerText = options['fig-cap'];
+                  // Append figcaption to figure
+                  figureElement.appendChild(figcaptionElement);    
+              }
+
+              elements.outputGraphDiv.appendChild(figureElement);
+          }
+
+          // Display the pager data
+          if (pager) {
+          // Use the `pre` element to preserve whitespace.
+          pager.forEach((paged_data, index) => {
+              let pre_pager = document.createElement("pre");
+              pre_pager.innerText = paged_data;
+              pre_pager.classList.add("qwebr-output-code-pager");
+              pre_pager.setAttribute("id", `qwebr-output-code-pager-editor-${elements.id}-result-${index + 1}`);
+              elements.outputCodeDiv.appendChild(pre_pager);
+          });
+          }
+      } finally {
+          // Clean up the remaining code
+          mainWebRCodeShelter.purge();
+      }
+  }
+
+  // Function to execute the code (accepts code as an argument)
+  globalThis.qwebrExecuteCode = async function (
+      codeToRun,
+      id,
+      options = {}) {
+
+      // If options are not passed, we fall back on the bare minimum to handle the computation
+      if (qwebrIsObjectEmpty(options)) {
+          options = { 
+              "context": "interactive", 
+              "fig-width": 7, "fig-height": 5, 
+              "out-width": "700px", "out-height": "", 
+              "dpi": 72,
+              "results": "markup", 
+              "warning": "true", "message": "true",
+          };
+      }
+
+      // Next, we access the compute areas values
+      const elements = {
+          runButton: document.getElementById(`qwebr-button-run-${id}`),
+          outputCodeDiv: document.getElementById(`qwebr-output-code-area-${id}`),
+          outputGraphDiv: document.getElementById(`qwebr-output-graph-area-${id}`),
+          id: id,
+      }
+
+      // Disallowing execution of other code cells
+      document.querySelectorAll(".qwebr-button-run").forEach((btn) => {
+          btn.disabled = true;
+      });
+
+      if (options.context == EvalTypes.Interactive) {
+          // Emphasize the active code cell
+          elements.runButton.innerHTML = '<i class="fa-solid fa-spinner fa-spin qwebr-icon-status-spinner"></i> <span>Run Code</span>';
+      }
+
+      // Evaluate the code and parse the output into the document
+      await qwebrComputeEngine(codeToRun, elements, options);
+
+      // Switch to allowing execution of code
+      document.querySelectorAll(".qwebr-button-run").forEach((btn) => {
+          btn.disabled = false;
+      });
+
+      if (options.context == EvalTypes.Interactive) {
+          // Revert to the initial code cell state
+          elements.runButton.innerHTML = '<i class="fa-solid fa-play qwebr-icon-run-code"></i> <span>Run Code</span>';
+      }
+  }
+
+  </script>
 </head>
 <body class="quarto-light">
+<script src="https://cdn.jsdelivr.net/npm/monaco-editor@0.45.0/min/vs/loader.js"></script>
+<script type="module" id="qwebr-monaco-editor-init">
+
+  // Configure the Monaco Editor's loader
+  require.config({
+    paths: {
+      'vs': 'https://cdn.jsdelivr.net/npm/monaco-editor@0.45.0/min/vs'
+    }
+  });
+</script>
+<script type="module">
+// Global dictionary to store Monaco Editor instances
+globalThis.qwebrEditorInstances = {};
+
+// Function that builds and registers a Monaco Editor instance    
+globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
+
+  const initialCode = cellData.code;
+  const qwebrCounter = cellData.id;
+  const qwebrOptions = cellData.options;
+
+  // Retrieve the previously created document elements
+  let runButton = document.getElementById(`qwebr-button-run-${qwebrCounter}`);
+  let resetButton = document.getElementById(`qwebr-button-reset-${qwebrCounter}`);
+  let copyButton = document.getElementById(`qwebr-button-copy-${qwebrCounter}`);
+  let editorDiv = document.getElementById(`qwebr-editor-${qwebrCounter}`);
+  
+  // Load the Monaco Editor and create an instance
+  let editor;
+  require(['vs/editor/editor.main'], function () {
+    editor = monaco.editor.create(editorDiv, {
+      value: initialCode,
+      language: 'r',
+      theme: 'vs-light',
+      automaticLayout: true,           // Works wonderfully with RevealJS
+      scrollBeyondLastLine: false,
+      minimap: {
+        enabled: false
+      },
+      fontSize: '17.5pt',              // Bootstrap is 1 rem
+      renderLineHighlight: "none",     // Disable current line highlighting
+      hideCursorInOverviewRuler: true,  // Remove cursor indictor in right hand side scroll bar
+      readOnly: qwebrOptions['read-only'] ?? false
+    });
+
+    // Store the official counter ID to be used in keyboard shortcuts
+    editor.__qwebrCounter = qwebrCounter;
+
+    // Store the official div container ID
+    editor.__qwebrEditorId = `qwebr-editor-${qwebrCounter}`;
+
+    // Store the initial code value and options
+    editor.__qwebrinitialCode = initialCode;
+    editor.__qwebrOptions = qwebrOptions;
+
+    // Set at the model level the preferred end of line (EOL) character to LF.
+    // This prevent `\r\n` from being given to the webR engine if the user is on Windows.
+    // See details in: https://github.com/coatless/quarto-webr/issues/94
+    // Associated error text: 
+    // Error: <text>:1:7 unexpected input
+
+    // Retrieve the underlying model
+    const model = editor.getModel();
+    // Set EOL for the model
+    model.setEOL(monaco.editor.EndOfLineSequence.LF);
+
+    // Dynamically modify the height of the editor window if new lines are added.
+    let ignoreEvent = false;
+    const updateHeight = () => {
+      const contentHeight = editor.getContentHeight();
+      // We're avoiding a width change
+      //editorDiv.style.width = `${width}px`;
+      editorDiv.style.height = `${contentHeight}px`;
+      try {
+        ignoreEvent = true;
+
+        // The key to resizing is this call
+        editor.layout();
+      } finally {
+        ignoreEvent = false;
+      }
+    };
+
+    // Helper function to check if selected text is empty
+    function isEmptyCodeText(selectedCodeText) {
+      return (selectedCodeText === null || selectedCodeText === undefined || selectedCodeText === "");
+    }
+
+    // Registry of keyboard shortcuts that should be re-added to each editor window
+    // when focus changes.
+    const addWebRKeyboardShortCutCommands = () => {
+      // Add a keydown event listener for Shift+Enter to run all code in cell
+      editor.addCommand(monaco.KeyMod.Shift | monaco.KeyCode.Enter, () => {
+
+        // Retrieve all text inside the editor
+        qwebrExecuteCode(editor.getValue(), editor.__qwebrCounter, editor.__qwebrOptions);
+      });
+
+      // Add a keydown event listener for CMD/Ctrl+Enter to run selected code
+      editor.addCommand(monaco.KeyMod.CtrlCmd | monaco.KeyCode.Enter, () => {
+
+        // Get the selected text from the editor
+        const selectedText = editor.getModel().getValueInRange(editor.getSelection());
+        // Check if no code is selected
+        if (isEmptyCodeText(selectedText)) {
+          // Obtain the current cursor position
+          let currentPosition = editor.getPosition();
+          // Retrieve the current line content
+          let currentLine = editor.getModel().getLineContent(currentPosition.lineNumber);
+
+          // Propose a new position to move the cursor to
+          let newPosition = new monaco.Position(currentPosition.lineNumber + 1, 1);
+
+          // Check if the new position is beyond the last line of the editor
+          if (newPosition.lineNumber > editor.getModel().getLineCount()) {
+            // Add a new line at the end of the editor
+            editor.executeEdits("addNewLine", [{
+            range: new monaco.Range(newPosition.lineNumber, 1, newPosition.lineNumber, 1),
+            text: "\n", 
+            forceMoveMarkers: true,
+            }]);
+          }
+          
+          // Run the entire line of code.
+          qwebrExecuteCode(currentLine, editor.__qwebrCounter, editor.__qwebrOptions);
+
+          // Move cursor to new position
+          editor.setPosition(newPosition);
+        } else {
+          // Code to run when Ctrl+Enter is pressed with selected code
+          qwebrExecuteCode(selectedText, editor.__qwebrCounter, editor.__qwebrOptions);
+        }
+      });
+    }
+
+    // Register an on focus event handler for when a code cell is selected to update
+    // what keyboard shortcut commands should work.
+    // This is a workaround to fix a regression that happened with multiple
+    // editor windows since Monaco 0.32.0 
+    // https://github.com/microsoft/monaco-editor/issues/2947
+    editor.onDidFocusEditorText(addWebRKeyboardShortCutCommands);
+
+    // Register an on change event for when new code is added to the editor window
+    editor.onDidContentSizeChange(updateHeight);
+
+    // Manually re-update height to account for the content we inserted into the call
+    updateHeight();
+
+    // Store the editor instance in the global dictionary
+    qwebrEditorInstances[editor.__qwebrCounter] = editor;
+
+  });
+
+  // Add a click event listener to the run button
+  runButton.onclick = function () {
+    qwebrExecuteCode(editor.getValue(), editor.__qwebrCounter, editor.__qwebrOptions);
+  };
+
+  // Add a click event listener to the reset button
+  copyButton.onclick = function () {
+    // Retrieve current code data
+    const data = editor.getValue();
+    
+    // Write code data onto the clipboard.
+    navigator.clipboard.writeText(data || "");
+  };
+  
+  // Add a click event listener to the copy button
+  resetButton.onclick = function () {
+    editor.setValue(editor.__qwebrinitialCode);
+  };
+  
+}
+</script>
   <div class="reveal">
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Ders6: T-testi</h1>
-  <p class="subtitle">MBG1032 Biyoistatistik - Doç.Dr.Alper YILMAZ - <em>27 Mart 2024</em></p>
+  <h1 class="title">Ders 7: ANOVA (Varyans Analizi)</h1>
+  <p class="subtitle">MBG1032 Biyoistatistik - Doç.Dr.Alper YILMAZ</p>
 
 <div class="quarto-title-authors">
 </div>
 
 </section>
-<section class="slide level2">
+<section id="özet" class="slide level2">
+<h2>Özet</h2>
+<ul>
+<li>ANOVA (Varyans Analizi) nedir ve ne zaman kullanılır?</li>
+<li>t-testi ile ANOVA arasındaki fark</li>
+<li>Tek Yönlü ANOVA (One-Way ANOVA)</li>
+<li>ANOVA’nın varsayımları</li>
+<li>F-dağılımı ve F-istatistiği</li>
+<li>R ile ANOVA uygulamaları</li>
+<li>ANOVA sonuçlarının yorumlanması ve raporlanması</li>
+<li>Post-hoc testleri (Tukey HSD, Bonferroni)</li>
+<li>Biyolojide ANOVA uygulamaları</li>
+</ul>
+</section>
+<section id="anova-varyans-analizi-nedir" class="slide level2">
+<h2>ANOVA (Varyans Analizi) Nedir?</h2>
+<p>ANOVA, ikiden fazla grup ortalaması arasındaki farkların istatistiksel anlamlılığını değerlendirmek için kullanılan parametrik bir testtir.</p>
+<p><strong>Kullanım Amacı:</strong></p>
+<ul>
+<li>İkiden fazla grubun karşılaştırılması</li>
+<li>Bir veya daha fazla faktörün (bağımsız değişkenlerin) bir bağımlı değişken üzerindeki etkisini incelemek</li>
+<li>Gruplar arası farklılıkların rastgele şans eseri mi yoksa gerçek bir etkiden mi kaynaklandığını belirlemek</li>
+</ul>
+<p><strong>Temel Fikir:</strong></p>
+<p>Gruplar arası varyans ile gruplar içi varyansı karşılaştırarak, faktörün anlamlı bir etkisi olup olmadığını belirlemek</p>
+</section>
+<section id="t-testi-vs.-anova" class="slide level2">
+<h2>t-testi vs.&nbsp;ANOVA</h2>
+<p><strong>Neden ANOVA? Neden çoklu t-testi kullanmıyoruz?</strong></p>
+<ul>
+<li>İkiden fazla grup olduğunda t-testi yerine ANOVA kullanılır</li>
+<li>Çoklu t-testleri yapmak, <strong>Tip I hata</strong> (yanlış pozitif) olasılığını artırır</li>
+</ul>
+<p><strong>Örnek:</strong> 3 grup karşılaştırması yapıyorsak:</p>
+<ul>
+<li>A vs B, A vs C, B vs C = 3 farklı t-testi</li>
+<li>Her test için α = 0.05 olsaydı, gerçekte:
+<ul>
+<li>En az bir testte yanlış pozitif bulma olasılığı: 1-(1-0.05)³ = 0.143</li>
+</ul></li>
+</ul>
+<p><strong>Tip I hata olasılığı 0.05 yerine 0.143’e çıkar!</strong></p>
+<p>ANOVA, bu "çoklu karşılaştırma problemini" çözer ve genel hata oranını kontrol altında tutar.</p>
+</section>
+<section id="anova-türleri" class="slide level2 scrollable">
+<h2>ANOVA Türleri</h2>
+<p>İstatistikte birçok ANOVA türü vardır:</p>
+<ol type="1">
+<li><strong>Tek Yönlü ANOVA (One-Way ANOVA):</strong>
+<ul>
+<li>Tek bir faktörün etkisini incelemek için kullanılır</li>
+<li>Örnek: Farklı gübre türlerinin (A, B, C) bitki büyümesine etkisi</li>
+</ul></li>
+<li><strong>İki Yönlü ANOVA (Two-Way ANOVA):</strong>
+<ul>
+<li>İki faktörün etkisini ve bu faktörlerin etkileşimini incelemek için kullanılır</li>
+<li>Örnek: Hem gübre türünün hem de sulama sıklığının bitki büyümesine etkisi</li>
+</ul></li>
+<li><strong>Tekrarlı Ölçümler ANOVA (Repeated Measures ANOVA):</strong>
+<ul>
+<li>Aynı deneklerin farklı koşullarda veya zaman noktalarında ölçümlerini karşılaştırmak için kullanılır</li>
+<li>Örnek: Aynı hastaların tedavi öncesi, tedaviden 1 ay sonra ve 3 ay sonraki değerlerinin karşılaştırılması</li>
+</ul></li>
+</ol>
+<p><em>Bu derste ağırlıklı olarak Tek Yönlü ANOVA üzerinde duracağız.</em></p>
+</section>
+<section id="tek-yönlü-anova-modeli" class="slide level2">
+<h2>Tek Yönlü ANOVA Modeli</h2>
+<p>Tek Yönlü ANOVA’da:</p>
+<ul>
+<li>Bir bağımlı değişken (sürekli)</li>
+<li>Bir kategorik faktör (bağımsız değişken)</li>
+<li>Her faktör seviyesi, bir grubu temsil eder</li>
+</ul>
+<p><strong>Matematiksel Model:</strong></p>
+<p><span class="math display">\[Y_{ij} = \mu + \alpha_i + \epsilon_{ij}\]</span></p>
+<p>Burada:</p>
+<ul>
+<li><span class="math inline">\(Y_{ij}\)</span> = i. gruptaki j. gözlem</li>
+<li><span class="math inline">\(\mu\)</span> = genel ortalama</li>
+<li><span class="math inline">\(\alpha_i\)</span> = i. grubun etkisi (<span class="math inline">\(\alpha_1 + \alpha_2 + ... + \alpha_k = 0\)</span>)</li>
+<li><span class="math inline">\(\epsilon_{ij}\)</span> = hata terimi (rastgele değişkenlik)</li>
+</ul>
+</section>
+<section id="anovanın-hipotezleri" class="slide level2">
+<h2>ANOVA’nın Hipotezleri</h2>
+<p><strong>Sıfır Hipotezi (H₀):</strong> Tüm grup ortalamaları birbirine eşittir. <span class="math display">\[H_0: \mu_1 = \mu_2 = ... = \mu_k\]</span></p>
+<p><strong>Alternatif Hipotez (H₁):</strong> En az bir grup ortalaması diğerlerinden farklıdır.</p>
+<p><span class="math display">\[H_1: \    ext{En az bir } \mu_i \
+eq \mu_j \  ext{ (i ≠ j için)}\]</span></p>
+<ul>
+<li><strong>Önemli Not:</strong> Alternatif hipotez, <em>hangi</em> grup ortalamalarının farklı olduğunu belirtmez, sadece en az bir farklılık olduğunu söyler.</li>
+<li>Hangi grup ortalamalarının farklı olduğunu belirlemek için, ANOVA’dan sonra <strong>post-hoc testleri</strong> kullanılır.</li>
+</ul>
+</section>
+<section id="anovanın-varsayımları" class="slide level2 scrollable">
+<h2>ANOVA’nın Varsayımları</h2>
+<p>ANOVA, t-testine benzer şekilde, bazı varsayımlar üzerine kuruludur:</p>
+<ol type="1">
+<li><p><strong>Bağımsızlık:</strong> Gözlemler birbirinden bağımsız olmalıdır.</p></li>
+<li><p><strong>Normallik:</strong> Her gruptaki verilerin normal dağılması veya örneklem boyutunun yeterince büyük olması (n&gt;30).</p></li>
+<li><p><strong>Varyansların Homojenliği (Homoscedasticity):</strong> Tüm gruplardaki varyansların yaklaşık olarak eşit olması.</p></li>
+</ol>
+<p><em>Not: Varsayımlar karşılanmadığında, parametrik olmayan alternatifler düşünülmelidir (örn. Kruskal-Wallis testi).</em></p>
+</section>
+<section id="varyansların-ayrışımı" class="slide level2">
+<h2>Varyansların Ayrışımı</h2>
+<p>ANOVA’nın adı "Varyans Analizi"dir çünkü toplam varyansı iki bileşene ayırır:</p>
+<p><strong>1. Gruplar Arası Varyans (Between-Groups Variance):</strong></p>
+<ul>
+<li>Grup ortalamalarının genel ortalamadan ne kadar farklı olduğunu gösterir</li>
+<li>Eğer büyükse, gruplar arasında gerçek farklılıklar olduğunu düşündürür</li>
+</ul>
+<p><strong>2. Gruplar İçi Varyans (Within-Groups Variance):</strong></p>
+<ul>
+<li>Grup içindeki bireysel gözlemlerin, kendi grup ortalamasından ne kadar farklı olduğunu gösterir</li>
+<li>Rastgele hata veya faktör dışındaki etkilerden kaynaklanır</li>
+</ul>
+<p><strong>F-istatistiği = Gruplar Arası Varyans / Gruplar İçi Varyans</strong></p>
+<ul>
+<li>F-değeri büyükse → Gruplar arasındaki farklılıklar, grup içi varyasyondan daha büyüktür → H₀ reddedilir</li>
+</ul>
+</section>
+<section id="kareler-toplamı" class="slide level2">
+<h2>Kareler Toplamı</h2>
+<p>ANOVA’da varyans analizi için, kareler toplamı (Sum of Squares - SS) hesaplanır:</p>
+<p><strong>1. Toplam Kareler Toplamı (SST):</strong></p>
+<p><span class="math display">\[SST = \sum_{i=1}^{k}\sum_{j=1}^{n_i}(Y_{ij} - \bar{Y})^2\]</span></p>
+<p><strong>2. Gruplar Arası Kareler Toplamı (SSB):</strong> <span class="math display">\[SSB = \sum_{i=1}^{k}n_i(\bar{Y}_i - \bar{Y})^2\]</span></p>
+<p><strong>3. Gruplar İçi Kareler Toplamı (SSW):</strong> <span class="math display">\[SSW = \sum_{i=1}^{k}\sum_{j=1}^{n_i}(Y_{ij} - \bar{Y}_i)^2\]</span></p>
+<p><strong>İlişki:</strong> SST = SSB + SSW</p>
+</section>
+<section id="ortalama-kareler-ve-f-istatistiği" class="slide level2">
+<h2>Ortalama Kareler ve F-İstatistiği</h2>
+<p>Kareler toplamı değerleri, ilgili serbestlik dereceleri ile bölünerek ortalama kareler (Mean Squares - MS) hesaplanır:</p>
+<p><strong>1. Gruplar Arası Ortalama Kareler (MSB):</strong> <span class="math display">\[MSB = \frac{SSB}{k-1}\]</span></p>
+<p><strong>2. Gruplar İçi Ortalama Kareler (MSW):</strong> <span class="math display">\[MSW = \frac{SSW}{N-k}\]</span></p>
+<p><strong>F-İstatistiği:</strong> <span class="math display">\[F = \frac{MSB}{MSW}\]</span></p>
+<p>Burada:</p>
+<ul>
+<li>k = grup sayısı</li>
+<li>N = toplam gözlem sayısı</li>
+</ul>
+<p>F-değeri, α düzeyindeki kritik F-değeri ile karşılaştırılır. Eğer hesaplanan F-değeri kritik değerden büyükse, H₀ reddedilir.</p>
+</section>
+<section id="f-dağılımı" class="slide level2">
+<h2>F-Dağılımı</h2>
+<p>F-dağılımı, iki farklı varyans tahmininin oranı olarak hesaplanan F-istatistiği için örnekleme dağılımıdır.</p>
+<p><strong>Özellikleri:</strong></p>
+<ul>
+<li>Sıfırdan büyük değerler alır (F ≥ 0)</li>
+<li>Sağa çarpık bir dağılımdır</li>
+<li>İki serbestlik derecesi parametresi vardır: df₁ (payda) ve df₂ (payda)</li>
+<li>H₀ doğruysa, F-değeri 1’e yakındır</li>
+</ul>
+</section>
+<section id="section" class="slide level2">
+<h2></h2>
 
+<img data-src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/F-distribution_pdf.svg/600px-F-distribution_pdf.svg.png" class="quarto-figure quarto-figure-&quot;center&quot; r-stretch"><div class="footer">
+<p>Görsel Kaynak: <a href="https://commons.wikimedia.org/wiki/File:F-distribution_pdf.svg">Wikimedia Commons</a></p>
+</div>
+</section>
+<section id="anova-tablosu" class="slide level2">
+<h2>ANOVA Tablosu</h2>
+<p>ANOVA sonuçları genellikle bir tablo ile özetlenir:</p>
+<table class="caption-top">
+<colgroup>
+<col style="width: 42%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 22%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Varyasyon Kaynağı</th>
+<th>SS</th>
+<th>df</th>
+<th>MS</th>
+<th>F</th>
+<th>p-değeri</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Gruplar Arası (Between)</td>
+<td>SSB</td>
+<td>k-1</td>
+<td>MSB = SSB/(k-1)</td>
+<td>F = MSB/MSW</td>
+<td>p</td>
+</tr>
+<tr class="even">
+<td>Gruplar İçi (Within)</td>
+<td>SSW</td>
+<td>N-k</td>
+<td>MSW = SSW/(N-k)</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Toplam</td>
+<td>SST</td>
+<td>N-1</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>k</strong> = grup sayısı</li>
+<li><strong>N</strong> = toplam gözlem sayısı</li>
+<li>p-değeri &lt; α ise, H₀ reddedilir</li>
+</ul>
+</section>
+<section id="r-ile-tek-yönlü-anova" class="slide level2">
+<h2>R ile Tek Yönlü ANOVA</h2>
+<p><strong>Örnek Senaryo:</strong> Üç farklı gübre türünün (A, B, C) domates bitkilerinin boy (cm) üzerindeki etkisini analiz edelim.</p>
+<div id="qwebr-insertion-location-1"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+</section>
+<section id="section-1" class="slide level2">
+<h2></h2>
+<div id="qwebr-insertion-location-2"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+</section>
+<section id="anova-analizi" class="slide level2">
+<h2>ANOVA Analizi</h2>
+<div id="qwebr-insertion-location-3"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+</section>
+<section id="istatistiksel-değerleri-görelim" class="slide level2">
+<h2>İstatistiksel değerleri görelim</h2>
+<div id="qwebr-insertion-location-4"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+</section>
+<section id="görselleştirme" class="slide level2">
+<h2>Görselleştirme</h2>
+<div id="qwebr-insertion-location-5"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+</section>
+<section id="post-hoc-testleri" class="slide level2">
+<h2>Post-hoc Testleri</h2>
+<p>ANOVA, gruplar arasında bir fark olduğunu söyler, ancak <em>hangi</em> grupların farklı olduğunu söylemez. Bunu belirlemek için post-hoc testleri kullanılır.</p>
+<p><strong>En Yaygın Post-hoc Testleri:</strong></p>
+<ul>
+<li><p><strong>Tukey HSD (Honestly Significant Difference):</strong> Tüm olası ikili grup karşılaştırmalarını yapar ve aile bazında hata oranını kontrol eder.</p></li>
+<li><p><strong>Bonferroni Düzeltmesi:</strong> Alfa (α) değerini karşılaştırma sayısına bölerek çoklu test problemini düzeltir.</p></li>
+<li><p><strong>Scheffé Testi:</strong> Tüm olası grup karşılaştırmaları için uygundur, ancak genellikle daha muhafazakardır.</p></li>
+</ul>
+<p><em>Not: Post-hoc testleri sadece ANOVA sonucu istatistiksel olarak anlamlıysa (p &lt; 0.05) uygulanır.</em></p>
+</section>
+<section id="tukey-hsd-post-hoc-testi" class="slide level2">
+<h2>Tukey HSD Post-hoc Testi</h2>
+<div id="qwebr-insertion-location-6"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+</section>
+<section id="post-hoc-testlerin-yorumlanması" class="slide level2">
+<h2>Post-hoc Testlerin Yorumlanması</h2>
+<p>Tukey HSD sonuçlarına göre:</p>
+<ul>
+<li><strong>Gübre B - Gübre A:</strong> Gübre B, Gübre A’ya göre anlamlı şekilde daha yüksek bitki boylarına sahiptir (p &lt; 0.001).</li>
+<li><strong>Gübre C - Gübre A:</strong> Gübre C, Gübre A’ya göre anlamlı şekilde daha yüksek bitki boylarına sahiptir (p &lt; 0.05).</li>
+<li><strong>Gübre C - Gübre B:</strong> Gübre C ve Gübre B arasında istatistiksel olarak anlamlı bir fark yoktur (p &gt; 0.05).</li>
+</ul>
+<p><strong>Genel Sonuç:</strong> * Gübre B ve Gübre C, Gübre A’dan daha etkilidir. * Gübre B ve Gübre C arasında anlamlı bir fark yoktur.</p>
+</section>
+<section id="sonuçların-raporlanması" class="slide level2">
+<h2>Sonuçların Raporlanması</h2>
+<p><strong>Akademik yayınlarda ANOVA sonuçlarını nasıl raporlamalıyız?</strong></p>
+<p><em>"Gübre türünün domates bitkilerinin boyları üzerindeki etkisi, tek yönlü ANOVA ile değerlendirilmiştir. Gübre türünün bitki boyu üzerinde istatistiksel olarak anlamlı bir etkisi bulunmuştur, F(2, 21) = 16.44, p &lt; 0.001. Post-hoc Tukey HSD testleri, Gübre B ile yetiştirilen bitkilerin (M = 77.75 cm, SD = 2.49) ve Gübre C ile yetiştirilen bitkilerin (M = 71.50 cm, SD = 2.45), Gübre A ile yetiştirilen bitkilerden (M = 68.38 cm, SD = 2.67) anlamlı şekilde daha uzun olduğunu göstermiştir (sırasıyla p &lt; 0.001 ve p &lt; 0.05). Gübre B ve Gübre C arasında istatistiksel olarak anlamlı bir fark bulunmamıştır (p = 0.094)."</em></p>
+</section>
+<section id="biyolojide-anova-uygulamaları" class="slide level2 scrollable">
+<h2>Biyolojide ANOVA Uygulamaları</h2>
+<p>ANOVA, biyoloji ve tıpta yaygın olarak kullanılan bir analiz yöntemidir:</p>
+<ol type="1">
+<li><strong>Farklı İlaç Tedavilerinin Karşılaştırılması:</strong>
+<ul>
+<li>Üç veya daha fazla farklı ilacın etkinliğinin karşılaştırılması</li>
+</ul></li>
+<li><strong>Gen Ekspresyon Analizi:</strong>
+<ul>
+<li>Farklı deneysel koşullar altında gen ekspresyon seviyelerinin karşılaştırılması</li>
+</ul></li>
+<li><strong>Ekolojik Çalışmalar:</strong>
+<ul>
+<li>Farklı habitatlardaki biyoçeşitliliğin karşılaştırılması</li>
+</ul></li>
+<li><strong>Enzim Kinetik Çalışmaları:</strong>
+<ul>
+<li>Farklı pH değerlerinde enzim aktivitelerinin karşılaştırılması</li>
+</ul></li>
+<li><strong>Büyüme ve Gelişim Çalışmaları:</strong>
+<ul>
+<li>Farklı besin veya hormon uygulamalarının büyüme üzerindeki etkisinin incelenmesi</li>
+</ul></li>
+</ol>
+</section>
+<section id="gerçek-veri-üzerinde-uygulama-iris-veri-seti" class="slide level2">
+<h2>Gerçek Veri Üzerinde Uygulama: iris Veri Seti</h2>
+<p>Şimdi, <code>iris</code> veri setinde üç farklı Iris türünün (setosa, versicolor, virginica) taç yaprak (petal) boylarını karşılaştıralım.</p>
+<div id="qwebr-insertion-location-7"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+</section>
+<section id="görselleştirme-ve-post-hoc-test" class="slide level2">
+<h2>Görselleştirme ve Post-hoc Test</h2>
+<div id="qwebr-insertion-location-8"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+</section>
+<section id="tek-yönlü-anova-için-pratik-ipuçları" class="slide level2 scrollable">
+<h2>Tek Yönlü ANOVA için Pratik İpuçları</h2>
+<ol type="1">
+<li><strong>Veri Hazırlığı ve Kontroller:</strong>
+<ul>
+<li>Aykırı değerleri belirleyin ve ele alın</li>
+<li>Normallik ve varyans homojenliği varsayımlarını kontrol edin</li>
+<li>Veri yapısının tek yönlü ANOVA’ya uygun olduğunu doğrulayın</li>
+</ul></li>
+<li><strong>Analiz ve Sonuçlar:</strong>
+<ul>
+<li>Sadece p-değerine değil, etki büyüklüğüne de bakın (η²)</li>
+<li>ANOVA anlamlıysa, post-hoc testleri uygulayın</li>
+<li>Bulguları biyolojik/pratik anlamlılık açısından yorumlayın</li>
+</ul></li>
+<li><strong>Varsayımlar Karşılanmadığında:</strong>
+<ul>
+<li>Veri dönüşümleri deneyin (log, karekök vb.)</li>
+<li>Parametrik olmayan alternatifleri kullanın (Kruskal-Wallis testi)</li>
+<li>Robust ANOVA yöntemlerini düşünün</li>
+</ul></li>
+</ol>
+</section>
+<section id="iki-yönlü-anova-hakkında-kısa-bilgi" class="slide level2">
+<h2>İki Yönlü ANOVA Hakkında Kısa Bilgi</h2>
+<p>İki Yönlü ANOVA, iki faktörün ve bunların etkileşiminin etkisini analiz eden bir yöntemdir.</p>
+<p><strong>Örnek:</strong> Hem gübre türünün (A, B, C) hem de sulama sıklığının (günlük, haftalık) domates bitkilerinin boyuna etkisini incelemek istiyoruz.</p>
+<p><strong>İki Yönlü ANOVA Modeli:</strong> <span class="math display">\[Y_{ijk} = \\mu + \\alpha_i + \\beta_j + (\\alpha\\beta)_{ij} + \\epsilon_{ijk}\]</span></p>
+<ul>
+<li><span class="math inline">\(\\mu\)</span> = genel ortalama</li>
+<li><span class="math inline">\(\\alpha_i\)</span> = ilk faktörün etkisi (gübre türü)</li>
+<li><span class="math inline">\(\\beta_j\)</span> = ikinci faktörün etkisi (sulama sıklığı)</li>
+<li><span class="math inline">\((\\alpha\\beta)_{ij}\)</span> = faktörler arası etkileşim</li>
+<li><span class="math inline">\(\\epsilon_{ijk}\)</span> = hata terimi</li>
+</ul>
+<p>İki Yönlü ANOVA ile üç hipotezi test ederiz: 1. İlk faktörün ana etkisi (<span class="math inline">\(H_0: \\alpha_1 = \\alpha_2 = ... = \\alpha_a = 0\)</span>) 2. İkinci faktörün ana etkisi (<span class="math inline">\(H_0: \\beta_1 = \\beta_2 = ... = \\beta_b = 0\)</span>) 3. Faktörler arası etkileşim (<span class="math inline">\(H_0: (\\alpha\\beta)_{ij} = 0 \  ext{ tüm } i, j \   ext{ için}\)</span>)</p>
+</section>
+<section id="özet-anovanın-avantajları-ve-sınırlamaları" class="slide level2">
+<h2>Özet: ANOVA’nın Avantajları ve Sınırlamaları</h2>
+<p><strong>Avantajlar:</strong> * İkiden fazla grubu aynı anda karşılaştırabilme * Tip I hata oranını kontrol etme * Kategorik faktörlerin sürekli değişkenler üzerindeki etkisini inceleme</p>
+<p><strong>Sınırlamalar:</strong> * Sadece ortalamaları karşılaştırır, dağılımlardaki diğer farklılıkları görmez * Parametrik bir test olarak, belirli varsayımlara dayanır * Grup farkını bulur ancak hangi grupların farklı olduğunu belirtmez (post-hoc testleri gerekir)</p>
+<p><strong>ANOVA’nın Ötesinde:</strong> * İki faktörlü çalışmalar için İki Yönlü ANOVA * Tekrarlı ölçümler için Tekrarlı Ölçümler ANOVA</p>
 
 
 </section>
@@ -359,6 +1767,44 @@
         ]
       });
     </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {
@@ -543,6 +1989,118 @@
         }
       }
     });
+    </script>
+    <script type="module">
+    // Handle cell initialization initialization
+    qwebrCellDetails.map(
+      (entry) => {
+        // Handle the creation of the element
+        qwebrCreateHTMLElement(entry);
+        // In the event of interactive, initialize the monaco editor
+        if (entry.options.context == EvalTypes.Interactive) {
+          qwebrCreateMonacoEditorInstance(entry);
+        }
+      }
+    );
+
+    // Identify non-interactive cells (in order)
+    const filteredEntries = qwebrCellDetails.filter(entry => {
+      const contextOption = entry.options && entry.options.context;
+      return ['output', 'setup'].includes(contextOption) || (contextOption == "interactive" && entry.options && entry.options.autorun === 'true');
+    });
+
+    // Condition non-interactive cells to only be run after webR finishes its initialization.
+    qwebrInstance.then(
+      async () => {
+        const nHiddenCells = filteredEntries.length;
+        var currentHiddenCell = 0;
+
+
+        // Modify button state
+        qwebrSetInteractiveButtonState(`🟡 Running hidden code cells ...`, false);
+
+        // Begin processing non-interactive sections
+        // Due to the iteration policy, we must use a for() loop.
+        // Otherwise, we would need to switch to using reduce with an empty
+        // starting promise
+        for (const entry of filteredEntries) {
+
+          // Determine cell being examined
+          currentHiddenCell = currentHiddenCell + 1;
+          const formattedMessage = `Evaluating hidden cell ${currentHiddenCell} out of ${nHiddenCells}`;
+
+          // Update the document status header
+          if (qwebrShowStartupMessage) {
+            qwebrUpdateStatusHeader(formattedMessage);
+          }
+
+          // Display the update in non-active areas
+          qwebrUpdateStatusMessage(formattedMessage);
+
+          // Extract details on the active cell
+          const evalType = entry.options.context;
+          const cellCode = entry.code;
+          const qwebrCounter = entry.id;
+
+          if (['output', 'setup'].includes(evalType)) {
+            // Disable further global status updates
+            const activeContainer = document.getElementById(`qwebr-non-interactive-loading-container-${qwebrCounter}`);
+            activeContainer.classList.remove('qwebr-cell-needs-evaluation');
+            activeContainer.classList.add('qwebr-cell-evaluated');
+
+            // Update status on the code cell
+            const activeStatus = document.getElementById(`qwebr-status-text-${qwebrCounter}`);
+            activeStatus.innerText = " Evaluating hidden code cell...";
+            activeStatus.classList.remove('qwebr-cell-needs-evaluation');
+            activeStatus.classList.add('qwebr-cell-evaluated');
+          }
+
+          switch (evalType) {
+            case 'interactive':
+              // TODO: Make this more standardized.
+              // At the moment, we're overriding the interactive status update by pretending its
+              // output-like. 
+              const tempOptions = entry.options;
+              tempOptions["context"] = "output"
+              // Run the code in a non-interactive state that is geared to displaying output
+              await qwebrExecuteCode(`${cellCode}`, qwebrCounter, tempOptions);
+              break;
+            case 'output':
+              // Run the code in a non-interactive state that is geared to displaying output
+              await qwebrExecuteCode(`${cellCode}`, qwebrCounter, entry.options);
+              break;
+            case 'setup':
+              const activeDiv = document.getElementById(`qwebr-noninteractive-setup-area-${qwebrCounter}`);
+              // Run the code in a non-interactive state with all output thrown away
+              await mainWebR.evalRVoid(`${cellCode}`);
+              break;
+            default: 
+              break; 
+          }
+
+          if (['output', 'setup'].includes(evalType)) {
+            // Disable further global status updates
+            const activeContainer = document.getElementById(`qwebr-non-interactive-loading-container-${qwebrCounter}`);
+            // Disable visibility
+            activeContainer.style.visibility = 'hidden';
+            activeContainer.style.display = 'none';
+          }
+        }
+      }
+    ).then(
+      () => {
+        // Release document status as ready
+
+        if (qwebrShowStartupMessage) {
+          qwebrStartupMessage.innerText = "🟢 Ready!"
+        }
+      
+        qwebrSetInteractiveButtonState(
+          `<i class="fa-solid fa-play qwebr-icon-run-code"></i> <span>Run Code</span>`, 
+          true
+        );  
+      }
+    );
     </script>
     
 

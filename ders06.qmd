@@ -1,5 +1,5 @@
 ---
-title: "Ders6: T-testi"
+title: "Ders6: İstatistik Güç"
 subtitle: "MBG1032 Biyoistatistik - Doç.Dr.Alper YILMAZ - *27 Mart 2024*"
 format:
   revealjs:

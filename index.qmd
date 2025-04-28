@@ -48,5 +48,8 @@
 
 ## Ders07
 
-**Teorik** (*03 Nisan 2024*): T-testi uygulamaları  [Sunum linki](ders06-uygulama.qmd)
+**Teorik** (*03 Nisan 2024*): İstatistik Güç  [Sunum linki](ders06.qmd)
 
+## Ders08
+
+**Teorik** (*03 Nisan 2024*): ANOVA  [Sunum linki](ders07.qmd)

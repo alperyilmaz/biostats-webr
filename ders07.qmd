@@ -1,0 +1,466 @@
+---
+title: "Ders 7: ANOVA (Varyans Analizi)"
+subtitle: "MBG1032 Biyoistatistik - Doç.Dr.Alper YILMAZ"
+format:
+  revealjs:
+    chalkboard: true
+    css: custom.css
+    smaller: true
+    scrollable: true
+    slide-number: c/t
+webr:
+  packages: ['ggplot2'] # Install R packages on document open
+filters:
+  - webr
+engine: knitr
+---
+
+## Özet
+
+* ANOVA (Varyans Analizi) nedir ve ne zaman kullanılır?
+* t-testi ile ANOVA arasındaki fark
+* Tek Yönlü ANOVA (One-Way ANOVA)
+* ANOVA'nın varsayımları
+* F-dağılımı ve F-istatistiği
+* R ile ANOVA uygulamaları
+* ANOVA sonuçlarının yorumlanması ve raporlanması
+* Post-hoc testleri (Tukey HSD, Bonferroni)
+* Biyolojide ANOVA uygulamaları
+
+## ANOVA (Varyans Analizi) Nedir?
+
+ANOVA, ikiden fazla grup ortalaması arasındaki farkların istatistiksel anlamlılığını değerlendirmek için kullanılan parametrik bir testtir.
+
+**Kullanım Amacı:**
+
+* İkiden fazla grubun karşılaştırılması
+* Bir veya daha fazla faktörün (bağımsız değişkenlerin) bir bağımlı değişken üzerindeki etkisini incelemek
+* Gruplar arası farklılıkların rastgele şans eseri mi yoksa gerçek bir etkiden mi kaynaklandığını belirlemek
+
+**Temel Fikir:**
+
+Gruplar arası varyans ile gruplar içi varyansı karşılaştırarak, faktörün anlamlı bir etkisi olup olmadığını belirlemek
+
+## t-testi vs. ANOVA
+
+**Neden ANOVA? Neden çoklu t-testi kullanmıyoruz?**
+
+* İkiden fazla grup olduğunda t-testi yerine ANOVA kullanılır
+* Çoklu t-testleri yapmak, **Tip I hata** (yanlış pozitif) olasılığını artırır
+
+**Örnek:** 3 grup karşılaştırması yapıyorsak:
+
+* A vs B, A vs C, B vs C = 3 farklı t-testi
+* Her test için α = 0.05 olsaydı, gerçekte:
+  * En az bir testte yanlış pozitif bulma olasılığı: 1-(1-0.05)³ = 0.143
+
+**Tip I hata olasılığı 0.05 yerine 0.143'e çıkar!**
+
+ANOVA, bu \"çoklu karşılaştırma problemini\" çözer ve genel hata oranını kontrol altında tutar.
+
+## ANOVA Türleri
+
+İstatistikte birçok ANOVA türü vardır:
+
+1. **Tek Yönlü ANOVA (One-Way ANOVA):**
+   * Tek bir faktörün etkisini incelemek için kullanılır
+   * Örnek: Farklı gübre türlerinin (A, B, C) bitki büyümesine etkisi
+
+2. **İki Yönlü ANOVA (Two-Way ANOVA):**
+   * İki faktörün etkisini ve bu faktörlerin etkileşimini incelemek için kullanılır
+   * Örnek: Hem gübre türünün hem de sulama sıklığının bitki büyümesine etkisi
+
+3. **Tekrarlı Ölçümler ANOVA (Repeated Measures ANOVA):**
+   * Aynı deneklerin farklı koşullarda veya zaman noktalarında ölçümlerini karşılaştırmak için kullanılır
+   * Örnek: Aynı hastaların tedavi öncesi, tedaviden 1 ay sonra ve 3 ay sonraki değerlerinin karşılaştırılması
+
+*Bu derste ağırlıklı olarak Tek Yönlü ANOVA üzerinde duracağız.*
+
+## Tek Yönlü ANOVA Modeli
+
+Tek Yönlü ANOVA'da:
+
+* Bir bağımlı değişken (sürekli)
+* Bir kategorik faktör (bağımsız değişken)
+* Her faktör seviyesi, bir grubu temsil eder
+
+**Matematiksel Model:**
+
+$$Y_{ij} = \mu + \alpha_i + \epsilon_{ij}$$
+
+Burada:
+
+* $Y_{ij}$ = i. gruptaki j. gözlem
+* $\mu$ = genel ortalama
+* $\alpha_i$ = i. grubun etkisi ($\alpha_1 + \alpha_2 + ... + \alpha_k = 0$)
+* $\epsilon_{ij}$ = hata terimi (rastgele değişkenlik)
+
+## ANOVA'nın Hipotezleri
+
+**Sıfır Hipotezi (H₀):**
+Tüm grup ortalamaları birbirine eşittir.
+$$H_0: \mu_1 = \mu_2 = ... = \mu_k$$
+
+**Alternatif Hipotez (H₁):**
+En az bir grup ortalaması diğerlerinden farklıdır.
+
+$$H_1: \	ext{En az bir } \mu_i \
+eq \mu_j \	ext{ (i ≠ j için)}$$
+
+* **Önemli Not:** Alternatif hipotez, *hangi* grup ortalamalarının farklı olduğunu belirtmez, sadece en az bir farklılık olduğunu söyler.
+* Hangi grup ortalamalarının farklı olduğunu belirlemek için, ANOVA'dan sonra **post-hoc testleri** kullanılır.
+
+## ANOVA'nın Varsayımları
+
+ANOVA, t-testine benzer şekilde, bazı varsayımlar üzerine kuruludur:
+
+1. **Bağımsızlık:** Gözlemler birbirinden bağımsız olmalıdır.
+
+2. **Normallik:** Her gruptaki verilerin normal dağılması veya örneklem boyutunun yeterince büyük olması (n>30).
+
+3. **Varyansların Homojenliği (Homoscedasticity):** Tüm gruplardaki varyansların yaklaşık olarak eşit olması.
+
+*Not: Varsayımlar karşılanmadığında, parametrik olmayan alternatifler düşünülmelidir (örn. Kruskal-Wallis testi).*
+
+## Varyansların Ayrışımı
+
+ANOVA'nın adı \"Varyans Analizi\"dir çünkü toplam varyansı iki bileşene ayırır:
+
+**1. Gruplar Arası Varyans (Between-Groups Variance):**
+
+* Grup ortalamalarının genel ortalamadan ne kadar farklı olduğunu gösterir
+* Eğer büyükse, gruplar arasında gerçek farklılıklar olduğunu düşündürür
+
+**2. Gruplar İçi Varyans (Within-Groups Variance):**
+
+* Grup içindeki bireysel gözlemlerin, kendi grup ortalamasından ne kadar farklı olduğunu gösterir
+* Rastgele hata veya faktör dışındaki etkilerden kaynaklanır
+
+**F-istatistiği = Gruplar Arası Varyans / Gruplar İçi Varyans**
+
+* F-değeri büyükse → Gruplar arasındaki farklılıklar, grup içi varyasyondan daha büyüktür → H₀ reddedilir
+
+## Kareler Toplamı
+
+ANOVA'da varyans analizi için, kareler toplamı (Sum of Squares - SS) hesaplanır:
+
+**1. Toplam Kareler Toplamı (SST):**
+
+$$SST = \sum_{i=1}^{k}\sum_{j=1}^{n_i}(Y_{ij} - \bar{Y})^2$$
+
+**2. Gruplar Arası Kareler Toplamı (SSB):**
+$$SSB = \sum_{i=1}^{k}n_i(\bar{Y}_i - \bar{Y})^2$$
+
+**3. Gruplar İçi Kareler Toplamı (SSW):**
+$$SSW = \sum_{i=1}^{k}\sum_{j=1}^{n_i}(Y_{ij} - \bar{Y}_i)^2$$
+
+**İlişki:** SST = SSB + SSW
+
+## Ortalama Kareler ve F-İstatistiği
+
+Kareler toplamı değerleri, ilgili serbestlik dereceleri ile bölünerek ortalama kareler (Mean Squares - MS) hesaplanır:
+
+**1. Gruplar Arası Ortalama Kareler (MSB):**
+$$MSB = \frac{SSB}{k-1}$$
+
+**2. Gruplar İçi Ortalama Kareler (MSW):**
+$$MSW = \frac{SSW}{N-k}$$
+
+**F-İstatistiği:**
+$$F = \frac{MSB}{MSW}$$
+
+Burada:
+
+* k = grup sayısı
+* N = toplam gözlem sayısı
+
+F-değeri, α düzeyindeki kritik F-değeri ile karşılaştırılır. Eğer hesaplanan F-değeri kritik değerden büyükse, H₀ reddedilir.
+
+## F-Dağılımı
+
+F-dağılımı, iki farklı varyans tahmininin oranı olarak hesaplanan F-istatistiği için örnekleme dağılımıdır.
+
+**Özellikleri:**
+
+* Sıfırdan büyük değerler alır (F ≥ 0)
+* Sağa çarpık bir dağılımdır
+* İki serbestlik derecesi parametresi vardır: df₁ (payda) ve df₂ (payda)
+* H₀ doğruysa, F-değeri 1'e yakındır
+
+## 
+
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/F-distribution_pdf.svg/600px-F-distribution_pdf.svg.png){fig-align=\"center\" height=\"280px\"}
+
+:::footer
+Görsel Kaynak: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:F-distribution_pdf.svg)
+:::
+
+## ANOVA Tablosu
+
+ANOVA sonuçları genellikle bir tablo ile özetlenir:
+
+| Varyasyon Kaynağı | SS | df | MS | F | p-değeri |
+|-------------------|----|----|----|----|----------|
+| Gruplar Arası (Between) | SSB | k-1 | MSB = SSB/(k-1) | F = MSB/MSW | p |
+| Gruplar İçi (Within) | SSW | N-k | MSW = SSW/(N-k) | | |
+| Toplam | SST | N-1 | | | |
+
+* **k** = grup sayısı
+* **N** = toplam gözlem sayısı
+* p-değeri < α ise, H₀ reddedilir
+
+## R ile Tek Yönlü ANOVA
+
+**Örnek Senaryo:** Üç farklı gübre türünün (A, B, C) domates bitkilerinin boy (cm) üzerindeki etkisini analiz edelim.
+
+```{webr-r}
+# Veri setimiizi oluşturalım
+gubreler <- c(rep("A", 8), rep("B", 8), rep("C", 8))
+boylar <- c(
+  # Gübre A ile büyütülen bitkiler
+  65, 72, 68, 70, 69, 71, 65, 67,
+  # Gübre B ile büyütülen bitkiler
+  75, 79, 78, 80, 82, 75, 77, 76,
+  # Gübre C ile büyütülen bitkiler
+  70, 72, 74, 71, 69, 68, 75, 73
+)
+
+# Verileri bir data frame'e dönüştürelim
+veriler <- data.frame(
+  Gübre = factor(gubreler),
+  Boy = boylar
+)
+```
+
+##
+
+
+```{webr-r}
+# Verilere göz atalım
+head(veriler)
+
+# Gruplar için özet istatistikler
+tapply(veriler$Boy, veriler$Gübre, summary)
+tapply(veriler$Boy, veriler$Gübre, sd)
+```
+
+## ANOVA Analizi
+
+```{webr-r}
+# Tek Yönlü ANOVA
+anova_sonuc <- aov(Boy ~ Gübre, data = veriler)
+
+# ANOVA tablosunu görelim
+summary(anova_sonuc)
+```
+
+## İstatistiksel değerleri görelim
+
+```{webr-r}
+# ANOVA detaylarını görelim
+model <- anova_sonuc
+
+# ANOVA tablosundaki değerleri manuel olarak görelim
+SSB <- sum((tapply(veriler$Boy, veriler$Gübre, mean) - mean(veriler$Boy))^2 * table(veriler$Gübre))
+SSW <- sum(resid(model)^2)
+SST <- SSB + SSW
+
+cat(\"Gruplar Arası Kareler Toplamı (SSB):\", round(SSB, 2), \"\
+\")
+cat(\"Gruplar İçi Kareler Toplamı (SSW):\", round(SSW, 2), \"\
+\")
+cat(\"Toplam Kareler Toplamı (SST):\", round(SST, 2), \"\
+\
+\")
+
+cat(\"Gruplar Arası Serbestlik Derecesi:\", length(unique(veriler$Gübre)) - 1, \"\
+\")
+cat(\"Gruplar İçi Serbestlik Derecesi:\", nrow(veriler) - length(unique(veriler$Gübre)), \"\
+\")
+cat(\"Toplam Serbestlik Derecesi:\", nrow(veriler) - 1, \"\
+\
+\")
+
+MSB <- SSB / (length(unique(veriler$Gübre)) - 1)
+MSW <- SSW / (nrow(veriler) - length(unique(veriler$Gübre)))
+
+cat(\"Gruplar Arası Ortalama Kareler (MSB):\", round(MSB, 2), \"\
+\")
+cat(\"Gruplar İçi Ortalama Kareler (MSW):\", round(MSW, 2), \"\
+\
+\")
+
+F_value <- MSB / MSW
+cat(\"F değeri:\", round(F_value, 2), \"\
+\")
+
+p_value <- summary(model)[[1]]$'Pr(>F)'[1]
+cat(\"p değeri:\", format.pval(p_value, digits = 3), \"\
+\")
+```
+
+## Görselleştirme
+
+```{webr-r}
+# Grup ortalamalarını görelim
+means <- tapply(veriler$Boy, veriler$Gübre, mean)
+sds <- tapply(veriler$Boy, veriler$Gübre, sd)
+
+# Barplot
+barplot(means, ylim=c(0, max(means) + max(sds) + 5),
+        col=c(\"lightgreen\", \"lightblue\", \"lightyellow\"),
+        main=\"Gübre Türlerine Göre Ortalama Bitki Boyları\",
+        ylab=\"Ortalama Boy (cm)\", xlab=\"Gübre Türü\")
+
+# Standart sapmalar için hata çubukları
+arrows(x0 = 1:3 * 0.7, y0 = means - sds, 
+       x1 = 1:3 * 0.7, y1 = means + sds, 
+       angle=90, code=3, length=0.1)
+```
+
+## Post-hoc Testleri
+
+ANOVA, gruplar arasında bir fark olduğunu söyler, ancak *hangi* grupların farklı olduğunu söylemez. Bunu belirlemek için post-hoc testleri kullanılır.
+
+**En Yaygın Post-hoc Testleri:**
+
+* **Tukey HSD (Honestly Significant Difference):** Tüm olası ikili grup karşılaştırmalarını yapar ve aile bazında hata oranını kontrol eder.
+  
+* **Bonferroni Düzeltmesi:** Alfa (α) değerini karşılaştırma sayısına bölerek çoklu test problemini düzeltir.
+  
+* **Scheffé Testi:** Tüm olası grup karşılaştırmaları için uygundur, ancak genellikle daha muhafazakardır.
+
+*Not: Post-hoc testleri sadece ANOVA sonucu istatistiksel olarak anlamlıysa (p < 0.05) uygulanır.*
+
+## Tukey HSD Post-hoc Testi
+
+```{webr-r}
+# Tukey HSD testi uygulayalım
+tukey_sonuc <- TukeyHSD(anova_sonuc)
+print(tukey_sonuc)
+
+# Güven aralıkları ile görselleştirelim
+plot(tukey_sonuc, las=1)
+```
+
+## Post-hoc Testlerin Yorumlanması
+
+Tukey HSD sonuçlarına göre:
+
+* **Gübre B - Gübre A:** Gübre B, Gübre A'ya göre anlamlı şekilde daha yüksek bitki boylarına sahiptir (p < 0.001).
+* **Gübre C - Gübre A:** Gübre C, Gübre A'ya göre anlamlı şekilde daha yüksek bitki boylarına sahiptir (p < 0.05).
+* **Gübre C - Gübre B:** Gübre C ve Gübre B arasında istatistiksel olarak anlamlı bir fark yoktur (p > 0.05).
+
+**Genel Sonuç:**
+* Gübre B ve Gübre C, Gübre A'dan daha etkilidir.
+* Gübre B ve Gübre C arasında anlamlı bir fark yoktur.
+
+## Sonuçların Raporlanması
+
+**Akademik yayınlarda ANOVA sonuçlarını nasıl raporlamalıyız?**
+
+*\"Gübre türünün domates bitkilerinin boyları üzerindeki etkisi, tek yönlü ANOVA ile değerlendirilmiştir. Gübre türünün bitki boyu üzerinde istatistiksel olarak anlamlı bir etkisi bulunmuştur, F(2, 21) = 16.44, p < 0.001. Post-hoc Tukey HSD testleri, Gübre B ile yetiştirilen bitkilerin (M = 77.75 cm, SD = 2.49) ve Gübre C ile yetiştirilen bitkilerin (M = 71.50 cm, SD = 2.45), Gübre A ile yetiştirilen bitkilerden (M = 68.38 cm, SD = 2.67) anlamlı şekilde daha uzun olduğunu göstermiştir (sırasıyla p < 0.001 ve p < 0.05). Gübre B ve Gübre C arasında istatistiksel olarak anlamlı bir fark bulunmamıştır (p = 0.094).\"*
+
+## Biyolojide ANOVA Uygulamaları
+
+ANOVA, biyoloji ve tıpta yaygın olarak kullanılan bir analiz yöntemidir:
+
+1. **Farklı İlaç Tedavilerinin Karşılaştırılması:**
+   * Üç veya daha fazla farklı ilacın etkinliğinin karşılaştırılması
+
+2. **Gen Ekspresyon Analizi:**
+   * Farklı deneysel koşullar altında gen ekspresyon seviyelerinin karşılaştırılması
+
+3. **Ekolojik Çalışmalar:**
+   * Farklı habitatlardaki biyoçeşitliliğin karşılaştırılması
+
+4. **Enzim Kinetik Çalışmaları:**
+   * Farklı pH değerlerinde enzim aktivitelerinin karşılaştırılması
+
+5. **Büyüme ve Gelişim Çalışmaları:**
+   * Farklı besin veya hormon uygulamalarının büyüme üzerindeki etkisinin incelenmesi
+
+## Gerçek Veri Üzerinde Uygulama: iris Veri Seti
+
+Şimdi, `iris` veri setinde üç farklı Iris türünün (setosa, versicolor, virginica) taç yaprak (petal) boylarını karşılaştıralım.
+
+```{webr-r}
+# iris veri setini yükleyelim
+data(iris)
+
+# Özet istatistikler
+tapply(iris$Petal.Length, iris$Species, summary)
+tapply(iris$Petal.Length, iris$Species, sd)
+
+# ANOVA analizi
+iris_anova <- aov(Petal.Length ~ Species, data = iris)
+summary(iris_anova)
+```
+
+## Görselleştirme ve Post-hoc Test
+
+```{webr-r}
+# Boxplot
+boxplot(Petal.Length ~ Species, data = iris, 
+        col=c(\"pink\", \"lightblue\", \"lightgreen\"),
+        main=\"Iris Türlerine Göre Taç Yaprak Boyları\",
+        ylab=\"Taç Yaprak Boyu (cm)\")
+
+# Post-hoc test
+tukey_sonuc <- TukeyHSD(iris_anova)
+print(tukey_sonuc)
+```
+
+## Tek Yönlü ANOVA için Pratik İpuçları
+
+1. **Veri Hazırlığı ve Kontroller:**
+   * Aykırı değerleri belirleyin ve ele alın
+   * Normallik ve varyans homojenliği varsayımlarını kontrol edin
+   * Veri yapısının tek yönlü ANOVA'ya uygun olduğunu doğrulayın
+
+2. **Analiz ve Sonuçlar:**
+   * Sadece p-değerine değil, etki büyüklüğüne de bakın (η²)
+   * ANOVA anlamlıysa, post-hoc testleri uygulayın
+   * Bulguları biyolojik/pratik anlamlılık açısından yorumlayın
+
+3. **Varsayımlar Karşılanmadığında:**
+   * Veri dönüşümleri deneyin (log, karekök vb.)
+   * Parametrik olmayan alternatifleri kullanın (Kruskal-Wallis testi)
+   * Robust ANOVA yöntemlerini düşünün
+
+## İki Yönlü ANOVA Hakkında Kısa Bilgi
+
+İki Yönlü ANOVA, iki faktörün ve bunların etkileşiminin etkisini analiz eden bir yöntemdir.
+
+**Örnek:** Hem gübre türünün (A, B, C) hem de sulama sıklığının (günlük, haftalık) domates bitkilerinin boyuna etkisini incelemek istiyoruz.
+
+**İki Yönlü ANOVA Modeli:**
+$$Y_{ijk} = \\mu + \\alpha_i + \\beta_j + (\\alpha\\beta)_{ij} + \\epsilon_{ijk}$$
+
+* $\\mu$ = genel ortalama
+* $\\alpha_i$ = ilk faktörün etkisi (gübre türü)
+* $\\beta_j$ = ikinci faktörün etkisi (sulama sıklığı)
+* $(\\alpha\\beta)_{ij}$ = faktörler arası etkileşim
+* $\\epsilon_{ijk}$ = hata terimi
+
+İki Yönlü ANOVA ile üç hipotezi test ederiz:
+1. İlk faktörün ana etkisi ($H_0: \\alpha_1 = \\alpha_2 = ... = \\alpha_a = 0$)
+2. İkinci faktörün ana etkisi ($H_0: \\beta_1 = \\beta_2 = ... = \\beta_b = 0$)
+3. Faktörler arası etkileşim ($H_0: (\\alpha\\beta)_{ij} = 0 \	ext{ tüm } i, j \	ext{ için}$)
+
+## Özet: ANOVA'nın Avantajları ve Sınırlamaları
+
+**Avantajlar:**
+* İkiden fazla grubu aynı anda karşılaştırabilme
+* Tip I hata oranını kontrol etme
+* Kategorik faktörlerin sürekli değişkenler üzerindeki etkisini inceleme
+
+**Sınırlamalar:**
+* Sadece ortalamaları karşılaştırır, dağılımlardaki diğer farklılıkları görmez
+* Parametrik bir test olarak, belirli varsayımlara dayanır
+* Grup farkını bulur ancak hangi grupların farklı olduğunu belirtmez (post-hoc testleri gerekir)
+
+**ANOVA'nın Ötesinde:**
+* İki faktörlü çalışmalar için İki Yönlü ANOVA
+* Tekrarlı ölçümler için Tekrarlı Ölçümler ANOVA
+
