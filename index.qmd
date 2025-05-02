@@ -53,3 +53,6 @@
 ## Ders08
 
 **Teorik** (*03 Nisan 2024*): ANOVA  [Sunum linki](ders07.qmd)
+
+**Uygulama** (*2 Mayıs 2025*): İstatistik Güç ve ANOVA uygulama [Uygulama sunum linki](ders07-uygulama.qmd)
+

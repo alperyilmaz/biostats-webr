@@ -1,0 +1,617 @@
+---
+title: "Ders7 Uygulama: İstatistiksel Güç ve ANOVA"
+subtitle: "MBG1032 Biyoistatistik - Doç.Dr.Alper YILMAZ - *02 Mayıs 2024*"
+format:
+  revealjs:
+    chalkboard: true
+    css: custom.css
+    smaller: true
+    slide-number: c/t
+    scrollable: true
+typora-copy-images-to: images
+webr:
+  packages: ['ggplot2'] # İhtiyaç duyulan R paketleri
+filters:
+  - webr
+---
+
+## İstatistiksel Güç Analizi
+
+İstatistiksel güç analizi, şu soruları yanıtlamamıza yardımcı olur:
+
+1. Belirli bir etki büyüklüğü, alfa ve örneklem boyutu için çalışmanın gücü nedir?
+2. Belirli bir güç, etki büyüklüğü ve alfa için gereken örneklem boyutu nedir?
+3. Belirli bir güç, alfa ve örneklem boyutunda saptanabilecek minimum etki büyüklüğü nedir?
+
+R'da `power.t.test()` fonksiyonu, t-testi için güç hesaplaması yapar.
+
+## t-Testi için Güç Hesaplaması
+
+`power.t.test()` fonksiyonu, t-testi için güç hesaplaması yapar.
+
+Örnek 1: Örneklem boyutu, anlamlılık düzeyi ve etki büyüklüğü verildiğinde güç hesabı:
+
+```{webr-r}
+# İki grup, her grupta 30 kişi, ortalamalar arası fark = 5, standart sapma = 10, α=0.05
+sonuc <- power.t.test(n = 30, delta = 5, sd = 10, sig.level = 0.05, 
+                     power = NULL, type = "two.sample", alternative = "two.sided")
+sonuc
+```
+
+## Örneklem Boyutu Hesaplaması
+
+Örnek 2: Güç, anlamlılık düzeyi ve etki büyüklüğü verildiğinde gereken örneklem boyutu hesabı:
+
+```{webr-r}
+# 0.8 güç, ortalamalar arası fark = 5, standart sapma = 10 ve 0.05 anlamlılık düzeyi için gereken örneklem boyutu
+sonuc <- power.t.test(delta = 5, sd = 10, sig.level = 0.05, power = 0.8, 
+                     type = "two.sample", alternative = "two.sided")
+sonuc
+```
+
+## Etki Büyüklüğü, Örneklem Boyutu ve Güç İlişkisi
+
+Farklı etki büyüklükleri (ortalama farkları) ve örneklem boyutları için güç değişimi:
+
+```{webr-r}
+# Farklı etki büyüklükleri için güç eğrisi
+n_values <- seq(5, 100, by = 5)
+delta_values <- c(2, 5, 8)  # Küçük, orta, büyük etki
+sd_value <- 10  # Sabit standart sapma
+
+guc_hesapla <- function(n, delta, sd) {
+  result <- power.t.test(n = n, delta = delta, sd = sd, sig.level = 0.05, 
+                        type = "two.sample", alternative = "two.sided")
+  return(result$power)
+}
+
+# Sonuçları bir matriste toplayalım
+guc_matrisi <- matrix(NA, nrow = length(n_values), ncol = length(delta_values))
+for (i in 1:length(n_values)) {
+  for (j in 1:length(delta_values)) {
+    guc_matrisi[i, j] <- guc_hesapla(n_values[i], delta_values[j], sd_value)
+  }
+}
+```
+
+## 
+
+```{webr-r}
+# Grafiği çizelim
+matplot(n_values, guc_matrisi, type = "l", lty = 1:3, col = c("blue", "red", "green"),
+        xlab = "Grup Başına Örneklem Boyutu (n)", ylab = "İstatistiksel Güç",
+        main = "Etki Büyüklüğü ve Örneklem Boyutuna Göre Güç")
+legend("bottomright", 
+       legend = paste("delta =", delta_values, "(delta/sd =", round(delta_values/sd_value, 2), ")"), 
+       lty = 1:3, col = c("blue", "red", "green"))
+abline(h = 0.8, lty = 2)  # 0.8 güç seviyesini gösteren çizgi
+```
+
+## Uygulama: Örneklem Boyutu Planlama
+
+**Senaryo:** Yeni bir genin ekspresyonunun, normal duruma göre en az 30 birim artması bekleniyorsa ve standart sapma yaklaşık 100 birim ise, 0.8 istatistiksel güç ve 0.05 anlamlılık düzeyi için kaç örnek gerekir?
+
+```{webr-r}
+# Delta = 30 (ortalama fark), sd = 100 (standart sapma)
+# Güç = 0.8, alfa = 0.05
+
+sonuc <- power.t.test(delta = 30, sd = 100, power = 0.8, sig.level = 0.05, 
+                     type = "two.sample", alternative = "two.sided")
+sonuc
+```
+
+Bu sonuca göre, belirtilen koşullar altında, her grupta yaklaşık kaç örnek gerektiğini yorumlayınız.
+
+## Tek Yönlü ANOVA Uygulaması
+
+Şimdi gerçek bir veri seti üzerinde ANOVA analizi yapalım. `PlantGrowth` veri seti, üç farklı koşulda yetişen bitkilerin ağırlıklarını içerir:
+
+```{webr-r}
+# PlantGrowth veri setini inceleyelim
+data(PlantGrowth)
+head(PlantGrowth)
+str(PlantGrowth)
+table(PlantGrowth$group)
+```
+
+## Verilerin Özeti ve Görselleştirilmesi
+
+```{webr-r}
+# Kutu grafiği (boxplot)
+boxplot(weight ~ group, data = PlantGrowth, 
+        col = c("lightgreen", "lightblue", "lightyellow"),
+        main = "Bitki Büyüme Koşullarına Göre Ağırlık",
+        xlab = "Grup", ylab = "Ağırlık")
+```
+
+## ANOVA Analizi
+
+```{webr-r}
+# Tek yönlü ANOVA analizi
+anova_sonuc <- aov(weight ~ group, data = PlantGrowth)
+summary(anova_sonuc)
+
+
+```
+
+## Post-hoc Testleri: Tukey HSD
+
+```{webr-r}
+# Tukey HSD testi
+tukey_sonuc <- TukeyHSD(anova_sonuc)
+tukey_sonuc
+
+# Görselleştirelim
+plot(tukey_sonuc, las = 1)
+```
+
+
+## Biyolojide Çoklu Karşılaştırma Problemi
+
+Biyolojik araştırmalarda sıklıkla karşılaştığımız bir durum:
+
+* Mikroarray veya RNA-seq analizinde binlerce gen ekspresyonunu karşılaştırıyoruz
+* Metabolomik analizlerde yüzlerce metabolit ölçüyoruz
+* Çoklu SNP analizlerinde binlerce genetik varyantı test ediyoruz
+
+**Çoklu Test Problemi:**
+
+* Her test için α = 0.05 kullanırsak, çok sayıda yanlış pozitif sonuç elde ederiz
+* 1000 gen için test yapıyorsak ve tüm null hipotezler doğruysa bile, 50 geni (1000 × 0.05) yanlışlıkla anlamlı bulabiliriz
+* Bu "çoklu test problemi" biyolojide çok önemlidir!
+
+## Bonferroni Düzeltmesi
+
+Bonferroni düzeltmesi, en basit ve en sık kullanılan çoklu test düzeltme yöntemidir.
+
+**Prensip:**
+
+* α değerini test sayısına böleriz: α' = α/m
+* Burada m = toplam test sayısı
+
+**Örnek:**
+
+* 1000 gen için test yapıyoruz
+* Standart α = 0.05
+* Bonferroni düzeltmesi ile: α' = 0.05/1000 = 0.00005
+* Yani p < 0.00005 olan genleri anlamlı kabul ederiz
+
+
+## Benjamini-Hochberg (FDR) Düzeltmesi
+
+Bonferroni çok muhafazakardır ve biyolojik çalışmalarda gerçek etkileri kaçırabilir. Benjamini-Hochberg yöntemi (FDR - False Discovery Rate), daha esnek bir alternatiftir.
+
+**Prensip:**
+
+1. P-değerlerini küçükten büyüğe sıralayın
+2. Her p-değeri için düzeltilmiş değer hesaplayın: p' = p × (m/i)
+   - m = toplam test sayısı
+   - i = p-değerinin sıra numarası
+3. Belirli bir FDR seviyesini (genellikle 0.05 veya 0.10) sağlayan tüm testleri anlamlı kabul edin
+
+## 
+
+```{webr-r}
+# Benjamini-Hochberg düzeltmesi
+p_degerler <- c(0.001, 0.015, 0.040, 0.008, 0.060)
+test_sayisi <- length(p_degerler)
+
+# Sırala
+p_sirali <- sort(p_degerler)
+sira <- 1:test_sayisi
+
+# BH düzeltilmiş değerler
+p_BH <- p_sirali * (test_sayisi / sira)
+# Düzeltilmiş değerlerin monotonik olmasını sağla
+for (i in (test_sayisi-1):1) {
+  p_BH[i] <- min(p_BH[i], p_BH[i+1])
+}
+
+# FDR = 0.05 için sonuçlar
+anlamli_BH <- p_BH < 0.05
+
+# Sonuçları düzenle
+sonuclar <- data.frame(
+  Siralama = sira,
+  P_degeri = p_sirali,
+  BH_duzeltilmis = p_BH,
+  FDR_sonucu = ifelse(anlamli_BH, "Anlamlı", "Anlamlı değil")
+)
+print(sonuclar)
+```
+
+## R ile Çoklu Test Düzeltmeleri
+
+R'da `p.adjust()` fonksiyonu, farklı çoklu test düzeltme yöntemlerini uygular:
+
+```{webr-r}
+# Rastgele p-değerleri oluşturalım
+set.seed(123)
+p_vals <- runif(100)
+head(p_vals, 10)  # İlk 10 p-değeri
+
+# Bonferroni düzeltmesi
+p_bonf <- p.adjust(p_vals, method = "bonferroni")
+head(p_bonf, 10)
+
+# Benjamini-Hochberg düzeltmesi
+p_bh <- p.adjust(p_vals, method = "BH")
+head(p_bh, 10)
+
+# Kaç test anlamlı?
+cat("Düzeltme öncesi anlamlı test sayısı:", sum(p_vals < 0.05), "\n")
+cat("Bonferroni sonrası anlamlı test sayısı:", sum(p_bonf < 0.05), "\n")
+cat("BH/FDR sonrası anlamlı test sayısı:", sum(p_bh < 0.05), "\n")
+```
+
+## Düzeltme Yöntemlerinin Karşılaştırılması
+
+**Bonferroni Düzeltmesi:**
+
+* Avantaj: Basit, anlaşılır ve Tip I hatayı sıkı kontrol eder (FWER - Family-Wise Error Rate)
+* Dezavantaj: Çok muhafazakardır ve gerçek farklılıkları kaçırabilir (düşük istatistiksel güç)
+* Kullanım: Az sayıda planlı karşılaştırma varsa veya Tip I hata kesinlikle önlenmek isteniyorsa
+
+**Benjamini-Hochberg (FDR) Düzeltmesi:**
+
+* Avantaj: Daha esnek, daha iyi istatistiksel güç sağlar
+* Dezavantaj: Daha fazla yanlış pozitife izin verir (belirli bir oranda)
+* Kullanım: Büyük ölçekli tarama çalışmalarında (genomik, proteomik, metabolomik)
+
+**Biyolojide Tercih:**
+
+* Mikroarray, RNA-seq, proteomik çalışmalarda genellikle FDR tercih edilir
+* Kritik klinik veya tanısal uygulamalarda Bonferroni tercih edilebilir
+
+## Birden Fazla Faktörle ANOVA (İki Yönlü ANOVA)
+
+Şimdi ToothGrowth veri setini kullanarak, C vitamini dozu ve uygulama yönteminin diş büyümesi üzerindeki etkisini analiz edelim:
+
+```{webr-r}
+# ToothGrowth veri setini inceleyelim
+data(ToothGrowth)
+head(ToothGrowth)
+str(ToothGrowth)
+
+# Doz faktörünü kategorik değişkene dönüştürelim
+ToothGrowth$dose <- factor(ToothGrowth$dose)
+```
+
+## Verilerin Özeti ve Görselleştirilmesi
+
+```{webr-r}
+
+# İki faktörlü kutu grafiği (boxplot)
+boxplot(len ~ supp * dose, data = ToothGrowth, 
+        col = c("lightgreen", "lightblue"),
+        main = "C Vitamini Dozu ve Uygulama Yöntemine Göre Diş Büyümesi",
+        xlab = "Uygulama Yöntemi ve Doz", ylab = "Diş Uzunluğu")
+```
+
+## İki Yönlü ANOVA Analizi
+
+```{webr-r}
+# İki yönlü ANOVA (etkileşimli)
+anova_sonuc2 <- aov(len ~ supp * dose, data = ToothGrowth)
+summary(anova_sonuc2)
+```
+
+## Sonuçların Yorumlanması
+
+İki yönlü ANOVA sonuçlarına göre:
+
+1. Uygulama yönteminin (supp) diş büyümesi üzerinde anlamlı bir etkisi var mı?
+2. Dozajın (dose) diş büyümesi üzerinde anlamlı bir etkisi var mı?
+3. Uygulama yöntemi ve dozaj arasında anlamlı bir etkileşim var mı?
+
+## ANOVA Örneği: Iris Veri Seti
+
+Şimdi iris veri setini kullanarak ANOVA analizi yapalım. Bu veri seti üç farklı Iris türünün (setosa, versicolor, virginica) çiçek özelliklerini içerir.
+
+```{webr-r}
+# Iris veri setini inceleyelim
+data(iris)
+head(iris)
+str(iris)
+table(iris$Species)
+
+# Türlere göre taç yaprak uzunluğunun özet istatistikleri
+tapply(iris$Petal.Length, iris$Species, summary)
+tapply(iris$Petal.Length, iris$Species, sd)
+```
+
+## Iris Veri Seti Görselleştirme
+
+```{webr-r}
+# Türlere göre taç yaprak uzunluğu dağılımı
+boxplot(Petal.Length ~ Species, data = iris, 
+        col = c("pink", "lightblue", "lightgreen"),
+        main = "Iris Türlerine Göre Taç Yaprak Uzunluğu",
+        xlab = "Tür", ylab = "Taç Yaprak Uzunluğu (cm)")
+
+# Noktasal grafik
+stripchart(Petal.Length ~ Species, data = iris,
+           method = "jitter", vertical = TRUE, add = TRUE,
+           pch = 16, col = "darkgray")
+```
+
+## Iris ANOVA Analizi
+
+```{webr-r}
+# Tek yönlü ANOVA analizi
+iris_anova <- aov(Petal.Length ~ Species, data = iris)
+summary(iris_anova)
+
+```
+
+## Iris Post-hoc Analizi
+
+```{webr-r}
+# Tukey HSD post-hoc testi
+tukey_sonuc <- TukeyHSD(iris_anova)
+tukey_sonuc
+
+# pairwise.t.test ile post-hoc karşılaştırma
+pairwise.t.test(iris$Petal.Length, iris$Species, 
+                p.adjust.method = "bonferroni")
+```
+
+## ANOVA Örneği: InsectSprays Veri Seti
+
+InsectSprays veri seti, farklı böcek ilaçlarının (A-F) böcek sayısı üzerindeki etkisini gösterir.
+
+```{webr-r}
+# InsectSprays veri setini inceleyelim
+data(InsectSprays)
+head(InsectSprays)
+str(InsectSprays)
+table(InsectSprays$spray)
+
+# Özet istatistikler
+tapply(InsectSprays$count, InsectSprays$spray, summary)
+tapply(InsectSprays$count, InsectSprays$spray, sd)
+```
+
+## InsectSprays Görselleştirme ve Analiz
+
+```{webr-r}
+# Kutu grafiği
+boxplot(count ~ spray, data = InsectSprays, 
+        col = rainbow(6),
+        main = "Böcek İlaçlarının Etkinliği",
+        xlab = "İlaç Türü", ylab = "Böcek Sayısı")
+
+# ANOVA analizi
+spray_anova <- aov(count ~ spray, data = InsectSprays)
+summary(spray_anova)
+
+# Post-hoc testi
+TukeyHSD(spray_anova)
+```
+
+
+## Problemler ve Çözüm Önerileri
+
+Biyolojik deneylerde ANOVA varsayımlarını sağlamak zor olabilir:
+
+1. **Normallik sorunu:** 
+   - Shapiro-Wilk testi ile kontrol edin
+   - Gerekirse veri dönüşümü yapın (log, karekök)
+   - Ya da parametrik olmayan Kruskal-Wallis testini kullanın
+
+2. **Varyans homojenliği sorunu:**
+   - Levene testi ile kontrol edin
+   - Welch ANOVA kullanın
+   
+3. **Bağımsızlık sorunu:**
+   - Deneysel tasarımınızı gözden geçirin
+   - Tekrarlı ölçümler ANOVA kullanmayı düşünün
+
+## Alıştırmalar
+
+1. Aşağıdaki veri seti için tek yönlü ANOVA analizi yapınız ve sonuçları yorumlayınız.
+
+```{webr-r}
+# Üç farklı ilacın bir enzim aktivitesi üzerindeki etkisi
+ilac_A <- c(23.5, 25.1, 24.8, 22.9, 24.2)
+ilac_B <- c(27.6, 28.2, 26.9, 27.5, 28.4)
+ilac_C <- c(25.2, 24.6, 26.1, 26.8, 25.5)
+
+# Veri çerçevesini oluşturun ve analizi yapın
+```
+
+2. Bir çalışmada orta büyüklükteki bir etki (f=0.25) için 0.80 güç elde etmek istiyorsunuz. 4 grup ile çalışacaksanız, her grupta kaç örnek olmalıdır?
+
+## ANOVA için Güç ve Örneklem Boyutu İlişkisi
+
+Farklı grup sayıları için gereken örneklem boyutunu inceleyelim:
+
+```{webr-r}
+# Farklı grup sayıları için örneklem boyutu hesabı
+k_values <- 2:6
+n_values <- numeric(length(k_values))
+
+for(i in 1:length(k_values)) {
+  result <- pwr.anova.test(k = k_values[i], f = 0.25, sig.level = 0.05, power = 0.8)
+  n_values[i] <- ceiling(result$n)
+}
+
+# Sonuçları görelim
+data.frame(
+  Grup_Sayisi = k_values,
+  Gereken_Orneklem_Boyutu = n_values,
+  Toplam_Orneklem = n_values * k_values
+)
+```
+
+## Farklı Test Türleri için Güç Analizi
+
+Tek örneklem, bağımsız örneklem ve eşlenmiş örneklem t-testleri için güç analizini karşılaştıralım:
+
+```{webr-r}
+# Tek örneklem t-testi güç analizi
+tek_orneklem <- power.t.test(n = 30, delta = 5, sd = 10, sig.level = 0.05, 
+                           type = "one.sample", alternative = "two.sided")
+
+# Bağımsız örneklem t-testi güç analizi
+bagimsiz_orneklem <- power.t.test(n = 30, delta = 5, sd = 10, sig.level = 0.05, 
+                                type = "two.sample", alternative = "two.sided")
+
+# Eşlenmiş örneklem t-testi güç analizi
+esli_orneklem <- power.t.test(n = 30, delta = 5, sd = 10, sig.level = 0.05, 
+                            type = "paired", alternative = "two.sided")
+
+cat("Tek örneklem t-testi gücü:", round(tek_orneklem$power, 4), "\n")
+cat("Bağımsız örneklem t-testi gücü:", round(bagimsiz_orneklem$power, 4), "\n")
+cat("Eşlenmiş örneklem t-testi gücü:", round(esli_orneklem$power, 4), "\n")
+```
+
+## Özet: İstatistiksel Güç ve ANOVA
+
+**İstatistiksel Güç:**
+
+- Gerçek bir etki varsa onu tespit etme olasılığı (1 - β)
+- Minimum 0.8 güç hedeflemek standart yaklaşımdır
+- Güç şu faktörlerden etkilenir:
+  * Örneklem boyutu (n) - arttıkça güç artar
+  * Etki büyüklüğü (delta) - arttıkça güç artar
+  * Standart sapma (sd) - arttıkça güç azalır
+  * Anlamlılık düzeyi (α) - arttıkça güç artar (ama Tip I hata da artar)
+  * Test türü - eşli test > tek örneklem test > bağımsız test
+
+**ANOVA:**
+
+- İkiden fazla grup ortalamasını karşılaştırmak için kullanılır
+- Tip I hata oranını kontrol altında tutar
+- Gruplar arası farklılık olduğunu söyler, ancak hangi grupların farklı olduğunu belirtmez (post-hoc testleri gerekir)
+
+**Uygulamalarda dikkat edilmesi gerekenler:**
+
+- Gerçekçi etki büyüklükleri ile çalışın
+- Örneklem boyutunuzu iyi planlayın
+- Varsayımları kontrol edin ve gerekirse alternatif yöntemleri kullanın
+- Çoklu karşılaştırmalar için uygun düzeltme yöntemini seçin
+
+## pairwise.t.test(), aov() ve p.adjust() Fonksiyonları
+
+R'da grup karşılaştırmaları ve p-değerlerinin düzeltilmesi için kullanılan üç önemli fonksiyonu inceleyelim.
+
+## pairwise.t.test() Fonksiyonu
+
+**Temel Amacı:**
+- Gruplar arasında çoklu ikili karşılaştırmalar yapmak
+- Tüm olası grup çiftleri arasında t-testleri gerçekleştirmek
+- Çoklu test düzeltmelerini otomatik olarak uygulamak
+
+**Kullanımı:**
+```r
+pairwise.t.test(x, g, p.adjust.method = "bonferroni")
+```
+Burada:
+- x: Karşılaştırılacak sürekli değişken
+- g: Grup faktörü
+- p.adjust.method: p-değeri düzeltme yöntemi
+
+## aov() Fonksiyonu
+
+**Temel Amacı:**
+- Varyans Analizi (ANOVA) modelini uygulamak
+- Grup ortalamaları arasında fark olup olmadığını test etmek
+- Kompleks deneysel tasarımları modellemek
+
+**Kullanımı:**
+```r
+model <- aov(formula, data)
+summary(model)
+```
+Burada:
+- formula: İstatistiksel model formülü (örn: yanıt ~ faktör1 * faktör2)
+- data: Veri çerçevesi
+
+## p.adjust() Fonksiyonu
+
+**Temel Amacı:**
+- Çoklu testlerde p-değerlerini düzeltmek
+- Tip I hata oranını kontrol etmek
+- Herhangi bir istatistiksel testten gelen p-değerleri için kullanılabilir
+
+**Kullanımı:**
+```r
+p.adjust(p, method = "bonferroni")
+```
+Burada:
+- p: Düzeltilecek p-değerleri vektörü
+- method: Düzeltme yöntemi ("bonferroni", "holm", "BH", "fdr", vb.)
+
+## Kullanım Örnekleri
+
+```{webr-r}
+# PlantGrowth veri seti üzerinde ANOVA
+model <- aov(weight ~ group, data = PlantGrowth)
+summary(model)
+
+# İkili karşılaştırmalar
+pairwise.t.test(PlantGrowth$weight, PlantGrowth$group, 
+                p.adjust.method = "bonferroni")
+
+# Manuel p-değeri düzeltme örneği
+# Önce p-değerlerini oluşturalım
+p_values <- c(0.02, 0.04, 0.01, 0.07, 0.001)
+p_adjust <- p.adjust(p_values, method = "bonferroni")
+data.frame(
+  Ham_p_degeri = p_values,
+  Bonferroni_duzeltmesi = p_adjust,
+  Anlamlilik = ifelse(p_adjust < 0.05, "Anlamlı", "Anlamlı değil")
+)
+```
+
+## Fonksiyonların Karşılaştırılması
+
+| Özellik | pairwise.t.test() | aov() | p.adjust() |
+|---------|-------------------|-------|------------|
+| **Temel İşlev** | İkili karşılaştırmalar | Genel grup karşılaştırması | p-değeri düzeltmesi |
+| **Çoklu Test Problemi** | Otomatik düzeltir | Doğrudan ele almaz | Sadece düzeltme yapar |
+| **Esneklik** | Orta (sadece t-testleri) | Yüksek (karmaşık modeller) | En yüksek (herhangi bir p-değeri) |
+| **Tipik Kullanım** | Post-hoc analiz | Temel analiz | Herhangi bir düzeltme |
+
+## Tipik İş Akışı
+
+Biyolojik araştırmalarda bu fonksiyonların tipik kullanımı:
+
+1. Önce `aov()` ile genel karşılaştırma yapılır:
+   - Gruplar arasında fark var mı?
+   
+2. ANOVA anlamlıysa, `pairwise.t.test()` veya başka bir post-hoc test uygulanır:
+   - Hangi gruplar arasında fark var?
+   
+3. Özel analizlerde, test p-değerleri `p.adjust()` ile manuel olarak düzeltilir:
+   - Genomik çalışmalarda binlerce gen için
+
+## Biyolojik Araştırmalarda Uygulama
+
+**Gen ekspresyon çalışmaları:**
+- Farklı tedavilerin gen ekspresyonuna etkisini incelemek için `aov()` kullanılır
+- Hangi tedaviler arasında fark olduğunu belirlemek için `pairwise.t.test()` kullanılır
+- Mikrodizi veya RNA-seq analizlerinde binlerce p-değerini düzeltmek için `p.adjust()` kullanılır
+
+**Metabolomik çalışmalar:**
+- Metabolit seviyelerinde grup farkları için `aov()`
+- Spesifik metabolit karşılaştırmaları için `pairwise.t.test()`
+- Yüzlerce metabolite ait p-değerlerinin düzeltilmesi için `p.adjust()`
+
+## Hangi Durumlarda Hangi Fonksiyonu Kullanmalı?
+
+**pairwise.t.test()'i şu durumlarda kullanın:**
+- ANOVA ile anlamlı fark bulunduğunda
+- Hangi grupların farklı olduğunu hızlıca belirlemek istediğinizde
+- Çoklu düzeltme yöntemini kendiniz seçmek istediğinizde
+
+**aov()'u şu durumlarda kullanın:**
+- Grup ortalamaları arasında fark olup olmadığını test etmek istediğinizde
+- Karmaşık deneysel tasarımlarla çalışırken (faktöriyel, etkileşimli)
+- Tam bir ANOVA tablosu gerektiğinde
+
+**p.adjust()'ı şu durumlarda kullanın:**
+- Özel testlerden elde edilen p-değerlerini düzeltmek istediğinizde
+- İkiden fazla karşılaştırma içeren herhangi bir analizde
+- Farklı düzeltme stratejilerini karşılaştırmak istediğinizde
