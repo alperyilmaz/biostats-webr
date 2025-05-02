@@ -9,7 +9,7 @@
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-0815c480559380816a4d1ea211a47e91.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.7.29">
 
-  <title>MBG1032 Biyoistatistik – R Temelleri</title>
+  <title>MBG1032 Biyoistatistik – Ders7 Uygulama: İstatistiksel Güç ve ANOVA</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -27,6 +27,72 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    html { -webkit-text-size-adjust: 100%; }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      { color: #003b4f; background-color: #f1f3f5; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
   <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto-f563837468303362081e247dddd440d0.css">
   <link rel="stylesheet" href="custom.css">
@@ -47,6 +113,7 @@
     }
     .reveal .slide:not(.center) {
       height: 100%;
+      overflow-y: auto;
     }
     .reveal .slide.scrollable {
       overflow-y: auto;
@@ -267,7 +334,7 @@
   // Document level settings ----
 
   // Determine if we need to install R packages
-  globalThis.qwebrInstallRPackagesList = [''];
+  globalThis.qwebrInstallRPackagesList = ['ggplot2'];
 
   // Specify possible locations to search for the repository
   globalThis.qwebrPackageRepoURLS = ['https://repo.r-wasm.org/'];
@@ -289,7 +356,7 @@
   };
 
   // Store cell data
-  globalThis.qwebrCellDetails = [{"code":"2 + 2","id":1,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-1","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"log(10)               # doğal logaritma\nlog10(100)            # 10 tabında logaritma\nexp(1)                # e üzeri\nsqrt(4)               # kare kök\n4^2                   # 4 üzeri 2\npi                    # pi sayısı","id":2,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-2","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"my_obj <- 48","id":3,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-3","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"my_obj","id":4,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-4","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"my_vec <- c(2, 3, 1, 6, 4, 3, 3, 7)","id":5,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-5","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"my_vec[5]","id":6,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-6","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"my_vec[1:2]","id":7,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-7","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"my_vec[c(5,3)]","id":8,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-8","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"my_vec * 2\nlog(my_vec)\n\nmean(my_vec)","id":9,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-9","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"my_vec > 4","id":10,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-10","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"my_vec[my_vec > 4]","id":11,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-11","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"sort(my_vec)","id":12,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-12","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"order(my_vec)","id":13,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-13","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"temp  <- c(7.2, NA, 7.1, 6.9, 6.5, 5.8, 5.8, 5.5, NA, 5.5)\nmean(temp)\nmin(temp)","id":14,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-14","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"min(temp, na.rm=TRUE)","id":15,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-15","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"iris","id":16,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-16","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"iris$Species","id":17,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-17","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"dim(iris)","id":18,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-18","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}}];
+  globalThis.qwebrCellDetails = [{"code":"# İki grup, her grupta 30 kişi, ortalamalar arası fark = 5, standart sapma = 10, α=0.05\nsonuc <- power.t.test(n = 30, delta = 5, sd = 10, sig.level = 0.05, \n                     power = NULL, type = \"two.sample\", alternative = \"two.sided\")\nsonuc","id":1,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-1","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# 0.8 güç, ortalamalar arası fark = 5, standart sapma = 10 ve 0.05 anlamlılık düzeyi için gereken örneklem boyutu\nsonuc <- power.t.test(delta = 5, sd = 10, sig.level = 0.05, power = 0.8, \n                     type = \"two.sample\", alternative = \"two.sided\")\nsonuc","id":2,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-2","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# Farklı etki büyüklükleri için güç eğrisi\nn_values <- seq(5, 100, by = 5)\ndelta_values <- c(2, 5, 8)  # Küçük, orta, büyük etki\nsd_value <- 10  # Sabit standart sapma\n\nguc_hesapla <- function(n, delta, sd) {\n  result <- power.t.test(n = n, delta = delta, sd = sd, sig.level = 0.05, \n                        type = \"two.sample\", alternative = \"two.sided\")\n  return(result$power)\n}\n\n# Sonuçları bir matriste toplayalım\nguc_matrisi <- matrix(NA, nrow = length(n_values), ncol = length(delta_values))\nfor (i in 1:length(n_values)) {\n  for (j in 1:length(delta_values)) {\n    guc_matrisi[i, j] <- guc_hesapla(n_values[i], delta_values[j], sd_value)\n  }\n}","id":3,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-3","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# Grafiği çizelim\nmatplot(n_values, guc_matrisi, type = \"l\", lty = 1:3, col = c(\"blue\", \"red\", \"green\"),\n        xlab = \"Grup Başına Örneklem Boyutu (n)\", ylab = \"İstatistiksel Güç\",\n        main = \"Etki Büyüklüğü ve Örneklem Boyutuna Göre Güç\")\nlegend(\"bottomright\", \n       legend = paste(\"delta =\", delta_values, \"(delta/sd =\", round(delta_values/sd_value, 2), \")\"), \n       lty = 1:3, col = c(\"blue\", \"red\", \"green\"))\nabline(h = 0.8, lty = 2)  # 0.8 güç seviyesini gösteren çizgi","id":4,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-4","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# Delta = 30 (ortalama fark), sd = 100 (standart sapma)\n# Güç = 0.8, alfa = 0.05\n\nsonuc <- power.t.test(delta = 30, sd = 100, power = 0.8, sig.level = 0.05, \n                     type = \"two.sample\", alternative = \"two.sided\")\nsonuc","id":5,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-5","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# PlantGrowth veri setini inceleyelim\ndata(PlantGrowth)\nhead(PlantGrowth)\nstr(PlantGrowth)\ntable(PlantGrowth$group)","id":6,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-6","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# Kutu grafiği (boxplot)\nboxplot(weight ~ group, data = PlantGrowth, \n        col = c(\"lightgreen\", \"lightblue\", \"lightyellow\"),\n        main = \"Bitki Büyüme Koşullarına Göre Ağırlık\",\n        xlab = \"Grup\", ylab = \"Ağırlık\")","id":7,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-7","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# Tek yönlü ANOVA analizi\nanova_sonuc <- aov(weight ~ group, data = PlantGrowth)\nsummary(anova_sonuc)\n","id":8,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-8","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# Tukey HSD testi\ntukey_sonuc <- TukeyHSD(anova_sonuc)\ntukey_sonuc\n\n# Görselleştirelim\nplot(tukey_sonuc, las = 1)","id":9,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-9","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# Benjamini-Hochberg düzeltmesi\np_degerler <- c(0.001, 0.015, 0.040, 0.008, 0.060)\ntest_sayisi <- length(p_degerler)\n\n# Sırala\np_sirali <- sort(p_degerler)\nsira <- 1:test_sayisi\n\n# BH düzeltilmiş değerler\np_BH <- p_sirali * (test_sayisi / sira)\n# Düzeltilmiş değerlerin monotonik olmasını sağla\nfor (i in (test_sayisi-1):1) {\n  p_BH[i] <- min(p_BH[i], p_BH[i+1])\n}\n\n# FDR = 0.05 için sonuçlar\nanlamli_BH <- p_BH < 0.05\n\n# Sonuçları düzenle\nsonuclar <- data.frame(\n  Siralama = sira,\n  P_degeri = p_sirali,\n  BH_duzeltilmis = p_BH,\n  FDR_sonucu = ifelse(anlamli_BH, \"Anlamlı\", \"Anlamlı değil\")\n)\nprint(sonuclar)","id":10,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-10","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# Rastgele p-değerleri oluşturalım\nset.seed(123)\np_vals <- runif(100)\nhead(p_vals, 10)  # İlk 10 p-değeri\n\n# Bonferroni düzeltmesi\np_bonf <- p.adjust(p_vals, method = \"bonferroni\")\nhead(p_bonf, 10)\n\n# Benjamini-Hochberg düzeltmesi\np_bh <- p.adjust(p_vals, method = \"BH\")\nhead(p_bh, 10)\n\n# Kaç test anlamlı?\ncat(\"Düzeltme öncesi anlamlı test sayısı:\", sum(p_vals < 0.05), \"\\n\")\ncat(\"Bonferroni sonrası anlamlı test sayısı:\", sum(p_bonf < 0.05), \"\\n\")\ncat(\"BH/FDR sonrası anlamlı test sayısı:\", sum(p_bh < 0.05), \"\\n\")","id":11,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-11","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# ToothGrowth veri setini inceleyelim\ndata(ToothGrowth)\nhead(ToothGrowth)\nstr(ToothGrowth)\n\n# Doz faktörünü kategorik değişkene dönüştürelim\nToothGrowth$dose <- factor(ToothGrowth$dose)","id":12,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-12","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"\n# İki faktörlü kutu grafiği (boxplot)\nboxplot(len ~ supp * dose, data = ToothGrowth, \n        col = c(\"lightgreen\", \"lightblue\"),\n        main = \"C Vitamini Dozu ve Uygulama Yöntemine Göre Diş Büyümesi\",\n        xlab = \"Uygulama Yöntemi ve Doz\", ylab = \"Diş Uzunluğu\")","id":13,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-13","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# İki yönlü ANOVA (etkileşimli)\nanova_sonuc2 <- aov(len ~ supp * dose, data = ToothGrowth)\nsummary(anova_sonuc2)","id":14,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-14","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# Iris veri setini inceleyelim\ndata(iris)\nhead(iris)\nstr(iris)\ntable(iris$Species)\n\n# Türlere göre taç yaprak uzunluğunun özet istatistikleri\ntapply(iris$Petal.Length, iris$Species, summary)\ntapply(iris$Petal.Length, iris$Species, sd)","id":15,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-15","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# Türlere göre taç yaprak uzunluğu dağılımı\nboxplot(Petal.Length ~ Species, data = iris, \n        col = c(\"pink\", \"lightblue\", \"lightgreen\"),\n        main = \"Iris Türlerine Göre Taç Yaprak Uzunluğu\",\n        xlab = \"Tür\", ylab = \"Taç Yaprak Uzunluğu (cm)\")\n\n# Noktasal grafik\nstripchart(Petal.Length ~ Species, data = iris,\n           method = \"jitter\", vertical = TRUE, add = TRUE,\n           pch = 16, col = \"darkgray\")","id":16,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-16","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# Tek yönlü ANOVA analizi\niris_anova <- aov(Petal.Length ~ Species, data = iris)\nsummary(iris_anova)","id":17,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-17","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# Tukey HSD post-hoc testi\ntukey_sonuc <- TukeyHSD(iris_anova)\ntukey_sonuc\n\n# pairwise.t.test ile post-hoc karşılaştırma\npairwise.t.test(iris$Petal.Length, iris$Species, \n                p.adjust.method = \"bonferroni\")","id":18,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-18","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# InsectSprays veri setini inceleyelim\ndata(InsectSprays)\nhead(InsectSprays)\nstr(InsectSprays)\ntable(InsectSprays$spray)\n\n# Özet istatistikler\ntapply(InsectSprays$count, InsectSprays$spray, summary)\ntapply(InsectSprays$count, InsectSprays$spray, sd)","id":19,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-19","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# Kutu grafiği\nboxplot(count ~ spray, data = InsectSprays, \n        col = rainbow(6),\n        main = \"Böcek İlaçlarının Etkinliği\",\n        xlab = \"İlaç Türü\", ylab = \"Böcek Sayısı\")\n\n# ANOVA analizi\nspray_anova <- aov(count ~ spray, data = InsectSprays)\nsummary(spray_anova)\n\n# Post-hoc testi\nTukeyHSD(spray_anova)","id":20,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-20","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# Üç farklı ilacın bir enzim aktivitesi üzerindeki etkisi\nilac_A <- c(23.5, 25.1, 24.8, 22.9, 24.2)\nilac_B <- c(27.6, 28.2, 26.9, 27.5, 28.4)\nilac_C <- c(25.2, 24.6, 26.1, 26.8, 25.5)\n\n# Veri çerçevesini oluşturun ve analizi yapın","id":21,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-21","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# Farklı grup sayıları için örneklem boyutu hesabı\nk_values <- 2:6\nn_values <- numeric(length(k_values))\n\nfor(i in 1:length(k_values)) {\n  result <- pwr.anova.test(k = k_values[i], f = 0.25, sig.level = 0.05, power = 0.8)\n  n_values[i] <- ceiling(result$n)\n}\n\n# Sonuçları görelim\ndata.frame(\n  Grup_Sayisi = k_values,\n  Gereken_Orneklem_Boyutu = n_values,\n  Toplam_Orneklem = n_values * k_values\n)","id":22,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-22","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# Tek örneklem t-testi güç analizi\ntek_orneklem <- power.t.test(n = 30, delta = 5, sd = 10, sig.level = 0.05, \n                           type = \"one.sample\", alternative = \"two.sided\")\n\n# Bağımsız örneklem t-testi güç analizi\nbagimsiz_orneklem <- power.t.test(n = 30, delta = 5, sd = 10, sig.level = 0.05, \n                                type = \"two.sample\", alternative = \"two.sided\")\n\n# Eşlenmiş örneklem t-testi güç analizi\nesli_orneklem <- power.t.test(n = 30, delta = 5, sd = 10, sig.level = 0.05, \n                            type = \"paired\", alternative = \"two.sided\")\n\ncat(\"Tek örneklem t-testi gücü:\", round(tek_orneklem$power, 4), \"\\n\")\ncat(\"Bağımsız örneklem t-testi gücü:\", round(bagimsiz_orneklem$power, 4), \"\\n\")\ncat(\"Eşlenmiş örneklem t-testi gücü:\", round(esli_orneklem$power, 4), \"\\n\")","id":23,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-23","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# PlantGrowth veri seti üzerinde ANOVA\nmodel <- aov(weight ~ group, data = PlantGrowth)\nsummary(model)\n\n# İkili karşılaştırmalar\npairwise.t.test(PlantGrowth$weight, PlantGrowth$group, \n                p.adjust.method = \"bonferroni\")\n\n# Manuel p-değeri düzeltme örneği\n# Önce p-değerlerini oluşturalım\np_values <- c(0.02, 0.04, 0.01, 0.07, 0.001)\np_adjust <- p.adjust(p_values, method = \"bonferroni\")\ndata.frame(\n  Ham_p_degeri = p_values,\n  Bonferroni_duzeltmesi = p_adjust,\n  Anlamlilik = ifelse(p_adjust < 0.05, \"Anlamlı\", \"Anlamlı değil\")\n)","id":24,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-24","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}}];
 
   </script>
   <script type="module">
@@ -1185,134 +1252,386 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">R Temelleri</h1>
+  <h1 class="title">Ders7 Uygulama: İstatistiksel Güç ve ANOVA</h1>
+  <p class="subtitle">MBG1032 Biyoistatistik - Doç.Dr.Alper YILMAZ - <em>02 Mayıs 2024</em></p>
 
 <div class="quarto-title-authors">
 </div>
 
 </section>
-<section id="aritmetik" class="slide level2">
-<h2>Aritmetik</h2>
-<p>R ile aritmetik yapılabilir. (<em>Run Code</em> butonunu tıklayınız)</p>
+<section id="istatistiksel-güç-analizi" class="slide level2 scrollable">
+<h2>İstatistiksel Güç Analizi</h2>
+<p>İstatistiksel güç analizi, şu soruları yanıtlamamıza yardımcı olur:</p>
+<ol type="1">
+<li>Belirli bir etki büyüklüğü, alfa ve örneklem boyutu için çalışmanın gücü nedir?</li>
+<li>Belirli bir güç, etki büyüklüğü ve alfa için gereken örneklem boyutu nedir?</li>
+<li>Belirli bir güç, alfa ve örneklem boyutunda saptanabilecek minimum etki büyüklüğü nedir?</li>
+</ol>
+<p>R’da <code>power.t.test()</code> fonksiyonu, t-testi için güç hesaplaması yapar.</p>
+</section>
+<section id="t-testi-için-güç-hesaplaması" class="slide level2">
+<h2>t-Testi için Güç Hesaplaması</h2>
+<p><code>power.t.test()</code> fonksiyonu, t-testi için güç hesaplaması yapar.</p>
+<p>Örnek 1: Örneklem boyutu, anlamlılık düzeyi ve etki büyüklüğü verildiğinde güç hesabı:</p>
 <div id="qwebr-insertion-location-1"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p>Yukarıdaki kutuya herhangi bir işlem yazıp çalıştırabilirsiniz.</p>
-<p>&nbsp;</p>
-<p><code>8 / 2 + 4 * 5</code> şeklindeki bir ifadede, işlem sırası doğru olarak izleniyor mu?</p>
 </section>
-<section id="matematik-fonksiyonları" class="slide level2">
-<h2>Matematik fonksiyonları</h2>
+<section id="örneklem-boyutu-hesaplaması" class="slide level2">
+<h2>Örneklem Boyutu Hesaplaması</h2>
+<p>Örnek 2: Güç, anlamlılık düzeyi ve etki büyüklüğü verildiğinde gereken örneklem boyutu hesabı:</p>
 <div id="qwebr-insertion-location-2"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<div class="footer">
-<p><kbd>Ctrl + Enter</kbd> ile tek satır, <kbd>Shift + Enter</kbd> ile bütün satırlar çalıştırılabilir</p>
-</div>
 </section>
-<section id="değişkenler-objeler" class="slide level2">
-<h2>Değişkenler / Objeler</h2>
+<section id="etki-büyüklüğü-örneklem-boyutu-ve-güç-ilişkisi" class="slide level2">
+<h2>Etki Büyüklüğü, Örneklem Boyutu ve Güç İlişkisi</h2>
+<p>Farklı etki büyüklükleri (ortalama farkları) ve örneklem boyutları için güç değişimi:</p>
 <div id="qwebr-insertion-location-3"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p>Bu değişken, oturum boyunca geçerlidir, başka bir slaytta tekrar kullanılabilir.</p>
+</section>
+<section id="section" class="slide level2">
+<h2></h2>
 <div id="qwebr-insertion-location-4"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 </section>
-<section id="vektörler" class="slide level2">
-<h2>Vektörler</h2>
-<p>R dilinde vektörler önemli bir veri yapısıdır. Aynı tipteki (tamsayı, ondaliklı sayı, karakter, vb.) verilerin toplu şekilde saklandığı bir yapıdır. Başka dillerde “liste”, “dizi” olarak adlandırılır. R dilinde vektörler <code>c()</code> fonksiyonu ile oluşturulur.</p>
+<section id="uygulama-örneklem-boyutu-planlama" class="slide level2">
+<h2>Uygulama: Örneklem Boyutu Planlama</h2>
+<p><strong>Senaryo:</strong> Yeni bir genin ekspresyonunun, normal duruma göre en az 30 birim artması bekleniyorsa ve standart sapma yaklaşık 100 birim ise, 0.8 istatistiksel güç ve 0.05 anlamlılık düzeyi için kaç örnek gerekir?</p>
 <div id="qwebr-insertion-location-5"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<p>Bu sonuca göre, belirtilen koşullar altında, her grupta yaklaşık kaç örnek gerektiğini yorumlayınız.</p>
 </section>
-<section id="indeks" class="slide level2">
-<h2>İndeks</h2>
-<p>Bir vektördeki elemanlara indeksler yardımıyla erişim sağlanır. R dilinde indeks 1’den başlar. 5. elemanına ulaşmak için <code>my_vec[5]</code> şeklinde komut yazılmalıdır.</p>
+<section id="tek-yönlü-anova-uygulaması" class="slide level2">
+<h2>Tek Yönlü ANOVA Uygulaması</h2>
+<p>Şimdi gerçek bir veri seti üzerinde ANOVA analizi yapalım. <code>PlantGrowth</code> veri seti, üç farklı koşulda yetişen bitkilerin ağırlıklarını içerir:</p>
 <div id="qwebr-insertion-location-6"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p>İndeksler aralıklarla da kullanılabilir. Örneğin, 1. ve 2. elemanına ulaşmak için <code>my_vec[1:2]</code> komutu kullanılabilir.</p>
+</section>
+<section id="verilerin-özeti-ve-görselleştirilmesi" class="slide level2">
+<h2>Verilerin Özeti ve Görselleştirilmesi</h2>
 <div id="qwebr-insertion-location-7"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 </section>
-<section id="indeks-vektörü" class="slide level2">
-<h2>İndeks vektörü</h2>
-<p>Bir vektördeki belirli elemanlara erişim için indekslerden oluşan bir vektör kullanılabilir. 5. ve 3. elemanlara (bu sırada) erişilmek isteniyorsa <code>c(5,3)</code> vektörü indeks olarak kullanılabilir</p>
+<section id="anova-analizi" class="slide level2">
+<h2>ANOVA Analizi</h2>
 <div id="qwebr-insertion-location-8"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 </section>
-<section id="vektörlerle-işlemler" class="slide level2">
-<h2>Vektörlerle işlemler</h2>
-<p>Normalde bir liste veya dizinin işlenmesi için <code>for</code> döngüsü kullanılır. R’de ise vektörlerle işlem yapılırken, bir fonksiyon veya işlem otomatik olarak bütün elemanlara uygulanır.</p>
-<p>Ayrıca, R’daki çoğu fonksiyon vektörler ile uyumludur, her bir eleman için <em>veya</em> tüm vektör için çalışabilirler.</p>
+<section id="post-hoc-testleri-tukey-hsd" class="slide level2">
+<h2>Post-hoc Testleri: Tukey HSD</h2>
 <div id="qwebr-insertion-location-9"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 </section>
-<section id="karşılaştırma-operatörleri" class="slide level2">
-<h2>Karşılaştırma operatörleri</h2>
-<p>Eşitlik <code>==</code>, büyüktür <code>&gt;</code>, küçüktür <code>&lt;</code>, eşit değil <code>!=</code> operatörleri bir vektöre uygulandığında, her bir eleman için karşılaştırma yapılır.</p>
+<section id="biyolojide-çoklu-karşılaştırma-problemi" class="slide level2">
+<h2>Biyolojide Çoklu Karşılaştırma Problemi</h2>
+<p>Biyolojik araştırmalarda sıklıkla karşılaştığımız bir durum:</p>
+<ul>
+<li>Mikroarray veya RNA-seq analizinde binlerce gen ekspresyonunu karşılaştırıyoruz</li>
+<li>Metabolomik analizlerde yüzlerce metabolit ölçüyoruz</li>
+<li>Çoklu SNP analizlerinde binlerce genetik varyantı test ediyoruz</li>
+</ul>
+<p><strong>Çoklu Test Problemi:</strong></p>
+<ul>
+<li>Her test için α = 0.05 kullanırsak, çok sayıda yanlış pozitif sonuç elde ederiz</li>
+<li>1000 gen için test yapıyorsak ve tüm null hipotezler doğruysa bile, 50 geni (1000 × 0.05) yanlışlıkla anlamlı bulabiliriz</li>
+<li>Bu “çoklu test problemi” biyolojide çok önemlidir!</li>
+</ul>
+</section>
+<section id="bonferroni-düzeltmesi" class="slide level2">
+<h2>Bonferroni Düzeltmesi</h2>
+<p>Bonferroni düzeltmesi, en basit ve en sık kullanılan çoklu test düzeltme yöntemidir.</p>
+<p><strong>Prensip:</strong></p>
+<ul>
+<li>α değerini test sayısına böleriz: α’ = α/m</li>
+<li>Burada m = toplam test sayısı</li>
+</ul>
+<p><strong>Örnek:</strong></p>
+<ul>
+<li>1000 gen için test yapıyoruz</li>
+<li>Standart α = 0.05</li>
+<li>Bonferroni düzeltmesi ile: α’ = 0.05/1000 = 0.00005</li>
+<li>Yani p &lt; 0.00005 olan genleri anlamlı kabul ederiz</li>
+</ul>
+</section>
+<section id="benjamini-hochberg-fdr-düzeltmesi" class="slide level2 scrollable">
+<h2>Benjamini-Hochberg (FDR) Düzeltmesi</h2>
+<p>Bonferroni çok muhafazakardır ve biyolojik çalışmalarda gerçek etkileri kaçırabilir. Benjamini-Hochberg yöntemi (FDR - False Discovery Rate), daha esnek bir alternatiftir.</p>
+<p><strong>Prensip:</strong></p>
+<ol type="1">
+<li>P-değerlerini küçükten büyüğe sıralayın</li>
+<li>Her p-değeri için düzeltilmiş değer hesaplayın: p’ = p × (m/i)
+<ul>
+<li>m = toplam test sayısı</li>
+<li>i = p-değerinin sıra numarası</li>
+</ul></li>
+<li>Belirli bir FDR seviyesini (genellikle 0.05 veya 0.10) sağlayan tüm testleri anlamlı kabul edin</li>
+</ol>
+</section>
+<section id="section-1" class="slide level2">
+<h2></h2>
 <div id="qwebr-insertion-location-10"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p>Sonuçlar logical/mantıksal (<em>TRUE/FALSE</em>) vektör olarak döndürülür. Bu sonuç vektörü, <em>maske</em> olarak kullanılabilir, yani indeks olarak kullanıldığında, “TRUE” değerlerin denk geldiği elemanlar gösterilebilir.</p>
+</section>
+<section id="r-ile-çoklu-test-düzeltmeleri" class="slide level2">
+<h2>R ile Çoklu Test Düzeltmeleri</h2>
+<p>R’da <code>p.adjust()</code> fonksiyonu, farklı çoklu test düzeltme yöntemlerini uygular:</p>
 <div id="qwebr-insertion-location-11"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p>Farkedildiği üzere, bu işlem sayesinde veri kümesinde <em>filtreleme</em> yapılmıştır.</p>
 </section>
-<section id="sıralama" class="slide level2">
-<h2>Sıralama</h2>
-<p><code>sort()</code> fonksiyonu ile vektörler sıralanabilir.</p>
+<section id="düzeltme-yöntemlerinin-karşılaştırılması" class="slide level2">
+<h2>Düzeltme Yöntemlerinin Karşılaştırılması</h2>
+<p><strong>Bonferroni Düzeltmesi:</strong></p>
+<ul>
+<li>Avantaj: Basit, anlaşılır ve Tip I hatayı sıkı kontrol eder (FWER - Family-Wise Error Rate)</li>
+<li>Dezavantaj: Çok muhafazakardır ve gerçek farklılıkları kaçırabilir (düşük istatistiksel güç)</li>
+<li>Kullanım: Az sayıda planlı karşılaştırma varsa veya Tip I hata kesinlikle önlenmek isteniyorsa</li>
+</ul>
+<p><strong>Benjamini-Hochberg (FDR) Düzeltmesi:</strong></p>
+<ul>
+<li>Avantaj: Daha esnek, daha iyi istatistiksel güç sağlar</li>
+<li>Dezavantaj: Daha fazla yanlış pozitife izin verir (belirli bir oranda)</li>
+<li>Kullanım: Büyük ölçekli tarama çalışmalarında (genomik, proteomik, metabolomik)</li>
+</ul>
+<p><strong>Biyolojide Tercih:</strong></p>
+<ul>
+<li>Mikroarray, RNA-seq, proteomik çalışmalarda genellikle FDR tercih edilir</li>
+<li>Kritik klinik veya tanısal uygulamalarda Bonferroni tercih edilebilir</li>
+</ul>
+</section>
+<section id="birden-fazla-faktörle-anova-iki-yönlü-anova" class="slide level2">
+<h2>Birden Fazla Faktörle ANOVA (İki Yönlü ANOVA)</h2>
+<p>Şimdi ToothGrowth veri setini kullanarak, C vitamini dozu ve uygulama yönteminin diş büyümesi üzerindeki etkisini analiz edelim:</p>
 <div id="qwebr-insertion-location-12"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p><strong>Soru:</strong> ters yönde sıralama yapmak için ne yapılmalıdır?</p>
-<p><code>order()</code> fonksiyonu ile de sıralama yapılabilir. Ancak bu fonksiyon doğrudan elemanları sıralamaz; bunun yerine, sıralı elemanların orijinal vektördeki indekslerini döndürür.</p>
-<blockquote>
-<p>Tablolarda sütunları veya satırları sıralamak gerektiğinde kullanılır.</p>
-</blockquote>
 </section>
-<section id="sıralama-1" class="slide level2">
-<h2>Sıralama</h2>
-<p>Aşağıdaki kutuda <code>my_vec[order(my_vec)]</code> komutunu çalıştıp çıktısını <code>sort()</code> ile karşılaştırınız.</p>
+<section id="verilerin-özeti-ve-görselleştirilmesi-1" class="slide level2">
+<h2>Verilerin Özeti ve Görselleştirilmesi</h2>
 <div id="qwebr-insertion-location-13"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 </section>
-<section id="na" class="slide level2">
-<h2>NA</h2>
-<p>NA “not available” anlamına gelir. Herhangi bir vektörde NA olması durumunda toplama, min/max gibi işlemlerin de NA olarak sonuçlanmasına neden olur.</p>
+<section id="iki-yönlü-anova-analizi" class="slide level2">
+<h2>İki Yönlü ANOVA Analizi</h2>
 <div id="qwebr-insertion-location-14"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p>Bu sorunu aşmak için <code>na.rm=TRUE</code> parametresi kullanılabilir.</p>
+</section>
+<section id="sonuçların-yorumlanması" class="slide level2 scrollable">
+<h2>Sonuçların Yorumlanması</h2>
+<p>İki yönlü ANOVA sonuçlarına göre:</p>
+<ol type="1">
+<li>Uygulama yönteminin (supp) diş büyümesi üzerinde anlamlı bir etkisi var mı?</li>
+<li>Dozajın (dose) diş büyümesi üzerinde anlamlı bir etkisi var mı?</li>
+<li>Uygulama yöntemi ve dozaj arasında anlamlı bir etkileşim var mı?</li>
+</ol>
+</section>
+<section id="anova-örneği-iris-veri-seti" class="slide level2">
+<h2>ANOVA Örneği: Iris Veri Seti</h2>
+<p>Şimdi iris veri setini kullanarak ANOVA analizi yapalım. Bu veri seti üç farklı Iris türünün (setosa, versicolor, virginica) çiçek özelliklerini içerir.</p>
 <div id="qwebr-insertion-location-15"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 </section>
-<section id="data-frame-veri-tablosuçerçevesi" class="slide level2">
-<h2>Data Frame / veri tablosu/çerçevesi</h2>
-<p>Bir veri tablosu, aynı boydaki farklı vektörlerin sütun olarak birleşmesi olarak düşünülebilir. Bu veri yapısı en çok kullanılan veri yapısıdır. Aşağıdaki örnekte, <code>iris</code> veri seti kullanılmıştır.</p>
+<section id="iris-veri-seti-görselleştirme" class="slide level2">
+<h2>Iris Veri Seti Görselleştirme</h2>
 <div id="qwebr-insertion-location-16"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 </section>
-<section id="veri-tablosu-erişim" class="slide level2">
-<h2>Veri tablosu / erişim</h2>
-<p>Bir veri tablosundaki herhangi bir sütunun tamamına <code>$sütun_adı</code> şeklinde ulaşılabilir.</p>
-<p>Veri tablosunun belirli bir kısmına erişmek için <code>[satır, sütun]</code> şeklinde kullanılabilir.</p>
-<p><code>iris$Species</code> komutu <em>Species</em> sütununu vektör olarak elde eder. <code>iris[1:5,]</code> ilk 5 satırı elde eder. <code>iris[1:5,1:2]</code> şeklindeki komut, ilk 2 sütunu ve ilk 5 satırı elde eder.</p>
-<p>Bir sonraki slaytta bahsi geçen komutları deneyiniz.</p>
-</section>
-<section id="veri-tablosu-erişim-1" class="slide level2">
-<h2>Veri tablosu / erişim</h2>
+<section id="iris-anova-analizi" class="slide level2">
+<h2>Iris ANOVA Analizi</h2>
 <div id="qwebr-insertion-location-17"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 </section>
-<section id="veri-tablosu-işlemler" class="slide level2">
-<h2>Veri tablosu / işlemler</h2>
-<ul>
-<li><code>dim(iris)</code> komutu, veri setinin boyutlarını verir.(satır, sütun) şeklinde</li>
-<li><code>nrow(iris)</code> komutu, veri setindeki satır sayısını verir.</li>
-<li><code>ncol(iris)</code> komutu, veri setindeki sütun sayısını verir.</li>
-<li><code>str(iris)</code> komutu, veri setinin yapısını, sütun tipleri ve ilk verileri gösterir.</li>
-<li><code>summary(iris)</code> komutu, veri setindeki istatistiksel ölçümleri verir.</li>
-</ul>
-<p>Bir sonraki slaytta bahsi geçen komutları deneyiniz.</p>
-</section>
-<section id="veri-tablosu-işlemler-1" class="slide level2">
-<h2>Veri tablosu / işlemler</h2>
+<section id="iris-post-hoc-analizi" class="slide level2">
+<h2>Iris Post-hoc Analizi</h2>
 <div id="qwebr-insertion-location-18"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+</section>
+<section id="anova-örneği-insectsprays-veri-seti" class="slide level2">
+<h2>ANOVA Örneği: InsectSprays Veri Seti</h2>
+<p>InsectSprays veri seti, farklı böcek ilaçlarının (A-F) böcek sayısı üzerindeki etkisini gösterir.</p>
+<div id="qwebr-insertion-location-19"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+</section>
+<section id="insectsprays-görselleştirme-ve-analiz" class="slide level2">
+<h2>InsectSprays Görselleştirme ve Analiz</h2>
+<div id="qwebr-insertion-location-20"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+</section>
+<section id="problemler-ve-çözüm-önerileri" class="slide level2 scrollable">
+<h2>Problemler ve Çözüm Önerileri</h2>
+<p>Biyolojik deneylerde ANOVA varsayımlarını sağlamak zor olabilir:</p>
+<ol type="1">
+<li><strong>Normallik sorunu:</strong>
+<ul>
+<li>Shapiro-Wilk testi ile kontrol edin</li>
+<li>Gerekirse veri dönüşümü yapın (log, karekök)</li>
+<li>Ya da parametrik olmayan Kruskal-Wallis testini kullanın</li>
+</ul></li>
+<li><strong>Varyans homojenliği sorunu:</strong>
+<ul>
+<li>Levene testi ile kontrol edin</li>
+<li>Welch ANOVA kullanın</li>
+</ul></li>
+<li><strong>Bağımsızlık sorunu:</strong>
+<ul>
+<li>Deneysel tasarımınızı gözden geçirin</li>
+<li>Tekrarlı ölçümler ANOVA kullanmayı düşünün</li>
+</ul></li>
+</ol>
+</section>
+<section id="alıştırmalar" class="slide level2 scrollable">
+<h2>Alıştırmalar</h2>
+<ol type="1">
+<li>Aşağıdaki veri seti için tek yönlü ANOVA analizi yapınız ve sonuçları yorumlayınız.</li>
+</ol>
+<div id="qwebr-insertion-location-21"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<ol start="2" type="1">
+<li>Bir çalışmada orta büyüklükteki bir etki (f=0.25) için 0.80 güç elde etmek istiyorsunuz. 4 grup ile çalışacaksanız, her grupta kaç örnek olmalıdır?</li>
+</ol>
+</section>
+<section id="anova-için-güç-ve-örneklem-boyutu-ilişkisi" class="slide level2">
+<h2>ANOVA için Güç ve Örneklem Boyutu İlişkisi</h2>
+<p>Farklı grup sayıları için gereken örneklem boyutunu inceleyelim:</p>
+<div id="qwebr-insertion-location-22"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+</section>
+<section id="farklı-test-türleri-için-güç-analizi" class="slide level2">
+<h2>Farklı Test Türleri için Güç Analizi</h2>
+<p>Tek örneklem, bağımsız örneklem ve eşlenmiş örneklem t-testleri için güç analizini karşılaştıralım:</p>
+<div id="qwebr-insertion-location-23"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+</section>
+<section id="özet-istatistiksel-güç-ve-anova" class="slide level2">
+<h2>Özet: İstatistiksel Güç ve ANOVA</h2>
+<p><strong>İstatistiksel Güç:</strong></p>
+<ul>
+<li>Gerçek bir etki varsa onu tespit etme olasılığı (1 - β)</li>
+<li>Minimum 0.8 güç hedeflemek standart yaklaşımdır</li>
+<li>Güç şu faktörlerden etkilenir:
+<ul>
+<li>Örneklem boyutu (n) - arttıkça güç artar</li>
+<li>Etki büyüklüğü (delta) - arttıkça güç artar</li>
+<li>Standart sapma (sd) - arttıkça güç azalır</li>
+<li>Anlamlılık düzeyi (α) - arttıkça güç artar (ama Tip I hata da artar)</li>
+<li>Test türü - eşli test &gt; tek örneklem test &gt; bağımsız test</li>
+</ul></li>
+</ul>
+<p><strong>ANOVA:</strong></p>
+<ul>
+<li>İkiden fazla grup ortalamasını karşılaştırmak için kullanılır</li>
+<li>Tip I hata oranını kontrol altında tutar</li>
+<li>Gruplar arası farklılık olduğunu söyler, ancak hangi grupların farklı olduğunu belirtmez (post-hoc testleri gerekir)</li>
+</ul>
+<p><strong>Uygulamalarda dikkat edilmesi gerekenler:</strong></p>
+<ul>
+<li>Gerçekçi etki büyüklükleri ile çalışın</li>
+<li>Örneklem boyutunuzu iyi planlayın</li>
+<li>Varsayımları kontrol edin ve gerekirse alternatif yöntemleri kullanın</li>
+<li>Çoklu karşılaştırmalar için uygun düzeltme yöntemini seçin</li>
+</ul>
+</section>
+<section id="pairwise.t.test-aov-ve-p.adjust-fonksiyonları" class="slide level2">
+<h2>pairwise.t.test(), aov() ve p.adjust() Fonksiyonları</h2>
+<p>R’da grup karşılaştırmaları ve p-değerlerinin düzeltilmesi için kullanılan üç önemli fonksiyonu inceleyelim.</p>
+</section>
+<section id="pairwise.t.test-fonksiyonu" class="slide level2">
+<h2>pairwise.t.test() Fonksiyonu</h2>
+<p><strong>Temel Amacı:</strong> - Gruplar arasında çoklu ikili karşılaştırmalar yapmak - Tüm olası grup çiftleri arasında t-testleri gerçekleştirmek - Çoklu test düzeltmelerini otomatik olarak uygulamak</p>
+<p><strong>Kullanımı:</strong></p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">pairwise.t.test</span>(x, g, <span class="at">p.adjust.method =</span> <span class="st">"bonferroni"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Burada: - x: Karşılaştırılacak sürekli değişken - g: Grup faktörü - p.adjust.method: p-değeri düzeltme yöntemi</p>
+</section>
+<section id="aov-fonksiyonu" class="slide level2">
+<h2>aov() Fonksiyonu</h2>
+<p><strong>Temel Amacı:</strong> - Varyans Analizi (ANOVA) modelini uygulamak - Grup ortalamaları arasında fark olup olmadığını test etmek - Kompleks deneysel tasarımları modellemek</p>
+<p><strong>Kullanımı:</strong></p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a>model <span class="ot">&lt;-</span> <span class="fu">aov</span>(formula, data)</span>
+<span id="cb2-2"><a></a><span class="fu">summary</span>(model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Burada: - formula: İstatistiksel model formülü (örn: yanıt ~ faktör1 * faktör2) - data: Veri çerçevesi</p>
+</section>
+<section id="p.adjust-fonksiyonu" class="slide level2">
+<h2>p.adjust() Fonksiyonu</h2>
+<p><strong>Temel Amacı:</strong> - Çoklu testlerde p-değerlerini düzeltmek - Tip I hata oranını kontrol etmek - Herhangi bir istatistiksel testten gelen p-değerleri için kullanılabilir</p>
+<p><strong>Kullanımı:</strong></p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a><span class="fu">p.adjust</span>(p, <span class="at">method =</span> <span class="st">"bonferroni"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Burada: - p: Düzeltilecek p-değerleri vektörü - method: Düzeltme yöntemi (“bonferroni”, “holm”, “BH”, “fdr”, vb.)</p>
+</section>
+<section id="kullanım-örnekleri" class="slide level2">
+<h2>Kullanım Örnekleri</h2>
+<div id="qwebr-insertion-location-24"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+</section>
+<section id="fonksiyonların-karşılaştırılması" class="slide level2">
+<h2>Fonksiyonların Karşılaştırılması</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 19%">
+<col style="width: 40%">
+<col style="width: 14%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Özellik</th>
+<th>pairwise.t.test()</th>
+<th>aov()</th>
+<th>p.adjust()</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Temel İşlev</strong></td>
+<td>İkili karşılaştırmalar</td>
+<td>Genel grup karşılaştırması</td>
+<td>p-değeri düzeltmesi</td>
+</tr>
+<tr class="even">
+<td><strong>Çoklu Test Problemi</strong></td>
+<td>Otomatik düzeltir</td>
+<td>Doğrudan ele almaz</td>
+<td>Sadece düzeltme yapar</td>
+</tr>
+<tr class="odd">
+<td><strong>Esneklik</strong></td>
+<td>Orta (sadece t-testleri)</td>
+<td>Yüksek (karmaşık modeller)</td>
+<td>En yüksek (herhangi bir p-değeri)</td>
+</tr>
+<tr class="even">
+<td><strong>Tipik Kullanım</strong></td>
+<td>Post-hoc analiz</td>
+<td>Temel analiz</td>
+<td>Herhangi bir düzeltme</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="tipik-iş-akışı" class="slide level2 scrollable">
+<h2>Tipik İş Akışı</h2>
+<p>Biyolojik araştırmalarda bu fonksiyonların tipik kullanımı:</p>
+<ol type="1">
+<li>Önce <code>aov()</code> ile genel karşılaştırma yapılır:
+<ul>
+<li>Gruplar arasında fark var mı?</li>
+</ul></li>
+<li>ANOVA anlamlıysa, <code>pairwise.t.test()</code> veya başka bir post-hoc test uygulanır:
+<ul>
+<li>Hangi gruplar arasında fark var?</li>
+</ul></li>
+<li>Özel analizlerde, test p-değerleri <code>p.adjust()</code> ile manuel olarak düzeltilir:
+<ul>
+<li>Genomik çalışmalarda binlerce gen için</li>
+</ul></li>
+</ol>
+</section>
+<section id="biyolojik-araştırmalarda-uygulama" class="slide level2">
+<h2>Biyolojik Araştırmalarda Uygulama</h2>
+<p><strong>Gen ekspresyon çalışmaları:</strong> - Farklı tedavilerin gen ekspresyonuna etkisini incelemek için <code>aov()</code> kullanılır - Hangi tedaviler arasında fark olduğunu belirlemek için <code>pairwise.t.test()</code> kullanılır - Mikrodizi veya RNA-seq analizlerinde binlerce p-değerini düzeltmek için <code>p.adjust()</code> kullanılır</p>
+<p><strong>Metabolomik çalışmalar:</strong> - Metabolit seviyelerinde grup farkları için <code>aov()</code> - Spesifik metabolit karşılaştırmaları için <code>pairwise.t.test()</code> - Yüzlerce metabolite ait p-değerlerinin düzeltilmesi için <code>p.adjust()</code></p>
+</section>
+<section id="hangi-durumlarda-hangi-fonksiyonu-kullanmalı" class="slide level2">
+<h2>Hangi Durumlarda Hangi Fonksiyonu Kullanmalı?</h2>
+<p><strong>pairwise.t.test()’i şu durumlarda kullanın:</strong> - ANOVA ile anlamlı fark bulunduğunda - Hangi grupların farklı olduğunu hızlıca belirlemek istediğinizde - Çoklu düzeltme yöntemini kendiniz seçmek istediğinizde</p>
+<p><strong>aov()’u şu durumlarda kullanın:</strong> - Grup ortalamaları arasında fark olup olmadığını test etmek istediğinizde - Karmaşık deneysel tasarımlarla çalışırken (faktöriyel, etkileşimli) - Tam bir ANOVA tablosu gerektiğinde</p>
+<p><strong>p.adjust()’ı şu durumlarda kullanın:</strong> - Özel testlerden elde edilen p-değerlerini düzeltmek istediğinizde - İkiden fazla karşılaştırma içeren herhangi bir analizde - Farklı düzeltme stratejilerini karşılaştırmak istediğinizde</p>
 
 
 </section>
@@ -1354,7 +1673,7 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
 'jumpToSlide': true,
 'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleChalkboard(event)\"><kbd>b</kbd> Toggle Chalkboard</a></li>\n<li class=\"slide-tool-item\" data-item=\"6\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleNotesCanvas(event)\"><kbd>c</kbd> Toggle Notes Canvas</a></li>\n<li class=\"slide-tool-item\" data-item=\"7\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.downloadDrawings(event)\"><kbd>d</kbd> Download Drawings</a></li>\n<li class=\"slide-tool-item\" data-item=\"8\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
 'chalkboard': {"buttons":true},
-'smaller': false,
+'smaller': true,
  
         // Display controls in the bottom right corner
         controls: false,
@@ -1374,7 +1693,7 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
         progress: true,
 
         // Display the page number of the current slide
-        slideNumber: false,
+        slideNumber: 'c/t',
 
         // 'all', 'print', or 'speaker'
         showSlideNumber: 'all',

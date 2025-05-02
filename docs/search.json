@@ -546,118 +546,6 @@
     "text": "Negatif binomial dağılım\nGeometrik dağılım ilk başarının k. denemede gerçekleşmesi ihtimalini hesaplarken Negatif Binomial Dağılım daha geneldir, R. başarının K. denemede gerçekleşme ihtimalini hesaplar."
   },
   {
-    "objectID": "uygulama01.html#aritmetik",
-    "href": "uygulama01.html#aritmetik",
-    "title": "R Temelleri",
-    "section": "Aritmetik",
-    "text": "Aritmetik\nR ile aritmetik yapılabilir. (Run Code butonunu tıklayınız)\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nYukarıdaki kutuya herhangi bir işlem yazıp çalıştırabilirsiniz.\n \n8 / 2 + 4 * 5 şeklindeki bir ifadede, işlem sırası doğru olarak izleniyor mu?"
-  },
-  {
-    "objectID": "uygulama01.html#matematik-fonksiyonları",
-    "href": "uygulama01.html#matematik-fonksiyonları",
-    "title": "R Temelleri",
-    "section": "Matematik fonksiyonları",
-    "text": "Matematik fonksiyonları\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nCtrl + Enter ile tek satır, Shift + Enter ile bütün satırlar çalıştırılabilir"
-  },
-  {
-    "objectID": "uygulama01.html#değişkenler-objeler",
-    "href": "uygulama01.html#değişkenler-objeler",
-    "title": "R Temelleri",
-    "section": "Değişkenler / Objeler",
-    "text": "Değişkenler / Objeler\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nBu değişken, oturum boyunca geçerlidir, başka bir slaytta tekrar kullanılabilir.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "uygulama01.html#vektörler",
-    "href": "uygulama01.html#vektörler",
-    "title": "R Temelleri",
-    "section": "Vektörler",
-    "text": "Vektörler\nR dilinde vektörler önemli bir veri yapısıdır. Aynı tipteki (tamsayı, ondaliklı sayı, karakter, vb.) verilerin toplu şekilde saklandığı bir yapıdır. Başka dillerde “liste”, “dizi” olarak adlandırılır. R dilinde vektörler c() fonksiyonu ile oluşturulur.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "uygulama01.html#indeks",
-    "href": "uygulama01.html#indeks",
-    "title": "R Temelleri",
-    "section": "İndeks",
-    "text": "İndeks\nBir vektördeki elemanlara indeksler yardımıyla erişim sağlanır. R dilinde indeks 1’den başlar. 5. elemanına ulaşmak için my_vec[5] şeklinde komut yazılmalıdır.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nİndeksler aralıklarla da kullanılabilir. Örneğin, 1. ve 2. elemanına ulaşmak için my_vec[1:2] komutu kullanılabilir.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "uygulama01.html#indeks-vektörü",
-    "href": "uygulama01.html#indeks-vektörü",
-    "title": "R Temelleri",
-    "section": "İndeks vektörü",
-    "text": "İndeks vektörü\nBir vektördeki belirli elemanlara erişim için indekslerden oluşan bir vektör kullanılabilir. 5. ve 3. elemanlara (bu sırada) erişilmek isteniyorsa c(5,3) vektörü indeks olarak kullanılabilir\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "uygulama01.html#vektörlerle-işlemler",
-    "href": "uygulama01.html#vektörlerle-işlemler",
-    "title": "R Temelleri",
-    "section": "Vektörlerle işlemler",
-    "text": "Vektörlerle işlemler\nNormalde bir liste veya dizinin işlenmesi için for döngüsü kullanılır. R’de ise vektörlerle işlem yapılırken, bir fonksiyon veya işlem otomatik olarak bütün elemanlara uygulanır.\nAyrıca, R’daki çoğu fonksiyon vektörler ile uyumludur, her bir eleman için veya tüm vektör için çalışabilirler.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "uygulama01.html#karşılaştırma-operatörleri",
-    "href": "uygulama01.html#karşılaştırma-operatörleri",
-    "title": "R Temelleri",
-    "section": "Karşılaştırma operatörleri",
-    "text": "Karşılaştırma operatörleri\nEşitlik ==, büyüktür &gt;, küçüktür &lt;, eşit değil != operatörleri bir vektöre uygulandığında, her bir eleman için karşılaştırma yapılır.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nSonuçlar logical/mantıksal (TRUE/FALSE) vektör olarak döndürülür. Bu sonuç vektörü, maske olarak kullanılabilir, yani indeks olarak kullanıldığında, “TRUE” değerlerin denk geldiği elemanlar gösterilebilir.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nFarkedildiği üzere, bu işlem sayesinde veri kümesinde filtreleme yapılmıştır."
-  },
-  {
-    "objectID": "uygulama01.html#sıralama",
-    "href": "uygulama01.html#sıralama",
-    "title": "R Temelleri",
-    "section": "Sıralama",
-    "text": "Sıralama\nsort() fonksiyonu ile vektörler sıralanabilir.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nSoru: ters yönde sıralama yapmak için ne yapılmalıdır?\norder() fonksiyonu ile de sıralama yapılabilir. Ancak bu fonksiyon doğrudan elemanları sıralamaz; bunun yerine, sıralı elemanların orijinal vektördeki indekslerini döndürür.\n\nTablolarda sütunları veya satırları sıralamak gerektiğinde kullanılır."
-  },
-  {
-    "objectID": "uygulama01.html#sıralama-1",
-    "href": "uygulama01.html#sıralama-1",
-    "title": "R Temelleri",
-    "section": "Sıralama",
-    "text": "Sıralama\nAşağıdaki kutuda my_vec[order(my_vec)] komutunu çalıştıp çıktısını sort() ile karşılaştırınız.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "uygulama01.html#na",
-    "href": "uygulama01.html#na",
-    "title": "R Temelleri",
-    "section": "NA",
-    "text": "NA\nNA “not available” anlamına gelir. Herhangi bir vektörde NA olması durumunda toplama, min/max gibi işlemlerin de NA olarak sonuçlanmasına neden olur.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nBu sorunu aşmak için na.rm=TRUE parametresi kullanılabilir.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "uygulama01.html#data-frame-veri-tablosuçerçevesi",
-    "href": "uygulama01.html#data-frame-veri-tablosuçerçevesi",
-    "title": "R Temelleri",
-    "section": "Data Frame / veri tablosu/çerçevesi",
-    "text": "Data Frame / veri tablosu/çerçevesi\nBir veri tablosu, aynı boydaki farklı vektörlerin sütun olarak birleşmesi olarak düşünülebilir. Bu veri yapısı en çok kullanılan veri yapısıdır. Aşağıdaki örnekte, iris veri seti kullanılmıştır.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "uygulama01.html#veri-tablosu-erişim",
-    "href": "uygulama01.html#veri-tablosu-erişim",
-    "title": "R Temelleri",
-    "section": "Veri tablosu / erişim",
-    "text": "Veri tablosu / erişim\nBir veri tablosundaki herhangi bir sütunun tamamına $sütun_adı şeklinde ulaşılabilir.\nVeri tablosunun belirli bir kısmına erişmek için [satır, sütun] şeklinde kullanılabilir.\niris$Species komutu Species sütununu vektör olarak elde eder. iris[1:5,] ilk 5 satırı elde eder. iris[1:5,1:2] şeklindeki komut, ilk 2 sütunu ve ilk 5 satırı elde eder.\nBir sonraki slaytta bahsi geçen komutları deneyiniz."
-  },
-  {
-    "objectID": "uygulama01.html#veri-tablosu-erişim-1",
-    "href": "uygulama01.html#veri-tablosu-erişim-1",
-    "title": "R Temelleri",
-    "section": "Veri tablosu / erişim",
-    "text": "Veri tablosu / erişim\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "uygulama01.html#veri-tablosu-işlemler",
-    "href": "uygulama01.html#veri-tablosu-işlemler",
-    "title": "R Temelleri",
-    "section": "Veri tablosu / işlemler",
-    "text": "Veri tablosu / işlemler\n\ndim(iris) komutu, veri setinin boyutlarını verir.(satır, sütun) şeklinde\nnrow(iris) komutu, veri setindeki satır sayısını verir.\nncol(iris) komutu, veri setindeki sütun sayısını verir.\nstr(iris) komutu, veri setinin yapısını, sütun tipleri ve ilk verileri gösterir.\nsummary(iris) komutu, veri setindeki istatistiksel ölçümleri verir.\n\nBir sonraki slaytta bahsi geçen komutları deneyiniz."
-  },
-  {
-    "objectID": "uygulama01.html#veri-tablosu-işlemler-1",
-    "href": "uygulama01.html#veri-tablosu-işlemler-1",
-    "title": "R Temelleri",
-    "section": "Veri tablosu / işlemler",
-    "text": "Veri tablosu / işlemler\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
     "objectID": "ders04-claude.html#özet",
     "href": "ders04-claude.html#özet",
     "title": "Ders8: Güven Aralıkları ve Hipotez Testi",
@@ -805,6 +693,398 @@
     "text": "Soru\nBir laboratuvar, geliştirdiği yeni bir ilacın hücre büyümesini arttırdığını iddia ediyor. Standart koşullarda hücre büyümesi ortalama 12 μm/saat’tir. Yeni ilaçla tedavi edilen 15 hücre örneğinde elde edilen büyüme oranları (μm/saat):\n14.2, 13.7, 13.1, 12.8, 14.5, 15.2, 13.4, 14.3, 12.9, 13.6, 14.8, 13.9, 14.1, 13.5, 13.3\nİlacın hücre büyümesini arttırdığını α = 0.05 düzeyinde test edin ve sonuçları yorumlayın.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
   },
   {
+    "objectID": "uygulama01.html#aritmetik",
+    "href": "uygulama01.html#aritmetik",
+    "title": "R Temelleri",
+    "section": "Aritmetik",
+    "text": "Aritmetik\nR ile aritmetik yapılabilir. (Run Code butonunu tıklayınız)\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nYukarıdaki kutuya herhangi bir işlem yazıp çalıştırabilirsiniz.\n \n8 / 2 + 4 * 5 şeklindeki bir ifadede, işlem sırası doğru olarak izleniyor mu?"
+  },
+  {
+    "objectID": "uygulama01.html#matematik-fonksiyonları",
+    "href": "uygulama01.html#matematik-fonksiyonları",
+    "title": "R Temelleri",
+    "section": "Matematik fonksiyonları",
+    "text": "Matematik fonksiyonları\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nCtrl + Enter ile tek satır, Shift + Enter ile bütün satırlar çalıştırılabilir"
+  },
+  {
+    "objectID": "uygulama01.html#değişkenler-objeler",
+    "href": "uygulama01.html#değişkenler-objeler",
+    "title": "R Temelleri",
+    "section": "Değişkenler / Objeler",
+    "text": "Değişkenler / Objeler\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nBu değişken, oturum boyunca geçerlidir, başka bir slaytta tekrar kullanılabilir.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "uygulama01.html#vektörler",
+    "href": "uygulama01.html#vektörler",
+    "title": "R Temelleri",
+    "section": "Vektörler",
+    "text": "Vektörler\nR dilinde vektörler önemli bir veri yapısıdır. Aynı tipteki (tamsayı, ondaliklı sayı, karakter, vb.) verilerin toplu şekilde saklandığı bir yapıdır. Başka dillerde “liste”, “dizi” olarak adlandırılır. R dilinde vektörler c() fonksiyonu ile oluşturulur.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "uygulama01.html#indeks",
+    "href": "uygulama01.html#indeks",
+    "title": "R Temelleri",
+    "section": "İndeks",
+    "text": "İndeks\nBir vektördeki elemanlara indeksler yardımıyla erişim sağlanır. R dilinde indeks 1’den başlar. 5. elemanına ulaşmak için my_vec[5] şeklinde komut yazılmalıdır.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nİndeksler aralıklarla da kullanılabilir. Örneğin, 1. ve 2. elemanına ulaşmak için my_vec[1:2] komutu kullanılabilir.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "uygulama01.html#indeks-vektörü",
+    "href": "uygulama01.html#indeks-vektörü",
+    "title": "R Temelleri",
+    "section": "İndeks vektörü",
+    "text": "İndeks vektörü\nBir vektördeki belirli elemanlara erişim için indekslerden oluşan bir vektör kullanılabilir. 5. ve 3. elemanlara (bu sırada) erişilmek isteniyorsa c(5,3) vektörü indeks olarak kullanılabilir\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "uygulama01.html#vektörlerle-işlemler",
+    "href": "uygulama01.html#vektörlerle-işlemler",
+    "title": "R Temelleri",
+    "section": "Vektörlerle işlemler",
+    "text": "Vektörlerle işlemler\nNormalde bir liste veya dizinin işlenmesi için for döngüsü kullanılır. R’de ise vektörlerle işlem yapılırken, bir fonksiyon veya işlem otomatik olarak bütün elemanlara uygulanır.\nAyrıca, R’daki çoğu fonksiyon vektörler ile uyumludur, her bir eleman için veya tüm vektör için çalışabilirler.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "uygulama01.html#karşılaştırma-operatörleri",
+    "href": "uygulama01.html#karşılaştırma-operatörleri",
+    "title": "R Temelleri",
+    "section": "Karşılaştırma operatörleri",
+    "text": "Karşılaştırma operatörleri\nEşitlik ==, büyüktür &gt;, küçüktür &lt;, eşit değil != operatörleri bir vektöre uygulandığında, her bir eleman için karşılaştırma yapılır.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nSonuçlar logical/mantıksal (TRUE/FALSE) vektör olarak döndürülür. Bu sonuç vektörü, maske olarak kullanılabilir, yani indeks olarak kullanıldığında, “TRUE” değerlerin denk geldiği elemanlar gösterilebilir.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nFarkedildiği üzere, bu işlem sayesinde veri kümesinde filtreleme yapılmıştır."
+  },
+  {
+    "objectID": "uygulama01.html#sıralama",
+    "href": "uygulama01.html#sıralama",
+    "title": "R Temelleri",
+    "section": "Sıralama",
+    "text": "Sıralama\nsort() fonksiyonu ile vektörler sıralanabilir.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nSoru: ters yönde sıralama yapmak için ne yapılmalıdır?\norder() fonksiyonu ile de sıralama yapılabilir. Ancak bu fonksiyon doğrudan elemanları sıralamaz; bunun yerine, sıralı elemanların orijinal vektördeki indekslerini döndürür.\n\nTablolarda sütunları veya satırları sıralamak gerektiğinde kullanılır."
+  },
+  {
+    "objectID": "uygulama01.html#sıralama-1",
+    "href": "uygulama01.html#sıralama-1",
+    "title": "R Temelleri",
+    "section": "Sıralama",
+    "text": "Sıralama\nAşağıdaki kutuda my_vec[order(my_vec)] komutunu çalıştıp çıktısını sort() ile karşılaştırınız.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "uygulama01.html#na",
+    "href": "uygulama01.html#na",
+    "title": "R Temelleri",
+    "section": "NA",
+    "text": "NA\nNA “not available” anlamına gelir. Herhangi bir vektörde NA olması durumunda toplama, min/max gibi işlemlerin de NA olarak sonuçlanmasına neden olur.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nBu sorunu aşmak için na.rm=TRUE parametresi kullanılabilir.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "uygulama01.html#data-frame-veri-tablosuçerçevesi",
+    "href": "uygulama01.html#data-frame-veri-tablosuçerçevesi",
+    "title": "R Temelleri",
+    "section": "Data Frame / veri tablosu/çerçevesi",
+    "text": "Data Frame / veri tablosu/çerçevesi\nBir veri tablosu, aynı boydaki farklı vektörlerin sütun olarak birleşmesi olarak düşünülebilir. Bu veri yapısı en çok kullanılan veri yapısıdır. Aşağıdaki örnekte, iris veri seti kullanılmıştır.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "uygulama01.html#veri-tablosu-erişim",
+    "href": "uygulama01.html#veri-tablosu-erişim",
+    "title": "R Temelleri",
+    "section": "Veri tablosu / erişim",
+    "text": "Veri tablosu / erişim\nBir veri tablosundaki herhangi bir sütunun tamamına $sütun_adı şeklinde ulaşılabilir.\nVeri tablosunun belirli bir kısmına erişmek için [satır, sütun] şeklinde kullanılabilir.\niris$Species komutu Species sütununu vektör olarak elde eder. iris[1:5,] ilk 5 satırı elde eder. iris[1:5,1:2] şeklindeki komut, ilk 2 sütunu ve ilk 5 satırı elde eder.\nBir sonraki slaytta bahsi geçen komutları deneyiniz."
+  },
+  {
+    "objectID": "uygulama01.html#veri-tablosu-erişim-1",
+    "href": "uygulama01.html#veri-tablosu-erişim-1",
+    "title": "R Temelleri",
+    "section": "Veri tablosu / erişim",
+    "text": "Veri tablosu / erişim\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "uygulama01.html#veri-tablosu-işlemler",
+    "href": "uygulama01.html#veri-tablosu-işlemler",
+    "title": "R Temelleri",
+    "section": "Veri tablosu / işlemler",
+    "text": "Veri tablosu / işlemler\n\ndim(iris) komutu, veri setinin boyutlarını verir.(satır, sütun) şeklinde\nnrow(iris) komutu, veri setindeki satır sayısını verir.\nncol(iris) komutu, veri setindeki sütun sayısını verir.\nstr(iris) komutu, veri setinin yapısını, sütun tipleri ve ilk verileri gösterir.\nsummary(iris) komutu, veri setindeki istatistiksel ölçümleri verir.\n\nBir sonraki slaytta bahsi geçen komutları deneyiniz."
+  },
+  {
+    "objectID": "uygulama01.html#veri-tablosu-işlemler-1",
+    "href": "uygulama01.html#veri-tablosu-işlemler-1",
+    "title": "R Temelleri",
+    "section": "Veri tablosu / işlemler",
+    "text": "Veri tablosu / işlemler\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders07-uygulama.html#istatistiksel-güç-analizi",
+    "href": "ders07-uygulama.html#istatistiksel-güç-analizi",
+    "title": "Ders7 Uygulama: İstatistiksel Güç ve ANOVA",
+    "section": "İstatistiksel Güç Analizi",
+    "text": "İstatistiksel Güç Analizi\nİstatistiksel güç analizi, şu soruları yanıtlamamıza yardımcı olur:\n\nBelirli bir etki büyüklüğü, alfa ve örneklem boyutu için çalışmanın gücü nedir?\nBelirli bir güç, etki büyüklüğü ve alfa için gereken örneklem boyutu nedir?\nBelirli bir güç, alfa ve örneklem boyutunda saptanabilecek minimum etki büyüklüğü nedir?\n\nR’da power.t.test() fonksiyonu, t-testi için güç hesaplaması yapar."
+  },
+  {
+    "objectID": "ders07-uygulama.html#t-testi-için-güç-hesaplaması",
+    "href": "ders07-uygulama.html#t-testi-için-güç-hesaplaması",
+    "title": "Ders7 Uygulama: İstatistiksel Güç ve ANOVA",
+    "section": "t-Testi için Güç Hesaplaması",
+    "text": "t-Testi için Güç Hesaplaması\npower.t.test() fonksiyonu, t-testi için güç hesaplaması yapar.\nÖrnek 1: Örneklem boyutu, anlamlılık düzeyi ve etki büyüklüğü verildiğinde güç hesabı:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders07-uygulama.html#örneklem-boyutu-hesaplaması",
+    "href": "ders07-uygulama.html#örneklem-boyutu-hesaplaması",
+    "title": "Ders7 Uygulama: İstatistiksel Güç ve ANOVA",
+    "section": "Örneklem Boyutu Hesaplaması",
+    "text": "Örneklem Boyutu Hesaplaması\nÖrnek 2: Güç, anlamlılık düzeyi ve etki büyüklüğü verildiğinde gereken örneklem boyutu hesabı:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders07-uygulama.html#etki-büyüklüğü-örneklem-boyutu-ve-güç-ilişkisi",
+    "href": "ders07-uygulama.html#etki-büyüklüğü-örneklem-boyutu-ve-güç-ilişkisi",
+    "title": "Ders7 Uygulama: İstatistiksel Güç ve ANOVA",
+    "section": "Etki Büyüklüğü, Örneklem Boyutu ve Güç İlişkisi",
+    "text": "Etki Büyüklüğü, Örneklem Boyutu ve Güç İlişkisi\nFarklı etki büyüklükleri (ortalama farkları) ve örneklem boyutları için güç değişimi:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders07-uygulama.html#section",
+    "href": "ders07-uygulama.html#section",
+    "title": "Ders7 Uygulama: İstatistiksel Güç ve ANOVA",
+    "section": "",
+    "text": "Please enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders07-uygulama.html#uygulama-örneklem-boyutu-planlama",
+    "href": "ders07-uygulama.html#uygulama-örneklem-boyutu-planlama",
+    "title": "Ders7 Uygulama: İstatistiksel Güç ve ANOVA",
+    "section": "Uygulama: Örneklem Boyutu Planlama",
+    "text": "Uygulama: Örneklem Boyutu Planlama\nSenaryo: Yeni bir genin ekspresyonunun, normal duruma göre en az 30 birim artması bekleniyorsa ve standart sapma yaklaşık 100 birim ise, 0.8 istatistiksel güç ve 0.05 anlamlılık düzeyi için kaç örnek gerekir?\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nBu sonuca göre, belirtilen koşullar altında, her grupta yaklaşık kaç örnek gerektiğini yorumlayınız."
+  },
+  {
+    "objectID": "ders07-uygulama.html#tek-yönlü-anova-uygulaması",
+    "href": "ders07-uygulama.html#tek-yönlü-anova-uygulaması",
+    "title": "Ders7 Uygulama: İstatistiksel Güç ve ANOVA",
+    "section": "Tek Yönlü ANOVA Uygulaması",
+    "text": "Tek Yönlü ANOVA Uygulaması\nŞimdi gerçek bir veri seti üzerinde ANOVA analizi yapalım. PlantGrowth veri seti, üç farklı koşulda yetişen bitkilerin ağırlıklarını içerir:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders07-uygulama.html#verilerin-özeti-ve-görselleştirilmesi",
+    "href": "ders07-uygulama.html#verilerin-özeti-ve-görselleştirilmesi",
+    "title": "Ders7 Uygulama: İstatistiksel Güç ve ANOVA",
+    "section": "Verilerin Özeti ve Görselleştirilmesi",
+    "text": "Verilerin Özeti ve Görselleştirilmesi\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders07-uygulama.html#anova-analizi",
+    "href": "ders07-uygulama.html#anova-analizi",
+    "title": "Ders7 Uygulama: İstatistiksel Güç ve ANOVA",
+    "section": "ANOVA Analizi",
+    "text": "ANOVA Analizi\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders07-uygulama.html#post-hoc-testleri-tukey-hsd",
+    "href": "ders07-uygulama.html#post-hoc-testleri-tukey-hsd",
+    "title": "Ders7 Uygulama: İstatistiksel Güç ve ANOVA",
+    "section": "Post-hoc Testleri: Tukey HSD",
+    "text": "Post-hoc Testleri: Tukey HSD\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders07-uygulama.html#biyolojide-çoklu-karşılaştırma-problemi",
+    "href": "ders07-uygulama.html#biyolojide-çoklu-karşılaştırma-problemi",
+    "title": "Ders7 Uygulama: İstatistiksel Güç ve ANOVA",
+    "section": "Biyolojide Çoklu Karşılaştırma Problemi",
+    "text": "Biyolojide Çoklu Karşılaştırma Problemi\nBiyolojik araştırmalarda sıklıkla karşılaştığımız bir durum:\n\nMikroarray veya RNA-seq analizinde binlerce gen ekspresyonunu karşılaştırıyoruz\nMetabolomik analizlerde yüzlerce metabolit ölçüyoruz\nÇoklu SNP analizlerinde binlerce genetik varyantı test ediyoruz\n\nÇoklu Test Problemi:\n\nHer test için α = 0.05 kullanırsak, çok sayıda yanlış pozitif sonuç elde ederiz\n1000 gen için test yapıyorsak ve tüm null hipotezler doğruysa bile, 50 geni (1000 × 0.05) yanlışlıkla anlamlı bulabiliriz\nBu “çoklu test problemi” biyolojide çok önemlidir!"
+  },
+  {
+    "objectID": "ders07-uygulama.html#bonferroni-düzeltmesi",
+    "href": "ders07-uygulama.html#bonferroni-düzeltmesi",
+    "title": "Ders7 Uygulama: İstatistiksel Güç ve ANOVA",
+    "section": "Bonferroni Düzeltmesi",
+    "text": "Bonferroni Düzeltmesi\nBonferroni düzeltmesi, en basit ve en sık kullanılan çoklu test düzeltme yöntemidir.\nPrensip:\n\nα değerini test sayısına böleriz: α’ = α/m\nBurada m = toplam test sayısı\n\nÖrnek:\n\n1000 gen için test yapıyoruz\nStandart α = 0.05\nBonferroni düzeltmesi ile: α’ = 0.05/1000 = 0.00005\nYani p &lt; 0.00005 olan genleri anlamlı kabul ederiz"
+  },
+  {
+    "objectID": "ders07-uygulama.html#benjamini-hochberg-fdr-düzeltmesi",
+    "href": "ders07-uygulama.html#benjamini-hochberg-fdr-düzeltmesi",
+    "title": "Ders7 Uygulama: İstatistiksel Güç ve ANOVA",
+    "section": "Benjamini-Hochberg (FDR) Düzeltmesi",
+    "text": "Benjamini-Hochberg (FDR) Düzeltmesi\nBonferroni çok muhafazakardır ve biyolojik çalışmalarda gerçek etkileri kaçırabilir. Benjamini-Hochberg yöntemi (FDR - False Discovery Rate), daha esnek bir alternatiftir.\nPrensip:\n\nP-değerlerini küçükten büyüğe sıralayın\nHer p-değeri için düzeltilmiş değer hesaplayın: p’ = p × (m/i)\n\nm = toplam test sayısı\ni = p-değerinin sıra numarası\n\nBelirli bir FDR seviyesini (genellikle 0.05 veya 0.10) sağlayan tüm testleri anlamlı kabul edin"
+  },
+  {
+    "objectID": "ders07-uygulama.html#section-1",
+    "href": "ders07-uygulama.html#section-1",
+    "title": "Ders7 Uygulama: İstatistiksel Güç ve ANOVA",
+    "section": "",
+    "text": "Please enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders07-uygulama.html#r-ile-çoklu-test-düzeltmeleri",
+    "href": "ders07-uygulama.html#r-ile-çoklu-test-düzeltmeleri",
+    "title": "Ders7 Uygulama: İstatistiksel Güç ve ANOVA",
+    "section": "R ile Çoklu Test Düzeltmeleri",
+    "text": "R ile Çoklu Test Düzeltmeleri\nR’da p.adjust() fonksiyonu, farklı çoklu test düzeltme yöntemlerini uygular:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders07-uygulama.html#düzeltme-yöntemlerinin-karşılaştırılması",
+    "href": "ders07-uygulama.html#düzeltme-yöntemlerinin-karşılaştırılması",
+    "title": "Ders7 Uygulama: İstatistiksel Güç ve ANOVA",
+    "section": "Düzeltme Yöntemlerinin Karşılaştırılması",
+    "text": "Düzeltme Yöntemlerinin Karşılaştırılması\nBonferroni Düzeltmesi:\n\nAvantaj: Basit, anlaşılır ve Tip I hatayı sıkı kontrol eder (FWER - Family-Wise Error Rate)\nDezavantaj: Çok muhafazakardır ve gerçek farklılıkları kaçırabilir (düşük istatistiksel güç)\nKullanım: Az sayıda planlı karşılaştırma varsa veya Tip I hata kesinlikle önlenmek isteniyorsa\n\nBenjamini-Hochberg (FDR) Düzeltmesi:\n\nAvantaj: Daha esnek, daha iyi istatistiksel güç sağlar\nDezavantaj: Daha fazla yanlış pozitife izin verir (belirli bir oranda)\nKullanım: Büyük ölçekli tarama çalışmalarında (genomik, proteomik, metabolomik)\n\nBiyolojide Tercih:\n\nMikroarray, RNA-seq, proteomik çalışmalarda genellikle FDR tercih edilir\nKritik klinik veya tanısal uygulamalarda Bonferroni tercih edilebilir"
+  },
+  {
+    "objectID": "ders07-uygulama.html#birden-fazla-faktörle-anova-iki-yönlü-anova",
+    "href": "ders07-uygulama.html#birden-fazla-faktörle-anova-iki-yönlü-anova",
+    "title": "Ders7 Uygulama: İstatistiksel Güç ve ANOVA",
+    "section": "Birden Fazla Faktörle ANOVA (İki Yönlü ANOVA)",
+    "text": "Birden Fazla Faktörle ANOVA (İki Yönlü ANOVA)\nŞimdi ToothGrowth veri setini kullanarak, C vitamini dozu ve uygulama yönteminin diş büyümesi üzerindeki etkisini analiz edelim:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders07-uygulama.html#verilerin-özeti-ve-görselleştirilmesi-1",
+    "href": "ders07-uygulama.html#verilerin-özeti-ve-görselleştirilmesi-1",
+    "title": "Ders7 Uygulama: İstatistiksel Güç ve ANOVA",
+    "section": "Verilerin Özeti ve Görselleştirilmesi",
+    "text": "Verilerin Özeti ve Görselleştirilmesi\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders07-uygulama.html#iki-yönlü-anova-analizi",
+    "href": "ders07-uygulama.html#iki-yönlü-anova-analizi",
+    "title": "Ders7 Uygulama: İstatistiksel Güç ve ANOVA",
+    "section": "İki Yönlü ANOVA Analizi",
+    "text": "İki Yönlü ANOVA Analizi\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders07-uygulama.html#sonuçların-yorumlanması",
+    "href": "ders07-uygulama.html#sonuçların-yorumlanması",
+    "title": "Ders7 Uygulama: İstatistiksel Güç ve ANOVA",
+    "section": "Sonuçların Yorumlanması",
+    "text": "Sonuçların Yorumlanması\nİki yönlü ANOVA sonuçlarına göre:\n\nUygulama yönteminin (supp) diş büyümesi üzerinde anlamlı bir etkisi var mı?\nDozajın (dose) diş büyümesi üzerinde anlamlı bir etkisi var mı?\nUygulama yöntemi ve dozaj arasında anlamlı bir etkileşim var mı?"
+  },
+  {
+    "objectID": "ders07-uygulama.html#anova-örneği-iris-veri-seti",
+    "href": "ders07-uygulama.html#anova-örneği-iris-veri-seti",
+    "title": "Ders7 Uygulama: İstatistiksel Güç ve ANOVA",
+    "section": "ANOVA Örneği: Iris Veri Seti",
+    "text": "ANOVA Örneği: Iris Veri Seti\nŞimdi iris veri setini kullanarak ANOVA analizi yapalım. Bu veri seti üç farklı Iris türünün (setosa, versicolor, virginica) çiçek özelliklerini içerir.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders07-uygulama.html#iris-veri-seti-görselleştirme",
+    "href": "ders07-uygulama.html#iris-veri-seti-görselleştirme",
+    "title": "Ders7 Uygulama: İstatistiksel Güç ve ANOVA",
+    "section": "Iris Veri Seti Görselleştirme",
+    "text": "Iris Veri Seti Görselleştirme\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders07-uygulama.html#iris-anova-analizi",
+    "href": "ders07-uygulama.html#iris-anova-analizi",
+    "title": "Ders7 Uygulama: İstatistiksel Güç ve ANOVA",
+    "section": "Iris ANOVA Analizi",
+    "text": "Iris ANOVA Analizi\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders07-uygulama.html#iris-post-hoc-analizi",
+    "href": "ders07-uygulama.html#iris-post-hoc-analizi",
+    "title": "Ders7 Uygulama: İstatistiksel Güç ve ANOVA",
+    "section": "Iris Post-hoc Analizi",
+    "text": "Iris Post-hoc Analizi\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders07-uygulama.html#anova-örneği-insectsprays-veri-seti",
+    "href": "ders07-uygulama.html#anova-örneği-insectsprays-veri-seti",
+    "title": "Ders7 Uygulama: İstatistiksel Güç ve ANOVA",
+    "section": "ANOVA Örneği: InsectSprays Veri Seti",
+    "text": "ANOVA Örneği: InsectSprays Veri Seti\nInsectSprays veri seti, farklı böcek ilaçlarının (A-F) böcek sayısı üzerindeki etkisini gösterir.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders07-uygulama.html#insectsprays-görselleştirme-ve-analiz",
+    "href": "ders07-uygulama.html#insectsprays-görselleştirme-ve-analiz",
+    "title": "Ders7 Uygulama: İstatistiksel Güç ve ANOVA",
+    "section": "InsectSprays Görselleştirme ve Analiz",
+    "text": "InsectSprays Görselleştirme ve Analiz\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders07-uygulama.html#problemler-ve-çözüm-önerileri",
+    "href": "ders07-uygulama.html#problemler-ve-çözüm-önerileri",
+    "title": "Ders7 Uygulama: İstatistiksel Güç ve ANOVA",
+    "section": "Problemler ve Çözüm Önerileri",
+    "text": "Problemler ve Çözüm Önerileri\nBiyolojik deneylerde ANOVA varsayımlarını sağlamak zor olabilir:\n\nNormallik sorunu:\n\nShapiro-Wilk testi ile kontrol edin\nGerekirse veri dönüşümü yapın (log, karekök)\nYa da parametrik olmayan Kruskal-Wallis testini kullanın\n\nVaryans homojenliği sorunu:\n\nLevene testi ile kontrol edin\nWelch ANOVA kullanın\n\nBağımsızlık sorunu:\n\nDeneysel tasarımınızı gözden geçirin\nTekrarlı ölçümler ANOVA kullanmayı düşünün"
+  },
+  {
+    "objectID": "ders07-uygulama.html#alıştırmalar",
+    "href": "ders07-uygulama.html#alıştırmalar",
+    "title": "Ders7 Uygulama: İstatistiksel Güç ve ANOVA",
+    "section": "Alıştırmalar",
+    "text": "Alıştırmalar\n\nAşağıdaki veri seti için tek yönlü ANOVA analizi yapınız ve sonuçları yorumlayınız.\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nBir çalışmada orta büyüklükteki bir etki (f=0.25) için 0.80 güç elde etmek istiyorsunuz. 4 grup ile çalışacaksanız, her grupta kaç örnek olmalıdır?"
+  },
+  {
+    "objectID": "ders07-uygulama.html#anova-için-güç-ve-örneklem-boyutu-ilişkisi",
+    "href": "ders07-uygulama.html#anova-için-güç-ve-örneklem-boyutu-ilişkisi",
+    "title": "Ders7 Uygulama: İstatistiksel Güç ve ANOVA",
+    "section": "ANOVA için Güç ve Örneklem Boyutu İlişkisi",
+    "text": "ANOVA için Güç ve Örneklem Boyutu İlişkisi\nFarklı grup sayıları için gereken örneklem boyutunu inceleyelim:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders07-uygulama.html#farklı-test-türleri-için-güç-analizi",
+    "href": "ders07-uygulama.html#farklı-test-türleri-için-güç-analizi",
+    "title": "Ders7 Uygulama: İstatistiksel Güç ve ANOVA",
+    "section": "Farklı Test Türleri için Güç Analizi",
+    "text": "Farklı Test Türleri için Güç Analizi\nTek örneklem, bağımsız örneklem ve eşlenmiş örneklem t-testleri için güç analizini karşılaştıralım:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders07-uygulama.html#özet-istatistiksel-güç-ve-anova",
+    "href": "ders07-uygulama.html#özet-istatistiksel-güç-ve-anova",
+    "title": "Ders7 Uygulama: İstatistiksel Güç ve ANOVA",
+    "section": "Özet: İstatistiksel Güç ve ANOVA",
+    "text": "Özet: İstatistiksel Güç ve ANOVA\nİstatistiksel Güç:\n\nGerçek bir etki varsa onu tespit etme olasılığı (1 - β)\nMinimum 0.8 güç hedeflemek standart yaklaşımdır\nGüç şu faktörlerden etkilenir:\n\nÖrneklem boyutu (n) - arttıkça güç artar\nEtki büyüklüğü (delta) - arttıkça güç artar\nStandart sapma (sd) - arttıkça güç azalır\nAnlamlılık düzeyi (α) - arttıkça güç artar (ama Tip I hata da artar)\nTest türü - eşli test &gt; tek örneklem test &gt; bağımsız test\n\n\nANOVA:\n\nİkiden fazla grup ortalamasını karşılaştırmak için kullanılır\nTip I hata oranını kontrol altında tutar\nGruplar arası farklılık olduğunu söyler, ancak hangi grupların farklı olduğunu belirtmez (post-hoc testleri gerekir)\n\nUygulamalarda dikkat edilmesi gerekenler:\n\nGerçekçi etki büyüklükleri ile çalışın\nÖrneklem boyutunuzu iyi planlayın\nVarsayımları kontrol edin ve gerekirse alternatif yöntemleri kullanın\nÇoklu karşılaştırmalar için uygun düzeltme yöntemini seçin"
+  },
+  {
+    "objectID": "ders07-uygulama.html#pairwise.t.test-aov-ve-p.adjust-fonksiyonları",
+    "href": "ders07-uygulama.html#pairwise.t.test-aov-ve-p.adjust-fonksiyonları",
+    "title": "Ders7 Uygulama: İstatistiksel Güç ve ANOVA",
+    "section": "pairwise.t.test(), aov() ve p.adjust() Fonksiyonları",
+    "text": "pairwise.t.test(), aov() ve p.adjust() Fonksiyonları\nR’da grup karşılaştırmaları ve p-değerlerinin düzeltilmesi için kullanılan üç önemli fonksiyonu inceleyelim."
+  },
+  {
+    "objectID": "ders07-uygulama.html#pairwise.t.test-fonksiyonu",
+    "href": "ders07-uygulama.html#pairwise.t.test-fonksiyonu",
+    "title": "Ders7 Uygulama: İstatistiksel Güç ve ANOVA",
+    "section": "pairwise.t.test() Fonksiyonu",
+    "text": "pairwise.t.test() Fonksiyonu\nTemel Amacı: - Gruplar arasında çoklu ikili karşılaştırmalar yapmak - Tüm olası grup çiftleri arasında t-testleri gerçekleştirmek - Çoklu test düzeltmelerini otomatik olarak uygulamak\nKullanımı:\npairwise.t.test(x, g, p.adjust.method = \"bonferroni\")\nBurada: - x: Karşılaştırılacak sürekli değişken - g: Grup faktörü - p.adjust.method: p-değeri düzeltme yöntemi"
+  },
+  {
+    "objectID": "ders07-uygulama.html#aov-fonksiyonu",
+    "href": "ders07-uygulama.html#aov-fonksiyonu",
+    "title": "Ders7 Uygulama: İstatistiksel Güç ve ANOVA",
+    "section": "aov() Fonksiyonu",
+    "text": "aov() Fonksiyonu\nTemel Amacı: - Varyans Analizi (ANOVA) modelini uygulamak - Grup ortalamaları arasında fark olup olmadığını test etmek - Kompleks deneysel tasarımları modellemek\nKullanımı:\nmodel &lt;- aov(formula, data)\nsummary(model)\nBurada: - formula: İstatistiksel model formülü (örn: yanıt ~ faktör1 * faktör2) - data: Veri çerçevesi"
+  },
+  {
+    "objectID": "ders07-uygulama.html#p.adjust-fonksiyonu",
+    "href": "ders07-uygulama.html#p.adjust-fonksiyonu",
+    "title": "Ders7 Uygulama: İstatistiksel Güç ve ANOVA",
+    "section": "p.adjust() Fonksiyonu",
+    "text": "p.adjust() Fonksiyonu\nTemel Amacı: - Çoklu testlerde p-değerlerini düzeltmek - Tip I hata oranını kontrol etmek - Herhangi bir istatistiksel testten gelen p-değerleri için kullanılabilir\nKullanımı:\np.adjust(p, method = \"bonferroni\")\nBurada: - p: Düzeltilecek p-değerleri vektörü - method: Düzeltme yöntemi (“bonferroni”, “holm”, “BH”, “fdr”, vb.)"
+  },
+  {
+    "objectID": "ders07-uygulama.html#kullanım-örnekleri",
+    "href": "ders07-uygulama.html#kullanım-örnekleri",
+    "title": "Ders7 Uygulama: İstatistiksel Güç ve ANOVA",
+    "section": "Kullanım Örnekleri",
+    "text": "Kullanım Örnekleri\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders07-uygulama.html#fonksiyonların-karşılaştırılması",
+    "href": "ders07-uygulama.html#fonksiyonların-karşılaştırılması",
+    "title": "Ders7 Uygulama: İstatistiksel Güç ve ANOVA",
+    "section": "Fonksiyonların Karşılaştırılması",
+    "text": "Fonksiyonların Karşılaştırılması\n\n\n\n\n\n\n\n\n\nÖzellik\npairwise.t.test()\naov()\np.adjust()\n\n\n\n\nTemel İşlev\nİkili karşılaştırmalar\nGenel grup karşılaştırması\np-değeri düzeltmesi\n\n\nÇoklu Test Problemi\nOtomatik düzeltir\nDoğrudan ele almaz\nSadece düzeltme yapar\n\n\nEsneklik\nOrta (sadece t-testleri)\nYüksek (karmaşık modeller)\nEn yüksek (herhangi bir p-değeri)\n\n\nTipik Kullanım\nPost-hoc analiz\nTemel analiz\nHerhangi bir düzeltme"
+  },
+  {
+    "objectID": "ders07-uygulama.html#tipik-iş-akışı",
+    "href": "ders07-uygulama.html#tipik-iş-akışı",
+    "title": "Ders7 Uygulama: İstatistiksel Güç ve ANOVA",
+    "section": "Tipik İş Akışı",
+    "text": "Tipik İş Akışı\nBiyolojik araştırmalarda bu fonksiyonların tipik kullanımı:\n\nÖnce aov() ile genel karşılaştırma yapılır:\n\nGruplar arasında fark var mı?\n\nANOVA anlamlıysa, pairwise.t.test() veya başka bir post-hoc test uygulanır:\n\nHangi gruplar arasında fark var?\n\nÖzel analizlerde, test p-değerleri p.adjust() ile manuel olarak düzeltilir:\n\nGenomik çalışmalarda binlerce gen için"
+  },
+  {
+    "objectID": "ders07-uygulama.html#biyolojik-araştırmalarda-uygulama",
+    "href": "ders07-uygulama.html#biyolojik-araştırmalarda-uygulama",
+    "title": "Ders7 Uygulama: İstatistiksel Güç ve ANOVA",
+    "section": "Biyolojik Araştırmalarda Uygulama",
+    "text": "Biyolojik Araştırmalarda Uygulama\nGen ekspresyon çalışmaları: - Farklı tedavilerin gen ekspresyonuna etkisini incelemek için aov() kullanılır - Hangi tedaviler arasında fark olduğunu belirlemek için pairwise.t.test() kullanılır - Mikrodizi veya RNA-seq analizlerinde binlerce p-değerini düzeltmek için p.adjust() kullanılır\nMetabolomik çalışmalar: - Metabolit seviyelerinde grup farkları için aov() - Spesifik metabolit karşılaştırmaları için pairwise.t.test() - Yüzlerce metabolite ait p-değerlerinin düzeltilmesi için p.adjust()"
+  },
+  {
+    "objectID": "ders07-uygulama.html#hangi-durumlarda-hangi-fonksiyonu-kullanmalı",
+    "href": "ders07-uygulama.html#hangi-durumlarda-hangi-fonksiyonu-kullanmalı",
+    "title": "Ders7 Uygulama: İstatistiksel Güç ve ANOVA",
+    "section": "Hangi Durumlarda Hangi Fonksiyonu Kullanmalı?",
+    "text": "Hangi Durumlarda Hangi Fonksiyonu Kullanmalı?\npairwise.t.test()’i şu durumlarda kullanın: - ANOVA ile anlamlı fark bulunduğunda - Hangi grupların farklı olduğunu hızlıca belirlemek istediğinizde - Çoklu düzeltme yöntemini kendiniz seçmek istediğinizde\naov()’u şu durumlarda kullanın: - Grup ortalamaları arasında fark olup olmadığını test etmek istediğinizde - Karmaşık deneysel tasarımlarla çalışırken (faktöriyel, etkileşimli) - Tam bir ANOVA tablosu gerektiğinde\np.adjust()’ı şu durumlarda kullanın: - Özel testlerden elde edilen p-değerlerini düzeltmek istediğinizde - İkiden fazla karşılaştırma içeren herhangi bir analizde - Farklı düzeltme stratejilerini karşılaştırmak istediğinizde"
+  },
+  {
     "objectID": "ders05-old.html#slide1",
     "href": "ders05-old.html#slide1",
     "title": "Ders5: Başlık",
@@ -858,7 +1138,7 @@
     "href": "index.html",
     "title": "MBG1032 Biyoistatistik Ders Notları",
     "section": "",
-    "text": "Kitap1: Introductory Statistics for the Life and Biomedical Sciences (Julie Vu, David Harrington) Leanpub sitesinden ücretsiz olarak (You Pay kısmını 0’a çekerek) indirebilirsiniz.\nKitap2: Principles of Biostatistics (Marcello Pagano, Kimberlee Gauvreau)\nKitap3: Biostatistics for the Biological and Health Sciences (Mario F. Triola, Marc M. Triola,Jason Roy)\nKitap4: R Programı İle Temel İstatistiksel Yöntemler Uygulamalı İstatistik Turcademy üzerinden ücretsiz olarak erişilebilir.\n\n\n\n\nTeorik (21 Şubat 2024): İlk derste, R programı çalıştırılabilecek ortamlar tanıtıldı. Ayrıca “Is Most Published Research Wrong?” başlıklı videodan bahsedildi. Söz konusu videoda p-value değerlerinin istatistik gücü oldukça zayıf şekilde bilimsel makalelerde kullanıldığı ve bu yüzden makalelerin tekrarlanabilirliğinin (reproducability) düşük olduğundan bahsedildi.\nUygulama (26 Şubat 2024): R Temelleri Sunum. Bu içerik için kullanılan ek kaynak, “An Introduction to R” adlı online kitap.\n\n\n\n\nTeorik (28 Şubat 2024): Veri setinin merkezini belirleyen ortalama ve mediandan bahsedildi. Veri setinin dağınıklığını özetleyen sayısal yöntemler (varyans, standart sapma) ve görsel yöntemler (histogram, boxplot) tanıtıldı. Sunum linki\nUygulama (4 Mart 2024): iris.xlsx dosyasını kullanarak, Excel’de hücre aralıklarını seçme, Ctrl ve Shift tuşları ile hızlı seçim ve gezinme gösterildi. Tek bir sütün için ortalama, medyan, 1. ve 3. çeyrek dilim hesaplama ve standard sapma hesabı yapıldı. Excel’de formüllerin başka hücrelere uygulanması gösterildi. Excel’in yeni versiyonunda Boxplot ve Histogram grafikleri çizilebileceği tartışıldı.\n\n\n\nTeorik (6 Mart 2024): Olaslık hesabına dair özellikler, küme prensibi üzerinden anlatıldı. Normal dağılımın özellikleri tanıtıldı. Sunum linki\nUygulama (11 Mart 2024): R’da pnorm(), qnorm() ve dnorm() fonksiyonları kullanarak ihtimal hesapları yapıldı ve normal dağılıma uygun rastgele sayılar üretildi. Excel’de normal dağılıma uygun sayılar üreten formüller kullanıldı.\n\n\n\nTeorik (13 Mart 2024): Poisson ve Bernoulli dağılımları (Poisson dağılımı ve Geometrik dağılım) tanıtıldı. Sunum linki\nPratik (18 Mart 2024): Normal dağılım örnekleri çözüldü. Uygulama sunum linki\n\n\n\nTeorik (20 Mart 2024): Güven aralığı ve hipotez testi. Sunum linki\nPratik (25 Mart 2024): Güven aralığı ve hipotez testi örnekleri &lt;––&gt;\n\n\n\nTeorik (27 Mart 2024): T-testi. Sunum linki\nPratik (01 Nisan 2024): T-testi uygulamaları Uygulama sunum linki\n\n\n\nTeorik (03 Nisan 2024): İstatistik Güç Sunum linki\n\n\n\nTeorik (03 Nisan 2024): ANOVA Sunum linki"
+    "text": "Kitap1: Introductory Statistics for the Life and Biomedical Sciences (Julie Vu, David Harrington) Leanpub sitesinden ücretsiz olarak (You Pay kısmını 0’a çekerek) indirebilirsiniz.\nKitap2: Principles of Biostatistics (Marcello Pagano, Kimberlee Gauvreau)\nKitap3: Biostatistics for the Biological and Health Sciences (Mario F. Triola, Marc M. Triola,Jason Roy)\nKitap4: R Programı İle Temel İstatistiksel Yöntemler Uygulamalı İstatistik Turcademy üzerinden ücretsiz olarak erişilebilir.\n\n\n\n\nTeorik (21 Şubat 2024): İlk derste, R programı çalıştırılabilecek ortamlar tanıtıldı. Ayrıca “Is Most Published Research Wrong?” başlıklı videodan bahsedildi. Söz konusu videoda p-value değerlerinin istatistik gücü oldukça zayıf şekilde bilimsel makalelerde kullanıldığı ve bu yüzden makalelerin tekrarlanabilirliğinin (reproducability) düşük olduğundan bahsedildi.\nUygulama (26 Şubat 2024): R Temelleri Sunum. Bu içerik için kullanılan ek kaynak, “An Introduction to R” adlı online kitap.\n\n\n\n\nTeorik (28 Şubat 2024): Veri setinin merkezini belirleyen ortalama ve mediandan bahsedildi. Veri setinin dağınıklığını özetleyen sayısal yöntemler (varyans, standart sapma) ve görsel yöntemler (histogram, boxplot) tanıtıldı. Sunum linki\nUygulama (4 Mart 2024): iris.xlsx dosyasını kullanarak, Excel’de hücre aralıklarını seçme, Ctrl ve Shift tuşları ile hızlı seçim ve gezinme gösterildi. Tek bir sütün için ortalama, medyan, 1. ve 3. çeyrek dilim hesaplama ve standard sapma hesabı yapıldı. Excel’de formüllerin başka hücrelere uygulanması gösterildi. Excel’in yeni versiyonunda Boxplot ve Histogram grafikleri çizilebileceği tartışıldı.\n\n\n\nTeorik (6 Mart 2024): Olaslık hesabına dair özellikler, küme prensibi üzerinden anlatıldı. Normal dağılımın özellikleri tanıtıldı. Sunum linki\nUygulama (11 Mart 2024): R’da pnorm(), qnorm() ve dnorm() fonksiyonları kullanarak ihtimal hesapları yapıldı ve normal dağılıma uygun rastgele sayılar üretildi. Excel’de normal dağılıma uygun sayılar üreten formüller kullanıldı.\n\n\n\nTeorik (13 Mart 2024): Poisson ve Bernoulli dağılımları (Poisson dağılımı ve Geometrik dağılım) tanıtıldı. Sunum linki\nPratik (18 Mart 2024): Normal dağılım örnekleri çözüldü. Uygulama sunum linki\n\n\n\nTeorik (20 Mart 2024): Güven aralığı ve hipotez testi. Sunum linki\nPratik (25 Mart 2024): Güven aralığı ve hipotez testi örnekleri &lt;––&gt;\n\n\n\nTeorik (27 Mart 2024): T-testi. Sunum linki\nPratik (01 Nisan 2024): T-testi uygulamaları Uygulama sunum linki\n\n\n\nTeorik (03 Nisan 2024): İstatistik Güç Sunum linki\n\n\n\nTeorik (03 Nisan 2024): ANOVA Sunum linki\nUygulama (2 Mayıs 2025): İstatistik Güç ve ANOVA uygulama Uygulama sunum linki"
   },
   {
     "objectID": "index.html#kaynaklar",
@@ -915,6 +1195,13 @@
     "title": "MBG1032 Biyoistatistik Ders Notları",
     "section": "",
     "text": "Teorik (03 Nisan 2024): İstatistik Güç Sunum linki"
+  },
+  {
+    "objectID": "index.html#ders08",
+    "href": "index.html#ders08",
+    "title": "MBG1032 Biyoistatistik Ders Notları",
+    "section": "",
+    "text": "Teorik (03 Nisan 2024): ANOVA Sunum linki\nUygulama (2 Mayıs 2025): İstatistik Güç ve ANOVA uygulama Uygulama sunum linki"
   },
   {
     "objectID": "ders05.html#özet",
@@ -1183,6 +1470,202 @@
     "text": "İki örnek t-testi (bağımlı/ilişkili)\nBir grup kadında pre ve post menstruasyon enerji alımı verisi. Pre ve Post ölçümler arasında fark var mıdır?\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
   },
   {
+    "objectID": "ders07.html#özet",
+    "href": "ders07.html#özet",
+    "title": "Ders 7: ANOVA (Varyans Analizi)",
+    "section": "Özet",
+    "text": "Özet\n\nANOVA (Varyans Analizi) nedir ve ne zaman kullanılır?\nt-testi ile ANOVA arasındaki fark\nTek Yönlü ANOVA (One-Way ANOVA)\nANOVA’nın varsayımları\nF-dağılımı ve F-istatistiği\nR ile ANOVA uygulamaları\nANOVA sonuçlarının yorumlanması ve raporlanması\nPost-hoc testleri (Tukey HSD, Bonferroni)\nBiyolojide ANOVA uygulamaları"
+  },
+  {
+    "objectID": "ders07.html#anova-varyans-analizi-nedir",
+    "href": "ders07.html#anova-varyans-analizi-nedir",
+    "title": "Ders 7: ANOVA (Varyans Analizi)",
+    "section": "ANOVA (Varyans Analizi) Nedir?",
+    "text": "ANOVA (Varyans Analizi) Nedir?\nANOVA, ikiden fazla grup ortalaması arasındaki farkların istatistiksel anlamlılığını değerlendirmek için kullanılan parametrik bir testtir.\nKullanım Amacı:\n\nİkiden fazla grubun karşılaştırılması\nBir veya daha fazla faktörün (bağımsız değişkenlerin) bir bağımlı değişken üzerindeki etkisini incelemek\nGruplar arası farklılıkların rastgele şans eseri mi yoksa gerçek bir etkiden mi kaynaklandığını belirlemek\n\nTemel Fikir:\nGruplar arası varyans ile gruplar içi varyansı karşılaştırarak, faktörün anlamlı bir etkisi olup olmadığını belirlemek"
+  },
+  {
+    "objectID": "ders07.html#t-testi-vs.-anova",
+    "href": "ders07.html#t-testi-vs.-anova",
+    "title": "Ders 7: ANOVA (Varyans Analizi)",
+    "section": "t-testi vs. ANOVA",
+    "text": "t-testi vs. ANOVA\nNeden ANOVA? Neden çoklu t-testi kullanmıyoruz?\n\nİkiden fazla grup olduğunda t-testi yerine ANOVA kullanılır\nÇoklu t-testleri yapmak, Tip I hata (yanlış pozitif) olasılığını artırır\n\nÖrnek: 3 grup karşılaştırması yapıyorsak:\n\nA vs B, A vs C, B vs C = 3 farklı t-testi\nHer test için α = 0.05 olsaydı, gerçekte:\n\nEn az bir testte yanlış pozitif bulma olasılığı: 1-(1-0.05)³ = 0.143\n\n\nTip I hata olasılığı 0.05 yerine 0.143’e çıkar!\nANOVA, bu \"çoklu karşılaştırma problemini\" çözer ve genel hata oranını kontrol altında tutar."
+  },
+  {
+    "objectID": "ders07.html#anova-türleri",
+    "href": "ders07.html#anova-türleri",
+    "title": "Ders 7: ANOVA (Varyans Analizi)",
+    "section": "ANOVA Türleri",
+    "text": "ANOVA Türleri\nİstatistikte birçok ANOVA türü vardır:\n\nTek Yönlü ANOVA (One-Way ANOVA):\n\nTek bir faktörün etkisini incelemek için kullanılır\nÖrnek: Farklı gübre türlerinin (A, B, C) bitki büyümesine etkisi\n\nİki Yönlü ANOVA (Two-Way ANOVA):\n\nİki faktörün etkisini ve bu faktörlerin etkileşimini incelemek için kullanılır\nÖrnek: Hem gübre türünün hem de sulama sıklığının bitki büyümesine etkisi\n\nTekrarlı Ölçümler ANOVA (Repeated Measures ANOVA):\n\nAynı deneklerin farklı koşullarda veya zaman noktalarında ölçümlerini karşılaştırmak için kullanılır\nÖrnek: Aynı hastaların tedavi öncesi, tedaviden 1 ay sonra ve 3 ay sonraki değerlerinin karşılaştırılması\n\n\nBu derste ağırlıklı olarak Tek Yönlü ANOVA üzerinde duracağız."
+  },
+  {
+    "objectID": "ders07.html#tek-yönlü-anova-modeli",
+    "href": "ders07.html#tek-yönlü-anova-modeli",
+    "title": "Ders 7: ANOVA (Varyans Analizi)",
+    "section": "Tek Yönlü ANOVA Modeli",
+    "text": "Tek Yönlü ANOVA Modeli\nTek Yönlü ANOVA’da:\n\nBir bağımlı değişken (sürekli)\nBir kategorik faktör (bağımsız değişken)\nHer faktör seviyesi, bir grubu temsil eder\n\nMatematiksel Model:\n\\[Y_{ij} = \\mu + \\alpha_i + \\epsilon_{ij}\\]\nBurada:\n\n\\(Y_{ij}\\) = i. gruptaki j. gözlem\n\\(\\mu\\) = genel ortalama\n\\(\\alpha_i\\) = i. grubun etkisi (\\(\\alpha_1 + \\alpha_2 + ... + \\alpha_k = 0\\))\n\\(\\epsilon_{ij}\\) = hata terimi (rastgele değişkenlik)"
+  },
+  {
+    "objectID": "ders07.html#anovanın-hipotezleri",
+    "href": "ders07.html#anovanın-hipotezleri",
+    "title": "Ders 7: ANOVA (Varyans Analizi)",
+    "section": "ANOVA’nın Hipotezleri",
+    "text": "ANOVA’nın Hipotezleri\nSıfır Hipotezi (H₀): Tüm grup ortalamaları birbirine eşittir. \\[H_0: \\mu_1 = \\mu_2 = ... = \\mu_k\\]\nAlternatif Hipotez (H₁): En az bir grup ortalaması diğerlerinden farklıdır.\n\\[H_1: \\    ext{En az bir } \\mu_i \\\neq \\mu_j \\  ext{ (i ≠ j için)}\\]\n\nÖnemli Not: Alternatif hipotez, hangi grup ortalamalarının farklı olduğunu belirtmez, sadece en az bir farklılık olduğunu söyler.\nHangi grup ortalamalarının farklı olduğunu belirlemek için, ANOVA’dan sonra post-hoc testleri kullanılır."
+  },
+  {
+    "objectID": "ders07.html#anovanın-varsayımları",
+    "href": "ders07.html#anovanın-varsayımları",
+    "title": "Ders 7: ANOVA (Varyans Analizi)",
+    "section": "ANOVA’nın Varsayımları",
+    "text": "ANOVA’nın Varsayımları\nANOVA, t-testine benzer şekilde, bazı varsayımlar üzerine kuruludur:\n\nBağımsızlık: Gözlemler birbirinden bağımsız olmalıdır.\nNormallik: Her gruptaki verilerin normal dağılması veya örneklem boyutunun yeterince büyük olması (n&gt;30).\nVaryansların Homojenliği (Homoscedasticity): Tüm gruplardaki varyansların yaklaşık olarak eşit olması.\n\nNot: Varsayımlar karşılanmadığında, parametrik olmayan alternatifler düşünülmelidir (örn. Kruskal-Wallis testi)."
+  },
+  {
+    "objectID": "ders07.html#varyansların-ayrışımı",
+    "href": "ders07.html#varyansların-ayrışımı",
+    "title": "Ders 7: ANOVA (Varyans Analizi)",
+    "section": "Varyansların Ayrışımı",
+    "text": "Varyansların Ayrışımı\nANOVA’nın adı \"Varyans Analizi\"dir çünkü toplam varyansı iki bileşene ayırır:\n1. Gruplar Arası Varyans (Between-Groups Variance):\n\nGrup ortalamalarının genel ortalamadan ne kadar farklı olduğunu gösterir\nEğer büyükse, gruplar arasında gerçek farklılıklar olduğunu düşündürür\n\n2. Gruplar İçi Varyans (Within-Groups Variance):\n\nGrup içindeki bireysel gözlemlerin, kendi grup ortalamasından ne kadar farklı olduğunu gösterir\nRastgele hata veya faktör dışındaki etkilerden kaynaklanır\n\nF-istatistiği = Gruplar Arası Varyans / Gruplar İçi Varyans\n\nF-değeri büyükse → Gruplar arasındaki farklılıklar, grup içi varyasyondan daha büyüktür → H₀ reddedilir"
+  },
+  {
+    "objectID": "ders07.html#kareler-toplamı",
+    "href": "ders07.html#kareler-toplamı",
+    "title": "Ders 7: ANOVA (Varyans Analizi)",
+    "section": "Kareler Toplamı",
+    "text": "Kareler Toplamı\nANOVA’da varyans analizi için, kareler toplamı (Sum of Squares - SS) hesaplanır:\n1. Toplam Kareler Toplamı (SST):\n\\[SST = \\sum_{i=1}^{k}\\sum_{j=1}^{n_i}(Y_{ij} - \\bar{Y})^2\\]\n2. Gruplar Arası Kareler Toplamı (SSB): \\[SSB = \\sum_{i=1}^{k}n_i(\\bar{Y}_i - \\bar{Y})^2\\]\n3. Gruplar İçi Kareler Toplamı (SSW): \\[SSW = \\sum_{i=1}^{k}\\sum_{j=1}^{n_i}(Y_{ij} - \\bar{Y}_i)^2\\]\nİlişki: SST = SSB + SSW"
+  },
+  {
+    "objectID": "ders07.html#ortalama-kareler-ve-f-istatistiği",
+    "href": "ders07.html#ortalama-kareler-ve-f-istatistiği",
+    "title": "Ders 7: ANOVA (Varyans Analizi)",
+    "section": "Ortalama Kareler ve F-İstatistiği",
+    "text": "Ortalama Kareler ve F-İstatistiği\nKareler toplamı değerleri, ilgili serbestlik dereceleri ile bölünerek ortalama kareler (Mean Squares - MS) hesaplanır:\n1. Gruplar Arası Ortalama Kareler (MSB): \\[MSB = \\frac{SSB}{k-1}\\]\n2. Gruplar İçi Ortalama Kareler (MSW): \\[MSW = \\frac{SSW}{N-k}\\]\nF-İstatistiği: \\[F = \\frac{MSB}{MSW}\\]\nBurada:\n\nk = grup sayısı\nN = toplam gözlem sayısı\n\nF-değeri, α düzeyindeki kritik F-değeri ile karşılaştırılır. Eğer hesaplanan F-değeri kritik değerden büyükse, H₀ reddedilir."
+  },
+  {
+    "objectID": "ders07.html#f-dağılımı",
+    "href": "ders07.html#f-dağılımı",
+    "title": "Ders 7: ANOVA (Varyans Analizi)",
+    "section": "F-Dağılımı",
+    "text": "F-Dağılımı\nF-dağılımı, iki farklı varyans tahmininin oranı olarak hesaplanan F-istatistiği için örnekleme dağılımıdır.\nÖzellikleri:\n\nSıfırdan büyük değerler alır (F ≥ 0)\nSağa çarpık bir dağılımdır\nİki serbestlik derecesi parametresi vardır: df₁ (payda) ve df₂ (payda)\nH₀ doğruysa, F-değeri 1’e yakındır"
+  },
+  {
+    "objectID": "ders07.html#section",
+    "href": "ders07.html#section",
+    "title": "Ders 7: ANOVA (Varyans Analizi)",
+    "section": "",
+    "text": "Görsel Kaynak: Wikimedia Commons"
+  },
+  {
+    "objectID": "ders07.html#anova-tablosu",
+    "href": "ders07.html#anova-tablosu",
+    "title": "Ders 7: ANOVA (Varyans Analizi)",
+    "section": "ANOVA Tablosu",
+    "text": "ANOVA Tablosu\nANOVA sonuçları genellikle bir tablo ile özetlenir:\n\n\n\n\n\n\n\n\n\n\n\nVaryasyon Kaynağı\nSS\ndf\nMS\nF\np-değeri\n\n\n\n\nGruplar Arası (Between)\nSSB\nk-1\nMSB = SSB/(k-1)\nF = MSB/MSW\np\n\n\nGruplar İçi (Within)\nSSW\nN-k\nMSW = SSW/(N-k)\n\n\n\n\nToplam\nSST\nN-1\n\n\n\n\n\n\n\nk = grup sayısı\nN = toplam gözlem sayısı\np-değeri &lt; α ise, H₀ reddedilir"
+  },
+  {
+    "objectID": "ders07.html#r-ile-tek-yönlü-anova",
+    "href": "ders07.html#r-ile-tek-yönlü-anova",
+    "title": "Ders 7: ANOVA (Varyans Analizi)",
+    "section": "R ile Tek Yönlü ANOVA",
+    "text": "R ile Tek Yönlü ANOVA\nÖrnek Senaryo: Üç farklı gübre türünün (A, B, C) domates bitkilerinin boy (cm) üzerindeki etkisini analiz edelim.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders07.html#section-1",
+    "href": "ders07.html#section-1",
+    "title": "Ders 7: ANOVA (Varyans Analizi)",
+    "section": "",
+    "text": "Please enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders07.html#anova-analizi",
+    "href": "ders07.html#anova-analizi",
+    "title": "Ders 7: ANOVA (Varyans Analizi)",
+    "section": "ANOVA Analizi",
+    "text": "ANOVA Analizi\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders07.html#istatistiksel-değerleri-görelim",
+    "href": "ders07.html#istatistiksel-değerleri-görelim",
+    "title": "Ders 7: ANOVA (Varyans Analizi)",
+    "section": "İstatistiksel değerleri görelim",
+    "text": "İstatistiksel değerleri görelim\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders07.html#görselleştirme",
+    "href": "ders07.html#görselleştirme",
+    "title": "Ders 7: ANOVA (Varyans Analizi)",
+    "section": "Görselleştirme",
+    "text": "Görselleştirme\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders07.html#post-hoc-testleri",
+    "href": "ders07.html#post-hoc-testleri",
+    "title": "Ders 7: ANOVA (Varyans Analizi)",
+    "section": "Post-hoc Testleri",
+    "text": "Post-hoc Testleri\nANOVA, gruplar arasında bir fark olduğunu söyler, ancak hangi grupların farklı olduğunu söylemez. Bunu belirlemek için post-hoc testleri kullanılır.\nEn Yaygın Post-hoc Testleri:\n\nTukey HSD (Honestly Significant Difference): Tüm olası ikili grup karşılaştırmalarını yapar ve aile bazında hata oranını kontrol eder.\nBonferroni Düzeltmesi: Alfa (α) değerini karşılaştırma sayısına bölerek çoklu test problemini düzeltir.\nScheffé Testi: Tüm olası grup karşılaştırmaları için uygundur, ancak genellikle daha muhafazakardır.\n\nNot: Post-hoc testleri sadece ANOVA sonucu istatistiksel olarak anlamlıysa (p &lt; 0.05) uygulanır."
+  },
+  {
+    "objectID": "ders07.html#tukey-hsd-post-hoc-testi",
+    "href": "ders07.html#tukey-hsd-post-hoc-testi",
+    "title": "Ders 7: ANOVA (Varyans Analizi)",
+    "section": "Tukey HSD Post-hoc Testi",
+    "text": "Tukey HSD Post-hoc Testi\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders07.html#post-hoc-testlerin-yorumlanması",
+    "href": "ders07.html#post-hoc-testlerin-yorumlanması",
+    "title": "Ders 7: ANOVA (Varyans Analizi)",
+    "section": "Post-hoc Testlerin Yorumlanması",
+    "text": "Post-hoc Testlerin Yorumlanması\nTukey HSD sonuçlarına göre:\n\nGübre B - Gübre A: Gübre B, Gübre A’ya göre anlamlı şekilde daha yüksek bitki boylarına sahiptir (p &lt; 0.001).\nGübre C - Gübre A: Gübre C, Gübre A’ya göre anlamlı şekilde daha yüksek bitki boylarına sahiptir (p &lt; 0.05).\nGübre C - Gübre B: Gübre C ve Gübre B arasında istatistiksel olarak anlamlı bir fark yoktur (p &gt; 0.05).\n\nGenel Sonuç: * Gübre B ve Gübre C, Gübre A’dan daha etkilidir. * Gübre B ve Gübre C arasında anlamlı bir fark yoktur."
+  },
+  {
+    "objectID": "ders07.html#sonuçların-raporlanması",
+    "href": "ders07.html#sonuçların-raporlanması",
+    "title": "Ders 7: ANOVA (Varyans Analizi)",
+    "section": "Sonuçların Raporlanması",
+    "text": "Sonuçların Raporlanması\nAkademik yayınlarda ANOVA sonuçlarını nasıl raporlamalıyız?\n\"Gübre türünün domates bitkilerinin boyları üzerindeki etkisi, tek yönlü ANOVA ile değerlendirilmiştir. Gübre türünün bitki boyu üzerinde istatistiksel olarak anlamlı bir etkisi bulunmuştur, F(2, 21) = 16.44, p &lt; 0.001. Post-hoc Tukey HSD testleri, Gübre B ile yetiştirilen bitkilerin (M = 77.75 cm, SD = 2.49) ve Gübre C ile yetiştirilen bitkilerin (M = 71.50 cm, SD = 2.45), Gübre A ile yetiştirilen bitkilerden (M = 68.38 cm, SD = 2.67) anlamlı şekilde daha uzun olduğunu göstermiştir (sırasıyla p &lt; 0.001 ve p &lt; 0.05). Gübre B ve Gübre C arasında istatistiksel olarak anlamlı bir fark bulunmamıştır (p = 0.094).\""
+  },
+  {
+    "objectID": "ders07.html#biyolojide-anova-uygulamaları",
+    "href": "ders07.html#biyolojide-anova-uygulamaları",
+    "title": "Ders 7: ANOVA (Varyans Analizi)",
+    "section": "Biyolojide ANOVA Uygulamaları",
+    "text": "Biyolojide ANOVA Uygulamaları\nANOVA, biyoloji ve tıpta yaygın olarak kullanılan bir analiz yöntemidir:\n\nFarklı İlaç Tedavilerinin Karşılaştırılması:\n\nÜç veya daha fazla farklı ilacın etkinliğinin karşılaştırılması\n\nGen Ekspresyon Analizi:\n\nFarklı deneysel koşullar altında gen ekspresyon seviyelerinin karşılaştırılması\n\nEkolojik Çalışmalar:\n\nFarklı habitatlardaki biyoçeşitliliğin karşılaştırılması\n\nEnzim Kinetik Çalışmaları:\n\nFarklı pH değerlerinde enzim aktivitelerinin karşılaştırılması\n\nBüyüme ve Gelişim Çalışmaları:\n\nFarklı besin veya hormon uygulamalarının büyüme üzerindeki etkisinin incelenmesi"
+  },
+  {
+    "objectID": "ders07.html#gerçek-veri-üzerinde-uygulama-iris-veri-seti",
+    "href": "ders07.html#gerçek-veri-üzerinde-uygulama-iris-veri-seti",
+    "title": "Ders 7: ANOVA (Varyans Analizi)",
+    "section": "Gerçek Veri Üzerinde Uygulama: iris Veri Seti",
+    "text": "Gerçek Veri Üzerinde Uygulama: iris Veri Seti\nŞimdi, iris veri setinde üç farklı Iris türünün (setosa, versicolor, virginica) taç yaprak (petal) boylarını karşılaştıralım.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders07.html#görselleştirme-ve-post-hoc-test",
+    "href": "ders07.html#görselleştirme-ve-post-hoc-test",
+    "title": "Ders 7: ANOVA (Varyans Analizi)",
+    "section": "Görselleştirme ve Post-hoc Test",
+    "text": "Görselleştirme ve Post-hoc Test\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders07.html#tek-yönlü-anova-için-pratik-ipuçları",
+    "href": "ders07.html#tek-yönlü-anova-için-pratik-ipuçları",
+    "title": "Ders 7: ANOVA (Varyans Analizi)",
+    "section": "Tek Yönlü ANOVA için Pratik İpuçları",
+    "text": "Tek Yönlü ANOVA için Pratik İpuçları\n\nVeri Hazırlığı ve Kontroller:\n\nAykırı değerleri belirleyin ve ele alın\nNormallik ve varyans homojenliği varsayımlarını kontrol edin\nVeri yapısının tek yönlü ANOVA’ya uygun olduğunu doğrulayın\n\nAnaliz ve Sonuçlar:\n\nSadece p-değerine değil, etki büyüklüğüne de bakın (η²)\nANOVA anlamlıysa, post-hoc testleri uygulayın\nBulguları biyolojik/pratik anlamlılık açısından yorumlayın\n\nVarsayımlar Karşılanmadığında:\n\nVeri dönüşümleri deneyin (log, karekök vb.)\nParametrik olmayan alternatifleri kullanın (Kruskal-Wallis testi)\nRobust ANOVA yöntemlerini düşünün"
+  },
+  {
+    "objectID": "ders07.html#iki-yönlü-anova-hakkında-kısa-bilgi",
+    "href": "ders07.html#iki-yönlü-anova-hakkında-kısa-bilgi",
+    "title": "Ders 7: ANOVA (Varyans Analizi)",
+    "section": "İki Yönlü ANOVA Hakkında Kısa Bilgi",
+    "text": "İki Yönlü ANOVA Hakkında Kısa Bilgi\nİki Yönlü ANOVA, iki faktörün ve bunların etkileşiminin etkisini analiz eden bir yöntemdir.\nÖrnek: Hem gübre türünün (A, B, C) hem de sulama sıklığının (günlük, haftalık) domates bitkilerinin boyuna etkisini incelemek istiyoruz.\nİki Yönlü ANOVA Modeli: \\[Y_{ijk} = \\\\mu + \\\\alpha_i + \\\\beta_j + (\\\\alpha\\\\beta)_{ij} + \\\\epsilon_{ijk}\\]\n\n\\(\\\\mu\\) = genel ortalama\n\\(\\\\alpha_i\\) = ilk faktörün etkisi (gübre türü)\n\\(\\\\beta_j\\) = ikinci faktörün etkisi (sulama sıklığı)\n\\((\\\\alpha\\\\beta)_{ij}\\) = faktörler arası etkileşim\n\\(\\\\epsilon_{ijk}\\) = hata terimi\n\nİki Yönlü ANOVA ile üç hipotezi test ederiz: 1. İlk faktörün ana etkisi (\\(H_0: \\\\alpha_1 = \\\\alpha_2 = ... = \\\\alpha_a = 0\\)) 2. İkinci faktörün ana etkisi (\\(H_0: \\\\beta_1 = \\\\beta_2 = ... = \\\\beta_b = 0\\)) 3. Faktörler arası etkileşim (\\(H_0: (\\\\alpha\\\\beta)_{ij} = 0 \\  ext{ tüm } i, j \\   ext{ için}\\))"
+  },
+  {
+    "objectID": "ders07.html#özet-anovanın-avantajları-ve-sınırlamaları",
+    "href": "ders07.html#özet-anovanın-avantajları-ve-sınırlamaları",
+    "title": "Ders 7: ANOVA (Varyans Analizi)",
+    "section": "Özet: ANOVA’nın Avantajları ve Sınırlamaları",
+    "text": "Özet: ANOVA’nın Avantajları ve Sınırlamaları\nAvantajlar: * İkiden fazla grubu aynı anda karşılaştırabilme * Tip I hata oranını kontrol etme * Kategorik faktörlerin sürekli değişkenler üzerindeki etkisini inceleme\nSınırlamalar: * Sadece ortalamaları karşılaştırır, dağılımlardaki diğer farklılıkları görmez * Parametrik bir test olarak, belirli varsayımlara dayanır * Grup farkını bulur ancak hangi grupların farklı olduğunu belirtmez (post-hoc testleri gerekir)\nANOVA’nın Ötesinde: * İki faktörlü çalışmalar için İki Yönlü ANOVA * Tekrarlı ölçümler için Tekrarlı Ölçümler ANOVA"
+  },
+  {
     "objectID": "ders03-uygulama.html#normal-dağılım-soruları",
     "href": "ders03-uygulama.html#normal-dağılım-soruları",
     "title": "Ders3: Dağılımlar - Uygulama",
@@ -1272,236 +1755,5 @@
     "title": "Ders3: Dağılımlar - Uygulama",
     "section": "Soru 3",
     "text": "Soru 3\nBir DNA parçasının başarılı bir şekilde PCR ile çoğaltılma olasılığının 0.9 olduğunu varsayalım. İlk başarılı çoğaltmanın ilk 5 denemede olma olasılığı nedir?\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "ders05-uygulama.html",
-    "href": "ders05-uygulama.html",
-    "title": "Ders 5 Uygulama: t-Testi ve Örneklerle Uygulamaları",
-    "section": "",
-    "text": "boxplot(Sepal.Width ~ Species, data=iris)\n\n\n\n\n\n\n\n\n\nVersicolor Sepal genişlik 3’ten farklı mıdır?\nVersicolor ve Virginica arasında fark var mıdır?"
-  },
-  {
-    "objectID": "ders07.html#özet",
-    "href": "ders07.html#özet",
-    "title": "Ders 7: ANOVA (Varyans Analizi)",
-    "section": "Özet",
-    "text": "Özet\n\nANOVA (Varyans Analizi) nedir ve ne zaman kullanılır?\nt-testi ile ANOVA arasındaki fark\nTek Yönlü ANOVA (One-Way ANOVA)\nANOVA’nın varsayımları\nF-dağılımı ve F-istatistiği\nR ile ANOVA uygulamaları\nANOVA sonuçlarının yorumlanması ve raporlanması\nPost-hoc testleri (Tukey HSD, Bonferroni)\nBiyolojide ANOVA uygulamaları"
-  },
-  {
-    "objectID": "ders07.html#anova-varyans-analizi-nedir",
-    "href": "ders07.html#anova-varyans-analizi-nedir",
-    "title": "Ders 7: ANOVA (Varyans Analizi)",
-    "section": "ANOVA (Varyans Analizi) Nedir?",
-    "text": "ANOVA (Varyans Analizi) Nedir?\nANOVA, ikiden fazla grup ortalaması arasındaki farkların istatistiksel anlamlılığını değerlendirmek için kullanılan parametrik bir testtir.\nKullanım Amacı:\n\nİkiden fazla grubun karşılaştırılması\nBir veya daha fazla faktörün (bağımsız değişkenlerin) bir bağımlı değişken üzerindeki etkisini incelemek\nGruplar arası farklılıkların rastgele şans eseri mi yoksa gerçek bir etkiden mi kaynaklandığını belirlemek\n\nTemel Fikir:\nGruplar arası varyans ile gruplar içi varyansı karşılaştırarak, faktörün anlamlı bir etkisi olup olmadığını belirlemek"
-  },
-  {
-    "objectID": "ders07.html#t-testi-vs.-anova",
-    "href": "ders07.html#t-testi-vs.-anova",
-    "title": "Ders 7: ANOVA (Varyans Analizi)",
-    "section": "t-testi vs. ANOVA",
-    "text": "t-testi vs. ANOVA\nNeden ANOVA? Neden çoklu t-testi kullanmıyoruz?\n\nİkiden fazla grup olduğunda t-testi yerine ANOVA kullanılır\nÇoklu t-testleri yapmak, Tip I hata (yanlış pozitif) olasılığını artırır\n\nÖrnek: 3 grup karşılaştırması yapıyorsak:\n\nA vs B, A vs C, B vs C = 3 farklı t-testi\nHer test için α = 0.05 olsaydı, gerçekte:\n\nEn az bir testte yanlış pozitif bulma olasılığı: 1-(1-0.05)³ = 0.143\n\n\nTip I hata olasılığı 0.05 yerine 0.143’e çıkar!\nANOVA, bu \"çoklu karşılaştırma problemini\" çözer ve genel hata oranını kontrol altında tutar."
-  },
-  {
-    "objectID": "ders07.html#anova-türleri",
-    "href": "ders07.html#anova-türleri",
-    "title": "Ders 7: ANOVA (Varyans Analizi)",
-    "section": "ANOVA Türleri",
-    "text": "ANOVA Türleri\nİstatistikte birçok ANOVA türü vardır:\n\nTek Yönlü ANOVA (One-Way ANOVA):\n\nTek bir faktörün etkisini incelemek için kullanılır\nÖrnek: Farklı gübre türlerinin (A, B, C) bitki büyümesine etkisi\n\nİki Yönlü ANOVA (Two-Way ANOVA):\n\nİki faktörün etkisini ve bu faktörlerin etkileşimini incelemek için kullanılır\nÖrnek: Hem gübre türünün hem de sulama sıklığının bitki büyümesine etkisi\n\nTekrarlı Ölçümler ANOVA (Repeated Measures ANOVA):\n\nAynı deneklerin farklı koşullarda veya zaman noktalarında ölçümlerini karşılaştırmak için kullanılır\nÖrnek: Aynı hastaların tedavi öncesi, tedaviden 1 ay sonra ve 3 ay sonraki değerlerinin karşılaştırılması\n\n\nBu derste ağırlıklı olarak Tek Yönlü ANOVA üzerinde duracağız."
-  },
-  {
-    "objectID": "ders07.html#tek-yönlü-anova-modeli",
-    "href": "ders07.html#tek-yönlü-anova-modeli",
-    "title": "Ders 7: ANOVA (Varyans Analizi)",
-    "section": "Tek Yönlü ANOVA Modeli",
-    "text": "Tek Yönlü ANOVA Modeli\nTek Yönlü ANOVA’da:\n\nBir bağımlı değişken (sürekli)\nBir kategorik faktör (bağımsız değişken)\nHer faktör seviyesi, bir grubu temsil eder\n\nMatematiksel Model:\n\\[Y_{ij} = \\mu + \\alpha_i + \\epsilon_{ij}\\]\nBurada:\n\n\\(Y_{ij}\\) = i. gruptaki j. gözlem\n\\(\\mu\\) = genel ortalama\n\\(\\alpha_i\\) = i. grubun etkisi (\\(\\alpha_1 + \\alpha_2 + ... + \\alpha_k = 0\\))\n\\(\\epsilon_{ij}\\) = hata terimi (rastgele değişkenlik)"
-  },
-  {
-    "objectID": "ders07.html#anovanın-hipotezleri",
-    "href": "ders07.html#anovanın-hipotezleri",
-    "title": "Ders 7: ANOVA (Varyans Analizi)",
-    "section": "ANOVA’nın Hipotezleri",
-    "text": "ANOVA’nın Hipotezleri\nSıfır Hipotezi (H₀): Tüm grup ortalamaları birbirine eşittir. \\[H_0: \\mu_1 = \\mu_2 = ... = \\mu_k\\]\nAlternatif Hipotez (H₁): En az bir grup ortalaması diğerlerinden farklıdır.\n\\[H_1: \\    ext{En az bir } \\mu_i \\\neq \\mu_j \\  ext{ (i ≠ j için)}\\]\n\nÖnemli Not: Alternatif hipotez, hangi grup ortalamalarının farklı olduğunu belirtmez, sadece en az bir farklılık olduğunu söyler.\nHangi grup ortalamalarının farklı olduğunu belirlemek için, ANOVA’dan sonra post-hoc testleri kullanılır."
-  },
-  {
-    "objectID": "ders07.html#anovanın-varsayımları",
-    "href": "ders07.html#anovanın-varsayımları",
-    "title": "Ders 7: ANOVA (Varyans Analizi)",
-    "section": "ANOVA’nın Varsayımları",
-    "text": "ANOVA’nın Varsayımları\nANOVA, t-testine benzer şekilde, bazı varsayımlar üzerine kuruludur:\n\nBağımsızlık: Gözlemler birbirinden bağımsız olmalıdır.\nNormallik: Her gruptaki verilerin normal dağılması veya örneklem boyutunun yeterince büyük olması (n&gt;30).\nVaryansların Homojenliği (Homoscedasticity): Tüm gruplardaki varyansların yaklaşık olarak eşit olması.\n\nNot: Varsayımlar karşılanmadığında, parametrik olmayan alternatifler düşünülmelidir (örn. Kruskal-Wallis testi)."
-  },
-  {
-    "objectID": "ders07.html#varyansların-ayrışımı",
-    "href": "ders07.html#varyansların-ayrışımı",
-    "title": "Ders 7: ANOVA (Varyans Analizi)",
-    "section": "Varyansların Ayrışımı",
-    "text": "Varyansların Ayrışımı\nANOVA’nın adı \"Varyans Analizi\"dir çünkü toplam varyansı iki bileşene ayırır:\n1. Gruplar Arası Varyans (Between-Groups Variance):\n\nGrup ortalamalarının genel ortalamadan ne kadar farklı olduğunu gösterir\nEğer büyükse, gruplar arasında gerçek farklılıklar olduğunu düşündürür\n\n2. Gruplar İçi Varyans (Within-Groups Variance):\n\nGrup içindeki bireysel gözlemlerin, kendi grup ortalamasından ne kadar farklı olduğunu gösterir\nRastgele hata veya faktör dışındaki etkilerden kaynaklanır\n\nF-istatistiği = Gruplar Arası Varyans / Gruplar İçi Varyans\n\nF-değeri büyükse → Gruplar arasındaki farklılıklar, grup içi varyasyondan daha büyüktür → H₀ reddedilir"
-  },
-  {
-    "objectID": "ders07.html#kareler-toplamı",
-    "href": "ders07.html#kareler-toplamı",
-    "title": "Ders 7: ANOVA (Varyans Analizi)",
-    "section": "Kareler Toplamı",
-    "text": "Kareler Toplamı\nANOVA’da varyans analizi için, kareler toplamı (Sum of Squares - SS) hesaplanır:\n1. Toplam Kareler Toplamı (SST):\n\\[SST = \\sum_{i=1}^{k}\\sum_{j=1}^{n_i}(Y_{ij} - \\bar{Y})^2\\]\n2. Gruplar Arası Kareler Toplamı (SSB): \\[SSB = \\sum_{i=1}^{k}n_i(\\bar{Y}_i - \\bar{Y})^2\\]\n3. Gruplar İçi Kareler Toplamı (SSW): \\[SSW = \\sum_{i=1}^{k}\\sum_{j=1}^{n_i}(Y_{ij} - \\bar{Y}_i)^2\\]\nİlişki: SST = SSB + SSW"
-  },
-  {
-    "objectID": "ders07.html#ortalama-kareler-ve-f-istatistiği",
-    "href": "ders07.html#ortalama-kareler-ve-f-istatistiği",
-    "title": "Ders 7: ANOVA (Varyans Analizi)",
-    "section": "Ortalama Kareler ve F-İstatistiği",
-    "text": "Ortalama Kareler ve F-İstatistiği\nKareler toplamı değerleri, ilgili serbestlik dereceleri ile bölünerek ortalama kareler (Mean Squares - MS) hesaplanır:\n1. Gruplar Arası Ortalama Kareler (MSB): \\[MSB = \\frac{SSB}{k-1}\\]\n2. Gruplar İçi Ortalama Kareler (MSW): \\[MSW = \\frac{SSW}{N-k}\\]\nF-İstatistiği: \\[F = \\frac{MSB}{MSW}\\]\nBurada:\n\nk = grup sayısı\nN = toplam gözlem sayısı\n\nF-değeri, α düzeyindeki kritik F-değeri ile karşılaştırılır. Eğer hesaplanan F-değeri kritik değerden büyükse, H₀ reddedilir."
-  },
-  {
-    "objectID": "ders07.html#f-dağılımı",
-    "href": "ders07.html#f-dağılımı",
-    "title": "Ders 7: ANOVA (Varyans Analizi)",
-    "section": "F-Dağılımı",
-    "text": "F-Dağılımı\nF-dağılımı, iki farklı varyans tahmininin oranı olarak hesaplanan F-istatistiği için örnekleme dağılımıdır.\nÖzellikleri:\n\nSıfırdan büyük değerler alır (F ≥ 0)\nSağa çarpık bir dağılımdır\nİki serbestlik derecesi parametresi vardır: df₁ (payda) ve df₂ (payda)\nH₀ doğruysa, F-değeri 1’e yakındır"
-  },
-  {
-    "objectID": "ders07.html#anova-tablosu",
-    "href": "ders07.html#anova-tablosu",
-    "title": "Ders 7: ANOVA (Varyans Analizi)",
-    "section": "ANOVA Tablosu",
-    "text": "ANOVA Tablosu\nANOVA sonuçları genellikle bir tablo ile özetlenir:\n\n\n\n\n\n\n\n\n\n\n\nVaryasyon Kaynağı\nSS\ndf\nMS\nF\np-değeri\n\n\n\n\nGruplar Arası (Between)\nSSB\nk-1\nMSB = SSB/(k-1)\nF = MSB/MSW\np\n\n\nGruplar İçi (Within)\nSSW\nN-k\nMSW = SSW/(N-k)\n\n\n\n\nToplam\nSST\nN-1\n\n\n\n\n\n\n\nk = grup sayısı\nN = toplam gözlem sayısı\np-değeri &lt; α ise, H₀ reddedilir"
-  },
-  {
-    "objectID": "ders07.html#r-ile-tek-yönlü-anova",
-    "href": "ders07.html#r-ile-tek-yönlü-anova",
-    "title": "Ders 7: ANOVA (Varyans Analizi)",
-    "section": "R ile Tek Yönlü ANOVA",
-    "text": "R ile Tek Yönlü ANOVA\nÖrnek Senaryo: Üç farklı gübre türünün (A, B, C) domates bitkilerinin boy (cm) üzerindeki etkisini analiz edelim.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "ders07.html#varsayımları-kontrol-edelim",
-    "href": "ders07.html#varsayımları-kontrol-edelim",
-    "title": "Ders 7: ANOVA (Varyans Analizi)",
-    "section": "Varsayımları Kontrol Edelim",
-    "text": "Varsayımları Kontrol Edelim\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "ders07.html#varsayımları-kontrol-edelim-1",
-    "href": "ders07.html#varsayımları-kontrol-edelim-1",
-    "title": "Ders 7: ANOVA (Varyans Analizi)",
-    "section": "Varsayımları Kontrol Edelim",
-    "text": "Varsayımları Kontrol Edelim\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "ders07.html#anova-analizi",
-    "href": "ders07.html#anova-analizi",
-    "title": "Ders 7: ANOVA (Varyans Analizi)",
-    "section": "ANOVA Analizi",
-    "text": "ANOVA Analizi\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "ders07.html#istatistiksel-değerleri-görelim",
-    "href": "ders07.html#istatistiksel-değerleri-görelim",
-    "title": "Ders 7: ANOVA (Varyans Analizi)",
-    "section": "İstatistiksel değerleri görelim",
-    "text": "İstatistiksel değerleri görelim\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "ders07.html#görselleştirme",
-    "href": "ders07.html#görselleştirme",
-    "title": "Ders 7: ANOVA (Varyans Analizi)",
-    "section": "Görselleştirme",
-    "text": "Görselleştirme\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "ders07.html#post-hoc-testleri",
-    "href": "ders07.html#post-hoc-testleri",
-    "title": "Ders 7: ANOVA (Varyans Analizi)",
-    "section": "Post-hoc Testleri",
-    "text": "Post-hoc Testleri\nANOVA, gruplar arasında bir fark olduğunu söyler, ancak hangi grupların farklı olduğunu söylemez. Bunu belirlemek için post-hoc testleri kullanılır.\nEn Yaygın Post-hoc Testleri:\n\nTukey HSD (Honestly Significant Difference): Tüm olası ikili grup karşılaştırmalarını yapar ve aile bazında hata oranını kontrol eder.\nBonferroni Düzeltmesi: Alfa (α) değerini karşılaştırma sayısına bölerek çoklu test problemini düzeltir.\nScheffé Testi: Tüm olası grup karşılaştırmaları için uygundur, ancak genellikle daha muhafazakardır.\n\nNot: Post-hoc testleri sadece ANOVA sonucu istatistiksel olarak anlamlıysa (p &lt; 0.05) uygulanır."
-  },
-  {
-    "objectID": "ders07.html#tukey-hsd-post-hoc-testi",
-    "href": "ders07.html#tukey-hsd-post-hoc-testi",
-    "title": "Ders 7: ANOVA (Varyans Analizi)",
-    "section": "Tukey HSD Post-hoc Testi",
-    "text": "Tukey HSD Post-hoc Testi\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "ders07.html#post-hoc-testlerin-yorumlanması",
-    "href": "ders07.html#post-hoc-testlerin-yorumlanması",
-    "title": "Ders 7: ANOVA (Varyans Analizi)",
-    "section": "Post-hoc Testlerin Yorumlanması",
-    "text": "Post-hoc Testlerin Yorumlanması\nTukey HSD sonuçlarına göre:\n\nGübre B - Gübre A: Gübre B, Gübre A’ya göre anlamlı şekilde daha yüksek bitki boylarına sahiptir (p &lt; 0.001).\nGübre C - Gübre A: Gübre C, Gübre A’ya göre anlamlı şekilde daha yüksek bitki boylarına sahiptir (p &lt; 0.05).\nGübre C - Gübre B: Gübre C ve Gübre B arasında istatistiksel olarak anlamlı bir fark yoktur (p &gt; 0.05).\n\nGenel Sonuç: * Gübre B ve Gübre C, Gübre A’dan daha etkilidir. * Gübre B ve Gübre C arasında anlamlı bir fark yoktur."
-  },
-  {
-    "objectID": "ders07.html#sonuçların-raporlanması",
-    "href": "ders07.html#sonuçların-raporlanması",
-    "title": "Ders 7: ANOVA (Varyans Analizi)",
-    "section": "Sonuçların Raporlanması",
-    "text": "Sonuçların Raporlanması\nAkademik yayınlarda ANOVA sonuçlarını nasıl raporlamalıyız?\n\"Gübre türünün domates bitkilerinin boyları üzerindeki etkisi, tek yönlü ANOVA ile değerlendirilmiştir. Gübre türünün bitki boyu üzerinde istatistiksel olarak anlamlı bir etkisi bulunmuştur, F(2, 21) = 16.44, p &lt; 0.001. Post-hoc Tukey HSD testleri, Gübre B ile yetiştirilen bitkilerin (M = 77.75 cm, SD = 2.49) ve Gübre C ile yetiştirilen bitkilerin (M = 71.50 cm, SD = 2.45), Gübre A ile yetiştirilen bitkilerden (M = 68.38 cm, SD = 2.67) anlamlı şekilde daha uzun olduğunu göstermiştir (sırasıyla p &lt; 0.001 ve p &lt; 0.05). Gübre B ve Gübre C arasında istatistiksel olarak anlamlı bir fark bulunmamıştır (p = 0.094).\""
-  },
-  {
-    "objectID": "ders07.html#etki-büyüklüğü-eta-kare-η²",
-    "href": "ders07.html#etki-büyüklüğü-eta-kare-η²",
-    "title": "Ders 7: ANOVA (Varyans Analizi)",
-    "section": "Etki Büyüklüğü: Eta Kare (η²)",
-    "text": "Etki Büyüklüğü: Eta Kare (η²)\nANOVA için etki büyüklüğü ölçüsü olarak genellikle Eta Kare (η²) kullanılır:\n\\[\\\\eta^2 = \\\\frac{SS_{between}}{SS_{total}}\\]\nYorumlama: * η² = 0.01: Küçük etki * η² = 0.06: Orta etki * η² = 0.14: Büyük etki\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "ders07.html#biyolojide-anova-uygulamaları",
-    "href": "ders07.html#biyolojide-anova-uygulamaları",
-    "title": "Ders 7: ANOVA (Varyans Analizi)",
-    "section": "Biyolojide ANOVA Uygulamaları",
-    "text": "Biyolojide ANOVA Uygulamaları\nANOVA, biyoloji ve tıpta yaygın olarak kullanılan bir analiz yöntemidir:\n\nFarklı İlaç Tedavilerinin Karşılaştırılması:\n\nÜç veya daha fazla farklı ilacın etkinliğinin karşılaştırılması\n\nGen Ekspresyon Analizi:\n\nFarklı deneysel koşullar altında gen ekspresyon seviyelerinin karşılaştırılması\n\nEkolojik Çalışmalar:\n\nFarklı habitatlardaki biyoçeşitliliğin karşılaştırılması\n\nEnzim Kinetik Çalışmaları:\n\nFarklı pH değerlerinde enzim aktivitelerinin karşılaştırılması\n\nBüyüme ve Gelişim Çalışmaları:\n\nFarklı besin veya hormon uygulamalarının büyüme üzerindeki etkisinin incelenmesi"
-  },
-  {
-    "objectID": "ders07.html#gerçek-veri-üzerinde-uygulama-iris-veri-seti",
-    "href": "ders07.html#gerçek-veri-üzerinde-uygulama-iris-veri-seti",
-    "title": "Ders 7: ANOVA (Varyans Analizi)",
-    "section": "Gerçek Veri Üzerinde Uygulama: iris Veri Seti",
-    "text": "Gerçek Veri Üzerinde Uygulama: iris Veri Seti\nŞimdi, iris veri setinde üç farklı Iris türünün (setosa, versicolor, virginica) taç yaprak (petal) boylarını karşılaştıralım.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "ders07.html#görselleştirme-ve-post-hoc-test",
-    "href": "ders07.html#görselleştirme-ve-post-hoc-test",
-    "title": "Ders 7: ANOVA (Varyans Analizi)",
-    "section": "Görselleştirme ve Post-hoc Test",
-    "text": "Görselleştirme ve Post-hoc Test\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "ders07.html#tek-yönlü-anova-için-pratik-ipuçları",
-    "href": "ders07.html#tek-yönlü-anova-için-pratik-ipuçları",
-    "title": "Ders 7: ANOVA (Varyans Analizi)",
-    "section": "Tek Yönlü ANOVA için Pratik İpuçları",
-    "text": "Tek Yönlü ANOVA için Pratik İpuçları\n\nVeri Hazırlığı ve Kontroller:\n\nAykırı değerleri belirleyin ve ele alın\nNormallik ve varyans homojenliği varsayımlarını kontrol edin\nVeri yapısının tek yönlü ANOVA’ya uygun olduğunu doğrulayın\n\nAnaliz ve Sonuçlar:\n\nSadece p-değerine değil, etki büyüklüğüne de bakın (η²)\nANOVA anlamlıysa, post-hoc testleri uygulayın\nBulguları biyolojik/pratik anlamlılık açısından yorumlayın\n\nVarsayımlar Karşılanmadığında:\n\nVeri dönüşümleri deneyin (log, karekök vb.)\nParametrik olmayan alternatifleri kullanın (Kruskal-Wallis testi)\nRobust ANOVA yöntemlerini düşünün"
-  },
-  {
-    "objectID": "ders07.html#iki-yönlü-anova-hakkında-kısa-bilgi",
-    "href": "ders07.html#iki-yönlü-anova-hakkında-kısa-bilgi",
-    "title": "Ders 7: ANOVA (Varyans Analizi)",
-    "section": "İki Yönlü ANOVA Hakkında Kısa Bilgi",
-    "text": "İki Yönlü ANOVA Hakkında Kısa Bilgi\nİki Yönlü ANOVA, iki faktörün ve bunların etkileşiminin etkisini analiz eden bir yöntemdir.\nÖrnek: Hem gübre türünün (A, B, C) hem de sulama sıklığının (günlük, haftalık) domates bitkilerinin boyuna etkisini incelemek istiyoruz.\nİki Yönlü ANOVA Modeli: \\[Y_{ijk} = \\\\mu + \\\\alpha_i + \\\\beta_j + (\\\\alpha\\\\beta)_{ij} + \\\\epsilon_{ijk}\\]\n\n\\(\\\\mu\\) = genel ortalama\n\\(\\\\alpha_i\\) = ilk faktörün etkisi (gübre türü)\n\\(\\\\beta_j\\) = ikinci faktörün etkisi (sulama sıklığı)\n\\((\\\\alpha\\\\beta)_{ij}\\) = faktörler arası etkileşim\n\\(\\\\epsilon_{ijk}\\) = hata terimi\n\nİki Yönlü ANOVA ile üç hipotezi test ederiz: 1. İlk faktörün ana etkisi (\\(H_0: \\\\alpha_1 = \\\\alpha_2 = ... = \\\\alpha_a = 0\\)) 2. İkinci faktörün ana etkisi (\\(H_0: \\\\beta_1 = \\\\beta_2 = ... = \\\\beta_b = 0\\)) 3. Faktörler arası etkileşim (\\(H_0: (\\\\alpha\\\\beta)_{ij} = 0 \\  ext{ tüm } i, j \\   ext{ için}\\))"
-  },
-  {
-    "objectID": "ders07.html#özet-anovanın-avantajları-ve-sınırlamaları",
-    "href": "ders07.html#özet-anovanın-avantajları-ve-sınırlamaları",
-    "title": "Ders 7: ANOVA (Varyans Analizi)",
-    "section": "Özet: ANOVA’nın Avantajları ve Sınırlamaları",
-    "text": "Özet: ANOVA’nın Avantajları ve Sınırlamaları\nAvantajlar: * İkiden fazla grubu aynı anda karşılaştırabilme * Tip I hata oranını kontrol etme * Kategorik faktörlerin sürekli değişkenler üzerindeki etkisini inceleme\nSınırlamalar: * Sadece ortalamaları karşılaştırır, dağılımlardaki diğer farklılıkları görmez * Parametrik bir test olarak, belirli varsayımlara dayanır * Grup farkını bulur ancak hangi grupların farklı olduğunu belirtmez (post-hoc testleri gerekir)\nANOVA’nın Ötesinde: * İki faktörlü çalışmalar için İki Yönlü ANOVA * Tekrarlı ölçümler için Tekrarlı Ölçümler ANOVA"
-  },
-  {
-    "objectID": "ders07.html#section",
-    "href": "ders07.html#section",
-    "title": "Ders 7: ANOVA (Varyans Analizi)",
-    "section": "",
-    "text": "Görsel Kaynak: Wikimedia Commons"
-  },
-  {
-    "objectID": "ders07.html#section-1",
-    "href": "ders07.html#section-1",
-    "title": "Ders 7: ANOVA (Varyans Analizi)",
-    "section": "",
-    "text": "Please enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "index.html#ders08",
-    "href": "index.html#ders08",
-    "title": "MBG1032 Biyoistatistik Ders Notları",
-    "section": "",
-    "text": "Teorik (03 Nisan 2024): ANOVA Sunum linki"
   }
 ]
