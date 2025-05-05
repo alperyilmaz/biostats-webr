@@ -56,3 +56,9 @@
 
 **Uygulama** (*2 Mayıs 2025*): İstatistik Güç ve ANOVA uygulama [Uygulama sunum linki](ders07-uygulama.qmd)
 
+## Ders09
+
+**Teorik** (*05 Mayıs 2025*): Ki-kare testi  [Sunum linki](ders08.qmd)
+
+**Uygulama** (*09 Mayıs 2025*): Ki-kare uygulama
+
