@@ -546,6 +546,370 @@
     "text": "Negatif binomial dağılım\nGeometrik dağılım ilk başarının k. denemede gerçekleşmesi ihtimalini hesaplarken Negatif Binomial Dağılım daha geneldir, R. başarının K. denemede gerçekleşme ihtimalini hesaplar."
   },
   {
+    "objectID": "ders08.html#özet",
+    "href": "ders08.html#özet",
+    "title": "Ders 8: Ki-kare Testi",
+    "section": "Özet",
+    "text": "Özet\n\nKi-kare (χ²) testi nedir ve ne zaman kullanılır?\nKi-kare dağılımı\nKi-kare uygunluk testi (Goodness of Fit)\nKi-kare bağımsızlık testi (Test of Independence)\nKi-kare homojenlik testi (Test of Homogeneity)\nMendel’in çalışmaları ve Ki-kare testi\nKi-kare testinin varsayımları\nR ile Ki-kare uygulamaları\nKi-kare sonuçlarının yorumlanması ve raporlanması\nBiyolojide Ki-kare uygulama örnekleri"
+  },
+  {
+    "objectID": "ders08.html#ki-kare-χ²-testi-nedir",
+    "href": "ders08.html#ki-kare-χ²-testi-nedir",
+    "title": "Ders 8: Ki-kare Testi",
+    "section": "Ki-kare (χ²) Testi Nedir?",
+    "text": "Ki-kare (χ²) Testi Nedir?\nKi-kare testi, kategorik değişkenler için kullanılan parametrik olmayan bir istatistiksel testtir.\nTemel Amaç:\n\nGözlenen frekansların beklenen frekanslardan farklı olup olmadığını test etmek\nKategorik değişkenler arasında ilişki olup olmadığını incelemek\n\nKullanım Alanları:\n\nGenetik çalışmalarda (alellik dağılımı, kalıtım paterni)\nEpidemiyolojik araştırmalarda (hastalık-risk faktörü ilişkisi)\nSosyolojik çalışmalarda (anket verileri analizi)\nEkolojik çalışmalarda (türlerin habitat tercihleri)"
+  },
+  {
+    "objectID": "ders08.html#ki-kare-χ²-dağılımı",
+    "href": "ders08.html#ki-kare-χ²-dağılımı",
+    "title": "Ders 8: Ki-kare Testi",
+    "section": "Ki-kare (χ²) Dağılımı",
+    "text": "Ki-kare (χ²) Dağılımı\nKi-kare dağılımı, bağımsız standart normal dağılmış değişkenlerin karelerinin toplamının dağılımıdır.\nÖzellikleri:\n\nSürekli bir dağılımdır\nSadece pozitif değerler alır (χ² ≥ 0)\nSağa çarpıktır (sağa kuyruklu)\nSerbestlik derecesi (df) arttıkça normale yaklaşır\nTek parametreli bir dağılımdır: serbestlik derecesi (df)\n\nMatematiksel İfade:\n\\(\\chi^2 = \\sum_{i=1}^{k} Z_i^2\\)\nBurada \\(Z_i\\)’ler bağımsız standart normal değişkenlerdir."
+  },
+  {
+    "objectID": "ders08.html#section",
+    "href": "ders08.html#section",
+    "title": "Ders 8: Ki-kare Testi",
+    "section": "",
+    "text": "Ki-kare Dağılımları\nGörsel Kaynak: Wikimedia Commons"
+  },
+  {
+    "objectID": "ders08.html#ki-kare-testleri-türleri",
+    "href": "ders08.html#ki-kare-testleri-türleri",
+    "title": "Ders 8: Ki-kare Testi",
+    "section": "Ki-kare Testleri Türleri",
+    "text": "Ki-kare Testleri Türleri\nKi-kare testi, farklı amaçlar için kullanılabilir:\n\nKi-kare Uygunluk Testi (Goodness of Fit):\n\nTek bir kategorik değişkenin gözlenen dağılımının, teorik veya beklenen bir dağılıma uyup uymadığını test eder.\nÖrnek: Mendel’in bezelye deneylerinde gözlenen fenotip oranlarının 3:1 teorik oranına uyup uymadığını test etmek.\n\nKi-kare Bağımsızlık Testi (Independence Test):\n\nİki kategorik değişken arasında ilişki olup olmadığını test eder.\nÖrnek: Cinsiyet ile belirli bir genetik hastalığın görülme sıklığı arasında ilişki olup olmadığını test etmek.\n\nKi-kare Homojenlik Testi (Homogeneity Test):\n\nFarklı popülasyonların bir kategorik değişken bakımından benzer dağılımlara sahip olup olmadığını test eder.\nÖrnek: Farklı coğrafi bölgelerdeki kan grubu dağılımlarının benzer olup olmadığını test etmek."
+  },
+  {
+    "objectID": "ders08.html#ki-kare-uygunluk-testi",
+    "href": "ders08.html#ki-kare-uygunluk-testi",
+    "title": "Ders 8: Ki-kare Testi",
+    "section": "Ki-kare Uygunluk Testi",
+    "text": "Ki-kare Uygunluk Testi\nAmaç: Gözlenen frekansların teorik/beklenen bir dağılıma uygunluğunu test etmek.\nHipotezler:\n\nH₀: Gözlenen frekanslar, beklenen dağılıma uygundur.\nH₁: Gözlenen frekanslar, beklenen dağılımdan farklıdır."
+  },
+  {
+    "objectID": "ders08.html#section-1",
+    "href": "ders08.html#section-1",
+    "title": "Ders 8: Ki-kare Testi",
+    "section": "",
+    "text": "Test İstatistiği: \\(\\chi^2 = \\sum_{i=1}^{k} \\frac{(O_i - E_i)^2}{E_i}\\)\nBurada:\n\n\\(O_i\\) = i. kategorideki gözlenen frekans\n\\(E_i\\) = i. kategorideki beklenen frekans\n\\(k\\) = kategori sayısı\n\nSerbestlik Derecesi: df = k - 1 - m\n\n\\(k\\) = kategori sayısı\n\\(m\\) = tahmin edilen parametre sayısı"
+  },
+  {
+    "objectID": "ders08.html#mendel-ve-ki-kare-testi",
+    "href": "ders08.html#mendel-ve-ki-kare-testi",
+    "title": "Ders 8: Ki-kare Testi",
+    "section": "Mendel ve Ki-kare Testi",
+    "text": "Mendel ve Ki-kare Testi\nGregor Mendel (1822-1884), modern genetiğin babası olarak kabul edilir. Bezelye bitkilerinde yaptığı deneyler ile kalıtım yasalarını keşfetmiştir.\nMendel’in Çalışmaları:\n\nYaptığı deneylerde, çeşitli özelliklerin (boy, çiçek rengi, tohum şekli) kalıtım paternlerini inceledi\nDominant ve resesif alelleri tanımladı\nMonohybrid çaprazlamalarında 3:1 oranını gözlemledi (dominant:resesif)\nDihybrid çaprazlamalarında 9:3:3:1 oranını gözlemledi"
+  },
+  {
+    "objectID": "ders08.html#mendelin-monohybrid-çaprazlaması-ve-ki-kare-analizi",
+    "href": "ders08.html#mendelin-monohybrid-çaprazlaması-ve-ki-kare-analizi",
+    "title": "Ders 8: Ki-kare Testi",
+    "section": "Mendel’in Monohybrid Çaprazlaması ve Ki-kare Analizi",
+    "text": "Mendel’in Monohybrid Çaprazlaması ve Ki-kare Analizi\nSenaryo: Mendel’in sarı (dominant, Y) x yeşil (resesif, y) bezelye tohumu çaprazlamasından sonra F2 nesilde gözlenen fenotipik oranları inceleyelim.\nMendel’in Teorik Beklentisi: 3:1 oranı (3 sarı : 1 yeşil)\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders08.html#section-3",
+    "href": "ders08.html#section-3",
+    "title": "Ders 8: Ki-kare Testi",
+    "section": "",
+    "text": "Please enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders08.html#ki-kare-ile-ilgili-r-fonksiyonları",
+    "href": "ders08.html#ki-kare-ile-ilgili-r-fonksiyonları",
+    "title": "Ders 8: Ki-kare Testi",
+    "section": "Ki-kare ile ilgili R fonksiyonları",
+    "text": "Ki-kare ile ilgili R fonksiyonları\n\ndchisq() - Ki-kare olasılık yoğunluk fonksiyonu (probability density function)\n\nKullanım: dchisq(x, df) - belirli bir x değeri için olasılık yoğunluğunu hesaplar\nÖrnek: dchisq(5, df=3) - 3 serbestlik derecesinde x=5 için olasılık yoğunluğu\n\npchisq() - Ki-kare birikimli dağılım fonksiyonu (cumulative distribution function)\n\nKullanım: pchisq(q, df, lower.tail=TRUE) - q değerinden küçük veya eşit değerlerin olasılığı\nÖrnek: pchisq(7.81, df=3) - 3 serbestlik derecesinde 7.81’den küçük veya eşit değerlerin olasılığı\np-değerini bulmak için: pchisq(q, df, lower.tail=FALSE) - q değerinden büyük değerlerin olasılığı"
+  },
+  {
+    "objectID": "ders08.html#section-4",
+    "href": "ders08.html#section-4",
+    "title": "Ders 8: Ki-kare Testi",
+    "section": "",
+    "text": "qchisq() - Ki-kare dağılımının kantil fonksiyonu (quantile function)\n\nKullanım: qchisq(p, df, lower.tail=TRUE) - belirli bir olasılık değerine karşılık gelen Ki-kare değeri\nÖrnek: qchisq(0.95, df=3) - 3 serbestlik derecesinde %95’lik kantil değeri\n\nrchisq() - Ki-kare dağılımından rastgele sayılar üretme\n\nKullanım: rchisq(n, df) - belirli bir serbestlik derecesi için n adet rastgele Ki-kare değeri\nÖrnek: rchisq(100, df=3) - 3 serbestlik derecesinde 100 rastgele değer\n\nchisq.test() - Ki-kare testi yapma\n\nUygunluk testi için: chisq.test(x, p=NULL) - x vektörü ve beklenen olasılıklar\nBağımsızlık testi için: chisq.test(tablo) - iki yönlü kontenjans tablosu\nÖrnek: chisq.test(c(89, 37, 30), p=c(0.6, 0.2, 0.2))"
+  },
+  {
+    "objectID": "ders08.html#r-ile-ki-kare-uygunluk-testi",
+    "href": "ders08.html#r-ile-ki-kare-uygunluk-testi",
+    "title": "Ders 8: Ki-kare Testi",
+    "section": "R ile Ki-kare Uygunluk Testi",
+    "text": "R ile Ki-kare Uygunluk Testi\nMendel’in verilerini R’ın chisq.test() fonksiyonu ile analiz edelim:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders08.html#mendelin-dihybrid-çaprazlaması",
+    "href": "ders08.html#mendelin-dihybrid-çaprazlaması",
+    "title": "Ders 8: Ki-kare Testi",
+    "section": "Mendel’in Dihybrid Çaprazlaması",
+    "text": "Mendel’in Dihybrid Çaprazlaması\nSenaryo: Mendel’in sarı-düzgün (YYRR) x yeşil-buruşuk (yyrr) bezelye tohumu çaprazlamasından sonra F2 nesilde gözlenen fenotipik oranları inceleyelim.\nMendel’in Teorik Beklentisi: 9:3:3:1 oranı\n\n9/16 Sarı-Düzgün (Y-R-)\n3/16 Sarı-Buruşuk (Y-rr)\n3/16 Yeşil-Düzgün (yyR-)\n1/16 Yeşil-Buruşuk (yyrr)"
+  },
+  {
+    "objectID": "ders08.html#section-5",
+    "href": "ders08.html#section-5",
+    "title": "Ders 8: Ki-kare Testi",
+    "section": "",
+    "text": "Please enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders08.html#ki-kare-tablosu",
+    "href": "ders08.html#ki-kare-tablosu",
+    "title": "Ders 8: Ki-kare Testi",
+    "section": "Ki-kare tablosu",
+    "text": "Ki-kare tablosu\nPDF link"
+  },
+  {
+    "objectID": "ders08.html#ki-kare-bağımsızlık-testi",
+    "href": "ders08.html#ki-kare-bağımsızlık-testi",
+    "title": "Ders 8: Ki-kare Testi",
+    "section": "Ki-kare Bağımsızlık Testi",
+    "text": "Ki-kare Bağımsızlık Testi\nAmaç: İki kategorik değişken arasında anlamlı bir ilişki olup olmadığını test etmek.\nHipotezler:\n\nH₀: İki değişken birbirinden bağımsızdır (ilişki yoktur).\nH₁: İki değişken arasında bir ilişki vardır (bağımlıdır).\n\nTest İstatistiği: \\(\\chi^2 = \\sum_{i=1}^{r} \\sum_{j=1}^{c} \\frac{(O_{ij} - E_{ij})^2}{E_{ij}}\\)\nBurada:\n\n\\(O_{ij}\\) = i. satır, j. sütundaki gözlenen frekans\n\\(E_{ij}\\) = i. satır, j. sütundaki beklenen frekans\n\\(r\\) = satır sayısı, \\(c\\) = sütun sayısı\n\nSerbestlik Derecesi: df = (r - 1) × (c - 1)"
+  },
+  {
+    "objectID": "ders08.html#section-6",
+    "href": "ders08.html#section-6",
+    "title": "Ders 8: Ki-kare Testi",
+    "section": "",
+    "text": "Beklenen Frekansların Hesaplanması:\n\\(E_{ij} = \\frac{(\\text{i. satır toplamı}) \\times (\\text{j. sütun toplamı})}{\\text{genel toplam}}\\)"
+  },
+  {
+    "objectID": "ders08.html#örnek-ki-kare-bağımsızlık-testi-kan-grubu-ve-hastalık-ilişkisi",
+    "href": "ders08.html#örnek-ki-kare-bağımsızlık-testi-kan-grubu-ve-hastalık-ilişkisi",
+    "title": "Ders 8: Ki-kare Testi",
+    "section": "Örnek Ki-kare Bağımsızlık Testi: Kan Grubu ve Hastalık İlişkisi",
+    "text": "Örnek Ki-kare Bağımsızlık Testi: Kan Grubu ve Hastalık İlişkisi\nSenaryo: Bir hastalığın görülme sıklığı ile kan grupları arasında bir ilişki olup olmadığını test etmek istiyoruz.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders08.html#görselleştirme",
+    "href": "ders08.html#görselleştirme",
+    "title": "Ders 8: Ki-kare Testi",
+    "section": "Görselleştirme",
+    "text": "Görselleştirme\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders08.html#bağımsızlık-testi-yorumlanması",
+    "href": "ders08.html#bağımsızlık-testi-yorumlanması",
+    "title": "Ders 8: Ki-kare Testi",
+    "section": "Bağımsızlık Testi Yorumlanması",
+    "text": "Bağımsızlık Testi Yorumlanması\np-değeri &lt; 0.05 ise, iki değişken arasında anlamlı bir ilişki olduğu sonucuna varırız (H₀ reddedilir)."
+  },
+  {
+    "objectID": "ders08.html#ki-kare-testinin-varsayımları",
+    "href": "ders08.html#ki-kare-testinin-varsayımları",
+    "title": "Ders 8: Ki-kare Testi",
+    "section": "Ki-kare Testinin Varsayımları",
+    "text": "Ki-kare Testinin Varsayımları\nKi-kare testi, parametrik olmayan bir test olmasına rağmen, bazı varsayımlara dayanır:\n\nBağımsızlık: Gözlemler birbirinden bağımsız olmalıdır.\nRastgele Örnekleme: Veriler popülasyondan rastgele seçilmelidir.\nKategorik Veri: Ki-kare testi yalnızca kategorik (nominal veya ordinal) verilere uygulanabilir.\nYeterli Örnek Boyutu: Beklenen frekansların çoğu 5’ten büyük olmalıdır. Genellikle, beklenen frekansların en fazla %20’si 5’ten küçük olabilir ve hiçbir beklenen frekans 1’den küçük olmamalıdır.\n\nVarsayımlar Karşılanmadığında:\n\nFisher’ın Kesin Testi (küçük örneklemler için)\nKategorileri birleştirerek beklenen frekansları artırmak"
+  },
+  {
+    "objectID": "ders08.html#fisherın-kesin-testi",
+    "href": "ders08.html#fisherın-kesin-testi",
+    "title": "Ders 8: Ki-kare Testi",
+    "section": "Fisher’ın Kesin Testi",
+    "text": "Fisher’ın Kesin Testi\nFisher’ın Kesin Testi, özellikle örneklem boyutu küçük olduğunda ve Ki-kare testinin varsayımları karşılanmadığında kullanılabilir.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders08.html#biyolojide-ki-kare-uygulamaları",
+    "href": "ders08.html#biyolojide-ki-kare-uygulamaları",
+    "title": "Ders 8: Ki-kare Testi",
+    "section": "Biyolojide Ki-kare Uygulamaları",
+    "text": "Biyolojide Ki-kare Uygulamaları\nKi-kare testi, biyoloji alanında yaygın olarak kullanılır:\n\nGenetik Çalışmalar:\n\nMendel oranlarının test edilmesi\nGenetik bağlantı analizleri\nHardy-Weinberg dengesinin test edilmesi\n\nEpidemiyoloji:\n\nHastalık-risk faktörü ilişkisi\nVaka-kontrol çalışmalarının analizi\nAşı etkinliğinin değerlendirilmesi\n\nEkoloji:\n\nTürlerin habitat tercihlerinin incelenmesi\nPopulasyon dağılımlarının analizi\nTür çeşitliliği çalışmaları\n\nFizyoloji ve Davranış:\n\nDavranış paternlerinin analizi\nTercih deneyleri\nFizyolojik yanıtların kategorik değerlendirilmesi"
+  },
+  {
+    "objectID": "ders08.html#hardy-weinberg-dengesi-ve-ki-kare-testi",
+    "href": "ders08.html#hardy-weinberg-dengesi-ve-ki-kare-testi",
+    "title": "Ders 8: Ki-kare Testi",
+    "section": "Hardy-Weinberg Dengesi ve Ki-kare Testi",
+    "text": "Hardy-Weinberg Dengesi ve Ki-kare Testi\nHardy-Weinberg dengesi, evrim geçirmeyen bir popülasyonda alel ve genotip frekanslarının sabit kalacağını belirten bir ilkedir.\nTek lokus, iki alel (A ve a) için:\n\np = A alel frekansı, q = a alel frekansı (p + q = 1)\nBeklenen genotip frekansları: p² (AA), 2pq (Aa), q² (aa)\n\nKi-kare testi ile Hardy-Weinberg dengesi test edilebilir"
+  },
+  {
+    "objectID": "ders08.html#sonuçların-raporlanması",
+    "href": "ders08.html#sonuçların-raporlanması",
+    "title": "Ders 8: Ki-kare Testi",
+    "section": "Sonuçların Raporlanması",
+    "text": "Sonuçların Raporlanması\nAkademik yayınlarda Ki-kare sonuçlarını nasıl raporlamalıyız?\nKi-kare Uygunluk Testi için: \"Mendel’in monohybrid çaprazlama çalışmasındaki gözlenen fenotip dağılımının (sarı:yeşil) teorik 3:1 oranına uygunluğu Ki-kare uygunluk testi ile değerlendirilmiştir. Analiz sonucunda, gözlenen dağılımın teorik orana uygun olduğu bulunmuştur (χ²(1) = 0.25, p = 0.617).\"\nKi-kare Bağımsızlık Testi için: \"Kan grubu ile hastalık görülme sıklığı arasındaki ilişki Ki-kare bağımsızlık testi ile incelenmiştir. Analiz sonucunda, kan grubu ile hastalık arasında istatistiksel olarak anlamlı bir ilişki bulunmuştur (χ²(3) = 8.52, p = 0.036, Cramer’s V = 0.21). O kan grubuna sahip bireylerde hastalık görülme oranı, diğer kan gruplarına göre anlamlı derecede düşüktür.\""
+  },
+  {
+    "objectID": "ders08.html#uygulama-bitki-türü-ve-habitat-ilişkisi",
+    "href": "ders08.html#uygulama-bitki-türü-ve-habitat-ilişkisi",
+    "title": "Ders 8: Ki-kare Testi",
+    "section": "Uygulama: Bitki Türü ve Habitat İlişkisi",
+    "text": "Uygulama: Bitki Türü ve Habitat İlişkisi\nSenaryo: Farklı bitki türlerinin farklı habitat tiplerine dağılımı arasında bir ilişki olup olmadığını test etmek istiyoruz.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders08.html#section-7",
+    "href": "ders08.html#section-7",
+    "title": "Ders 8: Ki-kare Testi",
+    "section": "",
+    "text": "Please enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders08.html#ki-kare-testi-için-pratik-ipuçları",
+    "href": "ders08.html#ki-kare-testi-için-pratik-ipuçları",
+    "title": "Ders 8: Ki-kare Testi",
+    "section": "Ki-kare Testi için Pratik İpuçları",
+    "text": "Ki-kare Testi için Pratik İpuçları\n\nDoğru Ki-kare Testini Seçin:\n\nTek değişken için teorik dağılıma uygunluk → Ki-kare Uygunluk Testi\nİki kategorik değişken arasındaki ilişki → Ki-kare Bağımsızlık Testi\nGrup karşılaştırması → Ki-kare Homojenlik Testi\n\nVarsayımları Kontrol Edin:\n\nBeklenen frekansların %80’i 5’ten büyük olmalı\nHiçbir beklenen frekans 1’den küçük olmamalı\nGözlemler bağımsız olmalı\n\nKüçük Örneklemlerde Dikkatli Olun:\n\n2×2 tablolarda Yates düzeltmesini kullanın\nFisher’ın Kesin Testini alternatif olarak düşünün\nGerekirse kategorileri birleştirin\n\nAnlamlı Sonuçlar İçin İlişkinin Gücünü Değerlendirin:\n\nCramer’s V veya Phi katsayısı gibi etki büyüklüğü ölçülerini kullanın\nİstatistiksel anlamlılığın yanında biyolojik anlamlılığı da yorumlayın"
+  },
+  {
+    "objectID": "ders08.html#soru-1",
+    "href": "ders08.html#soru-1",
+    "title": "Ders 8: Ki-kare Testi",
+    "section": "Soru 1",
+    "text": "Soru 1\nKan grupları ile ilgili yapılan bir çalışmada 400 kişiden toplanan veriler şu şekildedir:\n\nA grubu: 180 kişi\nB grubu: 90 kişi\nAB grubu: 30 kişi\nO grubu: 100 kişi\n\nNormal teorik dağılım %40 A, %10 B, %5 AB ve %45 O grubu şeklindedir. Bu dağılımın teorik dağılıma uyup uymadığını test ediniz.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders08.html#soru-2",
+    "href": "ders08.html#soru-2",
+    "title": "Ders 8: Ki-kare Testi",
+    "section": "Soru 2",
+    "text": "Soru 2\nBir moleküler biyolog, iki gen arasında bağlantı olup olmadığını test etmek istiyor. F2 neslinde gözlenen fenotipik oranlar şöyledir:\n\nA-B-: 120 birey\nA-bb: 40 birey\naaB-: 35 birey\naabb: 5 birey\n\nBağımsız kalıtım hipotezini (9:3:3:1 oranı) test ediniz.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "uygulama01.html#aritmetik",
+    "href": "uygulama01.html#aritmetik",
+    "title": "R Temelleri",
+    "section": "Aritmetik",
+    "text": "Aritmetik\nR ile aritmetik yapılabilir. (Run Code butonunu tıklayınız)\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nYukarıdaki kutuya herhangi bir işlem yazıp çalıştırabilirsiniz.\n \n8 / 2 + 4 * 5 şeklindeki bir ifadede, işlem sırası doğru olarak izleniyor mu?"
+  },
+  {
+    "objectID": "uygulama01.html#matematik-fonksiyonları",
+    "href": "uygulama01.html#matematik-fonksiyonları",
+    "title": "R Temelleri",
+    "section": "Matematik fonksiyonları",
+    "text": "Matematik fonksiyonları\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nCtrl + Enter ile tek satır, Shift + Enter ile bütün satırlar çalıştırılabilir"
+  },
+  {
+    "objectID": "uygulama01.html#değişkenler-objeler",
+    "href": "uygulama01.html#değişkenler-objeler",
+    "title": "R Temelleri",
+    "section": "Değişkenler / Objeler",
+    "text": "Değişkenler / Objeler\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nBu değişken, oturum boyunca geçerlidir, başka bir slaytta tekrar kullanılabilir.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "uygulama01.html#vektörler",
+    "href": "uygulama01.html#vektörler",
+    "title": "R Temelleri",
+    "section": "Vektörler",
+    "text": "Vektörler\nR dilinde vektörler önemli bir veri yapısıdır. Aynı tipteki (tamsayı, ondaliklı sayı, karakter, vb.) verilerin toplu şekilde saklandığı bir yapıdır. Başka dillerde “liste”, “dizi” olarak adlandırılır. R dilinde vektörler c() fonksiyonu ile oluşturulur.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "uygulama01.html#indeks",
+    "href": "uygulama01.html#indeks",
+    "title": "R Temelleri",
+    "section": "İndeks",
+    "text": "İndeks\nBir vektördeki elemanlara indeksler yardımıyla erişim sağlanır. R dilinde indeks 1’den başlar. 5. elemanına ulaşmak için my_vec[5] şeklinde komut yazılmalıdır.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nİndeksler aralıklarla da kullanılabilir. Örneğin, 1. ve 2. elemanına ulaşmak için my_vec[1:2] komutu kullanılabilir.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "uygulama01.html#indeks-vektörü",
+    "href": "uygulama01.html#indeks-vektörü",
+    "title": "R Temelleri",
+    "section": "İndeks vektörü",
+    "text": "İndeks vektörü\nBir vektördeki belirli elemanlara erişim için indekslerden oluşan bir vektör kullanılabilir. 5. ve 3. elemanlara (bu sırada) erişilmek isteniyorsa c(5,3) vektörü indeks olarak kullanılabilir\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "uygulama01.html#vektörlerle-işlemler",
+    "href": "uygulama01.html#vektörlerle-işlemler",
+    "title": "R Temelleri",
+    "section": "Vektörlerle işlemler",
+    "text": "Vektörlerle işlemler\nNormalde bir liste veya dizinin işlenmesi için for döngüsü kullanılır. R’de ise vektörlerle işlem yapılırken, bir fonksiyon veya işlem otomatik olarak bütün elemanlara uygulanır.\nAyrıca, R’daki çoğu fonksiyon vektörler ile uyumludur, her bir eleman için veya tüm vektör için çalışabilirler.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "uygulama01.html#karşılaştırma-operatörleri",
+    "href": "uygulama01.html#karşılaştırma-operatörleri",
+    "title": "R Temelleri",
+    "section": "Karşılaştırma operatörleri",
+    "text": "Karşılaştırma operatörleri\nEşitlik ==, büyüktür &gt;, küçüktür &lt;, eşit değil != operatörleri bir vektöre uygulandığında, her bir eleman için karşılaştırma yapılır.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nSonuçlar logical/mantıksal (TRUE/FALSE) vektör olarak döndürülür. Bu sonuç vektörü, maske olarak kullanılabilir, yani indeks olarak kullanıldığında, “TRUE” değerlerin denk geldiği elemanlar gösterilebilir.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nFarkedildiği üzere, bu işlem sayesinde veri kümesinde filtreleme yapılmıştır."
+  },
+  {
+    "objectID": "uygulama01.html#sıralama",
+    "href": "uygulama01.html#sıralama",
+    "title": "R Temelleri",
+    "section": "Sıralama",
+    "text": "Sıralama\nsort() fonksiyonu ile vektörler sıralanabilir.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nSoru: ters yönde sıralama yapmak için ne yapılmalıdır?\norder() fonksiyonu ile de sıralama yapılabilir. Ancak bu fonksiyon doğrudan elemanları sıralamaz; bunun yerine, sıralı elemanların orijinal vektördeki indekslerini döndürür.\n\nTablolarda sütunları veya satırları sıralamak gerektiğinde kullanılır."
+  },
+  {
+    "objectID": "uygulama01.html#sıralama-1",
+    "href": "uygulama01.html#sıralama-1",
+    "title": "R Temelleri",
+    "section": "Sıralama",
+    "text": "Sıralama\nAşağıdaki kutuda my_vec[order(my_vec)] komutunu çalıştıp çıktısını sort() ile karşılaştırınız.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "uygulama01.html#na",
+    "href": "uygulama01.html#na",
+    "title": "R Temelleri",
+    "section": "NA",
+    "text": "NA\nNA “not available” anlamına gelir. Herhangi bir vektörde NA olması durumunda toplama, min/max gibi işlemlerin de NA olarak sonuçlanmasına neden olur.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nBu sorunu aşmak için na.rm=TRUE parametresi kullanılabilir.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "uygulama01.html#data-frame-veri-tablosuçerçevesi",
+    "href": "uygulama01.html#data-frame-veri-tablosuçerçevesi",
+    "title": "R Temelleri",
+    "section": "Data Frame / veri tablosu/çerçevesi",
+    "text": "Data Frame / veri tablosu/çerçevesi\nBir veri tablosu, aynı boydaki farklı vektörlerin sütun olarak birleşmesi olarak düşünülebilir. Bu veri yapısı en çok kullanılan veri yapısıdır. Aşağıdaki örnekte, iris veri seti kullanılmıştır.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "uygulama01.html#veri-tablosu-erişim",
+    "href": "uygulama01.html#veri-tablosu-erişim",
+    "title": "R Temelleri",
+    "section": "Veri tablosu / erişim",
+    "text": "Veri tablosu / erişim\nBir veri tablosundaki herhangi bir sütunun tamamına $sütun_adı şeklinde ulaşılabilir.\nVeri tablosunun belirli bir kısmına erişmek için [satır, sütun] şeklinde kullanılabilir.\niris$Species komutu Species sütununu vektör olarak elde eder. iris[1:5,] ilk 5 satırı elde eder. iris[1:5,1:2] şeklindeki komut, ilk 2 sütunu ve ilk 5 satırı elde eder.\nBir sonraki slaytta bahsi geçen komutları deneyiniz."
+  },
+  {
+    "objectID": "uygulama01.html#veri-tablosu-erişim-1",
+    "href": "uygulama01.html#veri-tablosu-erişim-1",
+    "title": "R Temelleri",
+    "section": "Veri tablosu / erişim",
+    "text": "Veri tablosu / erişim\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "uygulama01.html#veri-tablosu-işlemler",
+    "href": "uygulama01.html#veri-tablosu-işlemler",
+    "title": "R Temelleri",
+    "section": "Veri tablosu / işlemler",
+    "text": "Veri tablosu / işlemler\n\ndim(iris) komutu, veri setinin boyutlarını verir.(satır, sütun) şeklinde\nnrow(iris) komutu, veri setindeki satır sayısını verir.\nncol(iris) komutu, veri setindeki sütun sayısını verir.\nstr(iris) komutu, veri setinin yapısını, sütun tipleri ve ilk verileri gösterir.\nsummary(iris) komutu, veri setindeki istatistiksel ölçümleri verir.\n\nBir sonraki slaytta bahsi geçen komutları deneyiniz."
+  },
+  {
+    "objectID": "uygulama01.html#veri-tablosu-işlemler-1",
+    "href": "uygulama01.html#veri-tablosu-işlemler-1",
+    "title": "R Temelleri",
+    "section": "Veri tablosu / işlemler",
+    "text": "Veri tablosu / işlemler\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders8.html#özet",
+    "href": "ders8.html#özet",
+    "title": "Ders 8: Ki-kare Testi",
+    "section": "Özet",
+    "text": "Özet\n\nKi-kare (χ²) testi nedir ve ne zaman kullanılır?\nKi-kare dağılımı\nKi-kare uygunluk testi (Goodness of Fit)\nKi-kare bağımsızlık testi (Test of Independence)\nKi-kare homojenlik testi (Test of Homogeneity)\nMendel’in çalışmaları ve Ki-kare testi\nKi-kare testinin varsayımları\nR ile Ki-kare uygulamaları\nKi-kare sonuçlarının yorumlanması ve raporlanması\nBiyolojide Ki-kare uygulama örnekleri"
+  },
+  {
+    "objectID": "ders8.html#ki-kare-χ²-testi-nedir",
+    "href": "ders8.html#ki-kare-χ²-testi-nedir",
+    "title": "Ders 8: Ki-kare Testi",
+    "section": "Ki-kare (χ²) Testi Nedir?",
+    "text": "Ki-kare (χ²) Testi Nedir?\nKi-kare testi, kategorik değişkenler için kullanılan parametrik olmayan bir istatistiksel testtir.\nTemel Amaç: * Gözlenen frekansların beklenen frekanslardan farklı olup olmadığını test etmek * Kategorik değişkenler arasında ilişki olup olmadığını incelemek\nKullanım Alanları: * Genetik çalışmalarda (alellik dağılımı, kalıtım paterni) * Epidemiyolojik araştırmalarda (hastalık-risk faktörü ilişkisi) * Sosyolojik çalışmalarda (anket verileri analizi) * Ekolojik çalışmalarda (türlerin habitat tercihleri)"
+  },
+  {
+    "objectID": "ders8.html#ki-kare-χ²-dağılımı",
+    "href": "ders8.html#ki-kare-χ²-dağılımı",
+    "title": "Ders 8: Ki-kare Testi",
+    "section": "Ki-kare (χ²) Dağılımı",
+    "text": "Ki-kare (χ²) Dağılımı\nKi-kare dağılımı, bağımsız standart normal dağılmış değişkenlerin karelerinin toplamının dağılımıdır.\nÖzellikleri: * Sürekli bir dağılımdır * Sadece pozitif değerler alır (χ² ≥ 0) * Sağa çarpıktır (sağa kuyruklu) * Serbestlik derecesi (df) arttıkça normale yaklaşır * Tek parametreli bir dağılımdır: serbestlik derecesi (df)\nMatematiksel İfade: \\[\\chi^2 = \\sum_{i=1}^{k} Z_i^2\\]\nBurada \\(Z_i\\)’ler bağımsız standart normal değişkenlerdir."
+  },
+  {
+    "objectID": "ders8.html#section",
+    "href": "ders8.html#section",
+    "title": "Ders 8: Ki-kare Testi",
+    "section": "",
+    "text": "Ki-kare Dağılımları\n\n\n\nGörsel Kaynak: Wikimedia Commons"
+  },
+  {
+    "objectID": "ders8.html#ki-kare-testleri-türleri",
+    "href": "ders8.html#ki-kare-testleri-türleri",
+    "title": "Ders 8: Ki-kare Testi",
+    "section": "Ki-kare Testleri Türleri",
+    "text": "Ki-kare Testleri Türleri\nKi-kare testi, farklı amaçlar için kullanılabilir:\n\nKi-kare Uygunluk Testi (Goodness of Fit):\n\nTek bir kategorik değişkenin gözlenen dağılımının, teorik veya beklenen bir dağılıma uyup uymadığını test eder.\nÖrnek: Mendel’in bezelye deneylerinde gözlenen fenotip oranlarının 3:1 teorik oranına uyup uymadığını test etmek.\n\nKi-kare Bağımsızlık Testi (Independence Test):\n\nİki kategorik değişken arasında ilişki olup olmadığını test eder.\nÖrnek: Cinsiyet ile belirli bir genetik hastalığın görülme sıklığı arasında ilişki olup"
+  },
+  {
     "objectID": "ders04-claude.html#özet",
     "href": "ders04-claude.html#özet",
     "title": "Ders8: Güven Aralıkları ve Hipotez Testi",
@@ -691,118 +1055,6 @@
     "title": "Ders8: Güven Aralıkları ve Hipotez Testi",
     "section": "Soru",
     "text": "Soru\nBir laboratuvar, geliştirdiği yeni bir ilacın hücre büyümesini arttırdığını iddia ediyor. Standart koşullarda hücre büyümesi ortalama 12 μm/saat’tir. Yeni ilaçla tedavi edilen 15 hücre örneğinde elde edilen büyüme oranları (μm/saat):\n14.2, 13.7, 13.1, 12.8, 14.5, 15.2, 13.4, 14.3, 12.9, 13.6, 14.8, 13.9, 14.1, 13.5, 13.3\nİlacın hücre büyümesini arttırdığını α = 0.05 düzeyinde test edin ve sonuçları yorumlayın.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "uygulama01.html#aritmetik",
-    "href": "uygulama01.html#aritmetik",
-    "title": "R Temelleri",
-    "section": "Aritmetik",
-    "text": "Aritmetik\nR ile aritmetik yapılabilir. (Run Code butonunu tıklayınız)\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nYukarıdaki kutuya herhangi bir işlem yazıp çalıştırabilirsiniz.\n \n8 / 2 + 4 * 5 şeklindeki bir ifadede, işlem sırası doğru olarak izleniyor mu?"
-  },
-  {
-    "objectID": "uygulama01.html#matematik-fonksiyonları",
-    "href": "uygulama01.html#matematik-fonksiyonları",
-    "title": "R Temelleri",
-    "section": "Matematik fonksiyonları",
-    "text": "Matematik fonksiyonları\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nCtrl + Enter ile tek satır, Shift + Enter ile bütün satırlar çalıştırılabilir"
-  },
-  {
-    "objectID": "uygulama01.html#değişkenler-objeler",
-    "href": "uygulama01.html#değişkenler-objeler",
-    "title": "R Temelleri",
-    "section": "Değişkenler / Objeler",
-    "text": "Değişkenler / Objeler\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nBu değişken, oturum boyunca geçerlidir, başka bir slaytta tekrar kullanılabilir.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "uygulama01.html#vektörler",
-    "href": "uygulama01.html#vektörler",
-    "title": "R Temelleri",
-    "section": "Vektörler",
-    "text": "Vektörler\nR dilinde vektörler önemli bir veri yapısıdır. Aynı tipteki (tamsayı, ondaliklı sayı, karakter, vb.) verilerin toplu şekilde saklandığı bir yapıdır. Başka dillerde “liste”, “dizi” olarak adlandırılır. R dilinde vektörler c() fonksiyonu ile oluşturulur.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "uygulama01.html#indeks",
-    "href": "uygulama01.html#indeks",
-    "title": "R Temelleri",
-    "section": "İndeks",
-    "text": "İndeks\nBir vektördeki elemanlara indeksler yardımıyla erişim sağlanır. R dilinde indeks 1’den başlar. 5. elemanına ulaşmak için my_vec[5] şeklinde komut yazılmalıdır.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nİndeksler aralıklarla da kullanılabilir. Örneğin, 1. ve 2. elemanına ulaşmak için my_vec[1:2] komutu kullanılabilir.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "uygulama01.html#indeks-vektörü",
-    "href": "uygulama01.html#indeks-vektörü",
-    "title": "R Temelleri",
-    "section": "İndeks vektörü",
-    "text": "İndeks vektörü\nBir vektördeki belirli elemanlara erişim için indekslerden oluşan bir vektör kullanılabilir. 5. ve 3. elemanlara (bu sırada) erişilmek isteniyorsa c(5,3) vektörü indeks olarak kullanılabilir\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "uygulama01.html#vektörlerle-işlemler",
-    "href": "uygulama01.html#vektörlerle-işlemler",
-    "title": "R Temelleri",
-    "section": "Vektörlerle işlemler",
-    "text": "Vektörlerle işlemler\nNormalde bir liste veya dizinin işlenmesi için for döngüsü kullanılır. R’de ise vektörlerle işlem yapılırken, bir fonksiyon veya işlem otomatik olarak bütün elemanlara uygulanır.\nAyrıca, R’daki çoğu fonksiyon vektörler ile uyumludur, her bir eleman için veya tüm vektör için çalışabilirler.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "uygulama01.html#karşılaştırma-operatörleri",
-    "href": "uygulama01.html#karşılaştırma-operatörleri",
-    "title": "R Temelleri",
-    "section": "Karşılaştırma operatörleri",
-    "text": "Karşılaştırma operatörleri\nEşitlik ==, büyüktür &gt;, küçüktür &lt;, eşit değil != operatörleri bir vektöre uygulandığında, her bir eleman için karşılaştırma yapılır.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nSonuçlar logical/mantıksal (TRUE/FALSE) vektör olarak döndürülür. Bu sonuç vektörü, maske olarak kullanılabilir, yani indeks olarak kullanıldığında, “TRUE” değerlerin denk geldiği elemanlar gösterilebilir.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nFarkedildiği üzere, bu işlem sayesinde veri kümesinde filtreleme yapılmıştır."
-  },
-  {
-    "objectID": "uygulama01.html#sıralama",
-    "href": "uygulama01.html#sıralama",
-    "title": "R Temelleri",
-    "section": "Sıralama",
-    "text": "Sıralama\nsort() fonksiyonu ile vektörler sıralanabilir.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nSoru: ters yönde sıralama yapmak için ne yapılmalıdır?\norder() fonksiyonu ile de sıralama yapılabilir. Ancak bu fonksiyon doğrudan elemanları sıralamaz; bunun yerine, sıralı elemanların orijinal vektördeki indekslerini döndürür.\n\nTablolarda sütunları veya satırları sıralamak gerektiğinde kullanılır."
-  },
-  {
-    "objectID": "uygulama01.html#sıralama-1",
-    "href": "uygulama01.html#sıralama-1",
-    "title": "R Temelleri",
-    "section": "Sıralama",
-    "text": "Sıralama\nAşağıdaki kutuda my_vec[order(my_vec)] komutunu çalıştıp çıktısını sort() ile karşılaştırınız.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "uygulama01.html#na",
-    "href": "uygulama01.html#na",
-    "title": "R Temelleri",
-    "section": "NA",
-    "text": "NA\nNA “not available” anlamına gelir. Herhangi bir vektörde NA olması durumunda toplama, min/max gibi işlemlerin de NA olarak sonuçlanmasına neden olur.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nBu sorunu aşmak için na.rm=TRUE parametresi kullanılabilir.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "uygulama01.html#data-frame-veri-tablosuçerçevesi",
-    "href": "uygulama01.html#data-frame-veri-tablosuçerçevesi",
-    "title": "R Temelleri",
-    "section": "Data Frame / veri tablosu/çerçevesi",
-    "text": "Data Frame / veri tablosu/çerçevesi\nBir veri tablosu, aynı boydaki farklı vektörlerin sütun olarak birleşmesi olarak düşünülebilir. Bu veri yapısı en çok kullanılan veri yapısıdır. Aşağıdaki örnekte, iris veri seti kullanılmıştır.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "uygulama01.html#veri-tablosu-erişim",
-    "href": "uygulama01.html#veri-tablosu-erişim",
-    "title": "R Temelleri",
-    "section": "Veri tablosu / erişim",
-    "text": "Veri tablosu / erişim\nBir veri tablosundaki herhangi bir sütunun tamamına $sütun_adı şeklinde ulaşılabilir.\nVeri tablosunun belirli bir kısmına erişmek için [satır, sütun] şeklinde kullanılabilir.\niris$Species komutu Species sütununu vektör olarak elde eder. iris[1:5,] ilk 5 satırı elde eder. iris[1:5,1:2] şeklindeki komut, ilk 2 sütunu ve ilk 5 satırı elde eder.\nBir sonraki slaytta bahsi geçen komutları deneyiniz."
-  },
-  {
-    "objectID": "uygulama01.html#veri-tablosu-erişim-1",
-    "href": "uygulama01.html#veri-tablosu-erişim-1",
-    "title": "R Temelleri",
-    "section": "Veri tablosu / erişim",
-    "text": "Veri tablosu / erişim\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "uygulama01.html#veri-tablosu-işlemler",
-    "href": "uygulama01.html#veri-tablosu-işlemler",
-    "title": "R Temelleri",
-    "section": "Veri tablosu / işlemler",
-    "text": "Veri tablosu / işlemler\n\ndim(iris) komutu, veri setinin boyutlarını verir.(satır, sütun) şeklinde\nnrow(iris) komutu, veri setindeki satır sayısını verir.\nncol(iris) komutu, veri setindeki sütun sayısını verir.\nstr(iris) komutu, veri setinin yapısını, sütun tipleri ve ilk verileri gösterir.\nsummary(iris) komutu, veri setindeki istatistiksel ölçümleri verir.\n\nBir sonraki slaytta bahsi geçen komutları deneyiniz."
-  },
-  {
-    "objectID": "uygulama01.html#veri-tablosu-işlemler-1",
-    "href": "uygulama01.html#veri-tablosu-işlemler-1",
-    "title": "R Temelleri",
-    "section": "Veri tablosu / işlemler",
-    "text": "Veri tablosu / işlemler\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
   },
   {
     "objectID": "ders07-uygulama.html#istatistiksel-güç-analizi",
