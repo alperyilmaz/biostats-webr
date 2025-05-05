@@ -1,0 +1,516 @@
+---
+title: "Ders 8: Ki-kare Testi"
+subtitle: "MBG1032 Biyoistatistik - Doç.Dr.Alper YILMAZ - *5 Mayıs 2025*"
+format:
+  revealjs:
+    chalkboard: true
+    css: custom.css
+    smaller: true
+    scrollable: true
+    slide-number: c/t
+webr:
+  packages: ['ggplot2'] # Install R packages on document open
+filters:
+  - webr
+engine: knitr
+---
+
+## Özet
+
+* Ki-kare (χ²) testi nedir ve ne zaman kullanılır?
+* Ki-kare dağılımı
+* Ki-kare uygunluk testi (Goodness of Fit)
+* Ki-kare bağımsızlık testi (Test of Independence)
+* Ki-kare homojenlik testi (Test of Homogeneity)
+* Mendel'in çalışmaları ve Ki-kare testi
+* Ki-kare testinin varsayımları
+* R ile Ki-kare uygulamaları
+* Ki-kare sonuçlarının yorumlanması ve raporlanması
+* Biyolojide Ki-kare uygulama örnekleri
+
+## Ki-kare (χ²) Testi Nedir?
+
+Ki-kare testi, kategorik değişkenler için kullanılan parametrik olmayan bir istatistiksel testtir.
+
+**Temel Amaç:**
+
+* Gözlenen frekansların beklenen frekanslardan farklı olup olmadığını test etmek
+* Kategorik değişkenler arasında ilişki olup olmadığını incelemek
+
+**Kullanım Alanları:**
+
+* Genetik çalışmalarda (alellik dağılımı, kalıtım paterni)
+* Epidemiyolojik araştırmalarda (hastalık-risk faktörü ilişkisi)
+* Sosyolojik çalışmalarda (anket verileri analizi)
+* Ekolojik çalışmalarda (türlerin habitat tercihleri)
+
+## Ki-kare (χ²) Dağılımı
+
+Ki-kare dağılımı, bağımsız standart normal dağılmış değişkenlerin karelerinin toplamının dağılımıdır.
+
+**Özellikleri:**
+
+* Sürekli bir dağılımdır
+* Sadece pozitif değerler alır (χ² ≥ 0)
+* Sağa çarpıktır (sağa kuyruklu)
+* Serbestlik derecesi (df) arttıkça normale yaklaşır
+* Tek parametreli bir dağılımdır: serbestlik derecesi (df)
+
+**Matematiksel İfade:**
+
+$\chi^2 = \sum_{i=1}^{k} Z_i^2$
+
+Burada $Z_i$'ler bağımsız standart normal değişkenlerdir.
+
+## 
+
+![Ki-kare Dağılımları](https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Chi-square_pdf.svg/600px-Chi-square_pdf.svg.png){fig-align="center"}
+
+:::footer
+Görsel Kaynak: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Chi-square_pdf.svg)
+:::
+
+## Ki-kare Testleri Türleri
+
+Ki-kare testi, farklı amaçlar için kullanılabilir:
+
+1. **Ki-kare Uygunluk Testi (Goodness of Fit):**
+   * Tek bir kategorik değişkenin gözlenen dağılımının, teorik veya beklenen bir dağılıma uyup uymadığını test eder.
+   * Örnek: Mendel'in bezelye deneylerinde gözlenen fenotip oranlarının 3:1 teorik oranına uyup uymadığını test etmek.
+
+2. **Ki-kare Bağımsızlık Testi (Independence Test):**
+   * İki kategorik değişken arasında ilişki olup olmadığını test eder.
+   * Örnek: Cinsiyet ile belirli bir genetik hastalığın görülme sıklığı arasında ilişki olup olmadığını test etmek.
+
+3. **Ki-kare Homojenlik Testi (Homogeneity Test):**
+   * Farklı popülasyonların bir kategorik değişken bakımından benzer dağılımlara sahip olup olmadığını test eder.
+   * Örnek: Farklı coğrafi bölgelerdeki kan grubu dağılımlarının benzer olup olmadığını test etmek.
+
+## Ki-kare Uygunluk Testi
+
+**Amaç:** Gözlenen frekansların teorik/beklenen bir dağılıma uygunluğunu test etmek.
+
+**Hipotezler:**
+
+* **H₀:** Gözlenen frekanslar, beklenen dağılıma uygundur.
+* **H₁:** Gözlenen frekanslar, beklenen dağılımdan farklıdır.
+
+## 
+
+**Test İstatistiği:**
+$\chi^2 = \sum_{i=1}^{k} \frac{(O_i - E_i)^2}{E_i}$
+
+Burada:
+
+* $O_i$ = i. kategorideki gözlenen frekans
+* $E_i$ = i. kategorideki beklenen frekans
+* $k$ = kategori sayısı
+
+**Serbestlik Derecesi:** df = k - 1 - m
+
+* $k$ = kategori sayısı
+* $m$ = tahmin edilen parametre sayısı
+
+## Mendel ve Ki-kare Testi
+
+Gregor Mendel (1822-1884), modern genetiğin babası olarak kabul edilir. Bezelye bitkilerinde yaptığı deneyler ile kalıtım yasalarını keşfetmiştir.
+
+**Mendel'in Çalışmaları:**
+
+* Yaptığı deneylerde, çeşitli özelliklerin (boy, çiçek rengi, tohum şekli) kalıtım paternlerini inceledi
+* Dominant ve resesif alelleri tanımladı
+* Monohybrid çaprazlamalarında 3:1 oranını gözlemledi (dominant:resesif)
+* Dihybrid çaprazlamalarında 9:3:3:1 oranını gözlemledi
+
+##
+
+![](https://digfir-published.macmillanusa.com/life11e/asset/img_ch12/life11e-table-12-01.jpg)
+
+## Mendel'in Monohybrid Çaprazlaması ve Ki-kare Analizi
+
+**Senaryo:** Mendel'in sarı (dominant, Y) x yeşil (resesif, y) bezelye tohumu çaprazlamasından sonra F2 nesilde gözlenen fenotipik oranları inceleyelim.
+
+**Mendel'in Teorik Beklentisi:** 3:1 oranı (3 sarı : 1 yeşil)
+
+```{webr-r}
+# Mendel'in gözlenen verileri
+gozlenen <- c(6022, 2001)  # Sarı ve yeşil bezelye sayıları
+toplam <- sum(gozlenen)
+
+# Beklenen değerler (3:1 oranına göre)
+beklenen <- c(0.75 * toplam, 0.25 * toplam)
+
+# Ki-kare hesaplaması
+ki_kare <- sum((gozlenen - beklenen)^2 / beklenen)
+df <- length(gozlenen) - 1  # Serbestlik derecesi
+```
+
+##
+
+```{webr-r}
+#Gözlenen değerler (Sarı, Yeşil)
+gozlenen
+#Beklenen değerler (3:1 oranına göre)
+beklenen
+#Ki-kare değeri
+round(ki_kare, 4)
+#Serbestlik derecesi
+df
+#p-değeri
+pchisq(ki_kare, df, lower.tail = FALSE)
+```
+
+## Ki-kare ile ilgili R fonksiyonları
+
+* dchisq() - Ki-kare olasılık yoğunluk fonksiyonu (probability density function)
+  * Kullanım: dchisq(x, df) - belirli bir x değeri için olasılık yoğunluğunu hesaplar
+  * Örnek: dchisq(5, df=3) - 3 serbestlik derecesinde x=5 için olasılık yoğunluğu
+* pchisq() - Ki-kare birikimli dağılım fonksiyonu (cumulative distribution function)
+  * Kullanım: pchisq(q, df, lower.tail=TRUE) - q değerinden küçük veya eşit değerlerin olasılığı
+  * Örnek: pchisq(7.81, df=3) - 3 serbestlik derecesinde 7.81'den küçük veya eşit değerlerin olasılığı
+  * p-değerini bulmak için: pchisq(q, df, lower.tail=FALSE) - q değerinden büyük değerlerin olasılığı
+
+##
+
+* qchisq() - Ki-kare dağılımının kantil fonksiyonu (quantile function)
+  * Kullanım: qchisq(p, df, lower.tail=TRUE) - belirli bir olasılık değerine karşılık gelen Ki-kare değeri
+  * Örnek: qchisq(0.95, df=3) - 3 serbestlik derecesinde %95'lik kantil değeri
+* rchisq() - Ki-kare dağılımından rastgele sayılar üretme
+  * Kullanım: rchisq(n, df) - belirli bir serbestlik derecesi için n adet rastgele Ki-kare değeri
+  * Örnek: rchisq(100, df=3) - 3 serbestlik derecesinde 100 rastgele değer
+* chisq.test() - Ki-kare testi yapma
+  * Uygunluk testi için: chisq.test(x, p=NULL) - x vektörü ve beklenen olasılıklar
+  * Bağımsızlık testi için: chisq.test(tablo) - iki yönlü kontenjans tablosu
+  * Örnek: chisq.test(c(89, 37, 30), p=c(0.6, 0.2, 0.2))
+
+## R ile Ki-kare Uygunluk Testi
+
+Mendel'in verilerini R'ın `chisq.test()` fonksiyonu ile analiz edelim:
+
+```{webr-r}
+# Gözlenen değerler
+gozlenen <- c(6022, 2001)  # Sarı ve yeşil bezelye sayıları
+
+# Beklenen oranlar
+beklenen_oranlar <- c(3, 1)  # 3:1 oranı
+
+# Ki-kare uygunluk testi
+test_sonuc <- chisq.test(gozlenen, p = beklenen_oranlar/sum(beklenen_oranlar))
+test_sonuc
+
+# Grafik olarak gösterme
+barplot(rbind(gozlenen, test_sonuc$expected),
+        beside = TRUE, col = c("lightblue", "lightgreen"),
+        names.arg = c("Sarı Tohum", "Yeşil Tohum"),
+        main = "Mendel'in Monohybrid Çaprazlama Sonuçları",
+        legend.text = c("Gözlenen", "Beklenen"))
+```
+
+## Mendel'in Dihybrid Çaprazlaması
+
+**Senaryo:** Mendel'in sarı-düzgün (YYRR) x yeşil-buruşuk (yyrr) bezelye tohumu çaprazlamasından sonra F2 nesilde gözlenen fenotipik oranları inceleyelim.
+
+**Mendel'in Teorik Beklentisi:** 9:3:3:1 oranı
+
+* 9/16 Sarı-Düzgün (Y-R-)
+* 3/16 Sarı-Buruşuk (Y-rr)
+* 3/16 Yeşil-Düzgün (yyR-)
+* 1/16 Yeşil-Buruşuk (yyrr)
+
+##
+
+```{webr-r}
+# Mendel'in gözlenen verileri
+gozlenen <- c(315, 101, 108, 32)  # Dört fenotip için
+isimler <- c("Sarı-Düz", "Sarı-Buruşuk", "Yeşil-Düz", "Yeşil-Buruşuk")
+toplam <- sum(gozlenen)
+
+# Beklenen değerler (9:3:3:1 oranına göre)
+beklenen_oranlar <- c(9, 3, 3, 1)
+beklenen <- beklenen_oranlar * toplam / sum(beklenen_oranlar)
+
+# Ki-kare testi
+test_sonuc <- chisq.test(gozlenen, p = beklenen_oranlar/sum(beklenen_oranlar))
+test_sonuc
+
+# Veriyi görselleştirelim
+data <- data.frame(
+  Fenotip = factor(rep(isimler, 2), levels = isimler),
+  Frekans = c(gozlenen, beklenen),
+  Tip = rep(c("Gözlenen", "Beklenen"), each = 4)
+)
+
+barplot(matrix(data$Frekans, nrow=2, byrow=TRUE),
+        beside = TRUE, col = c("lightblue", "lightgreen"),
+        names.arg = isimler,
+        main = "Mendel'in Dihybrid Çaprazlama Sonuçları",
+        legend.text = c("Gözlenen", "Beklenen"))
+```
+
+## Ki-kare tablosu
+
+[PDF link](https://math.arizona.edu/~jwatkins/chi-square-table.pdf)
+
+## Ki-kare Bağımsızlık Testi
+
+**Amaç:** İki kategorik değişken arasında anlamlı bir ilişki olup olmadığını test etmek.
+
+**Hipotezler:**
+
+* **H₀:** İki değişken birbirinden bağımsızdır (ilişki yoktur).
+* **H₁:** İki değişken arasında bir ilişki vardır (bağımlıdır).
+
+**Test İstatistiği:**
+$\chi^2 = \sum_{i=1}^{r} \sum_{j=1}^{c} \frac{(O_{ij} - E_{ij})^2}{E_{ij}}$
+
+Burada:
+
+* $O_{ij}$ = i. satır, j. sütundaki gözlenen frekans
+* $E_{ij}$ = i. satır, j. sütundaki beklenen frekans
+* $r$ = satır sayısı, $c$ = sütun sayısı
+
+**Serbestlik Derecesi:** df = (r - 1) × (c - 1)
+
+##
+
+**Beklenen Frekansların Hesaplanması:**
+
+$E_{ij} = \frac{(\text{i. satır toplamı}) \times (\text{j. sütun toplamı})}{\text{genel toplam}}$
+
+## Örnek Ki-kare Bağımsızlık Testi: Kan Grubu ve Hastalık İlişkisi
+
+**Senaryo:** Bir hastalığın görülme sıklığı ile kan grupları arasında bir ilişki olup olmadığını test etmek istiyoruz.
+
+```{webr-r}
+# Kontenjans tablosu oluşturalım
+kan_hastalık <- matrix(c(
+  25, 15, 10, 5,   # Hasta olan A, B, AB ve O kan grupları
+  75, 60, 25, 85   # Hasta olmayan A, B, AB ve O kan grupları
+), nrow = 2, byrow = TRUE)
+
+rownames(kan_hastalık) <- c("Hasta", "Sağlıklı")
+colnames(kan_hastalık) <- c("A", "B", "AB", "O")
+
+# Tabloyu gösterelim
+kan_hastalık
+
+# Ki-kare bağımsızlık testi
+test_sonuc <- chisq.test(kan_hastalık)
+test_sonuc
+
+# Beklenen frekansları görelim
+test_sonuc$expected
+```
+
+## Görselleştirme
+
+```{webr-r}
+# Kontenjans tablosunu görselleştirelim
+par(mfrow=c(1,2))
+
+# Gözlenen değerler
+barplot(kan_hastalık, beside = TRUE, legend = rownames(kan_hastalık),
+        col = c("indianred", "lightblue"),
+        main = "Gözlenen Frekanslar",
+        xlab ="Kan Grubu", ylab = "Frekans")
+
+# Beklenen değerler
+barplot(test_sonuc$expected, beside = TRUE, legend = rownames(kan_hastalık),
+        col = c("indianred", "lightblue"),
+        main = "Beklenen Frekanslar",
+        xlab = "Kan Grubu", ylab = "Frekans")
+
+# Tek grafik seçeneği
+par(mfrow=c(1,1))
+```
+
+## Bağımsızlık Testi Yorumlanması
+
+**p-değeri < 0.05** ise, iki değişken arasında anlamlı bir ilişki olduğu sonucuna varırız (H₀ reddedilir).
+
+
+## Ki-kare Testinin Varsayımları
+
+Ki-kare testi, parametrik olmayan bir test olmasına rağmen, bazı varsayımlara dayanır:
+
+1. **Bağımsızlık:** Gözlemler birbirinden bağımsız olmalıdır.
+
+2. **Rastgele Örnekleme:** Veriler popülasyondan rastgele seçilmelidir.
+
+3. **Kategorik Veri:** Ki-kare testi yalnızca kategorik (nominal veya ordinal) verilere uygulanabilir.
+
+4. **Yeterli Örnek Boyutu:** Beklenen frekansların çoğu 5'ten büyük olmalıdır. Genellikle, beklenen frekansların en fazla %20'si 5'ten küçük olabilir ve hiçbir beklenen frekans 1'den küçük olmamalıdır.
+
+**Varsayımlar Karşılanmadığında:**
+
+* Fisher'ın Kesin Testi (küçük örneklemler için)
+* Kategorileri birleştirerek beklenen frekansları artırmak
+
+## Fisher'ın Kesin Testi
+
+Fisher'ın Kesin Testi, özellikle örneklem boyutu küçük olduğunda ve Ki-kare testinin varsayımları karşılanmadığında kullanılabilir.
+
+```{webr-r}
+# Küçük bir örnek tablo oluşturalım
+kucuk_tablo <- matrix(c(
+  4, 2,   # Satır 1
+  3, 8    # Satır 2
+), nrow = 2, byrow = TRUE)
+
+rownames(kucuk_tablo) <- c(\"Grup A\", \"Grup B\")
+colnames(kucuk_tablo) <- c(\"Durum 1\", \"Durum 2\")
+
+# Tabloyu gösterelim
+kucuk_tablo
+
+# Ki-kare testi
+chisq.test(kucuk_tablo)
+
+# Fisher'ın Kesin Testi
+fisher.test(kucuk_tablo)
+```
+
+## Biyolojide Ki-kare Uygulamaları
+
+Ki-kare testi, biyoloji alanında yaygın olarak kullanılır:
+
+1. **Genetik Çalışmalar:**
+   * Mendel oranlarının test edilmesi
+   * Genetik bağlantı analizleri
+   * Hardy-Weinberg dengesinin test edilmesi
+
+2. **Epidemiyoloji:**
+   * Hastalık-risk faktörü ilişkisi
+   * Vaka-kontrol çalışmalarının analizi
+   * Aşı etkinliğinin değerlendirilmesi
+
+3. **Ekoloji:**
+   * Türlerin habitat tercihlerinin incelenmesi
+   * Populasyon dağılımlarının analizi
+   * Tür çeşitliliği çalışmaları
+
+4. **Fizyoloji ve Davranış:**
+   * Davranış paternlerinin analizi
+   * Tercih deneyleri
+   * Fizyolojik yanıtların kategorik değerlendirilmesi
+
+## Hardy-Weinberg Dengesi ve Ki-kare Testi
+
+Hardy-Weinberg dengesi, evrim geçirmeyen bir popülasyonda alel ve genotip frekanslarının sabit kalacağını belirten bir ilkedir.
+
+**Tek lokus, iki alel (A ve a) için:**
+
+* p = A alel frekansı, q = a alel frekansı (p + q = 1)
+* Beklenen genotip frekansları: p² (AA), 2pq (Aa), q² (aa)
+
+**Ki-kare testi ile Hardy-Weinberg dengesi test edilebilir**
+
+## Sonuçların Raporlanması
+
+**Akademik yayınlarda Ki-kare sonuçlarını nasıl raporlamalıyız?**
+
+**Ki-kare Uygunluk Testi için:**
+*\"Mendel'in monohybrid çaprazlama çalışmasındaki gözlenen fenotip dağılımının (sarı:yeşil) teorik 3:1 oranına uygunluğu Ki-kare uygunluk testi ile değerlendirilmiştir. Analiz sonucunda, gözlenen dağılımın teorik orana uygun olduğu bulunmuştur (χ²(1) = 0.25, p = 0.617).\"*
+
+**Ki-kare Bağımsızlık Testi için:**
+*\"Kan grubu ile hastalık görülme sıklığı arasındaki ilişki Ki-kare bağımsızlık testi ile incelenmiştir. Analiz sonucunda, kan grubu ile hastalık arasında istatistiksel olarak anlamlı bir ilişki bulunmuştur (χ²(3) = 8.52, p = 0.036, Cramer's V = 0.21). O kan grubuna sahip bireylerde hastalık görülme oranı, diğer kan gruplarına göre anlamlı derecede düşüktür.\"*
+
+## Uygulama: Bitki Türü ve Habitat İlişkisi
+
+**Senaryo:** Farklı bitki türlerinin farklı habitat tiplerine dağılımı arasında bir ilişki olup olmadığını test etmek istiyoruz.
+
+```{webr-r}
+# Kontenjans tablosu oluşturalım
+bitki_habitat <- matrix(c(
+  45, 30, 15,  # Tür A'nın habitat dağılımı (Orman, Çayır, Bataklık)
+  25, 35, 30,  # Tür B'nin habitat dağılımı
+  10, 25, 35   # Tür C'nin habitat dağılımı
+), nrow = 3, byrow = TRUE)
+
+rownames(bitki_habitat) <- c(\"Tür A\", \"Tür B\", \"Tür C\")
+colnames(bitki_habitat) <- c(\"Orman\", \"Çayır\", \"Bataklık\")
+
+# Tabloyu gösterelim
+bitki_habitat
+
+# Ki-kare bağımsızlık testi
+test_sonuc <- chisq.test(bitki_habitat)
+test_sonuc
+
+# Beklenen frekansları görelim
+test_sonuc$expected
+```
+
+## 
+
+```{webr-r}
+# Grafik olarak gösterelim
+barplot(t(bitki_habitat), beside = TRUE, legend = colnames(bitki_habitat),
+        col = c(\"darkgreen\", \"yellowgreen\", \"lightblue\"),
+        main = \"Bitki Türlerinin Habitat Dağılımı\",
+        xlab = \"Bitki Türü\", ylab = \"Frekans\")
+
+# İlişkinin gücünü hesaplayalım
+n <- sum(bitki_habitat)
+chi_square <- test_sonuc$statistic
+r <- nrow(bitki_habitat)
+c <- ncol(bitki_habitat)
+cramers_v <- sqrt(chi_square / (n * min(r-1, c-1)))
+
+cat(\"Cramer's V değeri:\", round(cramers_v, 4))
+```
+
+## Ki-kare Testi için Pratik İpuçları
+
+1. **Doğru Ki-kare Testini Seçin:**
+   * Tek değişken için teorik dağılıma uygunluk → Ki-kare Uygunluk Testi
+   * İki kategorik değişken arasındaki ilişki → Ki-kare Bağımsızlık Testi
+   * Grup karşılaştırması → Ki-kare Homojenlik Testi
+
+2. **Varsayımları Kontrol Edin:**
+   * Beklenen frekansların %80'i 5'ten büyük olmalı
+   * Hiçbir beklenen frekans 1'den küçük olmamalı
+   * Gözlemler bağımsız olmalı
+
+3. **Küçük Örneklemlerde Dikkatli Olun:**
+   * 2×2 tablolarda Yates düzeltmesini kullanın
+   * Fisher'ın Kesin Testini alternatif olarak düşünün
+   * Gerekirse kategorileri birleştirin
+
+4. **Anlamlı Sonuçlar İçin İlişkinin Gücünü Değerlendirin:**
+   * Cramer's V veya Phi katsayısı gibi etki büyüklüğü ölçülerini kullanın
+   * İstatistiksel anlamlılığın yanında biyolojik anlamlılığı da yorumlayın
+
+## Soru 1
+
+Kan grupları ile ilgili yapılan bir çalışmada 400 kişiden toplanan veriler şu şekildedir:
+
+* A grubu: 180 kişi
+* B grubu: 90 kişi
+* AB grubu: 30 kişi
+* O grubu: 100 kişi
+
+Normal teorik dağılım %40 A, %10 B, %5 AB ve %45 O grubu şeklindedir. Bu dağılımın teorik dağılıma uyup uymadığını test ediniz.
+
+
+```{webr-r}
+#
+```
+
+
+## Soru 2
+
+Bir moleküler biyolog, iki gen arasında bağlantı olup olmadığını test etmek istiyor. F2 neslinde gözlenen fenotipik oranlar şöyledir:
+
+* A-B-: 120 birey
+* A-bb: 40 birey
+* aaB-: 35 birey
+* aabb: 5 birey
+
+Bağımsız kalıtım hipotezini (9:3:3:1 oranı) test ediniz.
+
+
+```{webr-r}
+#
+
+```
