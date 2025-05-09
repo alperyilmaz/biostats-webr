@@ -60,5 +60,5 @@
 
 **Teorik** (*05 Mayıs 2025*): Ki-kare testi  [Sunum linki](ders08.qmd)
 
-**Uygulama** (*09 Mayıs 2025*): Ki-kare uygulama
+**Uygulama** (*09 Mayıs 2025*): Ki-kare uygulama [Sunum linki](ders08-uygulama.qmd)
 

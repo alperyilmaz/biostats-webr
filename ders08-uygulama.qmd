@@ -1,0 +1,306 @@
+---
+title: "Ders 8 Uygulama: Ki-kare Testi"
+subtitle: "MBG1032 Biyoistatistik - Doç.Dr.Alper YILMAZ - *9 Mayıs 2025*"
+format:
+  revealjs:
+    chalkboard: true
+    css: custom.css
+    smaller: true
+    scrollable: true
+    slide-number: c/t
+webr:
+  packages: ['ggplot2'] # Install R packages on document open
+filters:
+  - webr
+engine: knitr
+---
+
+## Giriş: Ki-kare Testi ve Sıfır Hipotezi
+
+**Önemli Not:** Ki-kare testinde sıfır hipotezi (H₀), t-testindeki sıfır hipotezinden farklıdır:
+
+* **t-testi H₀:** Gruplar arasında fark yoktur (ortalamaların eşit olduğu)
+* **Ki-kare testi H₀:** Gözlenen dağılım, beklenen dağılıma uygundur (fark yoktur)
+
+Bu farklılık, Ki-kare testini yorumlarken ve sonuçları raporlarken önemlidir!
+
+## Soru 1: Kan Grupları ve Teorik Dağılım
+
+Türkiye'de bir üniversitede yapılan çalışmada, 500 öğrenciden toplanan kan grubu verileri şu şekildedir:
+
+* A grubu: 220 kişi
+* B grubu: 85 kişi
+* AB grubu: 35 kişi
+* O grubu: 160 kişi
+
+Türkiye genelinde teorik kan grubu dağılımının %42 A, %16 B, %8 AB ve %34 O grubu şeklinde olduğu bilinmektedir. 
+
+Bu üniversitedeki kan grubu dağılımının Türkiye geneline uyup uymadığını test ediniz.
+
+R'daki `pchisq()`, `chisq.test()` fonksiyonları ile ve Excel'de gerekli fonksiyonlar ile test ediniz.
+
+## 
+
+`chisq.test()` ile hesaplayalım
+
+
+```{webr-r}
+# Veriyi giriniz
+gozlenen <- c(220, 85, 35, 160)  # A, B, AB, O grupları
+beklenen_oranlar <- c(0.42, 0.16, 0.08, 0.34)
+
+# ki kare testini uygulayınız
+chisq.test(...., .....)
+
+# Sonuç: Ho red edilir mi?
+```
+
+<!--- chisq.test(gozlenen, p=beklenen_oranlar) p-value: 0.572 -->
+
+##
+
+ki kare değerini manuel olarak hesaplayıp, `pchisq()` fonksiyonu ile p-value hesaplayalım.
+
+```{webr-r}
+# Veriyi giriniz
+gozlenen <- c(220, 85, 35, 160)  # A, B, AB, O grupları
+beklenen_oranlar <- c(0.42, 0.16, 0.08, 0.34)
+
+toplam <- sum(gozlenen)
+beklenen <- # Beklenen değerleri hesaplayınız
+
+# Ki-kare değerini (O-E)^2/E ile hesaplayınız
+ki_kare <- # 
+
+# ki_kare değerinin p-value değerini hesaplayınız
+pchisq(ki_kare, df=...., lower.tail = FALSE)
+
+# Sonuç: Ho red edilir mi?
+```
+
+<!-- pchisq(ki_kare, df=3, lower.tail = FALSE) -->
+
+##
+
+Excel'de `CHISQ.TEST()` fonksiyonunu kullanarak aynı hesaplamayı yapınız
+
+| A | B | C |
+|---|---|---|
+|A  | 220 | 0,42 |
+|B  | 85 | 0,16 |
+|AB | 35 | 0,08 |
+|O  | 160 | 0,34 |
+
+<!-- =CHISQ.TEST(B2:B5; D2:D5) -->
+
+## Soru 2: Mendelci Kalıtım ve Epistasis
+
+
+Bir genetik çalışmada, iki heterozigot köpeğin  (EeBb x EeBb) çaprazlanmasıyla elde edilen F2 neslinde şu fenotipik oranlar gözlenmiştir:
+
+* Siyah tüy (E-B-): 145 köpek
+* Kahverengi tüy (E-bb): 48 köpek
+* Sarı tüy (ee--): 67 köpek
+
+Bu gözlenen oranların, Mendel'in dihybrid kalıtımında beklenen 9:3:4 oranına uygun olup olmadığını test ediniz.
+
+```{webr-r}
+# Gözlenen verileri giriniz
+gozlenen <- c(145, 48, 67)
+
+# 9:3:4 oranına göre beklenen değerleri hesaplayınız
+beklenen_oranlar <- c(9, 3, 4)
+beklenen <- # Beklenen değerleri hesaplayınız
+
+# Ki-kare testini uygulayınız
+ki_kare_test <- # chisq.test() fonksiyonunu kullanarak testi gerçekleştiriniz
+
+# Sonuçları yazdırınız
+ki_kare_test
+```
+
+## Soru 3: İki Değişken Arasındaki İlişki (Bağımsızlık Testi)
+
+Bir araştırmada, 300 bitki örneği üzerinde yapılan gözlemlerde bitki türü ile hastalık durumu arasındaki ilişki incelenmiştir. Veriler aşağıdaki tabloda verilmiştir:
+
+|                | Hastalıklı | Sağlıklı | Toplam |
+|----------------|------------|----------|--------|
+| Tür A          | 40         | 80       | 120    |
+| Tür B          | 30         | 70       | 100    |
+| Tür C          | 45         | 35       | 80     |
+| Toplam         | 115        | 185      | 300    |
+
+Bitki türü ile hastalık durumu arasında bir ilişki olup olmadığını Ki-kare bağımsızlık testi ile test ediniz.
+
+```{webr-r}
+# Kontenjans tablosunu oluşturalım
+bitki_hastalik <- matrix(c(
+  40, 80,  # Tür A (Hastalıklı, Sağlıklı)
+  30, 70,  # Tür B (Hastalıklı, Sağlıklı)
+  45, 35   # Tür C (Hastalıklı, Sağlıklı)
+), nrow = 3, byrow = TRUE)
+
+rownames(bitki_hastalik) <- c("Tür A", "Tür B", "Tür C")
+colnames(bitki_hastalik) <- c("Hastalıklı", "Sağlıklı")
+
+# Tabloyu gösterelim
+bitki_hastalik
+
+# Satır ve sütun toplamlarını görelim
+toplam_satir <- rowSums(bitki_hastalik)
+toplam_sutun <- colSums(bitki_hastalik)
+bitki_hastalik_margins <- cbind(bitki_hastalik, toplam_satir)
+bitki_hastalik_margins <- rbind(bitki_hastalik_margins, c(toplam_sutun, sum(bitki_hastalik)))
+rownames(bitki_hastalik_margins)[4] <- "Toplam"
+colnames(bitki_hastalik_margins)[3] <- "Toplam"
+bitki_hastalik_margins
+
+# Ki-kare bağımsızlık testi
+ki_kare_test <- chisq.test(bitki_hastalik)
+print(ki_kare_test)
+
+# Beklenen frekansları görelim
+print("Beklenen frekanslar:")
+print(ki_kare_test$expected)
+
+# Kalan değerleri (residuals) görelim
+print("Kalıntılar (standartlaştırılmış):")
+print(ki_kare_test$residuals)
+
+# Görselleştirme
+# Gözlenen değerler için barchart
+par(mfrow = c(1, 2))  # 1 satır, 2 sütunluk grafik düzeni
+
+barplot(t(bitki_hastalik), beside = TRUE, legend.text = TRUE,
+        col = c("indianred", "lightgreen"),
+        main = "Gözlenen Frekanslar",
+        xlab = "Bitki Türü", ylab = "Frekans")
+
+# Beklenen değerler için barchart
+barplot(t(ki_kare_test$expected), beside = TRUE, legend.text = TRUE,
+        col = c("indianred", "lightgreen"),
+        main = "Beklenen Frekanslar",
+        xlab = "Bitki Türü", ylab = "Frekans")
+
+# Grafik düzenini eski haline getirelim
+par(mfrow = c(1, 1))
+```
+
+## Soru 4: Ki-kare ve H₀
+
+Ki-kare testinin sıfır hipotezi (H₀), t-testindeki sıfır hipotezinden nasıl farklıdır? Aşağıdaki senaryoda bu farkı açıklayınız:
+
+Bir bitki genetikçisi, bir genin kalıtımını inceliyor. Tek gen dominans durumunda, F2 neslinde 3:1 oranı beklenir (3 dominant : 1 resesif fenotip). Deneyinde 200 F2 bitkisini incelemiş ve şu sonuçları elde etmiştir:
+
+* Dominant fenotip (Mor çiçek): 158 bitki
+* Resesif fenotip (Beyaz çiçek): 42 bitki
+
+Bu verileri analiz ederek, Ki-kare testindeki H₀'ın t-testindeki H₀'dan nasıl farklı olduğunu açıklayınız ve uygun istatistiksel testi uygulayınız.
+
+```{webr-r}
+# Gözlenen frekanslar
+gozlenen <- c(158, 42)  # Mor, Beyaz
+isimler <- c("Mor (Dominant)", "Beyaz (Resesif)")
+N <- sum(gozlenen)  # Toplam bitki sayısı
+
+# 3:1 oranına göre beklenen frekanslar
+beklenen_oranlar <- c(3/4, 1/4)  # 3:1 oranı
+beklenen <- beklenen_oranlar * N
+
+# Ki-kare testi
+ki_kare_test <- chisq.test(gozlenen, p = beklenen_oranlar)
+print(ki_kare_test)
+
+# Görselleştirme
+barplot(rbind(gozlenen, beklenen), beside = TRUE, col = c("purple", "lightgreen"),
+        names.arg = isimler, legend.text = c("Gözlenen", "Beklenen (3:1)"),
+        main = "Mendelci Kalıtım Testi", xlab = "Fenotip", ylab = "Frekans")
+
+# Ki-kare testi ile t-testi arasındaki H₀ farklılığını açıklayalım
+cat("Ki-kare testi ve t-testi arasındaki H₀ farklılığı:\
+\
+")
+cat("t-testi için H₀: İki grubun ortalamaları arasında fark yoktur. (μ₁ = μ₂)\
+")
+cat("Ki-kare testi için H₀: Gözlenen frekanslar, beklenen dağılıma uygundur.\
+\
+")
+cat("Bu örnekte Ki-kare testinin H₀: Çiçek rengi dağılımı 3:1 oranına uygundur.\
+")
+cat("p-değeri =", ki_kare_test$p.value, "olduğundan, H₀", 
+    ifelse(ki_kare_test$p.value < 0.05, "reddedilir.", "reddedilemez."), "\
+")
+```
+
+
+## Soru 5: Sıfır Hipotezi İçin Derinlemesine Analiz
+
+Ki-kare testlerinde sıfır hipotezi (H₀) ve alternatif hipotez (H₁), t-testlerinden farklıdır. Bu farkı anlamak için aşağıdaki senaryoyu ele alalım:
+
+İki farklı besin ortamında yetiştirilen bakterilerin antibiyotik direnci incelenmiştir:
+
+|                | Dirençli | Duyarlı | Toplam |
+|----------------|----------|---------|--------|
+| Besin Ortamı A | 35       | 65      | 100    |
+| Besin Ortamı B | 55       | 45      | 100    |
+| Toplam         | 90       | 110     | 200    |
+
+1. Bu senaryoda Ki-kare testi için H₀ ve H₁ hipotezlerini açıkça ifade ediniz.
+2. t-testi senaryosunda hipotezler nasıl farklı olurdu?
+3. Verileri analiz ediniz ve sonuçları yorumlayınız.
+
+```{webr-r}
+# Kontenjans tablosunu oluşturalım
+besin_direnc <- matrix(c(
+  35, 65,  # Besin Ortamı A (Dirençli, Duyarlı)
+  55, 45   # Besin Ortamı B (Dirençli, Duyarlı)
+), nrow = 2, byrow = TRUE)
+
+rownames(besin_direnc) <- c("Besin Ortamı A", "Besin Ortamı B")
+colnames(besin_direnc) <- c("Dirençli", "Duyarlı")
+
+# Tabloyu gösterelim
+besin_direnc
+
+# Ki-kare bağımsızlık testi
+ki_kare_test <- chisq.test(besin_direnc)
+print(ki_kare_test)
+
+# Görselleştirme
+barplot(t(besin_direnc), beside = TRUE, col = c("darkred", "darkgreen"),
+        legend.text = TRUE, args.legend = list(x = "topright"),
+        main = "Besin Ortamına Göre Antibiyotik Direnci",
+        xlab = "Besin Ortamı", ylab = "Bakteri Sayısı")
+
+# Hipotezleri açıklayalım
+cat("Ki-kare testi için hipotezler:\
+")
+cat("H₀: Antibiyotik direnci ile besin ortamı arasında bir ilişki yoktur (bağımsızdır).\
+")
+cat("H₁: Antibiyotik direnci ile besin ortamı arasında bir ilişki vardır (bağımlıdır).\
+\
+")
+
+cat("t-testi senaryosunda hipotezler:\
+")
+cat("H₀: İki besin ortamındaki direnç oranları arasında fark yoktur (μ₁ = μ₂).\
+")
+cat("H₁: İki besin ortamındaki direnç oranları arasında fark vardır (μ₁ ≠ μ₂).\
+\
+")
+
+# Sonuçları yorumlayalım
+cat("Ki-kare testi sonucu: χ² =", round(ki_kare_test$statistic, 3), 
+    ", df =", ki_kare_test$parameter, 
+    ", p-değeri =", round(ki_kare_test$p.value, 4), "\
+")
+
+if (ki_kare_test$p.value < 0.05) {
+  cat("Sıfır hipotezi reddedilir. Antibiyotik direnci ile besin ortamı arasında anlamlı bir ilişki vardır.\
+")
+} else {
+  cat("Sıfır hipotezi reddedilemez. Antibiyotik direnci ile besin ortamı arasında anlamlı bir ilişki olduğuna dair yeterli kanıt yoktur.\
+")
+}
+```
+
