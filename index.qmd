@@ -62,3 +62,9 @@
 
 **Uygulama** (*09 Mayıs 2025*): Ki-kare uygulama [Sunum linki](ders08-uygulama.qmd)
 
+## Ders10
+
+**Teorik** (*12 Mayıs 2025*): Hesapsal istatistik  [Sunum linki](ders09.qmd)
+
+(*16 Mayıs 2025*): 2.vize yapılacaktır
+

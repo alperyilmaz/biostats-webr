@@ -1,0 +1,369 @@
+---
+title: "Ders 9: Hesapsal İstatistik"
+subtitle: "MBG1032 Biyoistatistik - Doç.Dr.Alper YILMAZ - *12 Mayıs 2025*"
+format:
+  revealjs:
+    chalkboard: true
+    css: custom.css
+    smaller: true
+    scrollable: true
+    slide-number: c/t
+webr:
+  packages: ['ggplot2','infer','dplyr'] # Install R packages on document open
+filters:
+  - webr
+engine: knitr
+execute:
+  echo: true
+---
+
+## Özet
+
+* Çok çekirdek - simulasyon
+* Hesapsal istatistik - "Allen Downey - A future of data science" başlıklı konuşması
+* *R/infer* paketi 
+
+
+
+## Hesapsal istatistik
+
+![](images/zdowney-title.png)
+
+"[A future of data science](https://www.youtube.com/watch?v=YKMZIzYBgTk)" başlıklı konuşmadan alınmıştır
+
+## 
+
+![](images/zdowney-slide1.png)
+
+## 
+
+![](images/zdowney-slide2.png)
+
+## 
+
+![](images/zdowney-slide3.png)
+
+## 
+
+![](images/zdowney-slide4.png)
+
+## 
+
+![](images/zdowney-slide5.png)
+
+## 
+
+![](images/zdowney-slide6.png)
+
+## 
+
+![](images/zdowney-slide7.png)
+
+## 
+
+![](images/zdowney-slide8.png)
+
+## 
+
+![](images/zdowney-slide9.png)
+
+## 
+
+![](images/zdowney-slide10.png)
+
+## 
+
+![](images/zdowney-slide11.png)
+
+## 
+
+![](images/zdowney-slide12.png)
+
+## 
+
+![](images/zdowney-slide13.png)
+
+## 
+
+![](images/zdowney-slide14.png)
+
+## 
+
+![](images/zdowney-slide15.png)
+
+## 
+
+![](images/zdowney-slide16.png)
+
+## 
+
+![](images/zdowney-slide17.png)
+
+## 
+
+![](images/zdowney-slide18.png)
+
+## 
+
+![](images/zdowney-slide19.png)
+
+## 
+
+![](images/zdowney-slide20.png)
+
+## 
+
+![](images/zdowney-slide21.png)
+
+## 
+
+![](images/zdowney-slide22.png)
+
+##
+
+
+
+## Geleneksel İstatistikten Simülasyona
+
+
+- Şimdiye kadar t-test, ANOVA ve Ki-kare gibi **parametrik testleri** öğrendik
+- Bu testler belirli **varsayımlara** dayanır (normallik, varyans homojenliği vb.)
+- Bugün **farklı bir bakış açısı** ile tanışacağız
+- Soru aynı: *"Gözlediğimiz etki gerçek mi, yoksa şansa bağlı mı?"*
+
+
+## Simülasyon Tabanlı İstatistik
+
+
+- Modern bilgisayarların gücünü kullanarak **veri yeniden örnekleme**
+- **Rastgele süreçleri** taklit etme
+- Teorik dağılımlar yerine **veriden öğrenme**
+- R'daki `infer` paketi bu yaklaşımı kolaylaştırır
+
+
+## infer Paketi Nedir?
+
+
+- İstatistiksel çıkarım için **tutarlı bir dilbilgisi** sağlar
+- **tidyverse** felsefesiyle uyumlu
+- Karmaşık formüller yerine **okunabilir kod akışı**
+- Dört ana fonksiyon: `specify()`, `hypothesize()`, `generate()`, `calculate()`
+
+
+## infer İş Akışı
+
+![İnfer Paketi İş Akışı](https://raw.githubusercontent.com/tidymodels/infer/main/figs/ht-diagram.png)
+
+## Örnek Veri Seti: GSS
+
+```{r}
+library(infer)
+library(dplyr)
+data(gss)
+glimpse(gss)
+```
+
+::: footer
+*Bu veri seti Amerikan Genel Sosyal Anketi'nden 500 gözlem içerir ve yaş, eğitim durumu, politik görüş gibi değişkenler barındırır.*
+:::
+
+## 1. `specify()`: Değişkenleri Belirleme
+
+
+- Hangi değişkenler üzerinde çalışacağımızı belirteriz
+- Tek değişken için: `response = degisken`
+- İki değişken için: `response = y, explanatory = x` veya `y ~ x`
+
+
+```{r}
+# Yaş değişkenini belirtelim
+gss |>
+  specify(response = age)
+
+# İki değişken ilişkisini belirtelim
+gss |>
+  specify(age ~ partyid)
+```
+
+## 2. `hypothesize()`: Sıfır Hipotezini Belirleme
+
+
+- İki temel sıfır hipotezi türü:
+  - `"independence"`: İki değişken arasında ilişki yok
+  - `"point"`: Parametre belirli bir değere eşit
+
+
+```{r}
+# Bağımsızlık hipotezi
+gss |>
+  specify(college ~ partyid, success = "degree") |>
+  hypothesize(null = "independence")
+
+# Ortalama için nokta hipotezi
+gss |>
+  specify(response = hours) |>
+  hypothesize(null = "point", mu = 40)
+```
+
+## 3. `generate()`: Sıfır Dağılımı Oluşturma
+
+
+- Sıfır hipotezi altında verinin nasıl görüneceğini simüle eder
+- Üç temel yöntem:
+  - `bootstrap`: Yerine koyarak örnekleme
+  - `permute`: Değişkenleri karıştırma
+  - `draw`: Teorik dağılımdan örnekleme
+
+
+```{r}
+# 1000 bootstrap örneği oluşturalım
+gss |>
+  specify(response = hours) |>
+  hypothesize(null = "point", mu = 40) |>
+  generate(reps = 1000, type = "bootstrap")
+```
+
+## `generate()`: Veri Karıştırma Örneği
+
+```{r}
+# Yaş ve parti ilişkisini kırmak için değişkenleri karıştıralım
+gss |>
+  specify(partyid ~ age) |>
+  hypothesize(null = "independence") |>
+  generate(reps = 1000, type = "permute")
+```
+
+
+*Bu adım, sıfır hipotezi doğru olsaydı veri nasıl görünürdü sorusuna cevap verir.*
+
+
+## 4. `calculate()`: İstatistik Hesaplama
+
+
+- Simüle edilmiş verilerden istatistikler hesaplar
+- Ortalama, medyan, oran, fark, t-istatistiği ve daha fazlası
+- Sıfır dağılımını oluşturur
+
+
+```{r}
+# Ortalama çalışma saatlerinin dağılımını hesaplayalım
+gss |>
+  specify(response = hours) |>
+  hypothesize(null = "point", mu = 40) |>
+  generate(reps = 1000, type = "bootstrap") |>
+  calculate(stat = "mean")
+```
+
+## Örnek: Haftalık Çalışma Saatleri Analizi
+
+**Soru:** Ortalama çalışma saati gerçekten 40 saat mı?
+
+```{r}
+# Gözlemlenen istatistiği hesaplayalım
+obs_mean <- gss |>
+  specify(response = hours) |>
+  calculate(stat = "mean")
+
+# Sıfır dağılımını oluşturalım
+null_dist <- gss |>
+  specify(response = hours) |>
+  hypothesize(null = "point", mu = 40) |>
+  generate(reps = 1000, type = "bootstrap") |>
+  calculate(stat = "mean")
+```
+
+## Sonuçları Görselleştirme
+
+```{r}
+# Sıfır dağılımını görselleştirelim
+null_dist |>
+  visualize() +
+  shade_p_value(obs_stat = obs_mean, direction = "two-sided")
+```
+
+
+![Örnek Görselleştirme](https://raw.githubusercontent.com/tidymodels/infer/main/vignettes/figures/unnamed-chunk-15-1.png)
+
+
+## p-değeri Hesaplama
+
+```{r}
+# İki kuyruklu p-değerini hesaplayalım
+p_value <- null_dist |>
+  get_p_value(obs_stat = obs_mean, direction = "two-sided")
+
+p_value
+```
+
+
+*Eğer ortalama gerçekten 40 saat olsaydı, gözlemlediğimiz kadar (veya daha) uç bir değer elde etme olasılığımız p-değeri kadardır.*
+
+
+## Güven Aralıkları
+
+```{r}
+# Bootstrap dağılımını oluşturalım
+boot_dist <- gss |>
+  specify(response = hours) |>
+  generate(reps = 1000, type = "bootstrap") |>
+  calculate(stat = "mean")
+
+# %95 güven aralığını hesaplayalım
+ci <- boot_dist |>
+  get_confidence_interval(
+    point_estimate = obs_mean,
+    level = .95,
+    type = "se"
+  )
+```
+
+## Moleküler Biyoloji Örneği: Gen İfadesi
+
+
+- **Senaryo:** İki farklı hücre tipinde (normal vs. kanser) bir genin ifade seviyesini karşılaştırıyoruz
+- **Sıfır hipotezi:** Gen ifadesi hücre tipine göre değişmez
+- **infer** ile simülasyon yaklaşımı nasıl kullanılır?
+
+
+## Örnek Kod: Gen İfadesi Karşılaştırması
+
+```r
+# Verileri tanımlayalım
+gen_ifadesi |>
+  # İfade seviyesi ~ hücre tipi ilişkisini belirtelim
+  specify(expression ~ cell_type) |>
+  # Sıfır hipotezi: Hücre tipi etkisi yok
+  hypothesize(null = "independence") |>
+  # 1000 permütasyon örneği oluşturalım
+  generate(reps = 1000, type = "permute") |>
+  # Ortalama farkını hesaplayalım
+  calculate(stat = "diff in means", 
+            order = c("cancer", "normal"))
+```
+
+## Teorik Dağılım Kullanımı
+
+
+- `infer` teorik dağılımlarla da çalışabilir
+- t, F, Ki-kare ve z dağılımları için `assume()`
+- Simülasyon ve teorik yaklaşımlar arasında geçiş yapabilirsiniz
+
+
+```r
+# t-dağılımı tanımlayalım
+t_dist <- gen_ifadesi |>
+  specify(expression ~ cell_type) |>
+  assume(distribution = "t")
+```
+
+
+## infer'in Avantajları
+
+
+- Daha **anlaşılır** istatistiksel süreç
+- Varsayımlar konusunda daha **esnek**
+- Öğrencilere istatistiği **görselleştirme** imkanı
+- **Tidyverse** ekosistemiyle entegrasyon
+- Karmaşık analizleri **basitleştirme**
+
+

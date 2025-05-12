@@ -98,15 +98,15 @@ Excel'de `CHISQ.TEST()` fonksiyonunu kullanarak aynı hesaplamayı yapınız
 
 Bir genetik çalışmada, iki heterozigot köpeğin  (EeBb x EeBb) çaprazlanmasıyla elde edilen F2 neslinde şu fenotipik oranlar gözlenmiştir:
 
-* Siyah tüy (E-B-): 145 köpek
-* Kahverengi tüy (E-bb): 48 köpek
-* Sarı tüy (ee--): 67 köpek
+* Siyah tüy (E-B-): 144 köpek
+* Kahverengi tüy (E-bb): 47 köpek
+* Sarı tüy (ee--): 65 köpek
 
 Bu gözlenen oranların, Mendel'in dihybrid kalıtımında beklenen 9:3:4 oranına uygun olup olmadığını test ediniz.
 
 ```{webr-r}
 # Gözlenen verileri giriniz
-gozlenen <- c(145, 48, 67)
+gozlenen <- c(144, 47, 65)
 
 # 9:3:4 oranına göre beklenen değerleri hesaplayınız
 beklenen_oranlar <- c(9, 3, 4)
