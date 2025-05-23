@@ -68,3 +68,6 @@
 
 (*16 Mayıs 2025*): 2.vize yapılacaktır
 
+## Ders11
+
+**Teorik** (*23 Mayıs 2025*): Bilimsel tekrarlanabilirlik [Sunum linki](ders10.qmd)

@@ -1,0 +1,79 @@
+---
+title: "Ders 11: Bilimsel tekrarlanabilirlik"
+subtitle: "MBG1032 Biyoistatistik - Doç.Dr.Alper YILMAZ - *23 Mayıs 2025*"
+format:
+  revealjs:
+    chalkboard: true
+    css: custom.css
+    smaller: true
+    scrollable: true
+    slide-number: c/t
+webr:
+  packages: ['ggplot2','infer'] # Install R packages on document open
+filters:
+  - webr
+engine: knitr
+execute:
+  echo: true
+---
+
+## ilk video
+
+Dersiminizin ilk haftalarında izlediğimiz video
+
+<https://www.youtube.com/watch?v=42QuXLucH3Q>
+
+##
+
+{{< video https://youtu.be/42QuXLucH3Q width="100%" height="100%" >}}
+
+## özet
+
+* p-hacking
+* dark chocolate case 
+* 6th sense case 
+* same data different conclusions case (do black players get more red cards? 29 groups work on same data; 8 groups said "equally likely", 19 groups said "more likely" 2 groups said "3 times more likely" 
+* 53 landmark cancer studies only 6 of them can be reproduced
+
+##
+
+> nearly 1/3 of the published results will be wrong even if the things are working normally (ie. statistical power of 80%)
+
+> typical statistical power in studies is around 20-40%
+
+## 
+
+Kaynaklar:
+
+* [Why Most Published Research Findings Are False](https://journals.plos.org/plosmedicine/article?id=10.1371/journal.pmed.0020124) PLoS article
+* [Understanding the p-value - Statistics Help](https://www.youtube.com/watch?v=eyknGvncKLw)
+* [Science Isn’t Broken](https://fivethirtyeight.com/features/science-isnt-broken/#part1)
+* [I Fooled Millions Into Thinking Chocolate Helps Weight Loss. Here's How](https://io9.gizmodo.com/i-fooled-millions-into-thinking-chocolate-helps-weight-1707251800)
+
+## ikinci video
+
+[The Four Most Dangerous Words? A New Study Shows | Laura Arnold | TEDxPennsylvaniaAvenue](https://www.youtube.com/watch?v=Y2y7BzjbSNo)
+
+##
+
+{{< video https://youtu.be/Y2y7BzjbSNo width="100%" height="100%" >}}
+
+## özet
+
+* "power posing" çalışması
+* beslenme ve sağlık alanında örnek sayısı düşük, yanlış metodoloji ve seçici raporlama
+* "file drawer effect" ve "p-hacking"
+
+## beslenme üzerine çalışma
+
+![](images/everythin-causes-cancer.png)
+
+
+## başka bir çalışma
+
+![](images/reprod-study.png)
+
+##
+
+![](images/reprod-study2.png)
+
