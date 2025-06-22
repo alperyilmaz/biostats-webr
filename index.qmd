@@ -71,3 +71,8 @@
 ## Ders11
 
 **Teorik** (*23 Mayıs 2025*): Bilimsel tekrarlanabilirlik [Sunum linki](ders10.qmd)
+
+## Ders12
+
+**Teorik** (*26 Mayıs 2025*): Hangi test? [Sunum linki](ders11.qmd)
+

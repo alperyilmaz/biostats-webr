@@ -1,0 +1,88 @@
+---
+title: "Ders 12: Hangi Test?"
+subtitle: "MBG1032 Biyoistatistik - Doç.Dr.Alper YILMAZ - *26 Mayıs 2025*"
+format:
+  revealjs:
+    chalkboard: true
+    css: custom.css
+    smaller: true
+    scrollable: true
+    slide-number: c/t
+webr:
+  packages: ['ggplot2','infer'] # Install R packages on document open
+filters:
+  - webr
+engine: knitr
+execute:
+  echo: true
+---
+
+## Hangi test ne zaman kullanılmalı?
+
+
+## Veri tipi ve dağılıma göre testler
+
+Parametrik:
+
+
+## 
+
+### Unpaired - eşli olmayan veri tipi
+
+
+![](images/veri-tipi-dagilim.png)
+
+:::footer
+Kaynak: Nayak, Barun K; Hazra, Avijit1. How to choose the right statistical test?. Indian Journal of Ophthalmology 59(2):p 85-86, Mar–Apr 2011. | DOI: [10.4103/0301-4738.77005](https://journals.lww.com/ijo/fulltext/2011/59020/how_to_choose_the_right_statistical_test_.1.aspx) 
+:::
+
+##
+
+
+### Paired - eşli veriler
+
+![](images/paired-tests.png)
+
+:::footer
+Kaynak: Nayak, Barun K; Hazra, Avijit1. How to choose the right statistical test?. Indian Journal of Ophthalmology 59(2):p 85-86, Mar–Apr 2011. | DOI: [10.4103/0301-4738.77005](https://journals.lww.com/ijo/fulltext/2011/59020/how_to_choose_the_right_statistical_test_.1.aspx) 
+:::
+
+
+##
+
+![](images/single-comparison.png)
+
+:::footer
+Kaynak: [Statstutor Kaynakları](https://www.statstutor.ac.uk/types/staffresources/trainingresources/) [PDF-link](https://www.statstutor.ac.uk/resources/uploaded/tutorsquickguidetostatistics.pdf)
+:::
+
+##
+
+![](images/test-assoc.png)
+
+:::footer
+Kaynak: [Statstutor Kaynakları](https://www.statstutor.ac.uk/types/staffresources/trainingresources/) [PDF-link](https://www.statstutor.ac.uk/resources/uploaded/tutorsquickguidetostatistics.pdf)
+:::
+
+
+## 
+
+|                              				Research Question 			                            |               				Type of Data 			             |                				Statistical Test 			               |
+|:--------------------------------------------------------------------------:|:---------------------------------------:|:----------------------------------------------:|
+|  				Is there a difference between two unpaired groups? 			                       |  				Continuous (normally distributed) 			     |  				t-test 			                                       |
+|  				Is there a difference between two unpaired groups? 			                       |  				Continuous (not normally distributed) 			 |  				Wilcoxon rank-sum test (Mann-Whitney U test) 			 |
+|  				Is there a difference between more than two unpaired groups? 			             |  				Continuous (normally distributed) 			     |  				One-way ANOVA 			                                |
+|  				Is there a difference between more than two unpaired groups? 			             |  				Continuous (not normally distributed) 			 |  				Kruskal-Wallis test 			                          |
+|  				Is there a difference between two paired groups? 			                         |  				Continuous (normally distributed) 			     |  				Paired t-test 			                                |
+|  				Is there a difference between two paired groups? 			                         |  				Continuous (not normally distributed) 			 |  				Wilcoxon signed-rank test 			                    |
+|  				Is there a difference between more than two paired groups? 			               |  				Continuous (normally distributed) 			     |  				Repeated measures ANOVA 			                      |
+|  				Is there a difference between more than two paired groups? 			               |  				Continuous (not normally distributed) 			 |  				Friedman test 			                                |
+|  				Is there an association between two continuous variables? 			                |  				Continuous 			                            |  				Pearson correlation test 			                     |
+|  				Is there an association between two categorical variables? 			               |  				Categorical 			                           |  				Chi-squared test 			                             |
+|  				Is there an association between a continuous and a categorical 				variable? 			 |  				Continuous and categorical 			            |  				ANOVA or regression analysis 			                 |
+
+
+## Ek kaynaklar
+
+* İnteraktif olarak test seçmek için: <https://www.statsflowchart.co.uk/>
+* Formül ve özellikleri detaylı gösteren liste: <https://www.statskingdom.com/>
