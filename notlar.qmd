@@ -1,0 +1,39 @@
+---
+title: "Notlar"
+format: html
+---
+
+Aşağıda, öğrenci numaranız ve notlarınızı görebilirsiniz.
+
+```{r}
+#| echo: false
+#| warning: false
+library(tidyverse)
+library(gt)
+
+read_csv("notlar.csv") |>
+  gt() |>
+  cols_align(
+  align = c("center"),
+  columns = everything()
+) |>
+  sub_missing(
+  columns = everything(),
+  rows = everything(),
+  missing_text = "-"
+)
+```
+
+## Harf aralıkları
+
+| Alt limit | Harf |
+|:---------:|:----:|
+| 87  | AA  |
+| 78 |  BA  |
+| 68 |  BB  |
+| 59 |  CB  |
+| 49  | CC  |
+| 40  | DC  |
+| 25 |  DD  |
+| 10 |  FD  |
+|  0 | FF   |

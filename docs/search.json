@@ -126,466 +126,319 @@
     "text": "Öğretim Çıktıları\nBu uygulama sonunda öğrenciler:\n\nKi-kare testinin farklı türlerini ayırt edebilir ve uygun durumda kullanabilir\nKi-kare testinin sıfır hipotezini (H₀) doğru bir şekilde ifade edebilir\nR’da dchisq(), pchisq(), qchisq(), rchisq() ve chisq.test() fonksiyonlarını kullanabilir\nKi-kare test sonuçlarını yorumlayabilir ve görselleştirebilir\nKi-kare testini genetik, ekoloji ve diğer biyolojik çalışmalarda uygulayabilir"
   },
   {
-    "objectID": "ders07.html#özet",
-    "href": "ders07.html#özet",
-    "title": "Ders 7: ANOVA (Varyans Analizi)",
+    "objectID": "notlar.html",
+    "href": "notlar.html",
+    "title": "Notlar",
+    "section": "",
+    "text": "Aşağıda, öğrenci numaranız ve notlarınızı görebilirsiniz.\nÖğrenci No\nVize(%30)\nVize2(%30)\nVize Maz.(%30)\nFinal(%40)\nOrtalama\nÖnizl. Harf\n\n\n\n\nÇ19056064\n78\n68\n-\n68\n71\nBB\n\n\nÇ20056610\n83\n80\n-\n60\n73\nBB\n\n\nÇ22023622\n85\n90\n-\n98\n92\nAA\n\n\n20028606\n46\n10\n-\n20\n25\nDD\n\n\n21028008\n-\n-\n-\n-\n0\nFF\n\n\n21028022\n25\n0\n-\n15\n14\nFD\n\n\n21028916\n28\n-\n-\n-\n8\nFF\n\n\n22028083\n-\n-\n-\n-\n0\nFF\n\n\n23028036\n-\n-\n-\n-\n0\nFF\n\n\n23028051\n50\n35\n-\n-\n26\nFF\n\n\n23028056\n57\n10\n-\n15\n26\nDD\n\n\n23028057\n-\n-\n-\n-\n0\nFF\n\n\n23028604\n80\n20\n-\n39\n46\nDC\n\n\n23028606\n43\n18\n-\n58\n42\nDC\n\n\n23028614\n80\n-\n-\n70\n52\nCC\n\n\n23028615\n25\n57\n-\n24\n34\nDD\n\n\n23028901\n96\n66\n-\n10\n53\nCC\n\n\n23028908\n78\n70\n-\n31\n57\nCC\n\n\n24028001\n83\n65\n-\n32\n57\nCC\n\n\n24028002\n90\n67\n-\n77\n78\nBA\n\n\n24028007\n86\n69\n-\n59\n70\nBB\n\n\n24028009\n82\n53\n-\n47\n59\nCB\n\n\n24028010\n-\n0\n-\n-\n0\nFF\n\n\n24028011\n56\n79\n-\n70\n69\nBB\n\n\n24028015\n-\n67\n80\n8\n47\nDC\n\n\n24028019\n64\n21\n-\n13\n31\nDD\n\n\n24028021\n42\n48\n-\n69\n55\nCC\n\n\n24028022\n64\n78\n-\n75\n73\nBB\n\n\n24028023\n93\n73\n-\n45\n68\nBB\n\n\n24028024\n100\n95\n-\n97\n97\nAA\n\n\n24028025\n76\n79\n-\n90\n83\nBA\n\n\n24028027\n67\n47\n-\n46\n53\nCC\n\n\n24028029\n100\n78\n-\n64\n79\nBA\n\n\n24028031\n66\n95\n-\n64\n74\nBB\n\n\n24028034\n65\n55\n-\n12\n41\nDC\n\n\n24028035\n79\n95\n-\n88\n87\nAA\n\n\n24028037\n64\n0\n-\n20\n27\nDD\n\n\n24028038\n13\n0\n-\n-\n4\nFF\n\n\n24028039\n94\n85\n-\n68\n81\nBA\n\n\n24028041\n66\n83\n-\n60\n69\nBB\n\n\n24028042\n92\n90\n-\n86\n89\nAA\n\n\n24028044\n56\n49\n-\n44\n49\nCC\n\n\n24028045\n40\n19\n-\n42\n35\nDD\n\n\n24028046\n68\n77\n-\n86\n78\nBA\n\n\n24028048\n33\n-\n-\n-\n10\nFF\n\n\n24028050\n79\n77\n-\n44\n64\nCB\n\n\n24028051\n100\n57\n-\n70\n75\nBB\n\n\n24028052\n78\n87\n-\n88\n85\nBA\n\n\n24028053\n76\n22\n-\n21\n38\nDD\n\n\n24028054\n100\n40\n-\n-\n42\nFF\n\n\n24028055\n87\n47\n-\n59\n64\nCB\n\n\n24028057\n64\n66\n-\n56\n61\nCB\n\n\n24028058\n36\n87\n-\n71\n65\nCB\n\n\n24028059\n86\n81\n-\n53\n71\nBB\n\n\n24028060\n100\n69\n-\n55\n73\nBB\n\n\n24028062\n57\n67\n-\n45\n55\nCC\n\n\n24028063\n54\n0\n-\n-\n16\nFF\n\n\n24028064\n0\n0\n-\n-\n0\nFF\n\n\n24028066\n86\n30\n-\n42\n52\nCC\n\n\n24028067\n63\n68\n-\n33\n53\nCC\n\n\n24028068\n52\n88\n-\n29\n54\nCC\n\n\n24028071\n91\n72\n-\n87\n84\nBA\n\n\n24028607\n50\n-\n-\n-\n15\nFF\n\n\n24028608\n90\n87\n-\n69\n81\nBA\n\n\n24028609\n10\n0\n-\n-\n3\nFF\n\n\n24028610\n74\n60\n-\n69\n68\nBB\n\n\n24028611\n76\n47\n-\n0\n37\nDD\n\n\n24028612\n90\n60\n-\n75\n75\nBB\n\n\n24028613\n80\n95\n-\n44\n70\nBB\n\n\n24028614\n-\n-\n-\n-\n0\nFF\n\n\n24028701\n92\n5\n-\n5\n31\nDD\n\n\n24028702\n32\n0\n-\n-\n10\nFF\n\n\n24028902\n100\n88\n-\n63\n82\nBA\n\n\n24028904\n62\n82\n-\n68\n70\nBB\n\n\n24028908\n95\n88\n-\n38\n70\nBB\n\n\n24028910\n98\n85\n-\n81\n87\nAA\n\n\n24028911\n0\n-\n-\n0\n0\nFF\n\n\n24028913\n61\n81\n-\n-\n43\nFF\n\n\n24028914\n90\n79\n-\n67\n78\nBA"
+  },
+  {
+    "objectID": "notlar.html#harf-aralıkları",
+    "href": "notlar.html#harf-aralıkları",
+    "title": "Notlar",
+    "section": "Harf aralıkları",
+    "text": "Harf aralıkları\n\n\n\nAlt limit\nHarf\n\n\n\n\n87\nAA\n\n\n78\nBA\n\n\n68\nBB\n\n\n59\nCB\n\n\n49\nCC\n\n\n40\nDC\n\n\n25\nDD\n\n\n10\nFD\n\n\n0\nFF"
+  },
+  {
+    "objectID": "ders02.html#özet",
+    "href": "ders02.html#özet",
+    "title": "Ders2: Sayısal ve Görsel Özetleme",
     "section": "Özet",
-    "text": "Özet\n\nANOVA (Varyans Analizi) nedir ve ne zaman kullanılır?\nt-testi ile ANOVA arasındaki fark\nTek Yönlü ANOVA (One-Way ANOVA)\nANOVA’nın varsayımları\nF-dağılımı ve F-istatistiği\nR ile ANOVA uygulamaları\nANOVA sonuçlarının yorumlanması ve raporlanması\nPost-hoc testleri (Tukey HSD, Bonferroni)\nBiyolojide ANOVA uygulamaları"
+    "text": "Özet\n\nortalama ve standart sapma\ndağılımların çeşitli ölçümleri\n\nrange, IQR\nhistogram\nboxplot"
   },
   {
-    "objectID": "ders07.html#anova-varyans-analizi-nedir",
-    "href": "ders07.html#anova-varyans-analizi-nedir",
-    "title": "Ders 7: ANOVA (Varyans Analizi)",
-    "section": "ANOVA (Varyans Analizi) Nedir?",
-    "text": "ANOVA (Varyans Analizi) Nedir?\nANOVA, ikiden fazla grup ortalaması arasındaki farkların istatistiksel anlamlılığını değerlendirmek için kullanılan parametrik bir testtir.\nKullanım Amacı:\n\nİkiden fazla grubun karşılaştırılması\nBir veya daha fazla faktörün (bağımsız değişkenlerin) bir bağımlı değişken üzerindeki etkisini incelemek\nGruplar arası farklılıkların rastgele şans eseri mi yoksa gerçek bir etkiden mi kaynaklandığını belirlemek\n\nTemel Fikir:\nGruplar arası varyans ile gruplar içi varyansı karşılaştırarak, faktörün anlamlı bir etkisi olup olmadığını belirlemek"
+    "objectID": "ders02.html#ortalama-ve-median",
+    "href": "ders02.html#ortalama-ve-median",
+    "title": "Ders2: Sayısal ve Görsel Özetleme",
+    "section": "Ortalama ve median",
+    "text": "Ortalama ve median\nOrtalama: Değerler toplamının değer sayısına bölünmesi ile hesaplanır.\n\\[\n\\overline{x} = \\frac{\\displaystyle\\sum_{i=1}^{n} x_i}{n}\n\\]\nMedian: Sıralı değerlerin orta noktasıdır. Çift sayıda değer varsa, median, ortadaki iki sayının ortalamasıdır."
   },
   {
-    "objectID": "ders07.html#t-testi-vs.-anova",
-    "href": "ders07.html#t-testi-vs.-anova",
-    "title": "Ders 7: ANOVA (Varyans Analizi)",
-    "section": "t-testi vs. ANOVA",
-    "text": "t-testi vs. ANOVA\nNeden ANOVA? Neden çoklu t-testi kullanmıyoruz?\n\nİkiden fazla grup olduğunda t-testi yerine ANOVA kullanılır\nÇoklu t-testleri yapmak, Tip I hata (yanlış pozitif) olasılığını artırır\n\nÖrnek: 3 grup karşılaştırması yapıyorsak:\n\nA vs B, A vs C, B vs C = 3 farklı t-testi\nHer test için α = 0.05 olsaydı, gerçekte:\n\nEn az bir testte yanlış pozitif bulma olasılığı: 1-(1-0.05)³ = 0.143\n\n\nTip I hata olasılığı 0.05 yerine 0.143’e çıkar!\nANOVA, bu \"çoklu karşılaştırma problemini\" çözer ve genel hata oranını kontrol altında tutar."
+    "objectID": "ders02.html#ortalama-ve-median-1",
+    "href": "ders02.html#ortalama-ve-median-1",
+    "title": "Ders2: Sayısal ve Görsel Özetleme",
+    "section": "Ortalama ve median",
+    "text": "Ortalama ve median\n\n\n\n\n\n\nSoru\n\n\nBir veri setine çok büyük veya çok küçük bir sayı eklendiğinde, hangisi daha çok etkilenir, ortalama mı, median mı?\n\n\n\nAşağıdaki örnekte, deneme vektörüne 100 sayısını ekleyip ortalama ve median değerlerini hesaplayın ve karşılaştırın.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
   },
   {
-    "objectID": "ders07.html#anova-türleri",
-    "href": "ders07.html#anova-türleri",
-    "title": "Ders 7: ANOVA (Varyans Analizi)",
-    "section": "ANOVA Türleri",
-    "text": "ANOVA Türleri\nİstatistikte birçok ANOVA türü vardır:\n\nTek Yönlü ANOVA (One-Way ANOVA):\n\nTek bir faktörün etkisini incelemek için kullanılır\nÖrnek: Farklı gübre türlerinin (A, B, C) bitki büyümesine etkisi\n\nİki Yönlü ANOVA (Two-Way ANOVA):\n\nİki faktörün etkisini ve bu faktörlerin etkileşimini incelemek için kullanılır\nÖrnek: Hem gübre türünün hem de sulama sıklığının bitki büyümesine etkisi\n\nTekrarlı Ölçümler ANOVA (Repeated Measures ANOVA):\n\nAynı deneklerin farklı koşullarda veya zaman noktalarında ölçümlerini karşılaştırmak için kullanılır\nÖrnek: Aynı hastaların tedavi öncesi, tedaviden 1 ay sonra ve 3 ay sonraki değerlerinin karşılaştırılması\n\n\nBu derste ağırlıklı olarak Tek Yönlü ANOVA üzerinde duracağız."
+    "objectID": "ders02.html#dağılımların-çeşitli-ölçümleri",
+    "href": "ders02.html#dağılımların-çeşitli-ölçümleri",
+    "title": "Ders2: Sayısal ve Görsel Özetleme",
+    "section": "Dağılımların çeşitli ölçümleri",
+    "text": "Dağılımların çeşitli ölçümleri\nRange/Aralık: En küçük ve büyük değer arasındaki farktır. R’da range() fonskiyonu en düşük ve yüksek değerleri gösterir. Farkı bulmak için max() ve min() fonksiyon çıktıları kullanılabilir.\nIQR: (Interquartile range veya Çeyrekler Arası Aralık) verilerin 1. ve 3. çeyreğinin arasındaki farkı gösterir. R’da IQR() fonksiyonu bu değerleri hesaplar.\n\nrange(iris$Sepal.Length)\n\n[1] 4.3 7.9\n\nIQR(iris$Sepal.Length)\n\n[1] 1.3\n\nquantile(iris$Sepal.Length)\n\n  0%  25%  50%  75% 100% \n 4.3  5.1  5.8  6.4  7.9"
   },
   {
-    "objectID": "ders07.html#tek-yönlü-anova-modeli",
-    "href": "ders07.html#tek-yönlü-anova-modeli",
-    "title": "Ders 7: ANOVA (Varyans Analizi)",
-    "section": "Tek Yönlü ANOVA Modeli",
-    "text": "Tek Yönlü ANOVA Modeli\nTek Yönlü ANOVA’da:\n\nBir bağımlı değişken (sürekli)\nBir kategorik faktör (bağımsız değişken)\nHer faktör seviyesi, bir grubu temsil eder\n\nMatematiksel Model:\n\\[Y_{ij} = \\mu + \\alpha_i + \\epsilon_{ij}\\]\nBurada:\n\n\\(Y_{ij}\\) = i. gruptaki j. gözlem\n\\(\\mu\\) = genel ortalama\n\\(\\alpha_i\\) = i. grubun etkisi (\\(\\alpha_1 + \\alpha_2 + ... + \\alpha_k = 0\\))\n\\(\\epsilon_{ij}\\) = hata terimi (rastgele değişkenlik)"
+    "objectID": "ders02.html#varyans-ve-standart-sapma",
+    "href": "ders02.html#varyans-ve-standart-sapma",
+    "title": "Ders2: Sayısal ve Görsel Özetleme",
+    "section": "Varyans ve standart sapma",
+    "text": "Varyans ve standart sapma\nVaryans: \\(s^2\\) ile gösterilir, veri setindeki sayıların ortalamadan ne kadar uzak/yakın olduğunu gösterir.\n\\[\ns^2 = \\frac{\\sum_{i=1}^n (x_i - \\overline{x})^2}{n-1}\n\\]\nStandard sapma: Varyansın kareköküdür.\n\\[\ns = \\sqrt{s^2} = \\sqrt{\\frac{\\sum_{i=1}^n (x_i - \\overline{x})^2}{n-1}}\n\\]\nFormülden anlaşılacağı üzere, veri setindeki dağınıklık, ortalamadan uzaklık arttıkça varyans da artmaktadır. Varyans var() fonskiyonu ile, standart sapma ise sd() fonksiyonu ile hesaplanır."
   },
   {
-    "objectID": "ders07.html#anovanın-hipotezleri",
-    "href": "ders07.html#anovanın-hipotezleri",
-    "title": "Ders 7: ANOVA (Varyans Analizi)",
-    "section": "ANOVA’nın Hipotezleri",
-    "text": "ANOVA’nın Hipotezleri\nSıfır Hipotezi (H₀): Tüm grup ortalamaları birbirine eşittir. \\[H_0: \\mu_1 = \\mu_2 = ... = \\mu_k\\]\nAlternatif Hipotez (H₁): En az bir grup ortalaması diğerlerinden farklıdır.\n\\[H_1: \\    ext{En az bir } \\mu_i \\\neq \\mu_j \\  ext{ (i ≠ j için)}\\]\n\nÖnemli Not: Alternatif hipotez, hangi grup ortalamalarının farklı olduğunu belirtmez, sadece en az bir farklılık olduğunu söyler.\nHangi grup ortalamalarının farklı olduğunu belirlemek için, ANOVA’dan sonra post-hoc testleri kullanılır."
+    "objectID": "ders02.html#görsel-özetleme",
+    "href": "ders02.html#görsel-özetleme",
+    "title": "Ders2: Sayısal ve Görsel Özetleme",
+    "section": "Görsel Özetleme",
+    "text": "Görsel Özetleme\nHistogram: Bir veri setindeki değerlerin dağılımını göstermak için, belirli aralıktaki değerlerin frekansını gösteren grafiklerdir. hist() fonksiyonu ile çizilebilir."
   },
   {
-    "objectID": "ders07.html#anovanın-varsayımları",
-    "href": "ders07.html#anovanın-varsayımları",
-    "title": "Ders 7: ANOVA (Varyans Analizi)",
-    "section": "ANOVA’nın Varsayımları",
-    "text": "ANOVA’nın Varsayımları\nANOVA, t-testine benzer şekilde, bazı varsayımlar üzerine kuruludur:\n\nBağımsızlık: Gözlemler birbirinden bağımsız olmalıdır.\nNormallik: Her gruptaki verilerin normal dağılması veya örneklem boyutunun yeterince büyük olması (n&gt;30).\nVaryansların Homojenliği (Homoscedasticity): Tüm gruplardaki varyansların yaklaşık olarak eşit olması.\n\nNot: Varsayımlar karşılanmadığında, parametrik olmayan alternatifler düşünülmelidir (örn. Kruskal-Wallis testi)."
+    "objectID": "ders02.html#histogram-ayarlar",
+    "href": "ders02.html#histogram-ayarlar",
+    "title": "Ders2: Sayısal ve Görsel Özetleme",
+    "section": "Histogram ayarlar",
+    "text": "Histogram ayarlar\nbreaks parametresi ile histogramın ayrılacağı aralık sayısı ayarlanabilir\n\n\n\nhist(iris$Sepal.Length)\n\n\n\n\n\n\n\n\n\n\nhist(iris$Sepal.Length, \n     breaks = 15)"
   },
   {
-    "objectID": "ders07.html#varyansların-ayrışımı",
-    "href": "ders07.html#varyansların-ayrışımı",
-    "title": "Ders 7: ANOVA (Varyans Analizi)",
-    "section": "Varyansların Ayrışımı",
-    "text": "Varyansların Ayrışımı\nANOVA’nın adı \"Varyans Analizi\"dir çünkü toplam varyansı iki bileşene ayırır:\n1. Gruplar Arası Varyans (Between-Groups Variance):\n\nGrup ortalamalarının genel ortalamadan ne kadar farklı olduğunu gösterir\nEğer büyükse, gruplar arasında gerçek farklılıklar olduğunu düşündürür\n\n2. Gruplar İçi Varyans (Within-Groups Variance):\n\nGrup içindeki bireysel gözlemlerin, kendi grup ortalamasından ne kadar farklı olduğunu gösterir\nRastgele hata veya faktör dışındaki etkilerden kaynaklanır\n\nF-istatistiği = Gruplar Arası Varyans / Gruplar İçi Varyans\n\nF-değeri büyükse → Gruplar arasındaki farklılıklar, grup içi varyasyondan daha büyüktür → H₀ reddedilir"
+    "objectID": "ders02.html#histogram",
+    "href": "ders02.html#histogram",
+    "title": "Ders2: Sayısal ve Görsel Özetleme",
+    "section": "Histogram",
+    "text": "Histogram\nDaha güzel ve karmaşık bir görselleştirme için ggplot2 paketi kullanılabilir.\n\nlibrary(ggplot2)\nggplot(iris, aes(Sepal.Length)) +\n  geom_histogram(color = \"#000000\", fill = \"#0099F8\")"
   },
   {
-    "objectID": "ders07.html#kareler-toplamı",
-    "href": "ders07.html#kareler-toplamı",
-    "title": "Ders 7: ANOVA (Varyans Analizi)",
-    "section": "Kareler Toplamı",
-    "text": "Kareler Toplamı\nANOVA’da varyans analizi için, kareler toplamı (Sum of Squares - SS) hesaplanır:\n1. Toplam Kareler Toplamı (SST):\n\\[SST = \\sum_{i=1}^{k}\\sum_{j=1}^{n_i}(Y_{ij} - \\bar{Y})^2\\]\n2. Gruplar Arası Kareler Toplamı (SSB): \\[SSB = \\sum_{i=1}^{k}n_i(\\bar{Y}_i - \\bar{Y})^2\\]\n3. Gruplar İçi Kareler Toplamı (SSW): \\[SSW = \\sum_{i=1}^{k}\\sum_{j=1}^{n_i}(Y_{ij} - \\bar{Y}_i)^2\\]\nİlişki: SST = SSB + SSW"
+    "objectID": "ders02.html#ggplot2-ile-histogram",
+    "href": "ders02.html#ggplot2-ile-histogram",
+    "title": "Ders2: Sayısal ve Görsel Özetleme",
+    "section": "ggplot2 ile histogram",
+    "text": "ggplot2 ile histogram\n\nggplot(iris, aes(Sepal.Length)) +\n  geom_histogram(color = \"#000000\", fill = \"#0099F8\") +\n  geom_vline(aes(xintercept = mean(Sepal.Length)), color = \"#000000\", size = 1.25) +\n  geom_vline(aes(xintercept = mean(Sepal.Length) + sd(Sepal.Length)), color = \"#000000\", size = 1, linetype = \"dashed\") +\n  geom_vline(aes(xintercept = mean(Sepal.Length) - sd(Sepal.Length)), color = \"#000000\", size = 1, linetype = \"dashed\") +\n  theme_bw()"
   },
   {
-    "objectID": "ders07.html#ortalama-kareler-ve-f-istatistiği",
-    "href": "ders07.html#ortalama-kareler-ve-f-istatistiği",
-    "title": "Ders 7: ANOVA (Varyans Analizi)",
-    "section": "Ortalama Kareler ve F-İstatistiği",
-    "text": "Ortalama Kareler ve F-İstatistiği\nKareler toplamı değerleri, ilgili serbestlik dereceleri ile bölünerek ortalama kareler (Mean Squares - MS) hesaplanır:\n1. Gruplar Arası Ortalama Kareler (MSB): \\[MSB = \\frac{SSB}{k-1}\\]\n2. Gruplar İçi Ortalama Kareler (MSW): \\[MSW = \\frac{SSW}{N-k}\\]\nF-İstatistiği: \\[F = \\frac{MSB}{MSW}\\]\nBurada:\n\nk = grup sayısı\nN = toplam gözlem sayısı\n\nF-değeri, α düzeyindeki kritik F-değeri ile karşılaştırılır. Eğer hesaplanan F-değeri kritik değerden büyükse, H₀ reddedilir."
+    "objectID": "ders02.html#boxplot",
+    "href": "ders02.html#boxplot",
+    "title": "Ders2: Sayısal ve Görsel Özetleme",
+    "section": "Boxplot",
+    "text": "Boxplot\n\n\nGörsel kaynak: Box Plot with Minitab"
   },
   {
-    "objectID": "ders07.html#f-dağılımı",
-    "href": "ders07.html#f-dağılımı",
-    "title": "Ders 7: ANOVA (Varyans Analizi)",
-    "section": "F-Dağılımı",
-    "text": "F-Dağılımı\nF-dağılımı, iki farklı varyans tahmininin oranı olarak hesaplanan F-istatistiği için örnekleme dağılımıdır.\nÖzellikleri:\n\nSıfırdan büyük değerler alır (F ≥ 0)\nSağa çarpık bir dağılımdır\nİki serbestlik derecesi parametresi vardır: df₁ (payda) ve df₂ (payda)\nH₀ doğruysa, F-değeri 1’e yakındır"
+    "objectID": "ders02.html#r-ile-boxplot",
+    "href": "ders02.html#r-ile-boxplot",
+    "title": "Ders2: Sayısal ve Görsel Özetleme",
+    "section": "R ile Boxplot",
+    "text": "R ile Boxplot\nboxplot() fonksiyonu bir vektör (sütün) veya veri tablosu (data frame) için çalıştırılabilir.\n\nboxplot(iris$Sepal.Length)"
   },
   {
-    "objectID": "ders07.html#section",
-    "href": "ders07.html#section",
-    "title": "Ders 7: ANOVA (Varyans Analizi)",
+    "objectID": "ders02.html#r-ile-boxplot---veri-tablosu",
+    "href": "ders02.html#r-ile-boxplot---veri-tablosu",
+    "title": "Ders2: Sayısal ve Görsel Özetleme",
+    "section": "R ile Boxplot - veri tablosu",
+    "text": "R ile Boxplot - veri tablosu\n\nboxplot(iris)"
+  },
+  {
+    "objectID": "ders02.html#farklı-görselleştirmeler",
+    "href": "ders02.html#farklı-görselleştirmeler",
+    "title": "Ders2: Sayısal ve Görsel Özetleme",
+    "section": "Farklı görselleştirmeler",
+    "text": "Farklı görselleştirmeler\nggplot2 veya temel R’da farklı görselleştirmeler yapılabilir.\n\n\nGörsel kaynak: Plot Grouped Data: Box plot, Bar Plot and More"
+  },
+  {
+    "objectID": "ders02.html#ek-kaynaklar",
+    "href": "ders02.html#ek-kaynaklar",
+    "title": "Ders2: Sayısal ve Görsel Özetleme",
+    "section": "Ek kaynaklar",
+    "text": "Ek kaynaklar\n\nSTHDA sitesinde “Descriptive Statistics and Graphics” adlı sayfa, bu sunumdaki bilgilere ek bilgiler içerir.\nSadece sayısal özet yeterli olmayabilir. Veriyi her zaman görselleştirmek gerekir. Same Stats, Different Graphs"
+  },
+  {
+    "objectID": "ders04.html#özet",
+    "href": "ders04.html#özet",
+    "title": "Ders 4: Güven Aralıkları ve Hipotez Testi",
+    "section": "Özet",
+    "text": "Özet\n\nNokta tahmini vs. Aralık tahmini\nGüven aralığı nedir?\nGüven aralığının yorumlanması\nGüven aralığını etkileyen faktörler\nOrtalama için güven aralığı hesaplama (R ile)"
+  },
+  {
+    "objectID": "ders04.html#tahmin-etme-ihtiyacı",
+    "href": "ders04.html#tahmin-etme-ihtiyacı",
+    "title": "Ders 4: Güven Aralıkları ve Hipotez Testi",
+    "section": "Tahmin Etme İhtiyacı",
+    "text": "Tahmin Etme İhtiyacı\nBiyolojide genellikle tüm popülasyonu (evreni) incelemek yerine, popülasyondan alınan bir örneklem üzerinden çıkarımlar yaparız.\n\nPopülasyon Parametresi: Popülasyonun tamamını tanımlayan sayısal bir değer (örn. popülasyondaki tüm insanların ortalama boyu - \\(\\mu\\)). Genellikle bilinmez.\nÖrneklem İstatistiği: Örneklemden hesaplanan ve popülasyon parametresini tahmin etmek için kullanılan sayısal bir değer (örn. örneklemdeki insanların ortalama boyu - \\(\\overline{x}\\)).\n\nAmacımız, örneklem istatistiğini kullanarak bilinmeyen popülasyon parametresi hakkında bilgi edinmektir."
+  },
+  {
+    "objectID": "ders04.html#nokta-tahmini-vs.-aralık-tahmini",
+    "href": "ders04.html#nokta-tahmini-vs.-aralık-tahmini",
+    "title": "Ders 4: Güven Aralıkları ve Hipotez Testi",
+    "section": "Nokta Tahmini vs. Aralık Tahmini",
+    "text": "Nokta Tahmini vs. Aralık Tahmini\n\nNokta Tahmini: Popülasyon parametresi için tek bir değer tahmini (örn. \\(\\overline{x}\\), \\(\\mu\\)’nün nokta tahminidir).\n\nBasittir ancak tahminin ne kadar hassas olduğu hakkında bilgi vermez. Örneklemden örnekleme değişir.\n\nAralık Tahmini (Güven Aralığı): Popülasyon parametresini belirli bir güvenilirlik seviyesiyle içermesi beklenen bir değer aralığıdır.\n\nTahminin belirsizliğini veya hassasiyetini gösterir."
+  },
+  {
+    "objectID": "ders04.html#section",
+    "href": "ders04.html#section",
+    "title": "Ders 4: Güven Aralıkları ve Hipotez Testi",
     "section": "",
-    "text": "Görsel Kaynak: Wikimedia Commons"
+    "text": "Görsel Kaynak: Medium - Understanding Confidence Intervals"
   },
   {
-    "objectID": "ders07.html#anova-tablosu",
-    "href": "ders07.html#anova-tablosu",
-    "title": "Ders 7: ANOVA (Varyans Analizi)",
-    "section": "ANOVA Tablosu",
-    "text": "ANOVA Tablosu\nANOVA sonuçları genellikle bir tablo ile özetlenir:\n\n\n\n\n\n\n\n\n\n\n\nVaryasyon Kaynağı\nSS\ndf\nMS\nF\np-değeri\n\n\n\n\nGruplar Arası (Between)\nSSB\nk-1\nMSB = SSB/(k-1)\nF = MSB/MSW\np\n\n\nGruplar İçi (Within)\nSSW\nN-k\nMSW = SSW/(N-k)\n\n\n\n\nToplam\nSST\nN-1\n\n\n\n\n\n\n\nk = grup sayısı\nN = toplam gözlem sayısı\np-değeri &lt; α ise, H₀ reddedilir"
+    "objectID": "ders04.html#güven-aralığı-nedir",
+    "href": "ders04.html#güven-aralığı-nedir",
+    "title": "Ders 4: Güven Aralıkları ve Hipotez Testi",
+    "section": "Güven Aralığı Nedir?",
+    "text": "Güven Aralığı Nedir?\nBir güven aralığı, örneklem verilerine dayanarak hesaplanan ve bilinmeyen popülasyon parametresini (örneğin, ortalama \\(\\mu\\) veya oran p) belirli bir olasılıkla içerdiği düşünülen bir değer aralığıdır.\nGenel formül genellikle şöyledir:\nNokta Tahmini ± Hata Payı\n\nNokta Tahmini: Örneklemden hesaplanan istatistik (örn. \\(\\overline{x}\\)).\nHata Payı: Tahminin ne kadar hassas olduğunu gösterir. Örnekleme değişkenliğine ve istenen güven düzeyine bağlıdır."
   },
   {
-    "objectID": "ders07.html#r-ile-tek-yönlü-anova",
-    "href": "ders07.html#r-ile-tek-yönlü-anova",
-    "title": "Ders 7: ANOVA (Varyans Analizi)",
-    "section": "R ile Tek Yönlü ANOVA",
-    "text": "R ile Tek Yönlü ANOVA\nÖrnek Senaryo: Üç farklı gübre türünün (A, B, C) domates bitkilerinin boy (cm) üzerindeki etkisini analiz edelim.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+    "objectID": "ders04.html#güven-düzeyi-ve-yorumlama",
+    "href": "ders04.html#güven-düzeyi-ve-yorumlama",
+    "title": "Ders 4: Güven Aralıkları ve Hipotez Testi",
+    "section": "Güven Düzeyi ve Yorumlama",
+    "text": "Güven Düzeyi ve Yorumlama\n\nGüven Düzeyi: Genellikle %90, %95 veya %99 olarak seçilir. Bu, aynı popülasyondan tekrar tekrar örneklemler alıp her biri için bir güven aralığı hesaplarsak, bu aralıkların ne kadarının gerçek popülasyon parametresini içereceğini gösteren yüzdedir.\nYaygın Yanlış Yorum: “%95 güven aralığı, popülasyon parametresinin %95 olasılıkla bu aralıkta olduğu anlamına gelir.” BU YANLIŞTIR! Popülasyon parametresi sabit bir değerdir, rastgele değildir. Aralık rastgeledir.\nDoğru Yorum: “Bu popülasyondan alınacak örneklemlerle oluşturulacak %95 güven aralıklarının yaklaşık %95’inin, gerçek popülasyon parametresini içermesini bekleriz.” veya daha pratik olarak “Popülasyon parametresinin bu aralıkta olduğuna %95 güveniyoruz.”"
   },
   {
-    "objectID": "ders07.html#section-1",
-    "href": "ders07.html#section-1",
-    "title": "Ders 7: ANOVA (Varyans Analizi)",
+    "objectID": "ders04.html#section-1",
+    "href": "ders04.html#section-1",
+    "title": "Ders 4: Güven Aralıkları ve Hipotez Testi",
     "section": "",
-    "text": "Please enable JavaScript to experience the dynamic code cell content on this page."
+    "text": "Görsel Kaynak:"
   },
   {
-    "objectID": "ders07.html#anova-analizi",
-    "href": "ders07.html#anova-analizi",
-    "title": "Ders 7: ANOVA (Varyans Analizi)",
-    "section": "ANOVA Analizi",
-    "text": "ANOVA Analizi\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+    "objectID": "ders04.html#güven-aralığının-genişliğini-etkileyen-faktörler",
+    "href": "ders04.html#güven-aralığının-genişliğini-etkileyen-faktörler",
+    "title": "Ders 4: Güven Aralıkları ve Hipotez Testi",
+    "section": "Güven Aralığının Genişliğini Etkileyen Faktörler",
+    "text": "Güven Aralığının Genişliğini Etkileyen Faktörler\n\nGüven Düzeyi: Güven düzeyi arttıkça (örn. %95’ten %99’a), aralık genişler. Daha emin olmak için daha geniş bir aralığa ihtiyaç duyarız.\nÖrneklem Büyüklüğü (n): Örneklem büyüklüğü arttıkça, aralık daralır. Daha fazla veri, daha hassas tahmin sağlar.\nVerinin Değişkenliği (Standart Sapma - s): Verideki değişkenlik (standart sapma) arttıkça, aralık genişler. Daha dağınık veriler daha fazla belirsizlik anlamına gelir."
   },
   {
-    "objectID": "ders07.html#istatistiksel-değerleri-görelim",
-    "href": "ders07.html#istatistiksel-değerleri-görelim",
-    "title": "Ders 7: ANOVA (Varyans Analizi)",
-    "section": "İstatistiksel değerleri görelim",
-    "text": "İstatistiksel değerleri görelim\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+    "objectID": "ders04.html#section-2",
+    "href": "ders04.html#section-2",
+    "title": "Ders 4: Güven Aralıkları ve Hipotez Testi",
+    "section": "",
+    "text": "Görsel Kaynak:"
   },
   {
-    "objectID": "ders07.html#görselleştirme",
-    "href": "ders07.html#görselleştirme",
-    "title": "Ders 7: ANOVA (Varyans Analizi)",
+    "objectID": "ders04.html#ortalama-için-güven-aralığı-mu",
+    "href": "ders04.html#ortalama-için-güven-aralığı-mu",
+    "title": "Ders 4: Güven Aralıkları ve Hipotez Testi",
+    "section": "Ortalama İçin Güven Aralığı (\\(\\mu\\))",
+    "text": "Ortalama İçin Güven Aralığı (\\(\\mu\\))\nPopülasyon standart sapması (\\(\\sigma\\)) bilinmiyorsa (genellikle durum budur), t-dağılımını kullanırız:\n\\[ \\overline{x} \\pm t_{\\alpha/2, n-1} \\times \\frac{s}{\\sqrt{n}} \\]\n\n\\(\\overline{x}\\): Örneklem ortalaması\n\\(s\\): Örneklem standart sapması\n\\(n\\): Örneklem büyüklüğü\n\\(t_{\\alpha/2, n-1}\\): Belirli bir güven düzeyi (\\(\\alpha\\)) ve serbestlik derecesi (\\(n-1\\)) için t-kritik değeri.\n\\(\\frac{s}{\\sqrt{n}}\\): Standart Hata (SE - Standard Error)"
+  },
+  {
+    "objectID": "ders04.html#r-ile-güven-aralığı-hesabı-ortalama",
+    "href": "ders04.html#r-ile-güven-aralığı-hesabı-ortalama",
+    "title": "Ders 4: Güven Aralıkları ve Hipotez Testi",
+    "section": "R ile Güven Aralığı Hesabı (Ortalama)",
+    "text": "R ile Güven Aralığı Hesabı (Ortalama)\nR’da t.test() fonksiyonu, bir vektörün ortalaması için güven aralığını kolayca hesaplar. Varsayılan güven düzeyi %95’tir. iris veri setindeki Sepal.Length (Çanak Yaprak Uzunluğu) için %95 güven aralığını hesaplayalım:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nYorum: Iris çiçeği popülasyonundaki ortalama çanak yaprak uzunluğunun (\\(\\mu\\)) [5.71, 5.97] cm aralığında olduğuna %95 güveniyoruz."
+  },
+  {
+    "objectID": "ders04.html#farklı-güven-düzeyi-ile-hesaplama",
+    "href": "ders04.html#farklı-güven-düzeyi-ile-hesaplama",
+    "title": "Ders 4: Güven Aralıkları ve Hipotez Testi",
+    "section": "Farklı Güven Düzeyi ile Hesaplama",
+    "text": "Farklı Güven Düzeyi ile Hesaplama\n%99 güven düzeyi ile hesaplamak için conf.level argümanını kullanırız:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nGördüğünüz gibi, güven düzeyi %95’ten %99’a çıktığında aralık genişledi ([5.71, 5.97] vs [5.66, 6.01])."
+  },
+  {
+    "objectID": "ders04.html#görselleştirme",
+    "href": "ders04.html#görselleştirme",
+    "title": "Ders 4: Güven Aralıkları ve Hipotez Testi",
     "section": "Görselleştirme",
-    "text": "Görselleştirme\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+    "text": "Görselleştirme\nGüven aralığını görselleştirmek, anlamayı kolaylaştırabilir. Ortalama ve güven aralığını bir grafik üzerinde gösterebiliriz.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
   },
   {
-    "objectID": "ders07.html#post-hoc-testleri",
-    "href": "ders07.html#post-hoc-testleri",
-    "title": "Ders 7: ANOVA (Varyans Analizi)",
-    "section": "Post-hoc Testleri",
-    "text": "Post-hoc Testleri\nANOVA, gruplar arasında bir fark olduğunu söyler, ancak hangi grupların farklı olduğunu söylemez. Bunu belirlemek için post-hoc testleri kullanılır.\nEn Yaygın Post-hoc Testleri:\n\nTukey HSD (Honestly Significant Difference): Tüm olası ikili grup karşılaştırmalarını yapar ve aile bazında hata oranını kontrol eder.\nBonferroni Düzeltmesi: Alfa (α) değerini karşılaştırma sayısına bölerek çoklu test problemini düzeltir.\nScheffé Testi: Tüm olası grup karşılaştırmaları için uygundur, ancak genellikle daha muhafazakardır.\n\nNot: Post-hoc testleri sadece ANOVA sonucu istatistiksel olarak anlamlıysa (p &lt; 0.05) uygulanır."
+    "objectID": "ders04.html#ek-kaynaklar",
+    "href": "ders04.html#ek-kaynaklar",
+    "title": "Ders 4: Güven Aralıkları ve Hipotez Testi",
+    "section": "Ek Kaynaklar",
+    "text": "Ek Kaynaklar\n\nKhan Academy - Confidence Intervals (İngilizce)\nStat Trek - Confidence Interval for Mean (İngilizce)\nVeri Bilimi Okulu - Güven Aralığı (Türkçe)"
   },
   {
-    "objectID": "ders07.html#tukey-hsd-post-hoc-testi",
-    "href": "ders07.html#tukey-hsd-post-hoc-testi",
-    "title": "Ders 7: ANOVA (Varyans Analizi)",
-    "section": "Tukey HSD Post-hoc Testi",
-    "text": "Tukey HSD Post-hoc Testi\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+    "objectID": "ders04.html#hipotez-testleri-özet",
+    "href": "ders04.html#hipotez-testleri-özet",
+    "title": "Ders 4: Güven Aralıkları ve Hipotez Testi",
+    "section": "Hipotez testleri özet",
+    "text": "Hipotez testleri özet\n\nHipotez testi nedir? Mantığı.\nSıfır (H₀) ve Alternatif (H₁) Hipotezler\nHipotez Testi Adımları\nAnlamlılık Düzeyi (\\(\\alpha\\)) ve P-değeri\nTip I ve Tip II Hatalar\nÖrnek: Tek Örneklem t-Testi (R ile)"
   },
   {
-    "objectID": "ders07.html#post-hoc-testlerin-yorumlanması",
-    "href": "ders07.html#post-hoc-testlerin-yorumlanması",
-    "title": "Ders 7: ANOVA (Varyans Analizi)",
-    "section": "Post-hoc Testlerin Yorumlanması",
-    "text": "Post-hoc Testlerin Yorumlanması\nTukey HSD sonuçlarına göre:\n\nGübre B - Gübre A: Gübre B, Gübre A’ya göre anlamlı şekilde daha yüksek bitki boylarına sahiptir (p &lt; 0.001).\nGübre C - Gübre A: Gübre C, Gübre A’ya göre anlamlı şekilde daha yüksek bitki boylarına sahiptir (p &lt; 0.05).\nGübre C - Gübre B: Gübre C ve Gübre B arasında istatistiksel olarak anlamlı bir fark yoktur (p &gt; 0.05).\n\nGenel Sonuç: * Gübre B ve Gübre C, Gübre A’dan daha etkilidir. * Gübre B ve Gübre C arasında anlamlı bir fark yoktur."
+    "objectID": "ders04.html#hipotez-testi-nedir",
+    "href": "ders04.html#hipotez-testi-nedir",
+    "title": "Ders 4: Güven Aralıkları ve Hipotez Testi",
+    "section": "Hipotez Testi Nedir?",
+    "text": "Hipotez Testi Nedir?\nHipotez testi, örneklem verilerini kullanarak bir popülasyon hakkındaki iddiaları (hipotezleri) değerlendirmek için kullanılan istatistiksel bir yöntemdir.\nAmaç: Örneklemden elde edilen kanıtların, popülasyon hakkındaki belirli bir iddiayı (sıfır hipotezi) reddetmek için yeterince güçlü olup olmadığına karar vermek.\nÖrnek Sorular:\n\nYeni bir gübre, bitki boyunu ortalamada artırıyor mu?\nBelirli bir gen mutasyonu, hastalığa yakalanma riskini değiştiriyor mu?\nİki farklı tedavi yönteminin iyileşme oranları arasında fark var mı?"
   },
   {
-    "objectID": "ders07.html#sonuçların-raporlanması",
-    "href": "ders07.html#sonuçların-raporlanması",
-    "title": "Ders 7: ANOVA (Varyans Analizi)",
-    "section": "Sonuçların Raporlanması",
-    "text": "Sonuçların Raporlanması\nAkademik yayınlarda ANOVA sonuçlarını nasıl raporlamalıyız?\n\"Gübre türünün domates bitkilerinin boyları üzerindeki etkisi, tek yönlü ANOVA ile değerlendirilmiştir. Gübre türünün bitki boyu üzerinde istatistiksel olarak anlamlı bir etkisi bulunmuştur, F(2, 21) = 16.44, p &lt; 0.001. Post-hoc Tukey HSD testleri, Gübre B ile yetiştirilen bitkilerin (M = 77.75 cm, SD = 2.49) ve Gübre C ile yetiştirilen bitkilerin (M = 71.50 cm, SD = 2.45), Gübre A ile yetiştirilen bitkilerden (M = 68.38 cm, SD = 2.67) anlamlı şekilde daha uzun olduğunu göstermiştir (sırasıyla p &lt; 0.001 ve p &lt; 0.05). Gübre B ve Gübre C arasında istatistiksel olarak anlamlı bir fark bulunmamıştır (p = 0.094).\""
+    "objectID": "ders04.html#sıfır-ve-alternatif-hipotezler",
+    "href": "ders04.html#sıfır-ve-alternatif-hipotezler",
+    "title": "Ders 4: Güven Aralıkları ve Hipotez Testi",
+    "section": "Sıfır ve Alternatif Hipotezler",
+    "text": "Sıfır ve Alternatif Hipotezler\nHer hipotez testinde iki hipotez kurulur:\n\nSıfır Hipotezi (H₀): Genellikle “fark yoktur”, “etki yoktur” veya “değişiklik yoktur” şeklinde ifade edilen, test edilmek istenen mevcut durum veya varsayımdır. Popülasyon parametresi hakkında belirli bir değeri öne sürer (örn. \\(H_0: \\mu = 50\\)). Eşitlik içerir (=, ≤, ≥).\nAlternatif Hipotez (H₁ veya Hₐ): Sıfır hipotezinin yanlış olduğuna inanıldığında kabul edilecek olan iddiadır. Araştırmacının kanıtlamaya çalıştığı şeyi temsil eder (örn. \\(H_1: \\mu \\neq 50\\), \\(H_1: \\mu &gt; 50\\), veya \\(H_1: \\mu &lt; 50\\)). Eşitlik içermez (≠, &gt;, &lt;).\n\nÖnemli: H₀ ve H₁ birbirini dışlayan ve tüm olasılıkları kapsayan ifadeler olmalıdır."
   },
   {
-    "objectID": "ders07.html#biyolojide-anova-uygulamaları",
-    "href": "ders07.html#biyolojide-anova-uygulamaları",
-    "title": "Ders 7: ANOVA (Varyans Analizi)",
-    "section": "Biyolojide ANOVA Uygulamaları",
-    "text": "Biyolojide ANOVA Uygulamaları\nANOVA, biyoloji ve tıpta yaygın olarak kullanılan bir analiz yöntemidir:\n\nFarklı İlaç Tedavilerinin Karşılaştırılması:\n\nÜç veya daha fazla farklı ilacın etkinliğinin karşılaştırılması\n\nGen Ekspresyon Analizi:\n\nFarklı deneysel koşullar altında gen ekspresyon seviyelerinin karşılaştırılması\n\nEkolojik Çalışmalar:\n\nFarklı habitatlardaki biyoçeşitliliğin karşılaştırılması\n\nEnzim Kinetik Çalışmaları:\n\nFarklı pH değerlerinde enzim aktivitelerinin karşılaştırılması\n\nBüyüme ve Gelişim Çalışmaları:\n\nFarklı besin veya hormon uygulamalarının büyüme üzerindeki etkisinin incelenmesi"
+    "objectID": "ders04.html#hipotez-örnekleri",
+    "href": "ders04.html#hipotez-örnekleri",
+    "title": "Ders 4: Güven Aralıkları ve Hipotez Testi",
+    "section": "Hipotez Örnekleri",
+    "text": "Hipotez Örnekleri\nDurum 1: Bir biyolog, belirli bir göldeki balıkların ortalama uzunluğunun 30 cm olup olmadığını test etmek istiyor.\n\n\\(H_0: \\mu = 30\\) cm (Ortalama uzunluk 30 cm’dir)\n\\(H_1: \\mu \\neq 30\\) cm (Ortalama uzunluk 30 cm değildir - Çift Yönlü)\n\nDurum 2: Bir ilaç firması, yeni geliştirdiği ilacın kan basıncını düşürüp düşürmediğini test etmek istiyor (mevcut ortalama 140 mmHg).\n\n\\(H_0: \\mu \\ge 140\\) mmHg (İlaç kan basıncını düşürmüyor veya artırıyor)\n\\(H_1: \\mu &lt; 140\\) mmHg (İlaç kan basıncını düşürüyor - Tek Yönlü)\n\nDurum 3: Bir ziraat mühendisi, yeni bir gübrenin mısır verimini artırıp artırmadığını araştırıyor (mevcut ortalama verim 5 ton/hektar).\n\n\\(H_0: \\mu \\le 5\\) ton/hektar (Yeni gübre verimi artırmıyor veya azaltıyor)\n\\(H_1: \\mu &gt; 5\\) ton/hektar (Yeni gübre verimi artırıyor - Tek Yönlü)"
   },
   {
-    "objectID": "ders07.html#gerçek-veri-üzerinde-uygulama-iris-veri-seti",
-    "href": "ders07.html#gerçek-veri-üzerinde-uygulama-iris-veri-seti",
-    "title": "Ders 7: ANOVA (Varyans Analizi)",
-    "section": "Gerçek Veri Üzerinde Uygulama: iris Veri Seti",
-    "text": "Gerçek Veri Üzerinde Uygulama: iris Veri Seti\nŞimdi, iris veri setinde üç farklı Iris türünün (setosa, versicolor, virginica) taç yaprak (petal) boylarını karşılaştıralım.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+    "objectID": "ders04.html#hipotez-testi-adımları",
+    "href": "ders04.html#hipotez-testi-adımları",
+    "title": "Ders 4: Güven Aralıkları ve Hipotez Testi",
+    "section": "Hipotez Testi Adımları",
+    "text": "Hipotez Testi Adımları\n\nHipotezleri Belirle: Sıfır (H₀) ve Alternatif (H₁) hipotezleri kur.\nAnlamlılık Düzeyini Seç (\\(\\alpha\\)): H₀’ı yanlışlıkla reddetme riskini belirle (genellikle 0.05, 0.01 veya 0.10).\nUygun Test İstatistiğini Seç: Veri tipine ve hipoteze uygun testi seç (örn. t-testi, Z-testi, ki-kare testi).\nKarar Kuralını Belirle: Test istatistiğinin hangi değerlerde H₀’ın reddedileceğini belirle (kritik değerler veya p-değeri yaklaşımı).\nTest İstatistiğini Hesapla: Örneklem verilerini kullanarak test istatistiğinin değerini hesapla.\nKarar Ver: Hesaplanan test istatistiğini karar kuralıyla karşılaştırarak H₀’ı reddet veya reddetme.\nSonucu Yorumla: Test sonucunu problem bağlamında yorumla."
   },
   {
-    "objectID": "ders07.html#görselleştirme-ve-post-hoc-test",
-    "href": "ders07.html#görselleştirme-ve-post-hoc-test",
-    "title": "Ders 7: ANOVA (Varyans Analizi)",
-    "section": "Görselleştirme ve Post-hoc Test",
-    "text": "Görselleştirme ve Post-hoc Test\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "ders07.html#tek-yönlü-anova-için-pratik-ipuçları",
-    "href": "ders07.html#tek-yönlü-anova-için-pratik-ipuçları",
-    "title": "Ders 7: ANOVA (Varyans Analizi)",
-    "section": "Tek Yönlü ANOVA için Pratik İpuçları",
-    "text": "Tek Yönlü ANOVA için Pratik İpuçları\n\nVeri Hazırlığı ve Kontroller:\n\nAykırı değerleri belirleyin ve ele alın\nNormallik ve varyans homojenliği varsayımlarını kontrol edin\nVeri yapısının tek yönlü ANOVA’ya uygun olduğunu doğrulayın\n\nAnaliz ve Sonuçlar:\n\nSadece p-değerine değil, etki büyüklüğüne de bakın (η²)\nANOVA anlamlıysa, post-hoc testleri uygulayın\nBulguları biyolojik/pratik anlamlılık açısından yorumlayın\n\nVarsayımlar Karşılanmadığında:\n\nVeri dönüşümleri deneyin (log, karekök vb.)\nParametrik olmayan alternatifleri kullanın (Kruskal-Wallis testi)\nRobust ANOVA yöntemlerini düşünün"
-  },
-  {
-    "objectID": "ders07.html#iki-yönlü-anova-hakkında-kısa-bilgi",
-    "href": "ders07.html#iki-yönlü-anova-hakkında-kısa-bilgi",
-    "title": "Ders 7: ANOVA (Varyans Analizi)",
-    "section": "İki Yönlü ANOVA Hakkında Kısa Bilgi",
-    "text": "İki Yönlü ANOVA Hakkında Kısa Bilgi\nİki Yönlü ANOVA, iki faktörün ve bunların etkileşiminin etkisini analiz eden bir yöntemdir.\nÖrnek: Hem gübre türünün (A, B, C) hem de sulama sıklığının (günlük, haftalık) domates bitkilerinin boyuna etkisini incelemek istiyoruz.\nİki Yönlü ANOVA Modeli: \\[Y_{ijk} = \\\\mu + \\\\alpha_i + \\\\beta_j + (\\\\alpha\\\\beta)_{ij} + \\\\epsilon_{ijk}\\]\n\n\\(\\\\mu\\) = genel ortalama\n\\(\\\\alpha_i\\) = ilk faktörün etkisi (gübre türü)\n\\(\\\\beta_j\\) = ikinci faktörün etkisi (sulama sıklığı)\n\\((\\\\alpha\\\\beta)_{ij}\\) = faktörler arası etkileşim\n\\(\\\\epsilon_{ijk}\\) = hata terimi\n\nİki Yönlü ANOVA ile üç hipotezi test ederiz: 1. İlk faktörün ana etkisi (\\(H_0: \\\\alpha_1 = \\\\alpha_2 = ... = \\\\alpha_a = 0\\)) 2. İkinci faktörün ana etkisi (\\(H_0: \\\\beta_1 = \\\\beta_2 = ... = \\\\beta_b = 0\\)) 3. Faktörler arası etkileşim (\\(H_0: (\\\\alpha\\\\beta)_{ij} = 0 \\  ext{ tüm } i, j \\   ext{ için}\\))"
-  },
-  {
-    "objectID": "ders07.html#özet-anovanın-avantajları-ve-sınırlamaları",
-    "href": "ders07.html#özet-anovanın-avantajları-ve-sınırlamaları",
-    "title": "Ders 7: ANOVA (Varyans Analizi)",
-    "section": "Özet: ANOVA’nın Avantajları ve Sınırlamaları",
-    "text": "Özet: ANOVA’nın Avantajları ve Sınırlamaları\nAvantajlar: * İkiden fazla grubu aynı anda karşılaştırabilme * Tip I hata oranını kontrol etme * Kategorik faktörlerin sürekli değişkenler üzerindeki etkisini inceleme\nSınırlamalar: * Sadece ortalamaları karşılaştırır, dağılımlardaki diğer farklılıkları görmez * Parametrik bir test olarak, belirli varsayımlara dayanır * Grup farkını bulur ancak hangi grupların farklı olduğunu belirtmez (post-hoc testleri gerekir)\nANOVA’nın Ötesinde: * İki faktörlü çalışmalar için İki Yönlü ANOVA * Tekrarlı ölçümler için Tekrarlı Ölçümler ANOVA"
-  },
-  {
-    "objectID": "ders06-uygulama.html#tek-örnek-t-testi",
-    "href": "ders06-uygulama.html#tek-örnek-t-testi",
-    "title": "Ders6 Uygulama: T-testi",
-    "section": "Tek örnek t-testi",
-    "text": "Tek örnek t-testi\nAşağıdaki veri, 11 kadına ait günlük enerji alımını (kJ) gösterir. Bu grubun değerleri tavisye edilen 7725 kJ değerinden farklı mıdır?\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "ders06-uygulama.html#iki-örnek-t-testi",
-    "href": "ders06-uygulama.html#iki-örnek-t-testi",
-    "title": "Ders6 Uygulama: T-testi",
-    "section": "İki örnek t-testi",
-    "text": "İki örnek t-testi\nİki grup arasında enerji tüketimi açısından fark var mıdır?\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\nIntroductory Statistics with R adlı kitaptan alınmıştır"
-  },
-  {
-    "objectID": "ders06-uygulama.html#iki-örnek-t-testi-1",
-    "href": "ders06-uygulama.html#iki-örnek-t-testi-1",
-    "title": "Ders6 Uygulama: T-testi",
-    "section": "İki örnek t-testi",
-    "text": "İki örnek t-testi\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "ders06-uygulama.html#iki-örnek-t-testi-bağımlıilişkili",
-    "href": "ders06-uygulama.html#iki-örnek-t-testi-bağımlıilişkili",
-    "title": "Ders6 Uygulama: T-testi",
-    "section": "İki örnek t-testi (bağımlı/ilişkili)",
-    "text": "İki örnek t-testi (bağımlı/ilişkili)\nBir grup kadında pre ve post menstruasyon enerji alımı verisi. Pre ve Post ölçümler arasında fark var mıdır?\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "ders05.html#özet",
-    "href": "ders05.html#özet",
-    "title": "Ders 5: t-Testi ve Örneklerle Uygulamaları",
-    "section": "Özet",
-    "text": "Özet\n\nt-testi nedir ve ne zaman kullanılır?\nt-dağılımı ve normal dağılım arasındaki fark\nt-testi türleri (tek örneklem, bağımsız örneklemler, eşleştirilmiş örneklemler)\nt-testi varsayımları\nR ile t-testi uygulamaları\nt-testi sonuçlarının yorumlanması ve raporlanması\nBiyolojide t-testi uygulamaları"
-  },
-  {
-    "objectID": "ders05.html#t-testi-nedir",
-    "href": "ders05.html#t-testi-nedir",
-    "title": "Ders 5: t-Testi ve Örneklerle Uygulamaları",
-    "section": "t-testi Nedir?",
-    "text": "t-testi Nedir?\nt-testi, iki grup ortalaması arasındaki farkın istatistiksel anlamlılığını değerlendirmek için kullanılan yaygın bir parametrik testtir.\nKullanım Amacı:\n\nPopülasyon standart sapması bilinmediğinde ortalamaları karşılaştırmak\nKüçük örneklem boyutlarında (n &lt; 30) bile kullanılabilir\nDeneysel verilerin istatistiksel analizinde sıklıkla kullanılır\n\nTemel Fikir:\nGözlemlenen farkın, rastgele şans eseri ortaya çıkıp çıkmadığını değerlendirmek."
-  },
-  {
-    "objectID": "ders05.html#normal-dağılım-vs.-t-dağılımı",
-    "href": "ders05.html#normal-dağılım-vs.-t-dağılımı",
-    "title": "Ders 5: t-Testi ve Örneklerle Uygulamaları",
-    "section": "Normal Dağılım vs. t-Dağılımı",
-    "text": "Normal Dağılım vs. t-Dağılımı\n\nNormal Dağılım (Z-dağılımı):\n\nPopülasyon parametreleri (μ, σ) bilindiğinde kullanılır\nSimetrik, çan şeklindedir\nStandart normal dağılım: N(0,1)\n\nt-Dağılımı:\n\nPopülasyon standart sapması (σ) bilinmediğinde kullanılır\nNormal dağılıma benzer ancak “kuyrukları” daha kalındır\nÖrneklem büyüklüğüne (serbestlik derecesine) bağlıdır\nn büyüdükçe normal dağılıma yakınsar"
-  },
-  {
-    "objectID": "ders05.html#t-dağılımı-ve-serbestlik-derecesi",
-    "href": "ders05.html#t-dağılımı-ve-serbestlik-derecesi",
-    "title": "Ders 5: t-Testi ve Örneklerle Uygulamaları",
-    "section": "t-Dağılımı ve Serbestlik Derecesi",
-    "text": "t-Dağılımı ve Serbestlik Derecesi\n\n\n\n\n\nSerbestlik Derecesi (SD = n-1): Veriler üzerinde yapılabilen bağımsız karşılaştırmaların sayısı.\n\nGörsel Kaynak: Wikimedia Commons"
-  },
-  {
-    "objectID": "ders05.html#t-testi-çeşitleri",
-    "href": "ders05.html#t-testi-çeşitleri",
-    "title": "Ders 5: t-Testi ve Örneklerle Uygulamaları",
-    "section": "t-testi Çeşitleri",
-    "text": "t-testi Çeşitleri\n\nTek Örneklem t-testi:\n\nBir örneklem ortalamasının bilinen bir değerle karşılaştırılması\nÖrnek: “İlaç verilen hastaların ortalama kan şekeri 100 mg/dL’den farklı mı?”\n\nBağımsız Örneklemler t-testi (İki Örneklem t-testi):\n\nİki bağımsız grubun ortalamalarının karşılaştırılması\nÖrnek: “İlaç A ve İlaç B’nin ortalama etkinliği arasında fark var mı?”\n\nEşleştirilmiş Örneklemler t-testi (Bağımlı t-testi):\n\nAynı örneklemdeki farklı koşulların karşılaştırılması\nÖrnek: “Hastaların tedavi öncesi ve sonrası değerleri arasında fark var mı?”"
-  },
-  {
-    "objectID": "ders05.html#section",
-    "href": "ders05.html#section",
-    "title": "Ders 5: t-Testi ve Örneklerle Uygulamaları",
+    "objectID": "ders04.html#section-3",
+    "href": "ders04.html#section-3",
+    "title": "Ders 4: Güven Aralıkları ve Hipotez Testi",
     "section": "",
-    "text": "Kaynak: t-Test DATAtab"
+    "text": "Görsel Kaynak:"
   },
   {
-    "objectID": "ders05.html#section-1",
-    "href": "ders05.html#section-1",
-    "title": "Ders 5: t-Testi ve Örneklerle Uygulamaları",
+    "objectID": "ders04.html#anlamlılık-düzeyi-alpha",
+    "href": "ders04.html#anlamlılık-düzeyi-alpha",
+    "title": "Ders 4: Güven Aralıkları ve Hipotez Testi",
+    "section": "Anlamlılık Düzeyi (\\(\\alpha\\))",
+    "text": "Anlamlılık Düzeyi (\\(\\alpha\\))\n\nAlfa (\\(\\alpha\\)), sıfır hipotezi (H₀) doğruyken onu reddetme olasılığıdır (Tip I Hata olasılığı).\nAraştırmacı tarafından testten önce belirlenir. Yaygın değerler:\n\n\\(\\alpha = 0.05\\) (%5 anlamlılık düzeyi)\n\\(\\alpha = 0.01\\) (%1 anlamlılık düzeyi)\n\\(\\alpha = 0.10\\) (%10 anlamlılık düzeyi)\n\n\\(\\alpha = 0.05\\) demek, H₀ doğru olsa bile, 100 deneyin 5’inde yanlışlıkla H₀’ı reddetme riskini göze almak demektir."
+  },
+  {
+    "objectID": "ders04.html#p-değeri-p-value",
+    "href": "ders04.html#p-değeri-p-value",
+    "title": "Ders 4: Güven Aralıkları ve Hipotez Testi",
+    "section": "P-değeri (P-value)",
+    "text": "P-değeri (P-value)\n\nP-değeri, sıfır hipotezi (H₀) doğru varsayıldığında, örneklemden elde edilen sonuç kadar veya daha aşırı (H₁ yönünde) sonuçların gözlenme olasılığıdır.\n\nEğer sıfır hipotezi doğruysa, şansın bu verileri ne kadar iyi açıklayabileceğini belirtir.\nÖrnek: Diyelim ki bir ilacın etkili olmadığını iddia eden bir sıfır hipotezimiz var (H₀: “İlaç etkisizdir”). 30 hasta üzerinde bir deney yaptık ve olumlu bir sonuç gözlemledik. P-değeri şu soruya cevap verir: “Eğer ilaç gerçekten etkisiz olsaydı (H₀ doğru olsaydı), bizim gördüğümüz kadar veya daha fazla olumlu sonucu şans eseri gözlemleme olasılığı nedir?”\n\nKüçük p-değeri (≤ \\(\\alpha\\)): Gözlenen veri H₀ altında pek olası değildir. H₀’a karşı güçlü kanıt sunar. H₀ reddedilir.\nBüyük p-değeri (&gt; \\(\\alpha\\)): Gözlenen veri H₀ altında makul bir şekilde olasıdır. H₀’ı reddetmek için yeterli kanıt yoktur. H₀ reddedilemez (ama “kabul edildi” demekten kaçınılır)."
+  },
+  {
+    "objectID": "ders04.html#section-4",
+    "href": "ders04.html#section-4",
+    "title": "Ders 4: Güven Aralıkları ve Hipotez Testi",
     "section": "",
-    "text": "Kaynak: t-Test DATAtab"
+    "text": "Görsel Kaynak:"
   },
   {
-    "objectID": "ders05.html#t-testi-formülleri",
-    "href": "ders05.html#t-testi-formülleri",
-    "title": "Ders 5: t-Testi ve Örneklerle Uygulamaları",
-    "section": "t-testi Formülleri",
-    "text": "t-testi Formülleri\n1. Tek Örneklem t-testi: \\[ t = \\frac{\\bar{x} - \\mu_0}{s/\\sqrt{n}} \\]\n2. Bağımsız Örneklemler t-testi: \\[ t = \\frac{\\bar{x}_1 - \\bar{x}_2}{\\sqrt{\\frac{s_1^2}{n_1} + \\frac{s_2^2}{n_2}}} \\]\n3. Eşleştirilmiş Örneklemler t-testi: \\[ t = \\frac{\\bar{d}}{s_d/\\sqrt{n}} \\]"
+    "objectID": "ders04.html#karar-verme",
+    "href": "ders04.html#karar-verme",
+    "title": "Ders 4: Güven Aralıkları ve Hipotez Testi",
+    "section": "Karar Verme",
+    "text": "Karar Verme\nP-değeri yaklaşımı en yaygın olanıdır:\n\nEğer p-değeri ≤ \\(\\alpha\\) ise, sonuç istatistiksel olarak anlamlıdır ve H₀ reddedilir. Alternatif hipotez (H₁) desteklenir.\nEğer p-değeri &gt; \\(\\alpha\\) ise, sonuç istatistiksel olarak anlamlı değildir ve H₀ reddedilemez. Alternatif hipotezi (H₁) desteklemek için yeterli kanıt yoktur."
   },
   {
-    "objectID": "ders05.html#formüller",
-    "href": "ders05.html#formüller",
-    "title": "Ders 5: t-Testi ve Örneklerle Uygulamaları",
-    "section": "Formüller",
-    "text": "Formüller\nBurada:\n\n\\(\\bar{x}\\): Örneklem ortalaması\n\\(\\mu_0\\): Test edilen popülasyon değeri\n\\(s\\): Örneklem standart sapması\n\\(n\\): Örneklem büyüklüğü\n\\(\\bar{d}\\): Eşleştirilmiş farklılıkların ortalaması\n\\(s_d\\): Eşleştirilmiş farklılıkların standart sapması"
+    "objectID": "ders04.html#tip-i-ve-tip-ii-hatalar",
+    "href": "ders04.html#tip-i-ve-tip-ii-hatalar",
+    "title": "Ders 4: Güven Aralıkları ve Hipotez Testi",
+    "section": "Tip I ve Tip II Hatalar",
+    "text": "Tip I ve Tip II Hatalar\nHipotez testlerinde iki tür hata yapılabilir:\n\nTip I Hata: Gerçekte doğru olan H₀ hipotezini reddetmek.\n\nOlasılığı \\(\\alpha\\) (anlamlılık düzeyi) ile gösterilir.\n“Yalancı Pozitif” - olmayan bir etkiyi var kabul etmek.\n\nTip II Hata: Gerçekte yanlış olan H₀ hipotezini reddetmemek (yani yanlış H₀’ı kabul etmek).\n\nOlasılığı \\(\\beta\\) ile gösterilir.\n“Yalancı Negatif” - var olan bir etkiyi gözden kaçırmak.\n\n\nTestin Gücü (Power): Yanlış bir H₀ hipotezini doğru bir şekilde reddetme olasılığıdır (1 - \\(\\beta\\))."
   },
   {
-    "objectID": "ders05.html#t-testi-varsayımları",
-    "href": "ders05.html#t-testi-varsayımları",
-    "title": "Ders 5: t-Testi ve Örneklerle Uygulamaları",
-    "section": "t-testi Varsayımları",
-    "text": "t-testi Varsayımları\nt-testi parametrik bir testtir ve bazı varsayımlar üzerine kuruludur:\n\nNormallik: Verilerin normal dağılıma sahip olması veya örneklem boyutunun yeterince büyük olması (n&gt;30)\nVaryansların homojenliği: Bağımsız örneklemler t-testinde, grupların varyanslarının benzer olması\nBağımsızlık: Gözlemlerin birbirinden bağımsız olması\nÖlçüm düzeyi: Verilerin aralıklı veya oransal ölçek düzeyinde olması\n\nNot: Eğer varsayımlar karşılanmazsa, parametrik olmayan alternatifler düşünülmelidir (ör. Mann-Whitney U testi, Wilcoxon işaretli sıra testi)."
-  },
-  {
-    "objectID": "ders05.html#t-testi-varsayımları-bağımsızlık",
-    "href": "ders05.html#t-testi-varsayımları-bağımsızlık",
-    "title": "Ders 5: t-Testi ve Örneklerle Uygulamaları",
-    "section": "t-testi Varsayımları (Bağımsızlık)",
-    "text": "t-testi Varsayımları (Bağımsızlık)\nBu varsayım, t-testi için toplanan verilerdeki bir ölçümün, diğer ölçümleri etkilememesi gerektiği anlamına gelir. Yani bir deney katılımcısının veya örneğin verdiği sonuç, diğer katılımcıların veya örneklerin sonuçlarını etkilememelidir.\n\nBağımsız gözlemlere örnekler\n\nFarklı farelerden alınan kan örnekleri (her fare bağımsız bir birey)\nFarklı petri kaplarında yetiştirilen bakteri kolonileri\nFarklı hastalardan alınan doku örnekleri\nRastgele seçilen 20 ağaçtan ölçülen yaprak büyüklükleri\n\nBağımsız OLMAYAN gözlemlere örnekler\n\nAynı fareden günlük olarak alınan ardışık kan örnekleri (bir gündeki ölçüm, diğer günü etkileyebilir)\nAynı bakterinin farklı zamanlardaki üreme hızları\nAynı aileden alınan genetik örnekler (genetik yakınlık nedeniyle bağımsız değil)\nYan yana büyüyen bitkilerden alınan ölçümler (birbirlerinin büyümesini etkileyebilirler)"
-  },
-  {
-    "objectID": "ders05.html#tek-yönlü-ve-çift-yönlü-t-testi",
-    "href": "ders05.html#tek-yönlü-ve-çift-yönlü-t-testi",
-    "title": "Ders 5: t-Testi ve Örneklerle Uygulamaları",
-    "section": "Tek Yönlü ve Çift Yönlü t-testi",
-    "text": "Tek Yönlü ve Çift Yönlü t-testi\nHer t-testi, alternatif hipotezin yapısına göre tek yönlü veya çift yönlü olabilir:\nÇift Yönlü t-testi (Two-sided):\n\nAlternatif hipotez: “eşit değildir” (\\(\\neq\\))\nÖrnek: \\(H_1: \\mu \\neq \\mu_0\\) veya \\(H_1: \\mu_1 \\neq \\mu_2\\)\nİlgilendiğimiz şey farkın yönü değil, sadece bir fark olup olmadığıdır\nR’da varsayılan seçenek: alternative = \"two.sided\"\n\nTek Yönlü t-testi (One-sided):\n\nAlternatif hipotez: “küçüktür” (&lt;) ya da “büyüktür” (&gt;)\nÖrnekler:\n\n\\(H_1: \\mu &lt; \\mu_0\\) (alternative = \"less\")\n\\(H_1: \\mu &gt; \\mu_0\\) (alternative = \"greater\")\n\nİlgilendiğimiz durum farkın belirli bir yönde olup olmadığıdır\nTek yönlü testler, belirli bir yönde fark beklediğimizde daha güçlüdür\n\nÖnemli Not: Tek yönlü test kullanmak için, hipotez kurulmadan önce farkın yönüne dair güçlü bir teorik gerekçe olmalıdır. Veriler incelendikten sonra tek yönlü test seçmek, tip I hata olasılığını artırır."
-  },
-  {
-    "objectID": "ders05.html#tek-örneklem-t-testi",
-    "href": "ders05.html#tek-örneklem-t-testi",
-    "title": "Ders 5: t-Testi ve Örneklerle Uygulamaları",
-    "section": "Tek Örneklem t-testi",
-    "text": "Tek Örneklem t-testi\nBir örneklemin ortalamasını, bilinen veya hipotez edilen bir popülasyon değeriyle karşılaştırır.\nÖrnek Senaryo: Yeni geliştirilen bir bitkisel ilacın, farelerde ortalama kan glikoz seviyesini referans değer olan 100 mg/dL’den farklı bir seviyeye değiştirip değiştirmediğini test etmek istiyoruz.\n\n\\(H_0: \\mu = 100\\) mg/dL (İlaç, kan glikoz seviyesini değiştirmez)\n\\(H_1: \\mu \\neq 100\\) mg/dL (İlaç, kan glikoz seviyesini değiştirir)"
-  },
-  {
-    "objectID": "ders05.html#r-ile-tek-örneklem-t-testi",
-    "href": "ders05.html#r-ile-tek-örneklem-t-testi",
-    "title": "Ders 5: t-Testi ve Örneklerle Uygulamaları",
-    "section": "R ile Tek Örneklem t-testi",
-    "text": "R ile Tek Örneklem t-testi\nİlacın test edildiği 15 farenin kan glikoz seviyelerini analiz edelim:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "ders05.html#sonucun-yorumlanması",
-    "href": "ders05.html#sonucun-yorumlanması",
-    "title": "Ders 5: t-Testi ve Örneklerle Uygulamaları",
-    "section": "Sonucun Yorumlanması",
-    "text": "Sonucun Yorumlanması\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nYorum: p-değeri 0.05’ten küçük olduğu için H0 hipotezini reddediyoruz. Bitkisel ilacın, farelerin kan glikoz seviyelerini, referans değer olan 100 mg/dL’den anlamlı şekilde düşürdüğünü söyleyebiliriz (t(14) = -11.94, p &lt; 0.001)."
-  },
-  {
-    "objectID": "ders05.html#bağımsız-iki-örneklem-t-testi",
-    "href": "ders05.html#bağımsız-iki-örneklem-t-testi",
-    "title": "Ders 5: t-Testi ve Örneklerle Uygulamaları",
-    "section": "Bağımsız İki Örneklem t-Testi",
-    "text": "Bağımsız İki Örneklem t-Testi\nİki farklı, bağımsız grubun ortalamalarını karşılaştırmak için kullanılır.\nÖrnek Senaryo: İki farklı gübre türünün (A ve B) domates bitkilerinin boyları üzerindeki etkisini karşılaştırmak istiyoruz.\n\n\\(H_0: \\mu_A = \\mu_B\\) (İki gübre arasında fark yok)\n\\(H_1: \\mu_A \\neq \\mu_B\\) (İki gübre arasında fark var)"
-  },
-  {
-    "objectID": "ders05.html#r-ile-bağımsız-iki-örneklem-t-testi",
-    "href": "ders05.html#r-ile-bağımsız-iki-örneklem-t-testi",
-    "title": "Ders 5: t-Testi ve Örneklerle Uygulamaları",
-    "section": "R ile Bağımsız İki Örneklem t-Testi",
-    "text": "R ile Bağımsız İki Örneklem t-Testi\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "ders05.html#section-2",
-    "href": "ders05.html#section-2",
-    "title": "Ders 5: t-Testi ve Örneklerle Uygulamaları",
+    "objectID": "ders04.html#section-5",
+    "href": "ders04.html#section-5",
+    "title": "Ders 4: Güven Aralıkları ve Hipotez Testi",
     "section": "",
-    "text": "Please enable JavaScript to experience the dynamic code cell content on this page."
+    "text": "Görsel Kaynak:"
   },
   {
-    "objectID": "ders05.html#görselleştirme-ve-yorum",
-    "href": "ders05.html#görselleştirme-ve-yorum",
-    "title": "Ders 5: t-Testi ve Örneklerle Uygulamaları",
-    "section": "Görselleştirme ve Yorum",
-    "text": "Görselleştirme ve Yorum\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nYorum: p-değeri 0.05’ten küçük olduğundan H0 hipotezini reddediyoruz. Gübre B’nin, domates bitkilerinin boyunu, Gübre A’ya göre istatistiksel olarak anlamlı şekilde daha fazla artırdığını söyleyebiliriz (t(18) = -5.14, p &lt; 0.001)."
+    "objectID": "ders04.html#örnek-tek-örneklem-t-testi",
+    "href": "ders04.html#örnek-tek-örneklem-t-testi",
+    "title": "Ders 4: Güven Aralıkları ve Hipotez Testi",
+    "section": "Örnek: Tek Örneklem t-Testi",
+    "text": "Örnek: Tek Örneklem t-Testi\nSenaryo: Bir araştırmacı, iris veri setindeki ‘setosa’ türü çiçeklerin ortalama çanak yaprak uzunluğunun (\\(\\mu\\)) 5.0 cm olup olmadığını test etmek istiyor. Anlamlılık düzeyi \\(\\alpha = 0.05\\).\n\n\\(H_0: \\mu = 5.0\\) cm\n\\(H_1: \\mu \\neq 5.0\\) cm (Çift yönlü test)\n\nR’da t.test() fonksiyonunu kullanabiliriz. mu argümanı ile H₀’daki değeri belirtiriz.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
   },
   {
-    "objectID": "ders05.html#eşleştirilmiş-örneklemler-t-testi",
-    "href": "ders05.html#eşleştirilmiş-örneklemler-t-testi",
-    "title": "Ders 5: t-Testi ve Örneklerle Uygulamaları",
-    "section": "Eşleştirilmiş Örneklemler t-Testi",
-    "text": "Eşleştirilmiş Örneklemler t-Testi\nAynı deneklerin/örneklerin iki farklı durumda ölçülen değerlerini karşılaştırmak için kullanılır.\nÖrnek Senaryo: 10 hastanın, belirli bir ilaç tedavisinden önce ve sonra kolesterol seviyelerini karşılaştırmak istiyoruz.\n\n\\(H_0: \\mu_d = 0\\) (Tedavi öncesi ve sonrası arasında fark yok)\n\\(H_1: \\mu_d \\neq 0\\) (Tedavi öncesi ve sonrası arasında fark var)\n\nBurada \\(\\mu_d\\), tedavi öncesi ve sonrası değerler arasındaki farkların ortalamasıdır."
+    "objectID": "ders04.html#sonuçların-yorumlanması-t-testi",
+    "href": "ders04.html#sonuçların-yorumlanması-t-testi",
+    "title": "Ders 4: Güven Aralıkları ve Hipotez Testi",
+    "section": "Sonuçların Yorumlanması (t-Testi)",
+    "text": "Sonuçların Yorumlanması (t-Testi)\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nYorum: Hesaplanan p-değeri (yaklaşık 0.85) belirlediğimiz anlamlılık düzeyi \\(\\alpha=0.05\\)’ten çok daha büyüktür. Bu nedenle, H₀ hipotezini (yani setosa türünün ortalama çanak yaprak uzunluğunun 5.0 cm olduğu iddiasını) reddetmek için yeterli istatistiksel kanıt yoktur. Örneklem ortalaması (5.006 cm) 5.0 cm’den farklı olsa da, bu fark istatistiksel olarak anlamlı değildir ve örnekleme şansından kaynaklanıyor olabilir."
   },
   {
-    "objectID": "ders05.html#r-ile-eşleştirilmiş-örneklemler-t-testi",
-    "href": "ders05.html#r-ile-eşleştirilmiş-örneklemler-t-testi",
-    "title": "Ders 5: t-Testi ve Örneklerle Uygulamaları",
-    "section": "R ile Eşleştirilmiş Örneklemler t-Testi",
-    "text": "R ile Eşleştirilmiş Örneklemler t-Testi\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "ders05.html#görselleştirme-ve-yorum-1",
-    "href": "ders05.html#görselleştirme-ve-yorum-1",
-    "title": "Ders 5: t-Testi ve Örneklerle Uygulamaları",
-    "section": "Görselleştirme ve Yorum",
-    "text": "Görselleştirme ve Yorum\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nYorum: p-değeri 0.05’ten küçük olduğundan H0 hipotezini reddediyoruz. İlaç tedavisinin, hastaların kolesterol seviyelerini istatistiksel olarak anlamlı şekilde düşürdüğünü söyleyebiliriz (t(9) = 14.41, p &lt; 0.001). Ortalama düşüş 19.2 mg/dL’dir."
-  },
-  {
-    "objectID": "ders05.html#t-testi-sonuçlarının-raporlanması",
-    "href": "ders05.html#t-testi-sonuçlarının-raporlanması",
-    "title": "Ders 5: t-Testi ve Örneklerle Uygulamaları",
-    "section": "t-Testi Sonuçlarının Raporlanması",
-    "text": "t-Testi Sonuçlarının Raporlanması\nAkademik yayınlarda t-testi sonuçlarını nasıl raporlamalıyız?\n1. Tek Örneklem t-Testi: “Bitkisel ilacın farelerin kan glikoz seviyelerine etkisi, tek örneklem t-testi ile değerlendirilmiştir. Farelerin ortalama kan glikoz seviyesi (M = 92.1, SD = 2.6) referans değerden (100 mg/dL) anlamlı şekilde düşüktür, t(14) = -11.94, p &lt; 0.001.”\n2. Bağımsız İki Örneklem t-Testi: “Gübre B ile yetiştirilen domates bitkilerinin boyları (M = 78.3 cm, SD = 3.4), Gübre A ile yetiştirilen bitkilerden (M = 71.5 cm, SD = 3.7) anlamlı şekilde daha yüksektir, t(18) = -5.14, p &lt; 0.001.”\n3. Eşleştirilmiş Örneklemler t-Testi: “İlaç tedavisi sonrası hastaların kolesterol seviyeleri (M = 230.8 mg/dL, SD = 11.0), tedavi öncesine (M = 250.0 mg/dL, SD = 7.6) göre anlamlı şekilde daha düşüktür, t(9) = 14.41, p &lt; 0.001. Ortalama azalma 19.2 mg/dL’dir (%95 GA [16.2, 22.2]).”"
-  },
-  {
-    "objectID": "ders05.html#biyolojide-t-testi-uygulamaları",
-    "href": "ders05.html#biyolojide-t-testi-uygulamaları",
-    "title": "Ders 5: t-Testi ve Örneklerle Uygulamaları",
-    "section": "Biyolojide t-Testi Uygulamaları",
-    "text": "Biyolojide t-Testi Uygulamaları\n\nGen ekspresyonu: İki farklı koşulda gen ekspresyon seviyelerini karşılaştırma\nİlaç etkinliği: Tedavi grubunun kontrol grubuyla karşılaştırılması\nBüyüme çalışmaları: Farklı besin ortamlarında bakterilerin büyüme hızlarının karşılaştırılması\nEnzim aktivitesi: Farklı pH değerlerinde enzim aktivitelerinin karşılaştırılması\nBiyobelirteç seviyeleri: Hasta ve sağlıklı gruplar arasındaki biyobelirteç seviyelerinin karşılaştırılması\n\nÖrnek: “miR-21 ekspresyon seviyesi, kanser hastalarında (M = 4.2, SD = 1.1) sağlıklı kontrollere (M = 1.8, SD = 0.7) göre anlamlı şekilde daha yüksekti, t(58) = 10.73, p &lt; 0.001, ortalama fark = 2.4 kat (%95 GA [2.0, 2.8]).”"
-  },
-  {
-    "objectID": "ders05.html#gerçek-veri-üzerinde-uygulama-iris-veri-seti",
-    "href": "ders05.html#gerçek-veri-üzerinde-uygulama-iris-veri-seti",
-    "title": "Ders 5: t-Testi ve Örneklerle Uygulamaları",
-    "section": "Gerçek Veri Üzerinde Uygulama: iris Veri Seti",
-    "text": "Gerçek Veri Üzerinde Uygulama: iris Veri Seti\nŞimdi, iris veri setinde farklı türlerdeki çiçeklerin taç yaprak (petal) boylarını karşılaştıralım.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "ders05.html#görselleştirme-ve-yorum-2",
-    "href": "ders05.html#görselleştirme-ve-yorum-2",
-    "title": "Ders 5: t-Testi ve Örneklerle Uygulamaları",
-    "section": "Görselleştirme ve Yorum",
-    "text": "Görselleştirme ve Yorum\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nYorum: İki Iris türü arasındaki taç yaprak boyu farkı istatistiksel olarak anlamlıdır, t(86.7) = -39.5, p &lt; 0.001. Versicolor türünün taç yaprakları (M = 4.26 cm, SD = 0.47), setosa türünün taç yapraklarından (M = 1.46 cm, SD = 0.17) ortalama 2.8 cm daha uzundur (%95 GA [2.66, 2.94])."
-  },
-  {
-    "objectID": "ders05.html#t-testi-için-pratik-ipuçları",
-    "href": "ders05.html#t-testi-için-pratik-ipuçları",
-    "title": "Ders 5: t-Testi ve Örneklerle Uygulamaları",
-    "section": "t-Testi için Pratik İpuçları",
-    "text": "t-Testi için Pratik İpuçları\n\nVeri Hazırlığı:\n\nAykırı değerleri belirleyin ve nasıl ele alacağınıza karar verin\nVerilerin normal dağılıma uygunluğunu kontrol edin (histogram, Q-Q plot, Shapiro-Wilk testi)\n\nTest Seçimi:\n\nDoğru t-testi türünü seçin (tek örneklem, bağımsız, eşleştirilmiş)\nVarsayımlar karşılanmıyorsa, parametrik olmayan alternatifleri düşünün\n\nSonuçların Yorumlanması:\n\nSadece p-değerine değil, etki büyüklüğüne de bakın (Cohen’s d)\nGüven aralıklarını rapor edin\nBulgularınızı biyolojik bağlamda yorumlayın"
-  },
-  {
-    "objectID": "ders05.html#t-testi-ile-ilgili-yaygın-yanılgılar",
-    "href": "ders05.html#t-testi-ile-ilgili-yaygın-yanılgılar",
-    "title": "Ders 5: t-Testi ve Örneklerle Uygulamaları",
-    "section": "t-Testi ile İlgili Yaygın Yanılgılar",
-    "text": "t-Testi ile İlgili Yaygın Yanılgılar\n\n“p &gt; 0.05 ise, iki grup arasında fark yoktur”\n\nDoğrusu: H0’ı reddedemeyiz, ancak bu “fark yoktur” anlamına gelmez\n\n“p &lt; 0.05 ise, sonuç pratik olarak önemlidir”\n\nDoğrusu: İstatistiksel anlamlılık, pratik önemi garanti etmez\n\n“t-testi, her tür veri için uygundur”\n\nDoğrusu: t-testi, varsayımları karşılayan verilerde kullanılmalıdır\n\n“Örneklem büyüklüğü arttıkça, sonuçlar daha doğru olur”\n\nDoğrusu: Büyük örneklemler küçük farkları bile anlamlı gösterebilir"
-  },
-  {
-    "objectID": "ders05.html#yanılgı-4",
-    "href": "ders05.html#yanılgı-4",
-    "title": "Ders 5: t-Testi ve Örneklerle Uygulamaları",
-    "section": "Yanılgı 4",
-    "text": "Yanılgı 4\nBu yanılgıyla ilgili doğru açıklama: “Büyük örneklemler küçük farkları bile anlamlı gösterebilir” şeklindedir. İstatistiksel açıdan bakıldığında, örneklem büyüklüğü arttıkça istatistiksel testlerin gücü (power) artar. Yani, gerçekten var olan bir etkiyi tespit etme olasılığımız yükselir. Bu doğrudur ve istatistiğin temel ilkelerinden biridir. Ancak buradaki yanılgı şudur:\n\nİstatistiksel anlamlılık ≠ Pratik anlamlılık: Örneklem büyüklüğü arttıkça, çok küçük ve pratikte önemsiz farklar bile istatistiksel olarak anlamlı çıkabilir. Örneğin:\n\n10 fare ile yapılan bir deneyde 5 mg/dL’lik bir kan şekeri farkı istatistiksel olarak anlamlı çıkmayabilir.\n1000 fare ile aynı deneyi yaptığınızda 1 mg/dL’lik bir fark bile istatistiksel olarak anlamlı çıkabilir. Ancak 1 mg/dL’lik fark biyolojik olarak anlamlı mıdır? Bu kadar küçük bir fark gerçekten önemli midir?\n\nYanlılık (bias) sorunu: Örneklem büyüklüğü, sistematik hatayı (bias) azaltmaz. Eğer örneklem seçiminizde bir yanlılık varsa, örneklem büyüklüğünü artırmak bu sorunu çözmez, hatta daha da belirginleştirebilir."
-  },
-  {
-    "objectID": "ders05.html#rda-t-testi-kullanımı-özet",
-    "href": "ders05.html#rda-t-testi-kullanımı-özet",
-    "title": "Ders 5: t-Testi ve Örneklerle Uygulamaları",
-    "section": "R’da t-Testi Kullanımı (Özet)",
-    "text": "R’da t-Testi Kullanımı (Özet)\n# 1. Tek Örneklem t-Testi\n# a. Çift yönlü test (varsayılan)\nt.test(x, mu = 0)\n# b. Tek yönlü test (küçüktür)\nt.test(x, mu = 0, alternative = \"less\")\n# c. Tek yönlü test (büyüktür)\nt.test(x, mu = 0, alternative = \"greater\")"
-  },
-  {
-    "objectID": "ders05.html#rda-t-testi-kullanımı-özet-1",
-    "href": "ders05.html#rda-t-testi-kullanımı-özet-1",
-    "title": "Ders 5: t-Testi ve Örneklerle Uygulamaları",
-    "section": "R’da t-Testi Kullanımı (Özet)",
-    "text": "R’da t-Testi Kullanımı (Özet)\n# 2. Bağımsız İki Örneklem t-Testi\n# a. Varyansların eşit olduğu varsayımıyla\nt.test(x, y, var.equal = TRUE)\n# b. Varyansların eşit olmadığı varsayımıyla (Welch t-testi, var\nsayılan)\nt.test(x, y)\n# c. Tek yönlü test ile (örneğin x'in y'den büyük olup olmadığın\nı test etmek için)\nt.test(x, y, alternative = \"greater\")"
-  },
-  {
-    "objectID": "ders05.html#rda-t-testi-kullanımı-özet-2",
-    "href": "ders05.html#rda-t-testi-kullanımı-özet-2",
-    "title": "Ders 5: t-Testi ve Örneklerle Uygulamaları",
-    "section": "R’da t-Testi Kullanımı (Özet)",
-    "text": "R’da t-Testi Kullanımı (Özet)\n# 3. Eşleştirilmiş Örneklemler t-Testi\nt.test(x, y, paired = TRUE)\n# Tek yönlü seçeneği ile\nt.test(x, y, paired = TRUE, alternative = \"greater\")"
-  },
-  {
-    "objectID": "ders05.html#rda-t-testi-kullanımı-özet-3",
-    "href": "ders05.html#rda-t-testi-kullanımı-özet-3",
-    "title": "Ders 5: t-Testi ve Örneklerle Uygulamaları",
-    "section": "R’da t-Testi Kullanımı (Özet)",
-    "text": "R’da t-Testi Kullanımı (Özet)\n# 4. Formül kullanımı (veritabanları ile çalışırken)\nt.test(value ~ group, data = mydata)\nt.test(value ~ group, data = mydata, paired = TRUE)\nt.test(value ~ group, data = mydata, alternative = \"less\")"
-  },
-  {
-    "objectID": "ders05.html#farklı-t-test-türleri-için-varsayımlar-ve-r-kod-örnekleri",
-    "href": "ders05.html#farklı-t-test-türleri-için-varsayımlar-ve-r-kod-örnekleri",
-    "title": "Ders 5: t-Testi ve Örneklerle Uygulamaları",
-    "section": "Farklı t-Test Türleri için Varsayımlar ve R Kod Örnekleri",
-    "text": "Farklı t-Test Türleri için Varsayımlar ve R Kod Örnekleri\n\n\n\n\n\n\n\n\nt-Testi Türü\nTemel Varsayımlar\nR Kodu\n\n\n\n\nTek Örneklem\n- Verilerin normal dağılması veya n&gt;30- Bağımsız gözlemler\nt.test(x, mu = 0)\n\n\nBağımsız İki Örneklem(eşit varyans)\n- İki grupta da normal dağılım- Varyansların homojenliği- Bağımsız gözlemler\nt.test(x, y, var.equal = TRUE)\n\n\nBağımsız İki Örneklem(Welch/eşit olmayan varyans)\n- İki grupta da normal dağılım- Varyanslar farklı olabilir- Bağımsız gözlemler\nt.test(x, y)\n\n\nEşleştirilmiş Örneklemler\n- Farkların normal dağılması- Eşleştirilmiş gözlemler\nt.test(x, y, paired = TRUE)"
+    "objectID": "ders04.html#ek-kaynaklar-1",
+    "href": "ders04.html#ek-kaynaklar-1",
+    "title": "Ders 4: Güven Aralıkları ve Hipotez Testi",
+    "section": "Ek Kaynaklar",
+    "text": "Ek Kaynaklar\n\nKhan Academy - Hypothesis Testing (İngilizce)\nYale Statlab - Hypothesis Testing (İngilizce)\nScribbr - Hypothesis Testing Explained (İngilizce)\nVeri Bilimi Okulu - Hipotez Testi (Türkçe)"
   },
   {
     "objectID": "index.html",
@@ -1285,21 +1138,21 @@
     "href": "ders09.html#generate-sıfır-dağılımı-oluşturma",
     "title": "Ders 9: Hesapsal İstatistik",
     "section": "3. generate(): Sıfır Dağılımı Oluşturma",
-    "text": "3. generate(): Sıfır Dağılımı Oluşturma\n\nSıfır hipotezi altında verinin nasıl görüneceğini simüle eder\nÜç temel yöntem:\n\nbootstrap: Yerine koyarak örnekleme\npermute: Değişkenleri karıştırma\ndraw: Teorik dağılımdan örnekleme\n\n\n\n# 1000 bootstrap örneği oluşturalım\ngss |&gt;\n  specify(response = hours) |&gt;\n  hypothesize(null = \"point\", mu = 40) |&gt;\n  generate(reps = 1000, type = \"bootstrap\")\n\nResponse: hours (numeric)\nNull Hypothesis: point\n# A tibble: 500,000 × 2\n# Groups:   replicate [1,000]\n   replicate hours\n       &lt;int&gt; &lt;dbl&gt;\n 1         1  38.6\n 2         1  55.6\n 3         1  38.6\n 4         1  50.6\n 5         1  38.6\n 6         1  18.6\n 7         1  23.6\n 8         1  18.6\n 9         1  38.6\n10         1  58.6\n# ℹ 499,990 more rows"
+    "text": "3. generate(): Sıfır Dağılımı Oluşturma\n\nSıfır hipotezi altında verinin nasıl görüneceğini simüle eder\nÜç temel yöntem:\n\nbootstrap: Yerine koyarak örnekleme\npermute: Değişkenleri karıştırma\ndraw: Teorik dağılımdan örnekleme\n\n\n\n# 1000 bootstrap örneği oluşturalım\ngss |&gt;\n  specify(response = hours) |&gt;\n  hypothesize(null = \"point\", mu = 40) |&gt;\n  generate(reps = 1000, type = \"bootstrap\")\n\nResponse: hours (numeric)\nNull Hypothesis: point\n# A tibble: 500,000 × 2\n# Groups:   replicate [1,000]\n   replicate hours\n       &lt;int&gt; &lt;dbl&gt;\n 1         1  28.6\n 2         1  45.6\n 3         1  38.6\n 4         1  38.6\n 5         1  38.6\n 6         1  38.6\n 7         1  42.6\n 8         1  38.6\n 9         1  38.6\n10         1  38.6\n# ℹ 499,990 more rows"
   },
   {
     "objectID": "ders09.html#generate-veri-karıştırma-örneği",
     "href": "ders09.html#generate-veri-karıştırma-örneği",
     "title": "Ders 9: Hesapsal İstatistik",
     "section": "generate(): Veri Karıştırma Örneği",
-    "text": "generate(): Veri Karıştırma Örneği\n\n# Yaş ve parti ilişkisini kırmak için değişkenleri karıştıralım\ngss |&gt;\n  specify(partyid ~ age) |&gt;\n  hypothesize(null = \"independence\") |&gt;\n  generate(reps = 1000, type = \"permute\")\n\nResponse: partyid (factor)\nExplanatory: age (numeric)\nNull Hypothesis: independence\n# A tibble: 500,000 × 3\n# Groups:   replicate [1,000]\n   partyid   age replicate\n   &lt;fct&gt;   &lt;dbl&gt;     &lt;int&gt;\n 1 ind        36         1\n 2 ind        34         1\n 3 rep        24         1\n 4 dem        42         1\n 5 dem        31         1\n 6 rep        32         1\n 7 ind        48         1\n 8 rep        36         1\n 9 dem        30         1\n10 rep        33         1\n# ℹ 499,990 more rows\n\n\nBu adım, sıfır hipotezi doğru olsaydı veri nasıl görünürdü sorusuna cevap verir."
+    "text": "generate(): Veri Karıştırma Örneği\n\n# Yaş ve parti ilişkisini kırmak için değişkenleri karıştıralım\ngss |&gt;\n  specify(partyid ~ age) |&gt;\n  hypothesize(null = \"independence\") |&gt;\n  generate(reps = 1000, type = \"permute\")\n\nResponse: partyid (factor)\nExplanatory: age (numeric)\nNull Hypothesis: independence\n# A tibble: 500,000 × 3\n# Groups:   replicate [1,000]\n   partyid   age replicate\n   &lt;fct&gt;   &lt;dbl&gt;     &lt;int&gt;\n 1 dem        36         1\n 2 ind        34         1\n 3 dem        24         1\n 4 ind        42         1\n 5 ind        31         1\n 6 dem        32         1\n 7 dem        48         1\n 8 rep        36         1\n 9 ind        30         1\n10 ind        33         1\n# ℹ 499,990 more rows\n\n\nBu adım, sıfır hipotezi doğru olsaydı veri nasıl görünürdü sorusuna cevap verir."
   },
   {
     "objectID": "ders09.html#calculate-istatistik-hesaplama",
     "href": "ders09.html#calculate-istatistik-hesaplama",
     "title": "Ders 9: Hesapsal İstatistik",
     "section": "4. calculate(): İstatistik Hesaplama",
-    "text": "4. calculate(): İstatistik Hesaplama\n\nSimüle edilmiş verilerden istatistikler hesaplar\nOrtalama, medyan, oran, fark, t-istatistiği ve daha fazlası\nSıfır dağılımını oluşturur\n\n\n# Ortalama çalışma saatlerinin dağılımını hesaplayalım\ngss |&gt;\n  specify(response = hours) |&gt;\n  hypothesize(null = \"point\", mu = 40) |&gt;\n  generate(reps = 1000, type = \"bootstrap\") |&gt;\n  calculate(stat = \"mean\")\n\nResponse: hours (numeric)\nNull Hypothesis: point\n# A tibble: 1,000 × 2\n   replicate  stat\n       &lt;int&gt; &lt;dbl&gt;\n 1         1  40.5\n 2         2  40.6\n 3         3  39.3\n 4         4  39.7\n 5         5  40.0\n 6         6  39.9\n 7         7  39.7\n 8         8  40.8\n 9         9  40.3\n10        10  40.6\n# ℹ 990 more rows"
+    "text": "4. calculate(): İstatistik Hesaplama\n\nSimüle edilmiş verilerden istatistikler hesaplar\nOrtalama, medyan, oran, fark, t-istatistiği ve daha fazlası\nSıfır dağılımını oluşturur\n\n\n# Ortalama çalışma saatlerinin dağılımını hesaplayalım\ngss |&gt;\n  specify(response = hours) |&gt;\n  hypothesize(null = \"point\", mu = 40) |&gt;\n  generate(reps = 1000, type = \"bootstrap\") |&gt;\n  calculate(stat = \"mean\")\n\nResponse: hours (numeric)\nNull Hypothesis: point\n# A tibble: 1,000 × 2\n   replicate  stat\n       &lt;int&gt; &lt;dbl&gt;\n 1         1  38.9\n 2         2  40.6\n 3         3  40.1\n 4         4  40.1\n 5         5  39.6\n 6         6  40.3\n 7         7  40.2\n 8         8  40.0\n 9         9  39.9\n10        10  39.9\n# ℹ 990 more rows"
   },
   {
     "objectID": "ders09.html#örnek-haftalık-çalışma-saatleri-analizi",
@@ -1320,7 +1173,7 @@
     "href": "ders09.html#p-değeri-hesaplama",
     "title": "Ders 9: Hesapsal İstatistik",
     "section": "p-değeri Hesaplama",
-    "text": "p-değeri Hesaplama\n\n# İki kuyruklu p-değerini hesaplayalım\np_value &lt;- null_dist |&gt;\n  get_p_value(obs_stat = obs_mean, direction = \"two-sided\")\n\np_value\n\n# A tibble: 1 × 1\n  p_value\n    &lt;dbl&gt;\n1   0.032\n\n\nEğer ortalama gerçekten 40 saat olsaydı, gözlemlediğimiz kadar (veya daha) uç bir değer elde etme olasılığımız p-değeri kadardır."
+    "text": "p-değeri Hesaplama\n\n# İki kuyruklu p-değerini hesaplayalım\np_value &lt;- null_dist |&gt;\n  get_p_value(obs_stat = obs_mean, direction = \"two-sided\")\n\np_value\n\n# A tibble: 1 × 1\n  p_value\n    &lt;dbl&gt;\n1   0.034\n\n\nEğer ortalama gerçekten 40 saat olsaydı, gözlemlediğimiz kadar (veya daha) uç bir değer elde etme olasılığımız p-değeri kadardır."
   },
   {
     "objectID": "ders09.html#güven-aralıkları",
@@ -1981,305 +1834,522 @@
     "text": "soybean ve linseed ile besleme arasında fark var mıdır?\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
   },
   {
-    "objectID": "ders04.html#özet",
-    "href": "ders04.html#özet",
-    "title": "Ders 4: Güven Aralıkları ve Hipotez Testi",
-    "section": "Özet",
-    "text": "Özet\n\nNokta tahmini vs. Aralık tahmini\nGüven aralığı nedir?\nGüven aralığının yorumlanması\nGüven aralığını etkileyen faktörler\nOrtalama için güven aralığı hesaplama (R ile)"
+    "objectID": "ders11.html#hangi-test-ne-zaman-kullanılmalı",
+    "href": "ders11.html#hangi-test-ne-zaman-kullanılmalı",
+    "title": "Ders 12: Hangi Test?",
+    "section": "Hangi test ne zaman kullanılmalı?",
+    "text": "Hangi test ne zaman kullanılmalı?"
   },
   {
-    "objectID": "ders04.html#tahmin-etme-ihtiyacı",
-    "href": "ders04.html#tahmin-etme-ihtiyacı",
-    "title": "Ders 4: Güven Aralıkları ve Hipotez Testi",
-    "section": "Tahmin Etme İhtiyacı",
-    "text": "Tahmin Etme İhtiyacı\nBiyolojide genellikle tüm popülasyonu (evreni) incelemek yerine, popülasyondan alınan bir örneklem üzerinden çıkarımlar yaparız.\n\nPopülasyon Parametresi: Popülasyonun tamamını tanımlayan sayısal bir değer (örn. popülasyondaki tüm insanların ortalama boyu - \\(\\mu\\)). Genellikle bilinmez.\nÖrneklem İstatistiği: Örneklemden hesaplanan ve popülasyon parametresini tahmin etmek için kullanılan sayısal bir değer (örn. örneklemdeki insanların ortalama boyu - \\(\\overline{x}\\)).\n\nAmacımız, örneklem istatistiğini kullanarak bilinmeyen popülasyon parametresi hakkında bilgi edinmektir."
+    "objectID": "ders11.html#veri-tipi-ve-dağılıma-göre-testler",
+    "href": "ders11.html#veri-tipi-ve-dağılıma-göre-testler",
+    "title": "Ders 12: Hangi Test?",
+    "section": "Veri tipi ve dağılıma göre testler",
+    "text": "Veri tipi ve dağılıma göre testler\nParametrik:"
   },
   {
-    "objectID": "ders04.html#nokta-tahmini-vs.-aralık-tahmini",
-    "href": "ders04.html#nokta-tahmini-vs.-aralık-tahmini",
-    "title": "Ders 4: Güven Aralıkları ve Hipotez Testi",
-    "section": "Nokta Tahmini vs. Aralık Tahmini",
-    "text": "Nokta Tahmini vs. Aralık Tahmini\n\nNokta Tahmini: Popülasyon parametresi için tek bir değer tahmini (örn. \\(\\overline{x}\\), \\(\\mu\\)’nün nokta tahminidir).\n\nBasittir ancak tahminin ne kadar hassas olduğu hakkında bilgi vermez. Örneklemden örnekleme değişir.\n\nAralık Tahmini (Güven Aralığı): Popülasyon parametresini belirli bir güvenilirlik seviyesiyle içermesi beklenen bir değer aralığıdır.\n\nTahminin belirsizliğini veya hassasiyetini gösterir."
-  },
-  {
-    "objectID": "ders04.html#section",
-    "href": "ders04.html#section",
-    "title": "Ders 4: Güven Aralıkları ve Hipotez Testi",
+    "objectID": "ders11.html#section",
+    "href": "ders11.html#section",
+    "title": "Ders 12: Hangi Test?",
     "section": "",
-    "text": "Görsel Kaynak: Medium - Understanding Confidence Intervals"
+    "text": "Unpaired - eşli olmayan veri tipi\n\n\nKaynak: Nayak, Barun K; Hazra, Avijit1. How to choose the right statistical test?. Indian Journal of Ophthalmology 59(2):p 85-86, Mar–Apr 2011. | DOI: 10.4103/0301-4738.77005"
   },
   {
-    "objectID": "ders04.html#güven-aralığı-nedir",
-    "href": "ders04.html#güven-aralığı-nedir",
-    "title": "Ders 4: Güven Aralıkları ve Hipotez Testi",
-    "section": "Güven Aralığı Nedir?",
-    "text": "Güven Aralığı Nedir?\nBir güven aralığı, örneklem verilerine dayanarak hesaplanan ve bilinmeyen popülasyon parametresini (örneğin, ortalama \\(\\mu\\) veya oran p) belirli bir olasılıkla içerdiği düşünülen bir değer aralığıdır.\nGenel formül genellikle şöyledir:\nNokta Tahmini ± Hata Payı\n\nNokta Tahmini: Örneklemden hesaplanan istatistik (örn. \\(\\overline{x}\\)).\nHata Payı: Tahminin ne kadar hassas olduğunu gösterir. Örnekleme değişkenliğine ve istenen güven düzeyine bağlıdır."
-  },
-  {
-    "objectID": "ders04.html#güven-düzeyi-ve-yorumlama",
-    "href": "ders04.html#güven-düzeyi-ve-yorumlama",
-    "title": "Ders 4: Güven Aralıkları ve Hipotez Testi",
-    "section": "Güven Düzeyi ve Yorumlama",
-    "text": "Güven Düzeyi ve Yorumlama\n\nGüven Düzeyi: Genellikle %90, %95 veya %99 olarak seçilir. Bu, aynı popülasyondan tekrar tekrar örneklemler alıp her biri için bir güven aralığı hesaplarsak, bu aralıkların ne kadarının gerçek popülasyon parametresini içereceğini gösteren yüzdedir.\nYaygın Yanlış Yorum: “%95 güven aralığı, popülasyon parametresinin %95 olasılıkla bu aralıkta olduğu anlamına gelir.” BU YANLIŞTIR! Popülasyon parametresi sabit bir değerdir, rastgele değildir. Aralık rastgeledir.\nDoğru Yorum: “Bu popülasyondan alınacak örneklemlerle oluşturulacak %95 güven aralıklarının yaklaşık %95’inin, gerçek popülasyon parametresini içermesini bekleriz.” veya daha pratik olarak “Popülasyon parametresinin bu aralıkta olduğuna %95 güveniyoruz.”"
-  },
-  {
-    "objectID": "ders04.html#section-1",
-    "href": "ders04.html#section-1",
-    "title": "Ders 4: Güven Aralıkları ve Hipotez Testi",
+    "objectID": "ders11.html#section-1",
+    "href": "ders11.html#section-1",
+    "title": "Ders 12: Hangi Test?",
     "section": "",
-    "text": "Görsel Kaynak:"
+    "text": "Paired - eşli veriler\n\n\nKaynak: Nayak, Barun K; Hazra, Avijit1. How to choose the right statistical test?. Indian Journal of Ophthalmology 59(2):p 85-86, Mar–Apr 2011. | DOI: 10.4103/0301-4738.77005"
   },
   {
-    "objectID": "ders04.html#güven-aralığının-genişliğini-etkileyen-faktörler",
-    "href": "ders04.html#güven-aralığının-genişliğini-etkileyen-faktörler",
-    "title": "Ders 4: Güven Aralıkları ve Hipotez Testi",
-    "section": "Güven Aralığının Genişliğini Etkileyen Faktörler",
-    "text": "Güven Aralığının Genişliğini Etkileyen Faktörler\n\nGüven Düzeyi: Güven düzeyi arttıkça (örn. %95’ten %99’a), aralık genişler. Daha emin olmak için daha geniş bir aralığa ihtiyaç duyarız.\nÖrneklem Büyüklüğü (n): Örneklem büyüklüğü arttıkça, aralık daralır. Daha fazla veri, daha hassas tahmin sağlar.\nVerinin Değişkenliği (Standart Sapma - s): Verideki değişkenlik (standart sapma) arttıkça, aralık genişler. Daha dağınık veriler daha fazla belirsizlik anlamına gelir."
-  },
-  {
-    "objectID": "ders04.html#section-2",
-    "href": "ders04.html#section-2",
-    "title": "Ders 4: Güven Aralıkları ve Hipotez Testi",
+    "objectID": "ders11.html#section-2",
+    "href": "ders11.html#section-2",
+    "title": "Ders 12: Hangi Test?",
     "section": "",
-    "text": "Görsel Kaynak:"
+    "text": "Kaynak: Statstutor Kaynakları PDF-link"
   },
   {
-    "objectID": "ders04.html#ortalama-için-güven-aralığı-mu",
-    "href": "ders04.html#ortalama-için-güven-aralığı-mu",
-    "title": "Ders 4: Güven Aralıkları ve Hipotez Testi",
-    "section": "Ortalama İçin Güven Aralığı (\\(\\mu\\))",
-    "text": "Ortalama İçin Güven Aralığı (\\(\\mu\\))\nPopülasyon standart sapması (\\(\\sigma\\)) bilinmiyorsa (genellikle durum budur), t-dağılımını kullanırız:\n\\[ \\overline{x} \\pm t_{\\alpha/2, n-1} \\times \\frac{s}{\\sqrt{n}} \\]\n\n\\(\\overline{x}\\): Örneklem ortalaması\n\\(s\\): Örneklem standart sapması\n\\(n\\): Örneklem büyüklüğü\n\\(t_{\\alpha/2, n-1}\\): Belirli bir güven düzeyi (\\(\\alpha\\)) ve serbestlik derecesi (\\(n-1\\)) için t-kritik değeri.\n\\(\\frac{s}{\\sqrt{n}}\\): Standart Hata (SE - Standard Error)"
-  },
-  {
-    "objectID": "ders04.html#r-ile-güven-aralığı-hesabı-ortalama",
-    "href": "ders04.html#r-ile-güven-aralığı-hesabı-ortalama",
-    "title": "Ders 4: Güven Aralıkları ve Hipotez Testi",
-    "section": "R ile Güven Aralığı Hesabı (Ortalama)",
-    "text": "R ile Güven Aralığı Hesabı (Ortalama)\nR’da t.test() fonksiyonu, bir vektörün ortalaması için güven aralığını kolayca hesaplar. Varsayılan güven düzeyi %95’tir. iris veri setindeki Sepal.Length (Çanak Yaprak Uzunluğu) için %95 güven aralığını hesaplayalım:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nYorum: Iris çiçeği popülasyonundaki ortalama çanak yaprak uzunluğunun (\\(\\mu\\)) [5.71, 5.97] cm aralığında olduğuna %95 güveniyoruz."
-  },
-  {
-    "objectID": "ders04.html#farklı-güven-düzeyi-ile-hesaplama",
-    "href": "ders04.html#farklı-güven-düzeyi-ile-hesaplama",
-    "title": "Ders 4: Güven Aralıkları ve Hipotez Testi",
-    "section": "Farklı Güven Düzeyi ile Hesaplama",
-    "text": "Farklı Güven Düzeyi ile Hesaplama\n%99 güven düzeyi ile hesaplamak için conf.level argümanını kullanırız:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nGördüğünüz gibi, güven düzeyi %95’ten %99’a çıktığında aralık genişledi ([5.71, 5.97] vs [5.66, 6.01])."
-  },
-  {
-    "objectID": "ders04.html#görselleştirme",
-    "href": "ders04.html#görselleştirme",
-    "title": "Ders 4: Güven Aralıkları ve Hipotez Testi",
-    "section": "Görselleştirme",
-    "text": "Görselleştirme\nGüven aralığını görselleştirmek, anlamayı kolaylaştırabilir. Ortalama ve güven aralığını bir grafik üzerinde gösterebiliriz.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "ders04.html#ek-kaynaklar",
-    "href": "ders04.html#ek-kaynaklar",
-    "title": "Ders 4: Güven Aralıkları ve Hipotez Testi",
-    "section": "Ek Kaynaklar",
-    "text": "Ek Kaynaklar\n\nKhan Academy - Confidence Intervals (İngilizce)\nStat Trek - Confidence Interval for Mean (İngilizce)\nVeri Bilimi Okulu - Güven Aralığı (Türkçe)"
-  },
-  {
-    "objectID": "ders04.html#hipotez-testleri-özet",
-    "href": "ders04.html#hipotez-testleri-özet",
-    "title": "Ders 4: Güven Aralıkları ve Hipotez Testi",
-    "section": "Hipotez testleri özet",
-    "text": "Hipotez testleri özet\n\nHipotez testi nedir? Mantığı.\nSıfır (H₀) ve Alternatif (H₁) Hipotezler\nHipotez Testi Adımları\nAnlamlılık Düzeyi (\\(\\alpha\\)) ve P-değeri\nTip I ve Tip II Hatalar\nÖrnek: Tek Örneklem t-Testi (R ile)"
-  },
-  {
-    "objectID": "ders04.html#hipotez-testi-nedir",
-    "href": "ders04.html#hipotez-testi-nedir",
-    "title": "Ders 4: Güven Aralıkları ve Hipotez Testi",
-    "section": "Hipotez Testi Nedir?",
-    "text": "Hipotez Testi Nedir?\nHipotez testi, örneklem verilerini kullanarak bir popülasyon hakkındaki iddiaları (hipotezleri) değerlendirmek için kullanılan istatistiksel bir yöntemdir.\nAmaç: Örneklemden elde edilen kanıtların, popülasyon hakkındaki belirli bir iddiayı (sıfır hipotezi) reddetmek için yeterince güçlü olup olmadığına karar vermek.\nÖrnek Sorular:\n\nYeni bir gübre, bitki boyunu ortalamada artırıyor mu?\nBelirli bir gen mutasyonu, hastalığa yakalanma riskini değiştiriyor mu?\nİki farklı tedavi yönteminin iyileşme oranları arasında fark var mı?"
-  },
-  {
-    "objectID": "ders04.html#sıfır-ve-alternatif-hipotezler",
-    "href": "ders04.html#sıfır-ve-alternatif-hipotezler",
-    "title": "Ders 4: Güven Aralıkları ve Hipotez Testi",
-    "section": "Sıfır ve Alternatif Hipotezler",
-    "text": "Sıfır ve Alternatif Hipotezler\nHer hipotez testinde iki hipotez kurulur:\n\nSıfır Hipotezi (H₀): Genellikle “fark yoktur”, “etki yoktur” veya “değişiklik yoktur” şeklinde ifade edilen, test edilmek istenen mevcut durum veya varsayımdır. Popülasyon parametresi hakkında belirli bir değeri öne sürer (örn. \\(H_0: \\mu = 50\\)). Eşitlik içerir (=, ≤, ≥).\nAlternatif Hipotez (H₁ veya Hₐ): Sıfır hipotezinin yanlış olduğuna inanıldığında kabul edilecek olan iddiadır. Araştırmacının kanıtlamaya çalıştığı şeyi temsil eder (örn. \\(H_1: \\mu \\neq 50\\), \\(H_1: \\mu &gt; 50\\), veya \\(H_1: \\mu &lt; 50\\)). Eşitlik içermez (≠, &gt;, &lt;).\n\nÖnemli: H₀ ve H₁ birbirini dışlayan ve tüm olasılıkları kapsayan ifadeler olmalıdır."
-  },
-  {
-    "objectID": "ders04.html#hipotez-örnekleri",
-    "href": "ders04.html#hipotez-örnekleri",
-    "title": "Ders 4: Güven Aralıkları ve Hipotez Testi",
-    "section": "Hipotez Örnekleri",
-    "text": "Hipotez Örnekleri\nDurum 1: Bir biyolog, belirli bir göldeki balıkların ortalama uzunluğunun 30 cm olup olmadığını test etmek istiyor.\n\n\\(H_0: \\mu = 30\\) cm (Ortalama uzunluk 30 cm’dir)\n\\(H_1: \\mu \\neq 30\\) cm (Ortalama uzunluk 30 cm değildir - Çift Yönlü)\n\nDurum 2: Bir ilaç firması, yeni geliştirdiği ilacın kan basıncını düşürüp düşürmediğini test etmek istiyor (mevcut ortalama 140 mmHg).\n\n\\(H_0: \\mu \\ge 140\\) mmHg (İlaç kan basıncını düşürmüyor veya artırıyor)\n\\(H_1: \\mu &lt; 140\\) mmHg (İlaç kan basıncını düşürüyor - Tek Yönlü)\n\nDurum 3: Bir ziraat mühendisi, yeni bir gübrenin mısır verimini artırıp artırmadığını araştırıyor (mevcut ortalama verim 5 ton/hektar).\n\n\\(H_0: \\mu \\le 5\\) ton/hektar (Yeni gübre verimi artırmıyor veya azaltıyor)\n\\(H_1: \\mu &gt; 5\\) ton/hektar (Yeni gübre verimi artırıyor - Tek Yönlü)"
-  },
-  {
-    "objectID": "ders04.html#hipotez-testi-adımları",
-    "href": "ders04.html#hipotez-testi-adımları",
-    "title": "Ders 4: Güven Aralıkları ve Hipotez Testi",
-    "section": "Hipotez Testi Adımları",
-    "text": "Hipotez Testi Adımları\n\nHipotezleri Belirle: Sıfır (H₀) ve Alternatif (H₁) hipotezleri kur.\nAnlamlılık Düzeyini Seç (\\(\\alpha\\)): H₀’ı yanlışlıkla reddetme riskini belirle (genellikle 0.05, 0.01 veya 0.10).\nUygun Test İstatistiğini Seç: Veri tipine ve hipoteze uygun testi seç (örn. t-testi, Z-testi, ki-kare testi).\nKarar Kuralını Belirle: Test istatistiğinin hangi değerlerde H₀’ın reddedileceğini belirle (kritik değerler veya p-değeri yaklaşımı).\nTest İstatistiğini Hesapla: Örneklem verilerini kullanarak test istatistiğinin değerini hesapla.\nKarar Ver: Hesaplanan test istatistiğini karar kuralıyla karşılaştırarak H₀’ı reddet veya reddetme.\nSonucu Yorumla: Test sonucunu problem bağlamında yorumla."
-  },
-  {
-    "objectID": "ders04.html#section-3",
-    "href": "ders04.html#section-3",
-    "title": "Ders 4: Güven Aralıkları ve Hipotez Testi",
+    "objectID": "ders11.html#section-3",
+    "href": "ders11.html#section-3",
+    "title": "Ders 12: Hangi Test?",
     "section": "",
-    "text": "Görsel Kaynak:"
+    "text": "Kaynak: Statstutor Kaynakları PDF-link"
   },
   {
-    "objectID": "ders04.html#anlamlılık-düzeyi-alpha",
-    "href": "ders04.html#anlamlılık-düzeyi-alpha",
-    "title": "Ders 4: Güven Aralıkları ve Hipotez Testi",
-    "section": "Anlamlılık Düzeyi (\\(\\alpha\\))",
-    "text": "Anlamlılık Düzeyi (\\(\\alpha\\))\n\nAlfa (\\(\\alpha\\)), sıfır hipotezi (H₀) doğruyken onu reddetme olasılığıdır (Tip I Hata olasılığı).\nAraştırmacı tarafından testten önce belirlenir. Yaygın değerler:\n\n\\(\\alpha = 0.05\\) (%5 anlamlılık düzeyi)\n\\(\\alpha = 0.01\\) (%1 anlamlılık düzeyi)\n\\(\\alpha = 0.10\\) (%10 anlamlılık düzeyi)\n\n\\(\\alpha = 0.05\\) demek, H₀ doğru olsa bile, 100 deneyin 5’inde yanlışlıkla H₀’ı reddetme riskini göze almak demektir."
-  },
-  {
-    "objectID": "ders04.html#p-değeri-p-value",
-    "href": "ders04.html#p-değeri-p-value",
-    "title": "Ders 4: Güven Aralıkları ve Hipotez Testi",
-    "section": "P-değeri (P-value)",
-    "text": "P-değeri (P-value)\n\nP-değeri, sıfır hipotezi (H₀) doğru varsayıldığında, örneklemden elde edilen sonuç kadar veya daha aşırı (H₁ yönünde) sonuçların gözlenme olasılığıdır.\n\nEğer sıfır hipotezi doğruysa, şansın bu verileri ne kadar iyi açıklayabileceğini belirtir.\nÖrnek: Diyelim ki bir ilacın etkili olmadığını iddia eden bir sıfır hipotezimiz var (H₀: “İlaç etkisizdir”). 30 hasta üzerinde bir deney yaptık ve olumlu bir sonuç gözlemledik. P-değeri şu soruya cevap verir: “Eğer ilaç gerçekten etkisiz olsaydı (H₀ doğru olsaydı), bizim gördüğümüz kadar veya daha fazla olumlu sonucu şans eseri gözlemleme olasılığı nedir?”\n\nKüçük p-değeri (≤ \\(\\alpha\\)): Gözlenen veri H₀ altında pek olası değildir. H₀’a karşı güçlü kanıt sunar. H₀ reddedilir.\nBüyük p-değeri (&gt; \\(\\alpha\\)): Gözlenen veri H₀ altında makul bir şekilde olasıdır. H₀’ı reddetmek için yeterli kanıt yoktur. H₀ reddedilemez (ama “kabul edildi” demekten kaçınılır)."
-  },
-  {
-    "objectID": "ders04.html#section-4",
-    "href": "ders04.html#section-4",
-    "title": "Ders 4: Güven Aralıkları ve Hipotez Testi",
+    "objectID": "ders11.html#section-4",
+    "href": "ders11.html#section-4",
+    "title": "Ders 12: Hangi Test?",
     "section": "",
-    "text": "Görsel Kaynak:"
+    "text": "Research Question\nType of Data\nStatistical Test\n\n\n\n\nIs there a difference between two unpaired groups?\nContinuous (normally distributed)\nt-test\n\n\nIs there a difference between two unpaired groups?\nContinuous (not normally distributed)\nWilcoxon rank-sum test (Mann-Whitney U test)\n\n\nIs there a difference between more than two unpaired groups?\nContinuous (normally distributed)\nOne-way ANOVA\n\n\nIs there a difference between more than two unpaired groups?\nContinuous (not normally distributed)\nKruskal-Wallis test\n\n\nIs there a difference between two paired groups?\nContinuous (normally distributed)\nPaired t-test\n\n\nIs there a difference between two paired groups?\nContinuous (not normally distributed)\nWilcoxon signed-rank test\n\n\nIs there a difference between more than two paired groups?\nContinuous (normally distributed)\nRepeated measures ANOVA\n\n\nIs there a difference between more than two paired groups?\nContinuous (not normally distributed)\nFriedman test\n\n\nIs there an association between two continuous variables?\nContinuous\nPearson correlation test\n\n\nIs there an association between two categorical variables?\nCategorical\nChi-squared test\n\n\nIs there an association between a continuous and a categorical variable?\nContinuous and categorical\nANOVA or regression analysis"
   },
   {
-    "objectID": "ders04.html#karar-verme",
-    "href": "ders04.html#karar-verme",
-    "title": "Ders 4: Güven Aralıkları ve Hipotez Testi",
-    "section": "Karar Verme",
-    "text": "Karar Verme\nP-değeri yaklaşımı en yaygın olanıdır:\n\nEğer p-değeri ≤ \\(\\alpha\\) ise, sonuç istatistiksel olarak anlamlıdır ve H₀ reddedilir. Alternatif hipotez (H₁) desteklenir.\nEğer p-değeri &gt; \\(\\alpha\\) ise, sonuç istatistiksel olarak anlamlı değildir ve H₀ reddedilemez. Alternatif hipotezi (H₁) desteklemek için yeterli kanıt yoktur."
-  },
-  {
-    "objectID": "ders04.html#tip-i-ve-tip-ii-hatalar",
-    "href": "ders04.html#tip-i-ve-tip-ii-hatalar",
-    "title": "Ders 4: Güven Aralıkları ve Hipotez Testi",
-    "section": "Tip I ve Tip II Hatalar",
-    "text": "Tip I ve Tip II Hatalar\nHipotez testlerinde iki tür hata yapılabilir:\n\nTip I Hata: Gerçekte doğru olan H₀ hipotezini reddetmek.\n\nOlasılığı \\(\\alpha\\) (anlamlılık düzeyi) ile gösterilir.\n“Yalancı Pozitif” - olmayan bir etkiyi var kabul etmek.\n\nTip II Hata: Gerçekte yanlış olan H₀ hipotezini reddetmemek (yani yanlış H₀’ı kabul etmek).\n\nOlasılığı \\(\\beta\\) ile gösterilir.\n“Yalancı Negatif” - var olan bir etkiyi gözden kaçırmak.\n\n\nTestin Gücü (Power): Yanlış bir H₀ hipotezini doğru bir şekilde reddetme olasılığıdır (1 - \\(\\beta\\))."
-  },
-  {
-    "objectID": "ders04.html#section-5",
-    "href": "ders04.html#section-5",
-    "title": "Ders 4: Güven Aralıkları ve Hipotez Testi",
-    "section": "",
-    "text": "Görsel Kaynak:"
-  },
-  {
-    "objectID": "ders04.html#örnek-tek-örneklem-t-testi",
-    "href": "ders04.html#örnek-tek-örneklem-t-testi",
-    "title": "Ders 4: Güven Aralıkları ve Hipotez Testi",
-    "section": "Örnek: Tek Örneklem t-Testi",
-    "text": "Örnek: Tek Örneklem t-Testi\nSenaryo: Bir araştırmacı, iris veri setindeki ‘setosa’ türü çiçeklerin ortalama çanak yaprak uzunluğunun (\\(\\mu\\)) 5.0 cm olup olmadığını test etmek istiyor. Anlamlılık düzeyi \\(\\alpha = 0.05\\).\n\n\\(H_0: \\mu = 5.0\\) cm\n\\(H_1: \\mu \\neq 5.0\\) cm (Çift yönlü test)\n\nR’da t.test() fonksiyonunu kullanabiliriz. mu argümanı ile H₀’daki değeri belirtiriz.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "ders04.html#sonuçların-yorumlanması-t-testi",
-    "href": "ders04.html#sonuçların-yorumlanması-t-testi",
-    "title": "Ders 4: Güven Aralıkları ve Hipotez Testi",
-    "section": "Sonuçların Yorumlanması (t-Testi)",
-    "text": "Sonuçların Yorumlanması (t-Testi)\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nYorum: Hesaplanan p-değeri (yaklaşık 0.85) belirlediğimiz anlamlılık düzeyi \\(\\alpha=0.05\\)’ten çok daha büyüktür. Bu nedenle, H₀ hipotezini (yani setosa türünün ortalama çanak yaprak uzunluğunun 5.0 cm olduğu iddiasını) reddetmek için yeterli istatistiksel kanıt yoktur. Örneklem ortalaması (5.006 cm) 5.0 cm’den farklı olsa da, bu fark istatistiksel olarak anlamlı değildir ve örnekleme şansından kaynaklanıyor olabilir."
-  },
-  {
-    "objectID": "ders04.html#ek-kaynaklar-1",
-    "href": "ders04.html#ek-kaynaklar-1",
-    "title": "Ders 4: Güven Aralıkları ve Hipotez Testi",
-    "section": "Ek Kaynaklar",
-    "text": "Ek Kaynaklar\n\nKhan Academy - Hypothesis Testing (İngilizce)\nYale Statlab - Hypothesis Testing (İngilizce)\nScribbr - Hypothesis Testing Explained (İngilizce)\nVeri Bilimi Okulu - Hipotez Testi (Türkçe)"
-  },
-  {
-    "objectID": "ders02.html#özet",
-    "href": "ders02.html#özet",
-    "title": "Ders2: Sayısal ve Görsel Özetleme",
-    "section": "Özet",
-    "text": "Özet\n\nortalama ve standart sapma\ndağılımların çeşitli ölçümleri\n\nrange, IQR\nhistogram\nboxplot"
-  },
-  {
-    "objectID": "ders02.html#ortalama-ve-median",
-    "href": "ders02.html#ortalama-ve-median",
-    "title": "Ders2: Sayısal ve Görsel Özetleme",
-    "section": "Ortalama ve median",
-    "text": "Ortalama ve median\nOrtalama: Değerler toplamının değer sayısına bölünmesi ile hesaplanır.\n\\[\n\\overline{x} = \\frac{\\displaystyle\\sum_{i=1}^{n} x_i}{n}\n\\]\nMedian: Sıralı değerlerin orta noktasıdır. Çift sayıda değer varsa, median, ortadaki iki sayının ortalamasıdır."
-  },
-  {
-    "objectID": "ders02.html#ortalama-ve-median-1",
-    "href": "ders02.html#ortalama-ve-median-1",
-    "title": "Ders2: Sayısal ve Görsel Özetleme",
-    "section": "Ortalama ve median",
-    "text": "Ortalama ve median\n\n\n\n\n\n\nSoru\n\n\nBir veri setine çok büyük veya çok küçük bir sayı eklendiğinde, hangisi daha çok etkilenir, ortalama mı, median mı?\n\n\n\nAşağıdaki örnekte, deneme vektörüne 100 sayısını ekleyip ortalama ve median değerlerini hesaplayın ve karşılaştırın.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "ders02.html#dağılımların-çeşitli-ölçümleri",
-    "href": "ders02.html#dağılımların-çeşitli-ölçümleri",
-    "title": "Ders2: Sayısal ve Görsel Özetleme",
-    "section": "Dağılımların çeşitli ölçümleri",
-    "text": "Dağılımların çeşitli ölçümleri\nRange/Aralık: En küçük ve büyük değer arasındaki farktır. R’da range() fonskiyonu en düşük ve yüksek değerleri gösterir. Farkı bulmak için max() ve min() fonksiyon çıktıları kullanılabilir.\nIQR: (Interquartile range veya Çeyrekler Arası Aralık) verilerin 1. ve 3. çeyreğinin arasındaki farkı gösterir. R’da IQR() fonksiyonu bu değerleri hesaplar.\n\nrange(iris$Sepal.Length)\n\n[1] 4.3 7.9\n\nIQR(iris$Sepal.Length)\n\n[1] 1.3\n\nquantile(iris$Sepal.Length)\n\n  0%  25%  50%  75% 100% \n 4.3  5.1  5.8  6.4  7.9"
-  },
-  {
-    "objectID": "ders02.html#varyans-ve-standart-sapma",
-    "href": "ders02.html#varyans-ve-standart-sapma",
-    "title": "Ders2: Sayısal ve Görsel Özetleme",
-    "section": "Varyans ve standart sapma",
-    "text": "Varyans ve standart sapma\nVaryans: \\(s^2\\) ile gösterilir, veri setindeki sayıların ortalamadan ne kadar uzak/yakın olduğunu gösterir.\n\\[\ns^2 = \\frac{\\sum_{i=1}^n (x_i - \\overline{x})^2}{n-1}\n\\]\nStandard sapma: Varyansın kareköküdür.\n\\[\ns = \\sqrt{s^2} = \\sqrt{\\frac{\\sum_{i=1}^n (x_i - \\overline{x})^2}{n-1}}\n\\]\nFormülden anlaşılacağı üzere, veri setindeki dağınıklık, ortalamadan uzaklık arttıkça varyans da artmaktadır. Varyans var() fonskiyonu ile, standart sapma ise sd() fonksiyonu ile hesaplanır."
-  },
-  {
-    "objectID": "ders02.html#görsel-özetleme",
-    "href": "ders02.html#görsel-özetleme",
-    "title": "Ders2: Sayısal ve Görsel Özetleme",
-    "section": "Görsel Özetleme",
-    "text": "Görsel Özetleme\nHistogram: Bir veri setindeki değerlerin dağılımını göstermak için, belirli aralıktaki değerlerin frekansını gösteren grafiklerdir. hist() fonksiyonu ile çizilebilir."
-  },
-  {
-    "objectID": "ders02.html#histogram-ayarlar",
-    "href": "ders02.html#histogram-ayarlar",
-    "title": "Ders2: Sayısal ve Görsel Özetleme",
-    "section": "Histogram ayarlar",
-    "text": "Histogram ayarlar\nbreaks parametresi ile histogramın ayrılacağı aralık sayısı ayarlanabilir\n\n\n\nhist(iris$Sepal.Length)\n\n\n\n\n\n\n\n\n\n\nhist(iris$Sepal.Length, \n     breaks = 15)"
-  },
-  {
-    "objectID": "ders02.html#histogram",
-    "href": "ders02.html#histogram",
-    "title": "Ders2: Sayısal ve Görsel Özetleme",
-    "section": "Histogram",
-    "text": "Histogram\nDaha güzel ve karmaşık bir görselleştirme için ggplot2 paketi kullanılabilir.\n\nlibrary(ggplot2)\nggplot(iris, aes(Sepal.Length)) +\n  geom_histogram(color = \"#000000\", fill = \"#0099F8\")"
-  },
-  {
-    "objectID": "ders02.html#ggplot2-ile-histogram",
-    "href": "ders02.html#ggplot2-ile-histogram",
-    "title": "Ders2: Sayısal ve Görsel Özetleme",
-    "section": "ggplot2 ile histogram",
-    "text": "ggplot2 ile histogram\n\nggplot(iris, aes(Sepal.Length)) +\n  geom_histogram(color = \"#000000\", fill = \"#0099F8\") +\n  geom_vline(aes(xintercept = mean(Sepal.Length)), color = \"#000000\", size = 1.25) +\n  geom_vline(aes(xintercept = mean(Sepal.Length) + sd(Sepal.Length)), color = \"#000000\", size = 1, linetype = \"dashed\") +\n  geom_vline(aes(xintercept = mean(Sepal.Length) - sd(Sepal.Length)), color = \"#000000\", size = 1, linetype = \"dashed\") +\n  theme_bw()"
-  },
-  {
-    "objectID": "ders02.html#boxplot",
-    "href": "ders02.html#boxplot",
-    "title": "Ders2: Sayısal ve Görsel Özetleme",
-    "section": "Boxplot",
-    "text": "Boxplot\n\n\nGörsel kaynak: Box Plot with Minitab"
-  },
-  {
-    "objectID": "ders02.html#r-ile-boxplot",
-    "href": "ders02.html#r-ile-boxplot",
-    "title": "Ders2: Sayısal ve Görsel Özetleme",
-    "section": "R ile Boxplot",
-    "text": "R ile Boxplot\nboxplot() fonksiyonu bir vektör (sütün) veya veri tablosu (data frame) için çalıştırılabilir.\n\nboxplot(iris$Sepal.Length)"
-  },
-  {
-    "objectID": "ders02.html#r-ile-boxplot---veri-tablosu",
-    "href": "ders02.html#r-ile-boxplot---veri-tablosu",
-    "title": "Ders2: Sayısal ve Görsel Özetleme",
-    "section": "R ile Boxplot - veri tablosu",
-    "text": "R ile Boxplot - veri tablosu\n\nboxplot(iris)"
-  },
-  {
-    "objectID": "ders02.html#farklı-görselleştirmeler",
-    "href": "ders02.html#farklı-görselleştirmeler",
-    "title": "Ders2: Sayısal ve Görsel Özetleme",
-    "section": "Farklı görselleştirmeler",
-    "text": "Farklı görselleştirmeler\nggplot2 veya temel R’da farklı görselleştirmeler yapılabilir.\n\n\nGörsel kaynak: Plot Grouped Data: Box plot, Bar Plot and More"
-  },
-  {
-    "objectID": "ders02.html#ek-kaynaklar",
-    "href": "ders02.html#ek-kaynaklar",
-    "title": "Ders2: Sayısal ve Görsel Özetleme",
+    "objectID": "ders11.html#ek-kaynaklar",
+    "href": "ders11.html#ek-kaynaklar",
+    "title": "Ders 12: Hangi Test?",
     "section": "Ek kaynaklar",
-    "text": "Ek kaynaklar\n\nSTHDA sitesinde “Descriptive Statistics and Graphics” adlı sayfa, bu sunumdaki bilgilere ek bilgiler içerir.\nSadece sayısal özet yeterli olmayabilir. Veriyi her zaman görselleştirmek gerekir. Same Stats, Different Graphs"
+    "text": "Ek kaynaklar\n\nİnteraktif olarak test seçmek için: https://www.statsflowchart.co.uk/\nFormül ve özellikleri detaylı gösteren liste: https://www.statskingdom.com/"
+  },
+  {
+    "objectID": "ders05.html#özet",
+    "href": "ders05.html#özet",
+    "title": "Ders 5: t-Testi ve Örneklerle Uygulamaları",
+    "section": "Özet",
+    "text": "Özet\n\nt-testi nedir ve ne zaman kullanılır?\nt-dağılımı ve normal dağılım arasındaki fark\nt-testi türleri (tek örneklem, bağımsız örneklemler, eşleştirilmiş örneklemler)\nt-testi varsayımları\nR ile t-testi uygulamaları\nt-testi sonuçlarının yorumlanması ve raporlanması\nBiyolojide t-testi uygulamaları"
+  },
+  {
+    "objectID": "ders05.html#t-testi-nedir",
+    "href": "ders05.html#t-testi-nedir",
+    "title": "Ders 5: t-Testi ve Örneklerle Uygulamaları",
+    "section": "t-testi Nedir?",
+    "text": "t-testi Nedir?\nt-testi, iki grup ortalaması arasındaki farkın istatistiksel anlamlılığını değerlendirmek için kullanılan yaygın bir parametrik testtir.\nKullanım Amacı:\n\nPopülasyon standart sapması bilinmediğinde ortalamaları karşılaştırmak\nKüçük örneklem boyutlarında (n &lt; 30) bile kullanılabilir\nDeneysel verilerin istatistiksel analizinde sıklıkla kullanılır\n\nTemel Fikir:\nGözlemlenen farkın, rastgele şans eseri ortaya çıkıp çıkmadığını değerlendirmek."
+  },
+  {
+    "objectID": "ders05.html#normal-dağılım-vs.-t-dağılımı",
+    "href": "ders05.html#normal-dağılım-vs.-t-dağılımı",
+    "title": "Ders 5: t-Testi ve Örneklerle Uygulamaları",
+    "section": "Normal Dağılım vs. t-Dağılımı",
+    "text": "Normal Dağılım vs. t-Dağılımı\n\nNormal Dağılım (Z-dağılımı):\n\nPopülasyon parametreleri (μ, σ) bilindiğinde kullanılır\nSimetrik, çan şeklindedir\nStandart normal dağılım: N(0,1)\n\nt-Dağılımı:\n\nPopülasyon standart sapması (σ) bilinmediğinde kullanılır\nNormal dağılıma benzer ancak “kuyrukları” daha kalındır\nÖrneklem büyüklüğüne (serbestlik derecesine) bağlıdır\nn büyüdükçe normal dağılıma yakınsar"
+  },
+  {
+    "objectID": "ders05.html#t-dağılımı-ve-serbestlik-derecesi",
+    "href": "ders05.html#t-dağılımı-ve-serbestlik-derecesi",
+    "title": "Ders 5: t-Testi ve Örneklerle Uygulamaları",
+    "section": "t-Dağılımı ve Serbestlik Derecesi",
+    "text": "t-Dağılımı ve Serbestlik Derecesi\n\n\n\n\n\nSerbestlik Derecesi (SD = n-1): Veriler üzerinde yapılabilen bağımsız karşılaştırmaların sayısı.\n\nGörsel Kaynak: Wikimedia Commons"
+  },
+  {
+    "objectID": "ders05.html#t-testi-çeşitleri",
+    "href": "ders05.html#t-testi-çeşitleri",
+    "title": "Ders 5: t-Testi ve Örneklerle Uygulamaları",
+    "section": "t-testi Çeşitleri",
+    "text": "t-testi Çeşitleri\n\nTek Örneklem t-testi:\n\nBir örneklem ortalamasının bilinen bir değerle karşılaştırılması\nÖrnek: “İlaç verilen hastaların ortalama kan şekeri 100 mg/dL’den farklı mı?”\n\nBağımsız Örneklemler t-testi (İki Örneklem t-testi):\n\nİki bağımsız grubun ortalamalarının karşılaştırılması\nÖrnek: “İlaç A ve İlaç B’nin ortalama etkinliği arasında fark var mı?”\n\nEşleştirilmiş Örneklemler t-testi (Bağımlı t-testi):\n\nAynı örneklemdeki farklı koşulların karşılaştırılması\nÖrnek: “Hastaların tedavi öncesi ve sonrası değerleri arasında fark var mı?”"
+  },
+  {
+    "objectID": "ders05.html#section",
+    "href": "ders05.html#section",
+    "title": "Ders 5: t-Testi ve Örneklerle Uygulamaları",
+    "section": "",
+    "text": "Kaynak: t-Test DATAtab"
+  },
+  {
+    "objectID": "ders05.html#section-1",
+    "href": "ders05.html#section-1",
+    "title": "Ders 5: t-Testi ve Örneklerle Uygulamaları",
+    "section": "",
+    "text": "Kaynak: t-Test DATAtab"
+  },
+  {
+    "objectID": "ders05.html#t-testi-formülleri",
+    "href": "ders05.html#t-testi-formülleri",
+    "title": "Ders 5: t-Testi ve Örneklerle Uygulamaları",
+    "section": "t-testi Formülleri",
+    "text": "t-testi Formülleri\n1. Tek Örneklem t-testi: \\[ t = \\frac{\\bar{x} - \\mu_0}{s/\\sqrt{n}} \\]\n2. Bağımsız Örneklemler t-testi: \\[ t = \\frac{\\bar{x}_1 - \\bar{x}_2}{\\sqrt{\\frac{s_1^2}{n_1} + \\frac{s_2^2}{n_2}}} \\]\n3. Eşleştirilmiş Örneklemler t-testi: \\[ t = \\frac{\\bar{d}}{s_d/\\sqrt{n}} \\]"
+  },
+  {
+    "objectID": "ders05.html#formüller",
+    "href": "ders05.html#formüller",
+    "title": "Ders 5: t-Testi ve Örneklerle Uygulamaları",
+    "section": "Formüller",
+    "text": "Formüller\nBurada:\n\n\\(\\bar{x}\\): Örneklem ortalaması\n\\(\\mu_0\\): Test edilen popülasyon değeri\n\\(s\\): Örneklem standart sapması\n\\(n\\): Örneklem büyüklüğü\n\\(\\bar{d}\\): Eşleştirilmiş farklılıkların ortalaması\n\\(s_d\\): Eşleştirilmiş farklılıkların standart sapması"
+  },
+  {
+    "objectID": "ders05.html#t-testi-varsayımları",
+    "href": "ders05.html#t-testi-varsayımları",
+    "title": "Ders 5: t-Testi ve Örneklerle Uygulamaları",
+    "section": "t-testi Varsayımları",
+    "text": "t-testi Varsayımları\nt-testi parametrik bir testtir ve bazı varsayımlar üzerine kuruludur:\n\nNormallik: Verilerin normal dağılıma sahip olması veya örneklem boyutunun yeterince büyük olması (n&gt;30)\nVaryansların homojenliği: Bağımsız örneklemler t-testinde, grupların varyanslarının benzer olması\nBağımsızlık: Gözlemlerin birbirinden bağımsız olması\nÖlçüm düzeyi: Verilerin aralıklı veya oransal ölçek düzeyinde olması\n\nNot: Eğer varsayımlar karşılanmazsa, parametrik olmayan alternatifler düşünülmelidir (ör. Mann-Whitney U testi, Wilcoxon işaretli sıra testi)."
+  },
+  {
+    "objectID": "ders05.html#t-testi-varsayımları-bağımsızlık",
+    "href": "ders05.html#t-testi-varsayımları-bağımsızlık",
+    "title": "Ders 5: t-Testi ve Örneklerle Uygulamaları",
+    "section": "t-testi Varsayımları (Bağımsızlık)",
+    "text": "t-testi Varsayımları (Bağımsızlık)\nBu varsayım, t-testi için toplanan verilerdeki bir ölçümün, diğer ölçümleri etkilememesi gerektiği anlamına gelir. Yani bir deney katılımcısının veya örneğin verdiği sonuç, diğer katılımcıların veya örneklerin sonuçlarını etkilememelidir.\n\nBağımsız gözlemlere örnekler\n\nFarklı farelerden alınan kan örnekleri (her fare bağımsız bir birey)\nFarklı petri kaplarında yetiştirilen bakteri kolonileri\nFarklı hastalardan alınan doku örnekleri\nRastgele seçilen 20 ağaçtan ölçülen yaprak büyüklükleri\n\nBağımsız OLMAYAN gözlemlere örnekler\n\nAynı fareden günlük olarak alınan ardışık kan örnekleri (bir gündeki ölçüm, diğer günü etkileyebilir)\nAynı bakterinin farklı zamanlardaki üreme hızları\nAynı aileden alınan genetik örnekler (genetik yakınlık nedeniyle bağımsız değil)\nYan yana büyüyen bitkilerden alınan ölçümler (birbirlerinin büyümesini etkileyebilirler)"
+  },
+  {
+    "objectID": "ders05.html#tek-yönlü-ve-çift-yönlü-t-testi",
+    "href": "ders05.html#tek-yönlü-ve-çift-yönlü-t-testi",
+    "title": "Ders 5: t-Testi ve Örneklerle Uygulamaları",
+    "section": "Tek Yönlü ve Çift Yönlü t-testi",
+    "text": "Tek Yönlü ve Çift Yönlü t-testi\nHer t-testi, alternatif hipotezin yapısına göre tek yönlü veya çift yönlü olabilir:\nÇift Yönlü t-testi (Two-sided):\n\nAlternatif hipotez: “eşit değildir” (\\(\\neq\\))\nÖrnek: \\(H_1: \\mu \\neq \\mu_0\\) veya \\(H_1: \\mu_1 \\neq \\mu_2\\)\nİlgilendiğimiz şey farkın yönü değil, sadece bir fark olup olmadığıdır\nR’da varsayılan seçenek: alternative = \"two.sided\"\n\nTek Yönlü t-testi (One-sided):\n\nAlternatif hipotez: “küçüktür” (&lt;) ya da “büyüktür” (&gt;)\nÖrnekler:\n\n\\(H_1: \\mu &lt; \\mu_0\\) (alternative = \"less\")\n\\(H_1: \\mu &gt; \\mu_0\\) (alternative = \"greater\")\n\nİlgilendiğimiz durum farkın belirli bir yönde olup olmadığıdır\nTek yönlü testler, belirli bir yönde fark beklediğimizde daha güçlüdür\n\nÖnemli Not: Tek yönlü test kullanmak için, hipotez kurulmadan önce farkın yönüne dair güçlü bir teorik gerekçe olmalıdır. Veriler incelendikten sonra tek yönlü test seçmek, tip I hata olasılığını artırır."
+  },
+  {
+    "objectID": "ders05.html#tek-örneklem-t-testi",
+    "href": "ders05.html#tek-örneklem-t-testi",
+    "title": "Ders 5: t-Testi ve Örneklerle Uygulamaları",
+    "section": "Tek Örneklem t-testi",
+    "text": "Tek Örneklem t-testi\nBir örneklemin ortalamasını, bilinen veya hipotez edilen bir popülasyon değeriyle karşılaştırır.\nÖrnek Senaryo: Yeni geliştirilen bir bitkisel ilacın, farelerde ortalama kan glikoz seviyesini referans değer olan 100 mg/dL’den farklı bir seviyeye değiştirip değiştirmediğini test etmek istiyoruz.\n\n\\(H_0: \\mu = 100\\) mg/dL (İlaç, kan glikoz seviyesini değiştirmez)\n\\(H_1: \\mu \\neq 100\\) mg/dL (İlaç, kan glikoz seviyesini değiştirir)"
+  },
+  {
+    "objectID": "ders05.html#r-ile-tek-örneklem-t-testi",
+    "href": "ders05.html#r-ile-tek-örneklem-t-testi",
+    "title": "Ders 5: t-Testi ve Örneklerle Uygulamaları",
+    "section": "R ile Tek Örneklem t-testi",
+    "text": "R ile Tek Örneklem t-testi\nİlacın test edildiği 15 farenin kan glikoz seviyelerini analiz edelim:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders05.html#sonucun-yorumlanması",
+    "href": "ders05.html#sonucun-yorumlanması",
+    "title": "Ders 5: t-Testi ve Örneklerle Uygulamaları",
+    "section": "Sonucun Yorumlanması",
+    "text": "Sonucun Yorumlanması\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nYorum: p-değeri 0.05’ten küçük olduğu için H0 hipotezini reddediyoruz. Bitkisel ilacın, farelerin kan glikoz seviyelerini, referans değer olan 100 mg/dL’den anlamlı şekilde düşürdüğünü söyleyebiliriz (t(14) = -11.94, p &lt; 0.001)."
+  },
+  {
+    "objectID": "ders05.html#bağımsız-iki-örneklem-t-testi",
+    "href": "ders05.html#bağımsız-iki-örneklem-t-testi",
+    "title": "Ders 5: t-Testi ve Örneklerle Uygulamaları",
+    "section": "Bağımsız İki Örneklem t-Testi",
+    "text": "Bağımsız İki Örneklem t-Testi\nİki farklı, bağımsız grubun ortalamalarını karşılaştırmak için kullanılır.\nÖrnek Senaryo: İki farklı gübre türünün (A ve B) domates bitkilerinin boyları üzerindeki etkisini karşılaştırmak istiyoruz.\n\n\\(H_0: \\mu_A = \\mu_B\\) (İki gübre arasında fark yok)\n\\(H_1: \\mu_A \\neq \\mu_B\\) (İki gübre arasında fark var)"
+  },
+  {
+    "objectID": "ders05.html#r-ile-bağımsız-iki-örneklem-t-testi",
+    "href": "ders05.html#r-ile-bağımsız-iki-örneklem-t-testi",
+    "title": "Ders 5: t-Testi ve Örneklerle Uygulamaları",
+    "section": "R ile Bağımsız İki Örneklem t-Testi",
+    "text": "R ile Bağımsız İki Örneklem t-Testi\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders05.html#section-2",
+    "href": "ders05.html#section-2",
+    "title": "Ders 5: t-Testi ve Örneklerle Uygulamaları",
+    "section": "",
+    "text": "Please enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders05.html#görselleştirme-ve-yorum",
+    "href": "ders05.html#görselleştirme-ve-yorum",
+    "title": "Ders 5: t-Testi ve Örneklerle Uygulamaları",
+    "section": "Görselleştirme ve Yorum",
+    "text": "Görselleştirme ve Yorum\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nYorum: p-değeri 0.05’ten küçük olduğundan H0 hipotezini reddediyoruz. Gübre B’nin, domates bitkilerinin boyunu, Gübre A’ya göre istatistiksel olarak anlamlı şekilde daha fazla artırdığını söyleyebiliriz (t(18) = -5.14, p &lt; 0.001)."
+  },
+  {
+    "objectID": "ders05.html#eşleştirilmiş-örneklemler-t-testi",
+    "href": "ders05.html#eşleştirilmiş-örneklemler-t-testi",
+    "title": "Ders 5: t-Testi ve Örneklerle Uygulamaları",
+    "section": "Eşleştirilmiş Örneklemler t-Testi",
+    "text": "Eşleştirilmiş Örneklemler t-Testi\nAynı deneklerin/örneklerin iki farklı durumda ölçülen değerlerini karşılaştırmak için kullanılır.\nÖrnek Senaryo: 10 hastanın, belirli bir ilaç tedavisinden önce ve sonra kolesterol seviyelerini karşılaştırmak istiyoruz.\n\n\\(H_0: \\mu_d = 0\\) (Tedavi öncesi ve sonrası arasında fark yok)\n\\(H_1: \\mu_d \\neq 0\\) (Tedavi öncesi ve sonrası arasında fark var)\n\nBurada \\(\\mu_d\\), tedavi öncesi ve sonrası değerler arasındaki farkların ortalamasıdır."
+  },
+  {
+    "objectID": "ders05.html#r-ile-eşleştirilmiş-örneklemler-t-testi",
+    "href": "ders05.html#r-ile-eşleştirilmiş-örneklemler-t-testi",
+    "title": "Ders 5: t-Testi ve Örneklerle Uygulamaları",
+    "section": "R ile Eşleştirilmiş Örneklemler t-Testi",
+    "text": "R ile Eşleştirilmiş Örneklemler t-Testi\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders05.html#görselleştirme-ve-yorum-1",
+    "href": "ders05.html#görselleştirme-ve-yorum-1",
+    "title": "Ders 5: t-Testi ve Örneklerle Uygulamaları",
+    "section": "Görselleştirme ve Yorum",
+    "text": "Görselleştirme ve Yorum\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nYorum: p-değeri 0.05’ten küçük olduğundan H0 hipotezini reddediyoruz. İlaç tedavisinin, hastaların kolesterol seviyelerini istatistiksel olarak anlamlı şekilde düşürdüğünü söyleyebiliriz (t(9) = 14.41, p &lt; 0.001). Ortalama düşüş 19.2 mg/dL’dir."
+  },
+  {
+    "objectID": "ders05.html#t-testi-sonuçlarının-raporlanması",
+    "href": "ders05.html#t-testi-sonuçlarının-raporlanması",
+    "title": "Ders 5: t-Testi ve Örneklerle Uygulamaları",
+    "section": "t-Testi Sonuçlarının Raporlanması",
+    "text": "t-Testi Sonuçlarının Raporlanması\nAkademik yayınlarda t-testi sonuçlarını nasıl raporlamalıyız?\n1. Tek Örneklem t-Testi: “Bitkisel ilacın farelerin kan glikoz seviyelerine etkisi, tek örneklem t-testi ile değerlendirilmiştir. Farelerin ortalama kan glikoz seviyesi (M = 92.1, SD = 2.6) referans değerden (100 mg/dL) anlamlı şekilde düşüktür, t(14) = -11.94, p &lt; 0.001.”\n2. Bağımsız İki Örneklem t-Testi: “Gübre B ile yetiştirilen domates bitkilerinin boyları (M = 78.3 cm, SD = 3.4), Gübre A ile yetiştirilen bitkilerden (M = 71.5 cm, SD = 3.7) anlamlı şekilde daha yüksektir, t(18) = -5.14, p &lt; 0.001.”\n3. Eşleştirilmiş Örneklemler t-Testi: “İlaç tedavisi sonrası hastaların kolesterol seviyeleri (M = 230.8 mg/dL, SD = 11.0), tedavi öncesine (M = 250.0 mg/dL, SD = 7.6) göre anlamlı şekilde daha düşüktür, t(9) = 14.41, p &lt; 0.001. Ortalama azalma 19.2 mg/dL’dir (%95 GA [16.2, 22.2]).”"
+  },
+  {
+    "objectID": "ders05.html#biyolojide-t-testi-uygulamaları",
+    "href": "ders05.html#biyolojide-t-testi-uygulamaları",
+    "title": "Ders 5: t-Testi ve Örneklerle Uygulamaları",
+    "section": "Biyolojide t-Testi Uygulamaları",
+    "text": "Biyolojide t-Testi Uygulamaları\n\nGen ekspresyonu: İki farklı koşulda gen ekspresyon seviyelerini karşılaştırma\nİlaç etkinliği: Tedavi grubunun kontrol grubuyla karşılaştırılması\nBüyüme çalışmaları: Farklı besin ortamlarında bakterilerin büyüme hızlarının karşılaştırılması\nEnzim aktivitesi: Farklı pH değerlerinde enzim aktivitelerinin karşılaştırılması\nBiyobelirteç seviyeleri: Hasta ve sağlıklı gruplar arasındaki biyobelirteç seviyelerinin karşılaştırılması\n\nÖrnek: “miR-21 ekspresyon seviyesi, kanser hastalarında (M = 4.2, SD = 1.1) sağlıklı kontrollere (M = 1.8, SD = 0.7) göre anlamlı şekilde daha yüksekti, t(58) = 10.73, p &lt; 0.001, ortalama fark = 2.4 kat (%95 GA [2.0, 2.8]).”"
+  },
+  {
+    "objectID": "ders05.html#gerçek-veri-üzerinde-uygulama-iris-veri-seti",
+    "href": "ders05.html#gerçek-veri-üzerinde-uygulama-iris-veri-seti",
+    "title": "Ders 5: t-Testi ve Örneklerle Uygulamaları",
+    "section": "Gerçek Veri Üzerinde Uygulama: iris Veri Seti",
+    "text": "Gerçek Veri Üzerinde Uygulama: iris Veri Seti\nŞimdi, iris veri setinde farklı türlerdeki çiçeklerin taç yaprak (petal) boylarını karşılaştıralım.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders05.html#görselleştirme-ve-yorum-2",
+    "href": "ders05.html#görselleştirme-ve-yorum-2",
+    "title": "Ders 5: t-Testi ve Örneklerle Uygulamaları",
+    "section": "Görselleştirme ve Yorum",
+    "text": "Görselleştirme ve Yorum\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nYorum: İki Iris türü arasındaki taç yaprak boyu farkı istatistiksel olarak anlamlıdır, t(86.7) = -39.5, p &lt; 0.001. Versicolor türünün taç yaprakları (M = 4.26 cm, SD = 0.47), setosa türünün taç yapraklarından (M = 1.46 cm, SD = 0.17) ortalama 2.8 cm daha uzundur (%95 GA [2.66, 2.94])."
+  },
+  {
+    "objectID": "ders05.html#t-testi-için-pratik-ipuçları",
+    "href": "ders05.html#t-testi-için-pratik-ipuçları",
+    "title": "Ders 5: t-Testi ve Örneklerle Uygulamaları",
+    "section": "t-Testi için Pratik İpuçları",
+    "text": "t-Testi için Pratik İpuçları\n\nVeri Hazırlığı:\n\nAykırı değerleri belirleyin ve nasıl ele alacağınıza karar verin\nVerilerin normal dağılıma uygunluğunu kontrol edin (histogram, Q-Q plot, Shapiro-Wilk testi)\n\nTest Seçimi:\n\nDoğru t-testi türünü seçin (tek örneklem, bağımsız, eşleştirilmiş)\nVarsayımlar karşılanmıyorsa, parametrik olmayan alternatifleri düşünün\n\nSonuçların Yorumlanması:\n\nSadece p-değerine değil, etki büyüklüğüne de bakın (Cohen’s d)\nGüven aralıklarını rapor edin\nBulgularınızı biyolojik bağlamda yorumlayın"
+  },
+  {
+    "objectID": "ders05.html#t-testi-ile-ilgili-yaygın-yanılgılar",
+    "href": "ders05.html#t-testi-ile-ilgili-yaygın-yanılgılar",
+    "title": "Ders 5: t-Testi ve Örneklerle Uygulamaları",
+    "section": "t-Testi ile İlgili Yaygın Yanılgılar",
+    "text": "t-Testi ile İlgili Yaygın Yanılgılar\n\n“p &gt; 0.05 ise, iki grup arasında fark yoktur”\n\nDoğrusu: H0’ı reddedemeyiz, ancak bu “fark yoktur” anlamına gelmez\n\n“p &lt; 0.05 ise, sonuç pratik olarak önemlidir”\n\nDoğrusu: İstatistiksel anlamlılık, pratik önemi garanti etmez\n\n“t-testi, her tür veri için uygundur”\n\nDoğrusu: t-testi, varsayımları karşılayan verilerde kullanılmalıdır\n\n“Örneklem büyüklüğü arttıkça, sonuçlar daha doğru olur”\n\nDoğrusu: Büyük örneklemler küçük farkları bile anlamlı gösterebilir"
+  },
+  {
+    "objectID": "ders05.html#yanılgı-4",
+    "href": "ders05.html#yanılgı-4",
+    "title": "Ders 5: t-Testi ve Örneklerle Uygulamaları",
+    "section": "Yanılgı 4",
+    "text": "Yanılgı 4\nBu yanılgıyla ilgili doğru açıklama: “Büyük örneklemler küçük farkları bile anlamlı gösterebilir” şeklindedir. İstatistiksel açıdan bakıldığında, örneklem büyüklüğü arttıkça istatistiksel testlerin gücü (power) artar. Yani, gerçekten var olan bir etkiyi tespit etme olasılığımız yükselir. Bu doğrudur ve istatistiğin temel ilkelerinden biridir. Ancak buradaki yanılgı şudur:\n\nİstatistiksel anlamlılık ≠ Pratik anlamlılık: Örneklem büyüklüğü arttıkça, çok küçük ve pratikte önemsiz farklar bile istatistiksel olarak anlamlı çıkabilir. Örneğin:\n\n10 fare ile yapılan bir deneyde 5 mg/dL’lik bir kan şekeri farkı istatistiksel olarak anlamlı çıkmayabilir.\n1000 fare ile aynı deneyi yaptığınızda 1 mg/dL’lik bir fark bile istatistiksel olarak anlamlı çıkabilir. Ancak 1 mg/dL’lik fark biyolojik olarak anlamlı mıdır? Bu kadar küçük bir fark gerçekten önemli midir?\n\nYanlılık (bias) sorunu: Örneklem büyüklüğü, sistematik hatayı (bias) azaltmaz. Eğer örneklem seçiminizde bir yanlılık varsa, örneklem büyüklüğünü artırmak bu sorunu çözmez, hatta daha da belirginleştirebilir."
+  },
+  {
+    "objectID": "ders05.html#rda-t-testi-kullanımı-özet",
+    "href": "ders05.html#rda-t-testi-kullanımı-özet",
+    "title": "Ders 5: t-Testi ve Örneklerle Uygulamaları",
+    "section": "R’da t-Testi Kullanımı (Özet)",
+    "text": "R’da t-Testi Kullanımı (Özet)\n# 1. Tek Örneklem t-Testi\n# a. Çift yönlü test (varsayılan)\nt.test(x, mu = 0)\n# b. Tek yönlü test (küçüktür)\nt.test(x, mu = 0, alternative = \"less\")\n# c. Tek yönlü test (büyüktür)\nt.test(x, mu = 0, alternative = \"greater\")"
+  },
+  {
+    "objectID": "ders05.html#rda-t-testi-kullanımı-özet-1",
+    "href": "ders05.html#rda-t-testi-kullanımı-özet-1",
+    "title": "Ders 5: t-Testi ve Örneklerle Uygulamaları",
+    "section": "R’da t-Testi Kullanımı (Özet)",
+    "text": "R’da t-Testi Kullanımı (Özet)\n# 2. Bağımsız İki Örneklem t-Testi\n# a. Varyansların eşit olduğu varsayımıyla\nt.test(x, y, var.equal = TRUE)\n# b. Varyansların eşit olmadığı varsayımıyla (Welch t-testi, var\nsayılan)\nt.test(x, y)\n# c. Tek yönlü test ile (örneğin x'in y'den büyük olup olmadığın\nı test etmek için)\nt.test(x, y, alternative = \"greater\")"
+  },
+  {
+    "objectID": "ders05.html#rda-t-testi-kullanımı-özet-2",
+    "href": "ders05.html#rda-t-testi-kullanımı-özet-2",
+    "title": "Ders 5: t-Testi ve Örneklerle Uygulamaları",
+    "section": "R’da t-Testi Kullanımı (Özet)",
+    "text": "R’da t-Testi Kullanımı (Özet)\n# 3. Eşleştirilmiş Örneklemler t-Testi\nt.test(x, y, paired = TRUE)\n# Tek yönlü seçeneği ile\nt.test(x, y, paired = TRUE, alternative = \"greater\")"
+  },
+  {
+    "objectID": "ders05.html#rda-t-testi-kullanımı-özet-3",
+    "href": "ders05.html#rda-t-testi-kullanımı-özet-3",
+    "title": "Ders 5: t-Testi ve Örneklerle Uygulamaları",
+    "section": "R’da t-Testi Kullanımı (Özet)",
+    "text": "R’da t-Testi Kullanımı (Özet)\n# 4. Formül kullanımı (veritabanları ile çalışırken)\nt.test(value ~ group, data = mydata)\nt.test(value ~ group, data = mydata, paired = TRUE)\nt.test(value ~ group, data = mydata, alternative = \"less\")"
+  },
+  {
+    "objectID": "ders05.html#farklı-t-test-türleri-için-varsayımlar-ve-r-kod-örnekleri",
+    "href": "ders05.html#farklı-t-test-türleri-için-varsayımlar-ve-r-kod-örnekleri",
+    "title": "Ders 5: t-Testi ve Örneklerle Uygulamaları",
+    "section": "Farklı t-Test Türleri için Varsayımlar ve R Kod Örnekleri",
+    "text": "Farklı t-Test Türleri için Varsayımlar ve R Kod Örnekleri\n\n\n\n\n\n\n\n\nt-Testi Türü\nTemel Varsayımlar\nR Kodu\n\n\n\n\nTek Örneklem\n- Verilerin normal dağılması veya n&gt;30- Bağımsız gözlemler\nt.test(x, mu = 0)\n\n\nBağımsız İki Örneklem(eşit varyans)\n- İki grupta da normal dağılım- Varyansların homojenliği- Bağımsız gözlemler\nt.test(x, y, var.equal = TRUE)\n\n\nBağımsız İki Örneklem(Welch/eşit olmayan varyans)\n- İki grupta da normal dağılım- Varyanslar farklı olabilir- Bağımsız gözlemler\nt.test(x, y)\n\n\nEşleştirilmiş Örneklemler\n- Farkların normal dağılması- Eşleştirilmiş gözlemler\nt.test(x, y, paired = TRUE)"
+  },
+  {
+    "objectID": "ders06-uygulama.html#tek-örnek-t-testi",
+    "href": "ders06-uygulama.html#tek-örnek-t-testi",
+    "title": "Ders6 Uygulama: T-testi",
+    "section": "Tek örnek t-testi",
+    "text": "Tek örnek t-testi\nAşağıdaki veri, 11 kadına ait günlük enerji alımını (kJ) gösterir. Bu grubun değerleri tavisye edilen 7725 kJ değerinden farklı mıdır?\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders06-uygulama.html#iki-örnek-t-testi",
+    "href": "ders06-uygulama.html#iki-örnek-t-testi",
+    "title": "Ders6 Uygulama: T-testi",
+    "section": "İki örnek t-testi",
+    "text": "İki örnek t-testi\nİki grup arasında enerji tüketimi açısından fark var mıdır?\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\nIntroductory Statistics with R adlı kitaptan alınmıştır"
+  },
+  {
+    "objectID": "ders06-uygulama.html#iki-örnek-t-testi-1",
+    "href": "ders06-uygulama.html#iki-örnek-t-testi-1",
+    "title": "Ders6 Uygulama: T-testi",
+    "section": "İki örnek t-testi",
+    "text": "İki örnek t-testi\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders06-uygulama.html#iki-örnek-t-testi-bağımlıilişkili",
+    "href": "ders06-uygulama.html#iki-örnek-t-testi-bağımlıilişkili",
+    "title": "Ders6 Uygulama: T-testi",
+    "section": "İki örnek t-testi (bağımlı/ilişkili)",
+    "text": "İki örnek t-testi (bağımlı/ilişkili)\nBir grup kadında pre ve post menstruasyon enerji alımı verisi. Pre ve Post ölçümler arasında fark var mıdır?\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders07.html#özet",
+    "href": "ders07.html#özet",
+    "title": "Ders 7: ANOVA (Varyans Analizi)",
+    "section": "Özet",
+    "text": "Özet\n\nANOVA (Varyans Analizi) nedir ve ne zaman kullanılır?\nt-testi ile ANOVA arasındaki fark\nTek Yönlü ANOVA (One-Way ANOVA)\nANOVA’nın varsayımları\nF-dağılımı ve F-istatistiği\nR ile ANOVA uygulamaları\nANOVA sonuçlarının yorumlanması ve raporlanması\nPost-hoc testleri (Tukey HSD, Bonferroni)\nBiyolojide ANOVA uygulamaları"
+  },
+  {
+    "objectID": "ders07.html#anova-varyans-analizi-nedir",
+    "href": "ders07.html#anova-varyans-analizi-nedir",
+    "title": "Ders 7: ANOVA (Varyans Analizi)",
+    "section": "ANOVA (Varyans Analizi) Nedir?",
+    "text": "ANOVA (Varyans Analizi) Nedir?\nANOVA, ikiden fazla grup ortalaması arasındaki farkların istatistiksel anlamlılığını değerlendirmek için kullanılan parametrik bir testtir.\nKullanım Amacı:\n\nİkiden fazla grubun karşılaştırılması\nBir veya daha fazla faktörün (bağımsız değişkenlerin) bir bağımlı değişken üzerindeki etkisini incelemek\nGruplar arası farklılıkların rastgele şans eseri mi yoksa gerçek bir etkiden mi kaynaklandığını belirlemek\n\nTemel Fikir:\nGruplar arası varyans ile gruplar içi varyansı karşılaştırarak, faktörün anlamlı bir etkisi olup olmadığını belirlemek"
+  },
+  {
+    "objectID": "ders07.html#t-testi-vs.-anova",
+    "href": "ders07.html#t-testi-vs.-anova",
+    "title": "Ders 7: ANOVA (Varyans Analizi)",
+    "section": "t-testi vs. ANOVA",
+    "text": "t-testi vs. ANOVA\nNeden ANOVA? Neden çoklu t-testi kullanmıyoruz?\n\nİkiden fazla grup olduğunda t-testi yerine ANOVA kullanılır\nÇoklu t-testleri yapmak, Tip I hata (yanlış pozitif) olasılığını artırır\n\nÖrnek: 3 grup karşılaştırması yapıyorsak:\n\nA vs B, A vs C, B vs C = 3 farklı t-testi\nHer test için α = 0.05 olsaydı, gerçekte:\n\nEn az bir testte yanlış pozitif bulma olasılığı: 1-(1-0.05)³ = 0.143\n\n\nTip I hata olasılığı 0.05 yerine 0.143’e çıkar!\nANOVA, bu \"çoklu karşılaştırma problemini\" çözer ve genel hata oranını kontrol altında tutar."
+  },
+  {
+    "objectID": "ders07.html#anova-türleri",
+    "href": "ders07.html#anova-türleri",
+    "title": "Ders 7: ANOVA (Varyans Analizi)",
+    "section": "ANOVA Türleri",
+    "text": "ANOVA Türleri\nİstatistikte birçok ANOVA türü vardır:\n\nTek Yönlü ANOVA (One-Way ANOVA):\n\nTek bir faktörün etkisini incelemek için kullanılır\nÖrnek: Farklı gübre türlerinin (A, B, C) bitki büyümesine etkisi\n\nİki Yönlü ANOVA (Two-Way ANOVA):\n\nİki faktörün etkisini ve bu faktörlerin etkileşimini incelemek için kullanılır\nÖrnek: Hem gübre türünün hem de sulama sıklığının bitki büyümesine etkisi\n\nTekrarlı Ölçümler ANOVA (Repeated Measures ANOVA):\n\nAynı deneklerin farklı koşullarda veya zaman noktalarında ölçümlerini karşılaştırmak için kullanılır\nÖrnek: Aynı hastaların tedavi öncesi, tedaviden 1 ay sonra ve 3 ay sonraki değerlerinin karşılaştırılması\n\n\nBu derste ağırlıklı olarak Tek Yönlü ANOVA üzerinde duracağız."
+  },
+  {
+    "objectID": "ders07.html#tek-yönlü-anova-modeli",
+    "href": "ders07.html#tek-yönlü-anova-modeli",
+    "title": "Ders 7: ANOVA (Varyans Analizi)",
+    "section": "Tek Yönlü ANOVA Modeli",
+    "text": "Tek Yönlü ANOVA Modeli\nTek Yönlü ANOVA’da:\n\nBir bağımlı değişken (sürekli)\nBir kategorik faktör (bağımsız değişken)\nHer faktör seviyesi, bir grubu temsil eder\n\nMatematiksel Model:\n\\[Y_{ij} = \\mu + \\alpha_i + \\epsilon_{ij}\\]\nBurada:\n\n\\(Y_{ij}\\) = i. gruptaki j. gözlem\n\\(\\mu\\) = genel ortalama\n\\(\\alpha_i\\) = i. grubun etkisi (\\(\\alpha_1 + \\alpha_2 + ... + \\alpha_k = 0\\))\n\\(\\epsilon_{ij}\\) = hata terimi (rastgele değişkenlik)"
+  },
+  {
+    "objectID": "ders07.html#anovanın-hipotezleri",
+    "href": "ders07.html#anovanın-hipotezleri",
+    "title": "Ders 7: ANOVA (Varyans Analizi)",
+    "section": "ANOVA’nın Hipotezleri",
+    "text": "ANOVA’nın Hipotezleri\nSıfır Hipotezi (H₀): Tüm grup ortalamaları birbirine eşittir. \\[H_0: \\mu_1 = \\mu_2 = ... = \\mu_k\\]\nAlternatif Hipotez (H₁): En az bir grup ortalaması diğerlerinden farklıdır.\n\\[H_1: \\    ext{En az bir } \\mu_i \\\neq \\mu_j \\  ext{ (i ≠ j için)}\\]\n\nÖnemli Not: Alternatif hipotez, hangi grup ortalamalarının farklı olduğunu belirtmez, sadece en az bir farklılık olduğunu söyler.\nHangi grup ortalamalarının farklı olduğunu belirlemek için, ANOVA’dan sonra post-hoc testleri kullanılır."
+  },
+  {
+    "objectID": "ders07.html#anovanın-varsayımları",
+    "href": "ders07.html#anovanın-varsayımları",
+    "title": "Ders 7: ANOVA (Varyans Analizi)",
+    "section": "ANOVA’nın Varsayımları",
+    "text": "ANOVA’nın Varsayımları\nANOVA, t-testine benzer şekilde, bazı varsayımlar üzerine kuruludur:\n\nBağımsızlık: Gözlemler birbirinden bağımsız olmalıdır.\nNormallik: Her gruptaki verilerin normal dağılması veya örneklem boyutunun yeterince büyük olması (n&gt;30).\nVaryansların Homojenliği (Homoscedasticity): Tüm gruplardaki varyansların yaklaşık olarak eşit olması.\n\nNot: Varsayımlar karşılanmadığında, parametrik olmayan alternatifler düşünülmelidir (örn. Kruskal-Wallis testi)."
+  },
+  {
+    "objectID": "ders07.html#varyansların-ayrışımı",
+    "href": "ders07.html#varyansların-ayrışımı",
+    "title": "Ders 7: ANOVA (Varyans Analizi)",
+    "section": "Varyansların Ayrışımı",
+    "text": "Varyansların Ayrışımı\nANOVA’nın adı \"Varyans Analizi\"dir çünkü toplam varyansı iki bileşene ayırır:\n1. Gruplar Arası Varyans (Between-Groups Variance):\n\nGrup ortalamalarının genel ortalamadan ne kadar farklı olduğunu gösterir\nEğer büyükse, gruplar arasında gerçek farklılıklar olduğunu düşündürür\n\n2. Gruplar İçi Varyans (Within-Groups Variance):\n\nGrup içindeki bireysel gözlemlerin, kendi grup ortalamasından ne kadar farklı olduğunu gösterir\nRastgele hata veya faktör dışındaki etkilerden kaynaklanır\n\nF-istatistiği = Gruplar Arası Varyans / Gruplar İçi Varyans\n\nF-değeri büyükse → Gruplar arasındaki farklılıklar, grup içi varyasyondan daha büyüktür → H₀ reddedilir"
+  },
+  {
+    "objectID": "ders07.html#kareler-toplamı",
+    "href": "ders07.html#kareler-toplamı",
+    "title": "Ders 7: ANOVA (Varyans Analizi)",
+    "section": "Kareler Toplamı",
+    "text": "Kareler Toplamı\nANOVA’da varyans analizi için, kareler toplamı (Sum of Squares - SS) hesaplanır:\n1. Toplam Kareler Toplamı (SST):\n\\[SST = \\sum_{i=1}^{k}\\sum_{j=1}^{n_i}(Y_{ij} - \\bar{Y})^2\\]\n2. Gruplar Arası Kareler Toplamı (SSB): \\[SSB = \\sum_{i=1}^{k}n_i(\\bar{Y}_i - \\bar{Y})^2\\]\n3. Gruplar İçi Kareler Toplamı (SSW): \\[SSW = \\sum_{i=1}^{k}\\sum_{j=1}^{n_i}(Y_{ij} - \\bar{Y}_i)^2\\]\nİlişki: SST = SSB + SSW"
+  },
+  {
+    "objectID": "ders07.html#ortalama-kareler-ve-f-istatistiği",
+    "href": "ders07.html#ortalama-kareler-ve-f-istatistiği",
+    "title": "Ders 7: ANOVA (Varyans Analizi)",
+    "section": "Ortalama Kareler ve F-İstatistiği",
+    "text": "Ortalama Kareler ve F-İstatistiği\nKareler toplamı değerleri, ilgili serbestlik dereceleri ile bölünerek ortalama kareler (Mean Squares - MS) hesaplanır:\n1. Gruplar Arası Ortalama Kareler (MSB): \\[MSB = \\frac{SSB}{k-1}\\]\n2. Gruplar İçi Ortalama Kareler (MSW): \\[MSW = \\frac{SSW}{N-k}\\]\nF-İstatistiği: \\[F = \\frac{MSB}{MSW}\\]\nBurada:\n\nk = grup sayısı\nN = toplam gözlem sayısı\n\nF-değeri, α düzeyindeki kritik F-değeri ile karşılaştırılır. Eğer hesaplanan F-değeri kritik değerden büyükse, H₀ reddedilir."
+  },
+  {
+    "objectID": "ders07.html#f-dağılımı",
+    "href": "ders07.html#f-dağılımı",
+    "title": "Ders 7: ANOVA (Varyans Analizi)",
+    "section": "F-Dağılımı",
+    "text": "F-Dağılımı\nF-dağılımı, iki farklı varyans tahmininin oranı olarak hesaplanan F-istatistiği için örnekleme dağılımıdır.\nÖzellikleri:\n\nSıfırdan büyük değerler alır (F ≥ 0)\nSağa çarpık bir dağılımdır\nİki serbestlik derecesi parametresi vardır: df₁ (payda) ve df₂ (payda)\nH₀ doğruysa, F-değeri 1’e yakındır"
+  },
+  {
+    "objectID": "ders07.html#section",
+    "href": "ders07.html#section",
+    "title": "Ders 7: ANOVA (Varyans Analizi)",
+    "section": "",
+    "text": "Görsel Kaynak: Wikimedia Commons"
+  },
+  {
+    "objectID": "ders07.html#anova-tablosu",
+    "href": "ders07.html#anova-tablosu",
+    "title": "Ders 7: ANOVA (Varyans Analizi)",
+    "section": "ANOVA Tablosu",
+    "text": "ANOVA Tablosu\nANOVA sonuçları genellikle bir tablo ile özetlenir:\n\n\n\n\n\n\n\n\n\n\n\nVaryasyon Kaynağı\nSS\ndf\nMS\nF\np-değeri\n\n\n\n\nGruplar Arası (Between)\nSSB\nk-1\nMSB = SSB/(k-1)\nF = MSB/MSW\np\n\n\nGruplar İçi (Within)\nSSW\nN-k\nMSW = SSW/(N-k)\n\n\n\n\nToplam\nSST\nN-1\n\n\n\n\n\n\n\nk = grup sayısı\nN = toplam gözlem sayısı\np-değeri &lt; α ise, H₀ reddedilir"
+  },
+  {
+    "objectID": "ders07.html#r-ile-tek-yönlü-anova",
+    "href": "ders07.html#r-ile-tek-yönlü-anova",
+    "title": "Ders 7: ANOVA (Varyans Analizi)",
+    "section": "R ile Tek Yönlü ANOVA",
+    "text": "R ile Tek Yönlü ANOVA\nÖrnek Senaryo: Üç farklı gübre türünün (A, B, C) domates bitkilerinin boy (cm) üzerindeki etkisini analiz edelim.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders07.html#section-1",
+    "href": "ders07.html#section-1",
+    "title": "Ders 7: ANOVA (Varyans Analizi)",
+    "section": "",
+    "text": "Please enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders07.html#anova-analizi",
+    "href": "ders07.html#anova-analizi",
+    "title": "Ders 7: ANOVA (Varyans Analizi)",
+    "section": "ANOVA Analizi",
+    "text": "ANOVA Analizi\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders07.html#istatistiksel-değerleri-görelim",
+    "href": "ders07.html#istatistiksel-değerleri-görelim",
+    "title": "Ders 7: ANOVA (Varyans Analizi)",
+    "section": "İstatistiksel değerleri görelim",
+    "text": "İstatistiksel değerleri görelim\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders07.html#görselleştirme",
+    "href": "ders07.html#görselleştirme",
+    "title": "Ders 7: ANOVA (Varyans Analizi)",
+    "section": "Görselleştirme",
+    "text": "Görselleştirme\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders07.html#post-hoc-testleri",
+    "href": "ders07.html#post-hoc-testleri",
+    "title": "Ders 7: ANOVA (Varyans Analizi)",
+    "section": "Post-hoc Testleri",
+    "text": "Post-hoc Testleri\nANOVA, gruplar arasında bir fark olduğunu söyler, ancak hangi grupların farklı olduğunu söylemez. Bunu belirlemek için post-hoc testleri kullanılır.\nEn Yaygın Post-hoc Testleri:\n\nTukey HSD (Honestly Significant Difference): Tüm olası ikili grup karşılaştırmalarını yapar ve aile bazında hata oranını kontrol eder.\nBonferroni Düzeltmesi: Alfa (α) değerini karşılaştırma sayısına bölerek çoklu test problemini düzeltir.\nScheffé Testi: Tüm olası grup karşılaştırmaları için uygundur, ancak genellikle daha muhafazakardır.\n\nNot: Post-hoc testleri sadece ANOVA sonucu istatistiksel olarak anlamlıysa (p &lt; 0.05) uygulanır."
+  },
+  {
+    "objectID": "ders07.html#tukey-hsd-post-hoc-testi",
+    "href": "ders07.html#tukey-hsd-post-hoc-testi",
+    "title": "Ders 7: ANOVA (Varyans Analizi)",
+    "section": "Tukey HSD Post-hoc Testi",
+    "text": "Tukey HSD Post-hoc Testi\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders07.html#post-hoc-testlerin-yorumlanması",
+    "href": "ders07.html#post-hoc-testlerin-yorumlanması",
+    "title": "Ders 7: ANOVA (Varyans Analizi)",
+    "section": "Post-hoc Testlerin Yorumlanması",
+    "text": "Post-hoc Testlerin Yorumlanması\nTukey HSD sonuçlarına göre:\n\nGübre B - Gübre A: Gübre B, Gübre A’ya göre anlamlı şekilde daha yüksek bitki boylarına sahiptir (p &lt; 0.001).\nGübre C - Gübre A: Gübre C, Gübre A’ya göre anlamlı şekilde daha yüksek bitki boylarına sahiptir (p &lt; 0.05).\nGübre C - Gübre B: Gübre C ve Gübre B arasında istatistiksel olarak anlamlı bir fark yoktur (p &gt; 0.05).\n\nGenel Sonuç: * Gübre B ve Gübre C, Gübre A’dan daha etkilidir. * Gübre B ve Gübre C arasında anlamlı bir fark yoktur."
+  },
+  {
+    "objectID": "ders07.html#sonuçların-raporlanması",
+    "href": "ders07.html#sonuçların-raporlanması",
+    "title": "Ders 7: ANOVA (Varyans Analizi)",
+    "section": "Sonuçların Raporlanması",
+    "text": "Sonuçların Raporlanması\nAkademik yayınlarda ANOVA sonuçlarını nasıl raporlamalıyız?\n\"Gübre türünün domates bitkilerinin boyları üzerindeki etkisi, tek yönlü ANOVA ile değerlendirilmiştir. Gübre türünün bitki boyu üzerinde istatistiksel olarak anlamlı bir etkisi bulunmuştur, F(2, 21) = 16.44, p &lt; 0.001. Post-hoc Tukey HSD testleri, Gübre B ile yetiştirilen bitkilerin (M = 77.75 cm, SD = 2.49) ve Gübre C ile yetiştirilen bitkilerin (M = 71.50 cm, SD = 2.45), Gübre A ile yetiştirilen bitkilerden (M = 68.38 cm, SD = 2.67) anlamlı şekilde daha uzun olduğunu göstermiştir (sırasıyla p &lt; 0.001 ve p &lt; 0.05). Gübre B ve Gübre C arasında istatistiksel olarak anlamlı bir fark bulunmamıştır (p = 0.094).\""
+  },
+  {
+    "objectID": "ders07.html#biyolojide-anova-uygulamaları",
+    "href": "ders07.html#biyolojide-anova-uygulamaları",
+    "title": "Ders 7: ANOVA (Varyans Analizi)",
+    "section": "Biyolojide ANOVA Uygulamaları",
+    "text": "Biyolojide ANOVA Uygulamaları\nANOVA, biyoloji ve tıpta yaygın olarak kullanılan bir analiz yöntemidir:\n\nFarklı İlaç Tedavilerinin Karşılaştırılması:\n\nÜç veya daha fazla farklı ilacın etkinliğinin karşılaştırılması\n\nGen Ekspresyon Analizi:\n\nFarklı deneysel koşullar altında gen ekspresyon seviyelerinin karşılaştırılması\n\nEkolojik Çalışmalar:\n\nFarklı habitatlardaki biyoçeşitliliğin karşılaştırılması\n\nEnzim Kinetik Çalışmaları:\n\nFarklı pH değerlerinde enzim aktivitelerinin karşılaştırılması\n\nBüyüme ve Gelişim Çalışmaları:\n\nFarklı besin veya hormon uygulamalarının büyüme üzerindeki etkisinin incelenmesi"
+  },
+  {
+    "objectID": "ders07.html#gerçek-veri-üzerinde-uygulama-iris-veri-seti",
+    "href": "ders07.html#gerçek-veri-üzerinde-uygulama-iris-veri-seti",
+    "title": "Ders 7: ANOVA (Varyans Analizi)",
+    "section": "Gerçek Veri Üzerinde Uygulama: iris Veri Seti",
+    "text": "Gerçek Veri Üzerinde Uygulama: iris Veri Seti\nŞimdi, iris veri setinde üç farklı Iris türünün (setosa, versicolor, virginica) taç yaprak (petal) boylarını karşılaştıralım.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders07.html#görselleştirme-ve-post-hoc-test",
+    "href": "ders07.html#görselleştirme-ve-post-hoc-test",
+    "title": "Ders 7: ANOVA (Varyans Analizi)",
+    "section": "Görselleştirme ve Post-hoc Test",
+    "text": "Görselleştirme ve Post-hoc Test\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders07.html#tek-yönlü-anova-için-pratik-ipuçları",
+    "href": "ders07.html#tek-yönlü-anova-için-pratik-ipuçları",
+    "title": "Ders 7: ANOVA (Varyans Analizi)",
+    "section": "Tek Yönlü ANOVA için Pratik İpuçları",
+    "text": "Tek Yönlü ANOVA için Pratik İpuçları\n\nVeri Hazırlığı ve Kontroller:\n\nAykırı değerleri belirleyin ve ele alın\nNormallik ve varyans homojenliği varsayımlarını kontrol edin\nVeri yapısının tek yönlü ANOVA’ya uygun olduğunu doğrulayın\n\nAnaliz ve Sonuçlar:\n\nSadece p-değerine değil, etki büyüklüğüne de bakın (η²)\nANOVA anlamlıysa, post-hoc testleri uygulayın\nBulguları biyolojik/pratik anlamlılık açısından yorumlayın\n\nVarsayımlar Karşılanmadığında:\n\nVeri dönüşümleri deneyin (log, karekök vb.)\nParametrik olmayan alternatifleri kullanın (Kruskal-Wallis testi)\nRobust ANOVA yöntemlerini düşünün"
+  },
+  {
+    "objectID": "ders07.html#iki-yönlü-anova-hakkında-kısa-bilgi",
+    "href": "ders07.html#iki-yönlü-anova-hakkında-kısa-bilgi",
+    "title": "Ders 7: ANOVA (Varyans Analizi)",
+    "section": "İki Yönlü ANOVA Hakkında Kısa Bilgi",
+    "text": "İki Yönlü ANOVA Hakkında Kısa Bilgi\nİki Yönlü ANOVA, iki faktörün ve bunların etkileşiminin etkisini analiz eden bir yöntemdir.\nÖrnek: Hem gübre türünün (A, B, C) hem de sulama sıklığının (günlük, haftalık) domates bitkilerinin boyuna etkisini incelemek istiyoruz.\nİki Yönlü ANOVA Modeli: \\[Y_{ijk} = \\\\mu + \\\\alpha_i + \\\\beta_j + (\\\\alpha\\\\beta)_{ij} + \\\\epsilon_{ijk}\\]\n\n\\(\\\\mu\\) = genel ortalama\n\\(\\\\alpha_i\\) = ilk faktörün etkisi (gübre türü)\n\\(\\\\beta_j\\) = ikinci faktörün etkisi (sulama sıklığı)\n\\((\\\\alpha\\\\beta)_{ij}\\) = faktörler arası etkileşim\n\\(\\\\epsilon_{ijk}\\) = hata terimi\n\nİki Yönlü ANOVA ile üç hipotezi test ederiz: 1. İlk faktörün ana etkisi (\\(H_0: \\\\alpha_1 = \\\\alpha_2 = ... = \\\\alpha_a = 0\\)) 2. İkinci faktörün ana etkisi (\\(H_0: \\\\beta_1 = \\\\beta_2 = ... = \\\\beta_b = 0\\)) 3. Faktörler arası etkileşim (\\(H_0: (\\\\alpha\\\\beta)_{ij} = 0 \\  ext{ tüm } i, j \\   ext{ için}\\))"
+  },
+  {
+    "objectID": "ders07.html#özet-anovanın-avantajları-ve-sınırlamaları",
+    "href": "ders07.html#özet-anovanın-avantajları-ve-sınırlamaları",
+    "title": "Ders 7: ANOVA (Varyans Analizi)",
+    "section": "Özet: ANOVA’nın Avantajları ve Sınırlamaları",
+    "text": "Özet: ANOVA’nın Avantajları ve Sınırlamaları\nAvantajlar: * İkiden fazla grubu aynı anda karşılaştırabilme * Tip I hata oranını kontrol etme * Kategorik faktörlerin sürekli değişkenler üzerindeki etkisini inceleme\nSınırlamalar: * Sadece ortalamaları karşılaştırır, dağılımlardaki diğer farklılıkları görmez * Parametrik bir test olarak, belirli varsayımlara dayanır * Grup farkını bulur ancak hangi grupların farklı olduğunu belirtmez (post-hoc testleri gerekir)\nANOVA’nın Ötesinde: * İki faktörlü çalışmalar için İki Yönlü ANOVA * Tekrarlı ölçümler için Tekrarlı Ölçümler ANOVA"
   },
   {
     "objectID": "about.html",
