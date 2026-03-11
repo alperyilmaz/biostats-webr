@@ -23,13 +23,51 @@ filters:
 * Poisson dağılımı
 * Bernoulli dağılımı
 
-## Olasılık hesapları
+## Olasılık 
+
+Bir deneyde, bir olayın gerçekleşme olasılığı *istenilen durumların sayısının*, *tüm olası durumların sayısı*na oranlanmasıdır.
+
+Formül:
+
+$$
+P(A) = \frac{s(A)}{s(E)}
+$$
+
+P(A): Olasılık Değeri, A olayının gerçekleşme ihtimali. \
+s(A): İstenen Durumlar, A kümesinin eleman sayısı.\
+s(E): Tüm Durumlar, Evrensel kümenin (E) eleman sayısı.
 
 
+## Evrensel küme
+
+Soru: İki zar aynı anda atıldığında toplamın 7 gelmesi olasılığını hesaplarken, evrensel küme ne olmalıdır?
+
+İstenen durumların sayısı kaçtır?
+
+## {background-image="images/zar_evrensel_kume.svg" background-size="contain" background-color="#0f172a"}
+
+## Evrensel küme 2
+
+Soru: Bir ailenin iki çocuğu var ve en az biri erkek. Diğerinin de erkek olma olasılığı nedir? 
+
+Evrensel küme sayısı ve istenen durumların sayısı kaçtır?
+
+## {background-image="images/iki_cocuk_problemi.svg" background-size="contain" background-color="#1a1a2e"}
+
+## Evrensel küme 3
+
+Soru: Bir hastanede 10.000 kadına meme kanseri tarama testi uygulanıyor. Bu testin doğruluk oranı %90 — yani hasta birini %90 ihtimalle yakalar, sağlıklı birini de %90 ihtimalle doğru şekilde "sağlıklı" olarak tanır. Test sonucunuz pozitif çıktı. Gerçekten hasta olma ihtimaliniz nedir? (Tarama Testi Paradoksu)
+
+## {background-image="images/tarama_testi_paradoksu.svg" background-size="contain" background-color="#18181b"}
+
+## Dağılım
+
+Evrensel kümenin çok büyük olduğu veya sayılamadığı durumlarda **dağılım**lar kullanılabilir
 
 ## Normal dağılım modeli
 
 ![](images/norm-dagilim.png)
+
 
 
 

@@ -445,7 +445,7 @@
     "href": "index.html",
     "title": "MBG1032 Biyoistatistik Ders Notları",
     "section": "",
-    "text": "Kitap1: Introductory Statistics for the Life and Biomedical Sciences (Julie Vu, David Harrington) Leanpub sitesinden ücretsiz olarak (You Pay kısmını 0’a çekerek) indirebilirsiniz.\nKitap2: Principles of Biostatistics (Marcello Pagano, Kimberlee Gauvreau)\nKitap3: Biostatistics for the Biological and Health Sciences (Mario F. Triola, Marc M. Triola,Jason Roy)\nKitap4: R Programı İle Temel İstatistiksel Yöntemler Uygulamalı İstatistik Turcademy üzerinden ücretsiz olarak erişilebilir.\n\n\n\n\nTeorik (21 Şubat 2024): İlk derste, R programı çalıştırılabilecek ortamlar tanıtıldı. Ayrıca “Is Most Published Research Wrong?” başlıklı videodan bahsedildi. Söz konusu videoda p-value değerlerinin istatistik gücü oldukça zayıf şekilde bilimsel makalelerde kullanıldığı ve bu yüzden makalelerin tekrarlanabilirliğinin (reproducability) düşük olduğundan bahsedildi.\nUygulama (26 Şubat 2024): R Temelleri Sunum. Bu içerik için kullanılan ek kaynak, “An Introduction to R” adlı online kitap.\n\n\n\n\nTeorik (28 Şubat 2024): Veri setinin merkezini belirleyen ortalama ve mediandan bahsedildi. Veri setinin dağınıklığını özetleyen sayısal yöntemler (varyans, standart sapma) ve görsel yöntemler (histogram, boxplot) tanıtıldı. Sunum linki\nUygulama (4 Mart 2024): iris.xlsx dosyasını kullanarak, Excel’de hücre aralıklarını seçme, Ctrl ve Shift tuşları ile hızlı seçim ve gezinme gösterildi. Tek bir sütün için ortalama, medyan, 1. ve 3. çeyrek dilim hesaplama ve standard sapma hesabı yapıldı. Excel’de formüllerin başka hücrelere uygulanması gösterildi. Excel’in yeni versiyonunda Boxplot ve Histogram grafikleri çizilebileceği tartışıldı.\n\n\n\nTeorik (6 Mart 2024): Olaslık hesabına dair özellikler, küme prensibi üzerinden anlatıldı. Normal dağılımın özellikleri tanıtıldı. Sunum linki\nUygulama (11 Mart 2024): R’da pnorm(), qnorm() ve dnorm() fonksiyonları kullanarak ihtimal hesapları yapıldı ve normal dağılıma uygun rastgele sayılar üretildi. Excel’de normal dağılıma uygun sayılar üreten formüller kullanıldı.\n\n\n\nTeorik (13 Mart 2024): Poisson ve Bernoulli dağılımları (Poisson dağılımı ve Geometrik dağılım) tanıtıldı. Sunum linki\nPratik (18 Mart 2024): Normal dağılım örnekleri çözüldü. Uygulama sunum linki\n\n\n\nTeorik (20 Mart 2024): Güven aralığı ve hipotez testi. Sunum linki\nPratik (25 Mart 2024): Güven aralığı ve hipotez testi örnekleri &lt;––&gt;\n\n\n\nTeorik (27 Mart 2024): T-testi. Sunum linki\nPratik (01 Nisan 2024): T-testi uygulamaları Uygulama sunum linki\n\n\n\nTeorik (03 Nisan 2024): İstatistik Güç Sunum linki\n\n\n\nTeorik (03 Nisan 2024): ANOVA Sunum linki\nUygulama (2 Mayıs 2025): İstatistik Güç ve ANOVA uygulama Uygulama sunum linki\n\n\n\nTeorik (05 Mayıs 2025): Ki-kare testi Sunum linki\nUygulama (09 Mayıs 2025): Ki-kare uygulama Sunum linki\n\n\n\nTeorik (12 Mayıs 2025): Hesapsal istatistik Sunum linki\n(16 Mayıs 2025): 2.vize yapılacaktır\n\n\n\nTeorik (23 Mayıs 2025): Bilimsel tekrarlanabilirlik Sunum linki"
+    "text": "Kitap1: Introductory Statistics for the Life and Biomedical Sciences (Julie Vu, David Harrington) Leanpub sitesinden ücretsiz olarak (You Pay kısmını 0’a çekerek) indirebilirsiniz.\nKitap2: Principles of Biostatistics (Marcello Pagano, Kimberlee Gauvreau)\nKitap3: Biostatistics for the Biological and Health Sciences (Mario F. Triola, Marc M. Triola,Jason Roy)\nKitap4: R Programı İle Temel İstatistiksel Yöntemler Uygulamalı İstatistik Turcademy üzerinden ücretsiz olarak erişilebilir.\n\n\n\n\nTeorik (21 Şubat 2024): İlk derste, R programı çalıştırılabilecek ortamlar tanıtıldı. Ayrıca “Is Most Published Research Wrong?” başlıklı videodan bahsedildi. Söz konusu videoda p-value değerlerinin istatistik gücü oldukça zayıf şekilde bilimsel makalelerde kullanıldığı ve bu yüzden makalelerin tekrarlanabilirliğinin (reproducability) düşük olduğundan bahsedildi.\nUygulama (26 Şubat 2024): R Temelleri Sunum. Bu içerik için kullanılan ek kaynak, “An Introduction to R” adlı online kitap.\n\n\n\n\nTeorik (28 Şubat 2024): Veri setinin merkezini belirleyen ortalama ve mediandan bahsedildi. Veri setinin dağınıklığını özetleyen sayısal yöntemler (varyans, standart sapma) ve görsel yöntemler (histogram, boxplot) tanıtıldı. Sunum linki\nUygulama (4 Mart 2024): iris.xlsx dosyasını kullanarak, Excel’de hücre aralıklarını seçme, Ctrl ve Shift tuşları ile hızlı seçim ve gezinme gösterildi. Tek bir sütün için ortalama, medyan, 1. ve 3. çeyrek dilim hesaplama ve standard sapma hesabı yapıldı. Excel’de formüllerin başka hücrelere uygulanması gösterildi. Excel’in yeni versiyonunda Boxplot ve Histogram grafikleri çizilebileceği tartışıldı.\n\n\n\nTeorik (6 Mart 2024): Olaslık hesabına dair özellikler, küme prensibi üzerinden anlatıldı. Normal dağılımın özellikleri tanıtıldı. Sunum linki\nUygulama (11 Mart 2024): R’da pnorm(), qnorm() ve dnorm() fonksiyonları kullanarak ihtimal hesapları yapıldı ve normal dağılıma uygun rastgele sayılar üretildi. Excel’de normal dağılıma uygun sayılar üreten formüller kullanıldı.\n\n\n\nTeorik (13 Mart 2024): Poisson ve Bernoulli dağılımları (Poisson dağılımı ve Geometrik dağılım) tanıtıldı. Sunum linki\nPratik (18 Mart 2024): Normal dağılım örnekleri çözüldü. Uygulama sunum linki\n\n\n\nTeorik (20 Mart 2024): Güven aralığı ve hipotez testi. Sunum linki\nPratik (25 Mart 2024): Güven aralığı ve hipotez testi örnekleri &lt;––&gt;\n\n\n\nTeorik (27 Mart 2024): T-testi. Sunum linki\nPratik (01 Nisan 2024): T-testi uygulamaları Uygulama sunum linki\n\n\n\nTeorik (03 Nisan 2024): İstatistik Güç Sunum linki\n\n\n\nTeorik (03 Nisan 2024): ANOVA Sunum linki\nUygulama (2 Mayıs 2025): İstatistik Güç ve ANOVA uygulama Uygulama sunum linki\n\n\n\nTeorik (05 Mayıs 2025): Ki-kare testi Sunum linki\nUygulama (09 Mayıs 2025): Ki-kare uygulama Sunum linki\n\n\n\nTeorik (12 Mayıs 2025): Hesapsal istatistik Sunum linki\n(16 Mayıs 2025): 2.vize yapılacaktır\n\n\n\nTeorik (23 Mayıs 2025): Bilimsel tekrarlanabilirlik Sunum linki\n\n\n\nTeorik (26 Mayıs 2025): Hangi test? Sunum linki"
   },
   {
     "objectID": "index.html#kaynaklar",
@@ -530,6 +530,13 @@
     "title": "MBG1032 Biyoistatistik Ders Notları",
     "section": "",
     "text": "Teorik (23 Mayıs 2025): Bilimsel tekrarlanabilirlik Sunum linki"
+  },
+  {
+    "objectID": "index.html#ders12",
+    "href": "index.html#ders12",
+    "title": "MBG1032 Biyoistatistik Ders Notları",
+    "section": "",
+    "text": "Teorik (26 Mayıs 2025): Hangi test? Sunum linki"
   },
   {
     "objectID": "ders05-old.html#slide1",
@@ -1131,28 +1138,28 @@
     "href": "ders09.html#hypothesize-sıfır-hipotezini-belirleme",
     "title": "Ders 9: Hesapsal İstatistik",
     "section": "2. hypothesize(): Sıfır Hipotezini Belirleme",
-    "text": "2. hypothesize(): Sıfır Hipotezini Belirleme\n\nİki temel sıfır hipotezi türü:\n\n\"independence\": İki değişken arasında ilişki yok\n\"point\": Parametre belirli bir değere eşit\n\n\n\n# Bağımsızlık hipotezi\ngss |&gt;\n  specify(college ~ partyid, success = \"degree\") |&gt;\n  hypothesize(null = \"independence\")\n\nResponse: college (factor)\nExplanatory: partyid (factor)\nNull Hypothesis: independence\n# A tibble: 500 × 2\n   college   partyid\n   &lt;fct&gt;     &lt;fct&gt;  \n 1 degree    ind    \n 2 no degree rep    \n 3 degree    ind    \n 4 no degree ind    \n 5 degree    rep    \n 6 no degree rep    \n 7 no degree dem    \n 8 degree    ind    \n 9 degree    rep    \n10 no degree dem    \n# ℹ 490 more rows\n\n# Ortalama için nokta hipotezi\ngss |&gt;\n  specify(response = hours) |&gt;\n  hypothesize(null = \"point\", mu = 40)\n\nResponse: hours (numeric)\nNull Hypothesis: point\n# A tibble: 500 × 1\n   hours\n   &lt;dbl&gt;\n 1    50\n 2    31\n 3    40\n 4    40\n 5    40\n 6    53\n 7    32\n 8    20\n 9    40\n10    40\n# ℹ 490 more rows"
+    "text": "2. hypothesize(): Sıfır Hipotezini Belirleme\n\nİki temel sıfır hipotezi türü:\n\n\"independence\": İki değişken arasında ilişki yok\n\"point\": Parametre belirli bir değere eşit\n\n\n\n# Bağımsızlık hipotezi\ngss |&gt;\n  specify(college ~ partyid, success = \"degree\") |&gt;\n  hypothesize(null = \"independence\")\n\nResponse: college (factor)\nExplanatory: partyid (factor)\nNull Hypothesis: ind...\n# A tibble: 500 × 2\n   college   partyid\n   &lt;fct&gt;     &lt;fct&gt;  \n 1 degree    ind    \n 2 no degree rep    \n 3 degree    ind    \n 4 no degree ind    \n 5 degree    rep    \n 6 no degree rep    \n 7 no degree dem    \n 8 degree    ind    \n 9 degree    rep    \n10 no degree dem    \n# ℹ 490 more rows\n\n# Ortalama için nokta hipotezi\ngss |&gt;\n  specify(response = hours) |&gt;\n  hypothesize(null = \"point\", mu = 40)\n\nResponse: hours (numeric)\nNull Hypothesis: point\n# A tibble: 500 × 1\n   hours\n   &lt;dbl&gt;\n 1    50\n 2    31\n 3    40\n 4    40\n 5    40\n 6    53\n 7    32\n 8    20\n 9    40\n10    40\n# ℹ 490 more rows"
   },
   {
     "objectID": "ders09.html#generate-sıfır-dağılımı-oluşturma",
     "href": "ders09.html#generate-sıfır-dağılımı-oluşturma",
     "title": "Ders 9: Hesapsal İstatistik",
     "section": "3. generate(): Sıfır Dağılımı Oluşturma",
-    "text": "3. generate(): Sıfır Dağılımı Oluşturma\n\nSıfır hipotezi altında verinin nasıl görüneceğini simüle eder\nÜç temel yöntem:\n\nbootstrap: Yerine koyarak örnekleme\npermute: Değişkenleri karıştırma\ndraw: Teorik dağılımdan örnekleme\n\n\n\n# 1000 bootstrap örneği oluşturalım\ngss |&gt;\n  specify(response = hours) |&gt;\n  hypothesize(null = \"point\", mu = 40) |&gt;\n  generate(reps = 1000, type = \"bootstrap\")\n\nResponse: hours (numeric)\nNull Hypothesis: point\n# A tibble: 500,000 × 2\n# Groups:   replicate [1,000]\n   replicate hours\n       &lt;int&gt; &lt;dbl&gt;\n 1         1  28.6\n 2         1  45.6\n 3         1  38.6\n 4         1  38.6\n 5         1  38.6\n 6         1  38.6\n 7         1  42.6\n 8         1  38.6\n 9         1  38.6\n10         1  38.6\n# ℹ 499,990 more rows"
+    "text": "3. generate(): Sıfır Dağılımı Oluşturma\n\nSıfır hipotezi altında verinin nasıl görüneceğini simüle eder\nÜç temel yöntem:\n\nbootstrap: Yerine koyarak örnekleme\npermute: Değişkenleri karıştırma\ndraw: Teorik dağılımdan örnekleme\n\n\n\n# 1000 bootstrap örneği oluşturalım\ngss |&gt;\n  specify(response = hours) |&gt;\n  hypothesize(null = \"point\", mu = 40) |&gt;\n  generate(reps = 1000, type = \"bootstrap\")\n\nResponse: hours (numeric)\nNull Hypothesis: point\n# A tibble: 500,000 × 2\n# Groups:   replicate [1,000]\n   replicate hours\n       &lt;int&gt; &lt;dbl&gt;\n 1         1  20.6\n 2         1  18.6\n 3         1  38.6\n 4         1  38.6\n 5         1  38.6\n 6         1  18.6\n 7         1  28.6\n 8         1  38.6\n 9         1  38.6\n10         1  38.6\n# ℹ 499,990 more rows"
   },
   {
     "objectID": "ders09.html#generate-veri-karıştırma-örneği",
     "href": "ders09.html#generate-veri-karıştırma-örneği",
     "title": "Ders 9: Hesapsal İstatistik",
     "section": "generate(): Veri Karıştırma Örneği",
-    "text": "generate(): Veri Karıştırma Örneği\n\n# Yaş ve parti ilişkisini kırmak için değişkenleri karıştıralım\ngss |&gt;\n  specify(partyid ~ age) |&gt;\n  hypothesize(null = \"independence\") |&gt;\n  generate(reps = 1000, type = \"permute\")\n\nResponse: partyid (factor)\nExplanatory: age (numeric)\nNull Hypothesis: independence\n# A tibble: 500,000 × 3\n# Groups:   replicate [1,000]\n   partyid   age replicate\n   &lt;fct&gt;   &lt;dbl&gt;     &lt;int&gt;\n 1 dem        36         1\n 2 ind        34         1\n 3 dem        24         1\n 4 ind        42         1\n 5 ind        31         1\n 6 dem        32         1\n 7 dem        48         1\n 8 rep        36         1\n 9 ind        30         1\n10 ind        33         1\n# ℹ 499,990 more rows\n\n\nBu adım, sıfır hipotezi doğru olsaydı veri nasıl görünürdü sorusuna cevap verir."
+    "text": "generate(): Veri Karıştırma Örneği\n\n# Yaş ve parti ilişkisini kırmak için değişkenleri karıştıralım\ngss |&gt;\n  specify(partyid ~ age) |&gt;\n  hypothesize(null = \"independence\") |&gt;\n  generate(reps = 1000, type = \"permute\")\n\nResponse: partyid (factor)\nExplanatory: age (numeric)\nNull Hypothesis: indepe...\n# A tibble: 500,000 × 3\n# Groups:   replicate [1,000]\n   partyid   age replicate\n   &lt;fct&gt;   &lt;dbl&gt;     &lt;int&gt;\n 1 rep        36         1\n 2 rep        34         1\n 3 ind        24         1\n 4 dem        42         1\n 5 rep        31         1\n 6 ind        32         1\n 7 dem        48         1\n 8 rep        36         1\n 9 ind        30         1\n10 ind        33         1\n# ℹ 499,990 more rows\n\n\nBu adım, sıfır hipotezi doğru olsaydı veri nasıl görünürdü sorusuna cevap verir."
   },
   {
     "objectID": "ders09.html#calculate-istatistik-hesaplama",
     "href": "ders09.html#calculate-istatistik-hesaplama",
     "title": "Ders 9: Hesapsal İstatistik",
     "section": "4. calculate(): İstatistik Hesaplama",
-    "text": "4. calculate(): İstatistik Hesaplama\n\nSimüle edilmiş verilerden istatistikler hesaplar\nOrtalama, medyan, oran, fark, t-istatistiği ve daha fazlası\nSıfır dağılımını oluşturur\n\n\n# Ortalama çalışma saatlerinin dağılımını hesaplayalım\ngss |&gt;\n  specify(response = hours) |&gt;\n  hypothesize(null = \"point\", mu = 40) |&gt;\n  generate(reps = 1000, type = \"bootstrap\") |&gt;\n  calculate(stat = \"mean\")\n\nResponse: hours (numeric)\nNull Hypothesis: point\n# A tibble: 1,000 × 2\n   replicate  stat\n       &lt;int&gt; &lt;dbl&gt;\n 1         1  38.9\n 2         2  40.6\n 3         3  40.1\n 4         4  40.1\n 5         5  39.6\n 6         6  40.3\n 7         7  40.2\n 8         8  40.0\n 9         9  39.9\n10        10  39.9\n# ℹ 990 more rows"
+    "text": "4. calculate(): İstatistik Hesaplama\n\nSimüle edilmiş verilerden istatistikler hesaplar\nOrtalama, medyan, oran, fark, t-istatistiği ve daha fazlası\nSıfır dağılımını oluşturur\n\n\n# Ortalama çalışma saatlerinin dağılımını hesaplayalım\ngss |&gt;\n  specify(response = hours) |&gt;\n  hypothesize(null = \"point\", mu = 40) |&gt;\n  generate(reps = 1000, type = \"bootstrap\") |&gt;\n  calculate(stat = \"mean\")\n\nResponse: hours (numeric)\nNull Hypothesis: point\n# A tibble: 1,000 × 2\n   replicate  stat\n       &lt;int&gt; &lt;dbl&gt;\n 1         1  40.9\n 2         2  39.4\n 3         3  41.1\n 4         4  40.7\n 5         5  40.0\n 6         6  40.1\n 7         7  40.1\n 8         8  39.7\n 9         9  39.4\n10        10  39.7\n# ℹ 990 more rows"
   },
   {
     "objectID": "ders09.html#örnek-haftalık-çalışma-saatleri-analizi",
@@ -1173,7 +1180,7 @@
     "href": "ders09.html#p-değeri-hesaplama",
     "title": "Ders 9: Hesapsal İstatistik",
     "section": "p-değeri Hesaplama",
-    "text": "p-değeri Hesaplama\n\n# İki kuyruklu p-değerini hesaplayalım\np_value &lt;- null_dist |&gt;\n  get_p_value(obs_stat = obs_mean, direction = \"two-sided\")\n\np_value\n\n# A tibble: 1 × 1\n  p_value\n    &lt;dbl&gt;\n1   0.034\n\n\nEğer ortalama gerçekten 40 saat olsaydı, gözlemlediğimiz kadar (veya daha) uç bir değer elde etme olasılığımız p-değeri kadardır."
+    "text": "p-değeri Hesaplama\n\n# İki kuyruklu p-değerini hesaplayalım\np_value &lt;- null_dist |&gt;\n  get_p_value(obs_stat = obs_mean, direction = \"two-sided\")\n\np_value\n\n# A tibble: 1 × 1\n  p_value\n    &lt;dbl&gt;\n1    0.04\n\n\nEğer ortalama gerçekten 40 saat olsaydı, gözlemlediğimiz kadar (veya daha) uç bir değer elde etme olasılığımız p-değeri kadardır."
   },
   {
     "objectID": "ders09.html#güven-aralıkları",
@@ -1603,11 +1610,39 @@
     "text": "Özet\n\nOlasılık hesapları\nNormal dağılım\nPoisson dağılımı\nBernoulli dağılımı"
   },
   {
-    "objectID": "ders03.html#olasılık-hesapları",
-    "href": "ders03.html#olasılık-hesapları",
+    "objectID": "ders03.html#olasılık",
+    "href": "ders03.html#olasılık",
     "title": "Ders3: İhtimal hesabı ve dağılım",
-    "section": "Olasılık hesapları",
-    "text": "Olasılık hesapları"
+    "section": "Olasılık",
+    "text": "Olasılık\nBir deneyde, bir olayın gerçekleşme olasılığı istenilen durumların sayısının, tüm olası durumların sayısına oranlanmasıdır.\nFormül:\n\\[\nP(A) = \\frac{s(A)}{s(E)}\n\\]\nP(A): Olasılık Değeri, A olayının gerçekleşme ihtimali.\ns(A): İstenen Durumlar, A kümesinin eleman sayısı.\ns(E): Tüm Durumlar, Evrensel kümenin (E) eleman sayısı."
+  },
+  {
+    "objectID": "ders03.html#evrensel-küme",
+    "href": "ders03.html#evrensel-küme",
+    "title": "Ders3: İhtimal hesabı ve dağılım",
+    "section": "Evrensel küme",
+    "text": "Evrensel küme\nSoru: İki zar aynı anda atıldığında toplamın 7 gelmesi olasılığını hesaplarken, evrensel küme ne olmalıdır?\nİstenen durumların sayısı kaçtır?"
+  },
+  {
+    "objectID": "ders03.html#evrensel-küme-2",
+    "href": "ders03.html#evrensel-küme-2",
+    "title": "Ders3: İhtimal hesabı ve dağılım",
+    "section": "Evrensel küme 2",
+    "text": "Evrensel küme 2\nSoru: Bir ailenin iki çocuğu var ve en az biri erkek. Diğerinin de erkek olma olasılığı nedir?\nEvrensel küme sayısı ve istenen durumların sayısı kaçtır?"
+  },
+  {
+    "objectID": "ders03.html#evrensel-küme-3",
+    "href": "ders03.html#evrensel-küme-3",
+    "title": "Ders3: İhtimal hesabı ve dağılım",
+    "section": "Evrensel küme 3",
+    "text": "Evrensel küme 3\nSoru: Bir hastanede 10.000 kadına meme kanseri tarama testi uygulanıyor. Bu testin doğruluk oranı %90 — yani hasta birini %90 ihtimalle yakalar, sağlıklı birini de %90 ihtimalle doğru şekilde “sağlıklı” olarak tanır. Test sonucunuz pozitif çıktı. Gerçekten hasta olma ihtimaliniz nedir? (Tarama Testi Paradoksu)"
+  },
+  {
+    "objectID": "ders03.html#dağılım",
+    "href": "ders03.html#dağılım",
+    "title": "Ders3: İhtimal hesabı ve dağılım",
+    "section": "Dağılım",
+    "text": "Dağılım\nEvrensel kümenin çok büyük olduğu veya sayılamadığı durumlarda dağılımlar kullanılabilir"
   },
   {
     "objectID": "ders03.html#normal-dağılım-modeli",

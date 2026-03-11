@@ -1,0 +1,170 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 720" font-family="'Segoe UI', 'Helvetica Neue', sans-serif">
+  <defs>
+    <linearGradient id="bg1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="highlight" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#ef4444"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="720" fill="url(#bg1)" rx="16"/>
+
+  <!-- Title -->
+  <text x="450" y="52" text-anchor="middle" fill="#f8fafc" font-size="26" font-weight="700">Çift Zar Atışı — Evrensel Küme</text>
+  <text x="450" y="80" text-anchor="middle" fill="#94a3b8" font-size="15">Sezgisel yanılgı: 11 sonuç mu, 36 sonuç mu?</text>
+
+  <!-- Grid: 6x6 = 36 outcomes -->
+  <!-- Column headers (Zar 2) -->
+  <text x="450" y="112" text-anchor="middle" fill="#38bdf8" font-size="14" font-weight="600">Zar 2</text>
+  <text x="248" y="135" text-anchor="middle" fill="#cbd5e1" font-size="16" font-weight="700">⚀</text>
+  <text x="328" y="135" text-anchor="middle" fill="#cbd5e1" font-size="16" font-weight="700">⚁</text>
+  <text x="408" y="135" text-anchor="middle" fill="#cbd5e1" font-size="16" font-weight="700">⚂</text>
+  <text x="488" y="135" text-anchor="middle" fill="#cbd5e1" font-size="16" font-weight="700">⚃</text>
+  <text x="568" y="135" text-anchor="middle" fill="#cbd5e1" font-size="16" font-weight="700">⚄</text>
+  <text x="648" y="135" text-anchor="middle" fill="#cbd5e1" font-size="16" font-weight="700">⚅</text>
+
+  <!-- Row headers (Zar 1) -->
+  <text x="170" y="220" text-anchor="middle" fill="#38bdf8" font-size="14" font-weight="600" transform="rotate(-90,170,300)">Zar 1</text>
+  <text x="198" y="172" text-anchor="middle" fill="#cbd5e1" font-size="16" font-weight="700">⚀</text>
+  <text x="198" y="252" text-anchor="middle" fill="#cbd5e1" font-size="16" font-weight="700">⚁</text>
+  <text x="198" y="332" text-anchor="middle" fill="#cbd5e1" font-size="16" font-weight="700">⚂</text>
+  <text x="198" y="412" text-anchor="middle" fill="#cbd5e1" font-size="16" font-weight="700">⚃</text>
+  <text x="198" y="492" text-anchor="middle" fill="#cbd5e1" font-size="16" font-weight="700">⚄</text>
+  <text x="198" y="572" text-anchor="middle" fill="#cbd5e1" font-size="16" font-weight="700">⚅</text>
+
+  <!-- Grid cells: 6 rows x 6 cols -->
+  <!-- Row 1: die1=1 -->
+  <rect x="218" y="148" width="60" height="40" rx="6" fill="#1e3a5f" stroke="#334155" stroke-width="1"/>
+  <text x="248" y="174" text-anchor="middle" fill="#e2e8f0" font-size="15">1+1=2</text>
+
+  <rect x="298" y="148" width="60" height="40" rx="6" fill="#1e3a5f" stroke="#334155" stroke-width="1"/>
+  <text x="328" y="174" text-anchor="middle" fill="#e2e8f0" font-size="15">1+2=3</text>
+
+  <rect x="378" y="148" width="60" height="40" rx="6" fill="#1e3a5f" stroke="#334155" stroke-width="1"/>
+  <text x="408" y="174" text-anchor="middle" fill="#e2e8f0" font-size="15">1+3=4</text>
+
+  <rect x="458" y="148" width="60" height="40" rx="6" fill="#1e3a5f" stroke="#334155" stroke-width="1"/>
+  <text x="488" y="174" text-anchor="middle" fill="#e2e8f0" font-size="15">1+4=5</text>
+
+  <rect x="538" y="148" width="60" height="40" rx="6" fill="#1e3a5f" stroke="#334155" stroke-width="1"/>
+  <text x="568" y="174" text-anchor="middle" fill="#e2e8f0" font-size="15">1+5=6</text>
+
+  <rect x="618" y="148" width="60" height="40" rx="6" fill="url(#highlight)" stroke="#f59e0b" stroke-width="2" filter="url(#glow)"/>
+  <text x="648" y="174" text-anchor="middle" fill="#fff" font-size="15" font-weight="700">1+6=7</text>
+
+  <!-- Row 2: die1=2 -->
+  <rect x="218" y="228" width="60" height="40" rx="6" fill="#1e3a5f" stroke="#334155" stroke-width="1"/>
+  <text x="248" y="254" text-anchor="middle" fill="#e2e8f0" font-size="15">2+1=3</text>
+
+  <rect x="298" y="228" width="60" height="40" rx="6" fill="#1e3a5f" stroke="#334155" stroke-width="1"/>
+  <text x="328" y="254" text-anchor="middle" fill="#e2e8f0" font-size="15">2+2=4</text>
+
+  <rect x="378" y="228" width="60" height="40" rx="6" fill="#1e3a5f" stroke="#334155" stroke-width="1"/>
+  <text x="408" y="254" text-anchor="middle" fill="#e2e8f0" font-size="15">2+3=5</text>
+
+  <rect x="458" y="228" width="60" height="40" rx="6" fill="#1e3a5f" stroke="#334155" stroke-width="1"/>
+  <text x="488" y="254" text-anchor="middle" fill="#e2e8f0" font-size="15">2+4=6</text>
+
+  <rect x="538" y="228" width="60" height="40" rx="6" fill="url(#highlight)" stroke="#f59e0b" stroke-width="2" filter="url(#glow)"/>
+  <text x="568" y="254" text-anchor="middle" fill="#fff" font-size="15" font-weight="700">2+5=7</text>
+
+  <rect x="618" y="228" width="60" height="40" rx="6" fill="#1e3a5f" stroke="#334155" stroke-width="1"/>
+  <text x="648" y="254" text-anchor="middle" fill="#e2e8f0" font-size="15">2+6=8</text>
+
+  <!-- Row 3: die1=3 -->
+  <rect x="218" y="308" width="60" height="40" rx="6" fill="#1e3a5f" stroke="#334155" stroke-width="1"/>
+  <text x="248" y="334" text-anchor="middle" fill="#e2e8f0" font-size="15">3+1=4</text>
+
+  <rect x="298" y="308" width="60" height="40" rx="6" fill="#1e3a5f" stroke="#334155" stroke-width="1"/>
+  <text x="328" y="334" text-anchor="middle" fill="#e2e8f0" font-size="15">3+2=5</text>
+
+  <rect x="378" y="308" width="60" height="40" rx="6" fill="#1e3a5f" stroke="#334155" stroke-width="1"/>
+  <text x="408" y="334" text-anchor="middle" fill="#e2e8f0" font-size="15">3+3=6</text>
+
+  <rect x="458" y="308" width="60" height="40" rx="6" fill="url(#highlight)" stroke="#f59e0b" stroke-width="2" filter="url(#glow)"/>
+  <text x="488" y="334" text-anchor="middle" fill="#fff" font-size="15" font-weight="700">3+4=7</text>
+
+  <rect x="538" y="308" width="60" height="40" rx="6" fill="#1e3a5f" stroke="#334155" stroke-width="1"/>
+  <text x="568" y="334" text-anchor="middle" fill="#e2e8f0" font-size="15">3+5=8</text>
+
+  <rect x="618" y="308" width="60" height="40" rx="6" fill="#1e3a5f" stroke="#334155" stroke-width="1"/>
+  <text x="648" y="334" text-anchor="middle" fill="#e2e8f0" font-size="15">3+6=9</text>
+
+  <!-- Row 4: die1=4 -->
+  <rect x="218" y="388" width="60" height="40" rx="6" fill="#1e3a5f" stroke="#334155" stroke-width="1"/>
+  <text x="248" y="414" text-anchor="middle" fill="#e2e8f0" font-size="15">4+1=5</text>
+
+  <rect x="298" y="388" width="60" height="40" rx="6" fill="#1e3a5f" stroke="#334155" stroke-width="1"/>
+  <text x="328" y="414" text-anchor="middle" fill="#e2e8f0" font-size="15">4+2=6</text>
+
+  <rect x="378" y="388" width="60" height="40" rx="6" fill="url(#highlight)" stroke="#f59e0b" stroke-width="2" filter="url(#glow)"/>
+  <text x="408" y="414" text-anchor="middle" fill="#fff" font-size="15" font-weight="700">4+3=7</text>
+
+  <rect x="458" y="388" width="60" height="40" rx="6" fill="#1e3a5f" stroke="#334155" stroke-width="1"/>
+  <text x="488" y="414" text-anchor="middle" fill="#e2e8f0" font-size="15">4+4=8</text>
+
+  <rect x="538" y="388" width="60" height="40" rx="6" fill="#1e3a5f" stroke="#334155" stroke-width="1"/>
+  <text x="568" y="414" text-anchor="middle" fill="#e2e8f0" font-size="15">4+5=9</text>
+
+  <rect x="618" y="388" width="60" height="40" rx="6" fill="#1e3a5f" stroke="#334155" stroke-width="1"/>
+  <text x="648" y="414" text-anchor="middle" fill="#e2e8f0" font-size="15">4+6=10</text>
+
+  <!-- Row 5: die1=5 -->
+  <rect x="218" y="468" width="60" height="40" rx="6" fill="#1e3a5f" stroke="#334155" stroke-width="1"/>
+  <text x="248" y="494" text-anchor="middle" fill="#e2e8f0" font-size="15">5+1=6</text>
+
+  <rect x="298" y="468" width="60" height="40" rx="6" fill="url(#highlight)" stroke="#f59e0b" stroke-width="2" filter="url(#glow)"/>
+  <text x="328" y="494" text-anchor="middle" fill="#fff" font-size="15" font-weight="700">5+2=7</text>
+
+  <rect x="378" y="468" width="60" height="40" rx="6" fill="#1e3a5f" stroke="#334155" stroke-width="1"/>
+  <text x="408" y="494" text-anchor="middle" fill="#e2e8f0" font-size="15">5+3=8</text>
+
+  <rect x="458" y="468" width="60" height="40" rx="6" fill="#1e3a5f" stroke="#334155" stroke-width="1"/>
+  <text x="488" y="494" text-anchor="middle" fill="#e2e8f0" font-size="15">5+4=9</text>
+
+  <rect x="538" y="468" width="60" height="40" rx="6" fill="#1e3a5f" stroke="#334155" stroke-width="1"/>
+  <text x="568" y="494" text-anchor="middle" fill="#e2e8f0" font-size="15">5+5=10</text>
+
+  <rect x="618" y="468" width="60" height="40" rx="6" fill="#1e3a5f" stroke="#334155" stroke-width="1"/>
+  <text x="648" y="494" text-anchor="middle" fill="#e2e8f0" font-size="15">5+6=11</text>
+
+  <!-- Row 6: die1=6 -->
+  <rect x="218" y="548" width="60" height="40" rx="6" fill="url(#highlight)" stroke="#f59e0b" stroke-width="2" filter="url(#glow)"/>
+  <text x="248" y="574" text-anchor="middle" fill="#fff" font-size="15" font-weight="700">6+1=7</text>
+
+  <rect x="298" y="548" width="60" height="40" rx="6" fill="#1e3a5f" stroke="#334155" stroke-width="1"/>
+  <text x="328" y="574" text-anchor="middle" fill="#e2e8f0" font-size="15">6+2=8</text>
+
+  <rect x="378" y="548" width="60" height="40" rx="6" fill="#1e3a5f" stroke="#334155" stroke-width="1"/>
+  <text x="408" y="574" text-anchor="middle" fill="#e2e8f0" font-size="15">6+3=9</text>
+
+  <rect x="458" y="548" width="60" height="40" rx="6" fill="#1e3a5f" stroke="#334155" stroke-width="1"/>
+  <text x="488" y="574" text-anchor="middle" fill="#e2e8f0" font-size="15">6+4=10</text>
+
+  <rect x="538" y="548" width="60" height="40" rx="6" fill="#1e3a5f" stroke="#334155" stroke-width="1"/>
+  <text x="568" y="574" text-anchor="middle" fill="#e2e8f0" font-size="15">6+5=11</text>
+
+  <rect x="618" y="548" width="60" height="40" rx="6" fill="#1e3a5f" stroke="#334155" stroke-width="1"/>
+  <text x="648" y="574" text-anchor="middle" fill="#e2e8f0" font-size="15">6+6=12</text>
+
+  <!-- Legend / Bottom annotation -->
+  <rect x="100" y="620" width="700" height="80" rx="10" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+
+  <rect x="130" y="638" width="24" height="14" rx="3" fill="url(#highlight)"/>
+  <text x="162" y="650" fill="#fbbf24" font-size="14" font-weight="600">Toplam = 7 olan çiftler (6 adet)</text>
+
+  <text x="130" y="680" fill="#94a3b8" font-size="14">P(toplam=7) = 6/36 = 1/6 ≈ 0.167</text>
+  <text x="500" y="680" fill="#64748b" font-size="14">Yanılgı: P = 1/11 ≈ 0.091</text>
+
+  <!-- Ω notation -->
+  <text x="790" y="172" fill="#38bdf8" font-size="18" font-weight="700">Ω = 36</text>
+  <text x="790" y="195" fill="#64748b" font-size="12">(6 × 6)</text>
+</svg>
