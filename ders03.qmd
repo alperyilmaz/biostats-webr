@@ -52,11 +52,21 @@ Soru: Bir ailenin iki çocuğu var ve en az biri erkek. Diğerinin de erkek olma
 
 Evrensel küme sayısı ve istenen durumların sayısı kaçtır?
 
-## {background-image="images/iki_cocuk_problemi.svg" background-size="contain" background-color="#1a1a2e"}
+<!-- ## {background-image="images/iki_cocuk_problemi.svg" background-size="contain" background-color="#1a1a2e"} -->
+
+## 
+
+İstenen olay sayısı: EE 
+
+Evrensel küme: EE, EK (KK durumu kümemizde yok!)
+
+P(diğer çocuğun erkek olması) = 1 / 2
 
 ## Evrensel küme 3
 
-Soru: Bir hastanede 10.000 kadına meme kanseri tarama testi uygulanıyor. Bu testin doğruluk oranı %90 — yani hasta birini %90 ihtimalle yakalar, sağlıklı birini de %90 ihtimalle doğru şekilde "sağlıklı" olarak tanır. Test sonucunuz pozitif çıktı. Gerçekten hasta olma ihtimaliniz nedir? (Tarama Testi Paradoksu)
+Soru: Bir hastanede 10.000 kadına meme kanseri tarama testi uygulanıyor. Bu hastalığın görülme sıklığını %1 olarak kabul edelim.
+
+Bu testin doğruluk oranı %90 — yani hasta birini %90 ihtimalle yakalar, sağlıklı birini de %90 ihtimalle doğru şekilde "sağlıklı" olarak tanır. Test sonucunuz pozitif çıktı. Gerçekten hasta olma ihtimaliniz nedir? (Tarama Testi Paradoksu)
 
 ## {background-image="images/tarama_testi_paradoksu.svg" background-size="contain" background-color="#18181b"}
 
@@ -88,7 +98,13 @@ $$ Z = \frac{x-\mu}{\sigma}  $$
 
 
 ## Normal dağılım tablosu
+
 ![](images/zskor-tablosu.png)
+
+## {background-image="images/zscore_positive.png" background-size=contain}
+
+## {background-image="images/zscore_negative.png" background-size=contain}
+
 
 ## Örnek
 
