@@ -1145,21 +1145,21 @@
     "href": "ders09.html#generate-sıfır-dağılımı-oluşturma",
     "title": "Ders 9: Hesapsal İstatistik",
     "section": "3. generate(): Sıfır Dağılımı Oluşturma",
-    "text": "3. generate(): Sıfır Dağılımı Oluşturma\n\nSıfır hipotezi altında verinin nasıl görüneceğini simüle eder\nÜç temel yöntem:\n\nbootstrap: Yerine koyarak örnekleme\npermute: Değişkenleri karıştırma\ndraw: Teorik dağılımdan örnekleme\n\n\n\n# 1000 bootstrap örneği oluşturalım\ngss |&gt;\n  specify(response = hours) |&gt;\n  hypothesize(null = \"point\", mu = 40) |&gt;\n  generate(reps = 1000, type = \"bootstrap\")\n\nResponse: hours (numeric)\nNull Hypothesis: point\n# A tibble: 500,000 × 2\n# Groups:   replicate [1,000]\n   replicate hours\n       &lt;int&gt; &lt;dbl&gt;\n 1         1  23.6\n 2         1  58.6\n 3         1  68.6\n 4         1  38.6\n 5         1  28.6\n 6         1  48.6\n 7         1  13.6\n 8         1  40.6\n 9         1  22.6\n10         1  36.6\n# ℹ 499,990 more rows"
+    "text": "3. generate(): Sıfır Dağılımı Oluşturma\n\nSıfır hipotezi altında verinin nasıl görüneceğini simüle eder\nÜç temel yöntem:\n\nbootstrap: Yerine koyarak örnekleme\npermute: Değişkenleri karıştırma\ndraw: Teorik dağılımdan örnekleme\n\n\n\n# 1000 bootstrap örneği oluşturalım\ngss |&gt;\n  specify(response = hours) |&gt;\n  hypothesize(null = \"point\", mu = 40) |&gt;\n  generate(reps = 1000, type = \"bootstrap\")\n\nResponse: hours (numeric)\nNull Hypothesis: point\n# A tibble: 500,000 × 2\n# Groups:   replicate [1,000]\n   replicate hours\n       &lt;int&gt; &lt;dbl&gt;\n 1         1  38.6\n 2         1  28.6\n 3         1  38.6\n 4         1  33.6\n 5         1  38.6\n 6         1  78.6\n 7         1  38.6\n 8         1  38.6\n 9         1  42.6\n10         1  38.6\n# ℹ 499,990 more rows"
   },
   {
     "objectID": "ders09.html#generate-veri-karıştırma-örneği",
     "href": "ders09.html#generate-veri-karıştırma-örneği",
     "title": "Ders 9: Hesapsal İstatistik",
     "section": "generate(): Veri Karıştırma Örneği",
-    "text": "generate(): Veri Karıştırma Örneği\n\n# Yaş ve parti ilişkisini kırmak için değişkenleri karıştıralım\ngss |&gt;\n  specify(partyid ~ age) |&gt;\n  hypothesize(null = \"independence\") |&gt;\n  generate(reps = 1000, type = \"permute\")\n\nResponse: partyid (factor)\nExplanatory: age (numeric)\nNull Hypothesis: indepe...\n# A tibble: 500,000 × 3\n# Groups:   replicate [1,000]\n   partyid   age replicate\n   &lt;fct&gt;   &lt;dbl&gt;     &lt;int&gt;\n 1 dem        36         1\n 2 rep        34         1\n 3 dem        24         1\n 4 dem        42         1\n 5 ind        31         1\n 6 rep        32         1\n 7 dem        48         1\n 8 ind        36         1\n 9 ind        30         1\n10 ind        33         1\n# ℹ 499,990 more rows\n\n\nBu adım, sıfır hipotezi doğru olsaydı veri nasıl görünürdü sorusuna cevap verir."
+    "text": "generate(): Veri Karıştırma Örneği\n\n# Yaş ve parti ilişkisini kırmak için değişkenleri karıştıralım\ngss |&gt;\n  specify(partyid ~ age) |&gt;\n  hypothesize(null = \"independence\") |&gt;\n  generate(reps = 1000, type = \"permute\")\n\nResponse: partyid (factor)\nExplanatory: age (numeric)\nNull Hypothesis: indepe...\n# A tibble: 500,000 × 3\n# Groups:   replicate [1,000]\n   partyid   age replicate\n   &lt;fct&gt;   &lt;dbl&gt;     &lt;int&gt;\n 1 rep        36         1\n 2 dem        34         1\n 3 rep        24         1\n 4 dem        42         1\n 5 ind        31         1\n 6 dem        32         1\n 7 ind        48         1\n 8 rep        36         1\n 9 dem        30         1\n10 ind        33         1\n# ℹ 499,990 more rows\n\n\nBu adım, sıfır hipotezi doğru olsaydı veri nasıl görünürdü sorusuna cevap verir."
   },
   {
     "objectID": "ders09.html#calculate-istatistik-hesaplama",
     "href": "ders09.html#calculate-istatistik-hesaplama",
     "title": "Ders 9: Hesapsal İstatistik",
     "section": "4. calculate(): İstatistik Hesaplama",
-    "text": "4. calculate(): İstatistik Hesaplama\n\nSimüle edilmiş verilerden istatistikler hesaplar\nOrtalama, medyan, oran, fark, t-istatistiği ve daha fazlası\nSıfır dağılımını oluşturur\n\n\n# Ortalama çalışma saatlerinin dağılımını hesaplayalım\ngss |&gt;\n  specify(response = hours) |&gt;\n  hypothesize(null = \"point\", mu = 40) |&gt;\n  generate(reps = 1000, type = \"bootstrap\") |&gt;\n  calculate(stat = \"mean\")\n\nResponse: hours (numeric)\nNull Hypothesis: point\n# A tibble: 1,000 × 2\n   replicate  stat\n       &lt;int&gt; &lt;dbl&gt;\n 1         1  39.8\n 2         2  39.6\n 3         3  40.6\n 4         4  40.4\n 5         5  39.7\n 6         6  41.1\n 7         7  40.8\n 8         8  40.6\n 9         9  40.8\n10        10  39.9\n# ℹ 990 more rows"
+    "text": "4. calculate(): İstatistik Hesaplama\n\nSimüle edilmiş verilerden istatistikler hesaplar\nOrtalama, medyan, oran, fark, t-istatistiği ve daha fazlası\nSıfır dağılımını oluşturur\n\n\n# Ortalama çalışma saatlerinin dağılımını hesaplayalım\ngss |&gt;\n  specify(response = hours) |&gt;\n  hypothesize(null = \"point\", mu = 40) |&gt;\n  generate(reps = 1000, type = \"bootstrap\") |&gt;\n  calculate(stat = \"mean\")\n\nResponse: hours (numeric)\nNull Hypothesis: point\n# A tibble: 1,000 × 2\n   replicate  stat\n       &lt;int&gt; &lt;dbl&gt;\n 1         1  40.0\n 2         2  40.7\n 3         3  39.8\n 4         4  38.6\n 5         5  40.3\n 6         6  40.2\n 7         7  40.2\n 8         8  39.5\n 9         9  39.2\n10        10  40.8\n# ℹ 990 more rows"
   },
   {
     "objectID": "ders09.html#örnek-haftalık-çalışma-saatleri-analizi",
@@ -1180,7 +1180,7 @@
     "href": "ders09.html#p-değeri-hesaplama",
     "title": "Ders 9: Hesapsal İstatistik",
     "section": "p-değeri Hesaplama",
-    "text": "p-değeri Hesaplama\n\n# İki kuyruklu p-değerini hesaplayalım\np_value &lt;- null_dist |&gt;\n  get_p_value(obs_stat = obs_mean, direction = \"two-sided\")\n\np_value\n\n# A tibble: 1 × 1\n  p_value\n    &lt;dbl&gt;\n1   0.036\n\n\nEğer ortalama gerçekten 40 saat olsaydı, gözlemlediğimiz kadar (veya daha) uç bir değer elde etme olasılığımız p-değeri kadardır."
+    "text": "p-değeri Hesaplama\n\n# İki kuyruklu p-değerini hesaplayalım\np_value &lt;- null_dist |&gt;\n  get_p_value(obs_stat = obs_mean, direction = \"two-sided\")\n\np_value\n\n# A tibble: 1 × 1\n  p_value\n    &lt;dbl&gt;\n1   0.028\n\n\nEğer ortalama gerçekten 40 saat olsaydı, gözlemlediğimiz kadar (veya daha) uç bir değer elde etme olasılığımız p-değeri kadardır."
   },
   {
     "objectID": "ders09.html#güven-aralıkları",
@@ -1607,7 +1607,7 @@
     "href": "ders03.html#özet",
     "title": "Ders3: İhtimal hesabı ve dağılım",
     "section": "Özet",
-    "text": "Özet\n\nOlasılık hesapları\nNormal dağılım\nPoisson dağılımı\nBernoulli dağılımı"
+    "text": "Özet\n\nOlasılık hesapları\nNormal Dağılım\nPoisson Dağılımı\nBernoulli Dağılımı\n\nBinomial Dağılım\nNegatif Binomial Dağılım\nGeometrik Dağılım\n\nHipergeometrik Dağılım\nLog-normal Dağılım"
   },
   {
     "objectID": "ders03.html#olasılık",
@@ -1740,7 +1740,7 @@
     "href": "ders03.html#örnek-1",
     "title": "Ders3: İhtimal hesabı ve dağılım",
     "section": "Örnek",
-    "text": "Örnek\n\n7 gün içinde 2 hastanın AMI tesşhisi ile hastanelik olma ihtimali nedir? (\\(\\lambda\\)​=4.4, k=2, t=7)\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n7 gün içinde en fazla 2 kişinin hastanelik olması ihtimali nedir?\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nEn az 3 kişinin 7 gün içinde hastanelik olma ihtimali kaçtır?"
+    "text": "Örnek\n\n7 gün içinde 2 hastanın AMI teşhisi ile hastanelik olma ihtimali nedir? (\\(\\lambda\\)​=4.4, k=2, t=7)\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n7 gün içinde en fazla 2 kişinin hastanelik olması ihtimali nedir?\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nEn az 3 kişinin 7 gün içinde hastanelik olma ihtimali kaçtır?"
   },
   {
     "objectID": "ders03.html#bernoulli-dağılımı",
@@ -1748,6 +1748,76 @@
     "title": "Ders3: İhtimal hesabı ve dağılım",
     "section": "Bernoulli dağılımı",
     "text": "Bernoulli dağılımı\nBernoulli dağılımı, yalnızca iki sonuçtan (başarı veya başarısızlık, evet veya hayır, 1 veya 0 gibi) birini alabilen rastgele bir deneyi modellemek için kullanılan bir olasılık dağılımıdır. Binomial dağılımında n defa gerçekleşen, ikili sonucu olan olayların ihtimali hesaplanırken, Bernoulli dağılımında k=1’dir.\nMadeni para atışı, hastalık testi sonucu, bitki tohumu çimlenmesi, ilaç tepkisi gibi örnekler Bernoulli dağılımı için örnek gösterilebilir.\nBernoulli dağılımının tekrarı ile sadece Binomial dağılım ortaya çıkmaz; geometrik, negatif binomial ve hipergeometrik dağılımlar Bernoulli dağılımı temel alır."
+  },
+  {
+    "objectID": "ders03.html#binomial-dağılım",
+    "href": "ders03.html#binomial-dağılım",
+    "title": "Ders3: İhtimal hesabı ve dağılım",
+    "section": "Binomial dağılım",
+    "text": "Binomial dağılım\nBinomial dağılım, bağımsız ve aynı olasılığa sahip n denemede tam olarak k başarı elde etme olasılığını hesaplamak için kullanılan bir olasılık dağılımıdır. Her deneme bir Bernoulli denemesidir (iki sonuç: başarı veya başarısızlık).\nAşağıdaki grafik 10 hastaya uygulanan bir tedavide yan etki görülme sayısının dağılımını göstermektedir (yan etki olasılığı p=0.3)"
+  },
+  {
+    "objectID": "ders03.html#örnekler-1",
+    "href": "ders03.html#örnekler-1",
+    "title": "Ders3: İhtimal hesabı ve dağılım",
+    "section": "Örnekler",
+    "text": "Örnekler\nBinomial dağılım, sabit sayıda bağımsız denemede başarı sayısını modellemek için kullanılır. Biyolojik ve biyomedikal araştırmalarda sıkça karşılaşılan örnekler:\n\nGenetik ve Popülasyon Genetiği:\n\nHardy-Weinberg Genotip Frekansları: Bir popülasyonda belirli bir allelin 2n kromozomdan kaç tanesinde bulunacağı. Örneğin, heterozigot taşıyıcı sıklığının hesaplanması.\nSNP Allel Frekansları: Bir örneklemdeki bireylerin kaç tanesinin belirli bir varyantı taşıdığı.\n\nKlinik Araştırmalar ve Farmakoloji:\n\nTedaviye Yanıt Oranları: n hastadan kaç tanesinin tedaviye yanıt vereceği. Örneğin, 20 hastaya uygulanan bir kemoterapide tam yanıt gösteren hasta sayısı.\nYan Etki İnsidansı: Bir ilacın n hastada kaç tanesinde yan etki oluşturduğu.\n\nMikrobiyoloji:\n\nAntibiyotik Duyarlılık Testleri: n bakteri izolatından kaç tanesinin belirli bir antibiyotiğe dirençli olduğu.\nAşı Etkinliği: Aşılanan n kişiden kaç tanesinin enfeksiyondan korunduğu.\n\nEpidemiyoloji:\n\nHastalık Prevalansı: Rastgele seçilen n kişilik bir örneklemde kaç kişinin belirli bir hastalığa sahip olduğu.\nTarama Testi Sonuçları: n kişiye uygulanan tarama testinde kaç pozitif sonuç çıkacağı.\n\nEkoloji:\n\nTohum Çimlenmesi: Ekilen n tohumdan kaç tanesinin çimleneceği, her tohumun bağımsız ve aynı çimlenme olasılığına sahip olduğu varsayımıyla."
+  },
+  {
+    "objectID": "ders03.html#binomial-dağılım-1",
+    "href": "ders03.html#binomial-dağılım-1",
+    "title": "Ders3: İhtimal hesabı ve dağılım",
+    "section": "Binomial dağılım",
+    "text": "Binomial dağılım\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders03.html#binomial-fonksiyonu",
+    "href": "ders03.html#binomial-fonksiyonu",
+    "title": "Ders3: İhtimal hesabı ve dağılım",
+    "section": "Binomial fonksiyonu",
+    "text": "Binomial fonksiyonu\nn denemede k başarı olma ihtimali\n\\[ P(X = k) = \\binom{n}{k} p^k (1-p)^{n-k} \\]\nBeklenen değer (ortalama) ve varyans\n\\[ E(X) = np \\qquad \\text{Var}(X) = np(1-p) \\]\nKombinasyon formülü\n\\[ \\binom{n}{k} = \\frac{n!}{k!(n-k)!} \\]"
+  },
+  {
+    "objectID": "ders03.html#örnek-3",
+    "href": "ders03.html#örnek-3",
+    "title": "Ders3: İhtimal hesabı ve dağılım",
+    "section": "Örnek",
+    "text": "Örnek\n\n10 hastaya bir tedavi uygulanıyor. Yan etki olasılığı p=0.3 iken, tam olarak 3 hastada yan etki görülme ihtimali nedir?\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n10 hastadan en fazla 2 tanesinde yan etki görülme ihtimali nedir?\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nEn az 5 hastada yan etki görülme ihtimali kaçtır?\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders03.html#negatif-binomial-dağılım",
+    "href": "ders03.html#negatif-binomial-dağılım",
+    "title": "Ders3: İhtimal hesabı ve dağılım",
+    "section": "Negatif binomial dağılım",
+    "text": "Negatif binomial dağılım\nNegatif binomial dağılım, bağımsız Bernoulli denemelerinde r. başarıya ulaşmak için gereken toplam deneme sayısını modelleyen bir olasılık dağılımıdır. Geometrik dağılımın genellemesidir: geometrik dağılımda r=1 iken, negatif binomial dağılımda r≥1’dir.\nAşağıdaki grafik bir klinik araştırmada tedaviye yanıt oranı p=0.3 iken, 3. yanıt veren hastayı bulmak için gereken toplam hasta sayısının dağılımını göstermektedir."
+  },
+  {
+    "objectID": "ders03.html#örnekler-2",
+    "href": "ders03.html#örnekler-2",
+    "title": "Ders3: İhtimal hesabı ve dağılım",
+    "section": "Örnekler",
+    "text": "Örnekler\nNegatif binomial dağılım, belirli sayıda başarıya ulaşmak için gereken deneme sayısını veya aşırı dağılmış (overdispersed) sayım verilerini modellemek için kullanılır. Biyolojik araştırmalarda sıkça karşılaşılan örnekler:\n\nKlinik Araştırmalar:\n\nHasta Tarama Süreci: Bir klinik çalışmaya dahil edilecek kriterleri karşılayan r hasta bulmak için kaç aday taranması gerektiği. Örneğin, nadir bir hastalığı olan 5 uygun hastayı bulmak için gereken tarama sayısı.\nTedaviye Yanıt: Belirli sayıda başarılı tedavi sonucu elde etmek için kaç hastanın tedavi edilmesi gerektiği.\n\nGenomik ve RNA-seq:\n\nGen Ekspresyon Sayımları: RNA-seq verilerinde gen başına okunan read sayıları genellikle Poisson’dan daha fazla varyans gösterir (overdispersion). Negatif binomial dağılım bu fazla varyansı modellemek için standart yöntemdir. DESeq2 ve edgeR gibi yaygın araçlar negatif binomial model kullanır.\n\nEkoloji:\n\nTür Zenginliği Örneklemesi: Belirli sayıda nadir türü gözlemlemek için gereken örnekleme çabası. Örneğin, bir ekosistemde 3 farklı endemik kuş türünü gözlemlemek için yapılması gereken arazi çalışması sayısı.\nParazit Yükü: Konakçılar arasındaki parazit sayısı dağılımı genellikle Poisson’dan daha dağınıktır ve negatif binomial ile daha iyi modellenir.\n\nEpidemiyoloji:\n\nHastalık Kümelenmeleri: Belirli bir bölgede hastalık vakalarının sayısı Poisson’dan daha fazla varyans gösterdiğinde (bazı bölgelerde kümelenme, bazılarında hiç vaka yokken) negatif binomial dağılım kullanılır.\n\nKalite Kontrol ve Mikrobiyoloji:\n\nKontaminasyon Tespiti: Üretim hattında r. kusurlu ürünü bulmak için kaç ürünün incelenmesi gerektiği."
+  },
+  {
+    "objectID": "ders03.html#negatif-binomial-dağılım-1",
+    "href": "ders03.html#negatif-binomial-dağılım-1",
+    "title": "Ders3: İhtimal hesabı ve dağılım",
+    "section": "Negatif binomial dağılım",
+    "text": "Negatif binomial dağılım\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders03.html#negatif-binomial-fonksiyonu",
+    "href": "ders03.html#negatif-binomial-fonksiyonu",
+    "title": "Ders3: İhtimal hesabı ve dağılım",
+    "section": "Negatif binomial fonksiyonu",
+    "text": "Negatif binomial fonksiyonu\nk. denemede r. başarıyı elde etme ihtimali\n\\[ P(X = k) = \\binom{k-1}{r-1} p^r (1-p)^{k-r} \\]\nBeklenen değer (ortalama) ve varyans\n\\[ E(X) = \\frac{r}{p} \\qquad \\text{Var}(X) = \\frac{r(1-p)}{p^2} \\]\n\nNot: R’da rnbinom ve dnbinom fonksiyonları r. başarıdan önceki başarısızlık sayısını (x = k − r) kullanır; toplam deneme sayısını değil."
+  },
+  {
+    "objectID": "ders03.html#örnek-4",
+    "href": "ders03.html#örnek-4",
+    "title": "Ders3: İhtimal hesabı ve dağılım",
+    "section": "Örnek",
+    "text": "Örnek\n\nTedaviye yanıt oranı p=0.3 iken, 3. yanıt veren hastanın tam olarak 10. hasta olma ihtimali nedir? (yani 7 başarısızlık + 3. başarı)\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n3 başarılı tedavi için en fazla 8 hasta tedavi etme ihtimali nedir? (yani en fazla 5 başarısızlık)\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n3 başarılı tedavi için 15’ten fazla hasta tedavi etme ihtimali kaçtır? (yani 12’den fazla başarısızlık)\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
   },
   {
     "objectID": "ders03.html#geometik-dağılım",
@@ -1785,11 +1855,81 @@
     "text": "Soru\nBaşarının ilk 4 denemede gerçekleşme ihtimali kaçtır?\nP(X=1) + P(X=2) + P(X=3) + P(X=4) = 0.82\nBaşarının ilk 4 denemede gerçekleşmeme ihtimali kaçtır?\n1- 0.82 = 0.18\n\nR’da geometrik fonksiyon “başarıdan öncde gerekli deneme sayısını” dikkate alır\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
   },
   {
-    "objectID": "ders03.html#negatif-binomial-dağılım",
-    "href": "ders03.html#negatif-binomial-dağılım",
+    "objectID": "ders03.html#özet-1",
+    "href": "ders03.html#özet-1",
     "title": "Ders3: İhtimal hesabı ve dağılım",
-    "section": "Negatif binomial dağılım",
-    "text": "Negatif binomial dağılım\nGeometrik dağılım ilk başarının k. denemede gerçekleşmesi ihtimalini hesaplarken Negatif Binomial Dağılım daha geneldir, R. başarının K. denemede gerçekleşme ihtimalini hesaplar."
+    "section": "Özet",
+    "text": "Özet\n\nNormal dağılım (sürekli) →\nPoisson (kesikli, nadir olaylar)\nBernoulli (yapı taşı)\n\nBernoulli türevleri: Binomial (n kez tekrar)\nGeometrik (ilk başarıya kadar)\nNegatif Binomial (r. başarıya kadar, geometriğin genellemesi)\n\nHipergeometrik (“iadesiz çekiliş — Bernoulli’den farklı!”)\nLog-Normal (sürekli, biyolojik verilerde çok yaygın)"
+  },
+  {
+    "objectID": "ders03.html#hipergeometrik-dağılım",
+    "href": "ders03.html#hipergeometrik-dağılım",
+    "title": "Ders3: İhtimal hesabı ve dağılım",
+    "section": "Hipergeometrik dağılım",
+    "text": "Hipergeometrik dağılım\nHipergeometrik dağılım, sonlu bir popülasyondan iadesiz çekiliş yapıldığında, belirli bir özelliğe sahip bireylerin seçilme sayısını modelleyen bir olasılık dağılımıdır. Binomial dağılımdan farkı, her çekişte olasılığın değişmesidir çünkü çekilen birey geri konmaz.\nAşağıdaki grafik bir gen seti zenginleştirme analizini göstermektedir: 20.000 genlik genomdan rastgele 50 gen seçildiğinde, bunların kaç tanesinin kanser ilişkili 800 gen arasından geldiğini sorgulamaktadır."
+  },
+  {
+    "objectID": "ders03.html#örnekler-4",
+    "href": "ders03.html#örnekler-4",
+    "title": "Ders3: İhtimal hesabı ve dağılım",
+    "section": "Örnekler",
+    "text": "Örnekler\nHipergeometrik dağılım, iadesiz örneklemde belirli bir kategoriden kaç birey seçileceğini modellemek için kullanılır. Biyolojik araştırmalarda yaygın kullanım alanları:\n\nBiyoinformatik ve Genomik:\n\nGen Ontolojisi (GO) Zenginleştirme Analizi: Diferansiyel olarak ifade edilen gen listesinde belirli bir biyolojik yolağa ait genlerin beklenenden fazla olup olmadığının testi. Örneğin, 200 upregüle genin 15’inin apoptoz yolağında olması tesadüf mü?\nKEGG Pathway Analizi: Bir gen listesindeki metabolik yolak zenginleştirmesinin istatistiksel anlamlılığı.\n\nGenetik ve Popülasyon Biyolojisi:\n\nFisher’ın Kesin Testi (Fisher’s Exact Test): 2x2 kontenjans tablolarında beklenen frekanslar düşük olduğunda kullanılan test, hipergeometrik dağılıma dayanır.\nGenetik Sürüklenme Modelleri: Küçük popülasyonlarda allel frekanslarının nesiller arası değişimi, iadesiz örnekleme olarak modellenebilir.\n\nEkoloji:\n\nYakalama-Tekrar Yakalama Yöntemi: Bir gölde 100 balık işaretlenip bırakıldıktan sonra, tekrar yakalanan 50 balıktan kaç tanesinin işaretli olduğu.\nBiyoçeşitlilik Örneklemesi: Bir alandaki toplam türlerin bilinen bir alt kümesinin rastgele örneklemde temsil oranı.\n\nKlinik Araştırmalar:\n\nRastgele Hasta Seçimi: 100 kişilik bir kohorttan (40 kadın, 60 erkek) 20 kişilik bir tedavi grubu oluşturulduğunda kadın sayısının dağılımı.\n\nKalite Kontrol:\n\nLot Örneklemesi: 500 ürünlük bir partiden 30 ürün kontrol edildiğinde, kusurlu ürün sayısının dağılımı."
+  },
+  {
+    "objectID": "ders03.html#hipergeometrik-dağılım-1",
+    "href": "ders03.html#hipergeometrik-dağılım-1",
+    "title": "Ders3: İhtimal hesabı ve dağılım",
+    "section": "Hipergeometrik dağılım",
+    "text": "Hipergeometrik dağılım\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders03.html#hipergeometrik-fonksiyonu",
+    "href": "ders03.html#hipergeometrik-fonksiyonu",
+    "title": "Ders3: İhtimal hesabı ve dağılım",
+    "section": "Hipergeometrik fonksiyonu",
+    "text": "Hipergeometrik fonksiyonu\nPopülasyondaki N bireyden n tanesini seçtiğimizde, K özel bireyin k tanesini çekme ihtimali\n\\[ P(X = k) = \\frac{\\binom{K}{k}\\binom{N-K}{n-k}}{\\binom{N}{n}} \\]\nBeklenen değer ve varyans\n\\[ E(X) = n\\frac{K}{N} \\qquad \\text{Var}(X) = n\\frac{K}{N}\\frac{N-K}{N}\\frac{N-n}{N-1} \\]\n\nParametreler: N = popülasyon büyüklüğü, K = popülasyondaki “başarı” sayısı, n = çekilen örneklem, k = örneklemdeki başarı sayısı"
+  },
+  {
+    "objectID": "ders03.html#örnek-5",
+    "href": "ders03.html#örnek-5",
+    "title": "Ders3: İhtimal hesabı ve dağılım",
+    "section": "Örnek",
+    "text": "Örnek\n\n20.000 genlik genomda 800 tanesi kanser ilişkili. Rastgele 50 gen seçtiğimizde tam olarak 5 tanesinin kanser geni olma ihtimali nedir?\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n50 genlik listede 12 veya daha fazla kanser geni bulunma ihtimali nedir? (zenginleştirme p-değeri)\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nFisher’ın kesin testi ile aynı sonucu elde edelim\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders03.html#log-normal-dağılım",
+    "href": "ders03.html#log-normal-dağılım",
+    "title": "Ders3: İhtimal hesabı ve dağılım",
+    "section": "Log-normal dağılım",
+    "text": "Log-normal dağılım\nLog-normal dağılım, logaritması normal dağılım gösteren bir sürekli olasılık dağılımıdır. Değerler her zaman pozitiftir ve dağılım sağa çarpıktır. Biyolojide çarpımsal süreçlerle oluşan ölçümler (hücre bölünmesi, gen ekspresyonu, enzim aktivitesi) genellikle log-normal dağılım gösterir.\nAşağıdaki grafik gen ekspresyon seviyelerinin (FPKM) ham halini ve log dönüşümü sonrasını karşılaştırmaktadır."
+  },
+  {
+    "objectID": "ders03.html#örnekler-5",
+    "href": "ders03.html#örnekler-5",
+    "title": "Ders3: İhtimal hesabı ve dağılım",
+    "section": "Örnekler",
+    "text": "Örnekler\nLog-normal dağılım, değerleri sıfırın altına düşmeyen ve sağa çarpık olan biyolojik ölçümlerde yaygın olarak karşımıza çıkar:\n\nGenomik ve Transkriptomik:\n\nGen Ekspresyon Seviyeleri: RNA-seq verilerinde FPKM/TPM/RPKM değerleri tipik olarak log-normal dağılım gösterir. Çoğu gen düşük seviyede ifade edilirken, az sayıda gen çok yüksek seviyede ifade edilir.\nProtein Konsantrasyonları: Hücre içi protein miktarları genellikle log-normal dağılır.\n\nFarmakoloji ve Toksikoloji:\n\nİlaç Konsantrasyonları (IC₅₀): Bir ilacın hücre büyümesini %50 inhibe eden konsantrasyonu bireyler arasında log-normal dağılım gösterir.\nDoz-Yanıt Eğrileri: İlaç dozlarının etkisi genellikle logaritmik ölçekte analiz edilir.\n\nHücre Biyolojisi:\n\nHücre Büyüklükleri: Bir popülasyondaki hücrelerin çap veya hacim dağılımı. Hücreler büyüyüp bölündüğü için çarpımsal bir süreç söz konusudur.\nHücre Bölünme Süreleri: Hücrelerin bir bölünme döngüsünü tamamlama süreleri.\n\nEkoloji ve Çevre Bilimleri:\n\nTür Bolluğu: Bir ekosistemdeki türlerin birey sayıları — az sayıda tür çok baskınken, çoğu tür nadir bulunur.\nÇevresel Kirletici Konsantrasyonları: Toprak veya sudaki ağır metal seviyeleri.\n\nEpidemiyoloji:\n\nKuluçka Süreleri: Birçok enfeksiyon hastalığının kuluçka süresi log-normal dağılım gösterir.\nAntikor Titreleri: Serolojik testlerde ölçülen antikor seviyeleri."
+  },
+  {
+    "objectID": "ders03.html#log-normal-dağılım-1",
+    "href": "ders03.html#log-normal-dağılım-1",
+    "title": "Ders3: İhtimal hesabı ve dağılım",
+    "section": "Log-normal dağılım",
+    "text": "Log-normal dağılım\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders03.html#log-normal-fonksiyonu",
+    "href": "ders03.html#log-normal-fonksiyonu",
+    "title": "Ders3: İhtimal hesabı ve dağılım",
+    "section": "Log-normal fonksiyonu",
+    "text": "Log-normal fonksiyonu\n\\(X\\) log-normal dağılıyorsa \\(\\ln(X)\\) normal dağılır: \\(\\ln(X) \\sim N(\\mu, \\sigma^2)\\)\nOlasılık yoğunluk fonksiyonu\n\\[ f(x) = \\frac{1}{x \\sigma \\sqrt{2\\pi}} \\exp\\left(-\\frac{(\\ln x - \\mu)^2}{2\\sigma^2}\\right), \\quad x &gt; 0 \\]\nBeklenen değer ve varyans\n\\[ E(X) = e^{\\mu + \\sigma^2/2} \\qquad \\text{Var}(X) = e^{2\\mu + \\sigma^2}(e^{\\sigma^2} - 1) \\]\n\nNeden log-normal? Normal dağılım toplamsal rastgele etkilerin sonucudur (Merkezi Limit Teoremi). Log-normal dağılım ise çarpımsal rastgele etkilerin sonucudur. Biyolojide büyüme, katlama ve bölünme gibi süreçler çarpımsaldır."
+  },
+  {
+    "objectID": "ders03.html#örnek-6",
+    "href": "ders03.html#örnek-6",
+    "title": "Ders3: İhtimal hesabı ve dağılım",
+    "section": "Örnek",
+    "text": "Örnek\n\nGen ekspresyon verisinde (meanlog=2, sdlog=1.2) bir genin 50 FPKM’den düşük ifade edilme olasılığı nedir?\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nEkspresyon değerlerinin %95’inin altında kalan eşik değer (FPKM) nedir?\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nNormal dağılım varsayımını Shapiro-Wilk testi ile kontrol edelim\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
   },
   {
     "objectID": "ders05-uygulama.html#iris-verisi",

@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" font-family="'Segoe UI', 'Helvetica Neue', sans-serif">
+  <rect width="900" height="600" fill="#ffffff" rx="16"/>
+
+  <text x="450" y="42" text-anchor="middle" fill="#1e293b" font-size="24" font-weight="700">Negatif Binomial Dağılım</text>
+  <text x="450" y="68" text-anchor="middle" fill="#64748b" font-size="14">Tedaviye yanıt oranı p=0.3. 3. yanıt veren hastayı bulmak için kaç hasta tedavi edilmeli?</text>
+
+  <!-- Visual: patient sequence example -->
+  <text x="80" y="115" fill="#1e293b" font-size="13" font-weight="600">Örnek senaryo: 3. başarı (r=3) 10. hastada gerçekleşti</text>
+
+  <!-- Patient icons: mix of success/fail leading to 3rd success at position 10 -->
+  <!-- 1:fail 2:success 3:fail 4:fail 5:fail 6:success 7:fail 8:fail 9:fail 10:success -->
+  <rect x="80" y="130" width="65" height="55" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="112" y="155" text-anchor="middle" fill="#94a3b8" font-size="14">✗</text>
+  <text x="112" y="175" text-anchor="middle" fill="#94a3b8" font-size="9">1</text>
+
+  <rect x="155" y="130" width="65" height="55" rx="8" fill="#dbeafe" stroke="#3b82f6" stroke-width="2"/>
+  <text x="187" y="155" text-anchor="middle" fill="#2563eb" font-size="14" font-weight="700">✓₁</text>
+  <text x="187" y="175" text-anchor="middle" fill="#2563eb" font-size="9">2</text>
+
+  <rect x="230" y="130" width="65" height="55" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="262" y="155" text-anchor="middle" fill="#94a3b8" font-size="14">✗</text>
+  <text x="262" y="175" text-anchor="middle" fill="#94a3b8" font-size="9">3</text>
+
+  <rect x="305" y="130" width="65" height="55" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="337" y="155" text-anchor="middle" fill="#94a3b8" font-size="14">✗</text>
+  <text x="337" y="175" text-anchor="middle" fill="#94a3b8" font-size="9">4</text>
+
+  <rect x="380" y="130" width="65" height="55" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="412" y="155" text-anchor="middle" fill="#94a3b8" font-size="14">✗</text>
+  <text x="412" y="175" text-anchor="middle" fill="#94a3b8" font-size="9">5</text>
+
+  <rect x="455" y="130" width="65" height="55" rx="8" fill="#dbeafe" stroke="#3b82f6" stroke-width="2"/>
+  <text x="487" y="155" text-anchor="middle" fill="#2563eb" font-size="14" font-weight="700">✓₂</text>
+  <text x="487" y="175" text-anchor="middle" fill="#2563eb" font-size="9">6</text>
+
+  <rect x="530" y="130" width="65" height="55" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="562" y="155" text-anchor="middle" fill="#94a3b8" font-size="14">✗</text>
+  <text x="562" y="175" text-anchor="middle" fill="#94a3b8" font-size="9">7</text>
+
+  <rect x="605" y="130" width="65" height="55" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="637" y="155" text-anchor="middle" fill="#94a3b8" font-size="14">✗</text>
+  <text x="637" y="175" text-anchor="middle" fill="#94a3b8" font-size="9">8</text>
+
+  <rect x="680" y="130" width="65" height="55" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="712" y="155" text-anchor="middle" fill="#94a3b8" font-size="14">✗</text>
+  <text x="712" y="175" text-anchor="middle" fill="#94a3b8" font-size="9">9</text>
+
+  <rect x="755" y="130" width="65" height="55" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="3"/>
+  <text x="787" y="155" text-anchor="middle" fill="#1d4ed8" font-size="14" font-weight="700">✓₃</text>
+  <text x="787" y="175" text-anchor="middle" fill="#1d4ed8" font-size="9" font-weight="700">10</text>
+
+  <!-- Bar chart: NegBin(r=3, p=0.3) — P(k failures before 3rd success) -->
+  <line x1="100" y1="410" x2="800" y2="410" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="100" y1="410" x2="100" y2="210" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="450" y="448" text-anchor="middle" fill="#64748b" font-size="13">Toplam deneme sayısı (k)</text>
+
+  <!-- Bars: NB(r=3, p=0.3) for total trials k=3,4,...,15 -->
+  <!-- P(k=3)=0.027 → h=18 -->
+  <rect x="115" y="392" width="40" height="18" rx="3" fill="#bfdbfe" stroke="#60a5fa" stroke-width="1"/>
+  <text x="135" y="388" text-anchor="middle" fill="#2563eb" font-size="9">.027</text>
+  <text x="135" y="430" text-anchor="middle" fill="#334155" font-size="11">3</text>
+
+  <!-- P(k=4)=0.057 → h=38 -->
+  <rect x="165" y="372" width="40" height="38" rx="3" fill="#bfdbfe" stroke="#60a5fa" stroke-width="1"/>
+  <text x="185" y="367" text-anchor="middle" fill="#2563eb" font-size="9">.057</text>
+  <text x="185" y="430" text-anchor="middle" fill="#334155" font-size="11">4</text>
+
+  <!-- P(k=5)=0.079 → h=53 -->
+  <rect x="215" y="357" width="40" height="53" rx="3" fill="#bfdbfe" stroke="#60a5fa" stroke-width="1"/>
+  <text x="235" y="352" text-anchor="middle" fill="#2563eb" font-size="9">.079</text>
+  <text x="235" y="430" text-anchor="middle" fill="#334155" font-size="11">5</text>
+
+  <!-- P(k=6)=0.093 → h=62 -->
+  <rect x="265" y="348" width="40" height="62" rx="3" fill="#93c5fd" stroke="#3b82f6" stroke-width="1"/>
+  <text x="285" y="343" text-anchor="middle" fill="#2563eb" font-size="9">.093</text>
+  <text x="285" y="430" text-anchor="middle" fill="#334155" font-size="11">6</text>
+
+  <!-- P(k=7)=0.098 → h=65 -->
+  <rect x="315" y="345" width="40" height="65" rx="3" fill="#93c5fd" stroke="#3b82f6" stroke-width="1"/>
+  <text x="335" y="339" text-anchor="middle" fill="#2563eb" font-size="9">.098</text>
+  <text x="335" y="430" text-anchor="middle" fill="#334155" font-size="11">7</text>
+
+  <!-- P(k=8)=0.096 → h=64 -->
+  <rect x="365" y="346" width="40" height="64" rx="3" fill="#93c5fd" stroke="#3b82f6" stroke-width="1"/>
+  <text x="385" y="340" text-anchor="middle" fill="#2563eb" font-size="9">.096</text>
+  <text x="385" y="430" text-anchor="middle" fill="#334155" font-size="11">8</text>
+
+  <!-- P(k=9)=0.088 → h=59 -->
+  <rect x="415" y="351" width="40" height="59" rx="3" fill="#bfdbfe" stroke="#60a5fa" stroke-width="1"/>
+  <text x="435" y="346" text-anchor="middle" fill="#2563eb" font-size="9">.088</text>
+  <text x="435" y="430" text-anchor="middle" fill="#334155" font-size="11">9</text>
+
+  <!-- P(k=10)=0.077 → h=51 highlighted -->
+  <rect x="465" y="359" width="40" height="51" rx="3" fill="#3b82f6" stroke="#1d4ed8" stroke-width="2"/>
+  <text x="485" y="354" text-anchor="middle" fill="#1d4ed8" font-size="9" font-weight="700">.077</text>
+  <text x="485" y="430" text-anchor="middle" fill="#1e293b" font-size="11" font-weight="700">10</text>
+
+  <!-- P(k=11)=0.065 → h=43 -->
+  <rect x="515" y="367" width="40" height="43" rx="3" fill="#bfdbfe" stroke="#60a5fa" stroke-width="1"/>
+  <text x="535" y="362" text-anchor="middle" fill="#2563eb" font-size="9">.065</text>
+  <text x="535" y="430" text-anchor="middle" fill="#334155" font-size="11">11</text>
+
+  <!-- P(k=12)=0.052 → h=35 -->
+  <rect x="565" y="375" width="40" height="35" rx="3" fill="#dbeafe" stroke="#93c5fd" stroke-width="1"/>
+  <text x="585" y="370" text-anchor="middle" fill="#2563eb" font-size="9">.052</text>
+  <text x="585" y="430" text-anchor="middle" fill="#334155" font-size="11">12</text>
+
+  <!-- P(k=13)=0.041 → h=27 -->
+  <rect x="615" y="383" width="40" height="27" rx="3" fill="#dbeafe" stroke="#93c5fd" stroke-width="1"/>
+  <text x="635" y="430" text-anchor="middle" fill="#94a3b8" font-size="11">13</text>
+
+  <!-- P(k=14+) tail -->
+  <rect x="665" y="389" width="40" height="21" rx="3" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+  <text x="685" y="430" text-anchor="middle" fill="#94a3b8" font-size="11">14</text>
+
+  <rect x="715" y="394" width="40" height="16" rx="3" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+  <text x="735" y="430" text-anchor="middle" fill="#94a3b8" font-size="11">15+</text>
+
+  <!-- Bottom -->
+  <rect x="80" y="490" width="740" height="90" rx="12" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="450" y="516" text-anchor="middle" fill="#1e293b" font-size="14" font-weight="700">r. başarıya ulaşmak için gereken toplam deneme sayısı</text>
+  <text x="450" y="540" text-anchor="middle" fill="#64748b" font-size="13">Geometrik dağılımın genellemesi: Geometrik → r=1, Negatif Binomial → r≥1</text>
+  <text x="450" y="562" text-anchor="middle" fill="#2563eb" font-size="12">E(X) = r/p = 3/0.3 = 10 deneme      dnbinom(x = 7, size = 3, prob = 0.3) = 0.077</text>
+</svg>

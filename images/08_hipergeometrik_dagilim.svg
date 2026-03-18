@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" font-family="'Segoe UI', 'Helvetica Neue', sans-serif">
+  <rect width="900" height="620" fill="#ffffff" rx="16"/>
+
+  <text x="450" y="42" text-anchor="middle" fill="#1e293b" font-size="24" font-weight="700">Hipergeometrik Dağılım</text>
+  <text x="450" y="68" text-anchor="middle" fill="#64748b" font-size="14">Gen seti zenginleştirme analizi: "Bu kadar örtüşme tesadüf olabilir mi?"</text>
+
+  <!-- Universe box -->
+  <rect x="60" y="95" width="780" height="260" rx="14" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5"/>
+  <text x="450" y="120" text-anchor="middle" fill="#1e293b" font-size="15" font-weight="700">Genomdaki tüm genler (N = 20.000)</text>
+
+  <!-- Cancer genes pool (K) -->
+  <rect x="90" y="140" width="340" height="195" rx="12" fill="#fef2f2" stroke="#fecaca" stroke-width="1.5"/>
+  <text x="260" y="168" text-anchor="middle" fill="#dc2626" font-size="14" font-weight="700">Kanser ilişkili genler (K = 800)</text>
+
+  <!-- Dots representing cancer genes -->
+  <circle cx="120" cy="200" r="6" fill="#fca5a5"/><circle cx="145" cy="210" r="6" fill="#fca5a5"/>
+  <circle cx="170" cy="195" r="6" fill="#fca5a5"/><circle cx="195" cy="215" r="6" fill="#fca5a5"/>
+  <circle cx="220" cy="200" r="6" fill="#fca5a5"/><circle cx="245" cy="190" r="6" fill="#fca5a5"/>
+  <circle cx="270" cy="210" r="6" fill="#fca5a5"/><circle cx="295" cy="200" r="6" fill="#fca5a5"/>
+  <circle cx="320" cy="215" r="6" fill="#fca5a5"/><circle cx="345" cy="195" r="6" fill="#fca5a5"/>
+  <circle cx="370" cy="205" r="6" fill="#fca5a5"/><circle cx="395" cy="210" r="6" fill="#fca5a5"/>
+  <circle cx="133" cy="240" r="6" fill="#fca5a5"/><circle cx="158" cy="250" r="6" fill="#fca5a5"/>
+  <circle cx="183" cy="235" r="6" fill="#fca5a5"/><circle cx="208" cy="255" r="6" fill="#fca5a5"/>
+  <circle cx="233" cy="245" r="6" fill="#fca5a5"/><circle cx="258" cy="260" r="6" fill="#fca5a5"/>
+  <circle cx="283" cy="240" r="6" fill="#fca5a5"/><circle cx="308" cy="255" r="6" fill="#fca5a5"/>
+  <circle cx="333" cy="248" r="6" fill="#fca5a5"/><circle cx="358" cy="238" r="6" fill="#fca5a5"/>
+  <text x="260" y="300" text-anchor="middle" fill="#ef4444" font-size="11">... toplam 800 gen</text>
+
+  <!-- Non-cancer genes (right area) -->
+  <circle cx="480" cy="180" r="5" fill="#cbd5e1"/><circle cx="510" cy="195" r="5" fill="#cbd5e1"/>
+  <circle cx="540" cy="175" r="5" fill="#cbd5e1"/><circle cx="570" cy="190" r="5" fill="#cbd5e1"/>
+  <circle cx="600" cy="180" r="5" fill="#cbd5e1"/><circle cx="630" cy="200" r="5" fill="#cbd5e1"/>
+  <circle cx="660" cy="185" r="5" fill="#cbd5e1"/><circle cx="690" cy="175" r="5" fill="#cbd5e1"/>
+  <circle cx="720" cy="195" r="5" fill="#cbd5e1"/><circle cx="750" cy="180" r="5" fill="#cbd5e1"/>
+  <circle cx="780" cy="190" r="5" fill="#cbd5e1"/><circle cx="495" cy="220" r="5" fill="#cbd5e1"/>
+  <circle cx="525" cy="230" r="5" fill="#cbd5e1"/><circle cx="555" cy="215" r="5" fill="#cbd5e1"/>
+  <circle cx="585" cy="235" r="5" fill="#cbd5e1"/><circle cx="615" cy="225" r="5" fill="#cbd5e1"/>
+  <circle cx="645" cy="240" r="5" fill="#cbd5e1"/><circle cx="675" cy="220" r="5" fill="#cbd5e1"/>
+  <circle cx="705" cy="235" r="5" fill="#cbd5e1"/><circle cx="735" cy="225" r="5" fill="#cbd5e1"/>
+  <circle cx="765" cy="215" r="5" fill="#cbd5e1"/><circle cx="500" cy="260" r="5" fill="#cbd5e1"/>
+  <circle cx="535" cy="270" r="5" fill="#cbd5e1"/><circle cx="570" cy="255" r="5" fill="#cbd5e1"/>
+  <circle cx="605" cy="275" r="5" fill="#cbd5e1"/><circle cx="640" cy="265" r="5" fill="#cbd5e1"/>
+  <circle cx="675" cy="280" r="5" fill="#cbd5e1"/><circle cx="710" cy="260" r="5" fill="#cbd5e1"/>
+  <circle cx="745" cy="275" r="5" fill="#cbd5e1"/><circle cx="780" cy="265" r="5" fill="#cbd5e1"/>
+  <text x="630" y="310" text-anchor="middle" fill="#94a3b8" font-size="11">... diğer 19.200 gen</text>
+
+  <!-- My gene list overlay (n=50) — a lens/circle cutting across both areas -->
+  <ellipse cx="350" cy="230" rx="130" ry="85" fill="none" stroke="#2563eb" stroke-width="3" stroke-dasharray="8,4"/>
+  <text x="350" y="340" text-anchor="middle" fill="#2563eb" font-size="13" font-weight="700">Benim gen listem (n = 50)</text>
+
+  <!-- Overlap: k=12 genes that are both in my list AND cancer genes -->
+  <!-- Highlighted overlap dots -->
+  <circle cx="245" cy="190" r="8" fill="#7c3aed" stroke="#5b21b6" stroke-width="2"/>
+  <circle cx="270" cy="210" r="8" fill="#7c3aed" stroke="#5b21b6" stroke-width="2"/>
+  <circle cx="295" cy="200" r="8" fill="#7c3aed" stroke="#5b21b6" stroke-width="2"/>
+  <circle cx="320" cy="215" r="8" fill="#7c3aed" stroke="#5b21b6" stroke-width="2"/>
+  <circle cx="345" cy="195" r="8" fill="#7c3aed" stroke="#5b21b6" stroke-width="2"/>
+  <circle cx="370" cy="205" r="8" fill="#7c3aed" stroke="#5b21b6" stroke-width="2"/>
+  <circle cx="258" cy="260" r="8" fill="#7c3aed" stroke="#5b21b6" stroke-width="2"/>
+  <circle cx="283" cy="240" r="8" fill="#7c3aed" stroke="#5b21b6" stroke-width="2"/>
+  <circle cx="308" cy="255" r="8" fill="#7c3aed" stroke="#5b21b6" stroke-width="2"/>
+  <circle cx="333" cy="248" r="8" fill="#7c3aed" stroke="#5b21b6" stroke-width="2"/>
+  <circle cx="358" cy="238" r="8" fill="#7c3aed" stroke="#5b21b6" stroke-width="2"/>
+  <circle cx="233" cy="245" r="8" fill="#7c3aed" stroke="#5b21b6" stroke-width="2"/>
+
+  <!-- Overlap label -->
+  <rect x="270" y="148" width="100" height="28" rx="6" fill="#7c3aed"/>
+  <text x="320" y="168" text-anchor="middle" fill="#fff" font-size="13" font-weight="700">k = 12 örtüşme</text>
+
+  <!-- Arrow down -->
+  <text x="450" y="385" text-anchor="middle" fill="#94a3b8" font-size="18">▼</text>
+
+  <!-- Question box -->
+  <rect x="80" y="400" width="740" height="60" rx="10" fill="#f5f3ff" stroke="#c4b5fd" stroke-width="1.5"/>
+  <text x="450" y="425" text-anchor="middle" fill="#5b21b6" font-size="15" font-weight="700">50 gen rastgele seçilseydi, 12 veya daha fazlasının kanser geni olma olasılığı?</text>
+  <text x="450" y="448" text-anchor="middle" fill="#7c3aed" font-size="13">Beklenen: 50 × (800/20000) = 2 gen   |   Gözlenen: 12 gen → tesadüf mü?</text>
+
+  <!-- Result -->
+  <rect x="80" y="480" width="740" height="50" rx="10" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="450" y="505" text-anchor="middle" fill="#1e293b" font-size="14" font-weight="600">P(X ≥ 12) = 1 − phyper(11, 800, 19200, 50) ≈ 1.2 × 10⁻⁷</text>
+  <text x="450" y="522" text-anchor="middle" fill="#dc2626" font-size="13" font-weight="700">→ Bu tesadüf değil! Genler kanser yolağında zenginleşmiş.</text>
+
+  <!-- Bottom note -->
+  <rect x="80" y="545" width="740" height="60" rx="12" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="450" y="568" text-anchor="middle" fill="#1e293b" font-size="13" font-weight="700">Binomial'den farkı: iade etmeden çekiliş → her çekiş olasılığı değiştirir</text>
+  <text x="450" y="590" text-anchor="middle" fill="#64748b" font-size="12">GO enrichment, GSEA, Fisher's exact test → hepsi hipergeometrik dağılıma dayanır</text>
+</svg>

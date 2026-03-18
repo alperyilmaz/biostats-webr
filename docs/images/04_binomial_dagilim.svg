@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" font-family="'Segoe UI', 'Helvetica Neue', sans-serif">
+  <rect width="900" height="600" fill="#ffffff" rx="16"/>
+
+  <text x="450" y="42" text-anchor="middle" fill="#1e293b" font-size="24" font-weight="700">Binomial Dağılım</text>
+  <text x="450" y="68" text-anchor="middle" fill="#64748b" font-size="14">10 hastaya aynı tedavi uygulandı. Yan etki olasılığı p = 0.3. Kaç hastada yan etki görülür?</text>
+
+  <!-- Axes -->
+  <line x1="80" y1="400" x2="820" y2="400" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="80" y1="400" x2="80" y2="80" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="450" y="460" text-anchor="middle" fill="#64748b" font-size="13">Yan etki gösteren hasta sayısı (k)</text>
+  <text x="50" y="240" text-anchor="middle" fill="#64748b" font-size="12" transform="rotate(-90,50,240)">P(X = k)</text>
+
+  <!-- Bars: Binomial(n=10, p=0.3) -->
+  <!-- P(0)=0.028 → h=28 -->
+  <rect x="105" y="372" width="55" height="28" rx="4" fill="#e0e7ff" stroke="#a5b4fc" stroke-width="1"/>
+  <text x="132" y="368" text-anchor="middle" fill="#4338ca" font-size="10">.028</text>
+  <text x="132" y="425" text-anchor="middle" fill="#334155" font-size="13" font-weight="700">0</text>
+
+  <!-- P(1)=0.121 → h=121 -->
+  <rect x="170" y="279" width="55" height="121" rx="4" fill="#e0e7ff" stroke="#a5b4fc" stroke-width="1"/>
+  <text x="197" y="310" text-anchor="middle" fill="#4338ca" font-size="10">.121</text>
+  <text x="197" y="425" text-anchor="middle" fill="#334155" font-size="13" font-weight="700">1</text>
+
+  <!-- P(2)=0.233 → h=233 -->
+  <rect x="235" y="167" width="55" height="233" rx="4" fill="#c7d2fe" stroke="#818cf8" stroke-width="1"/>
+  <text x="262" y="200" text-anchor="middle" fill="#4338ca" font-size="10">.233</text>
+  <text x="262" y="425" text-anchor="middle" fill="#334155" font-size="13" font-weight="700">2</text>
+
+  <!-- P(3)=0.267 → h=267 (peak) -->
+  <rect x="300" y="133" width="55" height="267" rx="4" fill="#6366f1" stroke="#4f46e5" stroke-width="2"/>
+  <text x="327" y="168" text-anchor="middle" fill="#fff" font-size="11" font-weight="700">.267</text>
+  <text x="327" y="425" text-anchor="middle" fill="#1e293b" font-size="13" font-weight="700">3</text>
+  <text x="327" y="120" text-anchor="middle" fill="#4f46e5" font-size="11" font-weight="700">▼ mod</text>
+
+  <!-- P(4)=0.200 → h=200 -->
+  <rect x="365" y="200" width="55" height="200" rx="4" fill="#c7d2fe" stroke="#818cf8" stroke-width="1"/>
+  <text x="392" y="233" text-anchor="middle" fill="#4338ca" font-size="10">.200</text>
+  <text x="392" y="425" text-anchor="middle" fill="#334155" font-size="13" font-weight="700">4</text>
+
+  <!-- P(5)=0.103 → h=103 -->
+  <rect x="430" y="297" width="55" height="103" rx="4" fill="#e0e7ff" stroke="#a5b4fc" stroke-width="1"/>
+  <text x="457" y="325" text-anchor="middle" fill="#4338ca" font-size="10">.103</text>
+  <text x="457" y="425" text-anchor="middle" fill="#334155" font-size="13" font-weight="700">5</text>
+
+  <!-- P(6)=0.037 → h=37 -->
+  <rect x="495" y="363" width="55" height="37" rx="4" fill="#e0e7ff" stroke="#a5b4fc" stroke-width="1"/>
+  <text x="522" y="358" text-anchor="middle" fill="#4338ca" font-size="10">.037</text>
+  <text x="522" y="425" text-anchor="middle" fill="#334155" font-size="13" font-weight="700">6</text>
+
+  <!-- P(7)=0.009 → h=9 -->
+  <rect x="560" y="391" width="55" height="9" rx="4" fill="#ede9fe" stroke="#c4b5fd" stroke-width="1"/>
+  <text x="587" y="386" text-anchor="middle" fill="#4338ca" font-size="10">.009</text>
+  <text x="587" y="425" text-anchor="middle" fill="#334155" font-size="13" font-weight="700">7</text>
+
+  <!-- P(8,9,10) negligible -->
+  <rect x="625" y="398" width="55" height="2" rx="2" fill="#ede9fe" stroke="#c4b5fd" stroke-width="1"/>
+  <text x="652" y="393" text-anchor="middle" fill="#94a3b8" font-size="9">≈0</text>
+  <text x="652" y="425" text-anchor="middle" fill="#94a3b8" font-size="13">8-10</text>
+
+  <!-- n·p line -->
+  <line x1="327" y1="100" x2="327" y2="400" stroke="#4f46e5" stroke-width="1" stroke-dasharray="4,4"/>
+
+  <!-- Key insight -->
+  <rect x="80" y="490" width="740" height="90" rx="12" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="450" y="518" text-anchor="middle" fill="#1e293b" font-size="14" font-weight="700">n bağımsız Bernoulli denemesinde k başarı olasılığı</text>
+  <text x="450" y="542" text-anchor="middle" fill="#4f46e5" font-size="14">E(X) = n·p = 10 × 0.3 = 3 hasta      σ = √(n·p·(1−p)) ≈ 1.45</text>
+  <text x="450" y="565" text-anchor="middle" fill="#64748b" font-size="12">dbinom(x = 3, size = 10, prob = 0.3) = 0.267</text>
+</svg>

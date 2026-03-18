@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" font-family="'Segoe UI', 'Helvetica Neue', sans-serif">
+  <defs>
+    <linearGradient id="lognorm_fill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0.05"/>
+    </linearGradient>
+    <linearGradient id="norm_fill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#3b82f6" stop-opacity="0.05"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="900" height="600" fill="#ffffff" rx="16"/>
+
+  <text x="450" y="42" text-anchor="middle" fill="#1e293b" font-size="24" font-weight="700">Log-Normal Dağılım</text>
+  <text x="450" y="68" text-anchor="middle" fill="#64748b" font-size="14">Gen ekspresyon seviyeleri (RNA-seq FPKM değerleri) — sağa çarpık, log dönüşümü ile normal</text>
+
+  <!-- LEFT: Original skewed distribution -->
+  <text x="230" y="108" text-anchor="middle" fill="#7c3aed" font-size="16" font-weight="700">Ham veri (FPKM)</text>
+  <text x="230" y="128" text-anchor="middle" fill="#94a3b8" font-size="12">Sağa çarpık → Normal değil!</text>
+
+  <line x1="60" y1="370" x2="420" y2="370" stroke="#94a3b8" stroke-width="1.5"/>
+  <line x1="60" y1="370" x2="60" y2="140" stroke="#94a3b8" stroke-width="1.5"/>
+
+  <!-- Skewed curve -->
+  <path d="M60,370 C70,370 80,368 90,360 C100,350 108,330 115,300 C122,265 128,220 140,180 C148,158 158,148 170,145 C182,142 195,148 210,165 C230,190 255,240 280,285 C305,325 330,350 355,360 C375,367 395,370 420,370 Z" fill="url(#lognorm_fill)" stroke="#8b5cf6" stroke-width="2.5"/>
+
+  <!-- Peak label -->
+  <line x1="170" y1="145" x2="170" y2="370" stroke="#7c3aed" stroke-width="1" stroke-dasharray="4,3"/>
+
+  <!-- X axis labels -->
+  <text x="60" y="390" text-anchor="middle" fill="#64748b" font-size="11">0</text>
+  <text x="170" y="390" text-anchor="middle" fill="#7c3aed" font-size="11" font-weight="600">mod</text>
+  <text x="230" y="390" text-anchor="middle" fill="#64748b" font-size="11">μ</text>
+  <text x="350" y="390" text-anchor="middle" fill="#64748b" font-size="11">yüksek ekspresyon →</text>
+  <text x="230" y="410" text-anchor="middle" fill="#64748b" font-size="12">Ekspresyon (FPKM)</text>
+
+  <!-- Long tail annotation -->
+  <path d="M320,320 C340,310 370,340 390,345" fill="none" stroke="#a78bfa" stroke-width="1.5"/>
+  <text x="370" y="305" fill="#7c3aed" font-size="11" font-weight="600">uzun kuyruk</text>
+  <text x="370" y="320" fill="#94a3b8" font-size="10">az sayıda yüksek</text>
+  <text x="370" y="333" fill="#94a3b8" font-size="10">ekspresyonlu gen</text>
+
+  <!-- ARROW: log transform -->
+  <text x="450" y="250" text-anchor="middle" fill="#1e293b" font-size="28" font-weight="700">→</text>
+  <text x="450" y="275" text-anchor="middle" fill="#1e293b" font-size="13" font-weight="600">log₂</text>
+  <text x="450" y="293" text-anchor="middle" fill="#64748b" font-size="11">dönüşüm</text>
+
+  <!-- RIGHT: Normal distribution after log -->
+  <text x="670" y="108" text-anchor="middle" fill="#2563eb" font-size="16" font-weight="700">log₂(FPKM)</text>
+  <text x="670" y="128" text-anchor="middle" fill="#94a3b8" font-size="12">Simetrik → Normal dağılım ✓</text>
+
+  <line x1="490" y1="370" x2="850" y2="370" stroke="#94a3b8" stroke-width="1.5"/>
+  <line x1="490" y1="370" x2="490" y2="140" stroke="#94a3b8" stroke-width="1.5"/>
+
+  <!-- Symmetric bell curve -->
+  <path d="M500,370 C510,368 525,360 540,345 C560,322 580,285 605,240 C625,205 645,175 660,158 C668,150 670,148 670,148 C670,148 672,150 680,158 C695,175 715,205 735,240 C760,285 780,322 800,345 C815,360 830,368 840,370 Z" fill="url(#norm_fill)" stroke="#3b82f6" stroke-width="2.5"/>
+
+  <!-- Mean line -->
+  <line x1="670" y1="148" x2="670" y2="370" stroke="#1e293b" stroke-width="1.5" stroke-dasharray="4,4"/>
+  <text x="670" y="390" text-anchor="middle" fill="#1e293b" font-size="11" font-weight="600">μ</text>
+  <text x="670" y="410" text-anchor="middle" fill="#64748b" font-size="12">log₂(Ekspresyon)</text>
+
+  <!-- σ markers -->
+  <line x1="605" y1="365" x2="735" y2="365" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="670" y="360" text-anchor="middle" fill="#2563eb" font-size="11" font-weight="600">%68</text>
+
+  <!-- Key insight -->
+  <rect x="60" y="440" width="780" height="140" rx="12" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+
+  <text x="450" y="470" text-anchor="middle" fill="#1e293b" font-size="15" font-weight="700">Logaritması normal dağılan değişken → Log-Normal dağılım</text>
+
+  <text x="220" y="500" text-anchor="middle" fill="#64748b" font-size="13" font-weight="600">Biyolojide yaygın örnekler:</text>
+  <text x="220" y="522" text-anchor="middle" fill="#64748b" font-size="12">• Gen ekspresyon seviyeleri (FPKM/TPM)</text>
+  <text x="220" y="542" text-anchor="middle" fill="#64748b" font-size="12">• Hücre büyüklükleri</text>
+  <text x="220" y="562" text-anchor="middle" fill="#64748b" font-size="12">• İlaç konsantrasyonları (IC₅₀)</text>
+
+  <text x="620" y="500" text-anchor="middle" fill="#64748b" font-size="13" font-weight="600">Neden?</text>
+  <text x="620" y="522" text-anchor="middle" fill="#64748b" font-size="12">Biyolojik süreçler çarpımsal etkiler</text>
+  <text x="620" y="542" text-anchor="middle" fill="#64748b" font-size="12">içerir (katlama, büyüme, bölünme).</text>
+  <text x="620" y="562" text-anchor="middle" fill="#7c3aed" font-size="12" font-weight="600">Toplamsal → Normal | Çarpımsal → Log-Normal</text>
+</svg>
