@@ -126,11 +126,17 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#ders05" id="toc-ders05" class="nav-link" data-scroll-target="#ders05">Ders05</a></li>
   <li><a href="#ders06" id="toc-ders06" class="nav-link" data-scroll-target="#ders06">Ders06</a></li>
   <li><a href="#ders07" id="toc-ders07" class="nav-link" data-scroll-target="#ders07">Ders07</a></li>
-  <li><a href="#ders08" id="toc-ders08" class="nav-link" data-scroll-target="#ders08">Ders08</a></li>
+  </ul></li>
+  <li><a href="#ders08" id="toc-ders08" class="nav-link" data-scroll-target="#ders08">Ders08</a>
+  <ul class="collapse">
   <li><a href="#ders09" id="toc-ders09" class="nav-link" data-scroll-target="#ders09">Ders09</a></li>
   <li><a href="#ders10" id="toc-ders10" class="nav-link" data-scroll-target="#ders10">Ders10</a></li>
   <li><a href="#ders11" id="toc-ders11" class="nav-link" data-scroll-target="#ders11">Ders11</a></li>
   <li><a href="#ders12" id="toc-ders12" class="nav-link" data-scroll-target="#ders12">Ders12</a></li>
+  <li><a href="#ders13" id="toc-ders13" class="nav-link" data-scroll-target="#ders13">Ders13</a></li>
+  <li><a href="#ders14" id="toc-ders14" class="nav-link" data-scroll-target="#ders14">Ders14</a></li>
+  <li><a href="#ders15" id="toc-ders15" class="nav-link" data-scroll-target="#ders15">Ders15</a></li>
+  <li><a href="#ders16" id="toc-ders16" class="nav-link" data-scroll-target="#ders16">Ders16</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -160,54 +166,72 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="ders2" class="level2">
 <h2 class="anchored" data-anchor-id="ders2">Ders2</h2>
-<p><strong>Teorik</strong> (<em>28 Şubat 2024</em>): Veri setinin merkezini belirleyen ortalama ve mediandan bahsedildi. Veri setinin dağınıklığını özetleyen sayısal yöntemler (varyans, standart sapma) ve görsel yöntemler (histogram, boxplot) tanıtıldı. <a href="./ders02.html">Sunum linki</a></p>
+<p><strong>Teorik</strong> (<em>28 Şubat 2024</em>): Veri setinin merkezini belirleyen ortalama ve mediandan bahsedildi. Veri setinin dağınıklığını özetleyen sayısal yöntemler (varyans, standart sapma) ve görsel yöntemler (histogram, boxplot) tanıtıldı. <a href="./ders-sstat.html">Sunum linki</a></p>
 <p><strong>Uygulama</strong> (<em>4 Mart 2024</em>): <a href="files/iris.xlsx">iris.xlsx</a> dosyasını kullanarak, Excel’de hücre aralıklarını seçme, <kbd>Ctrl</kbd> ve <kbd>Shift</kbd> tuşları ile hızlı seçim ve gezinme gösterildi. Tek bir sütün için ortalama, medyan, 1. ve 3. çeyrek dilim hesaplama ve standard sapma hesabı yapıldı. Excel’de formüllerin başka hücrelere uygulanması gösterildi. Excel’in yeni versiyonunda Boxplot ve Histogram grafikleri çizilebileceği tartışıldı.</p>
 </section>
 <section id="ders03" class="level2">
 <h2 class="anchored" data-anchor-id="ders03">Ders03</h2>
-<p><strong>Teorik</strong> (<em>6 Mart 2024</em>): Olaslık hesabına dair özellikler, küme prensibi üzerinden anlatıldı. Normal dağılımın özellikleri tanıtıldı. <a href="./ders03.html">Sunum linki</a></p>
+<p><strong>Teorik</strong> (<em>6 Mart 2024</em>): Olaslık hesabına dair özellikler, küme prensibi üzerinden anlatıldı. Normal dağılımın özellikleri tanıtıldı. <a href="./ders-prob-dist.html">Sunum linki</a></p>
 <p><strong>Uygulama</strong> (<em>11 Mart 2024</em>): R’da <code>pnorm()</code>, <code>qnorm()</code> ve <code>dnorm()</code> fonksiyonları kullanarak ihtimal hesapları yapıldı ve normal dağılıma uygun rastgele sayılar üretildi. Excel’de normal dağılıma uygun sayılar üreten formüller kullanıldı.</p>
 </section>
 <section id="ders04" class="level2">
 <h2 class="anchored" data-anchor-id="ders04">Ders04</h2>
-<p><strong>Teorik</strong> (<em>13 Mart 2024</em>): Poisson ve Bernoulli dağılımları (Poisson dağılımı ve Geometrik dağılım) tanıtıldı. <a href="./ders03.html">Sunum linki</a></p>
+<p><strong>Teorik</strong> (<em>13 Mart 2024</em>): Poisson ve Bernoulli dağılımları (Poisson dağılımı ve Geometrik dağılım) tanıtıldı. <a href="./ders-prob-dist.html">Sunum linki</a></p>
 <p><strong>Pratik</strong> (<em>18 Mart 2024</em>): Normal dağılım örnekleri çözüldü. <a href="./ders03-uygulama.html">Uygulama sunum linki</a></p>
 </section>
 <section id="ders05" class="level2">
 <h2 class="anchored" data-anchor-id="ders05">Ders05</h2>
-<p><strong>Teorik</strong> (<em>20 Mart 2024</em>): Güven aralığı ve hipotez testi. <a href="./ders04.html">Sunum linki</a></p>
-<p><strong>Pratik</strong> (<em>25 Mart 2024</em>): Güven aralığı ve hipotez testi örnekleri &lt;–<img src="ders04-uygulama.qmd" class="img-fluid" alt="Uygulama sunum linki">–&gt;</p>
+<p><strong>Teorik</strong> (<em>05 Mayıs 2025</em>): Ki-kare testi <a href="./ders-kikare.html">Sunum linki</a></p>
+<p><strong>Uygulama</strong> (<em>09 Mayıs 2025</em>): Ki-kare uygulama <a href="./ders-kikare-uyg.html">Sunum linki</a></p>
 </section>
 <section id="ders06" class="level2">
 <h2 class="anchored" data-anchor-id="ders06">Ders06</h2>
-<p><strong>Teorik</strong> (<em>27 Mart 2024</em>): T-testi. <a href="./ders05.html">Sunum linki</a></p>
-<p><strong>Pratik</strong> (<em>01 Nisan 2024</em>): T-testi uygulamaları <a href="./ders05-uygulama.html">Uygulama sunum linki</a></p>
+<p><strong>Teorik</strong> (<em>01 Nisan 2026</em>): Korelasyon <a href="./ders-korelasyon.html">Sunum linki</a></p>
+<p><strong>Pratik</strong> (<em>01 Nisan 2026</em>): Korelasyon uygulaması</p>
 </section>
 <section id="ders07" class="level2">
 <h2 class="anchored" data-anchor-id="ders07">Ders07</h2>
-<p><strong>Teorik</strong> (<em>03 Nisan 2024</em>): İstatistik Güç <a href="./ders06.html">Sunum linki</a></p>
+<p><strong>Teorik</strong> (<em>08 Nisan 2026</em>): Regresyon <a href="ders -korelasyon.qmd">Sunum linki</a></p>
+<p><strong>Pratik</strong> (<em>08 Nisan 2026</em>): Regresyon uygulaması</p>
 </section>
-<section id="ders08" class="level2">
-<h2 class="anchored" data-anchor-id="ders08">Ders08</h2>
-<p><strong>Teorik</strong> (<em>03 Nisan 2024</em>): ANOVA <a href="./ders07.html">Sunum linki</a></p>
-<p><strong>Uygulama</strong> (<em>2 Mayıs 2025</em>): İstatistik Güç ve ANOVA uygulama <a href="./ders07-uygulama.html">Uygulama sunum linki</a></p>
 </section>
+<section id="ders08" class="level1">
+<h1>Ders08</h1>
+<p><strong>Ara sınav</strong></p>
 <section id="ders09" class="level2">
 <h2 class="anchored" data-anchor-id="ders09">Ders09</h2>
-<p><strong>Teorik</strong> (<em>05 Mayıs 2025</em>): Ki-kare testi <a href="./ders08.html">Sunum linki</a></p>
-<p><strong>Uygulama</strong> (<em>09 Mayıs 2025</em>): Ki-kare uygulama <a href="./ders08-uygulama.html">Sunum linki</a></p>
+<p><strong>Teorik</strong> (<em>22 Nisan 2026</em>): Güven aralığı ve hipotez testi konusu işlendi <a href="./ders-guven-hipotez.html">Sunum linki</a></p>
+<p><strong>Pratik</strong> (<em>22 Nisan 2026</em>): Güven aralığı ve hipotez testi örnekleri</p>
 </section>
 <section id="ders10" class="level2">
 <h2 class="anchored" data-anchor-id="ders10">Ders10</h2>
-<p><strong>Teorik</strong> (<em>12 Mayıs 2025</em>): Hesapsal istatistik <a href="./ders09.html">Sunum linki</a></p>
-<p>(<em>16 Mayıs 2025</em>): 2.vize yapılacaktır</p>
+<p><strong>Teorik</strong> (<em>27 Mart 2024</em>): T-testi. <a href="./ders05.html">Sunum linki</a></p>
+<p><strong>Pratik</strong> (<em>01 Nisan 2024</em>): T-testi uygulamaları <a href="./ders05-uygulama.html">Uygulama sunum linki</a></p>
 </section>
 <section id="ders11" class="level2">
 <h2 class="anchored" data-anchor-id="ders11">Ders11</h2>
-<p><strong>Teorik</strong> (<em>23 Mayıs 2025</em>): Bilimsel tekrarlanabilirlik <a href="./ders10.html">Sunum linki</a></p>
+<p><strong>Teorik</strong> (<em>03 Nisan 2024</em>): ANOVA <a href="./ders07.html">Sunum linki</a></p>
+<p><strong>Uygulama</strong> (<em>2 Mayıs 2025</em>): İstatistik Güç ve ANOVA uygulama <a href="./ders07-uygulama.html">Uygulama sunum linki</a></p>
 </section>
 <section id="ders12" class="level2">
 <h2 class="anchored" data-anchor-id="ders12">Ders12</h2>
+<p><strong>Teorik</strong> (<em>03 Nisan 2024</em>): İstatistik Güç <a href="./ders06.html">Sunum linki</a></p>
+</section>
+<section id="ders13" class="level2">
+<h2 class="anchored" data-anchor-id="ders13">Ders13</h2>
+<p><strong>Teorik</strong> (<em>12 Mayıs 2025</em>): Hesapsal istatistik <a href="./ders09.html">Sunum linki</a></p>
+<!-- (*16 Mayıs 2025*): 2.vize yapılacaktır -->
+</section>
+<section id="ders14" class="level2">
+<h2 class="anchored" data-anchor-id="ders14">Ders14</h2>
+<p>** Ara Sınav 2**</p>
+</section>
+<section id="ders15" class="level2">
+<h2 class="anchored" data-anchor-id="ders15">Ders15</h2>
+<p><strong>Teorik</strong> (<em>23 Mayıs 2025</em>): Bilimsel tekrarlanabilirlik <a href="./ders10.html">Sunum linki</a></p>
+</section>
+<section id="ders16" class="level2">
+<h2 class="anchored" data-anchor-id="ders16">Ders16</h2>
 <p><strong>Teorik</strong> (<em>26 Mayıs 2025</em>): Hangi test? <a href="./ders11.html">Sunum linki</a></p>
 
 

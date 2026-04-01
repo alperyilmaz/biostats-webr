@@ -17,62 +17,86 @@
 
 ## Ders2
 
-**Teorik** (*28 Şubat 2024*): Veri setinin merkezini belirleyen ortalama ve mediandan bahsedildi. Veri setinin dağınıklığını özetleyen sayısal yöntemler (varyans, standart sapma) ve görsel yöntemler (histogram, boxplot) tanıtıldı. [Sunum linki](ders02.qmd)
+**Teorik** (*28 Şubat 2024*): Veri setinin merkezini belirleyen ortalama ve mediandan bahsedildi. Veri setinin dağınıklığını özetleyen sayısal yöntemler (varyans, standart sapma) ve görsel yöntemler (histogram, boxplot) tanıtıldı. [Sunum linki](ders-sstat.qmd)
 
 **Uygulama** (*4 Mart 2024*): [iris.xlsx](files/iris.xlsx) dosyasını kullanarak, Excel'de hücre aralıklarını seçme, <kbd>Ctrl</kbd> ve <kbd>Shift</kbd> tuşları ile hızlı seçim ve gezinme gösterildi. Tek bir sütün için ortalama, medyan, 1. ve 3. çeyrek dilim hesaplama ve standard sapma hesabı yapıldı. Excel'de formüllerin başka hücrelere uygulanması gösterildi. Excel'in yeni versiyonunda Boxplot ve Histogram grafikleri çizilebileceği tartışıldı.
 
 ## Ders03
 
-**Teorik** (*6 Mart 2024*): Olaslık hesabına dair özellikler, küme prensibi üzerinden anlatıldı. Normal dağılımın özellikleri tanıtıldı. [Sunum linki](ders03.qmd)
+**Teorik** (*6 Mart 2024*): Olaslık hesabına dair özellikler, küme prensibi üzerinden anlatıldı. Normal dağılımın özellikleri tanıtıldı. [Sunum linki](ders-prob-dist.qmd)
 
 **Uygulama** (*11 Mart 2024*): R'da `pnorm()`, `qnorm()` ve `dnorm()` fonksiyonları kullanarak ihtimal hesapları yapıldı ve normal dağılıma uygun rastgele sayılar üretildi. Excel'de normal dağılıma uygun sayılar üreten formüller kullanıldı.
 
 ## Ders04
 
-**Teorik** (*13 Mart 2024*): Poisson ve Bernoulli dağılımları (Poisson dağılımı ve Geometrik dağılım) tanıtıldı. [Sunum linki](ders03.qmd)
+**Teorik** (*13 Mart 2024*): Poisson ve Bernoulli dağılımları (Poisson dağılımı ve Geometrik dağılım) tanıtıldı. [Sunum linki](ders-prob-dist.qmd)
 
 **Pratik** (*18 Mart 2024*): Normal dağılım örnekleri çözüldü. [Uygulama sunum linki](ders03-uygulama.qmd)
 
 ## Ders05
 
-**Teorik** (*20 Mart 2024*): Güven aralığı ve hipotez testi. [Sunum linki](ders04.qmd)
+**Teorik** (*05 Mayıs 2025*): Ki-kare testi  [Sunum linki](ders-kikare.qmd)
 
-**Pratik** (*25 Mart 2024*): Güven aralığı ve hipotez testi örnekleri 
-<--![Uygulama sunum linki](ders04-uygulama.qmd)-->
+**Uygulama** (*09 Mayıs 2025*): Ki-kare uygulama [Sunum linki](ders-kikare-uyg.qmd)
 
 ## Ders06
+
+**Teorik** (*01 Nisan 2026*): Korelasyon  [Sunum linki](ders-korelasyon.qmd)
+
+
+**Pratik** (*01 Nisan 2026*): Korelasyon uygulaması
+
+## Ders07
+
+**Teorik** (*08	Nisan 2026*): Regresyon  [Sunum linki](ders
+-korelasyon.qmd)
+
+
+**Pratik** (*08 Nisan 2026*): Regresyon uygulaması
+
+# Ders08
+
+**Ara sınav**
+
+## Ders09
+
+**Teorik** (*22 Nisan 2026*): Güven aralığı ve hipotez testi konusu işlendi [Sunum linki](ders-guven-hipotez.qmd)
+
+**Pratik** (*22 Nisan 2026*): Güven aralığı ve hipotez testi örnekleri 
+
+## Ders10
 
 **Teorik** (*27 Mart 2024*): T-testi. [Sunum linki](ders05.qmd)
 
 **Pratik** (*01 Nisan 2024*): T-testi uygulamaları [Uygulama sunum linki](ders05-uygulama.qmd)
 
-## Ders07
-
-**Teorik** (*03 Nisan 2024*): İstatistik Güç  [Sunum linki](ders06.qmd)
-
-## Ders08
+## Ders11
 
 **Teorik** (*03 Nisan 2024*): ANOVA  [Sunum linki](ders07.qmd)
 
 **Uygulama** (*2 Mayıs 2025*): İstatistik Güç ve ANOVA uygulama [Uygulama sunum linki](ders07-uygulama.qmd)
 
-## Ders09
+## Ders12
 
-**Teorik** (*05 Mayıs 2025*): Ki-kare testi  [Sunum linki](ders08.qmd)
+**Teorik** (*03 Nisan 2024*): İstatistik Güç  [Sunum linki](ders06.qmd)
 
-**Uygulama** (*09 Mayıs 2025*): Ki-kare uygulama [Sunum linki](ders08-uygulama.qmd)
-
-## Ders10
+## Ders13
 
 **Teorik** (*12 Mayıs 2025*): Hesapsal istatistik  [Sunum linki](ders09.qmd)
 
-(*16 Mayıs 2025*): 2.vize yapılacaktır
+<!-- (*16 Mayıs 2025*): 2.vize yapılacaktır -->
 
-## Ders11
+
+## Ders14
+
+** Ara Sınav 2**
+
+
+## Ders15
 
 **Teorik** (*23 Mayıs 2025*): Bilimsel tekrarlanabilirlik [Sunum linki](ders10.qmd)
 
-## Ders12
+## Ders16
 
 **Teorik** (*26 Mayıs 2025*): Hangi test? [Sunum linki](ders11.qmd)
 

@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" font-family="'Segoe UI', 'Helvetica Neue', sans-serif">
+  <rect width="900" height="520" fill="#ffffff" rx="12"/>
+
+  <text x="450" y="35" text-anchor="middle" fill="#1e293b" font-size="22" font-weight="700">Anscombe Dörtlüsü — Aynı r, Çok Farklı Veriler</text>
+  <text x="450" y="58" text-anchor="middle" fill="#64748b" font-size="13">Dört veri setinde de: r = 0.816, ortalama(x) = 9, ortalama(y) = 7.5, regresyon doğrusu aynı</text>
+
+  <!-- Dataset I: Linear -->
+  <text x="190" y="90" text-anchor="middle" fill="#2563eb" font-size="14" font-weight="700">I — Doğrusal</text>
+  <rect x="60" y="100" width="240" height="180" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1" rx="6"/>
+  <line x1="80" y1="260" x2="280" y2="260" stroke="#cbd5e1" stroke-width="1"/>
+  <line x1="80" y1="260" x2="80" y2="115" stroke="#cbd5e1" stroke-width="1"/>
+  <!-- Points: classic linear scatter -->
+  <circle cx="110" cy="225" r="4" fill="#3b82f6" opacity="0.7"/>
+  <circle cx="120" cy="235" r="4" fill="#3b82f6" opacity="0.7"/>
+  <circle cx="130" cy="210" r="4" fill="#3b82f6" opacity="0.7"/>
+  <circle cx="145" cy="200" r="4" fill="#3b82f6" opacity="0.7"/>
+  <circle cx="155" cy="195" r="4" fill="#3b82f6" opacity="0.7"/>
+  <circle cx="170" cy="175" r="4" fill="#3b82f6" opacity="0.7"/>
+  <circle cx="185" cy="165" r="4" fill="#3b82f6" opacity="0.7"/>
+  <circle cx="200" cy="155" r="4" fill="#3b82f6" opacity="0.7"/>
+  <circle cx="220" cy="145" r="4" fill="#3b82f6" opacity="0.7"/>
+  <circle cx="240" cy="130" r="4" fill="#3b82f6" opacity="0.7"/>
+  <circle cx="260" cy="125" r="4" fill="#3b82f6" opacity="0.7"/>
+  <line x1="95" y1="240" x2="270" y2="120" stroke="#3b82f6" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="190" y="278" text-anchor="middle" fill="#16a34a" font-size="11" font-weight="600">✓ Korelasyon uygun</text>
+
+  <!-- Dataset II: Curved -->
+  <text x="490" y="90" text-anchor="middle" fill="#7c3aed" font-size="14" font-weight="700">II — Eğrisel (parabolik)</text>
+  <rect x="370" y="100" width="240" height="180" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1" rx="6"/>
+  <line x1="390" y1="260" x2="590" y2="260" stroke="#cbd5e1" stroke-width="1"/>
+  <line x1="390" y1="260" x2="390" y2="115" stroke="#cbd5e1" stroke-width="1"/>
+  <!-- Points: parabolic curve -->
+  <circle cx="410" cy="240" r="4" fill="#8b5cf6" opacity="0.7"/>
+  <circle cx="425" cy="210" r="4" fill="#8b5cf6" opacity="0.7"/>
+  <circle cx="440" cy="185" r="4" fill="#8b5cf6" opacity="0.7"/>
+  <circle cx="460" cy="155" r="4" fill="#8b5cf6" opacity="0.7"/>
+  <circle cx="475" cy="135" r="4" fill="#8b5cf6" opacity="0.7"/>
+  <circle cx="490" cy="125" r="4" fill="#8b5cf6" opacity="0.7"/>
+  <circle cx="505" cy="128" r="4" fill="#8b5cf6" opacity="0.7"/>
+  <circle cx="520" cy="140" r="4" fill="#8b5cf6" opacity="0.7"/>
+  <circle cx="540" cy="160" r="4" fill="#8b5cf6" opacity="0.7"/>
+  <circle cx="555" cy="185" r="4" fill="#8b5cf6" opacity="0.7"/>
+  <circle cx="575" cy="215" r="4" fill="#8b5cf6" opacity="0.7"/>
+  <line x1="400" y1="235" x2="580" y2="130" stroke="#8b5cf6" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="490" y="278" text-anchor="middle" fill="#dc2626" font-size="11" font-weight="600">✗ Doğrusal değil!</text>
+
+  <!-- Dataset III: Outlier -->
+  <text x="190" y="320" text-anchor="middle" fill="#b45309" font-size="14" font-weight="700">III — Aykırı değer (outlier)</text>
+  <rect x="60" y="330" width="240" height="180" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1" rx="6"/>
+  <line x1="80" y1="490" x2="280" y2="490" stroke="#cbd5e1" stroke-width="1"/>
+  <line x1="80" y1="490" x2="80" y2="345" stroke="#cbd5e1" stroke-width="1"/>
+  <!-- Points: perfect line + one outlier -->
+  <circle cx="105" cy="445" r="4" fill="#f59e0b" opacity="0.7"/>
+  <circle cx="120" cy="435" r="4" fill="#f59e0b" opacity="0.7"/>
+  <circle cx="135" cy="425" r="4" fill="#f59e0b" opacity="0.7"/>
+  <circle cx="150" cy="415" r="4" fill="#f59e0b" opacity="0.7"/>
+  <circle cx="165" cy="405" r="4" fill="#f59e0b" opacity="0.7"/>
+  <circle cx="180" cy="395" r="4" fill="#f59e0b" opacity="0.7"/>
+  <circle cx="195" cy="385" r="4" fill="#f59e0b" opacity="0.7"/>
+  <circle cx="210" cy="375" r="4" fill="#f59e0b" opacity="0.7"/>
+  <circle cx="225" cy="365" r="4" fill="#f59e0b" opacity="0.7"/>
+  <circle cx="240" cy="355" r="4" fill="#f59e0b" opacity="0.7"/>
+  <!-- Outlier -->
+  <circle cx="230" cy="460" r="6" fill="#ef4444" stroke="#dc2626" stroke-width="2"/>
+  <text x="245" y="468" fill="#dc2626" font-size="10" font-weight="700">outlier</text>
+  <line x1="95" y1="455" x2="260" y2="355" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="190" y="508" text-anchor="middle" fill="#dc2626" font-size="11" font-weight="600">✗ Tek nokta r'yi çarpıtır</text>
+
+  <!-- Dataset IV: Vertical cluster + one point -->
+  <text x="490" y="320" text-anchor="middle" fill="#dc2626" font-size="14" font-weight="700">IV — Kümeleşme + tek nokta</text>
+  <rect x="370" y="330" width="240" height="180" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1" rx="6"/>
+  <line x1="390" y1="490" x2="590" y2="490" stroke="#cbd5e1" stroke-width="1"/>
+  <line x1="390" y1="490" x2="390" y2="345" stroke="#cbd5e1" stroke-width="1"/>
+  <!-- Points: vertical cluster at x=8 -->
+  <circle cx="460" cy="440" r="4" fill="#ef4444" opacity="0.7"/>
+  <circle cx="460" cy="420" r="4" fill="#ef4444" opacity="0.7"/>
+  <circle cx="460" cy="400" r="4" fill="#ef4444" opacity="0.7"/>
+  <circle cx="460" cy="380" r="4" fill="#ef4444" opacity="0.7"/>
+  <circle cx="460" cy="430" r="4" fill="#ef4444" opacity="0.7"/>
+  <circle cx="460" cy="410" r="4" fill="#ef4444" opacity="0.7"/>
+  <circle cx="460" cy="390" r="4" fill="#ef4444" opacity="0.7"/>
+  <circle cx="460" cy="450" r="4" fill="#ef4444" opacity="0.7"/>
+  <circle cx="460" cy="370" r="4" fill="#ef4444" opacity="0.7"/>
+  <circle cx="460" cy="460" r="4" fill="#ef4444" opacity="0.7"/>
+  <!-- One far point creating correlation -->
+  <circle cx="570" cy="355" r="6" fill="#ef4444" stroke="#dc2626" stroke-width="2"/>
+  <line x1="445" y1="430" x2="580" y2="350" stroke="#ef4444" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="490" y="508" text-anchor="middle" fill="#dc2626" font-size="11" font-weight="600">✗ Korelasyon anlamsız</text>
+
+  <!-- Lesson -->
+  <rect x="640" y="340" width="240" height="160" rx="12" fill="#fefce8" stroke="#fde68a" stroke-width="1.5"/>
+  <text x="760" y="370" text-anchor="middle" fill="#92400e" font-size="14" font-weight="700">Ders:</text>
+  <text x="760" y="395" text-anchor="middle" fill="#92400e" font-size="13">r değerine bakmadan</text>
+  <text x="760" y="415" text-anchor="middle" fill="#92400e" font-size="13">önce veriyi</text>
+  <text x="760" y="442" text-anchor="middle" fill="#92400e" font-size="20" font-weight="800">GÖRSELLEŞTİR!</text>
+  <text x="760" y="475" text-anchor="middle" fill="#a16207" font-size="12">Sayılar yanıltabilir,</text>
+  <text x="760" y="493" text-anchor="middle" fill="#a16207" font-size="12">grafikler gerçeği gösterir.</text>
+</svg>

@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500" font-family="'Segoe UI', 'Helvetica Neue', sans-serif">
+  <rect width="900" height="500" fill="#ffffff" rx="12"/>
+
+  <text x="450" y="38" text-anchor="middle" fill="#1e293b" font-size="24" font-weight="700">Korelasyon ≠ Nedensellik</text>
+  <text x="450" y="62" text-anchor="middle" fill="#64748b" font-size="14">İki değişken arasında korelasyon olması, birinin diğerine neden olduğu anlamına gelmez</text>
+
+  <!-- Example 1: Ice cream vs drowning -->
+  <rect x="50" y="90" width="380" height="170" rx="12" fill="#fef2f2" stroke="#fecaca" stroke-width="1.5"/>
+  <text x="240" y="118" text-anchor="middle" fill="#dc2626" font-size="15" font-weight="700">Sahte Korelasyon Örneği</text>
+
+  <text x="120" y="160" text-anchor="middle" fill="#1e293b" font-size="32">🍦</text>
+  <text x="120" y="185" text-anchor="middle" fill="#334155" font-size="12" font-weight="600">Dondurma satışı</text>
+
+  <text x="240" y="165" text-anchor="middle" fill="#dc2626" font-size="22" font-weight="700">r = 0.87</text>
+
+  <text x="360" y="160" text-anchor="middle" fill="#1e293b" font-size="32">🏊</text>
+  <text x="360" y="185" text-anchor="middle" fill="#334155" font-size="12" font-weight="600">Boğulma vakaları</text>
+
+  <!-- Confounding variable -->
+  <text x="240" y="215" text-anchor="middle" fill="#64748b" font-size="13">Karıştırıcı değişken (confounding variable):</text>
+  <text x="240" y="238" text-anchor="middle" fill="#b45309" font-size="16" font-weight="700">☀️ Sıcak hava</text>
+
+  <!-- Arrows from confounding -->
+  <line x1="200" y1="240" x2="130" y2="190" stroke="#b45309" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="280" y1="240" x2="350" y2="190" stroke="#b45309" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#b45309"/>
+    </marker>
+    <marker id="arrow_red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#dc2626"/>
+    </marker>
+    <marker id="arrow_green" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#16a34a"/>
+    </marker>
+  </defs>
+
+  <!-- Three scenarios -->
+  <rect x="470" y="90" width="400" height="170" rx="12" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1.5"/>
+  <text x="670" y="118" text-anchor="middle" fill="#16a34a" font-size="15" font-weight="700">Korelasyonun 3 Olası Açıklaması</text>
+
+  <!-- 1. A causes B -->
+  <text x="510" y="152" fill="#334155" font-size="13" font-weight="600">1.</text>
+  <text x="545" y="152" fill="#334155" font-size="13">A</text>
+  <line x1="560" y1="148" x2="600" y2="148" stroke="#334155" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="615" y="152" fill="#334155" font-size="13">B</text>
+  <text x="660" y="152" fill="#64748b" font-size="12">(A, B'ye neden olur)</text>
+
+  <!-- 2. B causes A -->
+  <text x="510" y="185" fill="#334155" font-size="13" font-weight="600">2.</text>
+  <text x="545" y="185" fill="#334155" font-size="13">B</text>
+  <line x1="560" y1="181" x2="600" y2="181" stroke="#334155" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="615" y="185" fill="#334155" font-size="13">A</text>
+  <text x="660" y="185" fill="#64748b" font-size="12">(B, A'ya neden olur)</text>
+
+  <!-- 3. Confounding -->
+  <text x="510" y="218" fill="#334155" font-size="13" font-weight="600">3.</text>
+  <text x="545" y="218" fill="#334155" font-size="13">A</text>
+  <text x="580" y="218" fill="#b45309" font-size="13">← C →</text>
+  <text x="635" y="218" fill="#334155" font-size="13">B</text>
+  <text x="680" y="218" fill="#64748b" font-size="12">(ortak neden)</text>
+
+  <text x="670" y="248" text-anchor="middle" fill="#dc2626" font-size="12" font-weight="600">Korelasyon 3. durumu ayırt edemez!</text>
+
+  <!-- Biological example -->
+  <rect x="50" y="290" width="800" height="90" rx="12" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5"/>
+  <text x="450" y="318" text-anchor="middle" fill="#1e293b" font-size="15" font-weight="700">Biyolojide Sık Karşılaşılan Tuzak</text>
+  <text x="450" y="345" text-anchor="middle" fill="#334155" font-size="13">Gen A'nın ekspresyonu ile Gen B'nin ekspresyonu arasında r = 0.92 korelasyon var.</text>
+  <text x="450" y="368" text-anchor="middle" fill="#64748b" font-size="13">Bu, A'nın B'yi regüle ettiği anlamına gelmez — ikisi de aynı transkripsiyon faktörü tarafından aktive ediliyor olabilir.</text>
+
+  <!-- Bottom takeaway -->
+  <rect x="150" y="405" width="600" height="70" rx="12" fill="#fefce8" stroke="#fde68a" stroke-width="1.5"/>
+  <text x="450" y="433" text-anchor="middle" fill="#92400e" font-size="16" font-weight="700">Nedensellik için: kontrollü deney, zaman serisi veya müdahale gerekir</text>
+  <text x="450" y="458" text-anchor="middle" fill="#a16207" font-size="13">Korelasyon bir hipotez üretir, onu doğrulamaz</text>
+</svg>

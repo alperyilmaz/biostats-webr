@@ -9,7 +9,7 @@
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-0815c480559380816a4d1ea211a47e91.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.7.29">
 
-  <title>MBG1032 Biyoistatistik – Ders2: Sayısal ve Görsel Özetleme</title>
+  <title>MBG1032 Biyoistatistik – Korelasyon</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -27,72 +27,6 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
-    /* CSS for syntax highlighting */
-    html { -webkit-text-size-adjust: 100%; }
-    pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-    pre > code.sourceCode > span:empty { height: 1.2em; }
-    .sourceCode { overflow: visible; }
-    code.sourceCode > span { color: inherit; text-decoration: inherit; }
-    div.sourceCode { margin: 1em 0; }
-    pre.sourceCode { margin: 0; }
-    @media screen {
-    div.sourceCode { overflow: auto; }
-    }
-    @media print {
-    pre > code.sourceCode { white-space: pre-wrap; }
-    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-    }
-    pre.numberSource code
-      { counter-reset: source-line 0; }
-    pre.numberSource code > span
-      { position: relative; left: -4em; counter-increment: source-line; }
-    pre.numberSource code > span > a:first-child::before
-      { content: counter(source-line);
-        position: relative; left: -1em; text-align: right; vertical-align: baseline;
-        border: none; display: inline-block;
-        -webkit-touch-callout: none; -webkit-user-select: none;
-        -khtml-user-select: none; -moz-user-select: none;
-        -ms-user-select: none; user-select: none;
-        padding: 0 4px; width: 4em;
-        color: #aaaaaa;
-      }
-    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-    div.sourceCode
-      { color: #003b4f; background-color: #f1f3f5; }
-    @media screen {
-    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-    }
-    code span { color: #003b4f; } /* Normal */
-    code span.al { color: #ad0000; } /* Alert */
-    code span.an { color: #5e5e5e; } /* Annotation */
-    code span.at { color: #657422; } /* Attribute */
-    code span.bn { color: #ad0000; } /* BaseN */
-    code span.bu { } /* BuiltIn */
-    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
-    code span.ch { color: #20794d; } /* Char */
-    code span.cn { color: #8f5902; } /* Constant */
-    code span.co { color: #5e5e5e; } /* Comment */
-    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
-    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
-    code span.dt { color: #ad0000; } /* DataType */
-    code span.dv { color: #ad0000; } /* DecVal */
-    code span.er { color: #ad0000; } /* Error */
-    code span.ex { } /* Extension */
-    code span.fl { color: #ad0000; } /* Float */
-    code span.fu { color: #4758ab; } /* Function */
-    code span.im { color: #00769e; } /* Import */
-    code span.in { color: #5e5e5e; } /* Information */
-    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
-    code span.op { color: #5e5e5e; } /* Operator */
-    code span.ot { color: #003b4f; } /* Other */
-    code span.pp { color: #ad0000; } /* Preprocessor */
-    code span.sc { color: #5e5e5e; } /* SpecialChar */
-    code span.ss { color: #20794d; } /* SpecialString */
-    code span.st { color: #20794d; } /* String */
-    code span.va { color: #111111; } /* Variable */
-    code span.vs { color: #20794d; } /* VerbatimString */
-    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
   <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto-f563837468303362081e247dddd440d0.css">
   <link rel="stylesheet" href="custom.css">
@@ -356,7 +290,7 @@
   };
 
   // Store cell data
-  globalThis.qwebrCellDetails = [{"code":"deneme <- c(4,2,3,1,5,9,7,4,2,11)\nmean(deneme)\nmedian(deneme)","id":1,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-1","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}}];
+  globalThis.qwebrCellDetails = [{"code":"# Örnek: boy (cm) ve kilo (kg) ilişkisi\nboy <- c(160, 165, 170, 172, 175, 178, 180, 183, 185, 190)\nkilo <- c(55, 60, 65, 68, 72, 75, 78, 82, 85, 92)\n\n# Pearson korelasyon katsayısı\ncor(boy, kilo, method = \"pearson\")\n\n# Korelasyon testi (p-değeri ile)\ncor.test(boy, kilo, method = \"pearson\")","id":1,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-1","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"boy <- c(160, 165, 170, 172, 175, 178, 180, 183, 185, 190)\nkilo <- c(55, 60, 65, 68, 72, 75, 78, 82, 85, 92)\n\nplot(boy, kilo, pch = 19, col = \"steelblue\", cex = 1.5,\n     xlab = \"Boy (cm)\", ylab = \"Kilo (kg)\",\n     main = paste(\"Pearson r =\", round(cor(boy, kilo), 3)))\nabline(lm(kilo ~ boy), col = \"red\", lwd = 2, lty = 2)","id":2,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-2","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# Aynı veri ile Spearman korelasyonu\nboy <- c(160, 165, 170, 172, 175, 178, 180, 183, 185, 190)\nkilo <- c(55, 60, 65, 68, 72, 75, 78, 82, 85, 92)\n\n# Spearman korelasyon\ncor(boy, kilo, method = \"spearman\")\ncor.test(boy, kilo, method = \"spearman\")","id":3,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-3","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# R'da hazır gelen anscombe veri seti\ndata(anscombe)\npar(mfrow = c(2, 2))\n\nplot(anscombe$x1, anscombe$y1, pch = 19, col = \"steelblue\",\n     main = paste(\"I: r =\", round(cor(anscombe$x1, anscombe$y1), 3)),\n     xlab = \"x\", ylab = \"y\")\nabline(lm(y1 ~ x1, data = anscombe), col = \"red\", lwd = 2)\n\nplot(anscombe$x2, anscombe$y2, pch = 19, col = \"mediumpurple\",\n     main = paste(\"II: r =\", round(cor(anscombe$x2, anscombe$y2), 3)),\n     xlab = \"x\", ylab = \"y\")\nabline(lm(y2 ~ x2, data = anscombe), col = \"red\", lwd = 2)\n\nplot(anscombe$x3, anscombe$y3, pch = 19, col = \"orange\",\n     main = paste(\"III: r =\", round(cor(anscombe$x3, anscombe$y3), 3)),\n     xlab = \"x\", ylab = \"y\")\nabline(lm(y3 ~ x3, data = anscombe), col = \"red\", lwd = 2)\n\nplot(anscombe$x4, anscombe$y4, pch = 19, col = \"tomato\",\n     main = paste(\"IV: r =\", round(cor(anscombe$x4, anscombe$y4), 3)),\n     xlab = \"x\", ylab = \"y\")\nabline(lm(y4 ~ x4, data = anscombe), col = \"red\", lwd = 2)\n\npar(mfrow = c(1, 1))","id":4,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-4","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# iris veri seti: çiçek yaprak ölçümleri\ndata(iris)\n\n# Petal uzunluğu vs petal genişliği\nplot(iris$Petal.Length, iris$Petal.Width,\n     pch = 19, col = as.numeric(iris$Species) + 1,\n     xlab = \"Petal uzunluğu (cm)\", ylab = \"Petal genişliği (cm)\",\n     main = \"Iris veri seti — Petal ölçümleri\")\n\n# Genel korelasyon\nr_all <- cor(iris$Petal.Length, iris$Petal.Width)\nlegend(\"topleft\", legend = paste(\"r =\", round(r_all, 3)), bty = \"n\", cex = 1.2)","id":5,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-5","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# iris sayısal sütunlarının korelasyon matrisi\nkor_matris <- cor(iris[, 1:4])\nround(kor_matris, 2)","id":6,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-6","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# Basit ısı haritası (heatmap)\nkor_matris <- cor(iris[, 1:4])\nheatmap(kor_matris, \n        col = colorRampPalette(c(\"steelblue\", \"white\", \"tomato\"))(50),\n        symm = TRUE, margins = c(10, 10),\n        main = \"Korelasyon Matrisi\")","id":7,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-7","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"boy <- c(162, 165, 168, 170, 172, 174, 175, 177, 178, 180, 182, 183, 185, 188, 192)\nayak <- c(38, 39, 39, 40, 41, 41, 42, 42, 43, 43, 44, 44, 44, 45, 46)\n\n# Çözümünüzü buraya yazıp çalıştırınız","id":8,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-8","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}}];
 
   </script>
   <script type="module">
@@ -1252,8 +1186,8 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Ders2: Sayısal ve Görsel Özetleme</h1>
-  <p class="subtitle">MBG1032 - Doç.Dr.Alper YILMAZ - <em>28 Şubat 2024</em></p>
+  <h1 class="title">Korelasyon</h1>
+  <p class="subtitle">MBG1032 - Doç.Dr.Alper YILMAZ</p>
 
 <div class="quarto-title-authors">
 </div>
@@ -1262,166 +1196,212 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
 <section id="özet" class="slide level2">
 <h2>Özet</h2>
 <ul>
-<li>ortalama ve standart sapma</li>
-<li>dağılımların çeşitli ölçümleri
-<ul>
-<li>range, IQR</li>
-<li>histogram</li>
-<li>boxplot</li>
-</ul></li>
+<li>Korelasyon nedir?</li>
+<li>Korelasyon türleri</li>
+<li>Pearson korelasyon katsayısı</li>
+<li>Spearman korelasyon katsayısı</li>
+<li>Korelasyon ≠ Nedensellik</li>
+<li>Anscombe dörtlüsü</li>
+<li>Örnekler ve R uygulamaları</li>
 </ul>
 </section>
-<section id="ortalama-ve-median" class="slide level2">
-<h2>Ortalama ve median</h2>
-<p><strong>Ortalama</strong>: Değerler toplamının değer sayısına bölünmesi ile hesaplanır.</p>
-<p><span class="math display">\[
-\overline{x} = \frac{\displaystyle\sum_{i=1}^{n} x_i}{n}
-\]</span></p>
-<p><strong>Median</strong>: Sıralı değerlerin orta noktasıdır. Çift sayıda değer varsa, median, ortadaki iki sayının ortalamasıdır.</p>
+<section id="korelasyon-nedir" class="slide level2">
+<h2>Korelasyon nedir?</h2>
+<p>Korelasyon, iki değişken arasındaki <strong>doğrusal ilişkinin yönünü ve gücünü</strong> ölçen istatistiksel bir yöntemdir. Korelasyon katsayısı (<em>r</em>) −1 ile +1 arasında değer alır.</p>
+<ul>
+<li><strong>r = +1</strong>: Mükemmel pozitif doğrusal ilişki</li>
+<li><strong>r = −1</strong>: Mükemmel negatif doğrusal ilişki</li>
+<li><strong>r = 0</strong>: Doğrusal ilişki yok</li>
+</ul>
+<p>Korelasyon yalnızca <strong>doğrusal</strong> ilişkiyi ölçer; eğrisel veya karmaşık ilişkileri yakalayamaz.</p>
 </section>
-<section id="ortalama-ve-median-1" class="slide level2">
-<h2>Ortalama ve median</h2>
-<div class="callout callout-important callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
+<section id="korelasyon-türleri" class="slide level2">
+<h2>Korelasyon türleri</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/korelasyon_turleri.svg" class="quarto-figure quarto-figure-center" style="width:90.0%"></p>
+</figure>
 </div>
-<p><strong>Soru</strong></p>
-</div>
-<div class="callout-content">
-<p>Bir veri setine çok büyük veya çok küçük bir sayı eklendiğinde, hangisi daha çok etkilenir, ortalama mı, median mı?</p>
-</div>
-</div>
-</div>
-<p>Aşağıdaki örnekte, <code>deneme</code> vektörüne <em>100</em> sayısını ekleyip ortalama ve median değerlerini hesaplayın ve karşılaştırın.</p>
+</section>
+<section id="korelasyon-kuvvetinin-yorumlanması" class="slide level2">
+<h2>Korelasyon kuvvetinin yorumlanması</h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: center;"></th>
+<th style="text-align: center;">r</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">0.00 – 0.19</td>
+<td style="text-align: center;">Çok zayıf</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">0.20 – 0.39</td>
+<td style="text-align: center;">Zayıf</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">0.40 – 0.59</td>
+<td style="text-align: center;">Orta</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">0.60 – 0.79</td>
+<td style="text-align: center;">Güçlü</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">0.80 – 1.00</td>
+<td style="text-align: center;">Çok güçlü</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Bu eşik değerler genel bir kılavuzdur; biyolojik verilerde r = 0.5 bile anlamlı bir ilişki gösterebilir.</p>
+</blockquote>
+</section>
+<section id="pearson-korelasyon-katsayısı" class="slide level2">
+<h2>Pearson korelasyon katsayısı</h2>
+<p>İki sürekli değişken arasındaki <strong>doğrusal</strong> ilişkinin gücünü ve yönünü ölçer. Varsayımları:</p>
+<ul>
+<li>Her iki değişken de sürekli (continuous) olmalı</li>
+<li>Her iki değişken yaklaşık <strong>normal dağılmalı</strong></li>
+<li>İlişki <strong>doğrusal</strong> olmalı</li>
+<li>Aykırı değerlere (outlier) <strong>duyarlıdır</strong></li>
+</ul>
+</section>
+<section id="pearson-formülü" class="slide level2">
+<h2>Pearson formülü</h2>
+<p><span class="math display">\[ r = \frac{\sum_{i=1}^{n}(x_i - \bar{x})(y_i - \bar{y})}{\sqrt{\sum_{i=1}^{n}(x_i - \bar{x})^2 \cdot \sum_{i=1}^{n}(y_i - \bar{y})^2}} \]</span></p>
+<p>veya eşdeğer olarak</p>
+<p><span class="math display">\[ r = \frac{n\sum x_i y_i - \sum x_i \sum y_i}{\sqrt{[n\sum x_i^2 - (\sum x_i)^2][n\sum y_i^2 - (\sum y_i)^2]}} \]</span></p>
+<blockquote>
+<p><em>r</em> değeri birimden bağımsızdır; cm veya inç ile ölçün, aynı <em>r</em> değerini elde edersiniz.</p>
+</blockquote>
+</section>
+<section id="pearson-korelasyon-r-uygulaması" class="slide level2">
+<h2>Pearson korelasyon — R uygulaması</h2>
 <div id="qwebr-insertion-location-1"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 </section>
-<section id="dağılımların-çeşitli-ölçümleri" class="slide level2">
-<h2>Dağılımların çeşitli ölçümleri</h2>
-<p><strong>Range/Aralık</strong>: En küçük ve büyük değer arasındaki farktır. R’da <code>range()</code> fonskiyonu en düşük ve yüksek değerleri gösterir. Farkı bulmak için <code>max()</code> ve <code>min()</code> fonksiyon çıktıları kullanılabilir.</p>
-<p><strong>IQR</strong>: (<em>Interquartile range</em> veya <em>Çeyrekler Arası Aralık</em>) verilerin 1. ve 3. çeyreğinin arasındaki farkı gösterir. R’da <code>IQR()</code> fonksiyonu bu değerleri hesaplar.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">range</span>(iris<span class="sc">$</span>Sepal.Length)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 4.3 7.9</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a><span class="fu">IQR</span>(iris<span class="sc">$</span>Sepal.Length)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 1.3</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a><span class="fu">quantile</span>(iris<span class="sc">$</span>Sepal.Length)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>  0%  25%  50%  75% 100% 
- 4.3  5.1  5.8  6.4  7.9 </code></pre>
-</div>
-</div>
+<section id="pearson-korelasyon-görselleştirme" class="slide level2">
+<h2>Pearson korelasyon — görselleştirme</h2>
+<div id="qwebr-insertion-location-2"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 </section>
-<section id="varyans-ve-standart-sapma" class="slide level2">
-<h2>Varyans ve standart sapma</h2>
-<p><strong>Varyans</strong>: <span class="math inline">\(s^2\)</span> ile gösterilir, veri setindeki sayıların ortalamadan ne kadar uzak/yakın olduğunu gösterir.</p>
-<p><span class="math display">\[
-s^2 = \frac{\sum_{i=1}^n (x_i - \overline{x})^2}{n-1}
-\]</span></p>
-<p><strong>Standard sapma</strong>: Varyansın kareköküdür.</p>
-<p><span class="math display">\[
-s = \sqrt{s^2} = \sqrt{\frac{\sum_{i=1}^n (x_i - \overline{x})^2}{n-1}}
-\]</span></p>
-<p>Formülden anlaşılacağı üzere, veri setindeki dağınıklık, ortalamadan uzaklık arttıkça varyans da artmaktadır. Varyans <code>var()</code> fonskiyonu ile, standart sapma ise <code>sd()</code> fonksiyonu ile hesaplanır.</p>
-</section>
-<section id="görsel-özetleme" class="slide level2">
-<h2>Görsel Özetleme</h2>
-<p><strong>Histogram</strong>: Bir veri setindeki değerlerin dağılımını göstermak için, belirli aralıktaki değerlerin frekansını gösteren grafiklerdir. <code>hist()</code> fonksiyonu ile çizilebilir.</p>
-
-<img data-src="ders02_files/figure-revealjs/unnamed-chunk-2-1.png" width="960" class="r-stretch"></section>
-<section id="histogram-ayarlar" class="slide level2">
-<h2>Histogram ayarlar</h2>
-<p><code>breaks</code> parametresi ile histogramın ayrılacağı aralık sayısı ayarlanabilir</p>
-<div class="columns">
-<div class="column" style="width:50%;">
-<div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a><span class="fu">hist</span>(iris<span class="sc">$</span>Sepal.Length)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div>
-<figure>
-<p><img data-src="ders02_files/figure-revealjs/unnamed-chunk-3-1.png" width="960"></p>
-</figure>
-</div>
-</div>
-</div>
-</div><div class="column" style="width:50%;">
-<div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a><span class="fu">hist</span>(iris<span class="sc">$</span>Sepal.Length, </span>
-<span id="cb8-2"><a></a>     <span class="at">breaks =</span> <span class="dv">15</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div>
-<figure>
-<p><img data-src="ders02_files/figure-revealjs/unnamed-chunk-4-1.png" width="960"></p>
-</figure>
-</div>
-</div>
-</div>
-</div></div>
-</section>
-<section id="histogram" class="slide level2">
-<h2>Histogram</h2>
-<p>Daha güzel ve karmaşık bir görselleştirme için <code>ggplot2</code> paketi kullanılabilir.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb9-2"><a></a><span class="fu">ggplot</span>(iris, <span class="fu">aes</span>(Sepal.Length)) <span class="sc">+</span></span>
-<span id="cb9-3"><a></a>  <span class="fu">geom_histogram</span>(<span class="at">color =</span> <span class="st">"#000000"</span>, <span class="at">fill =</span> <span class="st">"#0099F8"</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-
-</div>
-<img data-src="ders02_files/figure-revealjs/unnamed-chunk-5-1.png" width="960" class="r-stretch"></section>
-<section id="ggplot2-ile-histogram" class="slide level2">
-<h2>ggplot2 ile histogram</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a></a><span class="fu">ggplot</span>(iris, <span class="fu">aes</span>(Sepal.Length)) <span class="sc">+</span></span>
-<span id="cb10-2"><a></a>  <span class="fu">geom_histogram</span>(<span class="at">color =</span> <span class="st">"#000000"</span>, <span class="at">fill =</span> <span class="st">"#0099F8"</span>) <span class="sc">+</span></span>
-<span id="cb10-3"><a></a>  <span class="fu">geom_vline</span>(<span class="fu">aes</span>(<span class="at">xintercept =</span> <span class="fu">mean</span>(Sepal.Length)), <span class="at">color =</span> <span class="st">"#000000"</span>, <span class="at">size =</span> <span class="fl">1.25</span>) <span class="sc">+</span></span>
-<span id="cb10-4"><a></a>  <span class="fu">geom_vline</span>(<span class="fu">aes</span>(<span class="at">xintercept =</span> <span class="fu">mean</span>(Sepal.Length) <span class="sc">+</span> <span class="fu">sd</span>(Sepal.Length)), <span class="at">color =</span> <span class="st">"#000000"</span>, <span class="at">size =</span> <span class="dv">1</span>, <span class="at">linetype =</span> <span class="st">"dashed"</span>) <span class="sc">+</span></span>
-<span id="cb10-5"><a></a>  <span class="fu">geom_vline</span>(<span class="fu">aes</span>(<span class="at">xintercept =</span> <span class="fu">mean</span>(Sepal.Length) <span class="sc">-</span> <span class="fu">sd</span>(Sepal.Length)), <span class="at">color =</span> <span class="st">"#000000"</span>, <span class="at">size =</span> <span class="dv">1</span>, <span class="at">linetype =</span> <span class="st">"dashed"</span>) <span class="sc">+</span></span>
-<span id="cb10-6"><a></a>  <span class="fu">theme_bw</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-
-</div>
-<img data-src="ders02_files/figure-revealjs/unnamed-chunk-6-1.png" width="960" class="r-stretch"></section>
-<section id="boxplot" class="slide level2">
-<h2>Boxplot</h2>
-
-<img data-src="images/boxplot.png" class="r-stretch"><div class="footer">
-<p>Görsel kaynak: <a href="https://leansigmacorporation.com/box-plot-with-minitab/">Box Plot with Minitab</a></p>
-</div>
-</section>
-<section id="r-ile-boxplot" class="slide level2">
-<h2>R ile Boxplot</h2>
-<p><code>boxplot()</code> fonksiyonu bir vektör (sütün) veya veri tablosu (data frame) için çalıştırılabilir.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a><span class="fu">boxplot</span>(iris<span class="sc">$</span>Sepal.Length)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-
-</div>
-<img data-src="ders02_files/figure-revealjs/unnamed-chunk-7-1.png" width="960" class="r-stretch"></section>
-<section id="r-ile-boxplot---veri-tablosu" class="slide level2">
-<h2>R ile Boxplot - veri tablosu</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a></a><span class="fu">boxplot</span>(iris)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-
-</div>
-<img data-src="ders02_files/figure-revealjs/unnamed-chunk-8-1.png" width="960" class="r-stretch"></section>
-<section id="farklı-görselleştirmeler" class="slide level2">
-<h2>Farklı görselleştirmeler</h2>
-<p><code>ggplot2</code> veya temel R’da farklı görselleştirmeler yapılabilir.</p>
-
-<img data-src="images/farkli-gorseller.png" class="r-stretch"><div class="footer">
-<p>Görsel kaynak: <a href="http://www.sthda.com/english/articles/32-r-graphics-essentials/132-plot-grouped-data-box-plot-bar-plot-and-more/">Plot Grouped Data: Box plot, Bar Plot and More</a></p>
-</div>
-</section>
-<section id="ek-kaynaklar" class="slide level2">
-<h2>Ek kaynaklar</h2>
+<section id="spearman-korelasyon-katsayısı" class="slide level2">
+<h2>Spearman korelasyon katsayısı</h2>
+<p>İki değişken arasındaki <strong>monoton</strong> (tek yönlü, ama mutlaka doğrusal olmayan) ilişkiyi ölçer. Pearson’dan farklı olarak:</p>
 <ul>
-<li><a href="http://www.sthda.com/english/wiki/descriptive-statistics-and-graphics">STHDA</a> sitesinde “Descriptive Statistics and Graphics” adlı sayfa, bu sunumdaki bilgilere ek bilgiler içerir.</li>
-<li>Sadece sayısal özet yeterli olmayabilir. Veriyi her zaman görselleştirmek gerekir. <a href="https://www.research.autodesk.com/publications/same-stats-different-graphs/">Same Stats, Different Graphs</a></li>
+<li>Değerler yerine <strong>sıralamalar</strong> (rank) kullanılır</li>
+<li>Normal dağılım varsayımı <strong>gerekmez</strong> (non-parametrik)</li>
+<li>Aykırı değerlere <strong>daha dayanıklıdır</strong></li>
+<li><strong>Ordinal</strong> (sıralı) veriler için de kullanılabilir</li>
 </ul>
+</section>
+<section id="spearman-formülü" class="slide level2">
+<h2>Spearman formülü</h2>
+<p>Değerler sıralamaya çevrilir, sonra sıralamalar üzerinden Pearson hesaplanır. Eşit sıra yoksa:</p>
+<p><span class="math display">\[ r_s = 1 - \frac{6 \sum d_i^2}{n(n^2 - 1)} \]</span></p>
+<p><span class="math inline">\(d_i\)</span> = her çiftin sıra farkı, <span class="math inline">\(n\)</span> = gözlem sayısı</p>
+</section>
+<section id="spearman-korelasyon-r-uygulaması" class="slide level2">
+<h2>Spearman korelasyon — R uygulaması</h2>
+<div id="qwebr-insertion-location-3"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+</section>
+<section id="pearson-vs-spearman-ne-zaman-hangisi" class="slide level2">
+<h2>Pearson vs Spearman — ne zaman hangisi?</h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Özellik</th>
+<th style="text-align: left;">Pearson</th>
+<th style="text-align: left;">Spearman</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Ölçer</td>
+<td style="text-align: left;">Doğrusal ilişki</td>
+<td style="text-align: left;">Monoton ilişki</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Veri tipi</td>
+<td style="text-align: left;">Sürekli</td>
+<td style="text-align: left;">Sürekli veya ordinal</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Varsayım</td>
+<td style="text-align: left;">Normal dağılım</td>
+<td style="text-align: left;">Varsayım yok</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Aykırı değer</td>
+<td style="text-align: left;">Duyarlı</td>
+<td style="text-align: left;">Dayanıklı</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Kullanım</td>
+<td style="text-align: left;">Parametrik analiz</td>
+<td style="text-align: left;">Non-parametrik analiz</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Şüphede kalırsanız: önce scatter plot çizin, doğrusal görünüyorsa Pearson, değilse Spearman tercih edin.</p>
+</blockquote>
+</section>
+<section id="korelasyon-nedensellik" class="slide level2">
+<h2>Korelasyon ≠ Nedensellik</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/korelasyon_nedensellik.svg" class="quarto-figure quarto-figure-center" style="width:90.0%"></p>
+</figure>
+</div>
+</section>
+<section id="sahte-korelasyon-örnekleri" class="slide level2 scrollable">
+<h2>Sahte korelasyon örnekleri</h2>
+<p>İstatistiksel olarak anlamlı ama <strong>anlamsız</strong> korelasyonlar biyolojik araştırmalarda da karşımıza çıkabilir:</p>
+<ol type="1">
+<li><p><strong>Genomik</strong>: Binlerce gen arasında korelasyon taraması yapıldığında, çoklu test düzeltmesi yapılmazsa çok sayıda sahte korelasyon bulunur (çoklu test problemi).</p></li>
+<li><p><strong>Epidemiyoloji</strong>: Bir bölgedeki organik gıda satışı ile otizm tanısı arasında yüksek korelasyon gözlenmiştir — ama bu sadece ikisinin de zaman içinde artmasından kaynaklanır (trend korelasyonu).</p></li>
+<li><p><strong>Ekoloji</strong>: Ada büyüklüğü ile tür sayısı arasında korelasyon vardır ama nedensellik çok daha karmaşıktır (habitat çeşitliliği, izolasyon, iklim).</p></li>
+</ol>
+<p><strong>Çözüm</strong>: Korelasyonu hipotez üretmek için kullanın, doğrulamak için kontrollü deney veya çok değişkenli analiz yapın.</p>
+</section>
+<section id="anscombe-dörtlüsü" class="slide level2">
+<h2>Anscombe dörtlüsü</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/anscombe_dortlusu.svg" class="quarto-figure quarto-figure-center" style="width:90.0%"></p>
+</figure>
+</div>
+</section>
+<section id="anscombe-dörtlüsü-r-ile" class="slide level2">
+<h2>Anscombe dörtlüsü — R ile</h2>
+<div id="qwebr-insertion-location-4"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+</section>
+<section id="biyolojik-veri-ile-uygulama" class="slide level2">
+<h2>Biyolojik veri ile uygulama</h2>
+<div id="qwebr-insertion-location-5"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+</section>
+<section id="korelasyon-matrisi" class="slide level2">
+<h2>Korelasyon matrisi</h2>
+<div id="qwebr-insertion-location-6"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+</section>
+<section id="korelasyon-matrisi-görselleştirme" class="slide level2">
+<h2>Korelasyon matrisi — görselleştirme</h2>
+<div id="qwebr-insertion-location-7"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+</section>
+<section id="soru" class="slide level2">
+<h2>Soru</h2>
+<p>20-62 yaş arası bireylerde boy ve ayak numarası arasındaki ilişkiyi inceliyorsunuz. 15 kişilik örneklem verisi aşağıdadır. Pearson ve Spearman korelasyonunu hesaplayınız ve scatter plot çiziniz.</p>
+<div id="qwebr-insertion-location-8"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 
 
 </section>
@@ -1642,44 +1622,6 @@ s = \sqrt{s^2} = \sqrt{\frac{\sum_{i=1}^n (x_i - \overline{x})^2}{n-1}}
         ]
       });
     </script>
-    
-    <script>
-      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
-      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
-      // slide changes (different for each slide format).
-      (function () {
-        // dispatch for htmlwidgets
-        function fireSlideEnter() {
-          const event = window.document.createEvent("Event");
-          event.initEvent("slideenter", true, true);
-          window.document.dispatchEvent(event);
-        }
-
-        function fireSlideChanged(previousSlide, currentSlide) {
-          fireSlideEnter();
-
-          // dispatch for shiny
-          if (window.jQuery) {
-            if (previousSlide) {
-              window.jQuery(previousSlide).trigger("hidden");
-            }
-            if (currentSlide) {
-              window.jQuery(currentSlide).trigger("shown");
-            }
-          }
-        }
-
-        // hookup for slidy
-        if (window.w3c_slidy) {
-          window.w3c_slidy.add_observer(function (slide_num) {
-            // slide_num starts at position 1
-            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
-          });
-        }
-
-      })();
-    </script>
-
     <script id="quarto-html-after-body" type="application/javascript">
       window.document.addEventListener("DOMContentLoaded", function (event) {
         const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
