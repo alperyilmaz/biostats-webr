@@ -105,13 +105,6 @@
     "text": "Anscombe dörtlüsü"
   },
   {
-    "objectID": "ders-korelasyon.html#anscombe-dörtlüsü-r-ile",
-    "href": "ders-korelasyon.html#anscombe-dörtlüsü-r-ile",
-    "title": "Korelasyon",
-    "section": "Anscombe dörtlüsü — R ile",
-    "text": "Anscombe dörtlüsü — R ile\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
     "objectID": "ders-korelasyon.html#biyolojik-veri-ile-uygulama",
     "href": "ders-korelasyon.html#biyolojik-veri-ile-uygulama",
     "title": "Korelasyon",
@@ -137,7 +130,7 @@
     "href": "ders-korelasyon.html#soru",
     "title": "Korelasyon",
     "section": "Soru",
-    "text": "Soru\n20-62 yaş arası bireylerde boy ve ayak numarası arasındaki ilişkiyi inceliyorsunuz. 15 kişilik örneklem verisi aşağıdadır. Pearson ve Spearman korelasyonunu hesaplayınız ve scatter plot çiziniz.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+    "text": "Soru\nKedilerde vücut ağırlığı ile kalp ağırlığı arasındaki korelasyonu hesaplayıp cinsiyete göre karşılaştırınız\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
   },
   {
     "objectID": "ders03-uygulama.html#normal-dağılım-soruları",
@@ -1425,21 +1418,21 @@
     "href": "ders09.html#generate-sıfır-dağılımı-oluşturma",
     "title": "Ders 9: Hesapsal İstatistik",
     "section": "3. generate(): Sıfır Dağılımı Oluşturma",
-    "text": "3. generate(): Sıfır Dağılımı Oluşturma\n\nSıfır hipotezi altında verinin nasıl görüneceğini simüle eder\nÜç temel yöntem:\n\nbootstrap: Yerine koyarak örnekleme\npermute: Değişkenleri karıştırma\ndraw: Teorik dağılımdan örnekleme\n\n\n\n# 1000 bootstrap örneği oluşturalım\ngss |&gt;\n  specify(response = hours) |&gt;\n  hypothesize(null = \"point\", mu = 40) |&gt;\n  generate(reps = 1000, type = \"bootstrap\")\n\nResponse: hours (numeric)\nNull Hypothesis: point\n# A tibble: 500,000 × 2\n# Groups:   replicate [1,000]\n   replicate hours\n       &lt;int&gt; &lt;dbl&gt;\n 1         1  38.6\n 2         1  28.6\n 3         1  38.6\n 4         1  23.6\n 5         1  38.6\n 6         1  38.6\n 7         1  42.6\n 8         1  54.6\n 9         1  38.6\n10         1  40.6\n# ℹ 499,990 more rows"
+    "text": "3. generate(): Sıfır Dağılımı Oluşturma\n\nSıfır hipotezi altında verinin nasıl görüneceğini simüle eder\nÜç temel yöntem:\n\nbootstrap: Yerine koyarak örnekleme\npermute: Değişkenleri karıştırma\ndraw: Teorik dağılımdan örnekleme\n\n\n\n# 1000 bootstrap örneği oluşturalım\ngss |&gt;\n  specify(response = hours) |&gt;\n  hypothesize(null = \"point\", mu = 40) |&gt;\n  generate(reps = 1000, type = \"bootstrap\")\n\nResponse: hours (numeric)\nNull Hypothesis: point\n# A tibble: 500,000 × 2\n# Groups:   replicate [1,000]\n   replicate hours\n       &lt;int&gt; &lt;dbl&gt;\n 1         1  87.6\n 2         1  43.6\n 3         1  36.6\n 4         1  13.6\n 5         1  38.6\n 6         1  63.6\n 7         1  38.6\n 8         1  33.6\n 9         1  38.6\n10         1  38.6\n# ℹ 499,990 more rows"
   },
   {
     "objectID": "ders09.html#generate-veri-karıştırma-örneği",
     "href": "ders09.html#generate-veri-karıştırma-örneği",
     "title": "Ders 9: Hesapsal İstatistik",
     "section": "generate(): Veri Karıştırma Örneği",
-    "text": "generate(): Veri Karıştırma Örneği\n\n# Yaş ve parti ilişkisini kırmak için değişkenleri karıştıralım\ngss |&gt;\n  specify(partyid ~ age) |&gt;\n  hypothesize(null = \"independence\") |&gt;\n  generate(reps = 1000, type = \"permute\")\n\nResponse: partyid (factor)\nExplanatory: age (numeric)\nNull Hypothesis: indepe...\n# A tibble: 500,000 × 3\n# Groups:   replicate [1,000]\n   partyid   age replicate\n   &lt;fct&gt;   &lt;dbl&gt;     &lt;int&gt;\n 1 rep        36         1\n 2 dem        34         1\n 3 rep        24         1\n 4 rep        42         1\n 5 dem        31         1\n 6 ind        32         1\n 7 ind        48         1\n 8 ind        36         1\n 9 rep        30         1\n10 dem        33         1\n# ℹ 499,990 more rows\n\n\nBu adım, sıfır hipotezi doğru olsaydı veri nasıl görünürdü sorusuna cevap verir."
+    "text": "generate(): Veri Karıştırma Örneği\n\n# Yaş ve parti ilişkisini kırmak için değişkenleri karıştıralım\ngss |&gt;\n  specify(partyid ~ age) |&gt;\n  hypothesize(null = \"independence\") |&gt;\n  generate(reps = 1000, type = \"permute\")\n\nResponse: partyid (factor)\nExplanatory: age (numeric)\nNull Hypothesis: indepe...\n# A tibble: 500,000 × 3\n# Groups:   replicate [1,000]\n   partyid   age replicate\n   &lt;fct&gt;   &lt;dbl&gt;     &lt;int&gt;\n 1 ind        36         1\n 2 rep        34         1\n 3 dem        24         1\n 4 dem        42         1\n 5 dem        31         1\n 6 rep        32         1\n 7 rep        48         1\n 8 ind        36         1\n 9 ind        30         1\n10 rep        33         1\n# ℹ 499,990 more rows\n\n\nBu adım, sıfır hipotezi doğru olsaydı veri nasıl görünürdü sorusuna cevap verir."
   },
   {
     "objectID": "ders09.html#calculate-istatistik-hesaplama",
     "href": "ders09.html#calculate-istatistik-hesaplama",
     "title": "Ders 9: Hesapsal İstatistik",
     "section": "4. calculate(): İstatistik Hesaplama",
-    "text": "4. calculate(): İstatistik Hesaplama\n\nSimüle edilmiş verilerden istatistikler hesaplar\nOrtalama, medyan, oran, fark, t-istatistiği ve daha fazlası\nSıfır dağılımını oluşturur\n\n\n# Ortalama çalışma saatlerinin dağılımını hesaplayalım\ngss |&gt;\n  specify(response = hours) |&gt;\n  hypothesize(null = \"point\", mu = 40) |&gt;\n  generate(reps = 1000, type = \"bootstrap\") |&gt;\n  calculate(stat = \"mean\")\n\nResponse: hours (numeric)\nNull Hypothesis: point\n# A tibble: 1,000 × 2\n   replicate  stat\n       &lt;int&gt; &lt;dbl&gt;\n 1         1  39.7\n 2         2  41.0\n 3         3  41.2\n 4         4  41.1\n 5         5  39.5\n 6         6  40.0\n 7         7  40.7\n 8         8  40.5\n 9         9  39.2\n10        10  38.5\n# ℹ 990 more rows"
+    "text": "4. calculate(): İstatistik Hesaplama\n\nSimüle edilmiş verilerden istatistikler hesaplar\nOrtalama, medyan, oran, fark, t-istatistiği ve daha fazlası\nSıfır dağılımını oluşturur\n\n\n# Ortalama çalışma saatlerinin dağılımını hesaplayalım\ngss |&gt;\n  specify(response = hours) |&gt;\n  hypothesize(null = \"point\", mu = 40) |&gt;\n  generate(reps = 1000, type = \"bootstrap\") |&gt;\n  calculate(stat = \"mean\")\n\nResponse: hours (numeric)\nNull Hypothesis: point\n# A tibble: 1,000 × 2\n   replicate  stat\n       &lt;int&gt; &lt;dbl&gt;\n 1         1  40.1\n 2         2  39.9\n 3         3  40.0\n 4         4  39.1\n 5         5  38.7\n 6         6  40.0\n 7         7  40.0\n 8         8  40.5\n 9         9  39.3\n10        10  41.7\n# ℹ 990 more rows"
   },
   {
     "objectID": "ders09.html#örnek-haftalık-çalışma-saatleri-analizi",
@@ -1460,7 +1453,7 @@
     "href": "ders09.html#p-değeri-hesaplama",
     "title": "Ders 9: Hesapsal İstatistik",
     "section": "p-değeri Hesaplama",
-    "text": "p-değeri Hesaplama\n\n# İki kuyruklu p-değerini hesaplayalım\np_value &lt;- null_dist |&gt;\n  get_p_value(obs_stat = obs_mean, direction = \"two-sided\")\n\np_value\n\n# A tibble: 1 × 1\n  p_value\n    &lt;dbl&gt;\n1   0.056\n\n\nEğer ortalama gerçekten 40 saat olsaydı, gözlemlediğimiz kadar (veya daha) uç bir değer elde etme olasılığımız p-değeri kadardır."
+    "text": "p-değeri Hesaplama\n\n# İki kuyruklu p-değerini hesaplayalım\np_value &lt;- null_dist |&gt;\n  get_p_value(obs_stat = obs_mean, direction = \"two-sided\")\n\np_value\n\n# A tibble: 1 × 1\n  p_value\n    &lt;dbl&gt;\n1   0.034\n\n\nEğer ortalama gerçekten 40 saat olsaydı, gözlemlediğimiz kadar (veya daha) uç bir değer elde etme olasılığımız p-değeri kadardır."
   },
   {
     "objectID": "ders09.html#güven-aralıkları",

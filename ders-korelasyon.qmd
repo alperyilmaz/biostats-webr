@@ -8,6 +8,8 @@ format:
     smaller: true
     scrollable: true
 typora-copy-images-to: images
+webr:
+  packages: ['MASS']
 filters:
   - webr
 ---
@@ -154,36 +156,6 @@ cor.test(boy, kilo, method = "spearman")
 
 ![](images/anscombe_dortlusu.svg){.nostretch fig-align="center" width="90%"}
 
-## Anscombe dörtlüsü — R ile
-
-```{webr-r}
-# R'da hazır gelen anscombe veri seti
-data(anscombe)
-par(mfrow = c(2, 2))
-
-plot(anscombe$x1, anscombe$y1, pch = 19, col = "steelblue",
-     main = paste("I: r =", round(cor(anscombe$x1, anscombe$y1), 3)),
-     xlab = "x", ylab = "y")
-abline(lm(y1 ~ x1, data = anscombe), col = "red", lwd = 2)
-
-plot(anscombe$x2, anscombe$y2, pch = 19, col = "mediumpurple",
-     main = paste("II: r =", round(cor(anscombe$x2, anscombe$y2), 3)),
-     xlab = "x", ylab = "y")
-abline(lm(y2 ~ x2, data = anscombe), col = "red", lwd = 2)
-
-plot(anscombe$x3, anscombe$y3, pch = 19, col = "orange",
-     main = paste("III: r =", round(cor(anscombe$x3, anscombe$y3), 3)),
-     xlab = "x", ylab = "y")
-abline(lm(y3 ~ x3, data = anscombe), col = "red", lwd = 2)
-
-plot(anscombe$x4, anscombe$y4, pch = 19, col = "tomato",
-     main = paste("IV: r =", round(cor(anscombe$x4, anscombe$y4), 3)),
-     xlab = "x", ylab = "y")
-abline(lm(y4 ~ x4, data = anscombe), col = "red", lwd = 2)
-
-par(mfrow = c(1, 1))
-```
-
 ## Biyolojik veri ile uygulama
 
 ```{webr-r}
@@ -212,7 +184,7 @@ round(kor_matris, 2)
 ## Korelasyon matrisi — görselleştirme
 
 ```{webr-r}
-# Basit ısı haritası (heatmap)
+# Basit ısı haritası (heatmap) mavi -1, kırmızı +1
 kor_matris <- cor(iris[, 1:4])
 heatmap(kor_matris, 
         col = colorRampPalette(c("steelblue", "white", "tomato"))(50),
@@ -222,11 +194,11 @@ heatmap(kor_matris,
 
 ## Soru
 
-20-62 yaş arası bireylerde boy ve ayak numarası arasındaki ilişkiyi inceliyorsunuz. 15 kişilik örneklem verisi aşağıdadır. Pearson ve Spearman korelasyonunu hesaplayınız ve scatter plot çiziniz.
+Kedilerde vücut ağırlığı ile kalp ağırlığı arasındaki korelasyonu hesaplayıp cinsiyete göre karşılaştırınız
 
 ```{webr-r}
-boy <- c(162, 165, 168, 170, 172, 174, 175, 177, 178, 180, 182, 183, 185, 188, 192)
-ayak <- c(38, 39, 39, 40, 41, 41, 42, 42, 43, 43, 44, 44, 44, 45, 46)
+library(MASS)
+str(cats)
 
 # Çözümünüzü buraya yazıp çalıştırınız
 
