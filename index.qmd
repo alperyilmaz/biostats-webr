@@ -48,8 +48,7 @@
 
 ## Ders07
 
-**Teorik** (*08	Nisan 2026*): Regresyon  [Sunum linki](ders
--korelasyon.qmd)
+**Teorik** (*08	Nisan 2026*): Regresyon  [Sunum linki](ders-regresyon.qmd)
 
 
 **Pratik** (*08 Nisan 2026*): Regresyon uygulaması

@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 380" font-family="'Segoe UI', 'Helvetica Neue', sans-serif">
+  <rect width="900" height="380" fill="#ffffff" rx="12"/>
+
+  <text x="450" y="35" text-anchor="middle" fill="#1e293b" font-size="22" font-weight="700">Korelasyon vs Regresyon</text>
+
+  <!-- LEFT: Korelasyon -->
+  <rect x="40" y="55" width="390" height="290" rx="12" fill="#f0f9ff" stroke="#bae6fd" stroke-width="1.5"/>
+  <text x="235" y="85" text-anchor="middle" fill="#0369a1" font-size="17" font-weight="700">Korelasyon</text>
+
+  <rect x="70" y="100" width="200" height="140" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1" rx="6"/>
+  <line x1="90" y1="220" x2="250" y2="220" stroke="#cbd5e1" stroke-width="1"/>
+  <line x1="90" y1="220" x2="90" y2="115" stroke="#cbd5e1" stroke-width="1"/>
+  <circle cx="105" cy="200" r="3.5" fill="#3b82f6" opacity="0.7"/>
+  <circle cx="115" cy="195" r="3.5" fill="#3b82f6" opacity="0.7"/>
+  <circle cx="125" cy="185" r="3.5" fill="#3b82f6" opacity="0.7"/>
+  <circle cx="140" cy="175" r="3.5" fill="#3b82f6" opacity="0.7"/>
+  <circle cx="155" cy="168" r="3.5" fill="#3b82f6" opacity="0.7"/>
+  <circle cx="165" cy="160" r="3.5" fill="#3b82f6" opacity="0.7"/>
+  <circle cx="180" cy="150" r="3.5" fill="#3b82f6" opacity="0.7"/>
+  <circle cx="195" cy="145" r="3.5" fill="#3b82f6" opacity="0.7"/>
+  <circle cx="210" cy="135" r="3.5" fill="#3b82f6" opacity="0.7"/>
+  <circle cx="230" cy="125" r="3.5" fill="#3b82f6" opacity="0.7"/>
+  <text x="170" y="240" text-anchor="middle" fill="#3b82f6" font-size="18" font-weight="800">r = 0.95</text>
+
+  <text x="310" y="130" fill="#334155" font-size="12">✓ İlişkinin yönü</text>
+  <text x="310" y="150" fill="#334155" font-size="12">✓ İlişkinin gücü</text>
+  <text x="310" y="175" fill="#94a3b8" font-size="12">✗ Tahmin yapamaz</text>
+  <text x="310" y="195" fill="#94a3b8" font-size="12">✗ Denklemi yok</text>
+  <text x="310" y="215" fill="#94a3b8" font-size="12">✗ X ve Y simetrik</text>
+
+  <text x="235" y="320" text-anchor="middle" fill="#0369a1" font-size="13" font-weight="600">"İlişki var mı, ne kadar güçlü?"</text>
+
+  <!-- RIGHT: Regresyon -->
+  <rect x="470" y="55" width="390" height="290" rx="12" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1.5"/>
+  <text x="665" y="85" text-anchor="middle" fill="#15803d" font-size="17" font-weight="700">Regresyon</text>
+
+  <rect x="500" y="100" width="200" height="140" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1" rx="6"/>
+  <line x1="520" y1="220" x2="680" y2="220" stroke="#cbd5e1" stroke-width="1"/>
+  <line x1="520" y1="220" x2="520" y2="115" stroke="#cbd5e1" stroke-width="1"/>
+  <circle cx="535" cy="200" r="3.5" fill="#22c55e" opacity="0.7"/>
+  <circle cx="545" cy="195" r="3.5" fill="#22c55e" opacity="0.7"/>
+  <circle cx="555" cy="185" r="3.5" fill="#22c55e" opacity="0.7"/>
+  <circle cx="570" cy="175" r="3.5" fill="#22c55e" opacity="0.7"/>
+  <circle cx="585" cy="168" r="3.5" fill="#22c55e" opacity="0.7"/>
+  <circle cx="595" cy="160" r="3.5" fill="#22c55e" opacity="0.7"/>
+  <circle cx="610" cy="150" r="3.5" fill="#22c55e" opacity="0.7"/>
+  <circle cx="625" cy="145" r="3.5" fill="#22c55e" opacity="0.7"/>
+  <circle cx="640" cy="135" r="3.5" fill="#22c55e" opacity="0.7"/>
+  <circle cx="660" cy="125" r="3.5" fill="#22c55e" opacity="0.7"/>
+  <line x1="525" y1="207" x2="670" y2="120" stroke="#dc2626" stroke-width="2.5"/>
+  <text x="600" y="240" text-anchor="middle" fill="#dc2626" font-size="13" font-weight="700">ŷ = β₀ + β₁x</text>
+
+  <text x="735" y="130" fill="#334155" font-size="12">✓ İlişkinin yönü</text>
+  <text x="735" y="150" fill="#334155" font-size="12">✓ İlişkinin gücü</text>
+  <text x="735" y="175" fill="#16a34a" font-size="12" font-weight="600">✓ Tahmin yapabilir</text>
+  <text x="735" y="195" fill="#16a34a" font-size="12" font-weight="600">✓ Denklemi var</text>
+  <text x="735" y="215" fill="#16a34a" font-size="12" font-weight="600">✓ X → Y yönlü</text>
+
+  <text x="665" y="320" text-anchor="middle" fill="#15803d" font-size="13" font-weight="600">"X bilindiğinde Y'yi tahmin edebilir miyim?"</text>
+</svg>

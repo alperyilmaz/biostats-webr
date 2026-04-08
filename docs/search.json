@@ -2784,5 +2784,194 @@
     "title": "Ders 8 Uygulama: Ki-kare Testi",
     "section": "Öğretim Çıktıları",
     "text": "Öğretim Çıktıları\nBu uygulama sonunda öğrenciler:\n\nKi-kare testinin farklı türlerini ayırt edebilir ve uygun durumda kullanabilir\nKi-kare testinin sıfır hipotezini (H₀) doğru bir şekilde ifade edebilir\nR’da dchisq(), pchisq(), qchisq(), rchisq() ve chisq.test() fonksiyonlarını kullanabilir\nKi-kare test sonuçlarını yorumlayabilir ve görselleştirebilir\nKi-kare testini genetik, ekoloji ve diğer biyolojik çalışmalarda uygulayabilir"
+  },
+  {
+    "objectID": "ders-regresyon.html#özet",
+    "href": "ders-regresyon.html#özet",
+    "title": "Regresyon",
+    "section": "Özet",
+    "text": "Özet\n\nRegresyon nedir? Korelasyondan farkı\nBasit doğrusal regresyon\nEn küçük kareler yöntemi (OLS)\nRegresyon katsayılarının yorumlanması\nR² — Belirtme katsayısı\nRegresyon varsayımları (LINE)\nArtıkların incelenmesi\nTahmin (prediction)\nÇoklu regresyon\nBiyolojik örnekler ve R uygulamaları"
+  },
+  {
+    "objectID": "ders-regresyon.html#korelasyon-vs-regresyon",
+    "href": "ders-regresyon.html#korelasyon-vs-regresyon",
+    "title": "Regresyon",
+    "section": "Korelasyon vs Regresyon",
+    "text": "Korelasyon vs Regresyon"
+  },
+  {
+    "objectID": "ders-regresyon.html#regresyon-nedir",
+    "href": "ders-regresyon.html#regresyon-nedir",
+    "title": "Regresyon",
+    "section": "Regresyon nedir?",
+    "text": "Regresyon nedir?\nRegresyon, bir bağımlı değişken (Y) ile bir veya daha fazla bağımsız değişken (X) arasındaki ilişkiyi matematiksel bir modelle ifade eden istatistiksel bir yöntemdir.\n\nKorelasyon: “Boy ve kilo arasında ilişki var mı?” → r = 0.95\nRegresyon: “Boyu 175 cm olan birinin kilosu kaç olur?” → ŷ = −105 + 1.1 × 175 = 87.5 kg\n\nRegresyon yönlü bir analizdir: X’ten Y’yi tahmin ederiz. X ve Y’nin yerini değiştirirsek farklı bir denklem elde ederiz."
+  },
+  {
+    "objectID": "ders-regresyon.html#basit-doğrusal-regresyon",
+    "href": "ders-regresyon.html#basit-doğrusal-regresyon",
+    "title": "Regresyon",
+    "section": "Basit doğrusal regresyon",
+    "text": "Basit doğrusal regresyon\nTek bir bağımsız değişken (X) ile bağımlı değişken (Y) arasındaki doğrusal ilişkiyi modellemek için kullanılır.\n\\[ Y = \\beta_0 + \\beta_1 X + \\varepsilon \\]\n\n\\(\\beta_0\\) : kesim noktası (intercept) — X = 0 olduğunda Y’nin tahmini değeri\n\\(\\beta_1\\) : eğim (slope) — X’teki 1 birimlik artışın Y’de oluşturduğu değişim\n\\(\\varepsilon\\) : hata terimi (error) — modelin açıklayamadığı rastgele varyasyon\n\nTahmin denklemi (şapka = tahmin):\n\\[ \\hat{Y} = \\hat{\\beta}_0 + \\hat{\\beta}_1 X \\]"
+  },
+  {
+    "objectID": "ders-regresyon.html#en-küçük-kareler-yöntemi-ols",
+    "href": "ders-regresyon.html#en-küçük-kareler-yöntemi-ols",
+    "title": "Regresyon",
+    "section": "En küçük kareler yöntemi (OLS)",
+    "text": "En küçük kareler yöntemi (OLS)\n\n\n\n\n\n\nkaynak: OntarioTech"
+  },
+  {
+    "objectID": "ders-regresyon.html#ols-formülleri",
+    "href": "ders-regresyon.html#ols-formülleri",
+    "title": "Regresyon",
+    "section": "OLS formülleri",
+    "text": "OLS formülleri\nEğim (\\(\\hat{\\beta}_1\\)) ve kesim noktası (\\(\\hat{\\beta}_0\\)) hesabı:\n\\[ \\hat{\\beta}_1 = \\frac{\\sum_{i=1}^n (x_i - \\bar{x})(y_i - \\bar{y})}{\\sum_{i=1}^n (x_i - \\bar{x})^2} \\]\n\\[ \\hat{\\beta}_0 = \\bar{y} - \\hat{\\beta}_1 \\bar{x} \\]\n\nRegresyon doğrusu her zaman \\((\\bar{x}, \\bar{y})\\) noktasından geçer."
+  },
+  {
+    "objectID": "ders-regresyon.html#basit-doğrusal-regresyon-r-uygulaması",
+    "href": "ders-regresyon.html#basit-doğrusal-regresyon-r-uygulaması",
+    "title": "Regresyon",
+    "section": "Basit doğrusal regresyon — R uygulaması",
+    "text": "Basit doğrusal regresyon — R uygulaması\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders-regresyon.html#katsayıların-yorumlanması",
+    "href": "ders-regresyon.html#katsayıların-yorumlanması",
+    "title": "Regresyon",
+    "section": "Katsayıların yorumlanması",
+    "text": "Katsayıların yorumlanması\nsummary() çıktısını yorumlayalım:\n\nIntercept (β₀): Vücut ağırlığı 0 kg olsaydı kalp ağırlığının tahmini değeri. Biyolojik olarak anlamsızdır ama matematiksel olarak doğrunun Y eksenini kestiği noktadır.\nBwt (β₁): Vücut ağırlığındaki 1 kg’lık artış, kalp ağırlığında ortalama β₁ gram artışa karşılık gelir.\np-value: Eğimin sıfırdan farklı olup olmadığının testi. p &lt; 0.05 ise X ile Y arasında istatistiksel olarak anlamlı bir doğrusal ilişki vardır.\nStd. Error: Katsayı tahmininin standart hatası. Küçük olması, tahminin kesin olduğunu gösterir.\n\nHesaplanan katsayılara göre, formül:\nHwt = 4.034 x Bwt - 0.356"
+  },
+  {
+    "objectID": "ders-regresyon.html#regresyon-görselleştirme",
+    "href": "ders-regresyon.html#regresyon-görselleştirme",
+    "title": "Regresyon",
+    "section": "Regresyon — görselleştirme",
+    "text": "Regresyon — görselleştirme\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders-regresyon.html#r²-belirtme-katsayısı",
+    "href": "ders-regresyon.html#r²-belirtme-katsayısı",
+    "title": "Regresyon",
+    "section": "R² — Belirtme katsayısı",
+    "text": "R² — Belirtme katsayısı\n\\(R^2\\) (R-kare), bağımlı değişkendeki toplam varyansın yüzde kaçının model tarafından açıklandığını gösterir.\n\\[ R^2 = 1 - \\frac{SS_{res}}{SS_{tot}} = 1 - \\frac{\\sum(y_i - \\hat{y}_i)^2}{\\sum(y_i - \\bar{y})^2} \\]\n\n\\(R^2 = 0\\): Model hiçbir varyansı açıklamıyor (rastgele tahmin kadar kötü)\n\\(R^2 = 1\\): Model tüm varyansı açıklıyor (tüm noktalar doğru üzerinde)\nBasit regresyonda (tek bağımsız değişken) \\(R^2 = r^2\\) (Pearson korelasyonunun karesi)\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders-regresyon.html#regresyon-varsayımları",
+    "href": "ders-regresyon.html#regresyon-varsayımları",
+    "title": "Regresyon",
+    "section": "Regresyon varsayımları",
+    "text": "Regresyon varsayımları\n4 temel varsayım (LINE)\n\nLinearity (doğrusallık): X ile Y arasındaki ilişki doğrusal olmalıdır. Eğrisel bir ilişki varsa (parabolik, logaritmik gibi) doğrusal regresyon modeli bu ilişkiyi doğru temsil edemez. Kontrol: Artık vs tahmin grafiğinde rastgele dağılım olmalı, U veya S şekli olmamalı.\nIndependence (bağımsızlık): Gözlemler birbirinden bağımsız olmalıdır. Bir gözlemin değeri diğerini etkilememeli. Örneğin aynı hastadan tekrarlı ölçümler alındıysa bu varsayım ihlal edilir.\nNormality (normallik): Artıklar (residuals) normal dağılmalıdır. Y’nin kendisinin değil, modelin hatalarının normal dağılması gerekir. Kontrol: Q-Q grafiğinde noktalar çapraz çizgi üzerinde olmalı.\nEqual variance (eşit varyans): Artıkların varyansı tüm X değerlerinde sabit olmalıdır. Yani model düşük X değerlerinde de yüksek X değerlerinde de aynı miktarda hata yapmalı. Kontrol: Artık vs tahmin grafiğinde huni şekli (yelpaze açılması) olmamalı."
+  },
+  {
+    "objectID": "ders-regresyon.html#varsayımları-kontrol-etme-r-ile",
+    "href": "ders-regresyon.html#varsayımları-kontrol-etme-r-ile",
+    "title": "Regresyon",
+    "section": "Varsayımları kontrol etme — R ile",
+    "text": "Varsayımları kontrol etme — R ile\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders-regresyon.html#diagnostik-grafiklerin-yorumlanması",
+    "href": "ders-regresyon.html#diagnostik-grafiklerin-yorumlanması",
+    "title": "Regresyon",
+    "section": "Diagnostik grafiklerin yorumlanması",
+    "text": "Diagnostik grafiklerin yorumlanması\nR’ın plot(model) komutu 4 diagnostik grafik üretir, biz sadece ikisine bakıyoruz:\n\nResiduals vs Fitted: Artıklar ile tahmin değerleri. Rastgele dağılım olmalı, bir desen (eğri, huni) varsa varsayım ihlali var demektir.\nNormal Q-Q: Artıkların normalliği. Noktalar çapraz çizgi üzerinde olmalı. Uçlarda sapma varsa normallik ihlali var demektir.\n\nScale-Location varyans eşitliğini, Residuals vs Leverage grafiği de modele orantısız etkileyen noktaları gösterir."
+  },
+  {
+    "objectID": "ders-regresyon.html#regresyon-ile-tahmin",
+    "href": "ders-regresyon.html#regresyon-ile-tahmin",
+    "title": "Regresyon",
+    "section": "Regresyon ile tahmin",
+    "text": "Regresyon ile tahmin\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders-regresyon.html#güven-aralığı-vs-tahmin-aralığı",
+    "href": "ders-regresyon.html#güven-aralığı-vs-tahmin-aralığı",
+    "title": "Regresyon",
+    "section": "Güven aralığı vs tahmin aralığı",
+    "text": "Güven aralığı vs tahmin aralığı\n\nGüven aralığı (confidence interval): Ortalama Y değerinin nerede olduğuna dair belirsizlik. “3 kg’lık kedilerin ortalama kalp ağırlığı bu aralıkta.”\nTahmin aralığı (prediction interval): Bireysel bir Y değerinin nerede olacağına dair belirsizlik. “3 kg’lık bir kedinin kalp ağırlığı bu aralıkta.” Her zaman güven aralığından daha geniştir.\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders-regresyon.html#çoklu-doğrusal-regresyon",
+    "href": "ders-regresyon.html#çoklu-doğrusal-regresyon",
+    "title": "Regresyon",
+    "section": "Çoklu doğrusal regresyon",
+    "text": "Çoklu doğrusal regresyon\nBirden fazla bağımsız değişken ile Y’yi modelleme:\n\\[ Y = \\beta_0 + \\beta_1 X_1 + \\beta_2 X_2 + \\cdots + \\beta_p X_p + \\varepsilon \\]\nHer \\(\\beta_j\\): diğer değişkenler sabit tutulduğunda, \\(X_j\\)’deki 1 birimlik artışın Y’deki etkisi.\nDüzeltilmiş R² (Adjusted R²): Çoklu regresyonda her yeni değişken R²’yi şişirir. Adjusted R² gereksiz değişkenleri cezalandırır:\n\\[ R^2_{adj} = 1 - \\frac{(1-R^2)(n-1)}{n-p-1} \\]"
+  },
+  {
+    "objectID": "ders-regresyon.html#çoklu-regresyon-r-uygulaması",
+    "href": "ders-regresyon.html#çoklu-regresyon-r-uygulaması",
+    "title": "Regresyon",
+    "section": "Çoklu regresyon — R uygulaması",
+    "text": "Çoklu regresyon — R uygulaması\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders-regresyon.html#çoklu-regresyon-model-detayları",
+    "href": "ders-regresyon.html#çoklu-regresyon-model-detayları",
+    "title": "Regresyon",
+    "section": "Çoklu regresyon — model detayları",
+    "text": "Çoklu regresyon — model detayları\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nYani;\n\\[\\text{mpg} = -3.16 \\times \\text{wt} - 0.01 \\times \\text{hp} - 0.94 \\times \\text{cyl} + 38.75\\]"
+  },
+  {
+    "objectID": "ders-regresyon.html#çoklu-regresyon-model-seçimi",
+    "href": "ders-regresyon.html#çoklu-regresyon-model-seçimi",
+    "title": "Regresyon",
+    "section": "Çoklu regresyon — model seçimi",
+    "text": "Çoklu regresyon — model seçimi\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders-regresyon.html#biyolojik-uygulama",
+    "href": "ders-regresyon.html#biyolojik-uygulama",
+    "title": "Regresyon",
+    "section": "Biyolojik uygulama",
+    "text": "Biyolojik uygulama\nKedilerde kalp ağırlığını hem vücut ağırlığı hem de cinsiyet ile modelleyelim:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nYorumlama:\n\nBwt katsayısı: Cinsiyet sabit tutulduğunda, vücut ağırlığındaki 1 kg artışın kalp ağırlığına etkisi\nSexM katsayısı: Vücut ağırlığı sabit tutulduğunda, erkek olmanın kalp ağırlığına ek etkisi\nR’da kategorik değişkenler otomatik olarak dummy (kukla) değişkene çevrilir: Dişi = referans, Erkek = 1"
+  },
+  {
+    "objectID": "ders-regresyon.html#soru",
+    "href": "ders-regresyon.html#soru",
+    "title": "Regresyon",
+    "section": "Soru",
+    "text": "Soru\ntrees veri setinde ağaçların hacmini (Volume) tahmin etmek istiyorsunuz. Çap (Girth) ve yükseklik (Height) değişkenlerini kullanarak basit ve çoklu regresyon modellerini kurunuz, R² değerlerini karşılaştırınız ve diagnostik grafikleri inceleyiniz.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders-regresyon.html#kötü-örnekler",
+    "href": "ders-regresyon.html#kötü-örnekler",
+    "title": "Regresyon",
+    "section": "“Kötü” örnekler",
+    "text": "“Kötü” örnekler\nResidual-Fit veya QQ grafiği güzel olmayan iki örnek yapalım\n\ntrees adlı veride ağaçlara ait yükseklik, çap ve hacim hesaplamaları var. hacim ile çap arasında silindir hacmi ilişkisi olduğundan residual-fit eğrisinde bir örüntü ortaya çıkacaktır\nkendimizin oluşturduğu enzim kinetiği verisinde doğrusal olmayan bir ilişki varken, doğrusal regresyon modelleme yaptığımızda residual-fit grafiğinde örüntü oluşacak ve QQ grafiğinde sapmalar olacaktır"
+  },
+  {
+    "objectID": "ders-regresyon.html#trees-veri-seti",
+    "href": "ders-regresyon.html#trees-veri-seti",
+    "title": "Regresyon",
+    "section": "trees veri seti",
+    "text": "trees veri seti\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders-regresyon.html#kotü-model-1",
+    "href": "ders-regresyon.html#kotü-model-1",
+    "title": "Regresyon",
+    "section": "Kotü model 1",
+    "text": "Kotü model 1\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders-regresyon.html#kotü-model-2",
+    "href": "ders-regresyon.html#kotü-model-2",
+    "title": "Regresyon",
+    "section": "Kotü model 2",
+    "text": "Kotü model 2\nMichaelis-Menten benzeri doz-yanıt verisi\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders-regresyon.html#section",
+    "href": "ders-regresyon.html#section",
+    "title": "Regresyon",
+    "section": "",
+    "text": "Please enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders-regresyon.html#section-1",
+    "href": "ders-regresyon.html#section-1",
+    "title": "Regresyon",
+    "section": "",
+    "text": "Please enable JavaScript to experience the dynamic code cell content on this page."
   }
 ]
