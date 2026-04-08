@@ -728,235 +728,837 @@
     "text": "Ek Kaynaklar\n\nKhan Academy - Hypothesis Testing (İngilizce)\nYale Statlab - Hypothesis Testing (İngilizce)\nScribbr - Hypothesis Testing Explained (İngilizce)\nVeri Bilimi Okulu - Hipotez Testi (Türkçe)"
   },
   {
-    "objectID": "ders-kikare-uyg.html#giriş-ki-kare-testi-ve-sıfır-hipotezi",
-    "href": "ders-kikare-uyg.html#giriş-ki-kare-testi-ve-sıfır-hipotezi",
-    "title": "Ders 8 Uygulama: Ki-kare Testi",
-    "section": "Giriş: Ki-kare Testi ve Sıfır Hipotezi",
-    "text": "Giriş: Ki-kare Testi ve Sıfır Hipotezi\nÖnemli Not: Ki-kare testinde sıfır hipotezi (H₀), t-testindeki sıfır hipotezinden farklıdır:\n\nt-testi H₀: Gruplar arasında fark yoktur (ortalamaların eşit olduğu)\nKi-kare testi H₀: Gözlenen dağılım, beklenen dağılıma uygundur (fark yoktur)\n\nBu farklılık, Ki-kare testini yorumlarken ve sonuçları raporlarken önemlidir!"
+    "objectID": "ders05.html#özet",
+    "href": "ders05.html#özet",
+    "title": "Ders 5: t-Testi ve Örneklerle Uygulamaları",
+    "section": "Özet",
+    "text": "Özet\n\nt-testi nedir ve ne zaman kullanılır?\nt-dağılımı ve normal dağılım arasındaki fark\nt-testi türleri (tek örneklem, bağımsız örneklemler, eşleştirilmiş örneklemler)\nt-testi varsayımları\nR ile t-testi uygulamaları\nt-testi sonuçlarının yorumlanması ve raporlanması\nBiyolojide t-testi uygulamaları"
   },
   {
-    "objectID": "ders-kikare-uyg.html#soru-1-kan-grupları-ve-teorik-dağılım",
-    "href": "ders-kikare-uyg.html#soru-1-kan-grupları-ve-teorik-dağılım",
-    "title": "Ders 8 Uygulama: Ki-kare Testi",
-    "section": "Soru 1: Kan Grupları ve Teorik Dağılım",
-    "text": "Soru 1: Kan Grupları ve Teorik Dağılım\nTürkiye’de bir üniversitede yapılan çalışmada, 500 öğrenciden toplanan kan grubu verileri şu şekildedir:\n\nA grubu: 220 kişi\nB grubu: 85 kişi\nAB grubu: 35 kişi\nO grubu: 160 kişi\n\nTürkiye genelinde teorik kan grubu dağılımının %42 A, %16 B, %8 AB ve %34 O grubu şeklinde olduğu bilinmektedir.\nBu üniversitedeki kan grubu dağılımının Türkiye geneline uyup uymadığını test ediniz.\nR’daki pchisq(), chisq.test() fonksiyonları ile ve Excel’de gerekli fonksiyonlar ile test ediniz."
+    "objectID": "ders05.html#t-testi-nedir",
+    "href": "ders05.html#t-testi-nedir",
+    "title": "Ders 5: t-Testi ve Örneklerle Uygulamaları",
+    "section": "t-testi Nedir?",
+    "text": "t-testi Nedir?\nt-testi, iki grup ortalaması arasındaki farkın istatistiksel anlamlılığını değerlendirmek için kullanılan yaygın bir parametrik testtir.\nKullanım Amacı:\n\nPopülasyon standart sapması bilinmediğinde ortalamaları karşılaştırmak\nKüçük örneklem boyutlarında (n &lt; 30) bile kullanılabilir\nDeneysel verilerin istatistiksel analizinde sıklıkla kullanılır\n\nTemel Fikir:\nGözlemlenen farkın, rastgele şans eseri ortaya çıkıp çıkmadığını değerlendirmek."
   },
   {
-    "objectID": "ders-kikare-uyg.html#section",
-    "href": "ders-kikare-uyg.html#section",
-    "title": "Ders 8 Uygulama: Ki-kare Testi",
+    "objectID": "ders05.html#normal-dağılım-vs.-t-dağılımı",
+    "href": "ders05.html#normal-dağılım-vs.-t-dağılımı",
+    "title": "Ders 5: t-Testi ve Örneklerle Uygulamaları",
+    "section": "Normal Dağılım vs. t-Dağılımı",
+    "text": "Normal Dağılım vs. t-Dağılımı\n\nNormal Dağılım (Z-dağılımı):\n\nPopülasyon parametreleri (μ, σ) bilindiğinde kullanılır\nSimetrik, çan şeklindedir\nStandart normal dağılım: N(0,1)\n\nt-Dağılımı:\n\nPopülasyon standart sapması (σ) bilinmediğinde kullanılır\nNormal dağılıma benzer ancak “kuyrukları” daha kalındır\nÖrneklem büyüklüğüne (serbestlik derecesine) bağlıdır\nn büyüdükçe normal dağılıma yakınsar"
+  },
+  {
+    "objectID": "ders05.html#t-dağılımı-ve-serbestlik-derecesi",
+    "href": "ders05.html#t-dağılımı-ve-serbestlik-derecesi",
+    "title": "Ders 5: t-Testi ve Örneklerle Uygulamaları",
+    "section": "t-Dağılımı ve Serbestlik Derecesi",
+    "text": "t-Dağılımı ve Serbestlik Derecesi\n\n\n\n\n\nSerbestlik Derecesi (SD = n-1): Veriler üzerinde yapılabilen bağımsız karşılaştırmaların sayısı.\n\nGörsel Kaynak: Wikimedia Commons"
+  },
+  {
+    "objectID": "ders05.html#t-testi-çeşitleri",
+    "href": "ders05.html#t-testi-çeşitleri",
+    "title": "Ders 5: t-Testi ve Örneklerle Uygulamaları",
+    "section": "t-testi Çeşitleri",
+    "text": "t-testi Çeşitleri\n\nTek Örneklem t-testi:\n\nBir örneklem ortalamasının bilinen bir değerle karşılaştırılması\nÖrnek: “İlaç verilen hastaların ortalama kan şekeri 100 mg/dL’den farklı mı?”\n\nBağımsız Örneklemler t-testi (İki Örneklem t-testi):\n\nİki bağımsız grubun ortalamalarının karşılaştırılması\nÖrnek: “İlaç A ve İlaç B’nin ortalama etkinliği arasında fark var mı?”\n\nEşleştirilmiş Örneklemler t-testi (Bağımlı t-testi):\n\nAynı örneklemdeki farklı koşulların karşılaştırılması\nÖrnek: “Hastaların tedavi öncesi ve sonrası değerleri arasında fark var mı?”"
+  },
+  {
+    "objectID": "ders05.html#section",
+    "href": "ders05.html#section",
+    "title": "Ders 5: t-Testi ve Örneklerle Uygulamaları",
     "section": "",
-    "text": "chisq.test() ile hesaplayalım\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+    "text": "Kaynak: t-Test DATAtab"
   },
   {
-    "objectID": "ders-kikare-uyg.html#section-1",
-    "href": "ders-kikare-uyg.html#section-1",
-    "title": "Ders 8 Uygulama: Ki-kare Testi",
+    "objectID": "ders05.html#section-1",
+    "href": "ders05.html#section-1",
+    "title": "Ders 5: t-Testi ve Örneklerle Uygulamaları",
     "section": "",
-    "text": "ki kare değerini manuel olarak hesaplayıp, pchisq() fonksiyonu ile p-value hesaplayalım.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+    "text": "Kaynak: t-Test DATAtab"
   },
   {
-    "objectID": "ders-kikare-uyg.html#section-2",
-    "href": "ders-kikare-uyg.html#section-2",
-    "title": "Ders 8 Uygulama: Ki-kare Testi",
+    "objectID": "ders05.html#t-testi-formülleri",
+    "href": "ders05.html#t-testi-formülleri",
+    "title": "Ders 5: t-Testi ve Örneklerle Uygulamaları",
+    "section": "t-testi Formülleri",
+    "text": "t-testi Formülleri\n1. Tek Örneklem t-testi: \\[ t = \\frac{\\bar{x} - \\mu_0}{s/\\sqrt{n}} \\]\n2. Bağımsız Örneklemler t-testi: \\[ t = \\frac{\\bar{x}_1 - \\bar{x}_2}{\\sqrt{\\frac{s_1^2}{n_1} + \\frac{s_2^2}{n_2}}} \\]\n3. Eşleştirilmiş Örneklemler t-testi: \\[ t = \\frac{\\bar{d}}{s_d/\\sqrt{n}} \\]"
+  },
+  {
+    "objectID": "ders05.html#formüller",
+    "href": "ders05.html#formüller",
+    "title": "Ders 5: t-Testi ve Örneklerle Uygulamaları",
+    "section": "Formüller",
+    "text": "Formüller\nBurada:\n\n\\(\\bar{x}\\): Örneklem ortalaması\n\\(\\mu_0\\): Test edilen popülasyon değeri\n\\(s\\): Örneklem standart sapması\n\\(n\\): Örneklem büyüklüğü\n\\(\\bar{d}\\): Eşleştirilmiş farklılıkların ortalaması\n\\(s_d\\): Eşleştirilmiş farklılıkların standart sapması"
+  },
+  {
+    "objectID": "ders05.html#t-testi-varsayımları",
+    "href": "ders05.html#t-testi-varsayımları",
+    "title": "Ders 5: t-Testi ve Örneklerle Uygulamaları",
+    "section": "t-testi Varsayımları",
+    "text": "t-testi Varsayımları\nt-testi parametrik bir testtir ve bazı varsayımlar üzerine kuruludur:\n\nNormallik: Verilerin normal dağılıma sahip olması veya örneklem boyutunun yeterince büyük olması (n&gt;30)\nVaryansların homojenliği: Bağımsız örneklemler t-testinde, grupların varyanslarının benzer olması\nBağımsızlık: Gözlemlerin birbirinden bağımsız olması\nÖlçüm düzeyi: Verilerin aralıklı veya oransal ölçek düzeyinde olması\n\nNot: Eğer varsayımlar karşılanmazsa, parametrik olmayan alternatifler düşünülmelidir (ör. Mann-Whitney U testi, Wilcoxon işaretli sıra testi)."
+  },
+  {
+    "objectID": "ders05.html#t-testi-varsayımları-bağımsızlık",
+    "href": "ders05.html#t-testi-varsayımları-bağımsızlık",
+    "title": "Ders 5: t-Testi ve Örneklerle Uygulamaları",
+    "section": "t-testi Varsayımları (Bağımsızlık)",
+    "text": "t-testi Varsayımları (Bağımsızlık)\nBu varsayım, t-testi için toplanan verilerdeki bir ölçümün, diğer ölçümleri etkilememesi gerektiği anlamına gelir. Yani bir deney katılımcısının veya örneğin verdiği sonuç, diğer katılımcıların veya örneklerin sonuçlarını etkilememelidir.\n\nBağımsız gözlemlere örnekler\n\nFarklı farelerden alınan kan örnekleri (her fare bağımsız bir birey)\nFarklı petri kaplarında yetiştirilen bakteri kolonileri\nFarklı hastalardan alınan doku örnekleri\nRastgele seçilen 20 ağaçtan ölçülen yaprak büyüklükleri\n\nBağımsız OLMAYAN gözlemlere örnekler\n\nAynı fareden günlük olarak alınan ardışık kan örnekleri (bir gündeki ölçüm, diğer günü etkileyebilir)\nAynı bakterinin farklı zamanlardaki üreme hızları\nAynı aileden alınan genetik örnekler (genetik yakınlık nedeniyle bağımsız değil)\nYan yana büyüyen bitkilerden alınan ölçümler (birbirlerinin büyümesini etkileyebilirler)"
+  },
+  {
+    "objectID": "ders05.html#tek-yönlü-ve-çift-yönlü-t-testi",
+    "href": "ders05.html#tek-yönlü-ve-çift-yönlü-t-testi",
+    "title": "Ders 5: t-Testi ve Örneklerle Uygulamaları",
+    "section": "Tek Yönlü ve Çift Yönlü t-testi",
+    "text": "Tek Yönlü ve Çift Yönlü t-testi\nHer t-testi, alternatif hipotezin yapısına göre tek yönlü veya çift yönlü olabilir:\nÇift Yönlü t-testi (Two-sided):\n\nAlternatif hipotez: “eşit değildir” (\\(\\neq\\))\nÖrnek: \\(H_1: \\mu \\neq \\mu_0\\) veya \\(H_1: \\mu_1 \\neq \\mu_2\\)\nİlgilendiğimiz şey farkın yönü değil, sadece bir fark olup olmadığıdır\nR’da varsayılan seçenek: alternative = \"two.sided\"\n\nTek Yönlü t-testi (One-sided):\n\nAlternatif hipotez: “küçüktür” (&lt;) ya da “büyüktür” (&gt;)\nÖrnekler:\n\n\\(H_1: \\mu &lt; \\mu_0\\) (alternative = \"less\")\n\\(H_1: \\mu &gt; \\mu_0\\) (alternative = \"greater\")\n\nİlgilendiğimiz durum farkın belirli bir yönde olup olmadığıdır\nTek yönlü testler, belirli bir yönde fark beklediğimizde daha güçlüdür\n\nÖnemli Not: Tek yönlü test kullanmak için, hipotez kurulmadan önce farkın yönüne dair güçlü bir teorik gerekçe olmalıdır. Veriler incelendikten sonra tek yönlü test seçmek, tip I hata olasılığını artırır."
+  },
+  {
+    "objectID": "ders05.html#tek-örneklem-t-testi",
+    "href": "ders05.html#tek-örneklem-t-testi",
+    "title": "Ders 5: t-Testi ve Örneklerle Uygulamaları",
+    "section": "Tek Örneklem t-testi",
+    "text": "Tek Örneklem t-testi\nBir örneklemin ortalamasını, bilinen veya hipotez edilen bir popülasyon değeriyle karşılaştırır.\nÖrnek Senaryo: Yeni geliştirilen bir bitkisel ilacın, farelerde ortalama kan glikoz seviyesini referans değer olan 100 mg/dL’den farklı bir seviyeye değiştirip değiştirmediğini test etmek istiyoruz.\n\n\\(H_0: \\mu = 100\\) mg/dL (İlaç, kan glikoz seviyesini değiştirmez)\n\\(H_1: \\mu \\neq 100\\) mg/dL (İlaç, kan glikoz seviyesini değiştirir)"
+  },
+  {
+    "objectID": "ders05.html#r-ile-tek-örneklem-t-testi",
+    "href": "ders05.html#r-ile-tek-örneklem-t-testi",
+    "title": "Ders 5: t-Testi ve Örneklerle Uygulamaları",
+    "section": "R ile Tek Örneklem t-testi",
+    "text": "R ile Tek Örneklem t-testi\nİlacın test edildiği 15 farenin kan glikoz seviyelerini analiz edelim:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders05.html#sonucun-yorumlanması",
+    "href": "ders05.html#sonucun-yorumlanması",
+    "title": "Ders 5: t-Testi ve Örneklerle Uygulamaları",
+    "section": "Sonucun Yorumlanması",
+    "text": "Sonucun Yorumlanması\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nYorum: p-değeri 0.05’ten küçük olduğu için H0 hipotezini reddediyoruz. Bitkisel ilacın, farelerin kan glikoz seviyelerini, referans değer olan 100 mg/dL’den anlamlı şekilde düşürdüğünü söyleyebiliriz (t(14) = -11.94, p &lt; 0.001)."
+  },
+  {
+    "objectID": "ders05.html#bağımsız-iki-örneklem-t-testi",
+    "href": "ders05.html#bağımsız-iki-örneklem-t-testi",
+    "title": "Ders 5: t-Testi ve Örneklerle Uygulamaları",
+    "section": "Bağımsız İki Örneklem t-Testi",
+    "text": "Bağımsız İki Örneklem t-Testi\nİki farklı, bağımsız grubun ortalamalarını karşılaştırmak için kullanılır.\nÖrnek Senaryo: İki farklı gübre türünün (A ve B) domates bitkilerinin boyları üzerindeki etkisini karşılaştırmak istiyoruz.\n\n\\(H_0: \\mu_A = \\mu_B\\) (İki gübre arasında fark yok)\n\\(H_1: \\mu_A \\neq \\mu_B\\) (İki gübre arasında fark var)"
+  },
+  {
+    "objectID": "ders05.html#r-ile-bağımsız-iki-örneklem-t-testi",
+    "href": "ders05.html#r-ile-bağımsız-iki-örneklem-t-testi",
+    "title": "Ders 5: t-Testi ve Örneklerle Uygulamaları",
+    "section": "R ile Bağımsız İki Örneklem t-Testi",
+    "text": "R ile Bağımsız İki Örneklem t-Testi\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders05.html#section-2",
+    "href": "ders05.html#section-2",
+    "title": "Ders 5: t-Testi ve Örneklerle Uygulamaları",
     "section": "",
-    "text": "Excel’de CHISQ.TEST() fonksiyonunu kullanarak aynı hesaplamayı yapınız\n\n\n\nA\nB\nC\n\n\n\n\nA\n220\n0,42\n\n\nB\n85\n0,16\n\n\nAB\n35\n0,08\n\n\nO\n160\n0,34"
+    "text": "Please enable JavaScript to experience the dynamic code cell content on this page."
   },
   {
-    "objectID": "ders-kikare-uyg.html#soru-2-mendelci-kalıtım-ve-epistasis",
-    "href": "ders-kikare-uyg.html#soru-2-mendelci-kalıtım-ve-epistasis",
-    "title": "Ders 8 Uygulama: Ki-kare Testi",
-    "section": "Soru 2: Mendelci Kalıtım ve Epistasis",
-    "text": "Soru 2: Mendelci Kalıtım ve Epistasis\nBir genetik çalışmada, iki heterozigot köpeğin (EeBb x EeBb) çaprazlanmasıyla elde edilen F2 neslinde şu fenotipik oranlar gözlenmiştir:\n\nSiyah tüy (E-B-): 144 köpek\nKahverengi tüy (E-bb): 47 köpek\nSarı tüy (ee–): 65 köpek\n\nBu gözlenen oranların, Mendel’in dihybrid kalıtımında beklenen 9:3:4 oranına uygun olup olmadığını test ediniz.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+    "objectID": "ders05.html#görselleştirme-ve-yorum",
+    "href": "ders05.html#görselleştirme-ve-yorum",
+    "title": "Ders 5: t-Testi ve Örneklerle Uygulamaları",
+    "section": "Görselleştirme ve Yorum",
+    "text": "Görselleştirme ve Yorum\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nYorum: p-değeri 0.05’ten küçük olduğundan H0 hipotezini reddediyoruz. Gübre B’nin, domates bitkilerinin boyunu, Gübre A’ya göre istatistiksel olarak anlamlı şekilde daha fazla artırdığını söyleyebiliriz (t(18) = -5.14, p &lt; 0.001)."
   },
   {
-    "objectID": "ders-kikare-uyg.html#soru-3-iki-değişken-arasındaki-ilişki-bağımsızlık-testi",
-    "href": "ders-kikare-uyg.html#soru-3-iki-değişken-arasındaki-ilişki-bağımsızlık-testi",
-    "title": "Ders 8 Uygulama: Ki-kare Testi",
-    "section": "Soru 3: İki Değişken Arasındaki İlişki (Bağımsızlık Testi)",
-    "text": "Soru 3: İki Değişken Arasındaki İlişki (Bağımsızlık Testi)\nBir araştırmada, 300 bitki örneği üzerinde yapılan gözlemlerde bitki türü ile hastalık durumu arasındaki ilişki incelenmiştir. Veriler aşağıdaki tabloda verilmiştir:\n\n\n\n\nHastalıklı\nSağlıklı\nToplam\n\n\n\n\nTür A\n40\n80\n120\n\n\nTür B\n30\n70\n100\n\n\nTür C\n45\n35\n80\n\n\nToplam\n115\n185\n300\n\n\n\nBitki türü ile hastalık durumu arasında bir ilişki olup olmadığını Ki-kare bağımsızlık testi ile test ediniz.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+    "objectID": "ders05.html#eşleştirilmiş-örneklemler-t-testi",
+    "href": "ders05.html#eşleştirilmiş-örneklemler-t-testi",
+    "title": "Ders 5: t-Testi ve Örneklerle Uygulamaları",
+    "section": "Eşleştirilmiş Örneklemler t-Testi",
+    "text": "Eşleştirilmiş Örneklemler t-Testi\nAynı deneklerin/örneklerin iki farklı durumda ölçülen değerlerini karşılaştırmak için kullanılır.\nÖrnek Senaryo: 10 hastanın, belirli bir ilaç tedavisinden önce ve sonra kolesterol seviyelerini karşılaştırmak istiyoruz.\n\n\\(H_0: \\mu_d = 0\\) (Tedavi öncesi ve sonrası arasında fark yok)\n\\(H_1: \\mu_d \\neq 0\\) (Tedavi öncesi ve sonrası arasında fark var)\n\nBurada \\(\\mu_d\\), tedavi öncesi ve sonrası değerler arasındaki farkların ortalamasıdır."
   },
   {
-    "objectID": "ders-kikare-uyg.html#soru-4-ki-kare-ve-h₀",
-    "href": "ders-kikare-uyg.html#soru-4-ki-kare-ve-h₀",
-    "title": "Ders 8 Uygulama: Ki-kare Testi",
-    "section": "Soru 4: Ki-kare ve H₀",
-    "text": "Soru 4: Ki-kare ve H₀\nKi-kare testinin sıfır hipotezi (H₀), t-testindeki sıfır hipotezinden nasıl farklıdır? Aşağıdaki senaryoda bu farkı açıklayınız:\nBir bitki genetikçisi, bir genin kalıtımını inceliyor. Tek gen dominans durumunda, F2 neslinde 3:1 oranı beklenir (3 dominant : 1 resesif fenotip). Deneyinde 200 F2 bitkisini incelemiş ve şu sonuçları elde etmiştir:\n\nDominant fenotip (Mor çiçek): 158 bitki\nResesif fenotip (Beyaz çiçek): 42 bitki\n\nBu verileri analiz ederek, Ki-kare testindeki H₀’ın t-testindeki H₀’dan nasıl farklı olduğunu açıklayınız ve uygun istatistiksel testi uygulayınız.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+    "objectID": "ders05.html#r-ile-eşleştirilmiş-örneklemler-t-testi",
+    "href": "ders05.html#r-ile-eşleştirilmiş-örneklemler-t-testi",
+    "title": "Ders 5: t-Testi ve Örneklerle Uygulamaları",
+    "section": "R ile Eşleştirilmiş Örneklemler t-Testi",
+    "text": "R ile Eşleştirilmiş Örneklemler t-Testi\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
   },
   {
-    "objectID": "ders-kikare-uyg.html#soru-5-sıfır-hipotezi-için-derinlemesine-analiz",
-    "href": "ders-kikare-uyg.html#soru-5-sıfır-hipotezi-için-derinlemesine-analiz",
-    "title": "Ders 8 Uygulama: Ki-kare Testi",
-    "section": "Soru 5: Sıfır Hipotezi İçin Derinlemesine Analiz",
-    "text": "Soru 5: Sıfır Hipotezi İçin Derinlemesine Analiz\nKi-kare testlerinde sıfır hipotezi (H₀) ve alternatif hipotez (H₁), t-testlerinden farklıdır. Bu farkı anlamak için aşağıdaki senaryoyu ele alalım:\nİki farklı besin ortamında yetiştirilen bakterilerin antibiyotik direnci incelenmiştir:\n\n\n\n\nDirençli\nDuyarlı\nToplam\n\n\n\n\nBesin Ortamı A\n35\n65\n100\n\n\nBesin Ortamı B\n55\n45\n100\n\n\nToplam\n90\n110\n200\n\n\n\n\nBu senaryoda Ki-kare testi için H₀ ve H₁ hipotezlerini açıkça ifade ediniz.\nt-testi senaryosunda hipotezler nasıl farklı olurdu?\nVerileri analiz ediniz ve sonuçları yorumlayınız.\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+    "objectID": "ders05.html#görselleştirme-ve-yorum-1",
+    "href": "ders05.html#görselleştirme-ve-yorum-1",
+    "title": "Ders 5: t-Testi ve Örneklerle Uygulamaları",
+    "section": "Görselleştirme ve Yorum",
+    "text": "Görselleştirme ve Yorum\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nYorum: p-değeri 0.05’ten küçük olduğundan H0 hipotezini reddediyoruz. İlaç tedavisinin, hastaların kolesterol seviyelerini istatistiksel olarak anlamlı şekilde düşürdüğünü söyleyebiliriz (t(9) = 14.41, p &lt; 0.001). Ortalama düşüş 19.2 mg/dL’dir."
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "MBG1032 Biyoistatistik Ders Notları",
+    "objectID": "ders05.html#t-testi-sonuçlarının-raporlanması",
+    "href": "ders05.html#t-testi-sonuçlarının-raporlanması",
+    "title": "Ders 5: t-Testi ve Örneklerle Uygulamaları",
+    "section": "t-Testi Sonuçlarının Raporlanması",
+    "text": "t-Testi Sonuçlarının Raporlanması\nAkademik yayınlarda t-testi sonuçlarını nasıl raporlamalıyız?\n1. Tek Örneklem t-Testi: “Bitkisel ilacın farelerin kan glikoz seviyelerine etkisi, tek örneklem t-testi ile değerlendirilmiştir. Farelerin ortalama kan glikoz seviyesi (M = 92.1, SD = 2.6) referans değerden (100 mg/dL) anlamlı şekilde düşüktür, t(14) = -11.94, p &lt; 0.001.”\n2. Bağımsız İki Örneklem t-Testi: “Gübre B ile yetiştirilen domates bitkilerinin boyları (M = 78.3 cm, SD = 3.4), Gübre A ile yetiştirilen bitkilerden (M = 71.5 cm, SD = 3.7) anlamlı şekilde daha yüksektir, t(18) = -5.14, p &lt; 0.001.”\n3. Eşleştirilmiş Örneklemler t-Testi: “İlaç tedavisi sonrası hastaların kolesterol seviyeleri (M = 230.8 mg/dL, SD = 11.0), tedavi öncesine (M = 250.0 mg/dL, SD = 7.6) göre anlamlı şekilde daha düşüktür, t(9) = 14.41, p &lt; 0.001. Ortalama azalma 19.2 mg/dL’dir (%95 GA [16.2, 22.2]).”"
+  },
+  {
+    "objectID": "ders05.html#biyolojide-t-testi-uygulamaları",
+    "href": "ders05.html#biyolojide-t-testi-uygulamaları",
+    "title": "Ders 5: t-Testi ve Örneklerle Uygulamaları",
+    "section": "Biyolojide t-Testi Uygulamaları",
+    "text": "Biyolojide t-Testi Uygulamaları\n\nGen ekspresyonu: İki farklı koşulda gen ekspresyon seviyelerini karşılaştırma\nİlaç etkinliği: Tedavi grubunun kontrol grubuyla karşılaştırılması\nBüyüme çalışmaları: Farklı besin ortamlarında bakterilerin büyüme hızlarının karşılaştırılması\nEnzim aktivitesi: Farklı pH değerlerinde enzim aktivitelerinin karşılaştırılması\nBiyobelirteç seviyeleri: Hasta ve sağlıklı gruplar arasındaki biyobelirteç seviyelerinin karşılaştırılması\n\nÖrnek: “miR-21 ekspresyon seviyesi, kanser hastalarında (M = 4.2, SD = 1.1) sağlıklı kontrollere (M = 1.8, SD = 0.7) göre anlamlı şekilde daha yüksekti, t(58) = 10.73, p &lt; 0.001, ortalama fark = 2.4 kat (%95 GA [2.0, 2.8]).”"
+  },
+  {
+    "objectID": "ders05.html#gerçek-veri-üzerinde-uygulama-iris-veri-seti",
+    "href": "ders05.html#gerçek-veri-üzerinde-uygulama-iris-veri-seti",
+    "title": "Ders 5: t-Testi ve Örneklerle Uygulamaları",
+    "section": "Gerçek Veri Üzerinde Uygulama: iris Veri Seti",
+    "text": "Gerçek Veri Üzerinde Uygulama: iris Veri Seti\nŞimdi, iris veri setinde farklı türlerdeki çiçeklerin taç yaprak (petal) boylarını karşılaştıralım.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders05.html#görselleştirme-ve-yorum-2",
+    "href": "ders05.html#görselleştirme-ve-yorum-2",
+    "title": "Ders 5: t-Testi ve Örneklerle Uygulamaları",
+    "section": "Görselleştirme ve Yorum",
+    "text": "Görselleştirme ve Yorum\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nYorum: İki Iris türü arasındaki taç yaprak boyu farkı istatistiksel olarak anlamlıdır, t(86.7) = -39.5, p &lt; 0.001. Versicolor türünün taç yaprakları (M = 4.26 cm, SD = 0.47), setosa türünün taç yapraklarından (M = 1.46 cm, SD = 0.17) ortalama 2.8 cm daha uzundur (%95 GA [2.66, 2.94])."
+  },
+  {
+    "objectID": "ders05.html#t-testi-için-pratik-ipuçları",
+    "href": "ders05.html#t-testi-için-pratik-ipuçları",
+    "title": "Ders 5: t-Testi ve Örneklerle Uygulamaları",
+    "section": "t-Testi için Pratik İpuçları",
+    "text": "t-Testi için Pratik İpuçları\n\nVeri Hazırlığı:\n\nAykırı değerleri belirleyin ve nasıl ele alacağınıza karar verin\nVerilerin normal dağılıma uygunluğunu kontrol edin (histogram, Q-Q plot, Shapiro-Wilk testi)\n\nTest Seçimi:\n\nDoğru t-testi türünü seçin (tek örneklem, bağımsız, eşleştirilmiş)\nVarsayımlar karşılanmıyorsa, parametrik olmayan alternatifleri düşünün\n\nSonuçların Yorumlanması:\n\nSadece p-değerine değil, etki büyüklüğüne de bakın (Cohen’s d)\nGüven aralıklarını rapor edin\nBulgularınızı biyolojik bağlamda yorumlayın"
+  },
+  {
+    "objectID": "ders05.html#t-testi-ile-ilgili-yaygın-yanılgılar",
+    "href": "ders05.html#t-testi-ile-ilgili-yaygın-yanılgılar",
+    "title": "Ders 5: t-Testi ve Örneklerle Uygulamaları",
+    "section": "t-Testi ile İlgili Yaygın Yanılgılar",
+    "text": "t-Testi ile İlgili Yaygın Yanılgılar\n\n“p &gt; 0.05 ise, iki grup arasında fark yoktur”\n\nDoğrusu: H0’ı reddedemeyiz, ancak bu “fark yoktur” anlamına gelmez\n\n“p &lt; 0.05 ise, sonuç pratik olarak önemlidir”\n\nDoğrusu: İstatistiksel anlamlılık, pratik önemi garanti etmez\n\n“t-testi, her tür veri için uygundur”\n\nDoğrusu: t-testi, varsayımları karşılayan verilerde kullanılmalıdır\n\n“Örneklem büyüklüğü arttıkça, sonuçlar daha doğru olur”\n\nDoğrusu: Büyük örneklemler küçük farkları bile anlamlı gösterebilir"
+  },
+  {
+    "objectID": "ders05.html#yanılgı-4",
+    "href": "ders05.html#yanılgı-4",
+    "title": "Ders 5: t-Testi ve Örneklerle Uygulamaları",
+    "section": "Yanılgı 4",
+    "text": "Yanılgı 4\nBu yanılgıyla ilgili doğru açıklama: “Büyük örneklemler küçük farkları bile anlamlı gösterebilir” şeklindedir. İstatistiksel açıdan bakıldığında, örneklem büyüklüğü arttıkça istatistiksel testlerin gücü (power) artar. Yani, gerçekten var olan bir etkiyi tespit etme olasılığımız yükselir. Bu doğrudur ve istatistiğin temel ilkelerinden biridir. Ancak buradaki yanılgı şudur:\n\nİstatistiksel anlamlılık ≠ Pratik anlamlılık: Örneklem büyüklüğü arttıkça, çok küçük ve pratikte önemsiz farklar bile istatistiksel olarak anlamlı çıkabilir. Örneğin:\n\n10 fare ile yapılan bir deneyde 5 mg/dL’lik bir kan şekeri farkı istatistiksel olarak anlamlı çıkmayabilir.\n1000 fare ile aynı deneyi yaptığınızda 1 mg/dL’lik bir fark bile istatistiksel olarak anlamlı çıkabilir. Ancak 1 mg/dL’lik fark biyolojik olarak anlamlı mıdır? Bu kadar küçük bir fark gerçekten önemli midir?\n\nYanlılık (bias) sorunu: Örneklem büyüklüğü, sistematik hatayı (bias) azaltmaz. Eğer örneklem seçiminizde bir yanlılık varsa, örneklem büyüklüğünü artırmak bu sorunu çözmez, hatta daha da belirginleştirebilir."
+  },
+  {
+    "objectID": "ders05.html#rda-t-testi-kullanımı-özet",
+    "href": "ders05.html#rda-t-testi-kullanımı-özet",
+    "title": "Ders 5: t-Testi ve Örneklerle Uygulamaları",
+    "section": "R’da t-Testi Kullanımı (Özet)",
+    "text": "R’da t-Testi Kullanımı (Özet)\n# 1. Tek Örneklem t-Testi\n# a. Çift yönlü test (varsayılan)\nt.test(x, mu = 0)\n# b. Tek yönlü test (küçüktür)\nt.test(x, mu = 0, alternative = \"less\")\n# c. Tek yönlü test (büyüktür)\nt.test(x, mu = 0, alternative = \"greater\")"
+  },
+  {
+    "objectID": "ders05.html#rda-t-testi-kullanımı-özet-1",
+    "href": "ders05.html#rda-t-testi-kullanımı-özet-1",
+    "title": "Ders 5: t-Testi ve Örneklerle Uygulamaları",
+    "section": "R’da t-Testi Kullanımı (Özet)",
+    "text": "R’da t-Testi Kullanımı (Özet)\n# 2. Bağımsız İki Örneklem t-Testi\n# a. Varyansların eşit olduğu varsayımıyla\nt.test(x, y, var.equal = TRUE)\n# b. Varyansların eşit olmadığı varsayımıyla (Welch t-testi, var\nsayılan)\nt.test(x, y)\n# c. Tek yönlü test ile (örneğin x'in y'den büyük olup olmadığın\nı test etmek için)\nt.test(x, y, alternative = \"greater\")"
+  },
+  {
+    "objectID": "ders05.html#rda-t-testi-kullanımı-özet-2",
+    "href": "ders05.html#rda-t-testi-kullanımı-özet-2",
+    "title": "Ders 5: t-Testi ve Örneklerle Uygulamaları",
+    "section": "R’da t-Testi Kullanımı (Özet)",
+    "text": "R’da t-Testi Kullanımı (Özet)\n# 3. Eşleştirilmiş Örneklemler t-Testi\nt.test(x, y, paired = TRUE)\n# Tek yönlü seçeneği ile\nt.test(x, y, paired = TRUE, alternative = \"greater\")"
+  },
+  {
+    "objectID": "ders05.html#rda-t-testi-kullanımı-özet-3",
+    "href": "ders05.html#rda-t-testi-kullanımı-özet-3",
+    "title": "Ders 5: t-Testi ve Örneklerle Uygulamaları",
+    "section": "R’da t-Testi Kullanımı (Özet)",
+    "text": "R’da t-Testi Kullanımı (Özet)\n# 4. Formül kullanımı (veritabanları ile çalışırken)\nt.test(value ~ group, data = mydata)\nt.test(value ~ group, data = mydata, paired = TRUE)\nt.test(value ~ group, data = mydata, alternative = \"less\")"
+  },
+  {
+    "objectID": "ders05.html#farklı-t-test-türleri-için-varsayımlar-ve-r-kod-örnekleri",
+    "href": "ders05.html#farklı-t-test-türleri-için-varsayımlar-ve-r-kod-örnekleri",
+    "title": "Ders 5: t-Testi ve Örneklerle Uygulamaları",
+    "section": "Farklı t-Test Türleri için Varsayımlar ve R Kod Örnekleri",
+    "text": "Farklı t-Test Türleri için Varsayımlar ve R Kod Örnekleri\n\n\n\n\n\n\n\n\nt-Testi Türü\nTemel Varsayımlar\nR Kodu\n\n\n\n\nTek Örneklem\n- Verilerin normal dağılması veya n&gt;30- Bağımsız gözlemler\nt.test(x, mu = 0)\n\n\nBağımsız İki Örneklem(eşit varyans)\n- İki grupta da normal dağılım- Varyansların homojenliği- Bağımsız gözlemler\nt.test(x, y, var.equal = TRUE)\n\n\nBağımsız İki Örneklem(Welch/eşit olmayan varyans)\n- İki grupta da normal dağılım- Varyanslar farklı olabilir- Bağımsız gözlemler\nt.test(x, y)\n\n\nEşleştirilmiş Örneklemler\n- Farkların normal dağılması- Eşleştirilmiş gözlemler\nt.test(x, y, paired = TRUE)"
+  },
+  {
+    "objectID": "ders11.html#hangi-test-ne-zaman-kullanılmalı",
+    "href": "ders11.html#hangi-test-ne-zaman-kullanılmalı",
+    "title": "Ders 12: Hangi Test?",
+    "section": "Hangi test ne zaman kullanılmalı?",
+    "text": "Hangi test ne zaman kullanılmalı?"
+  },
+  {
+    "objectID": "ders11.html#veri-tipi-ve-dağılıma-göre-testler",
+    "href": "ders11.html#veri-tipi-ve-dağılıma-göre-testler",
+    "title": "Ders 12: Hangi Test?",
+    "section": "Veri tipi ve dağılıma göre testler",
+    "text": "Veri tipi ve dağılıma göre testler\nParametrik:"
+  },
+  {
+    "objectID": "ders11.html#section",
+    "href": "ders11.html#section",
+    "title": "Ders 12: Hangi Test?",
     "section": "",
-    "text": "Kitap1: Introductory Statistics for the Life and Biomedical Sciences (Julie Vu, David Harrington) Leanpub sitesinden ücretsiz olarak (You Pay kısmını 0’a çekerek) indirebilirsiniz.\nKitap2: Principles of Biostatistics (Marcello Pagano, Kimberlee Gauvreau)\nKitap3: Biostatistics for the Biological and Health Sciences (Mario F. Triola, Marc M. Triola,Jason Roy)\nKitap4: R Programı İle Temel İstatistiksel Yöntemler Uygulamalı İstatistik Turcademy üzerinden ücretsiz olarak erişilebilir.\n\n\n\n\nTeorik (21 Şubat 2024): İlk derste, R programı çalıştırılabilecek ortamlar tanıtıldı. Ayrıca “Is Most Published Research Wrong?” başlıklı videodan bahsedildi. Söz konusu videoda p-value değerlerinin istatistik gücü oldukça zayıf şekilde bilimsel makalelerde kullanıldığı ve bu yüzden makalelerin tekrarlanabilirliğinin (reproducability) düşük olduğundan bahsedildi.\nUygulama (26 Şubat 2024): R Temelleri Sunum. Bu içerik için kullanılan ek kaynak, “An Introduction to R” adlı online kitap.\n\n\n\n\nTeorik (28 Şubat 2024): Veri setinin merkezini belirleyen ortalama ve mediandan bahsedildi. Veri setinin dağınıklığını özetleyen sayısal yöntemler (varyans, standart sapma) ve görsel yöntemler (histogram, boxplot) tanıtıldı. Sunum linki\nUygulama (4 Mart 2024): iris.xlsx dosyasını kullanarak, Excel’de hücre aralıklarını seçme, Ctrl ve Shift tuşları ile hızlı seçim ve gezinme gösterildi. Tek bir sütün için ortalama, medyan, 1. ve 3. çeyrek dilim hesaplama ve standard sapma hesabı yapıldı. Excel’de formüllerin başka hücrelere uygulanması gösterildi. Excel’in yeni versiyonunda Boxplot ve Histogram grafikleri çizilebileceği tartışıldı.\n\n\n\nTeorik (6 Mart 2024): Olaslık hesabına dair özellikler, küme prensibi üzerinden anlatıldı. Normal dağılımın özellikleri tanıtıldı. Sunum linki\nUygulama (11 Mart 2024): R’da pnorm(), qnorm() ve dnorm() fonksiyonları kullanarak ihtimal hesapları yapıldı ve normal dağılıma uygun rastgele sayılar üretildi. Excel’de normal dağılıma uygun sayılar üreten formüller kullanıldı.\n\n\n\nTeorik (13 Mart 2024): Poisson ve Bernoulli dağılımları (Poisson dağılımı ve Geometrik dağılım) tanıtıldı. Sunum linki\nPratik (18 Mart 2024): Normal dağılım örnekleri çözüldü. Uygulama sunum linki\n\n\n\nTeorik (05 Mayıs 2025): Ki-kare testi Sunum linki\nUygulama (09 Mayıs 2025): Ki-kare uygulama Sunum linki\n\n\n\nTeorik (01 Nisan 2026): Korelasyon Sunum linki\nPratik (01 Nisan 2026): Korelasyon uygulaması\n\n\n\nTeorik (08 Nisan 2026): Regresyon Sunum linki\nPratik (08 Nisan 2026): Regresyon uygulaması"
+    "text": "Unpaired - eşli olmayan veri tipi\n\n\nKaynak: Nayak, Barun K; Hazra, Avijit1. How to choose the right statistical test?. Indian Journal of Ophthalmology 59(2):p 85-86, Mar–Apr 2011. | DOI: 10.4103/0301-4738.77005"
   },
   {
-    "objectID": "index.html#kaynaklar",
-    "href": "index.html#kaynaklar",
-    "title": "MBG1032 Biyoistatistik Ders Notları",
+    "objectID": "ders11.html#section-1",
+    "href": "ders11.html#section-1",
+    "title": "Ders 12: Hangi Test?",
     "section": "",
-    "text": "Kitap1: Introductory Statistics for the Life and Biomedical Sciences (Julie Vu, David Harrington) Leanpub sitesinden ücretsiz olarak (You Pay kısmını 0’a çekerek) indirebilirsiniz.\nKitap2: Principles of Biostatistics (Marcello Pagano, Kimberlee Gauvreau)\nKitap3: Biostatistics for the Biological and Health Sciences (Mario F. Triola, Marc M. Triola,Jason Roy)\nKitap4: R Programı İle Temel İstatistiksel Yöntemler Uygulamalı İstatistik Turcademy üzerinden ücretsiz olarak erişilebilir."
+    "text": "Paired - eşli veriler\n\n\nKaynak: Nayak, Barun K; Hazra, Avijit1. How to choose the right statistical test?. Indian Journal of Ophthalmology 59(2):p 85-86, Mar–Apr 2011. | DOI: 10.4103/0301-4738.77005"
   },
   {
-    "objectID": "index.html#ders1",
-    "href": "index.html#ders1",
-    "title": "MBG1032 Biyoistatistik Ders Notları",
+    "objectID": "ders11.html#section-2",
+    "href": "ders11.html#section-2",
+    "title": "Ders 12: Hangi Test?",
     "section": "",
-    "text": "Teorik (21 Şubat 2024): İlk derste, R programı çalıştırılabilecek ortamlar tanıtıldı. Ayrıca “Is Most Published Research Wrong?” başlıklı videodan bahsedildi. Söz konusu videoda p-value değerlerinin istatistik gücü oldukça zayıf şekilde bilimsel makalelerde kullanıldığı ve bu yüzden makalelerin tekrarlanabilirliğinin (reproducability) düşük olduğundan bahsedildi.\nUygulama (26 Şubat 2024): R Temelleri Sunum. Bu içerik için kullanılan ek kaynak, “An Introduction to R” adlı online kitap."
+    "text": "Kaynak: Statstutor Kaynakları PDF-link"
   },
   {
-    "objectID": "index.html#ders2",
-    "href": "index.html#ders2",
-    "title": "MBG1032 Biyoistatistik Ders Notları",
+    "objectID": "ders11.html#section-3",
+    "href": "ders11.html#section-3",
+    "title": "Ders 12: Hangi Test?",
     "section": "",
-    "text": "Teorik (28 Şubat 2024): Veri setinin merkezini belirleyen ortalama ve mediandan bahsedildi. Veri setinin dağınıklığını özetleyen sayısal yöntemler (varyans, standart sapma) ve görsel yöntemler (histogram, boxplot) tanıtıldı. Sunum linki\nUygulama (4 Mart 2024): iris.xlsx dosyasını kullanarak, Excel’de hücre aralıklarını seçme, Ctrl ve Shift tuşları ile hızlı seçim ve gezinme gösterildi. Tek bir sütün için ortalama, medyan, 1. ve 3. çeyrek dilim hesaplama ve standard sapma hesabı yapıldı. Excel’de formüllerin başka hücrelere uygulanması gösterildi. Excel’in yeni versiyonunda Boxplot ve Histogram grafikleri çizilebileceği tartışıldı."
+    "text": "Kaynak: Statstutor Kaynakları PDF-link"
   },
   {
-    "objectID": "index.html#ders03",
-    "href": "index.html#ders03",
-    "title": "MBG1032 Biyoistatistik Ders Notları",
+    "objectID": "ders11.html#section-4",
+    "href": "ders11.html#section-4",
+    "title": "Ders 12: Hangi Test?",
     "section": "",
-    "text": "Teorik (6 Mart 2024): Olaslık hesabına dair özellikler, küme prensibi üzerinden anlatıldı. Normal dağılımın özellikleri tanıtıldı. Sunum linki\nUygulama (11 Mart 2024): R’da pnorm(), qnorm() ve dnorm() fonksiyonları kullanarak ihtimal hesapları yapıldı ve normal dağılıma uygun rastgele sayılar üretildi. Excel’de normal dağılıma uygun sayılar üreten formüller kullanıldı."
+    "text": "Research Question\nType of Data\nStatistical Test\n\n\n\n\nIs there a difference between two unpaired groups?\nContinuous (normally distributed)\nt-test\n\n\nIs there a difference between two unpaired groups?\nContinuous (not normally distributed)\nWilcoxon rank-sum test (Mann-Whitney U test)\n\n\nIs there a difference between more than two unpaired groups?\nContinuous (normally distributed)\nOne-way ANOVA\n\n\nIs there a difference between more than two unpaired groups?\nContinuous (not normally distributed)\nKruskal-Wallis test\n\n\nIs there a difference between two paired groups?\nContinuous (normally distributed)\nPaired t-test\n\n\nIs there a difference between two paired groups?\nContinuous (not normally distributed)\nWilcoxon signed-rank test\n\n\nIs there a difference between more than two paired groups?\nContinuous (normally distributed)\nRepeated measures ANOVA\n\n\nIs there a difference between more than two paired groups?\nContinuous (not normally distributed)\nFriedman test\n\n\nIs there an association between two continuous variables?\nContinuous\nPearson correlation test\n\n\nIs there an association between two categorical variables?\nCategorical\nChi-squared test\n\n\nIs there an association between a continuous and a categorical variable?\nContinuous and categorical\nANOVA or regression analysis"
   },
   {
-    "objectID": "index.html#ders04",
-    "href": "index.html#ders04",
-    "title": "MBG1032 Biyoistatistik Ders Notları",
+    "objectID": "ders11.html#ek-kaynaklar",
+    "href": "ders11.html#ek-kaynaklar",
+    "title": "Ders 12: Hangi Test?",
+    "section": "Ek kaynaklar",
+    "text": "Ek kaynaklar\n\nİnteraktif olarak test seçmek için: https://www.statsflowchart.co.uk/\nFormül ve özellikleri detaylı gösteren liste: https://www.statskingdom.com/"
+  },
+  {
+    "objectID": "ders05-uygulama.html#iris-verisi",
+    "href": "ders05-uygulama.html#iris-verisi",
+    "title": "Ders 5 Uygulama: t-Testi ve Örneklerle Uygulamaları",
+    "section": "Iris verisi",
+    "text": "Iris verisi\n\n\nVersicolor Sepal genişlik 3’ten farklı mıdır?\nVersicolor ve Virginica arasında fark var mıdır?"
+  },
+  {
+    "objectID": "ders05-uygulama.html#tek-örnek-t-testi",
+    "href": "ders05-uygulama.html#tek-örnek-t-testi",
+    "title": "Ders 5 Uygulama: t-Testi ve Örneklerle Uygulamaları",
+    "section": "Tek örnek t-testi",
+    "text": "Tek örnek t-testi\nSadece Versicolor Sepal genişlik verisini alıp 3 ile karşılaştıralım\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders05-uygulama.html#iki-örnek-t-testi",
+    "href": "ders05-uygulama.html#iki-örnek-t-testi",
+    "title": "Ders 5 Uygulama: t-Testi ve Örneklerle Uygulamaları",
+    "section": "İki örnek t-testi",
+    "text": "İki örnek t-testi\nR’da t-testi\nİki yaklaşım var\n\nt.test(data1, data2)\nt.test(Olcum ~ Grup)"
+  },
+  {
+    "objectID": "ders05-uygulama.html#section",
+    "href": "ders05-uygulama.html#section",
+    "title": "Ders 5 Uygulama: t-Testi ve Örneklerle Uygulamaları",
     "section": "",
-    "text": "Teorik (13 Mart 2024): Poisson ve Bernoulli dağılımları (Poisson dağılımı ve Geometrik dağılım) tanıtıldı. Sunum linki\nPratik (18 Mart 2024): Normal dağılım örnekleri çözüldü. Uygulama sunum linki"
+    "text": "Please enable JavaScript to experience the dynamic code cell content on this page."
   },
   {
-    "objectID": "index.html#ders05",
-    "href": "index.html#ders05",
-    "title": "MBG1032 Biyoistatistik Ders Notları",
+    "objectID": "ders05-uygulama.html#section-1",
+    "href": "ders05-uygulama.html#section-1",
+    "title": "Ders 5 Uygulama: t-Testi ve Örneklerle Uygulamaları",
     "section": "",
-    "text": "Teorik (05 Mayıs 2025): Ki-kare testi Sunum linki\nUygulama (09 Mayıs 2025): Ki-kare uygulama Sunum linki"
+    "text": "Please enable JavaScript to experience the dynamic code cell content on this page."
   },
   {
-    "objectID": "index.html#ders06",
-    "href": "index.html#ders06",
-    "title": "MBG1032 Biyoistatistik Ders Notları",
+    "objectID": "ders05-uygulama.html#excelde-t.test",
+    "href": "ders05-uygulama.html#excelde-t.test",
+    "title": "Ders 5 Uygulama: t-Testi ve Örneklerle Uygulamaları",
+    "section": "Excel’de T.test",
+    "text": "Excel’de T.test\nAynı testleri iris verisi için yapınız. Dosya link"
+  },
+  {
+    "objectID": "ders05-uygulama.html#iki-örnek-t-testi-bağımlıilişkili",
+    "href": "ders05-uygulama.html#iki-örnek-t-testi-bağımlıilişkili",
+    "title": "Ders 5 Uygulama: t-Testi ve Örneklerle Uygulamaları",
+    "section": "İki örnek t-testi (bağımlı/ilişkili)",
+    "text": "İki örnek t-testi (bağımlı/ilişkili)\nİlaç1 ve ilaç2 arasında uykuya etki açısından fark var mıdır?\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nVeriyi düzenlemek gerek"
+  },
+  {
+    "objectID": "ders05-uygulama.html#section-2",
+    "href": "ders05-uygulama.html#section-2",
+    "title": "Ders 5 Uygulama: t-Testi ve Örneklerle Uygulamaları",
     "section": "",
-    "text": "Teorik (01 Nisan 2026): Korelasyon Sunum linki\nPratik (01 Nisan 2026): Korelasyon uygulaması"
+    "text": "Please enable JavaScript to experience the dynamic code cell content on this page."
   },
   {
-    "objectID": "index.html#ders07",
-    "href": "index.html#ders07",
-    "title": "MBG1032 Biyoistatistik Ders Notları",
+    "objectID": "ders05-uygulama.html#tek-yönlü-bağımlı-test",
+    "href": "ders05-uygulama.html#tek-yönlü-bağımlı-test",
+    "title": "Ders 5 Uygulama: t-Testi ve Örneklerle Uygulamaları",
+    "section": "Tek yönlü bağımlı test",
+    "text": "Tek yönlü bağımlı test\nİlaç2 uykuya etkisi “daha çok” şeklindeki hipotez için t.test uygulayınız.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders05-uygulama.html#ekstra-sorular",
+    "href": "ders05-uygulama.html#ekstra-sorular",
+    "title": "Ders 5 Uygulama: t-Testi ve Örneklerle Uygulamaları",
+    "section": "Ekstra sorular",
+    "text": "Ekstra sorular\nPlantGrowth verisinde, ctrl ve trt1 arasında fark olup olmadığını test ediniz.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders05-uygulama.html#ekstra-sorular2",
+    "href": "ders05-uygulama.html#ekstra-sorular2",
+    "title": "Ders 5 Uygulama: t-Testi ve Örneklerle Uygulamaları",
+    "section": "Ekstra sorular2",
+    "text": "Ekstra sorular2\nchickwts verisinde soybean veya casein ile besleme arasında fark var mıdır, test ediniz.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders05-uygulama.html#section-3",
+    "href": "ders05-uygulama.html#section-3",
+    "title": "Ders 5 Uygulama: t-Testi ve Örneklerle Uygulamaları",
     "section": "",
-    "text": "Teorik (08 Nisan 2026): Regresyon Sunum linki\nPratik (08 Nisan 2026): Regresyon uygulaması"
+    "text": "soybean ve linseed ile besleme arasında fark var mıdır?\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
   },
   {
-    "objectID": "index.html#ders09",
-    "href": "index.html#ders09",
-    "title": "MBG1032 Biyoistatistik Ders Notları",
-    "section": "Ders09",
-    "text": "Ders09\nTeorik (22 Nisan 2026): Güven aralığı ve hipotez testi konusu işlendi Sunum linki\nPratik (22 Nisan 2026): Güven aralığı ve hipotez testi örnekleri"
+    "objectID": "ders10.html#ilk-video",
+    "href": "ders10.html#ilk-video",
+    "title": "Ders 11: Bilimsel tekrarlanabilirlik",
+    "section": "ilk video",
+    "text": "ilk video\nDersiminizin ilk haftalarında izlediğimiz video\nhttps://www.youtube.com/watch?v=42QuXLucH3Q"
   },
   {
-    "objectID": "index.html#ders10",
-    "href": "index.html#ders10",
-    "title": "MBG1032 Biyoistatistik Ders Notları",
-    "section": "Ders10",
-    "text": "Ders10\nTeorik (27 Mart 2024): T-testi. Sunum linki\nPratik (01 Nisan 2024): T-testi uygulamaları Uygulama sunum linki"
+    "objectID": "ders10.html#özet",
+    "href": "ders10.html#özet",
+    "title": "Ders 11: Bilimsel tekrarlanabilirlik",
+    "section": "özet",
+    "text": "özet\n\np-hacking\ndark chocolate case\n6th sense case\nsame data different conclusions case (do black players get more red cards? 29 groups work on same data; 8 groups said “equally likely”, 19 groups said “more likely” 2 groups said “3 times more likely”\n53 landmark cancer studies only 6 of them can be reproduced"
   },
   {
-    "objectID": "index.html#ders11",
-    "href": "index.html#ders11",
-    "title": "MBG1032 Biyoistatistik Ders Notları",
-    "section": "Ders11",
-    "text": "Ders11\nTeorik (03 Nisan 2024): ANOVA Sunum linki\nUygulama (2 Mayıs 2025): İstatistik Güç ve ANOVA uygulama Uygulama sunum linki"
+    "objectID": "ders10.html#section-1",
+    "href": "ders10.html#section-1",
+    "title": "Ders 11: Bilimsel tekrarlanabilirlik",
+    "section": "",
+    "text": "nearly 1/3 of the published results will be wrong even if the things are working normally (ie. statistical power of 80%)\n\n\ntypical statistical power in studies is around 20-40%"
   },
   {
-    "objectID": "index.html#ders12",
-    "href": "index.html#ders12",
-    "title": "MBG1032 Biyoistatistik Ders Notları",
-    "section": "Ders12",
-    "text": "Ders12\nTeorik (03 Nisan 2024): İstatistik Güç Sunum linki"
+    "objectID": "ders10.html#section-2",
+    "href": "ders10.html#section-2",
+    "title": "Ders 11: Bilimsel tekrarlanabilirlik",
+    "section": "",
+    "text": "Kaynaklar:\n\nWhy Most Published Research Findings Are False PLoS article\nUnderstanding the p-value - Statistics Help\nScience Isn’t Broken\nI Fooled Millions Into Thinking Chocolate Helps Weight Loss. Here’s How"
   },
   {
-    "objectID": "index.html#ders13",
-    "href": "index.html#ders13",
-    "title": "MBG1032 Biyoistatistik Ders Notları",
-    "section": "Ders13",
-    "text": "Ders13\nTeorik (12 Mayıs 2025): Hesapsal istatistik Sunum linki"
+    "objectID": "ders10.html#ikinci-video",
+    "href": "ders10.html#ikinci-video",
+    "title": "Ders 11: Bilimsel tekrarlanabilirlik",
+    "section": "ikinci video",
+    "text": "ikinci video\nThe Four Most Dangerous Words? A New Study Shows | Laura Arnold | TEDxPennsylvaniaAvenue"
   },
   {
-    "objectID": "index.html#ders14",
-    "href": "index.html#ders14",
-    "title": "MBG1032 Biyoistatistik Ders Notları",
-    "section": "Ders14",
-    "text": "Ders14\n** Ara Sınav 2**"
+    "objectID": "ders10.html#özet-1",
+    "href": "ders10.html#özet-1",
+    "title": "Ders 11: Bilimsel tekrarlanabilirlik",
+    "section": "özet",
+    "text": "özet\n\n“power posing” çalışması\nbeslenme ve sağlık alanında örnek sayısı düşük, yanlış metodoloji ve seçici raporlama\n“file drawer effect” ve “p-hacking”"
   },
   {
-    "objectID": "index.html#ders15",
-    "href": "index.html#ders15",
-    "title": "MBG1032 Biyoistatistik Ders Notları",
-    "section": "Ders15",
-    "text": "Ders15\nTeorik (23 Mayıs 2025): Bilimsel tekrarlanabilirlik Sunum linki"
+    "objectID": "ders10.html#beslenme-üzerine-çalışma",
+    "href": "ders10.html#beslenme-üzerine-çalışma",
+    "title": "Ders 11: Bilimsel tekrarlanabilirlik",
+    "section": "beslenme üzerine çalışma",
+    "text": "beslenme üzerine çalışma"
   },
   {
-    "objectID": "index.html#ders16",
-    "href": "index.html#ders16",
-    "title": "MBG1032 Biyoistatistik Ders Notları",
-    "section": "Ders16",
-    "text": "Ders16\nTeorik (26 Mayıs 2025): Hangi test? Sunum linki"
+    "objectID": "ders10.html#başka-bir-çalışma",
+    "href": "ders10.html#başka-bir-çalışma",
+    "title": "Ders 11: Bilimsel tekrarlanabilirlik",
+    "section": "başka bir çalışma",
+    "text": "başka bir çalışma"
   },
   {
-    "objectID": "ders05-old.html#slide1",
-    "href": "ders05-old.html#slide1",
-    "title": "Ders5: Başlık",
-    "section": "slide1",
-    "text": "slide1\n\nt-dağılımı (düz çizgi) ve normal dağılım karşılaştırması"
+    "objectID": "ders04-claude.html#özet",
+    "href": "ders04-claude.html#özet",
+    "title": "Ders8: Güven Aralıkları ve Hipotez Testi",
+    "section": "Özet",
+    "text": "Özet\n\nGüven Aralığı (Confidence Interval) Kavramı\nGüven Aralığı Hesaplama\nHipotez Testi Temelleri\nTip I ve Tip II Hatalar\np-değeri Kavramı\nTek Örneklem Hipotez Testi"
   },
   {
-    "objectID": "ders05-old.html#slide2",
-    "href": "ders05-old.html#slide2",
-    "title": "Ders5: Başlık",
-    "section": "slide2",
-    "text": "slide2\n\nimage-20240327044422037df (serbestlik derecesi ) arttıkça, t-dağılımı normal dağılıma yaklaşmaktadır"
+    "objectID": "ders04-claude.html#güven-aralığı-kavramı",
+    "href": "ders04-claude.html#güven-aralığı-kavramı",
+    "title": "Ders8: Güven Aralıkları ve Hipotez Testi",
+    "section": "Güven Aralığı Kavramı",
+    "text": "Güven Aralığı Kavramı\nGüven aralığı, bir popülasyon parametresi için olası değerlerin bir aralığıdır.\n\nBelirli bir güven düzeyi (genellikle %95) ile ifade edilir\nÖrneklem verisinden hesaplanır\nTahmin edilen parametre hakkında belirsizliği gösterir\n\n\n\n\nGüven aralığı örneklemi popülasyonla ilişkilendirir"
   },
   {
-    "objectID": "ders05-old.html#slide3",
-    "href": "ders05-old.html#slide3",
-    "title": "Ders5: Başlık",
-    "section": "slide3",
-    "text": "slide3\n\nimage-20240327044528724t-tablosu"
+    "objectID": "ders04-claude.html#güven-aralığının-yorumlanması",
+    "href": "ders04-claude.html#güven-aralığının-yorumlanması",
+    "title": "Ders8: Güven Aralıkları ve Hipotez Testi",
+    "section": "Güven Aralığının Yorumlanması",
+    "text": "Güven Aralığının Yorumlanması\n%95 güven aralığı şu anlama gelir:\n\nEğer aynı popülasyondan yüzlerce örneklem alıp her biri için güven aralığı hesaplarsak, bu aralıkların %95’i gerçek popülasyon parametresini içerecektir\nYanlış yorumlama: “Gerçek değerin bu aralıkta olma olasılığı %95’tir”\n\n\n\n\nFarklı örneklemlerden elde edilen güven aralıkları"
   },
   {
-    "objectID": "ders05-old.html#slide4",
-    "href": "ders05-old.html#slide4",
-    "title": "Ders5: Başlık",
-    "section": "slide4",
-    "text": "slide4\n\ndf=18 için, -2.10 altında kalan alan boyanmıştır. t-dağılımının ne kadarı -2.10 altında kalır?\n\ndf=20 iken, t-dağılımının ne kadarı -1.60’tan küçük ve 1.60’tan büyüktür?\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+    "objectID": "ders04-claude.html#ortalama-için-güven-aralığı-formülü",
+    "href": "ders04-claude.html#ortalama-için-güven-aralığı-formülü",
+    "title": "Ders8: Güven Aralıkları ve Hipotez Testi",
+    "section": "Ortalama için Güven Aralığı Formülü",
+    "text": "Ortalama için Güven Aralığı Formülü\nBir popülasyon ortalaması için %95 güven aralığı:\n\\[ \\bar{x} \\pm 1.96 \\times \\frac{\\sigma}{\\sqrt{n}} \\]\nBurada: * \\(\\bar{x}\\) = örneklem ortalaması * \\(\\sigma\\) = popülasyon standart sapması (bilinmiyorsa örneklem standart sapması \\(s\\) kullanılır) * \\(n\\) = örneklem büyüklüğü * \\(1.96\\) = %95 güven düzeyi için z-değeri\nPopülasyon standart sapması bilinmediğinde (genellikle):\n\\[ \\bar{x} \\pm t_{\\alpha/2, n-1} \\times \\frac{s}{\\sqrt{n}} \\]"
   },
   {
-    "objectID": "ders05-old.html#slide5",
-    "href": "ders05-old.html#slide5",
-    "title": "Ders5: Başlık",
-    "section": "slide5",
-    "text": "slide5\nçift yönlü 100(1-\\(\\alpha\\))% güven aralığı için formül:\n\nSE = s / \\(\\sqrt{n}\\)\nTek yönlü olması durumunda\n\n\n\nimage-20240327051040495"
+    "objectID": "ders04-claude.html#rda-güven-aralığı-hesaplama",
+    "href": "ders04-claude.html#rda-güven-aralığı-hesaplama",
+    "title": "Ders8: Güven Aralıkları ve Hipotez Testi",
+    "section": "R’da Güven Aralığı Hesaplama",
+    "text": "R’da Güven Aralığı Hesaplama\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
   },
   {
-    "objectID": "ders05-old.html#slide6",
-    "href": "ders05-old.html#slide6",
-    "title": "Ders5: Başlık",
-    "section": "slide6",
-    "text": "slide6\nYunuslarda civa miktarı üzerine yapılan çalışmada, Japonya’nın Taiji bölgesinden rastgele seçilen 19 adet yunusta civa miktarına dair bilgiler şu şekildedir.\n\nOrtalama civa miktarı için %95 güven aralığını hesaplayınız.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+    "objectID": "ders04-claude.html#t.test-fonksiyonu-ile-güven-aralığı",
+    "href": "ders04-claude.html#t.test-fonksiyonu-ile-güven-aralığı",
+    "title": "Ders8: Güven Aralıkları ve Hipotez Testi",
+    "section": "t.test Fonksiyonu ile Güven Aralığı",
+    "text": "t.test Fonksiyonu ile Güven Aralığı\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
   },
   {
-    "objectID": "ders05-old.html#slide7",
-    "href": "ders05-old.html#slide7",
-    "title": "Ders5: Başlık",
-    "section": "slide7",
-    "text": "slide7"
+    "objectID": "ders04-claude.html#güven-düzeyinin-etkisi",
+    "href": "ders04-claude.html#güven-düzeyinin-etkisi",
+    "title": "Ders8: Güven Aralıkları ve Hipotez Testi",
+    "section": "Güven Düzeyinin Etkisi",
+    "text": "Güven Düzeyinin Etkisi\nGüven düzeyi arttıkça güven aralığı genişler:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nFarklı güven düzeyleri için aralıklar"
+  },
+  {
+    "objectID": "ders04-claude.html#örneklem-büyüklüğünün-etkisi",
+    "href": "ders04-claude.html#örneklem-büyüklüğünün-etkisi",
+    "title": "Ders8: Güven Aralıkları ve Hipotez Testi",
+    "section": "Örneklem Büyüklüğünün Etkisi",
+    "text": "Örneklem Büyüklüğünün Etkisi\nÖrneklem büyüklüğü arttıkça güven aralığı daralır:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders04-claude.html#hipotez-testi-kavramı",
+    "href": "ders04-claude.html#hipotez-testi-kavramı",
+    "title": "Ders8: Güven Aralıkları ve Hipotez Testi",
+    "section": "Hipotez Testi Kavramı",
+    "text": "Hipotez Testi Kavramı\nHipotez testi, bir popülasyon parametresi hakkındaki iddianın (hipotezin) verilerle desteklenip desteklenmediğini belirlemek için kullanılan istatistiksel bir yöntemdir.\nTemel bileşenler:\n\nSıfır Hipotezi (H₀): Test edilen iddia (genellikle “fark yok” veya “etki yok” şeklinde)\nAlternatif Hipotez (H₁): Sıfır hipotezi doğru değilse geçerli olan alternatif\nTest İstatistiği: Verilerden hesaplanan bir değer\nKritik Değer veya p-değeri: Hipotezi reddetme veya kabul etme kararını verme kriteri"
+  },
+  {
+    "objectID": "ders04-claude.html#hipotez-testi-adımları",
+    "href": "ders04-claude.html#hipotez-testi-adımları",
+    "title": "Ders8: Güven Aralıkları ve Hipotez Testi",
+    "section": "Hipotez Testi Adımları",
+    "text": "Hipotez Testi Adımları\n\nHipotezleri belirle (H₀ ve H₁)\nAnlamlılık düzeyini seç (genellikle α = 0.05)\nUygun test istatistiğini seç ve hesapla\np-değerini hesapla\nKarar ver: p-değeri &lt; α ise H₀ reddedilir\n\n\n\n\nHipotez testi akış şeması"
+  },
+  {
+    "objectID": "ders04-claude.html#tip-i-ve-tip-ii-hatalar",
+    "href": "ders04-claude.html#tip-i-ve-tip-ii-hatalar",
+    "title": "Ders8: Güven Aralıkları ve Hipotez Testi",
+    "section": "Tip I ve Tip II Hatalar",
+    "text": "Tip I ve Tip II Hatalar\n\nTip I Hata (α): Doğru olan sıfır hipotezini yanlışlıkla reddetmek\n\n“Yanlış pozitif” olarak da bilinir\nOlasılığı anlamlılık düzeyi (α) ile kontrol edilir\n\nTip II Hata (β): Yanlış olan sıfır hipotezini reddetmeme\n\n“Yanlış negatif” olarak da bilinir\nİstatistiksel güç = 1 - β\n\n\n\n\n\nTip I ve Tip II hatalar"
+  },
+  {
+    "objectID": "ders04-claude.html#p-değeri-kavramı",
+    "href": "ders04-claude.html#p-değeri-kavramı",
+    "title": "Ders8: Güven Aralıkları ve Hipotez Testi",
+    "section": "p-değeri Kavramı",
+    "text": "p-değeri Kavramı\np-değeri, gözlenen sonuçların (veya daha aşırı sonuçların) sıfır hipotezi doğru olduğunda meydana gelme olasılığıdır.\n\nKüçük p-değeri (genellikle &lt; 0.05): Gözlenen veri sıfır hipotezi ile tutarsız\nBüyük p-değeri: Gözlenen veri sıfır hipotezi ile tutarlı\n\n\n\n\np-değeri kavramı"
+  },
+  {
+    "objectID": "ders04-claude.html#p-değeri-yorumlama",
+    "href": "ders04-claude.html#p-değeri-yorumlama",
+    "title": "Ders8: Güven Aralıkları ve Hipotez Testi",
+    "section": "p-değeri Yorumlama",
+    "text": "p-değeri Yorumlama\n\np &lt; 0.05: “İstatistiksel olarak anlamlı” (H₀ reddedilir)\np ≥ 0.05: “İstatistiksel olarak anlamlı değil” (H₀ reddedilemez)\n\nYaygın Yanlış Anlamalar: * p-değeri, hipotezin doğru olma olasılığı değildir * İstatistiksel anlamlılık her zaman pratik anlamlılık demek değildir * p-değeri büyükse “fark yok” kanıtlanmış olmaz"
+  },
+  {
+    "objectID": "ders04-claude.html#tek-örneklem-t-testi",
+    "href": "ders04-claude.html#tek-örneklem-t-testi",
+    "title": "Ders8: Güven Aralıkları ve Hipotez Testi",
+    "section": "Tek Örneklem t-testi",
+    "text": "Tek Örneklem t-testi\nBir örneklemin ortalamasının belirli bir değerden farklı olup olmadığını test eder.\nHipotezler: * H₀: μ = μ₀ (popülasyon ortalaması belirli bir değere eşittir) * H₁: μ ≠ μ₀ (iki yönlü) veya μ &gt; μ₀ ya da μ &lt; μ₀ (tek yönlü)\nTest İstatistiği: \\[ t = \\frac{\\bar{x} - \\mu_0}{\\frac{s}{\\sqrt{n}}} \\]"
+  },
+  {
+    "objectID": "ders04-claude.html#rda-tek-örneklem-t-testi",
+    "href": "ders04-claude.html#rda-tek-örneklem-t-testi",
+    "title": "Ders8: Güven Aralıkları ve Hipotez Testi",
+    "section": "R’da Tek Örneklem t-testi",
+    "text": "R’da Tek Örneklem t-testi\nÖrnek: Bir grup farenin ortalama ağırlığının 25 gram olduğu hipotezini test edelim.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders04-claude.html#hipotez-testi-çeşitleri",
+    "href": "ders04-claude.html#hipotez-testi-çeşitleri",
+    "title": "Ders8: Güven Aralıkları ve Hipotez Testi",
+    "section": "Hipotez Testi Çeşitleri",
+    "text": "Hipotez Testi Çeşitleri\n\n\n\nYaygın hipotez testleri"
+  },
+  {
+    "objectID": "ders04-claude.html#örnek-senaryo-gen-ekspresyonu",
+    "href": "ders04-claude.html#örnek-senaryo-gen-ekspresyonu",
+    "title": "Ders8: Güven Aralıkları ve Hipotez Testi",
+    "section": "Örnek Senaryo: Gen Ekspresyonu",
+    "text": "Örnek Senaryo: Gen Ekspresyonu\nBir gen terapisinin bir genin ekspresyon seviyesini artırdığı iddia ediliyor. Normal ekspresyon seviyesi 15 birim olarak biliniyor. 12 hasta üzerinde yapılan tedavi sonrası ölçümler:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nSonuç yorumu: p-değeri 0.05’ten küçük olduğu için, tedavinin gen ekspresyonunu artırdığı hipotezini desteklemekteyiz."
+  },
+  {
+    "objectID": "ders04-claude.html#güven-aralığı-ve-hipotez-testi-ilişkisi",
+    "href": "ders04-claude.html#güven-aralığı-ve-hipotez-testi-ilişkisi",
+    "title": "Ders8: Güven Aralıkları ve Hipotez Testi",
+    "section": "Güven Aralığı ve Hipotez Testi İlişkisi",
+    "text": "Güven Aralığı ve Hipotez Testi İlişkisi\nGüven aralığı ve hipotez testi birbirini tamamlayıcı yaklaşımlardır:\n\nEğer %95 güven aralığı test edilen değeri (μ₀) içermiyorsa, α = 0.05 için hipotez testi de H₀’ı reddeder\nGüven aralığı, etki büyüklüğü hakkında daha fazla bilgi verir\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders04-claude.html#biyolojik-bilimler-için-önemi",
+    "href": "ders04-claude.html#biyolojik-bilimler-için-önemi",
+    "title": "Ders8: Güven Aralıkları ve Hipotez Testi",
+    "section": "Biyolojik Bilimler için Önemi",
+    "text": "Biyolojik Bilimler için Önemi\nGüven aralıkları ve hipotez testleri biyolojik bilimlerde çok önemlidir:\n\nİlaç çalışmaları: Bir ilacın etkili olup olmadığını belirlemek\nGen ekspresyon analizleri: Farklı koşullar altında gen ekspresyonunu karşılaştırmak\nKlinik araştırmalar: Tedavi etkinliğini değerlendirmek\nEkolojik çalışmalar: Tür çeşitliliğindeki değişimleri incelemek\n\nAncak p-değerine aşırı bağımlılık, tekrarlanabilirlik krizi gibi sorunlara yol açmıştır."
+  },
+  {
+    "objectID": "ders04-claude.html#pratik-ipuçları",
+    "href": "ders04-claude.html#pratik-ipuçları",
+    "title": "Ders8: Güven Aralıkları ve Hipotez Testi",
+    "section": "Pratik İpuçları",
+    "text": "Pratik İpuçları\n\nHipotez testi tek başına yeterli değildir - etki büyüklüğü ve güven aralıklarını da raporlayın\nDüşük p-değeri her zaman büyük etki anlamına gelmez\nÖrneklem büyüklüğü arttıkça küçük etkiler bile istatistiksel olarak anlamlı görünebilir\nÇoklu test düzeltmesi (Bonferroni, FDR, vb.) kullanmayı unutmayın\nSonuçları biyolojik bağlamda yorumlayın"
+  },
+  {
+    "objectID": "ders04-claude.html#soru",
+    "href": "ders04-claude.html#soru",
+    "title": "Ders8: Güven Aralıkları ve Hipotez Testi",
+    "section": "Soru",
+    "text": "Soru\nBir laboratuvar, geliştirdiği yeni bir ilacın hücre büyümesini arttırdığını iddia ediyor. Standart koşullarda hücre büyümesi ortalama 12 μm/saat’tir. Yeni ilaçla tedavi edilen 15 hücre örneğinde elde edilen büyüme oranları (μm/saat):\n14.2, 13.7, 13.1, 12.8, 14.5, 15.2, 13.4, 14.3, 12.9, 13.6, 14.8, 13.9, 14.1, 13.5, 13.3\nİlacın hücre büyümesini arttırdığını α = 0.05 düzeyinde test edin ve sonuçları yorumlayın.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders09.html#özet",
+    "href": "ders09.html#özet",
+    "title": "Ders 9: Hesapsal İstatistik",
+    "section": "Özet",
+    "text": "Özet\n\nÇok çekirdek - simulasyon\nHesapsal istatistik - “Allen Downey - A future of data science” başlıklı konuşması\nR/infer paketi"
+  },
+  {
+    "objectID": "ders09.html#hesapsal-istatistik",
+    "href": "ders09.html#hesapsal-istatistik",
+    "title": "Ders 9: Hesapsal İstatistik",
+    "section": "Hesapsal istatistik",
+    "text": "Hesapsal istatistik\n\n“A future of data science” başlıklı konuşmadan alınmıştır"
+  },
+  {
+    "objectID": "ders09.html#geleneksel-istatistikten-simülasyona",
+    "href": "ders09.html#geleneksel-istatistikten-simülasyona",
+    "title": "Ders 9: Hesapsal İstatistik",
+    "section": "Geleneksel İstatistikten Simülasyona",
+    "text": "Geleneksel İstatistikten Simülasyona\n\nŞimdiye kadar t-test, ANOVA ve Ki-kare gibi parametrik testleri öğrendik\nBu testler belirli varsayımlara dayanır (normallik, varyans homojenliği vb.)\nBugün farklı bir bakış açısı ile tanışacağız\nSoru aynı: “Gözlediğimiz etki gerçek mi, yoksa şansa bağlı mı?”"
+  },
+  {
+    "objectID": "ders09.html#simülasyon-tabanlı-istatistik",
+    "href": "ders09.html#simülasyon-tabanlı-istatistik",
+    "title": "Ders 9: Hesapsal İstatistik",
+    "section": "Simülasyon Tabanlı İstatistik",
+    "text": "Simülasyon Tabanlı İstatistik\n\nModern bilgisayarların gücünü kullanarak veri yeniden örnekleme\nRastgele süreçleri taklit etme\nTeorik dağılımlar yerine veriden öğrenme\nR’daki infer paketi bu yaklaşımı kolaylaştırır"
+  },
+  {
+    "objectID": "ders09.html#infer-paketi-nedir",
+    "href": "ders09.html#infer-paketi-nedir",
+    "title": "Ders 9: Hesapsal İstatistik",
+    "section": "infer Paketi Nedir?",
+    "text": "infer Paketi Nedir?\n\nİstatistiksel çıkarım için tutarlı bir dilbilgisi sağlar\ntidyverse felsefesiyle uyumlu\nKarmaşık formüller yerine okunabilir kod akışı\nDört ana fonksiyon: specify(), hypothesize(), generate(), calculate()"
+  },
+  {
+    "objectID": "ders09.html#infer-iş-akışı",
+    "href": "ders09.html#infer-iş-akışı",
+    "title": "Ders 9: Hesapsal İstatistik",
+    "section": "infer İş Akışı",
+    "text": "infer İş Akışı\n\nİnfer Paketi İş Akışı"
+  },
+  {
+    "objectID": "ders09.html#örnek-veri-seti-gss",
+    "href": "ders09.html#örnek-veri-seti-gss",
+    "title": "Ders 9: Hesapsal İstatistik",
+    "section": "Örnek Veri Seti: GSS",
+    "text": "Örnek Veri Seti: GSS\n\nlibrary(infer)\nlibrary(dplyr)\ndata(gss)\nglimpse(gss)\n\nRows: 500\nColumns: 11\n$ year    &lt;dbl&gt; 2014, 1994, 1998, 1996, 1994, 1996, 1990, 2016, 2000, 1998, 20…\n$ age     &lt;dbl&gt; 36, 34, 24, 42, 31, 32, 48, 36, 30, 33, 21, 30, 38, 49, 25, 56…\n$ sex     &lt;fct&gt; male, female, male, male, male, female, female, female, female…\n$ college &lt;fct&gt; degree, no degree, degree, no degree, degree, no degree, no de…\n$ partyid &lt;fct&gt; ind, rep, ind, ind, rep, rep, dem, ind, rep, dem, dem, ind, de…\n$ hompop  &lt;dbl&gt; 3, 4, 1, 4, 2, 4, 2, 1, 5, 2, 4, 3, 4, 4, 2, 2, 3, 2, 1, 2, 5,…\n$ hours   &lt;dbl&gt; 50, 31, 40, 40, 40, 53, 32, 20, 40, 40, 23, 52, 38, 72, 48, 40…\n$ income  &lt;ord&gt; $25000 or more, $20000 - 24999, $25000 or more, $25000 or more…\n$ class   &lt;fct&gt; middle class, working class, working class, working class, mid…\n$ finrela &lt;fct&gt; below average, below average, below average, above average, ab…\n$ weight  &lt;dbl&gt; 0.8960034, 1.0825000, 0.5501000, 1.0864000, 1.0825000, 1.08640…\n\n\n\nBu veri seti Amerikan Genel Sosyal Anketi’nden 500 gözlem içerir ve yaş, eğitim durumu, politik görüş gibi değişkenler barındırır."
+  },
+  {
+    "objectID": "ders09.html#specify-değişkenleri-belirleme",
+    "href": "ders09.html#specify-değişkenleri-belirleme",
+    "title": "Ders 9: Hesapsal İstatistik",
+    "section": "1. specify(): Değişkenleri Belirleme",
+    "text": "1. specify(): Değişkenleri Belirleme\n\nHangi değişkenler üzerinde çalışacağımızı belirteriz\nTek değişken için: response = degisken\nİki değişken için: response = y, explanatory = x veya y ~ x\n\n\n# Yaş değişkenini belirtelim\ngss |&gt;\n  specify(response = age)\n\nResponse: age (numeric)\n# A tibble: 500 × 1\n     age\n   &lt;dbl&gt;\n 1    36\n 2    34\n 3    24\n 4    42\n 5    31\n 6    32\n 7    48\n 8    36\n 9    30\n10    33\n# ℹ 490 more rows\n\n# İki değişken ilişkisini belirtelim\ngss |&gt;\n  specify(age ~ partyid)\n\nResponse: age (numeric)\nExplanatory: partyid (factor)\n# A tibble: 500 × 2\n     age partyid\n   &lt;dbl&gt; &lt;fct&gt;  \n 1    36 ind    \n 2    34 rep    \n 3    24 ind    \n 4    42 ind    \n 5    31 rep    \n 6    32 rep    \n 7    48 dem    \n 8    36 ind    \n 9    30 rep    \n10    33 dem    \n# ℹ 490 more rows"
+  },
+  {
+    "objectID": "ders09.html#hypothesize-sıfır-hipotezini-belirleme",
+    "href": "ders09.html#hypothesize-sıfır-hipotezini-belirleme",
+    "title": "Ders 9: Hesapsal İstatistik",
+    "section": "2. hypothesize(): Sıfır Hipotezini Belirleme",
+    "text": "2. hypothesize(): Sıfır Hipotezini Belirleme\n\nİki temel sıfır hipotezi türü:\n\n\"independence\": İki değişken arasında ilişki yok\n\"point\": Parametre belirli bir değere eşit\n\n\n\n# Bağımsızlık hipotezi\ngss |&gt;\n  specify(college ~ partyid, success = \"degree\") |&gt;\n  hypothesize(null = \"independence\")\n\nResponse: college (factor)\nExplanatory: partyid (factor)\nNull Hypothesis: ind...\n# A tibble: 500 × 2\n   college   partyid\n   &lt;fct&gt;     &lt;fct&gt;  \n 1 degree    ind    \n 2 no degree rep    \n 3 degree    ind    \n 4 no degree ind    \n 5 degree    rep    \n 6 no degree rep    \n 7 no degree dem    \n 8 degree    ind    \n 9 degree    rep    \n10 no degree dem    \n# ℹ 490 more rows\n\n# Ortalama için nokta hipotezi\ngss |&gt;\n  specify(response = hours) |&gt;\n  hypothesize(null = \"point\", mu = 40)\n\nResponse: hours (numeric)\nNull Hypothesis: point\n# A tibble: 500 × 1\n   hours\n   &lt;dbl&gt;\n 1    50\n 2    31\n 3    40\n 4    40\n 5    40\n 6    53\n 7    32\n 8    20\n 9    40\n10    40\n# ℹ 490 more rows"
+  },
+  {
+    "objectID": "ders09.html#generate-sıfır-dağılımı-oluşturma",
+    "href": "ders09.html#generate-sıfır-dağılımı-oluşturma",
+    "title": "Ders 9: Hesapsal İstatistik",
+    "section": "3. generate(): Sıfır Dağılımı Oluşturma",
+    "text": "3. generate(): Sıfır Dağılımı Oluşturma\n\nSıfır hipotezi altında verinin nasıl görüneceğini simüle eder\nÜç temel yöntem:\n\nbootstrap: Yerine koyarak örnekleme\npermute: Değişkenleri karıştırma\ndraw: Teorik dağılımdan örnekleme\n\n\n\n# 1000 bootstrap örneği oluşturalım\ngss |&gt;\n  specify(response = hours) |&gt;\n  hypothesize(null = \"point\", mu = 40) |&gt;\n  generate(reps = 1000, type = \"bootstrap\")\n\nResponse: hours (numeric)\nNull Hypothesis: point\n# A tibble: 500,000 × 2\n# Groups:   replicate [1,000]\n   replicate hours\n       &lt;int&gt; &lt;dbl&gt;\n 1         1  34.6\n 2         1  38.6\n 3         1  46.6\n 4         1  41.6\n 5         1  38.6\n 6         1  18.6\n 7         1  38.6\n 8         1  14.6\n 9         1  38.6\n10         1  10.6\n# ℹ 499,990 more rows"
+  },
+  {
+    "objectID": "ders09.html#generate-veri-karıştırma-örneği",
+    "href": "ders09.html#generate-veri-karıştırma-örneği",
+    "title": "Ders 9: Hesapsal İstatistik",
+    "section": "generate(): Veri Karıştırma Örneği",
+    "text": "generate(): Veri Karıştırma Örneği\n\n# Yaş ve parti ilişkisini kırmak için değişkenleri karıştıralım\ngss |&gt;\n  specify(partyid ~ age) |&gt;\n  hypothesize(null = \"independence\") |&gt;\n  generate(reps = 1000, type = \"permute\")\n\nResponse: partyid (factor)\nExplanatory: age (numeric)\nNull Hypothesis: indepe...\n# A tibble: 500,000 × 3\n# Groups:   replicate [1,000]\n   partyid   age replicate\n   &lt;fct&gt;   &lt;dbl&gt;     &lt;int&gt;\n 1 dem        36         1\n 2 ind        34         1\n 3 rep        24         1\n 4 ind        42         1\n 5 ind        31         1\n 6 ind        32         1\n 7 ind        48         1\n 8 dem        36         1\n 9 ind        30         1\n10 dem        33         1\n# ℹ 499,990 more rows\n\n\nBu adım, sıfır hipotezi doğru olsaydı veri nasıl görünürdü sorusuna cevap verir."
+  },
+  {
+    "objectID": "ders09.html#calculate-istatistik-hesaplama",
+    "href": "ders09.html#calculate-istatistik-hesaplama",
+    "title": "Ders 9: Hesapsal İstatistik",
+    "section": "4. calculate(): İstatistik Hesaplama",
+    "text": "4. calculate(): İstatistik Hesaplama\n\nSimüle edilmiş verilerden istatistikler hesaplar\nOrtalama, medyan, oran, fark, t-istatistiği ve daha fazlası\nSıfır dağılımını oluşturur\n\n\n# Ortalama çalışma saatlerinin dağılımını hesaplayalım\ngss |&gt;\n  specify(response = hours) |&gt;\n  hypothesize(null = \"point\", mu = 40) |&gt;\n  generate(reps = 1000, type = \"bootstrap\") |&gt;\n  calculate(stat = \"mean\")\n\nResponse: hours (numeric)\nNull Hypothesis: point\n# A tibble: 1,000 × 2\n   replicate  stat\n       &lt;int&gt; &lt;dbl&gt;\n 1         1  39.4\n 2         2  39.9\n 3         3  40.3\n 4         4  40.6\n 5         5  40.1\n 6         6  40.8\n 7         7  40.5\n 8         8  39.9\n 9         9  40.3\n10        10  39.0\n# ℹ 990 more rows"
+  },
+  {
+    "objectID": "ders09.html#örnek-haftalık-çalışma-saatleri-analizi",
+    "href": "ders09.html#örnek-haftalık-çalışma-saatleri-analizi",
+    "title": "Ders 9: Hesapsal İstatistik",
+    "section": "Örnek: Haftalık Çalışma Saatleri Analizi",
+    "text": "Örnek: Haftalık Çalışma Saatleri Analizi\nSoru: Ortalama çalışma saati gerçekten 40 saat mı?\n\n# Gözlemlenen istatistiği hesaplayalım\nobs_mean &lt;- gss |&gt;\n  specify(response = hours) |&gt;\n  calculate(stat = \"mean\")\n\n# Sıfır dağılımını oluşturalım\nnull_dist &lt;- gss |&gt;\n  specify(response = hours) |&gt;\n  hypothesize(null = \"point\", mu = 40) |&gt;\n  generate(reps = 1000, type = \"bootstrap\") |&gt;\n  calculate(stat = \"mean\")"
+  },
+  {
+    "objectID": "ders09.html#sonuçları-görselleştirme",
+    "href": "ders09.html#sonuçları-görselleştirme",
+    "title": "Ders 9: Hesapsal İstatistik",
+    "section": "Sonuçları Görselleştirme",
+    "text": "Sonuçları Görselleştirme\n\n# Sıfır dağılımını görselleştirelim\nnull_dist |&gt;\n  visualize() +\n  shade_p_value(obs_stat = obs_mean, direction = \"two-sided\")\n\n\n\n\n\n\n\n\n\n\n\nÖrnek Görselleştirme"
+  },
+  {
+    "objectID": "ders09.html#p-değeri-hesaplama",
+    "href": "ders09.html#p-değeri-hesaplama",
+    "title": "Ders 9: Hesapsal İstatistik",
+    "section": "p-değeri Hesaplama",
+    "text": "p-değeri Hesaplama\n\n# İki kuyruklu p-değerini hesaplayalım\np_value &lt;- null_dist |&gt;\n  get_p_value(obs_stat = obs_mean, direction = \"two-sided\")\n\np_value\n\n# A tibble: 1 × 1\n  p_value\n    &lt;dbl&gt;\n1   0.054\n\n\nEğer ortalama gerçekten 40 saat olsaydı, gözlemlediğimiz kadar (veya daha) uç bir değer elde etme olasılığımız p-değeri kadardır."
+  },
+  {
+    "objectID": "ders09.html#güven-aralıkları",
+    "href": "ders09.html#güven-aralıkları",
+    "title": "Ders 9: Hesapsal İstatistik",
+    "section": "Güven Aralıkları",
+    "text": "Güven Aralıkları\n\n# Bootstrap dağılımını oluşturalım\nboot_dist &lt;- gss |&gt;\n  specify(response = hours) |&gt;\n  generate(reps = 1000, type = \"bootstrap\") |&gt;\n  calculate(stat = \"mean\")\n\n# %95 güven aralığını hesaplayalım\nci &lt;- boot_dist |&gt;\n  get_confidence_interval(\n    point_estimate = obs_mean,\n    level = .95,\n    type = \"se\"\n  )"
+  },
+  {
+    "objectID": "ders09.html#moleküler-biyoloji-örneği-gen-ifadesi",
+    "href": "ders09.html#moleküler-biyoloji-örneği-gen-ifadesi",
+    "title": "Ders 9: Hesapsal İstatistik",
+    "section": "Moleküler Biyoloji Örneği: Gen İfadesi",
+    "text": "Moleküler Biyoloji Örneği: Gen İfadesi\n\nSenaryo: İki farklı hücre tipinde (normal vs. kanser) bir genin ifade seviyesini karşılaştırıyoruz\nSıfır hipotezi: Gen ifadesi hücre tipine göre değişmez\ninfer ile simülasyon yaklaşımı nasıl kullanılır?"
+  },
+  {
+    "objectID": "ders09.html#örnek-kod-gen-ifadesi-karşılaştırması",
+    "href": "ders09.html#örnek-kod-gen-ifadesi-karşılaştırması",
+    "title": "Ders 9: Hesapsal İstatistik",
+    "section": "Örnek Kod: Gen İfadesi Karşılaştırması",
+    "text": "Örnek Kod: Gen İfadesi Karşılaştırması\n# Verileri tanımlayalım\ngen_ifadesi |&gt;\n  # İfade seviyesi ~ hücre tipi ilişkisini belirtelim\n  specify(expression ~ cell_type) |&gt;\n  # Sıfır hipotezi: Hücre tipi etkisi yok\n  hypothesize(null = \"independence\") |&gt;\n  # 1000 permütasyon örneği oluşturalım\n  generate(reps = 1000, type = \"permute\") |&gt;\n  # Ortalama farkını hesaplayalım\n  calculate(stat = \"diff in means\", \n            order = c(\"cancer\", \"normal\"))"
+  },
+  {
+    "objectID": "ders09.html#teorik-dağılım-kullanımı",
+    "href": "ders09.html#teorik-dağılım-kullanımı",
+    "title": "Ders 9: Hesapsal İstatistik",
+    "section": "Teorik Dağılım Kullanımı",
+    "text": "Teorik Dağılım Kullanımı\n\ninfer teorik dağılımlarla da çalışabilir\nt, F, Ki-kare ve z dağılımları için assume()\nSimülasyon ve teorik yaklaşımlar arasında geçiş yapabilirsiniz\n\n# t-dağılımı tanımlayalım\nt_dist &lt;- gen_ifadesi |&gt;\n  specify(expression ~ cell_type) |&gt;\n  assume(distribution = \"t\")"
+  },
+  {
+    "objectID": "ders09.html#inferin-avantajları",
+    "href": "ders09.html#inferin-avantajları",
+    "title": "Ders 9: Hesapsal İstatistik",
+    "section": "infer’in Avantajları",
+    "text": "infer’in Avantajları\n\nDaha anlaşılır istatistiksel süreç\nVarsayımlar konusunda daha esnek\nÖğrencilere istatistiği görselleştirme imkanı\nTidyverse ekosistemiyle entegrasyon\nKarmaşık analizleri basitleştirme"
+  },
+  {
+    "objectID": "uygulama01.html#aritmetik",
+    "href": "uygulama01.html#aritmetik",
+    "title": "R Temelleri",
+    "section": "Aritmetik",
+    "text": "Aritmetik\nR ile aritmetik yapılabilir. (Run Code butonunu tıklayınız)\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nYukarıdaki kutuya herhangi bir işlem yazıp çalıştırabilirsiniz.\n \n8 / 2 + 4 * 5 şeklindeki bir ifadede, işlem sırası doğru olarak izleniyor mu?"
+  },
+  {
+    "objectID": "uygulama01.html#matematik-fonksiyonları",
+    "href": "uygulama01.html#matematik-fonksiyonları",
+    "title": "R Temelleri",
+    "section": "Matematik fonksiyonları",
+    "text": "Matematik fonksiyonları\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nCtrl + Enter ile tek satır, Shift + Enter ile bütün satırlar çalıştırılabilir"
+  },
+  {
+    "objectID": "uygulama01.html#değişkenler-objeler",
+    "href": "uygulama01.html#değişkenler-objeler",
+    "title": "R Temelleri",
+    "section": "Değişkenler / Objeler",
+    "text": "Değişkenler / Objeler\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nBu değişken, oturum boyunca geçerlidir, başka bir slaytta tekrar kullanılabilir.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "uygulama01.html#vektörler",
+    "href": "uygulama01.html#vektörler",
+    "title": "R Temelleri",
+    "section": "Vektörler",
+    "text": "Vektörler\nR dilinde vektörler önemli bir veri yapısıdır. Aynı tipteki (tamsayı, ondaliklı sayı, karakter, vb.) verilerin toplu şekilde saklandığı bir yapıdır. Başka dillerde “liste”, “dizi” olarak adlandırılır. R dilinde vektörler c() fonksiyonu ile oluşturulur.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "uygulama01.html#indeks",
+    "href": "uygulama01.html#indeks",
+    "title": "R Temelleri",
+    "section": "İndeks",
+    "text": "İndeks\nBir vektördeki elemanlara indeksler yardımıyla erişim sağlanır. R dilinde indeks 1’den başlar. 5. elemanına ulaşmak için my_vec[5] şeklinde komut yazılmalıdır.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nİndeksler aralıklarla da kullanılabilir. Örneğin, 1. ve 2. elemanına ulaşmak için my_vec[1:2] komutu kullanılabilir.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "uygulama01.html#indeks-vektörü",
+    "href": "uygulama01.html#indeks-vektörü",
+    "title": "R Temelleri",
+    "section": "İndeks vektörü",
+    "text": "İndeks vektörü\nBir vektördeki belirli elemanlara erişim için indekslerden oluşan bir vektör kullanılabilir. 5. ve 3. elemanlara (bu sırada) erişilmek isteniyorsa c(5,3) vektörü indeks olarak kullanılabilir\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "uygulama01.html#vektörlerle-işlemler",
+    "href": "uygulama01.html#vektörlerle-işlemler",
+    "title": "R Temelleri",
+    "section": "Vektörlerle işlemler",
+    "text": "Vektörlerle işlemler\nNormalde bir liste veya dizinin işlenmesi için for döngüsü kullanılır. R’de ise vektörlerle işlem yapılırken, bir fonksiyon veya işlem otomatik olarak bütün elemanlara uygulanır.\nAyrıca, R’daki çoğu fonksiyon vektörler ile uyumludur, her bir eleman için veya tüm vektör için çalışabilirler.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "uygulama01.html#karşılaştırma-operatörleri",
+    "href": "uygulama01.html#karşılaştırma-operatörleri",
+    "title": "R Temelleri",
+    "section": "Karşılaştırma operatörleri",
+    "text": "Karşılaştırma operatörleri\nEşitlik ==, büyüktür &gt;, küçüktür &lt;, eşit değil != operatörleri bir vektöre uygulandığında, her bir eleman için karşılaştırma yapılır.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nSonuçlar logical/mantıksal (TRUE/FALSE) vektör olarak döndürülür. Bu sonuç vektörü, maske olarak kullanılabilir, yani indeks olarak kullanıldığında, “TRUE” değerlerin denk geldiği elemanlar gösterilebilir.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nFarkedildiği üzere, bu işlem sayesinde veri kümesinde filtreleme yapılmıştır."
+  },
+  {
+    "objectID": "uygulama01.html#sıralama",
+    "href": "uygulama01.html#sıralama",
+    "title": "R Temelleri",
+    "section": "Sıralama",
+    "text": "Sıralama\nsort() fonksiyonu ile vektörler sıralanabilir.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nSoru: ters yönde sıralama yapmak için ne yapılmalıdır?\norder() fonksiyonu ile de sıralama yapılabilir. Ancak bu fonksiyon doğrudan elemanları sıralamaz; bunun yerine, sıralı elemanların orijinal vektördeki indekslerini döndürür.\n\nTablolarda sütunları veya satırları sıralamak gerektiğinde kullanılır."
+  },
+  {
+    "objectID": "uygulama01.html#sıralama-1",
+    "href": "uygulama01.html#sıralama-1",
+    "title": "R Temelleri",
+    "section": "Sıralama",
+    "text": "Sıralama\nAşağıdaki kutuda my_vec[order(my_vec)] komutunu çalıştıp çıktısını sort() ile karşılaştırınız.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "uygulama01.html#na",
+    "href": "uygulama01.html#na",
+    "title": "R Temelleri",
+    "section": "NA",
+    "text": "NA\nNA “not available” anlamına gelir. Herhangi bir vektörde NA olması durumunda toplama, min/max gibi işlemlerin de NA olarak sonuçlanmasına neden olur.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nBu sorunu aşmak için na.rm=TRUE parametresi kullanılabilir.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "uygulama01.html#data-frame-veri-tablosuçerçevesi",
+    "href": "uygulama01.html#data-frame-veri-tablosuçerçevesi",
+    "title": "R Temelleri",
+    "section": "Data Frame / veri tablosu/çerçevesi",
+    "text": "Data Frame / veri tablosu/çerçevesi\nBir veri tablosu, aynı boydaki farklı vektörlerin sütun olarak birleşmesi olarak düşünülebilir. Bu veri yapısı en çok kullanılan veri yapısıdır. Aşağıdaki örnekte, iris veri seti kullanılmıştır.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "uygulama01.html#veri-tablosu-erişim",
+    "href": "uygulama01.html#veri-tablosu-erişim",
+    "title": "R Temelleri",
+    "section": "Veri tablosu / erişim",
+    "text": "Veri tablosu / erişim\nBir veri tablosundaki herhangi bir sütunun tamamına $sütun_adı şeklinde ulaşılabilir.\nVeri tablosunun belirli bir kısmına erişmek için [satır, sütun] şeklinde kullanılabilir.\niris$Species komutu Species sütununu vektör olarak elde eder. iris[1:5,] ilk 5 satırı elde eder. iris[1:5,1:2] şeklindeki komut, ilk 2 sütunu ve ilk 5 satırı elde eder.\nBir sonraki slaytta bahsi geçen komutları deneyiniz."
+  },
+  {
+    "objectID": "uygulama01.html#veri-tablosu-erişim-1",
+    "href": "uygulama01.html#veri-tablosu-erişim-1",
+    "title": "R Temelleri",
+    "section": "Veri tablosu / erişim",
+    "text": "Veri tablosu / erişim\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "uygulama01.html#veri-tablosu-işlemler",
+    "href": "uygulama01.html#veri-tablosu-işlemler",
+    "title": "R Temelleri",
+    "section": "Veri tablosu / işlemler",
+    "text": "Veri tablosu / işlemler\n\ndim(iris) komutu, veri setinin boyutlarını verir.(satır, sütun) şeklinde\nnrow(iris) komutu, veri setindeki satır sayısını verir.\nncol(iris) komutu, veri setindeki sütun sayısını verir.\nstr(iris) komutu, veri setinin yapısını, sütun tipleri ve ilk verileri gösterir.\nsummary(iris) komutu, veri setindeki istatistiksel ölçümleri verir.\n\nBir sonraki slaytta bahsi geçen komutları deneyiniz."
+  },
+  {
+    "objectID": "uygulama01.html#veri-tablosu-işlemler-1",
+    "href": "uygulama01.html#veri-tablosu-işlemler-1",
+    "title": "R Temelleri",
+    "section": "Veri tablosu / işlemler",
+    "text": "Veri tablosu / işlemler\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
   },
   {
     "objectID": "ders07-uygulama.html#istatistiksel-güç-analizi",
@@ -1239,837 +1841,396 @@
     "text": "Hangi Durumlarda Hangi Fonksiyonu Kullanmalı?\npairwise.t.test()’i şu durumlarda kullanın: - ANOVA ile anlamlı fark bulunduğunda - Hangi grupların farklı olduğunu hızlıca belirlemek istediğinizde - Çoklu düzeltme yöntemini kendiniz seçmek istediğinizde\naov()’u şu durumlarda kullanın: - Grup ortalamaları arasında fark olup olmadığını test etmek istediğinizde - Karmaşık deneysel tasarımlarla çalışırken (faktöriyel, etkileşimli) - Tam bir ANOVA tablosu gerektiğinde\np.adjust()’ı şu durumlarda kullanın: - Özel testlerden elde edilen p-değerlerini düzeltmek istediğinizde - İkiden fazla karşılaştırma içeren herhangi bir analizde - Farklı düzeltme stratejilerini karşılaştırmak istediğinizde"
   },
   {
-    "objectID": "uygulama01.html#aritmetik",
-    "href": "uygulama01.html#aritmetik",
-    "title": "R Temelleri",
-    "section": "Aritmetik",
-    "text": "Aritmetik\nR ile aritmetik yapılabilir. (Run Code butonunu tıklayınız)\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nYukarıdaki kutuya herhangi bir işlem yazıp çalıştırabilirsiniz.\n \n8 / 2 + 4 * 5 şeklindeki bir ifadede, işlem sırası doğru olarak izleniyor mu?"
+    "objectID": "ders05-old.html#slide1",
+    "href": "ders05-old.html#slide1",
+    "title": "Ders5: Başlık",
+    "section": "slide1",
+    "text": "slide1\n\nt-dağılımı (düz çizgi) ve normal dağılım karşılaştırması"
   },
   {
-    "objectID": "uygulama01.html#matematik-fonksiyonları",
-    "href": "uygulama01.html#matematik-fonksiyonları",
-    "title": "R Temelleri",
-    "section": "Matematik fonksiyonları",
-    "text": "Matematik fonksiyonları\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nCtrl + Enter ile tek satır, Shift + Enter ile bütün satırlar çalıştırılabilir"
+    "objectID": "ders05-old.html#slide2",
+    "href": "ders05-old.html#slide2",
+    "title": "Ders5: Başlık",
+    "section": "slide2",
+    "text": "slide2\n\nimage-20240327044422037df (serbestlik derecesi ) arttıkça, t-dağılımı normal dağılıma yaklaşmaktadır"
   },
   {
-    "objectID": "uygulama01.html#değişkenler-objeler",
-    "href": "uygulama01.html#değişkenler-objeler",
-    "title": "R Temelleri",
-    "section": "Değişkenler / Objeler",
-    "text": "Değişkenler / Objeler\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nBu değişken, oturum boyunca geçerlidir, başka bir slaytta tekrar kullanılabilir.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+    "objectID": "ders05-old.html#slide3",
+    "href": "ders05-old.html#slide3",
+    "title": "Ders5: Başlık",
+    "section": "slide3",
+    "text": "slide3\n\nimage-20240327044528724t-tablosu"
   },
   {
-    "objectID": "uygulama01.html#vektörler",
-    "href": "uygulama01.html#vektörler",
-    "title": "R Temelleri",
-    "section": "Vektörler",
-    "text": "Vektörler\nR dilinde vektörler önemli bir veri yapısıdır. Aynı tipteki (tamsayı, ondaliklı sayı, karakter, vb.) verilerin toplu şekilde saklandığı bir yapıdır. Başka dillerde “liste”, “dizi” olarak adlandırılır. R dilinde vektörler c() fonksiyonu ile oluşturulur.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+    "objectID": "ders05-old.html#slide4",
+    "href": "ders05-old.html#slide4",
+    "title": "Ders5: Başlık",
+    "section": "slide4",
+    "text": "slide4\n\ndf=18 için, -2.10 altında kalan alan boyanmıştır. t-dağılımının ne kadarı -2.10 altında kalır?\n\ndf=20 iken, t-dağılımının ne kadarı -1.60’tan küçük ve 1.60’tan büyüktür?\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
   },
   {
-    "objectID": "uygulama01.html#indeks",
-    "href": "uygulama01.html#indeks",
-    "title": "R Temelleri",
-    "section": "İndeks",
-    "text": "İndeks\nBir vektördeki elemanlara indeksler yardımıyla erişim sağlanır. R dilinde indeks 1’den başlar. 5. elemanına ulaşmak için my_vec[5] şeklinde komut yazılmalıdır.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nİndeksler aralıklarla da kullanılabilir. Örneğin, 1. ve 2. elemanına ulaşmak için my_vec[1:2] komutu kullanılabilir.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+    "objectID": "ders05-old.html#slide5",
+    "href": "ders05-old.html#slide5",
+    "title": "Ders5: Başlık",
+    "section": "slide5",
+    "text": "slide5\nçift yönlü 100(1-\\(\\alpha\\))% güven aralığı için formül:\n\nSE = s / \\(\\sqrt{n}\\)\nTek yönlü olması durumunda\n\n\n\nimage-20240327051040495"
   },
   {
-    "objectID": "uygulama01.html#indeks-vektörü",
-    "href": "uygulama01.html#indeks-vektörü",
-    "title": "R Temelleri",
-    "section": "İndeks vektörü",
-    "text": "İndeks vektörü\nBir vektördeki belirli elemanlara erişim için indekslerden oluşan bir vektör kullanılabilir. 5. ve 3. elemanlara (bu sırada) erişilmek isteniyorsa c(5,3) vektörü indeks olarak kullanılabilir\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+    "objectID": "ders05-old.html#slide6",
+    "href": "ders05-old.html#slide6",
+    "title": "Ders5: Başlık",
+    "section": "slide6",
+    "text": "slide6\nYunuslarda civa miktarı üzerine yapılan çalışmada, Japonya’nın Taiji bölgesinden rastgele seçilen 19 adet yunusta civa miktarına dair bilgiler şu şekildedir.\n\nOrtalama civa miktarı için %95 güven aralığını hesaplayınız.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
   },
   {
-    "objectID": "uygulama01.html#vektörlerle-işlemler",
-    "href": "uygulama01.html#vektörlerle-işlemler",
-    "title": "R Temelleri",
-    "section": "Vektörlerle işlemler",
-    "text": "Vektörlerle işlemler\nNormalde bir liste veya dizinin işlenmesi için for döngüsü kullanılır. R’de ise vektörlerle işlem yapılırken, bir fonksiyon veya işlem otomatik olarak bütün elemanlara uygulanır.\nAyrıca, R’daki çoğu fonksiyon vektörler ile uyumludur, her bir eleman için veya tüm vektör için çalışabilirler.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+    "objectID": "ders05-old.html#slide7",
+    "href": "ders05-old.html#slide7",
+    "title": "Ders5: Başlık",
+    "section": "slide7",
+    "text": "slide7"
   },
   {
-    "objectID": "uygulama01.html#karşılaştırma-operatörleri",
-    "href": "uygulama01.html#karşılaştırma-operatörleri",
-    "title": "R Temelleri",
-    "section": "Karşılaştırma operatörleri",
-    "text": "Karşılaştırma operatörleri\nEşitlik ==, büyüktür &gt;, küçüktür &lt;, eşit değil != operatörleri bir vektöre uygulandığında, her bir eleman için karşılaştırma yapılır.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nSonuçlar logical/mantıksal (TRUE/FALSE) vektör olarak döndürülür. Bu sonuç vektörü, maske olarak kullanılabilir, yani indeks olarak kullanıldığında, “TRUE” değerlerin denk geldiği elemanlar gösterilebilir.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nFarkedildiği üzere, bu işlem sayesinde veri kümesinde filtreleme yapılmıştır."
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "MBG1032 Biyoistatistik Ders Notları",
+    "section": "",
+    "text": "Kitap1: Introductory Statistics for the Life and Biomedical Sciences (Julie Vu, David Harrington) Leanpub sitesinden ücretsiz olarak (You Pay kısmını 0’a çekerek) indirebilirsiniz.\nKitap2: Principles of Biostatistics (Marcello Pagano, Kimberlee Gauvreau)\nKitap3: Biostatistics for the Biological and Health Sciences (Mario F. Triola, Marc M. Triola,Jason Roy)\nKitap4: R Programı İle Temel İstatistiksel Yöntemler Uygulamalı İstatistik Turcademy üzerinden ücretsiz olarak erişilebilir.\n\n\n\n\nTeorik (21 Şubat 2024): İlk derste, R programı çalıştırılabilecek ortamlar tanıtıldı. Ayrıca “Is Most Published Research Wrong?” başlıklı videodan bahsedildi. Söz konusu videoda p-value değerlerinin istatistik gücü oldukça zayıf şekilde bilimsel makalelerde kullanıldığı ve bu yüzden makalelerin tekrarlanabilirliğinin (reproducability) düşük olduğundan bahsedildi.\nUygulama (26 Şubat 2024): R Temelleri Sunum. Bu içerik için kullanılan ek kaynak, “An Introduction to R” adlı online kitap.\n\n\n\n\nTeorik (28 Şubat 2024): Veri setinin merkezini belirleyen ortalama ve mediandan bahsedildi. Veri setinin dağınıklığını özetleyen sayısal yöntemler (varyans, standart sapma) ve görsel yöntemler (histogram, boxplot) tanıtıldı. Sunum linki\nUygulama (4 Mart 2024): iris.xlsx dosyasını kullanarak, Excel’de hücre aralıklarını seçme, Ctrl ve Shift tuşları ile hızlı seçim ve gezinme gösterildi. Tek bir sütün için ortalama, medyan, 1. ve 3. çeyrek dilim hesaplama ve standard sapma hesabı yapıldı. Excel’de formüllerin başka hücrelere uygulanması gösterildi. Excel’in yeni versiyonunda Boxplot ve Histogram grafikleri çizilebileceği tartışıldı.\n\n\n\nTeorik (6 Mart 2024): Olaslık hesabına dair özellikler, küme prensibi üzerinden anlatıldı. Normal dağılımın özellikleri tanıtıldı. Sunum linki\nUygulama (11 Mart 2024): R’da pnorm(), qnorm() ve dnorm() fonksiyonları kullanarak ihtimal hesapları yapıldı ve normal dağılıma uygun rastgele sayılar üretildi. Excel’de normal dağılıma uygun sayılar üreten formüller kullanıldı.\n\n\n\nTeorik (13 Mart 2024): Poisson ve Bernoulli dağılımları (Poisson dağılımı ve Geometrik dağılım) tanıtıldı. Sunum linki\nPratik (18 Mart 2024): Normal dağılım örnekleri çözüldü. Uygulama sunum linki\n\n\n\nTeorik (05 Mayıs 2025): Ki-kare testi Sunum linki\nUygulama (09 Mayıs 2025): Ki-kare uygulama Sunum linki\n\n\n\nTeorik (01 Nisan 2026): Korelasyon Sunum linki\nPratik (01 Nisan 2026): Korelasyon uygulaması\n\n\n\nTeorik (08 Nisan 2026): Regresyon Sunum linki\nPratik (08 Nisan 2026): Regresyon uygulaması"
   },
   {
-    "objectID": "uygulama01.html#sıralama",
-    "href": "uygulama01.html#sıralama",
-    "title": "R Temelleri",
-    "section": "Sıralama",
-    "text": "Sıralama\nsort() fonksiyonu ile vektörler sıralanabilir.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nSoru: ters yönde sıralama yapmak için ne yapılmalıdır?\norder() fonksiyonu ile de sıralama yapılabilir. Ancak bu fonksiyon doğrudan elemanları sıralamaz; bunun yerine, sıralı elemanların orijinal vektördeki indekslerini döndürür.\n\nTablolarda sütunları veya satırları sıralamak gerektiğinde kullanılır."
+    "objectID": "index.html#kaynaklar",
+    "href": "index.html#kaynaklar",
+    "title": "MBG1032 Biyoistatistik Ders Notları",
+    "section": "",
+    "text": "Kitap1: Introductory Statistics for the Life and Biomedical Sciences (Julie Vu, David Harrington) Leanpub sitesinden ücretsiz olarak (You Pay kısmını 0’a çekerek) indirebilirsiniz.\nKitap2: Principles of Biostatistics (Marcello Pagano, Kimberlee Gauvreau)\nKitap3: Biostatistics for the Biological and Health Sciences (Mario F. Triola, Marc M. Triola,Jason Roy)\nKitap4: R Programı İle Temel İstatistiksel Yöntemler Uygulamalı İstatistik Turcademy üzerinden ücretsiz olarak erişilebilir."
   },
   {
-    "objectID": "uygulama01.html#sıralama-1",
-    "href": "uygulama01.html#sıralama-1",
-    "title": "R Temelleri",
-    "section": "Sıralama",
-    "text": "Sıralama\nAşağıdaki kutuda my_vec[order(my_vec)] komutunu çalıştıp çıktısını sort() ile karşılaştırınız.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+    "objectID": "index.html#ders1",
+    "href": "index.html#ders1",
+    "title": "MBG1032 Biyoistatistik Ders Notları",
+    "section": "",
+    "text": "Teorik (21 Şubat 2024): İlk derste, R programı çalıştırılabilecek ortamlar tanıtıldı. Ayrıca “Is Most Published Research Wrong?” başlıklı videodan bahsedildi. Söz konusu videoda p-value değerlerinin istatistik gücü oldukça zayıf şekilde bilimsel makalelerde kullanıldığı ve bu yüzden makalelerin tekrarlanabilirliğinin (reproducability) düşük olduğundan bahsedildi.\nUygulama (26 Şubat 2024): R Temelleri Sunum. Bu içerik için kullanılan ek kaynak, “An Introduction to R” adlı online kitap."
   },
   {
-    "objectID": "uygulama01.html#na",
-    "href": "uygulama01.html#na",
-    "title": "R Temelleri",
-    "section": "NA",
-    "text": "NA\nNA “not available” anlamına gelir. Herhangi bir vektörde NA olması durumunda toplama, min/max gibi işlemlerin de NA olarak sonuçlanmasına neden olur.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nBu sorunu aşmak için na.rm=TRUE parametresi kullanılabilir.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+    "objectID": "index.html#ders2",
+    "href": "index.html#ders2",
+    "title": "MBG1032 Biyoistatistik Ders Notları",
+    "section": "",
+    "text": "Teorik (28 Şubat 2024): Veri setinin merkezini belirleyen ortalama ve mediandan bahsedildi. Veri setinin dağınıklığını özetleyen sayısal yöntemler (varyans, standart sapma) ve görsel yöntemler (histogram, boxplot) tanıtıldı. Sunum linki\nUygulama (4 Mart 2024): iris.xlsx dosyasını kullanarak, Excel’de hücre aralıklarını seçme, Ctrl ve Shift tuşları ile hızlı seçim ve gezinme gösterildi. Tek bir sütün için ortalama, medyan, 1. ve 3. çeyrek dilim hesaplama ve standard sapma hesabı yapıldı. Excel’de formüllerin başka hücrelere uygulanması gösterildi. Excel’in yeni versiyonunda Boxplot ve Histogram grafikleri çizilebileceği tartışıldı."
   },
   {
-    "objectID": "uygulama01.html#data-frame-veri-tablosuçerçevesi",
-    "href": "uygulama01.html#data-frame-veri-tablosuçerçevesi",
-    "title": "R Temelleri",
-    "section": "Data Frame / veri tablosu/çerçevesi",
-    "text": "Data Frame / veri tablosu/çerçevesi\nBir veri tablosu, aynı boydaki farklı vektörlerin sütun olarak birleşmesi olarak düşünülebilir. Bu veri yapısı en çok kullanılan veri yapısıdır. Aşağıdaki örnekte, iris veri seti kullanılmıştır.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+    "objectID": "index.html#ders03",
+    "href": "index.html#ders03",
+    "title": "MBG1032 Biyoistatistik Ders Notları",
+    "section": "",
+    "text": "Teorik (6 Mart 2024): Olaslık hesabına dair özellikler, küme prensibi üzerinden anlatıldı. Normal dağılımın özellikleri tanıtıldı. Sunum linki\nUygulama (11 Mart 2024): R’da pnorm(), qnorm() ve dnorm() fonksiyonları kullanarak ihtimal hesapları yapıldı ve normal dağılıma uygun rastgele sayılar üretildi. Excel’de normal dağılıma uygun sayılar üreten formüller kullanıldı."
   },
   {
-    "objectID": "uygulama01.html#veri-tablosu-erişim",
-    "href": "uygulama01.html#veri-tablosu-erişim",
-    "title": "R Temelleri",
-    "section": "Veri tablosu / erişim",
-    "text": "Veri tablosu / erişim\nBir veri tablosundaki herhangi bir sütunun tamamına $sütun_adı şeklinde ulaşılabilir.\nVeri tablosunun belirli bir kısmına erişmek için [satır, sütun] şeklinde kullanılabilir.\niris$Species komutu Species sütununu vektör olarak elde eder. iris[1:5,] ilk 5 satırı elde eder. iris[1:5,1:2] şeklindeki komut, ilk 2 sütunu ve ilk 5 satırı elde eder.\nBir sonraki slaytta bahsi geçen komutları deneyiniz."
+    "objectID": "index.html#ders04",
+    "href": "index.html#ders04",
+    "title": "MBG1032 Biyoistatistik Ders Notları",
+    "section": "",
+    "text": "Teorik (13 Mart 2024): Poisson ve Bernoulli dağılımları (Poisson dağılımı ve Geometrik dağılım) tanıtıldı. Sunum linki\nPratik (18 Mart 2024): Normal dağılım örnekleri çözüldü. Uygulama sunum linki"
   },
   {
-    "objectID": "uygulama01.html#veri-tablosu-erişim-1",
-    "href": "uygulama01.html#veri-tablosu-erişim-1",
-    "title": "R Temelleri",
-    "section": "Veri tablosu / erişim",
-    "text": "Veri tablosu / erişim\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+    "objectID": "index.html#ders05",
+    "href": "index.html#ders05",
+    "title": "MBG1032 Biyoistatistik Ders Notları",
+    "section": "",
+    "text": "Teorik (05 Mayıs 2025): Ki-kare testi Sunum linki\nUygulama (09 Mayıs 2025): Ki-kare uygulama Sunum linki"
   },
   {
-    "objectID": "uygulama01.html#veri-tablosu-işlemler",
-    "href": "uygulama01.html#veri-tablosu-işlemler",
-    "title": "R Temelleri",
-    "section": "Veri tablosu / işlemler",
-    "text": "Veri tablosu / işlemler\n\ndim(iris) komutu, veri setinin boyutlarını verir.(satır, sütun) şeklinde\nnrow(iris) komutu, veri setindeki satır sayısını verir.\nncol(iris) komutu, veri setindeki sütun sayısını verir.\nstr(iris) komutu, veri setinin yapısını, sütun tipleri ve ilk verileri gösterir.\nsummary(iris) komutu, veri setindeki istatistiksel ölçümleri verir.\n\nBir sonraki slaytta bahsi geçen komutları deneyiniz."
+    "objectID": "index.html#ders06",
+    "href": "index.html#ders06",
+    "title": "MBG1032 Biyoistatistik Ders Notları",
+    "section": "",
+    "text": "Teorik (01 Nisan 2026): Korelasyon Sunum linki\nPratik (01 Nisan 2026): Korelasyon uygulaması"
   },
   {
-    "objectID": "uygulama01.html#veri-tablosu-işlemler-1",
-    "href": "uygulama01.html#veri-tablosu-işlemler-1",
-    "title": "R Temelleri",
-    "section": "Veri tablosu / işlemler",
-    "text": "Veri tablosu / işlemler\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+    "objectID": "index.html#ders07",
+    "href": "index.html#ders07",
+    "title": "MBG1032 Biyoistatistik Ders Notları",
+    "section": "",
+    "text": "Teorik (08 Nisan 2026): Regresyon Sunum linki\nPratik (08 Nisan 2026): Regresyon uygulaması"
   },
   {
-    "objectID": "ders09.html#özet",
-    "href": "ders09.html#özet",
-    "title": "Ders 9: Hesapsal İstatistik",
+    "objectID": "index.html#ders09",
+    "href": "index.html#ders09",
+    "title": "MBG1032 Biyoistatistik Ders Notları",
+    "section": "Ders09",
+    "text": "Ders09\nTeorik (22 Nisan 2026): Güven aralığı ve hipotez testi konusu işlendi Sunum linki\nPratik (22 Nisan 2026): Güven aralığı ve hipotez testi örnekleri"
+  },
+  {
+    "objectID": "index.html#ders10",
+    "href": "index.html#ders10",
+    "title": "MBG1032 Biyoistatistik Ders Notları",
+    "section": "Ders10",
+    "text": "Ders10\nTeorik (27 Mart 2024): T-testi. Sunum linki\nPratik (01 Nisan 2024): T-testi uygulamaları Uygulama sunum linki"
+  },
+  {
+    "objectID": "index.html#ders11",
+    "href": "index.html#ders11",
+    "title": "MBG1032 Biyoistatistik Ders Notları",
+    "section": "Ders11",
+    "text": "Ders11\nTeorik (03 Nisan 2024): ANOVA Sunum linki\nUygulama (2 Mayıs 2025): İstatistik Güç ve ANOVA uygulama Uygulama sunum linki"
+  },
+  {
+    "objectID": "index.html#ders12",
+    "href": "index.html#ders12",
+    "title": "MBG1032 Biyoistatistik Ders Notları",
+    "section": "Ders12",
+    "text": "Ders12\nTeorik (03 Nisan 2024): İstatistik Güç Sunum linki"
+  },
+  {
+    "objectID": "index.html#ders13",
+    "href": "index.html#ders13",
+    "title": "MBG1032 Biyoistatistik Ders Notları",
+    "section": "Ders13",
+    "text": "Ders13\nTeorik (12 Mayıs 2025): Hesapsal istatistik Sunum linki"
+  },
+  {
+    "objectID": "index.html#ders14",
+    "href": "index.html#ders14",
+    "title": "MBG1032 Biyoistatistik Ders Notları",
+    "section": "Ders14",
+    "text": "Ders14\n** Ara Sınav 2**"
+  },
+  {
+    "objectID": "index.html#ders15",
+    "href": "index.html#ders15",
+    "title": "MBG1032 Biyoistatistik Ders Notları",
+    "section": "Ders15",
+    "text": "Ders15\nTeorik (23 Mayıs 2025): Bilimsel tekrarlanabilirlik Sunum linki"
+  },
+  {
+    "objectID": "index.html#ders16",
+    "href": "index.html#ders16",
+    "title": "MBG1032 Biyoistatistik Ders Notları",
+    "section": "Ders16",
+    "text": "Ders16\nTeorik (26 Mayıs 2025): Hangi test? Sunum linki"
+  },
+  {
+    "objectID": "ders-kikare-uyg.html#giriş-ki-kare-testi-ve-sıfır-hipotezi",
+    "href": "ders-kikare-uyg.html#giriş-ki-kare-testi-ve-sıfır-hipotezi",
+    "title": "Ders 8 Uygulama: Ki-kare Testi",
+    "section": "Giriş: Ki-kare Testi ve Sıfır Hipotezi",
+    "text": "Giriş: Ki-kare Testi ve Sıfır Hipotezi\nÖnemli Not: Ki-kare testinde sıfır hipotezi (H₀), t-testindeki sıfır hipotezinden farklıdır:\n\nt-testi H₀: Gruplar arasında fark yoktur (ortalamaların eşit olduğu)\nKi-kare testi H₀: Gözlenen dağılım, beklenen dağılıma uygundur (fark yoktur)\n\nBu farklılık, Ki-kare testini yorumlarken ve sonuçları raporlarken önemlidir!"
+  },
+  {
+    "objectID": "ders-kikare-uyg.html#soru-1-kan-grupları-ve-teorik-dağılım",
+    "href": "ders-kikare-uyg.html#soru-1-kan-grupları-ve-teorik-dağılım",
+    "title": "Ders 8 Uygulama: Ki-kare Testi",
+    "section": "Soru 1: Kan Grupları ve Teorik Dağılım",
+    "text": "Soru 1: Kan Grupları ve Teorik Dağılım\nTürkiye’de bir üniversitede yapılan çalışmada, 500 öğrenciden toplanan kan grubu verileri şu şekildedir:\n\nA grubu: 220 kişi\nB grubu: 85 kişi\nAB grubu: 35 kişi\nO grubu: 160 kişi\n\nTürkiye genelinde teorik kan grubu dağılımının %42 A, %16 B, %8 AB ve %34 O grubu şeklinde olduğu bilinmektedir.\nBu üniversitedeki kan grubu dağılımının Türkiye geneline uyup uymadığını test ediniz.\nR’daki pchisq(), chisq.test() fonksiyonları ile ve Excel’de gerekli fonksiyonlar ile test ediniz."
+  },
+  {
+    "objectID": "ders-kikare-uyg.html#section",
+    "href": "ders-kikare-uyg.html#section",
+    "title": "Ders 8 Uygulama: Ki-kare Testi",
+    "section": "",
+    "text": "chisq.test() ile hesaplayalım\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders-kikare-uyg.html#section-1",
+    "href": "ders-kikare-uyg.html#section-1",
+    "title": "Ders 8 Uygulama: Ki-kare Testi",
+    "section": "",
+    "text": "ki kare değerini manuel olarak hesaplayıp, pchisq() fonksiyonu ile p-value hesaplayalım.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders-kikare-uyg.html#section-2",
+    "href": "ders-kikare-uyg.html#section-2",
+    "title": "Ders 8 Uygulama: Ki-kare Testi",
+    "section": "",
+    "text": "Excel’de CHISQ.TEST() fonksiyonunu kullanarak aynı hesaplamayı yapınız\n\n\n\nA\nB\nC\n\n\n\n\nA\n220\n0,42\n\n\nB\n85\n0,16\n\n\nAB\n35\n0,08\n\n\nO\n160\n0,34"
+  },
+  {
+    "objectID": "ders-kikare-uyg.html#soru-2-mendelci-kalıtım-ve-epistasis",
+    "href": "ders-kikare-uyg.html#soru-2-mendelci-kalıtım-ve-epistasis",
+    "title": "Ders 8 Uygulama: Ki-kare Testi",
+    "section": "Soru 2: Mendelci Kalıtım ve Epistasis",
+    "text": "Soru 2: Mendelci Kalıtım ve Epistasis\nBir genetik çalışmada, iki heterozigot köpeğin (EeBb x EeBb) çaprazlanmasıyla elde edilen F2 neslinde şu fenotipik oranlar gözlenmiştir:\n\nSiyah tüy (E-B-): 144 köpek\nKahverengi tüy (E-bb): 47 köpek\nSarı tüy (ee–): 65 köpek\n\nBu gözlenen oranların, Mendel’in dihybrid kalıtımında beklenen 9:3:4 oranına uygun olup olmadığını test ediniz.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders-kikare-uyg.html#soru-3-iki-değişken-arasındaki-ilişki-bağımsızlık-testi",
+    "href": "ders-kikare-uyg.html#soru-3-iki-değişken-arasındaki-ilişki-bağımsızlık-testi",
+    "title": "Ders 8 Uygulama: Ki-kare Testi",
+    "section": "Soru 3: İki Değişken Arasındaki İlişki (Bağımsızlık Testi)",
+    "text": "Soru 3: İki Değişken Arasındaki İlişki (Bağımsızlık Testi)\nBir araştırmada, 300 bitki örneği üzerinde yapılan gözlemlerde bitki türü ile hastalık durumu arasındaki ilişki incelenmiştir. Veriler aşağıdaki tabloda verilmiştir:\n\n\n\n\nHastalıklı\nSağlıklı\nToplam\n\n\n\n\nTür A\n40\n80\n120\n\n\nTür B\n30\n70\n100\n\n\nTür C\n45\n35\n80\n\n\nToplam\n115\n185\n300\n\n\n\nBitki türü ile hastalık durumu arasında bir ilişki olup olmadığını Ki-kare bağımsızlık testi ile test ediniz.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders-kikare-uyg.html#soru-4-ki-kare-ve-h₀",
+    "href": "ders-kikare-uyg.html#soru-4-ki-kare-ve-h₀",
+    "title": "Ders 8 Uygulama: Ki-kare Testi",
+    "section": "Soru 4: Ki-kare ve H₀",
+    "text": "Soru 4: Ki-kare ve H₀\nKi-kare testinin sıfır hipotezi (H₀), t-testindeki sıfır hipotezinden nasıl farklıdır? Aşağıdaki senaryoda bu farkı açıklayınız:\nBir bitki genetikçisi, bir genin kalıtımını inceliyor. Tek gen dominans durumunda, F2 neslinde 3:1 oranı beklenir (3 dominant : 1 resesif fenotip). Deneyinde 200 F2 bitkisini incelemiş ve şu sonuçları elde etmiştir:\n\nDominant fenotip (Mor çiçek): 158 bitki\nResesif fenotip (Beyaz çiçek): 42 bitki\n\nBu verileri analiz ederek, Ki-kare testindeki H₀’ın t-testindeki H₀’dan nasıl farklı olduğunu açıklayınız ve uygun istatistiksel testi uygulayınız.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders-kikare-uyg.html#soru-5-sıfır-hipotezi-için-derinlemesine-analiz",
+    "href": "ders-kikare-uyg.html#soru-5-sıfır-hipotezi-için-derinlemesine-analiz",
+    "title": "Ders 8 Uygulama: Ki-kare Testi",
+    "section": "Soru 5: Sıfır Hipotezi İçin Derinlemesine Analiz",
+    "text": "Soru 5: Sıfır Hipotezi İçin Derinlemesine Analiz\nKi-kare testlerinde sıfır hipotezi (H₀) ve alternatif hipotez (H₁), t-testlerinden farklıdır. Bu farkı anlamak için aşağıdaki senaryoyu ele alalım:\nİki farklı besin ortamında yetiştirilen bakterilerin antibiyotik direnci incelenmiştir:\n\n\n\n\nDirençli\nDuyarlı\nToplam\n\n\n\n\nBesin Ortamı A\n35\n65\n100\n\n\nBesin Ortamı B\n55\n45\n100\n\n\nToplam\n90\n110\n200\n\n\n\n\nBu senaryoda Ki-kare testi için H₀ ve H₁ hipotezlerini açıkça ifade ediniz.\nt-testi senaryosunda hipotezler nasıl farklı olurdu?\nVerileri analiz ediniz ve sonuçları yorumlayınız.\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ders-regresyon.html#özet",
+    "href": "ders-regresyon.html#özet",
+    "title": "Regresyon",
     "section": "Özet",
-    "text": "Özet\n\nÇok çekirdek - simulasyon\nHesapsal istatistik - “Allen Downey - A future of data science” başlıklı konuşması\nR/infer paketi"
+    "text": "Özet\n\nRegresyon nedir? Korelasyondan farkı\nBasit doğrusal regresyon\nEn küçük kareler yöntemi (OLS)\nRegresyon katsayılarının yorumlanması\nR² — Belirtme katsayısı\nRegresyon varsayımları (LINE)\nArtıkların incelenmesi\nTahmin (prediction)\nÇoklu regresyon\nBiyolojik örnekler ve R uygulamaları"
   },
   {
-    "objectID": "ders09.html#hesapsal-istatistik",
-    "href": "ders09.html#hesapsal-istatistik",
-    "title": "Ders 9: Hesapsal İstatistik",
-    "section": "Hesapsal istatistik",
-    "text": "Hesapsal istatistik\n\n“A future of data science” başlıklı konuşmadan alınmıştır"
+    "objectID": "ders-regresyon.html#korelasyon-vs-regresyon",
+    "href": "ders-regresyon.html#korelasyon-vs-regresyon",
+    "title": "Regresyon",
+    "section": "Korelasyon vs Regresyon",
+    "text": "Korelasyon vs Regresyon"
   },
   {
-    "objectID": "ders09.html#geleneksel-istatistikten-simülasyona",
-    "href": "ders09.html#geleneksel-istatistikten-simülasyona",
-    "title": "Ders 9: Hesapsal İstatistik",
-    "section": "Geleneksel İstatistikten Simülasyona",
-    "text": "Geleneksel İstatistikten Simülasyona\n\nŞimdiye kadar t-test, ANOVA ve Ki-kare gibi parametrik testleri öğrendik\nBu testler belirli varsayımlara dayanır (normallik, varyans homojenliği vb.)\nBugün farklı bir bakış açısı ile tanışacağız\nSoru aynı: “Gözlediğimiz etki gerçek mi, yoksa şansa bağlı mı?”"
+    "objectID": "ders-regresyon.html#regresyon-nedir",
+    "href": "ders-regresyon.html#regresyon-nedir",
+    "title": "Regresyon",
+    "section": "Regresyon nedir?",
+    "text": "Regresyon nedir?\nRegresyon, bir bağımlı değişken (Y) ile bir veya daha fazla bağımsız değişken (X) arasındaki ilişkiyi matematiksel bir modelle ifade eden istatistiksel bir yöntemdir.\n\nKorelasyon: “Boy ve kilo arasında ilişki var mı?” → r = 0.95\nRegresyon: “Boyu 175 cm olan birinin kilosu kaç olur?” → ŷ = −105 + 1.1 × 175 = 87.5 kg\n\nRegresyon yönlü bir analizdir: X’ten Y’yi tahmin ederiz. X ve Y’nin yerini değiştirirsek farklı bir denklem elde ederiz."
   },
   {
-    "objectID": "ders09.html#simülasyon-tabanlı-istatistik",
-    "href": "ders09.html#simülasyon-tabanlı-istatistik",
-    "title": "Ders 9: Hesapsal İstatistik",
-    "section": "Simülasyon Tabanlı İstatistik",
-    "text": "Simülasyon Tabanlı İstatistik\n\nModern bilgisayarların gücünü kullanarak veri yeniden örnekleme\nRastgele süreçleri taklit etme\nTeorik dağılımlar yerine veriden öğrenme\nR’daki infer paketi bu yaklaşımı kolaylaştırır"
+    "objectID": "ders-regresyon.html#basit-doğrusal-regresyon",
+    "href": "ders-regresyon.html#basit-doğrusal-regresyon",
+    "title": "Regresyon",
+    "section": "Basit doğrusal regresyon",
+    "text": "Basit doğrusal regresyon\nTek bir bağımsız değişken (X) ile bağımlı değişken (Y) arasındaki doğrusal ilişkiyi modellemek için kullanılır.\n\\[ Y = \\beta_0 + \\beta_1 X + \\varepsilon \\]\n\n\\(\\beta_0\\) : kesim noktası (intercept) — X = 0 olduğunda Y’nin tahmini değeri\n\\(\\beta_1\\) : eğim (slope) — X’teki 1 birimlik artışın Y’de oluşturduğu değişim\n\\(\\varepsilon\\) : hata terimi (error) — modelin açıklayamadığı rastgele varyasyon\n\nTahmin denklemi (şapka = tahmin):\n\\[ \\hat{Y} = \\hat{\\beta}_0 + \\hat{\\beta}_1 X \\]"
   },
   {
-    "objectID": "ders09.html#infer-paketi-nedir",
-    "href": "ders09.html#infer-paketi-nedir",
-    "title": "Ders 9: Hesapsal İstatistik",
-    "section": "infer Paketi Nedir?",
-    "text": "infer Paketi Nedir?\n\nİstatistiksel çıkarım için tutarlı bir dilbilgisi sağlar\ntidyverse felsefesiyle uyumlu\nKarmaşık formüller yerine okunabilir kod akışı\nDört ana fonksiyon: specify(), hypothesize(), generate(), calculate()"
+    "objectID": "ders-regresyon.html#en-küçük-kareler-yöntemi-ols",
+    "href": "ders-regresyon.html#en-küçük-kareler-yöntemi-ols",
+    "title": "Regresyon",
+    "section": "En küçük kareler yöntemi (OLS)",
+    "text": "En küçük kareler yöntemi (OLS)\n\n\n\n\n\n\nkaynak: OntarioTech"
   },
   {
-    "objectID": "ders09.html#infer-iş-akışı",
-    "href": "ders09.html#infer-iş-akışı",
-    "title": "Ders 9: Hesapsal İstatistik",
-    "section": "infer İş Akışı",
-    "text": "infer İş Akışı\n\nİnfer Paketi İş Akışı"
+    "objectID": "ders-regresyon.html#ols-formülleri",
+    "href": "ders-regresyon.html#ols-formülleri",
+    "title": "Regresyon",
+    "section": "OLS formülleri",
+    "text": "OLS formülleri\nEğim (\\(\\hat{\\beta}_1\\)) ve kesim noktası (\\(\\hat{\\beta}_0\\)) hesabı:\n\\[ \\hat{\\beta}_1 = \\frac{\\sum_{i=1}^n (x_i - \\bar{x})(y_i - \\bar{y})}{\\sum_{i=1}^n (x_i - \\bar{x})^2} \\]\n\\[ \\hat{\\beta}_0 = \\bar{y} - \\hat{\\beta}_1 \\bar{x} \\]\n\nRegresyon doğrusu her zaman \\((\\bar{x}, \\bar{y})\\) noktasından geçer."
   },
   {
-    "objectID": "ders09.html#örnek-veri-seti-gss",
-    "href": "ders09.html#örnek-veri-seti-gss",
-    "title": "Ders 9: Hesapsal İstatistik",
-    "section": "Örnek Veri Seti: GSS",
-    "text": "Örnek Veri Seti: GSS\n\nlibrary(infer)\nlibrary(dplyr)\ndata(gss)\nglimpse(gss)\n\nRows: 500\nColumns: 11\n$ year    &lt;dbl&gt; 2014, 1994, 1998, 1996, 1994, 1996, 1990, 2016, 2000, 1998, 20…\n$ age     &lt;dbl&gt; 36, 34, 24, 42, 31, 32, 48, 36, 30, 33, 21, 30, 38, 49, 25, 56…\n$ sex     &lt;fct&gt; male, female, male, male, male, female, female, female, female…\n$ college &lt;fct&gt; degree, no degree, degree, no degree, degree, no degree, no de…\n$ partyid &lt;fct&gt; ind, rep, ind, ind, rep, rep, dem, ind, rep, dem, dem, ind, de…\n$ hompop  &lt;dbl&gt; 3, 4, 1, 4, 2, 4, 2, 1, 5, 2, 4, 3, 4, 4, 2, 2, 3, 2, 1, 2, 5,…\n$ hours   &lt;dbl&gt; 50, 31, 40, 40, 40, 53, 32, 20, 40, 40, 23, 52, 38, 72, 48, 40…\n$ income  &lt;ord&gt; $25000 or more, $20000 - 24999, $25000 or more, $25000 or more…\n$ class   &lt;fct&gt; middle class, working class, working class, working class, mid…\n$ finrela &lt;fct&gt; below average, below average, below average, above average, ab…\n$ weight  &lt;dbl&gt; 0.8960034, 1.0825000, 0.5501000, 1.0864000, 1.0825000, 1.08640…\n\n\n\nBu veri seti Amerikan Genel Sosyal Anketi’nden 500 gözlem içerir ve yaş, eğitim durumu, politik görüş gibi değişkenler barındırır."
+    "objectID": "ders-regresyon.html#basit-doğrusal-regresyon-r-uygulaması",
+    "href": "ders-regresyon.html#basit-doğrusal-regresyon-r-uygulaması",
+    "title": "Regresyon",
+    "section": "Basit doğrusal regresyon — R uygulaması",
+    "text": "Basit doğrusal regresyon — R uygulaması\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
   },
   {
-    "objectID": "ders09.html#specify-değişkenleri-belirleme",
-    "href": "ders09.html#specify-değişkenleri-belirleme",
-    "title": "Ders 9: Hesapsal İstatistik",
-    "section": "1. specify(): Değişkenleri Belirleme",
-    "text": "1. specify(): Değişkenleri Belirleme\n\nHangi değişkenler üzerinde çalışacağımızı belirteriz\nTek değişken için: response = degisken\nİki değişken için: response = y, explanatory = x veya y ~ x\n\n\n# Yaş değişkenini belirtelim\ngss |&gt;\n  specify(response = age)\n\nResponse: age (numeric)\n# A tibble: 500 × 1\n     age\n   &lt;dbl&gt;\n 1    36\n 2    34\n 3    24\n 4    42\n 5    31\n 6    32\n 7    48\n 8    36\n 9    30\n10    33\n# ℹ 490 more rows\n\n# İki değişken ilişkisini belirtelim\ngss |&gt;\n  specify(age ~ partyid)\n\nResponse: age (numeric)\nExplanatory: partyid (factor)\n# A tibble: 500 × 2\n     age partyid\n   &lt;dbl&gt; &lt;fct&gt;  \n 1    36 ind    \n 2    34 rep    \n 3    24 ind    \n 4    42 ind    \n 5    31 rep    \n 6    32 rep    \n 7    48 dem    \n 8    36 ind    \n 9    30 rep    \n10    33 dem    \n# ℹ 490 more rows"
+    "objectID": "ders-regresyon.html#katsayıların-yorumlanması",
+    "href": "ders-regresyon.html#katsayıların-yorumlanması",
+    "title": "Regresyon",
+    "section": "Katsayıların yorumlanması",
+    "text": "Katsayıların yorumlanması\nsummary() çıktısını yorumlayalım:\n\nIntercept (β₀): Vücut ağırlığı 0 kg olsaydı kalp ağırlığının tahmini değeri. Biyolojik olarak anlamsızdır ama matematiksel olarak doğrunun Y eksenini kestiği noktadır.\nBwt (β₁): Vücut ağırlığındaki 1 kg’lık artış, kalp ağırlığında ortalama β₁ gram artışa karşılık gelir.\np-value: Eğimin sıfırdan farklı olup olmadığının testi. p &lt; 0.05 ise X ile Y arasında istatistiksel olarak anlamlı bir doğrusal ilişki vardır.\nStd. Error: Katsayı tahmininin standart hatası. Küçük olması, tahminin kesin olduğunu gösterir.\n\nHesaplanan katsayılara göre, formül:\nHwt = 4.034 x Bwt - 0.356"
   },
   {
-    "objectID": "ders09.html#hypothesize-sıfır-hipotezini-belirleme",
-    "href": "ders09.html#hypothesize-sıfır-hipotezini-belirleme",
-    "title": "Ders 9: Hesapsal İstatistik",
-    "section": "2. hypothesize(): Sıfır Hipotezini Belirleme",
-    "text": "2. hypothesize(): Sıfır Hipotezini Belirleme\n\nİki temel sıfır hipotezi türü:\n\n\"independence\": İki değişken arasında ilişki yok\n\"point\": Parametre belirli bir değere eşit\n\n\n\n# Bağımsızlık hipotezi\ngss |&gt;\n  specify(college ~ partyid, success = \"degree\") |&gt;\n  hypothesize(null = \"independence\")\n\nResponse: college (factor)\nExplanatory: partyid (factor)\nNull Hypothesis: ind...\n# A tibble: 500 × 2\n   college   partyid\n   &lt;fct&gt;     &lt;fct&gt;  \n 1 degree    ind    \n 2 no degree rep    \n 3 degree    ind    \n 4 no degree ind    \n 5 degree    rep    \n 6 no degree rep    \n 7 no degree dem    \n 8 degree    ind    \n 9 degree    rep    \n10 no degree dem    \n# ℹ 490 more rows\n\n# Ortalama için nokta hipotezi\ngss |&gt;\n  specify(response = hours) |&gt;\n  hypothesize(null = \"point\", mu = 40)\n\nResponse: hours (numeric)\nNull Hypothesis: point\n# A tibble: 500 × 1\n   hours\n   &lt;dbl&gt;\n 1    50\n 2    31\n 3    40\n 4    40\n 5    40\n 6    53\n 7    32\n 8    20\n 9    40\n10    40\n# ℹ 490 more rows"
+    "objectID": "ders-regresyon.html#regresyon-görselleştirme",
+    "href": "ders-regresyon.html#regresyon-görselleştirme",
+    "title": "Regresyon",
+    "section": "Regresyon — görselleştirme",
+    "text": "Regresyon — görselleştirme\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
   },
   {
-    "objectID": "ders09.html#generate-sıfır-dağılımı-oluşturma",
-    "href": "ders09.html#generate-sıfır-dağılımı-oluşturma",
-    "title": "Ders 9: Hesapsal İstatistik",
-    "section": "3. generate(): Sıfır Dağılımı Oluşturma",
-    "text": "3. generate(): Sıfır Dağılımı Oluşturma\n\nSıfır hipotezi altında verinin nasıl görüneceğini simüle eder\nÜç temel yöntem:\n\nbootstrap: Yerine koyarak örnekleme\npermute: Değişkenleri karıştırma\ndraw: Teorik dağılımdan örnekleme\n\n\n\n# 1000 bootstrap örneği oluşturalım\ngss |&gt;\n  specify(response = hours) |&gt;\n  hypothesize(null = \"point\", mu = 40) |&gt;\n  generate(reps = 1000, type = \"bootstrap\")\n\nResponse: hours (numeric)\nNull Hypothesis: point\n# A tibble: 500,000 × 2\n# Groups:   replicate [1,000]\n   replicate hours\n       &lt;int&gt; &lt;dbl&gt;\n 1         1  87.6\n 2         1  43.6\n 3         1  36.6\n 4         1  13.6\n 5         1  38.6\n 6         1  63.6\n 7         1  38.6\n 8         1  33.6\n 9         1  38.6\n10         1  38.6\n# ℹ 499,990 more rows"
+    "objectID": "ders-regresyon.html#r²-belirtme-katsayısı",
+    "href": "ders-regresyon.html#r²-belirtme-katsayısı",
+    "title": "Regresyon",
+    "section": "R² — Belirtme katsayısı",
+    "text": "R² — Belirtme katsayısı\n\\(R^2\\) (R-kare), bağımlı değişkendeki toplam varyansın yüzde kaçının model tarafından açıklandığını gösterir.\n\\[ R^2 = 1 - \\frac{SS_{res}}{SS_{tot}} = 1 - \\frac{\\sum(y_i - \\hat{y}_i)^2}{\\sum(y_i - \\bar{y})^2} \\]\n\n\\(R^2 = 0\\): Model hiçbir varyansı açıklamıyor (rastgele tahmin kadar kötü)\n\\(R^2 = 1\\): Model tüm varyansı açıklıyor (tüm noktalar doğru üzerinde)\nBasit regresyonda (tek bağımsız değişken) \\(R^2 = r^2\\) (Pearson korelasyonunun karesi)\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
   },
   {
-    "objectID": "ders09.html#generate-veri-karıştırma-örneği",
-    "href": "ders09.html#generate-veri-karıştırma-örneği",
-    "title": "Ders 9: Hesapsal İstatistik",
-    "section": "generate(): Veri Karıştırma Örneği",
-    "text": "generate(): Veri Karıştırma Örneği\n\n# Yaş ve parti ilişkisini kırmak için değişkenleri karıştıralım\ngss |&gt;\n  specify(partyid ~ age) |&gt;\n  hypothesize(null = \"independence\") |&gt;\n  generate(reps = 1000, type = \"permute\")\n\nResponse: partyid (factor)\nExplanatory: age (numeric)\nNull Hypothesis: indepe...\n# A tibble: 500,000 × 3\n# Groups:   replicate [1,000]\n   partyid   age replicate\n   &lt;fct&gt;   &lt;dbl&gt;     &lt;int&gt;\n 1 ind        36         1\n 2 rep        34         1\n 3 dem        24         1\n 4 dem        42         1\n 5 dem        31         1\n 6 rep        32         1\n 7 rep        48         1\n 8 ind        36         1\n 9 ind        30         1\n10 rep        33         1\n# ℹ 499,990 more rows\n\n\nBu adım, sıfır hipotezi doğru olsaydı veri nasıl görünürdü sorusuna cevap verir."
+    "objectID": "ders-regresyon.html#regresyon-varsayımları",
+    "href": "ders-regresyon.html#regresyon-varsayımları",
+    "title": "Regresyon",
+    "section": "Regresyon varsayımları",
+    "text": "Regresyon varsayımları\n4 temel varsayım (LINE)\n\nLinearity (doğrusallık): X ile Y arasındaki ilişki doğrusal olmalıdır. Eğrisel bir ilişki varsa (parabolik, logaritmik gibi) doğrusal regresyon modeli bu ilişkiyi doğru temsil edemez. Kontrol: Artık vs tahmin grafiğinde rastgele dağılım olmalı, U veya S şekli olmamalı.\nIndependence (bağımsızlık): Gözlemler birbirinden bağımsız olmalıdır. Bir gözlemin değeri diğerini etkilememeli. Örneğin aynı hastadan tekrarlı ölçümler alındıysa bu varsayım ihlal edilir.\nNormality (normallik): Artıklar (residuals) normal dağılmalıdır. Y’nin kendisinin değil, modelin hatalarının normal dağılması gerekir. Kontrol: Q-Q grafiğinde noktalar çapraz çizgi üzerinde olmalı.\nEqual variance (eşit varyans): Artıkların varyansı tüm X değerlerinde sabit olmalıdır. Yani model düşük X değerlerinde de yüksek X değerlerinde de aynı miktarda hata yapmalı. Kontrol: Artık vs tahmin grafiğinde huni şekli (yelpaze açılması) olmamalı."
   },
   {
-    "objectID": "ders09.html#calculate-istatistik-hesaplama",
-    "href": "ders09.html#calculate-istatistik-hesaplama",
-    "title": "Ders 9: Hesapsal İstatistik",
-    "section": "4. calculate(): İstatistik Hesaplama",
-    "text": "4. calculate(): İstatistik Hesaplama\n\nSimüle edilmiş verilerden istatistikler hesaplar\nOrtalama, medyan, oran, fark, t-istatistiği ve daha fazlası\nSıfır dağılımını oluşturur\n\n\n# Ortalama çalışma saatlerinin dağılımını hesaplayalım\ngss |&gt;\n  specify(response = hours) |&gt;\n  hypothesize(null = \"point\", mu = 40) |&gt;\n  generate(reps = 1000, type = \"bootstrap\") |&gt;\n  calculate(stat = \"mean\")\n\nResponse: hours (numeric)\nNull Hypothesis: point\n# A tibble: 1,000 × 2\n   replicate  stat\n       &lt;int&gt; &lt;dbl&gt;\n 1         1  40.1\n 2         2  39.9\n 3         3  40.0\n 4         4  39.1\n 5         5  38.7\n 6         6  40.0\n 7         7  40.0\n 8         8  40.5\n 9         9  39.3\n10        10  41.7\n# ℹ 990 more rows"
+    "objectID": "ders-regresyon.html#varsayımları-kontrol-etme-r-ile",
+    "href": "ders-regresyon.html#varsayımları-kontrol-etme-r-ile",
+    "title": "Regresyon",
+    "section": "Varsayımları kontrol etme — R ile",
+    "text": "Varsayımları kontrol etme — R ile\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
   },
   {
-    "objectID": "ders09.html#örnek-haftalık-çalışma-saatleri-analizi",
-    "href": "ders09.html#örnek-haftalık-çalışma-saatleri-analizi",
-    "title": "Ders 9: Hesapsal İstatistik",
-    "section": "Örnek: Haftalık Çalışma Saatleri Analizi",
-    "text": "Örnek: Haftalık Çalışma Saatleri Analizi\nSoru: Ortalama çalışma saati gerçekten 40 saat mı?\n\n# Gözlemlenen istatistiği hesaplayalım\nobs_mean &lt;- gss |&gt;\n  specify(response = hours) |&gt;\n  calculate(stat = \"mean\")\n\n# Sıfır dağılımını oluşturalım\nnull_dist &lt;- gss |&gt;\n  specify(response = hours) |&gt;\n  hypothesize(null = \"point\", mu = 40) |&gt;\n  generate(reps = 1000, type = \"bootstrap\") |&gt;\n  calculate(stat = \"mean\")"
+    "objectID": "ders-regresyon.html#diagnostik-grafiklerin-yorumlanması",
+    "href": "ders-regresyon.html#diagnostik-grafiklerin-yorumlanması",
+    "title": "Regresyon",
+    "section": "Diagnostik grafiklerin yorumlanması",
+    "text": "Diagnostik grafiklerin yorumlanması\nR’ın plot(model) komutu 4 diagnostik grafik üretir, biz sadece ikisine bakıyoruz:\n\nResiduals vs Fitted: Artıklar ile tahmin değerleri. Rastgele dağılım olmalı, bir desen (eğri, huni) varsa varsayım ihlali var demektir.\nNormal Q-Q: Artıkların normalliği. Noktalar çapraz çizgi üzerinde olmalı. Uçlarda sapma varsa normallik ihlali var demektir.\n\nScale-Location varyans eşitliğini, Residuals vs Leverage grafiği de modele orantısız etkileyen noktaları gösterir."
   },
   {
-    "objectID": "ders09.html#sonuçları-görselleştirme",
-    "href": "ders09.html#sonuçları-görselleştirme",
-    "title": "Ders 9: Hesapsal İstatistik",
-    "section": "Sonuçları Görselleştirme",
-    "text": "Sonuçları Görselleştirme\n\n# Sıfır dağılımını görselleştirelim\nnull_dist |&gt;\n  visualize() +\n  shade_p_value(obs_stat = obs_mean, direction = \"two-sided\")\n\n\n\n\n\n\n\n\n\n\n\nÖrnek Görselleştirme"
+    "objectID": "ders-regresyon.html#kötü-örnekler",
+    "href": "ders-regresyon.html#kötü-örnekler",
+    "title": "Regresyon",
+    "section": "“Kötü” örnekler",
+    "text": "“Kötü” örnekler\nResidual-Fit veya QQ grafiği güzel olmayan iki örnek yapalım\n\ntrees adlı veride ağaçlara ait yükseklik, çap ve hacim hesaplamaları var. hacim ile çap arasında silindir hacmi ilişkisi olduğundan residual-fit eğrisinde bir örüntü ortaya çıkacaktır\nkendimizin oluşturduğu enzim kinetiği verisinde doğrusal olmayan bir ilişki varken, doğrusal regresyon modelleme yaptığımızda residual-fit grafiğinde örüntü oluşacak ve QQ grafiğinde sapmalar olacaktır"
   },
   {
-    "objectID": "ders09.html#p-değeri-hesaplama",
-    "href": "ders09.html#p-değeri-hesaplama",
-    "title": "Ders 9: Hesapsal İstatistik",
-    "section": "p-değeri Hesaplama",
-    "text": "p-değeri Hesaplama\n\n# İki kuyruklu p-değerini hesaplayalım\np_value &lt;- null_dist |&gt;\n  get_p_value(obs_stat = obs_mean, direction = \"two-sided\")\n\np_value\n\n# A tibble: 1 × 1\n  p_value\n    &lt;dbl&gt;\n1   0.034\n\n\nEğer ortalama gerçekten 40 saat olsaydı, gözlemlediğimiz kadar (veya daha) uç bir değer elde etme olasılığımız p-değeri kadardır."
+    "objectID": "ders-regresyon.html#trees-veri-seti",
+    "href": "ders-regresyon.html#trees-veri-seti",
+    "title": "Regresyon",
+    "section": "trees veri seti",
+    "text": "trees veri seti\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
   },
   {
-    "objectID": "ders09.html#güven-aralıkları",
-    "href": "ders09.html#güven-aralıkları",
-    "title": "Ders 9: Hesapsal İstatistik",
-    "section": "Güven Aralıkları",
-    "text": "Güven Aralıkları\n\n# Bootstrap dağılımını oluşturalım\nboot_dist &lt;- gss |&gt;\n  specify(response = hours) |&gt;\n  generate(reps = 1000, type = \"bootstrap\") |&gt;\n  calculate(stat = \"mean\")\n\n# %95 güven aralığını hesaplayalım\nci &lt;- boot_dist |&gt;\n  get_confidence_interval(\n    point_estimate = obs_mean,\n    level = .95,\n    type = \"se\"\n  )"
+    "objectID": "ders-regresyon.html#kotü-model-1",
+    "href": "ders-regresyon.html#kotü-model-1",
+    "title": "Regresyon",
+    "section": "Kotü model 1",
+    "text": "Kotü model 1\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
   },
   {
-    "objectID": "ders09.html#moleküler-biyoloji-örneği-gen-ifadesi",
-    "href": "ders09.html#moleküler-biyoloji-örneği-gen-ifadesi",
-    "title": "Ders 9: Hesapsal İstatistik",
-    "section": "Moleküler Biyoloji Örneği: Gen İfadesi",
-    "text": "Moleküler Biyoloji Örneği: Gen İfadesi\n\nSenaryo: İki farklı hücre tipinde (normal vs. kanser) bir genin ifade seviyesini karşılaştırıyoruz\nSıfır hipotezi: Gen ifadesi hücre tipine göre değişmez\ninfer ile simülasyon yaklaşımı nasıl kullanılır?"
+    "objectID": "ders-regresyon.html#kotü-model-2",
+    "href": "ders-regresyon.html#kotü-model-2",
+    "title": "Regresyon",
+    "section": "Kotü model 2",
+    "text": "Kotü model 2\nMichaelis-Menten benzeri doz-yanıt verisi\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
   },
   {
-    "objectID": "ders09.html#örnek-kod-gen-ifadesi-karşılaştırması",
-    "href": "ders09.html#örnek-kod-gen-ifadesi-karşılaştırması",
-    "title": "Ders 9: Hesapsal İstatistik",
-    "section": "Örnek Kod: Gen İfadesi Karşılaştırması",
-    "text": "Örnek Kod: Gen İfadesi Karşılaştırması\n# Verileri tanımlayalım\ngen_ifadesi |&gt;\n  # İfade seviyesi ~ hücre tipi ilişkisini belirtelim\n  specify(expression ~ cell_type) |&gt;\n  # Sıfır hipotezi: Hücre tipi etkisi yok\n  hypothesize(null = \"independence\") |&gt;\n  # 1000 permütasyon örneği oluşturalım\n  generate(reps = 1000, type = \"permute\") |&gt;\n  # Ortalama farkını hesaplayalım\n  calculate(stat = \"diff in means\", \n            order = c(\"cancer\", \"normal\"))"
-  },
-  {
-    "objectID": "ders09.html#teorik-dağılım-kullanımı",
-    "href": "ders09.html#teorik-dağılım-kullanımı",
-    "title": "Ders 9: Hesapsal İstatistik",
-    "section": "Teorik Dağılım Kullanımı",
-    "text": "Teorik Dağılım Kullanımı\n\ninfer teorik dağılımlarla da çalışabilir\nt, F, Ki-kare ve z dağılımları için assume()\nSimülasyon ve teorik yaklaşımlar arasında geçiş yapabilirsiniz\n\n# t-dağılımı tanımlayalım\nt_dist &lt;- gen_ifadesi |&gt;\n  specify(expression ~ cell_type) |&gt;\n  assume(distribution = \"t\")"
-  },
-  {
-    "objectID": "ders09.html#inferin-avantajları",
-    "href": "ders09.html#inferin-avantajları",
-    "title": "Ders 9: Hesapsal İstatistik",
-    "section": "infer’in Avantajları",
-    "text": "infer’in Avantajları\n\nDaha anlaşılır istatistiksel süreç\nVarsayımlar konusunda daha esnek\nÖğrencilere istatistiği görselleştirme imkanı\nTidyverse ekosistemiyle entegrasyon\nKarmaşık analizleri basitleştirme"
-  },
-  {
-    "objectID": "ders04-claude.html#özet",
-    "href": "ders04-claude.html#özet",
-    "title": "Ders8: Güven Aralıkları ve Hipotez Testi",
-    "section": "Özet",
-    "text": "Özet\n\nGüven Aralığı (Confidence Interval) Kavramı\nGüven Aralığı Hesaplama\nHipotez Testi Temelleri\nTip I ve Tip II Hatalar\np-değeri Kavramı\nTek Örneklem Hipotez Testi"
-  },
-  {
-    "objectID": "ders04-claude.html#güven-aralığı-kavramı",
-    "href": "ders04-claude.html#güven-aralığı-kavramı",
-    "title": "Ders8: Güven Aralıkları ve Hipotez Testi",
-    "section": "Güven Aralığı Kavramı",
-    "text": "Güven Aralığı Kavramı\nGüven aralığı, bir popülasyon parametresi için olası değerlerin bir aralığıdır.\n\nBelirli bir güven düzeyi (genellikle %95) ile ifade edilir\nÖrneklem verisinden hesaplanır\nTahmin edilen parametre hakkında belirsizliği gösterir\n\n\n\n\nGüven aralığı örneklemi popülasyonla ilişkilendirir"
-  },
-  {
-    "objectID": "ders04-claude.html#güven-aralığının-yorumlanması",
-    "href": "ders04-claude.html#güven-aralığının-yorumlanması",
-    "title": "Ders8: Güven Aralıkları ve Hipotez Testi",
-    "section": "Güven Aralığının Yorumlanması",
-    "text": "Güven Aralığının Yorumlanması\n%95 güven aralığı şu anlama gelir:\n\nEğer aynı popülasyondan yüzlerce örneklem alıp her biri için güven aralığı hesaplarsak, bu aralıkların %95’i gerçek popülasyon parametresini içerecektir\nYanlış yorumlama: “Gerçek değerin bu aralıkta olma olasılığı %95’tir”\n\n\n\n\nFarklı örneklemlerden elde edilen güven aralıkları"
-  },
-  {
-    "objectID": "ders04-claude.html#ortalama-için-güven-aralığı-formülü",
-    "href": "ders04-claude.html#ortalama-için-güven-aralığı-formülü",
-    "title": "Ders8: Güven Aralıkları ve Hipotez Testi",
-    "section": "Ortalama için Güven Aralığı Formülü",
-    "text": "Ortalama için Güven Aralığı Formülü\nBir popülasyon ortalaması için %95 güven aralığı:\n\\[ \\bar{x} \\pm 1.96 \\times \\frac{\\sigma}{\\sqrt{n}} \\]\nBurada: * \\(\\bar{x}\\) = örneklem ortalaması * \\(\\sigma\\) = popülasyon standart sapması (bilinmiyorsa örneklem standart sapması \\(s\\) kullanılır) * \\(n\\) = örneklem büyüklüğü * \\(1.96\\) = %95 güven düzeyi için z-değeri\nPopülasyon standart sapması bilinmediğinde (genellikle):\n\\[ \\bar{x} \\pm t_{\\alpha/2, n-1} \\times \\frac{s}{\\sqrt{n}} \\]"
-  },
-  {
-    "objectID": "ders04-claude.html#rda-güven-aralığı-hesaplama",
-    "href": "ders04-claude.html#rda-güven-aralığı-hesaplama",
-    "title": "Ders8: Güven Aralıkları ve Hipotez Testi",
-    "section": "R’da Güven Aralığı Hesaplama",
-    "text": "R’da Güven Aralığı Hesaplama\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "ders04-claude.html#t.test-fonksiyonu-ile-güven-aralığı",
-    "href": "ders04-claude.html#t.test-fonksiyonu-ile-güven-aralığı",
-    "title": "Ders8: Güven Aralıkları ve Hipotez Testi",
-    "section": "t.test Fonksiyonu ile Güven Aralığı",
-    "text": "t.test Fonksiyonu ile Güven Aralığı\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "ders04-claude.html#güven-düzeyinin-etkisi",
-    "href": "ders04-claude.html#güven-düzeyinin-etkisi",
-    "title": "Ders8: Güven Aralıkları ve Hipotez Testi",
-    "section": "Güven Düzeyinin Etkisi",
-    "text": "Güven Düzeyinin Etkisi\nGüven düzeyi arttıkça güven aralığı genişler:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nFarklı güven düzeyleri için aralıklar"
-  },
-  {
-    "objectID": "ders04-claude.html#örneklem-büyüklüğünün-etkisi",
-    "href": "ders04-claude.html#örneklem-büyüklüğünün-etkisi",
-    "title": "Ders8: Güven Aralıkları ve Hipotez Testi",
-    "section": "Örneklem Büyüklüğünün Etkisi",
-    "text": "Örneklem Büyüklüğünün Etkisi\nÖrneklem büyüklüğü arttıkça güven aralığı daralır:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "ders04-claude.html#hipotez-testi-kavramı",
-    "href": "ders04-claude.html#hipotez-testi-kavramı",
-    "title": "Ders8: Güven Aralıkları ve Hipotez Testi",
-    "section": "Hipotez Testi Kavramı",
-    "text": "Hipotez Testi Kavramı\nHipotez testi, bir popülasyon parametresi hakkındaki iddianın (hipotezin) verilerle desteklenip desteklenmediğini belirlemek için kullanılan istatistiksel bir yöntemdir.\nTemel bileşenler:\n\nSıfır Hipotezi (H₀): Test edilen iddia (genellikle “fark yok” veya “etki yok” şeklinde)\nAlternatif Hipotez (H₁): Sıfır hipotezi doğru değilse geçerli olan alternatif\nTest İstatistiği: Verilerden hesaplanan bir değer\nKritik Değer veya p-değeri: Hipotezi reddetme veya kabul etme kararını verme kriteri"
-  },
-  {
-    "objectID": "ders04-claude.html#hipotez-testi-adımları",
-    "href": "ders04-claude.html#hipotez-testi-adımları",
-    "title": "Ders8: Güven Aralıkları ve Hipotez Testi",
-    "section": "Hipotez Testi Adımları",
-    "text": "Hipotez Testi Adımları\n\nHipotezleri belirle (H₀ ve H₁)\nAnlamlılık düzeyini seç (genellikle α = 0.05)\nUygun test istatistiğini seç ve hesapla\np-değerini hesapla\nKarar ver: p-değeri &lt; α ise H₀ reddedilir\n\n\n\n\nHipotez testi akış şeması"
-  },
-  {
-    "objectID": "ders04-claude.html#tip-i-ve-tip-ii-hatalar",
-    "href": "ders04-claude.html#tip-i-ve-tip-ii-hatalar",
-    "title": "Ders8: Güven Aralıkları ve Hipotez Testi",
-    "section": "Tip I ve Tip II Hatalar",
-    "text": "Tip I ve Tip II Hatalar\n\nTip I Hata (α): Doğru olan sıfır hipotezini yanlışlıkla reddetmek\n\n“Yanlış pozitif” olarak da bilinir\nOlasılığı anlamlılık düzeyi (α) ile kontrol edilir\n\nTip II Hata (β): Yanlış olan sıfır hipotezini reddetmeme\n\n“Yanlış negatif” olarak da bilinir\nİstatistiksel güç = 1 - β\n\n\n\n\n\nTip I ve Tip II hatalar"
-  },
-  {
-    "objectID": "ders04-claude.html#p-değeri-kavramı",
-    "href": "ders04-claude.html#p-değeri-kavramı",
-    "title": "Ders8: Güven Aralıkları ve Hipotez Testi",
-    "section": "p-değeri Kavramı",
-    "text": "p-değeri Kavramı\np-değeri, gözlenen sonuçların (veya daha aşırı sonuçların) sıfır hipotezi doğru olduğunda meydana gelme olasılığıdır.\n\nKüçük p-değeri (genellikle &lt; 0.05): Gözlenen veri sıfır hipotezi ile tutarsız\nBüyük p-değeri: Gözlenen veri sıfır hipotezi ile tutarlı\n\n\n\n\np-değeri kavramı"
-  },
-  {
-    "objectID": "ders04-claude.html#p-değeri-yorumlama",
-    "href": "ders04-claude.html#p-değeri-yorumlama",
-    "title": "Ders8: Güven Aralıkları ve Hipotez Testi",
-    "section": "p-değeri Yorumlama",
-    "text": "p-değeri Yorumlama\n\np &lt; 0.05: “İstatistiksel olarak anlamlı” (H₀ reddedilir)\np ≥ 0.05: “İstatistiksel olarak anlamlı değil” (H₀ reddedilemez)\n\nYaygın Yanlış Anlamalar: * p-değeri, hipotezin doğru olma olasılığı değildir * İstatistiksel anlamlılık her zaman pratik anlamlılık demek değildir * p-değeri büyükse “fark yok” kanıtlanmış olmaz"
-  },
-  {
-    "objectID": "ders04-claude.html#tek-örneklem-t-testi",
-    "href": "ders04-claude.html#tek-örneklem-t-testi",
-    "title": "Ders8: Güven Aralıkları ve Hipotez Testi",
-    "section": "Tek Örneklem t-testi",
-    "text": "Tek Örneklem t-testi\nBir örneklemin ortalamasının belirli bir değerden farklı olup olmadığını test eder.\nHipotezler: * H₀: μ = μ₀ (popülasyon ortalaması belirli bir değere eşittir) * H₁: μ ≠ μ₀ (iki yönlü) veya μ &gt; μ₀ ya da μ &lt; μ₀ (tek yönlü)\nTest İstatistiği: \\[ t = \\frac{\\bar{x} - \\mu_0}{\\frac{s}{\\sqrt{n}}} \\]"
-  },
-  {
-    "objectID": "ders04-claude.html#rda-tek-örneklem-t-testi",
-    "href": "ders04-claude.html#rda-tek-örneklem-t-testi",
-    "title": "Ders8: Güven Aralıkları ve Hipotez Testi",
-    "section": "R’da Tek Örneklem t-testi",
-    "text": "R’da Tek Örneklem t-testi\nÖrnek: Bir grup farenin ortalama ağırlığının 25 gram olduğu hipotezini test edelim.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "ders04-claude.html#hipotez-testi-çeşitleri",
-    "href": "ders04-claude.html#hipotez-testi-çeşitleri",
-    "title": "Ders8: Güven Aralıkları ve Hipotez Testi",
-    "section": "Hipotez Testi Çeşitleri",
-    "text": "Hipotez Testi Çeşitleri\n\n\n\nYaygın hipotez testleri"
-  },
-  {
-    "objectID": "ders04-claude.html#örnek-senaryo-gen-ekspresyonu",
-    "href": "ders04-claude.html#örnek-senaryo-gen-ekspresyonu",
-    "title": "Ders8: Güven Aralıkları ve Hipotez Testi",
-    "section": "Örnek Senaryo: Gen Ekspresyonu",
-    "text": "Örnek Senaryo: Gen Ekspresyonu\nBir gen terapisinin bir genin ekspresyon seviyesini artırdığı iddia ediliyor. Normal ekspresyon seviyesi 15 birim olarak biliniyor. 12 hasta üzerinde yapılan tedavi sonrası ölçümler:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nSonuç yorumu: p-değeri 0.05’ten küçük olduğu için, tedavinin gen ekspresyonunu artırdığı hipotezini desteklemekteyiz."
-  },
-  {
-    "objectID": "ders04-claude.html#güven-aralığı-ve-hipotez-testi-ilişkisi",
-    "href": "ders04-claude.html#güven-aralığı-ve-hipotez-testi-ilişkisi",
-    "title": "Ders8: Güven Aralıkları ve Hipotez Testi",
-    "section": "Güven Aralığı ve Hipotez Testi İlişkisi",
-    "text": "Güven Aralığı ve Hipotez Testi İlişkisi\nGüven aralığı ve hipotez testi birbirini tamamlayıcı yaklaşımlardır:\n\nEğer %95 güven aralığı test edilen değeri (μ₀) içermiyorsa, α = 0.05 için hipotez testi de H₀’ı reddeder\nGüven aralığı, etki büyüklüğü hakkında daha fazla bilgi verir\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "ders04-claude.html#biyolojik-bilimler-için-önemi",
-    "href": "ders04-claude.html#biyolojik-bilimler-için-önemi",
-    "title": "Ders8: Güven Aralıkları ve Hipotez Testi",
-    "section": "Biyolojik Bilimler için Önemi",
-    "text": "Biyolojik Bilimler için Önemi\nGüven aralıkları ve hipotez testleri biyolojik bilimlerde çok önemlidir:\n\nİlaç çalışmaları: Bir ilacın etkili olup olmadığını belirlemek\nGen ekspresyon analizleri: Farklı koşullar altında gen ekspresyonunu karşılaştırmak\nKlinik araştırmalar: Tedavi etkinliğini değerlendirmek\nEkolojik çalışmalar: Tür çeşitliliğindeki değişimleri incelemek\n\nAncak p-değerine aşırı bağımlılık, tekrarlanabilirlik krizi gibi sorunlara yol açmıştır."
-  },
-  {
-    "objectID": "ders04-claude.html#pratik-ipuçları",
-    "href": "ders04-claude.html#pratik-ipuçları",
-    "title": "Ders8: Güven Aralıkları ve Hipotez Testi",
-    "section": "Pratik İpuçları",
-    "text": "Pratik İpuçları\n\nHipotez testi tek başına yeterli değildir - etki büyüklüğü ve güven aralıklarını da raporlayın\nDüşük p-değeri her zaman büyük etki anlamına gelmez\nÖrneklem büyüklüğü arttıkça küçük etkiler bile istatistiksel olarak anlamlı görünebilir\nÇoklu test düzeltmesi (Bonferroni, FDR, vb.) kullanmayı unutmayın\nSonuçları biyolojik bağlamda yorumlayın"
-  },
-  {
-    "objectID": "ders04-claude.html#soru",
-    "href": "ders04-claude.html#soru",
-    "title": "Ders8: Güven Aralıkları ve Hipotez Testi",
-    "section": "Soru",
-    "text": "Soru\nBir laboratuvar, geliştirdiği yeni bir ilacın hücre büyümesini arttırdığını iddia ediyor. Standart koşullarda hücre büyümesi ortalama 12 μm/saat’tir. Yeni ilaçla tedavi edilen 15 hücre örneğinde elde edilen büyüme oranları (μm/saat):\n14.2, 13.7, 13.1, 12.8, 14.5, 15.2, 13.4, 14.3, 12.9, 13.6, 14.8, 13.9, 14.1, 13.5, 13.3\nİlacın hücre büyümesini arttırdığını α = 0.05 düzeyinde test edin ve sonuçları yorumlayın.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "ders10.html#ilk-video",
-    "href": "ders10.html#ilk-video",
-    "title": "Ders 11: Bilimsel tekrarlanabilirlik",
-    "section": "ilk video",
-    "text": "ilk video\nDersiminizin ilk haftalarında izlediğimiz video\nhttps://www.youtube.com/watch?v=42QuXLucH3Q"
-  },
-  {
-    "objectID": "ders10.html#özet",
-    "href": "ders10.html#özet",
-    "title": "Ders 11: Bilimsel tekrarlanabilirlik",
-    "section": "özet",
-    "text": "özet\n\np-hacking\ndark chocolate case\n6th sense case\nsame data different conclusions case (do black players get more red cards? 29 groups work on same data; 8 groups said “equally likely”, 19 groups said “more likely” 2 groups said “3 times more likely”\n53 landmark cancer studies only 6 of them can be reproduced"
-  },
-  {
-    "objectID": "ders10.html#section-1",
-    "href": "ders10.html#section-1",
-    "title": "Ders 11: Bilimsel tekrarlanabilirlik",
-    "section": "",
-    "text": "nearly 1/3 of the published results will be wrong even if the things are working normally (ie. statistical power of 80%)\n\n\ntypical statistical power in studies is around 20-40%"
-  },
-  {
-    "objectID": "ders10.html#section-2",
-    "href": "ders10.html#section-2",
-    "title": "Ders 11: Bilimsel tekrarlanabilirlik",
-    "section": "",
-    "text": "Kaynaklar:\n\nWhy Most Published Research Findings Are False PLoS article\nUnderstanding the p-value - Statistics Help\nScience Isn’t Broken\nI Fooled Millions Into Thinking Chocolate Helps Weight Loss. Here’s How"
-  },
-  {
-    "objectID": "ders10.html#ikinci-video",
-    "href": "ders10.html#ikinci-video",
-    "title": "Ders 11: Bilimsel tekrarlanabilirlik",
-    "section": "ikinci video",
-    "text": "ikinci video\nThe Four Most Dangerous Words? A New Study Shows | Laura Arnold | TEDxPennsylvaniaAvenue"
-  },
-  {
-    "objectID": "ders10.html#özet-1",
-    "href": "ders10.html#özet-1",
-    "title": "Ders 11: Bilimsel tekrarlanabilirlik",
-    "section": "özet",
-    "text": "özet\n\n“power posing” çalışması\nbeslenme ve sağlık alanında örnek sayısı düşük, yanlış metodoloji ve seçici raporlama\n“file drawer effect” ve “p-hacking”"
-  },
-  {
-    "objectID": "ders10.html#beslenme-üzerine-çalışma",
-    "href": "ders10.html#beslenme-üzerine-çalışma",
-    "title": "Ders 11: Bilimsel tekrarlanabilirlik",
-    "section": "beslenme üzerine çalışma",
-    "text": "beslenme üzerine çalışma"
-  },
-  {
-    "objectID": "ders10.html#başka-bir-çalışma",
-    "href": "ders10.html#başka-bir-çalışma",
-    "title": "Ders 11: Bilimsel tekrarlanabilirlik",
-    "section": "başka bir çalışma",
-    "text": "başka bir çalışma"
-  },
-  {
-    "objectID": "ders05-uygulama.html#iris-verisi",
-    "href": "ders05-uygulama.html#iris-verisi",
-    "title": "Ders 5 Uygulama: t-Testi ve Örneklerle Uygulamaları",
-    "section": "Iris verisi",
-    "text": "Iris verisi\n\n\nVersicolor Sepal genişlik 3’ten farklı mıdır?\nVersicolor ve Virginica arasında fark var mıdır?"
-  },
-  {
-    "objectID": "ders05-uygulama.html#tek-örnek-t-testi",
-    "href": "ders05-uygulama.html#tek-örnek-t-testi",
-    "title": "Ders 5 Uygulama: t-Testi ve Örneklerle Uygulamaları",
-    "section": "Tek örnek t-testi",
-    "text": "Tek örnek t-testi\nSadece Versicolor Sepal genişlik verisini alıp 3 ile karşılaştıralım\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "ders05-uygulama.html#iki-örnek-t-testi",
-    "href": "ders05-uygulama.html#iki-örnek-t-testi",
-    "title": "Ders 5 Uygulama: t-Testi ve Örneklerle Uygulamaları",
-    "section": "İki örnek t-testi",
-    "text": "İki örnek t-testi\nR’da t-testi\nİki yaklaşım var\n\nt.test(data1, data2)\nt.test(Olcum ~ Grup)"
-  },
-  {
-    "objectID": "ders05-uygulama.html#section",
-    "href": "ders05-uygulama.html#section",
-    "title": "Ders 5 Uygulama: t-Testi ve Örneklerle Uygulamaları",
+    "objectID": "ders-regresyon.html#section",
+    "href": "ders-regresyon.html#section",
+    "title": "Regresyon",
     "section": "",
     "text": "Please enable JavaScript to experience the dynamic code cell content on this page."
   },
   {
-    "objectID": "ders05-uygulama.html#section-1",
-    "href": "ders05-uygulama.html#section-1",
-    "title": "Ders 5 Uygulama: t-Testi ve Örneklerle Uygulamaları",
+    "objectID": "ders-regresyon.html#section-1",
+    "href": "ders-regresyon.html#section-1",
+    "title": "Regresyon",
     "section": "",
     "text": "Please enable JavaScript to experience the dynamic code cell content on this page."
   },
   {
-    "objectID": "ders05-uygulama.html#excelde-t.test",
-    "href": "ders05-uygulama.html#excelde-t.test",
-    "title": "Ders 5 Uygulama: t-Testi ve Örneklerle Uygulamaları",
-    "section": "Excel’de T.test",
-    "text": "Excel’de T.test\nAynı testleri iris verisi için yapınız. Dosya link"
+    "objectID": "ders-regresyon.html#regresyon-ile-tahmin",
+    "href": "ders-regresyon.html#regresyon-ile-tahmin",
+    "title": "Regresyon",
+    "section": "Regresyon ile tahmin",
+    "text": "Regresyon ile tahmin\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
   },
   {
-    "objectID": "ders05-uygulama.html#iki-örnek-t-testi-bağımlıilişkili",
-    "href": "ders05-uygulama.html#iki-örnek-t-testi-bağımlıilişkili",
-    "title": "Ders 5 Uygulama: t-Testi ve Örneklerle Uygulamaları",
-    "section": "İki örnek t-testi (bağımlı/ilişkili)",
-    "text": "İki örnek t-testi (bağımlı/ilişkili)\nİlaç1 ve ilaç2 arasında uykuya etki açısından fark var mıdır?\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nVeriyi düzenlemek gerek"
+    "objectID": "ders-regresyon.html#çoklu-doğrusal-regresyon",
+    "href": "ders-regresyon.html#çoklu-doğrusal-regresyon",
+    "title": "Regresyon",
+    "section": "Çoklu doğrusal regresyon",
+    "text": "Çoklu doğrusal regresyon\nBirden fazla bağımsız değişken ile Y’yi modelleme:\n\\[ Y = \\beta_0 + \\beta_1 X_1 + \\beta_2 X_2 + \\cdots + \\beta_p X_p + \\varepsilon \\]\nHer \\(\\beta_j\\): diğer değişkenler sabit tutulduğunda, \\(X_j\\)’deki 1 birimlik artışın Y’deki etkisi.\nDüzeltilmiş R² (Adjusted R²): Çoklu regresyonda her yeni değişken R²’yi şişirir. Adjusted R² gereksiz değişkenleri cezalandırır:\n\\[ R^2_{adj} = 1 - \\frac{(1-R^2)(n-1)}{n-p-1} \\]"
   },
   {
-    "objectID": "ders05-uygulama.html#section-2",
-    "href": "ders05-uygulama.html#section-2",
-    "title": "Ders 5 Uygulama: t-Testi ve Örneklerle Uygulamaları",
-    "section": "",
-    "text": "Please enable JavaScript to experience the dynamic code cell content on this page."
+    "objectID": "ders-regresyon.html#çoklu-regresyon-r-uygulaması",
+    "href": "ders-regresyon.html#çoklu-regresyon-r-uygulaması",
+    "title": "Regresyon",
+    "section": "Çoklu regresyon — R uygulaması",
+    "text": "Çoklu regresyon — R uygulaması\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
   },
   {
-    "objectID": "ders05-uygulama.html#tek-yönlü-bağımlı-test",
-    "href": "ders05-uygulama.html#tek-yönlü-bağımlı-test",
-    "title": "Ders 5 Uygulama: t-Testi ve Örneklerle Uygulamaları",
-    "section": "Tek yönlü bağımlı test",
-    "text": "Tek yönlü bağımlı test\nİlaç2 uykuya etkisi “daha çok” şeklindeki hipotez için t.test uygulayınız.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "ders05-uygulama.html#ekstra-sorular",
-    "href": "ders05-uygulama.html#ekstra-sorular",
-    "title": "Ders 5 Uygulama: t-Testi ve Örneklerle Uygulamaları",
-    "section": "Ekstra sorular",
-    "text": "Ekstra sorular\nPlantGrowth verisinde, ctrl ve trt1 arasında fark olup olmadığını test ediniz.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "ders05-uygulama.html#ekstra-sorular2",
-    "href": "ders05-uygulama.html#ekstra-sorular2",
-    "title": "Ders 5 Uygulama: t-Testi ve Örneklerle Uygulamaları",
-    "section": "Ekstra sorular2",
-    "text": "Ekstra sorular2\nchickwts verisinde soybean veya casein ile besleme arasında fark var mıdır, test ediniz.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "ders05-uygulama.html#section-3",
-    "href": "ders05-uygulama.html#section-3",
-    "title": "Ders 5 Uygulama: t-Testi ve Örneklerle Uygulamaları",
-    "section": "",
-    "text": "soybean ve linseed ile besleme arasında fark var mıdır?\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "ders11.html#hangi-test-ne-zaman-kullanılmalı",
-    "href": "ders11.html#hangi-test-ne-zaman-kullanılmalı",
-    "title": "Ders 12: Hangi Test?",
-    "section": "Hangi test ne zaman kullanılmalı?",
-    "text": "Hangi test ne zaman kullanılmalı?"
-  },
-  {
-    "objectID": "ders11.html#veri-tipi-ve-dağılıma-göre-testler",
-    "href": "ders11.html#veri-tipi-ve-dağılıma-göre-testler",
-    "title": "Ders 12: Hangi Test?",
-    "section": "Veri tipi ve dağılıma göre testler",
-    "text": "Veri tipi ve dağılıma göre testler\nParametrik:"
-  },
-  {
-    "objectID": "ders11.html#section",
-    "href": "ders11.html#section",
-    "title": "Ders 12: Hangi Test?",
-    "section": "",
-    "text": "Unpaired - eşli olmayan veri tipi\n\n\nKaynak: Nayak, Barun K; Hazra, Avijit1. How to choose the right statistical test?. Indian Journal of Ophthalmology 59(2):p 85-86, Mar–Apr 2011. | DOI: 10.4103/0301-4738.77005"
-  },
-  {
-    "objectID": "ders11.html#section-1",
-    "href": "ders11.html#section-1",
-    "title": "Ders 12: Hangi Test?",
-    "section": "",
-    "text": "Paired - eşli veriler\n\n\nKaynak: Nayak, Barun K; Hazra, Avijit1. How to choose the right statistical test?. Indian Journal of Ophthalmology 59(2):p 85-86, Mar–Apr 2011. | DOI: 10.4103/0301-4738.77005"
-  },
-  {
-    "objectID": "ders11.html#section-2",
-    "href": "ders11.html#section-2",
-    "title": "Ders 12: Hangi Test?",
-    "section": "",
-    "text": "Kaynak: Statstutor Kaynakları PDF-link"
-  },
-  {
-    "objectID": "ders11.html#section-3",
-    "href": "ders11.html#section-3",
-    "title": "Ders 12: Hangi Test?",
-    "section": "",
-    "text": "Kaynak: Statstutor Kaynakları PDF-link"
-  },
-  {
-    "objectID": "ders11.html#section-4",
-    "href": "ders11.html#section-4",
-    "title": "Ders 12: Hangi Test?",
-    "section": "",
-    "text": "Research Question\nType of Data\nStatistical Test\n\n\n\n\nIs there a difference between two unpaired groups?\nContinuous (normally distributed)\nt-test\n\n\nIs there a difference between two unpaired groups?\nContinuous (not normally distributed)\nWilcoxon rank-sum test (Mann-Whitney U test)\n\n\nIs there a difference between more than two unpaired groups?\nContinuous (normally distributed)\nOne-way ANOVA\n\n\nIs there a difference between more than two unpaired groups?\nContinuous (not normally distributed)\nKruskal-Wallis test\n\n\nIs there a difference between two paired groups?\nContinuous (normally distributed)\nPaired t-test\n\n\nIs there a difference between two paired groups?\nContinuous (not normally distributed)\nWilcoxon signed-rank test\n\n\nIs there a difference between more than two paired groups?\nContinuous (normally distributed)\nRepeated measures ANOVA\n\n\nIs there a difference between more than two paired groups?\nContinuous (not normally distributed)\nFriedman test\n\n\nIs there an association between two continuous variables?\nContinuous\nPearson correlation test\n\n\nIs there an association between two categorical variables?\nCategorical\nChi-squared test\n\n\nIs there an association between a continuous and a categorical variable?\nContinuous and categorical\nANOVA or regression analysis"
-  },
-  {
-    "objectID": "ders11.html#ek-kaynaklar",
-    "href": "ders11.html#ek-kaynaklar",
-    "title": "Ders 12: Hangi Test?",
-    "section": "Ek kaynaklar",
-    "text": "Ek kaynaklar\n\nİnteraktif olarak test seçmek için: https://www.statsflowchart.co.uk/\nFormül ve özellikleri detaylı gösteren liste: https://www.statskingdom.com/"
-  },
-  {
-    "objectID": "ders05.html#özet",
-    "href": "ders05.html#özet",
-    "title": "Ders 5: t-Testi ve Örneklerle Uygulamaları",
-    "section": "Özet",
-    "text": "Özet\n\nt-testi nedir ve ne zaman kullanılır?\nt-dağılımı ve normal dağılım arasındaki fark\nt-testi türleri (tek örneklem, bağımsız örneklemler, eşleştirilmiş örneklemler)\nt-testi varsayımları\nR ile t-testi uygulamaları\nt-testi sonuçlarının yorumlanması ve raporlanması\nBiyolojide t-testi uygulamaları"
-  },
-  {
-    "objectID": "ders05.html#t-testi-nedir",
-    "href": "ders05.html#t-testi-nedir",
-    "title": "Ders 5: t-Testi ve Örneklerle Uygulamaları",
-    "section": "t-testi Nedir?",
-    "text": "t-testi Nedir?\nt-testi, iki grup ortalaması arasındaki farkın istatistiksel anlamlılığını değerlendirmek için kullanılan yaygın bir parametrik testtir.\nKullanım Amacı:\n\nPopülasyon standart sapması bilinmediğinde ortalamaları karşılaştırmak\nKüçük örneklem boyutlarında (n &lt; 30) bile kullanılabilir\nDeneysel verilerin istatistiksel analizinde sıklıkla kullanılır\n\nTemel Fikir:\nGözlemlenen farkın, rastgele şans eseri ortaya çıkıp çıkmadığını değerlendirmek."
-  },
-  {
-    "objectID": "ders05.html#normal-dağılım-vs.-t-dağılımı",
-    "href": "ders05.html#normal-dağılım-vs.-t-dağılımı",
-    "title": "Ders 5: t-Testi ve Örneklerle Uygulamaları",
-    "section": "Normal Dağılım vs. t-Dağılımı",
-    "text": "Normal Dağılım vs. t-Dağılımı\n\nNormal Dağılım (Z-dağılımı):\n\nPopülasyon parametreleri (μ, σ) bilindiğinde kullanılır\nSimetrik, çan şeklindedir\nStandart normal dağılım: N(0,1)\n\nt-Dağılımı:\n\nPopülasyon standart sapması (σ) bilinmediğinde kullanılır\nNormal dağılıma benzer ancak “kuyrukları” daha kalındır\nÖrneklem büyüklüğüne (serbestlik derecesine) bağlıdır\nn büyüdükçe normal dağılıma yakınsar"
-  },
-  {
-    "objectID": "ders05.html#t-dağılımı-ve-serbestlik-derecesi",
-    "href": "ders05.html#t-dağılımı-ve-serbestlik-derecesi",
-    "title": "Ders 5: t-Testi ve Örneklerle Uygulamaları",
-    "section": "t-Dağılımı ve Serbestlik Derecesi",
-    "text": "t-Dağılımı ve Serbestlik Derecesi\n\n\n\n\n\nSerbestlik Derecesi (SD = n-1): Veriler üzerinde yapılabilen bağımsız karşılaştırmaların sayısı.\n\nGörsel Kaynak: Wikimedia Commons"
-  },
-  {
-    "objectID": "ders05.html#t-testi-çeşitleri",
-    "href": "ders05.html#t-testi-çeşitleri",
-    "title": "Ders 5: t-Testi ve Örneklerle Uygulamaları",
-    "section": "t-testi Çeşitleri",
-    "text": "t-testi Çeşitleri\n\nTek Örneklem t-testi:\n\nBir örneklem ortalamasının bilinen bir değerle karşılaştırılması\nÖrnek: “İlaç verilen hastaların ortalama kan şekeri 100 mg/dL’den farklı mı?”\n\nBağımsız Örneklemler t-testi (İki Örneklem t-testi):\n\nİki bağımsız grubun ortalamalarının karşılaştırılması\nÖrnek: “İlaç A ve İlaç B’nin ortalama etkinliği arasında fark var mı?”\n\nEşleştirilmiş Örneklemler t-testi (Bağımlı t-testi):\n\nAynı örneklemdeki farklı koşulların karşılaştırılması\nÖrnek: “Hastaların tedavi öncesi ve sonrası değerleri arasında fark var mı?”"
-  },
-  {
-    "objectID": "ders05.html#section",
-    "href": "ders05.html#section",
-    "title": "Ders 5: t-Testi ve Örneklerle Uygulamaları",
-    "section": "",
-    "text": "Kaynak: t-Test DATAtab"
-  },
-  {
-    "objectID": "ders05.html#section-1",
-    "href": "ders05.html#section-1",
-    "title": "Ders 5: t-Testi ve Örneklerle Uygulamaları",
-    "section": "",
-    "text": "Kaynak: t-Test DATAtab"
-  },
-  {
-    "objectID": "ders05.html#t-testi-formülleri",
-    "href": "ders05.html#t-testi-formülleri",
-    "title": "Ders 5: t-Testi ve Örneklerle Uygulamaları",
-    "section": "t-testi Formülleri",
-    "text": "t-testi Formülleri\n1. Tek Örneklem t-testi: \\[ t = \\frac{\\bar{x} - \\mu_0}{s/\\sqrt{n}} \\]\n2. Bağımsız Örneklemler t-testi: \\[ t = \\frac{\\bar{x}_1 - \\bar{x}_2}{\\sqrt{\\frac{s_1^2}{n_1} + \\frac{s_2^2}{n_2}}} \\]\n3. Eşleştirilmiş Örneklemler t-testi: \\[ t = \\frac{\\bar{d}}{s_d/\\sqrt{n}} \\]"
-  },
-  {
-    "objectID": "ders05.html#formüller",
-    "href": "ders05.html#formüller",
-    "title": "Ders 5: t-Testi ve Örneklerle Uygulamaları",
-    "section": "Formüller",
-    "text": "Formüller\nBurada:\n\n\\(\\bar{x}\\): Örneklem ortalaması\n\\(\\mu_0\\): Test edilen popülasyon değeri\n\\(s\\): Örneklem standart sapması\n\\(n\\): Örneklem büyüklüğü\n\\(\\bar{d}\\): Eşleştirilmiş farklılıkların ortalaması\n\\(s_d\\): Eşleştirilmiş farklılıkların standart sapması"
-  },
-  {
-    "objectID": "ders05.html#t-testi-varsayımları",
-    "href": "ders05.html#t-testi-varsayımları",
-    "title": "Ders 5: t-Testi ve Örneklerle Uygulamaları",
-    "section": "t-testi Varsayımları",
-    "text": "t-testi Varsayımları\nt-testi parametrik bir testtir ve bazı varsayımlar üzerine kuruludur:\n\nNormallik: Verilerin normal dağılıma sahip olması veya örneklem boyutunun yeterince büyük olması (n&gt;30)\nVaryansların homojenliği: Bağımsız örneklemler t-testinde, grupların varyanslarının benzer olması\nBağımsızlık: Gözlemlerin birbirinden bağımsız olması\nÖlçüm düzeyi: Verilerin aralıklı veya oransal ölçek düzeyinde olması\n\nNot: Eğer varsayımlar karşılanmazsa, parametrik olmayan alternatifler düşünülmelidir (ör. Mann-Whitney U testi, Wilcoxon işaretli sıra testi)."
-  },
-  {
-    "objectID": "ders05.html#t-testi-varsayımları-bağımsızlık",
-    "href": "ders05.html#t-testi-varsayımları-bağımsızlık",
-    "title": "Ders 5: t-Testi ve Örneklerle Uygulamaları",
-    "section": "t-testi Varsayımları (Bağımsızlık)",
-    "text": "t-testi Varsayımları (Bağımsızlık)\nBu varsayım, t-testi için toplanan verilerdeki bir ölçümün, diğer ölçümleri etkilememesi gerektiği anlamına gelir. Yani bir deney katılımcısının veya örneğin verdiği sonuç, diğer katılımcıların veya örneklerin sonuçlarını etkilememelidir.\n\nBağımsız gözlemlere örnekler\n\nFarklı farelerden alınan kan örnekleri (her fare bağımsız bir birey)\nFarklı petri kaplarında yetiştirilen bakteri kolonileri\nFarklı hastalardan alınan doku örnekleri\nRastgele seçilen 20 ağaçtan ölçülen yaprak büyüklükleri\n\nBağımsız OLMAYAN gözlemlere örnekler\n\nAynı fareden günlük olarak alınan ardışık kan örnekleri (bir gündeki ölçüm, diğer günü etkileyebilir)\nAynı bakterinin farklı zamanlardaki üreme hızları\nAynı aileden alınan genetik örnekler (genetik yakınlık nedeniyle bağımsız değil)\nYan yana büyüyen bitkilerden alınan ölçümler (birbirlerinin büyümesini etkileyebilirler)"
-  },
-  {
-    "objectID": "ders05.html#tek-yönlü-ve-çift-yönlü-t-testi",
-    "href": "ders05.html#tek-yönlü-ve-çift-yönlü-t-testi",
-    "title": "Ders 5: t-Testi ve Örneklerle Uygulamaları",
-    "section": "Tek Yönlü ve Çift Yönlü t-testi",
-    "text": "Tek Yönlü ve Çift Yönlü t-testi\nHer t-testi, alternatif hipotezin yapısına göre tek yönlü veya çift yönlü olabilir:\nÇift Yönlü t-testi (Two-sided):\n\nAlternatif hipotez: “eşit değildir” (\\(\\neq\\))\nÖrnek: \\(H_1: \\mu \\neq \\mu_0\\) veya \\(H_1: \\mu_1 \\neq \\mu_2\\)\nİlgilendiğimiz şey farkın yönü değil, sadece bir fark olup olmadığıdır\nR’da varsayılan seçenek: alternative = \"two.sided\"\n\nTek Yönlü t-testi (One-sided):\n\nAlternatif hipotez: “küçüktür” (&lt;) ya da “büyüktür” (&gt;)\nÖrnekler:\n\n\\(H_1: \\mu &lt; \\mu_0\\) (alternative = \"less\")\n\\(H_1: \\mu &gt; \\mu_0\\) (alternative = \"greater\")\n\nİlgilendiğimiz durum farkın belirli bir yönde olup olmadığıdır\nTek yönlü testler, belirli bir yönde fark beklediğimizde daha güçlüdür\n\nÖnemli Not: Tek yönlü test kullanmak için, hipotez kurulmadan önce farkın yönüne dair güçlü bir teorik gerekçe olmalıdır. Veriler incelendikten sonra tek yönlü test seçmek, tip I hata olasılığını artırır."
-  },
-  {
-    "objectID": "ders05.html#tek-örneklem-t-testi",
-    "href": "ders05.html#tek-örneklem-t-testi",
-    "title": "Ders 5: t-Testi ve Örneklerle Uygulamaları",
-    "section": "Tek Örneklem t-testi",
-    "text": "Tek Örneklem t-testi\nBir örneklemin ortalamasını, bilinen veya hipotez edilen bir popülasyon değeriyle karşılaştırır.\nÖrnek Senaryo: Yeni geliştirilen bir bitkisel ilacın, farelerde ortalama kan glikoz seviyesini referans değer olan 100 mg/dL’den farklı bir seviyeye değiştirip değiştirmediğini test etmek istiyoruz.\n\n\\(H_0: \\mu = 100\\) mg/dL (İlaç, kan glikoz seviyesini değiştirmez)\n\\(H_1: \\mu \\neq 100\\) mg/dL (İlaç, kan glikoz seviyesini değiştirir)"
-  },
-  {
-    "objectID": "ders05.html#r-ile-tek-örneklem-t-testi",
-    "href": "ders05.html#r-ile-tek-örneklem-t-testi",
-    "title": "Ders 5: t-Testi ve Örneklerle Uygulamaları",
-    "section": "R ile Tek Örneklem t-testi",
-    "text": "R ile Tek Örneklem t-testi\nİlacın test edildiği 15 farenin kan glikoz seviyelerini analiz edelim:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "ders05.html#sonucun-yorumlanması",
-    "href": "ders05.html#sonucun-yorumlanması",
-    "title": "Ders 5: t-Testi ve Örneklerle Uygulamaları",
-    "section": "Sonucun Yorumlanması",
-    "text": "Sonucun Yorumlanması\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nYorum: p-değeri 0.05’ten küçük olduğu için H0 hipotezini reddediyoruz. Bitkisel ilacın, farelerin kan glikoz seviyelerini, referans değer olan 100 mg/dL’den anlamlı şekilde düşürdüğünü söyleyebiliriz (t(14) = -11.94, p &lt; 0.001)."
-  },
-  {
-    "objectID": "ders05.html#bağımsız-iki-örneklem-t-testi",
-    "href": "ders05.html#bağımsız-iki-örneklem-t-testi",
-    "title": "Ders 5: t-Testi ve Örneklerle Uygulamaları",
-    "section": "Bağımsız İki Örneklem t-Testi",
-    "text": "Bağımsız İki Örneklem t-Testi\nİki farklı, bağımsız grubun ortalamalarını karşılaştırmak için kullanılır.\nÖrnek Senaryo: İki farklı gübre türünün (A ve B) domates bitkilerinin boyları üzerindeki etkisini karşılaştırmak istiyoruz.\n\n\\(H_0: \\mu_A = \\mu_B\\) (İki gübre arasında fark yok)\n\\(H_1: \\mu_A \\neq \\mu_B\\) (İki gübre arasında fark var)"
-  },
-  {
-    "objectID": "ders05.html#r-ile-bağımsız-iki-örneklem-t-testi",
-    "href": "ders05.html#r-ile-bağımsız-iki-örneklem-t-testi",
-    "title": "Ders 5: t-Testi ve Örneklerle Uygulamaları",
-    "section": "R ile Bağımsız İki Örneklem t-Testi",
-    "text": "R ile Bağımsız İki Örneklem t-Testi\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "ders05.html#section-2",
-    "href": "ders05.html#section-2",
-    "title": "Ders 5: t-Testi ve Örneklerle Uygulamaları",
-    "section": "",
-    "text": "Please enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "ders05.html#görselleştirme-ve-yorum",
-    "href": "ders05.html#görselleştirme-ve-yorum",
-    "title": "Ders 5: t-Testi ve Örneklerle Uygulamaları",
-    "section": "Görselleştirme ve Yorum",
-    "text": "Görselleştirme ve Yorum\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nYorum: p-değeri 0.05’ten küçük olduğundan H0 hipotezini reddediyoruz. Gübre B’nin, domates bitkilerinin boyunu, Gübre A’ya göre istatistiksel olarak anlamlı şekilde daha fazla artırdığını söyleyebiliriz (t(18) = -5.14, p &lt; 0.001)."
-  },
-  {
-    "objectID": "ders05.html#eşleştirilmiş-örneklemler-t-testi",
-    "href": "ders05.html#eşleştirilmiş-örneklemler-t-testi",
-    "title": "Ders 5: t-Testi ve Örneklerle Uygulamaları",
-    "section": "Eşleştirilmiş Örneklemler t-Testi",
-    "text": "Eşleştirilmiş Örneklemler t-Testi\nAynı deneklerin/örneklerin iki farklı durumda ölçülen değerlerini karşılaştırmak için kullanılır.\nÖrnek Senaryo: 10 hastanın, belirli bir ilaç tedavisinden önce ve sonra kolesterol seviyelerini karşılaştırmak istiyoruz.\n\n\\(H_0: \\mu_d = 0\\) (Tedavi öncesi ve sonrası arasında fark yok)\n\\(H_1: \\mu_d \\neq 0\\) (Tedavi öncesi ve sonrası arasında fark var)\n\nBurada \\(\\mu_d\\), tedavi öncesi ve sonrası değerler arasındaki farkların ortalamasıdır."
-  },
-  {
-    "objectID": "ders05.html#r-ile-eşleştirilmiş-örneklemler-t-testi",
-    "href": "ders05.html#r-ile-eşleştirilmiş-örneklemler-t-testi",
-    "title": "Ders 5: t-Testi ve Örneklerle Uygulamaları",
-    "section": "R ile Eşleştirilmiş Örneklemler t-Testi",
-    "text": "R ile Eşleştirilmiş Örneklemler t-Testi\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "ders05.html#görselleştirme-ve-yorum-1",
-    "href": "ders05.html#görselleştirme-ve-yorum-1",
-    "title": "Ders 5: t-Testi ve Örneklerle Uygulamaları",
-    "section": "Görselleştirme ve Yorum",
-    "text": "Görselleştirme ve Yorum\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nYorum: p-değeri 0.05’ten küçük olduğundan H0 hipotezini reddediyoruz. İlaç tedavisinin, hastaların kolesterol seviyelerini istatistiksel olarak anlamlı şekilde düşürdüğünü söyleyebiliriz (t(9) = 14.41, p &lt; 0.001). Ortalama düşüş 19.2 mg/dL’dir."
-  },
-  {
-    "objectID": "ders05.html#t-testi-sonuçlarının-raporlanması",
-    "href": "ders05.html#t-testi-sonuçlarının-raporlanması",
-    "title": "Ders 5: t-Testi ve Örneklerle Uygulamaları",
-    "section": "t-Testi Sonuçlarının Raporlanması",
-    "text": "t-Testi Sonuçlarının Raporlanması\nAkademik yayınlarda t-testi sonuçlarını nasıl raporlamalıyız?\n1. Tek Örneklem t-Testi: “Bitkisel ilacın farelerin kan glikoz seviyelerine etkisi, tek örneklem t-testi ile değerlendirilmiştir. Farelerin ortalama kan glikoz seviyesi (M = 92.1, SD = 2.6) referans değerden (100 mg/dL) anlamlı şekilde düşüktür, t(14) = -11.94, p &lt; 0.001.”\n2. Bağımsız İki Örneklem t-Testi: “Gübre B ile yetiştirilen domates bitkilerinin boyları (M = 78.3 cm, SD = 3.4), Gübre A ile yetiştirilen bitkilerden (M = 71.5 cm, SD = 3.7) anlamlı şekilde daha yüksektir, t(18) = -5.14, p &lt; 0.001.”\n3. Eşleştirilmiş Örneklemler t-Testi: “İlaç tedavisi sonrası hastaların kolesterol seviyeleri (M = 230.8 mg/dL, SD = 11.0), tedavi öncesine (M = 250.0 mg/dL, SD = 7.6) göre anlamlı şekilde daha düşüktür, t(9) = 14.41, p &lt; 0.001. Ortalama azalma 19.2 mg/dL’dir (%95 GA [16.2, 22.2]).”"
-  },
-  {
-    "objectID": "ders05.html#biyolojide-t-testi-uygulamaları",
-    "href": "ders05.html#biyolojide-t-testi-uygulamaları",
-    "title": "Ders 5: t-Testi ve Örneklerle Uygulamaları",
-    "section": "Biyolojide t-Testi Uygulamaları",
-    "text": "Biyolojide t-Testi Uygulamaları\n\nGen ekspresyonu: İki farklı koşulda gen ekspresyon seviyelerini karşılaştırma\nİlaç etkinliği: Tedavi grubunun kontrol grubuyla karşılaştırılması\nBüyüme çalışmaları: Farklı besin ortamlarında bakterilerin büyüme hızlarının karşılaştırılması\nEnzim aktivitesi: Farklı pH değerlerinde enzim aktivitelerinin karşılaştırılması\nBiyobelirteç seviyeleri: Hasta ve sağlıklı gruplar arasındaki biyobelirteç seviyelerinin karşılaştırılması\n\nÖrnek: “miR-21 ekspresyon seviyesi, kanser hastalarında (M = 4.2, SD = 1.1) sağlıklı kontrollere (M = 1.8, SD = 0.7) göre anlamlı şekilde daha yüksekti, t(58) = 10.73, p &lt; 0.001, ortalama fark = 2.4 kat (%95 GA [2.0, 2.8]).”"
-  },
-  {
-    "objectID": "ders05.html#gerçek-veri-üzerinde-uygulama-iris-veri-seti",
-    "href": "ders05.html#gerçek-veri-üzerinde-uygulama-iris-veri-seti",
-    "title": "Ders 5: t-Testi ve Örneklerle Uygulamaları",
-    "section": "Gerçek Veri Üzerinde Uygulama: iris Veri Seti",
-    "text": "Gerçek Veri Üzerinde Uygulama: iris Veri Seti\nŞimdi, iris veri setinde farklı türlerdeki çiçeklerin taç yaprak (petal) boylarını karşılaştıralım.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "ders05.html#görselleştirme-ve-yorum-2",
-    "href": "ders05.html#görselleştirme-ve-yorum-2",
-    "title": "Ders 5: t-Testi ve Örneklerle Uygulamaları",
-    "section": "Görselleştirme ve Yorum",
-    "text": "Görselleştirme ve Yorum\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nYorum: İki Iris türü arasındaki taç yaprak boyu farkı istatistiksel olarak anlamlıdır, t(86.7) = -39.5, p &lt; 0.001. Versicolor türünün taç yaprakları (M = 4.26 cm, SD = 0.47), setosa türünün taç yapraklarından (M = 1.46 cm, SD = 0.17) ortalama 2.8 cm daha uzundur (%95 GA [2.66, 2.94])."
-  },
-  {
-    "objectID": "ders05.html#t-testi-için-pratik-ipuçları",
-    "href": "ders05.html#t-testi-için-pratik-ipuçları",
-    "title": "Ders 5: t-Testi ve Örneklerle Uygulamaları",
-    "section": "t-Testi için Pratik İpuçları",
-    "text": "t-Testi için Pratik İpuçları\n\nVeri Hazırlığı:\n\nAykırı değerleri belirleyin ve nasıl ele alacağınıza karar verin\nVerilerin normal dağılıma uygunluğunu kontrol edin (histogram, Q-Q plot, Shapiro-Wilk testi)\n\nTest Seçimi:\n\nDoğru t-testi türünü seçin (tek örneklem, bağımsız, eşleştirilmiş)\nVarsayımlar karşılanmıyorsa, parametrik olmayan alternatifleri düşünün\n\nSonuçların Yorumlanması:\n\nSadece p-değerine değil, etki büyüklüğüne de bakın (Cohen’s d)\nGüven aralıklarını rapor edin\nBulgularınızı biyolojik bağlamda yorumlayın"
-  },
-  {
-    "objectID": "ders05.html#t-testi-ile-ilgili-yaygın-yanılgılar",
-    "href": "ders05.html#t-testi-ile-ilgili-yaygın-yanılgılar",
-    "title": "Ders 5: t-Testi ve Örneklerle Uygulamaları",
-    "section": "t-Testi ile İlgili Yaygın Yanılgılar",
-    "text": "t-Testi ile İlgili Yaygın Yanılgılar\n\n“p &gt; 0.05 ise, iki grup arasında fark yoktur”\n\nDoğrusu: H0’ı reddedemeyiz, ancak bu “fark yoktur” anlamına gelmez\n\n“p &lt; 0.05 ise, sonuç pratik olarak önemlidir”\n\nDoğrusu: İstatistiksel anlamlılık, pratik önemi garanti etmez\n\n“t-testi, her tür veri için uygundur”\n\nDoğrusu: t-testi, varsayımları karşılayan verilerde kullanılmalıdır\n\n“Örneklem büyüklüğü arttıkça, sonuçlar daha doğru olur”\n\nDoğrusu: Büyük örneklemler küçük farkları bile anlamlı gösterebilir"
-  },
-  {
-    "objectID": "ders05.html#yanılgı-4",
-    "href": "ders05.html#yanılgı-4",
-    "title": "Ders 5: t-Testi ve Örneklerle Uygulamaları",
-    "section": "Yanılgı 4",
-    "text": "Yanılgı 4\nBu yanılgıyla ilgili doğru açıklama: “Büyük örneklemler küçük farkları bile anlamlı gösterebilir” şeklindedir. İstatistiksel açıdan bakıldığında, örneklem büyüklüğü arttıkça istatistiksel testlerin gücü (power) artar. Yani, gerçekten var olan bir etkiyi tespit etme olasılığımız yükselir. Bu doğrudur ve istatistiğin temel ilkelerinden biridir. Ancak buradaki yanılgı şudur:\n\nİstatistiksel anlamlılık ≠ Pratik anlamlılık: Örneklem büyüklüğü arttıkça, çok küçük ve pratikte önemsiz farklar bile istatistiksel olarak anlamlı çıkabilir. Örneğin:\n\n10 fare ile yapılan bir deneyde 5 mg/dL’lik bir kan şekeri farkı istatistiksel olarak anlamlı çıkmayabilir.\n1000 fare ile aynı deneyi yaptığınızda 1 mg/dL’lik bir fark bile istatistiksel olarak anlamlı çıkabilir. Ancak 1 mg/dL’lik fark biyolojik olarak anlamlı mıdır? Bu kadar küçük bir fark gerçekten önemli midir?\n\nYanlılık (bias) sorunu: Örneklem büyüklüğü, sistematik hatayı (bias) azaltmaz. Eğer örneklem seçiminizde bir yanlılık varsa, örneklem büyüklüğünü artırmak bu sorunu çözmez, hatta daha da belirginleştirebilir."
-  },
-  {
-    "objectID": "ders05.html#rda-t-testi-kullanımı-özet",
-    "href": "ders05.html#rda-t-testi-kullanımı-özet",
-    "title": "Ders 5: t-Testi ve Örneklerle Uygulamaları",
-    "section": "R’da t-Testi Kullanımı (Özet)",
-    "text": "R’da t-Testi Kullanımı (Özet)\n# 1. Tek Örneklem t-Testi\n# a. Çift yönlü test (varsayılan)\nt.test(x, mu = 0)\n# b. Tek yönlü test (küçüktür)\nt.test(x, mu = 0, alternative = \"less\")\n# c. Tek yönlü test (büyüktür)\nt.test(x, mu = 0, alternative = \"greater\")"
-  },
-  {
-    "objectID": "ders05.html#rda-t-testi-kullanımı-özet-1",
-    "href": "ders05.html#rda-t-testi-kullanımı-özet-1",
-    "title": "Ders 5: t-Testi ve Örneklerle Uygulamaları",
-    "section": "R’da t-Testi Kullanımı (Özet)",
-    "text": "R’da t-Testi Kullanımı (Özet)\n# 2. Bağımsız İki Örneklem t-Testi\n# a. Varyansların eşit olduğu varsayımıyla\nt.test(x, y, var.equal = TRUE)\n# b. Varyansların eşit olmadığı varsayımıyla (Welch t-testi, var\nsayılan)\nt.test(x, y)\n# c. Tek yönlü test ile (örneğin x'in y'den büyük olup olmadığın\nı test etmek için)\nt.test(x, y, alternative = \"greater\")"
-  },
-  {
-    "objectID": "ders05.html#rda-t-testi-kullanımı-özet-2",
-    "href": "ders05.html#rda-t-testi-kullanımı-özet-2",
-    "title": "Ders 5: t-Testi ve Örneklerle Uygulamaları",
-    "section": "R’da t-Testi Kullanımı (Özet)",
-    "text": "R’da t-Testi Kullanımı (Özet)\n# 3. Eşleştirilmiş Örneklemler t-Testi\nt.test(x, y, paired = TRUE)\n# Tek yönlü seçeneği ile\nt.test(x, y, paired = TRUE, alternative = \"greater\")"
-  },
-  {
-    "objectID": "ders05.html#rda-t-testi-kullanımı-özet-3",
-    "href": "ders05.html#rda-t-testi-kullanımı-özet-3",
-    "title": "Ders 5: t-Testi ve Örneklerle Uygulamaları",
-    "section": "R’da t-Testi Kullanımı (Özet)",
-    "text": "R’da t-Testi Kullanımı (Özet)\n# 4. Formül kullanımı (veritabanları ile çalışırken)\nt.test(value ~ group, data = mydata)\nt.test(value ~ group, data = mydata, paired = TRUE)\nt.test(value ~ group, data = mydata, alternative = \"less\")"
-  },
-  {
-    "objectID": "ders05.html#farklı-t-test-türleri-için-varsayımlar-ve-r-kod-örnekleri",
-    "href": "ders05.html#farklı-t-test-türleri-için-varsayımlar-ve-r-kod-örnekleri",
-    "title": "Ders 5: t-Testi ve Örneklerle Uygulamaları",
-    "section": "Farklı t-Test Türleri için Varsayımlar ve R Kod Örnekleri",
-    "text": "Farklı t-Test Türleri için Varsayımlar ve R Kod Örnekleri\n\n\n\n\n\n\n\n\nt-Testi Türü\nTemel Varsayımlar\nR Kodu\n\n\n\n\nTek Örneklem\n- Verilerin normal dağılması veya n&gt;30- Bağımsız gözlemler\nt.test(x, mu = 0)\n\n\nBağımsız İki Örneklem(eşit varyans)\n- İki grupta da normal dağılım- Varyansların homojenliği- Bağımsız gözlemler\nt.test(x, y, var.equal = TRUE)\n\n\nBağımsız İki Örneklem(Welch/eşit olmayan varyans)\n- İki grupta da normal dağılım- Varyanslar farklı olabilir- Bağımsız gözlemler\nt.test(x, y)\n\n\nEşleştirilmiş Örneklemler\n- Farkların normal dağılması- Eşleştirilmiş gözlemler\nt.test(x, y, paired = TRUE)"
+    "objectID": "ders-regresyon.html#çoklu-regresyon-model-detayları",
+    "href": "ders-regresyon.html#çoklu-regresyon-model-detayları",
+    "title": "Regresyon",
+    "section": "Çoklu regresyon — model detayları",
+    "text": "Çoklu regresyon — model detayları\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nYani;\n\\[\\text{mpg} = -3.16 \\times \\text{wt} - 0.01 \\times \\text{hp} - 0.94 \\times \\text{cyl} + 38.75\\]"
   },
   {
     "objectID": "ders06-uygulama.html#tek-örnek-t-testi",
@@ -2784,194 +2945,5 @@
     "title": "Ders 8 Uygulama: Ki-kare Testi",
     "section": "Öğretim Çıktıları",
     "text": "Öğretim Çıktıları\nBu uygulama sonunda öğrenciler:\n\nKi-kare testinin farklı türlerini ayırt edebilir ve uygun durumda kullanabilir\nKi-kare testinin sıfır hipotezini (H₀) doğru bir şekilde ifade edebilir\nR’da dchisq(), pchisq(), qchisq(), rchisq() ve chisq.test() fonksiyonlarını kullanabilir\nKi-kare test sonuçlarını yorumlayabilir ve görselleştirebilir\nKi-kare testini genetik, ekoloji ve diğer biyolojik çalışmalarda uygulayabilir"
-  },
-  {
-    "objectID": "ders-regresyon.html#özet",
-    "href": "ders-regresyon.html#özet",
-    "title": "Regresyon",
-    "section": "Özet",
-    "text": "Özet\n\nRegresyon nedir? Korelasyondan farkı\nBasit doğrusal regresyon\nEn küçük kareler yöntemi (OLS)\nRegresyon katsayılarının yorumlanması\nR² — Belirtme katsayısı\nRegresyon varsayımları (LINE)\nArtıkların incelenmesi\nTahmin (prediction)\nÇoklu regresyon\nBiyolojik örnekler ve R uygulamaları"
-  },
-  {
-    "objectID": "ders-regresyon.html#korelasyon-vs-regresyon",
-    "href": "ders-regresyon.html#korelasyon-vs-regresyon",
-    "title": "Regresyon",
-    "section": "Korelasyon vs Regresyon",
-    "text": "Korelasyon vs Regresyon"
-  },
-  {
-    "objectID": "ders-regresyon.html#regresyon-nedir",
-    "href": "ders-regresyon.html#regresyon-nedir",
-    "title": "Regresyon",
-    "section": "Regresyon nedir?",
-    "text": "Regresyon nedir?\nRegresyon, bir bağımlı değişken (Y) ile bir veya daha fazla bağımsız değişken (X) arasındaki ilişkiyi matematiksel bir modelle ifade eden istatistiksel bir yöntemdir.\n\nKorelasyon: “Boy ve kilo arasında ilişki var mı?” → r = 0.95\nRegresyon: “Boyu 175 cm olan birinin kilosu kaç olur?” → ŷ = −105 + 1.1 × 175 = 87.5 kg\n\nRegresyon yönlü bir analizdir: X’ten Y’yi tahmin ederiz. X ve Y’nin yerini değiştirirsek farklı bir denklem elde ederiz."
-  },
-  {
-    "objectID": "ders-regresyon.html#basit-doğrusal-regresyon",
-    "href": "ders-regresyon.html#basit-doğrusal-regresyon",
-    "title": "Regresyon",
-    "section": "Basit doğrusal regresyon",
-    "text": "Basit doğrusal regresyon\nTek bir bağımsız değişken (X) ile bağımlı değişken (Y) arasındaki doğrusal ilişkiyi modellemek için kullanılır.\n\\[ Y = \\beta_0 + \\beta_1 X + \\varepsilon \\]\n\n\\(\\beta_0\\) : kesim noktası (intercept) — X = 0 olduğunda Y’nin tahmini değeri\n\\(\\beta_1\\) : eğim (slope) — X’teki 1 birimlik artışın Y’de oluşturduğu değişim\n\\(\\varepsilon\\) : hata terimi (error) — modelin açıklayamadığı rastgele varyasyon\n\nTahmin denklemi (şapka = tahmin):\n\\[ \\hat{Y} = \\hat{\\beta}_0 + \\hat{\\beta}_1 X \\]"
-  },
-  {
-    "objectID": "ders-regresyon.html#en-küçük-kareler-yöntemi-ols",
-    "href": "ders-regresyon.html#en-küçük-kareler-yöntemi-ols",
-    "title": "Regresyon",
-    "section": "En küçük kareler yöntemi (OLS)",
-    "text": "En küçük kareler yöntemi (OLS)\n\n\n\n\n\n\nkaynak: OntarioTech"
-  },
-  {
-    "objectID": "ders-regresyon.html#ols-formülleri",
-    "href": "ders-regresyon.html#ols-formülleri",
-    "title": "Regresyon",
-    "section": "OLS formülleri",
-    "text": "OLS formülleri\nEğim (\\(\\hat{\\beta}_1\\)) ve kesim noktası (\\(\\hat{\\beta}_0\\)) hesabı:\n\\[ \\hat{\\beta}_1 = \\frac{\\sum_{i=1}^n (x_i - \\bar{x})(y_i - \\bar{y})}{\\sum_{i=1}^n (x_i - \\bar{x})^2} \\]\n\\[ \\hat{\\beta}_0 = \\bar{y} - \\hat{\\beta}_1 \\bar{x} \\]\n\nRegresyon doğrusu her zaman \\((\\bar{x}, \\bar{y})\\) noktasından geçer."
-  },
-  {
-    "objectID": "ders-regresyon.html#basit-doğrusal-regresyon-r-uygulaması",
-    "href": "ders-regresyon.html#basit-doğrusal-regresyon-r-uygulaması",
-    "title": "Regresyon",
-    "section": "Basit doğrusal regresyon — R uygulaması",
-    "text": "Basit doğrusal regresyon — R uygulaması\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "ders-regresyon.html#katsayıların-yorumlanması",
-    "href": "ders-regresyon.html#katsayıların-yorumlanması",
-    "title": "Regresyon",
-    "section": "Katsayıların yorumlanması",
-    "text": "Katsayıların yorumlanması\nsummary() çıktısını yorumlayalım:\n\nIntercept (β₀): Vücut ağırlığı 0 kg olsaydı kalp ağırlığının tahmini değeri. Biyolojik olarak anlamsızdır ama matematiksel olarak doğrunun Y eksenini kestiği noktadır.\nBwt (β₁): Vücut ağırlığındaki 1 kg’lık artış, kalp ağırlığında ortalama β₁ gram artışa karşılık gelir.\np-value: Eğimin sıfırdan farklı olup olmadığının testi. p &lt; 0.05 ise X ile Y arasında istatistiksel olarak anlamlı bir doğrusal ilişki vardır.\nStd. Error: Katsayı tahmininin standart hatası. Küçük olması, tahminin kesin olduğunu gösterir.\n\nHesaplanan katsayılara göre, formül:\nHwt = 4.034 x Bwt - 0.356"
-  },
-  {
-    "objectID": "ders-regresyon.html#regresyon-görselleştirme",
-    "href": "ders-regresyon.html#regresyon-görselleştirme",
-    "title": "Regresyon",
-    "section": "Regresyon — görselleştirme",
-    "text": "Regresyon — görselleştirme\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "ders-regresyon.html#r²-belirtme-katsayısı",
-    "href": "ders-regresyon.html#r²-belirtme-katsayısı",
-    "title": "Regresyon",
-    "section": "R² — Belirtme katsayısı",
-    "text": "R² — Belirtme katsayısı\n\\(R^2\\) (R-kare), bağımlı değişkendeki toplam varyansın yüzde kaçının model tarafından açıklandığını gösterir.\n\\[ R^2 = 1 - \\frac{SS_{res}}{SS_{tot}} = 1 - \\frac{\\sum(y_i - \\hat{y}_i)^2}{\\sum(y_i - \\bar{y})^2} \\]\n\n\\(R^2 = 0\\): Model hiçbir varyansı açıklamıyor (rastgele tahmin kadar kötü)\n\\(R^2 = 1\\): Model tüm varyansı açıklıyor (tüm noktalar doğru üzerinde)\nBasit regresyonda (tek bağımsız değişken) \\(R^2 = r^2\\) (Pearson korelasyonunun karesi)\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "ders-regresyon.html#regresyon-varsayımları",
-    "href": "ders-regresyon.html#regresyon-varsayımları",
-    "title": "Regresyon",
-    "section": "Regresyon varsayımları",
-    "text": "Regresyon varsayımları\n4 temel varsayım (LINE)\n\nLinearity (doğrusallık): X ile Y arasındaki ilişki doğrusal olmalıdır. Eğrisel bir ilişki varsa (parabolik, logaritmik gibi) doğrusal regresyon modeli bu ilişkiyi doğru temsil edemez. Kontrol: Artık vs tahmin grafiğinde rastgele dağılım olmalı, U veya S şekli olmamalı.\nIndependence (bağımsızlık): Gözlemler birbirinden bağımsız olmalıdır. Bir gözlemin değeri diğerini etkilememeli. Örneğin aynı hastadan tekrarlı ölçümler alındıysa bu varsayım ihlal edilir.\nNormality (normallik): Artıklar (residuals) normal dağılmalıdır. Y’nin kendisinin değil, modelin hatalarının normal dağılması gerekir. Kontrol: Q-Q grafiğinde noktalar çapraz çizgi üzerinde olmalı.\nEqual variance (eşit varyans): Artıkların varyansı tüm X değerlerinde sabit olmalıdır. Yani model düşük X değerlerinde de yüksek X değerlerinde de aynı miktarda hata yapmalı. Kontrol: Artık vs tahmin grafiğinde huni şekli (yelpaze açılması) olmamalı."
-  },
-  {
-    "objectID": "ders-regresyon.html#varsayımları-kontrol-etme-r-ile",
-    "href": "ders-regresyon.html#varsayımları-kontrol-etme-r-ile",
-    "title": "Regresyon",
-    "section": "Varsayımları kontrol etme — R ile",
-    "text": "Varsayımları kontrol etme — R ile\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "ders-regresyon.html#diagnostik-grafiklerin-yorumlanması",
-    "href": "ders-regresyon.html#diagnostik-grafiklerin-yorumlanması",
-    "title": "Regresyon",
-    "section": "Diagnostik grafiklerin yorumlanması",
-    "text": "Diagnostik grafiklerin yorumlanması\nR’ın plot(model) komutu 4 diagnostik grafik üretir, biz sadece ikisine bakıyoruz:\n\nResiduals vs Fitted: Artıklar ile tahmin değerleri. Rastgele dağılım olmalı, bir desen (eğri, huni) varsa varsayım ihlali var demektir.\nNormal Q-Q: Artıkların normalliği. Noktalar çapraz çizgi üzerinde olmalı. Uçlarda sapma varsa normallik ihlali var demektir.\n\nScale-Location varyans eşitliğini, Residuals vs Leverage grafiği de modele orantısız etkileyen noktaları gösterir."
-  },
-  {
-    "objectID": "ders-regresyon.html#regresyon-ile-tahmin",
-    "href": "ders-regresyon.html#regresyon-ile-tahmin",
-    "title": "Regresyon",
-    "section": "Regresyon ile tahmin",
-    "text": "Regresyon ile tahmin\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "ders-regresyon.html#güven-aralığı-vs-tahmin-aralığı",
-    "href": "ders-regresyon.html#güven-aralığı-vs-tahmin-aralığı",
-    "title": "Regresyon",
-    "section": "Güven aralığı vs tahmin aralığı",
-    "text": "Güven aralığı vs tahmin aralığı\n\nGüven aralığı (confidence interval): Ortalama Y değerinin nerede olduğuna dair belirsizlik. “3 kg’lık kedilerin ortalama kalp ağırlığı bu aralıkta.”\nTahmin aralığı (prediction interval): Bireysel bir Y değerinin nerede olacağına dair belirsizlik. “3 kg’lık bir kedinin kalp ağırlığı bu aralıkta.” Her zaman güven aralığından daha geniştir.\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "ders-regresyon.html#çoklu-doğrusal-regresyon",
-    "href": "ders-regresyon.html#çoklu-doğrusal-regresyon",
-    "title": "Regresyon",
-    "section": "Çoklu doğrusal regresyon",
-    "text": "Çoklu doğrusal regresyon\nBirden fazla bağımsız değişken ile Y’yi modelleme:\n\\[ Y = \\beta_0 + \\beta_1 X_1 + \\beta_2 X_2 + \\cdots + \\beta_p X_p + \\varepsilon \\]\nHer \\(\\beta_j\\): diğer değişkenler sabit tutulduğunda, \\(X_j\\)’deki 1 birimlik artışın Y’deki etkisi.\nDüzeltilmiş R² (Adjusted R²): Çoklu regresyonda her yeni değişken R²’yi şişirir. Adjusted R² gereksiz değişkenleri cezalandırır:\n\\[ R^2_{adj} = 1 - \\frac{(1-R^2)(n-1)}{n-p-1} \\]"
-  },
-  {
-    "objectID": "ders-regresyon.html#çoklu-regresyon-r-uygulaması",
-    "href": "ders-regresyon.html#çoklu-regresyon-r-uygulaması",
-    "title": "Regresyon",
-    "section": "Çoklu regresyon — R uygulaması",
-    "text": "Çoklu regresyon — R uygulaması\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "ders-regresyon.html#çoklu-regresyon-model-detayları",
-    "href": "ders-regresyon.html#çoklu-regresyon-model-detayları",
-    "title": "Regresyon",
-    "section": "Çoklu regresyon — model detayları",
-    "text": "Çoklu regresyon — model detayları\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nYani;\n\\[\\text{mpg} = -3.16 \\times \\text{wt} - 0.01 \\times \\text{hp} - 0.94 \\times \\text{cyl} + 38.75\\]"
-  },
-  {
-    "objectID": "ders-regresyon.html#çoklu-regresyon-model-seçimi",
-    "href": "ders-regresyon.html#çoklu-regresyon-model-seçimi",
-    "title": "Regresyon",
-    "section": "Çoklu regresyon — model seçimi",
-    "text": "Çoklu regresyon — model seçimi\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "ders-regresyon.html#biyolojik-uygulama",
-    "href": "ders-regresyon.html#biyolojik-uygulama",
-    "title": "Regresyon",
-    "section": "Biyolojik uygulama",
-    "text": "Biyolojik uygulama\nKedilerde kalp ağırlığını hem vücut ağırlığı hem de cinsiyet ile modelleyelim:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nYorumlama:\n\nBwt katsayısı: Cinsiyet sabit tutulduğunda, vücut ağırlığındaki 1 kg artışın kalp ağırlığına etkisi\nSexM katsayısı: Vücut ağırlığı sabit tutulduğunda, erkek olmanın kalp ağırlığına ek etkisi\nR’da kategorik değişkenler otomatik olarak dummy (kukla) değişkene çevrilir: Dişi = referans, Erkek = 1"
-  },
-  {
-    "objectID": "ders-regresyon.html#soru",
-    "href": "ders-regresyon.html#soru",
-    "title": "Regresyon",
-    "section": "Soru",
-    "text": "Soru\ntrees veri setinde ağaçların hacmini (Volume) tahmin etmek istiyorsunuz. Çap (Girth) ve yükseklik (Height) değişkenlerini kullanarak basit ve çoklu regresyon modellerini kurunuz, R² değerlerini karşılaştırınız ve diagnostik grafikleri inceleyiniz.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "ders-regresyon.html#kötü-örnekler",
-    "href": "ders-regresyon.html#kötü-örnekler",
-    "title": "Regresyon",
-    "section": "“Kötü” örnekler",
-    "text": "“Kötü” örnekler\nResidual-Fit veya QQ grafiği güzel olmayan iki örnek yapalım\n\ntrees adlı veride ağaçlara ait yükseklik, çap ve hacim hesaplamaları var. hacim ile çap arasında silindir hacmi ilişkisi olduğundan residual-fit eğrisinde bir örüntü ortaya çıkacaktır\nkendimizin oluşturduğu enzim kinetiği verisinde doğrusal olmayan bir ilişki varken, doğrusal regresyon modelleme yaptığımızda residual-fit grafiğinde örüntü oluşacak ve QQ grafiğinde sapmalar olacaktır"
-  },
-  {
-    "objectID": "ders-regresyon.html#trees-veri-seti",
-    "href": "ders-regresyon.html#trees-veri-seti",
-    "title": "Regresyon",
-    "section": "trees veri seti",
-    "text": "trees veri seti\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "ders-regresyon.html#kotü-model-1",
-    "href": "ders-regresyon.html#kotü-model-1",
-    "title": "Regresyon",
-    "section": "Kotü model 1",
-    "text": "Kotü model 1\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "ders-regresyon.html#kotü-model-2",
-    "href": "ders-regresyon.html#kotü-model-2",
-    "title": "Regresyon",
-    "section": "Kotü model 2",
-    "text": "Kotü model 2\nMichaelis-Menten benzeri doz-yanıt verisi\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "ders-regresyon.html#section",
-    "href": "ders-regresyon.html#section",
-    "title": "Regresyon",
-    "section": "",
-    "text": "Please enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "ders-regresyon.html#section-1",
-    "href": "ders-regresyon.html#section-1",
-    "title": "Regresyon",
-    "section": "",
-    "text": "Please enable JavaScript to experience the dynamic code cell content on this page."
   }
 ]
