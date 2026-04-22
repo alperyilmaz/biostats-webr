@@ -1,6 +1,6 @@
 ---
-title: "Ders 4: Güven Aralıkları ve Hipotez Testi"
-subtitle: "MBG1032 - Doç.Dr. Alper YILMAZ - *28 Mart 2024*"
+title: "Güven Aralıkları ve Hipotez Testi"
+subtitle: "MBG1032 - Doç.Dr. Alper YILMAZ"
 format:
   revealjs:
     chalkboard: true
@@ -8,335 +8,356 @@ format:
     smaller: true
     scrollable: true
 webr:
-  packages: ['ggplot2'] # Install R packages on document open
+  packages: ['MASS']
 filters:
   - webr
-engine: knitr
 ---
 
 ## Özet
 
-*   Nokta tahmini vs. Aralık tahmini
-*   Güven aralığı nedir?
-*   Güven aralığının yorumlanması
-*   Güven aralığını etkileyen faktörler
-*   Ortalama için güven aralığı hesaplama (R ile)
+* Nokta tahmini vs aralık tahmini
+* Güven aralığı nedir ve nasıl yorumlanır?
+* Güven aralığını etkileyen faktörler
+* R ile güven aralığı hesaplama
+* Hipotez testi mantığı — mahkeme analojisi
+* H₀ ve H₁ hipotezleri
+* P-değeri ve anlamlılık düzeyi
+* Tip I ve Tip II hatalar
+* R ile hipotez testi uygulaması
 
-## Tahmin Etme İhtiyacı
+# Güven Aralıkları
 
-Biyolojide genellikle tüm popülasyonu (evreni) incelemek yerine, popülasyondan alınan bir örneklem üzerinden çıkarımlar yaparız.
+## Bir anket sonucu gördünüz...
 
-*   **Popülasyon Parametresi:** Popülasyonun tamamını tanımlayan sayısal bir değer (örn. popülasyondaki tüm insanların ortalama boyu - $\mu$). Genellikle bilinmez.
-*   **Örneklem İstatistiği:** Örneklemden hesaplanan ve popülasyon parametresini tahmin etmek için kullanılan sayısal bir değer (örn. örneklemdeki insanların ortalama boyu - $\overline{x}$).
+Haberlerde şöyle bir cümle okuduğunuzu düşünün:
 
-Amacımız, örneklem istatistiğini kullanarak bilinmeyen popülasyon parametresi hakkında bilgi edinmektir.
+> "Seçim anketine göre Aday A'nın oy oranı **%48 ± 3** olarak ölçülmüştür."
 
-## Nokta Tahmini vs. Aralık Tahmini
+Bu ne anlama geliyor?
 
-*   **Nokta Tahmini:** Popülasyon parametresi için tek bir değer tahmini (örn. $\overline{x}$, $\mu$'nün nokta tahminidir).
-    *   Basittir ancak tahminin ne kadar hassas olduğu hakkında bilgi vermez. Örneklemden örnekleme değişir.
+* Nokta tahmini: %48
+* Hata payı: ± 3
+* Aralık: %45 ile %51 arası
 
-*   **Aralık Tahmini (Güven Aralığı):** Popülasyon parametresini belirli bir güvenilirlik seviyesiyle içermesi beklenen bir değer aralığıdır.
-    *   Tahminin belirsizliğini veya hassasiyetini gösterir.
+Gerçek oy oranının bu aralıkta olduğuna belirli bir güvenle inanıyoruz. Ama **ne kadar** güvenle? İşte güven aralığı kavramı burada devreye giriyor.
 
-## 
+## Neden tek bir sayı yetmez?
 
-![](https://editor.analyticsvidhya.com/uploads/91072Group%209.jpg){fig-align="center"}
+Bir araştırmacı olarak popülasyonu (evreni) incelemek istiyorsunuz ama bunu tamamı üzerinde yapamazsınız. Örneklem alırsınız.
 
-:::footer
-Görsel Kaynak: [Medium - Understanding Confidence Intervals](https://medium.com/analytics-vidhya/understanding-confidence-intervals-33e7b7e0a9a)
-:::
+* **Popülasyon parametresi (μ)**: Gerçek değer — tüm Türkiye'deki yetişkin erkeklerin ortalama boyu. Bilinmez.
+* **Örneklem istatistiği (x̄)**: 100 kişi ölçtünüz, ortalama 172 cm çıktı. Bu bir tahmindir.
 
-## Güven Aralığı Nedir?
+Sorun şu: farklı 100 kişi seçseydiniz, belki 174 cm, belki 170 cm çıkardı. Her örneklem farklı bir x̄ verir.
 
-Bir güven aralığı, örneklem verilerine dayanarak hesaplanan ve bilinmeyen popülasyon parametresini (örneğin, ortalama $\mu$ veya oran *p*) belirli bir olasılıkla içerdiği düşünülen bir değer aralığıdır.
+Tek bir sayı (172 cm) vermek yerine **belirsizliği de göstermek** daha dürüsttür.
 
-Genel formül genellikle şöyledir:
+## Nokta tahmini vs aralık tahmini
 
-**Nokta Tahmini ± Hata Payı**
+![](images/nokta_vs_aralik.svg){.nostretch fig-align="center" width="85%"}
 
-*   **Nokta Tahmini:** Örneklemden hesaplanan istatistik (örn. $\overline{x}$).
-*   **Hata Payı:** Tahminin ne kadar hassas olduğunu gösterir. Örnekleme değişkenliğine ve istenen güven düzeyine bağlıdır.
+## Güven aralığı nedir?
 
-## Güven Düzeyi ve Yorumlama
+Güven aralığı, örneklem verisinden hesaplanan ve bilinmeyen popülasyon parametresini belirli bir olasılıkla içerdiği düşünülen bir değer aralığıdır.
 
-*   **Güven Düzeyi:** Genellikle %90, %95 veya %99 olarak seçilir. Bu, aynı popülasyondan tekrar tekrar örneklemler alıp her biri için bir güven aralığı hesaplarsak, bu aralıkların ne kadarının gerçek popülasyon parametresini içereceğini gösteren yüzdedir.
+**Genel formül:**
 
-*   **Yaygın Yanlış Yorum:** "%95 güven aralığı, popülasyon parametresinin %95 olasılıkla bu aralıkta olduğu anlamına gelir." **BU YANLIŞTIR!** Popülasyon parametresi sabit bir değerdir, rastgele değildir. Aralık rastgeledir.
+$$ \text{Güven Aralığı} = \text{Nokta Tahmini} \pm \text{Hata Payı} $$
 
-*   **Doğru Yorum:** "Bu popülasyondan alınacak örneklemlerle oluşturulacak %95 güven aralıklarının yaklaşık %95'inin, gerçek popülasyon parametresini içermesini bekleriz." veya daha pratik olarak "Popülasyon parametresinin bu aralıkta olduğuna %95 güveniyoruz."
+Ortalama için:
 
-## 
+$$ \bar{x} \pm t_{\alpha/2,\; n-1} \times \frac{s}{\sqrt{n}} $$
 
-![]()
+* $\bar{x}$: Örneklem ortalaması
+* $s$: Örneklem standart sapması
+* $n$: Örneklem büyüklüğü
+* $\frac{s}{\sqrt{n}}$: **Standart hata** (SE) — ortalamanın ne kadar değişkenlik gösterdiği
+* $t_{\alpha/2, n-1}$: t-kritik değeri (güven düzeyine bağlı)
 
-:::footer
-Görsel Kaynak: []()
-:::
+## Dikkat: Yaygın yanlış yorum!
 
-## Güven Aralığının Genişliğini Etkileyen Faktörler
+> ❌ "%95 güven aralığı, gerçek ortalamanın %95 olasılıkla bu aralıkta olduğu anlamına gelir."
 
-1.  **Güven Düzeyi:** Güven düzeyi arttıkça (örn. %95'ten %99'a), aralık genişler. Daha emin olmak için daha geniş bir aralığa ihtiyaç duyarız.
-2.  **Örneklem Büyüklüğü (n):** Örneklem büyüklüğü arttıkça, aralık daralır. Daha fazla veri, daha hassas tahmin sağlar.
-3.  **Verinin Değişkenliği (Standart Sapma - s):** Verideki değişkenlik (standart sapma) arttıkça, aralık genişler. Daha dağınık veriler daha fazla belirsizlik anlamına gelir.
+Bu **yanlıştır**! Gerçek ortalama (μ) sabit bir sayıdır, rastgele değildir. Ya aralıkta ya da değil.
 
-## 
+> ✓ "Bu yöntemi tekrar tekrar uygulasak, oluşturduğumuz aralıkların %95'i gerçek ortalamayı içerir."
 
-![]()
+Yani güven, aralığa değil **yönteme** aittir. 100 farklı örneklem alsak ve her birinden %95 güven aralığı hesaplasak, bunların yaklaşık 95 tanesi μ'yü içerir, 5 tanesi içermez.
 
-:::footer
-Görsel Kaynak: []()
-:::
+## Güven aralığını etkileyen 3 faktör
 
-## Ortalama İçin Güven Aralığı ($\mu$)
+**1. Güven düzeyi (↑ = aralık genişler)**
 
-Popülasyon standart sapması ($\sigma$) bilinmiyorsa (genellikle durum budur), t-dağılımını kullanırız:
+%95'ten %99'a çıkarsak daha "emin" olmak istiyoruz → daha geniş aralık gerekir.
 
-$$ \overline{x} \pm t_{\alpha/2, n-1} \times \frac{s}{\sqrt{n}} $$
+**2. Örneklem büyüklüğü (↑ = aralık daralır)**
 
-*   $\overline{x}$: Örneklem ortalaması
-*   $s$: Örneklem standart sapması
-*   $n$: Örneklem büyüklüğü
-*   $t_{\alpha/2, n-1}$: Belirli bir güven düzeyi ($\alpha$) ve serbestlik derecesi ($n-1$) için t-kritik değeri.
-*   $\frac{s}{\sqrt{n}}$: Standart Hata (SE - Standard Error)
+Daha çok veri toplamak → daha hassas tahmin → daha dar aralık. Formüldeki $\sqrt{n}$ paydada olduğu için n artınca SE azalır.
 
-## R ile Güven Aralığı Hesabı (Ortalama)
+**3. Verinin değişkenliği, standart sapma (↑ = aralık genişler)**
 
-R'da `t.test()` fonksiyonu, bir vektörün ortalaması için güven aralığını kolayca hesaplar. Varsayılan güven düzeyi %95'tir. `iris` veri setindeki Sepal.Length (Çanak Yaprak Uzunluğu) için %95 güven aralığını hesaplayalım:
+Veriler çok dağınıksa (s büyük) → belirsizlik fazla → daha geniş aralık.
 
-```{webr-r}
-# iris veri setinden Sepal.Length sütununu alalım
-sepal_lengths <- iris$Sepal.Length
+## Güven aralığının daralması — simülasyon
 
-# t.test fonksiyonunu kullanarak %95 güven aralığını hesaplayalım
-test_result <- t.test(sepal_lengths)
-
-# Sonucu görelim (özellikle confidence interval kısmına bakalım)
-print(test_result)
-
-# Sadece güven aralığını almak için:
-print(test_result$conf.int)
-```
-
-**Yorum:** Iris çiçeği popülasyonundaki ortalama çanak yaprak uzunluğunun ($\mu$) [5.71, 5.97] cm aralığında olduğuna %95 güveniyoruz.
-
-## Farklı Güven Düzeyi ile Hesaplama
-
-%99 güven düzeyi ile hesaplamak için `conf.level` argümanını kullanırız:
-
-```{webr-r}
-# %99 güven aralığı
-t.test(iris$Sepal.Length, conf.level = 0.99)$conf.int
-```
-
-Gördüğünüz gibi, güven düzeyi %95'ten %99'a çıktığında aralık genişledi ([5.71, 5.97] vs [5.66, 6.01]).
-
-## Görselleştirme
-
-Güven aralığını görselleştirmek, anlamayı kolaylaştırabilir. Ortalama ve güven aralığını bir grafik üzerinde gösterebiliriz.
-
-```{webr-r}
+```{r}
+#| output-location: slide
 #| echo: true
-#| message: false
-library(ggplot2)
 
-# Özet istatistikleri hesapla (ortalama, güven aralığı sınırları)
-# t.test sonucu içinden değerleri alabiliriz
-test_res <- t.test(iris$Sepal.Length)
-mean_val <- test_res$estimate
-ci_lower <- test_res$conf.int[1]
-ci_upper <- test_res$conf.int[2]
+# Örneklem büyüklüğü arttıkça güven aralığı nasıl daralır?
+set.seed(42)
+populasyon <- rnorm(10000, mean = 170, sd = 8)  # Boy (cm)
 
-# Basit bir data frame oluşturalım
-plot_data <- data.frame(
-  variable = "Sepal.Length",
-  mean = mean_val,
-  lower = ci_lower,
-  upper = ci_upper
-)
+n_degerleri <- c(10, 30, 50, 100, 500)
+plot(NULL, xlim = c(0, 6), ylim = c(166, 174),
+     xlab = "", ylab = "Güven Aralığı (cm)", xaxt = "n",
+     main = "Örneklem büyüklüğü arttıkça güven aralığı daralır")
 
-# ggplot ile görselleştirme
-ggplot(plot_data, aes(x = variable, y = mean)) +
-  geom_point(size = 4, color = "blue") + # Ortalama noktası
-  geom_errorbar(aes(ymin = lower, ymax = upper), width = 0.2, size=1, color="blue") + # Güven Aralığı çubuğu
-  labs(title = "Iris Sepal.Length için %95 Güven Aralığı",
-       x = "Değişken",
-       y = "Uzunluk (cm)") +
-  theme_bw() +
-  ylim(5.5, 6.2) # Y eksenini aralığa odaklamak için
+for(i in 1:length(n_degerleri)) {
+  orneklem <- sample(populasyon, n_degerleri[i])
+  ci <- t.test(orneklem)$conf.int
+  segments(i, ci[1], i, ci[2], lwd = 3, col = "steelblue")
+  points(i, mean(orneklem), pch = 19, col = "red", cex = 1.5)
+}
+axis(1, at = 1:5, labels = paste("n =", n_degerleri))
+abline(h = 170, col = "red", lty = 2)
+text(5.5, 170.3, "μ = 170", col = "red", cex = 0.9)
 ```
 
-## Ek Kaynaklar
+## 
 
-*   [Khan Academy - Confidence Intervals](https://www.khanacademy.org/math/statistics-probability/confidence-intervals-one-sample) (İngilizce)
-*   [Stat Trek - Confidence Interval for Mean](https://stattrek.com/estimation/confidence-interval-mean) (İngilizce)
-*   Veri Bilimi Okulu - [Güven Aralığı](https://www.veribilimiokulu.com/guven-araligi-nedir-nasil-hesaplanir/) (Türkçe)
+```{r}
+#| output-location: slide
+#| echo: true
+#| fig-height: 7
 
+# Aynı popülasyondan 100 kez 50'şer kişilik örneklem al
+set.seed(123)
+n <- 50
+tekrar <- 100
 
-## Hipotez testleri özet
+plot(NULL, xlim = c(166, 174), ylim = c(0, tekrar + 1),
+     xlab = "Boy (cm)", ylab = "Örneklem #", yaxt = "n",
+     main = "100 farklı örneklemden %95 güven aralıkları")
 
-*   Hipotez testi nedir? Mantığı.
-*   Sıfır (H₀) ve Alternatif (H₁) Hipotezler
-*   Hipotez Testi Adımları
-*   Anlamlılık Düzeyi ($\alpha$) ve P-değeri
-*   Tip I ve Tip II Hatalar
-*   Örnek: Tek Örneklem t-Testi (R ile)
+disarda <- 0
+for(i in 1:tekrar) {
+  orneklem <- sample(populasyon, n)
+  ci <- t.test(orneklem)$conf.int
+  ort <- mean(orneklem)
+  
+  # μ=170 aralık dışında mı?
+  renk <- ifelse(ci[1] > 170 | ci[2] < 170, "red", "steelblue")
+  if(renk == "red") disarda <- disarda + 1
+  
+  segments(ci[1], i, ci[2], i, lwd = 2, col = renk)
+  points(ort, i, pch = 19, col = renk, cex = 0.8)
+}
 
-## Hipotez Testi Nedir?
+abline(v = 170, col = "red", lty = 2, lwd = 2)
+text(170, tekrar + 1, paste("μ = 170"), col = "red", cex = 0.9)
+text(172.5, tekrar + 1, paste(disarda, "/ 50 aralık μ'yü içermiyor"), 
+     col = "red", cex = 0.9)
+```
 
-Hipotez testi, örneklem verilerini kullanarak bir popülasyon hakkındaki iddiaları (hipotezleri) değerlendirmek için kullanılan istatistiksel bir yöntemdir.
+## R ile güven aralığı hesaplama
 
-**Amaç:** Örneklemden elde edilen kanıtların, popülasyon hakkındaki belirli bir iddiayı (sıfır hipotezi) reddetmek için yeterince güçlü olup olmadığına karar vermek.
+```{webr-r}
+# Kedilerde vücut ağırlığı için %95 güven aralığı
+library(MASS)
+data(cats)
 
-**Örnek Sorular:**
+# t.test fonksiyonu güven aralığını otomatik hesaplar
+sonuc <- t.test(cats$Bwt)
+print(sonuc)
+```
 
-*   Yeni bir gübre, bitki boyunu ortalamada artırıyor mu?
-*   Belirli bir gen mutasyonu, hastalığa yakalanma riskini değiştiriyor mu?
-*   İki farklı tedavi yönteminin iyileşme oranları arasında fark var mı?
+## Güven aralığının yorumlanması
 
-## Sıfır ve Alternatif Hipotezler
+```{webr-r}
+library(MASS)
+sonuc <- t.test(cats$Bwt)
+
+cat("Örneklem ortalaması:", round(sonuc$estimate, 3), "kg\n")
+cat("%95 Güven Aralığı: [", round(sonuc$conf.int[1], 3), ",",
+    round(sonuc$conf.int[2], 3), "] kg\n\n")
+
+# %99 güven aralığı ile karşılaştır
+sonuc99 <- t.test(cats$Bwt, conf.level = 0.99)
+cat("%99 Güven Aralığı: [", round(sonuc99$conf.int[1], 3), ",",
+    round(sonuc99$conf.int[2], 3), "] kg\n")
+cat("\nGüven düzeyi arttı → aralık genişledi\n")
+```
+
+# Hipotez Testi
+
+## Bir soru 
+
+Bir arkadaşınız madeni para ile yazı-tura atıyor. 20 kez atıyor ve **18 kez yazı** geliyor.
+
+Sizce bu para hileli mi?
+
+* Belki sadece şansızlık — %50 olasılıkla yazı gelen normal bir parayla da 18/20 yazı gelebilir... ama ne kadar olası?
+* 20 atışta 18+ yazı gelme olasılığı: P = 0.0002 (%0.02)
+* Bu kadar düşük bir olasılık → "Bu şans eseri değil, para hileli" deriz.
+
+İşte hipotez testi tam olarak bu mantıkla çalışır: önce bir varsayım kur (*para adil*), sonra veriyi topla (*20 atış*), sonra sor — bu sonuç  ne kadar olası? Eğer çok düşük bir olasılıksa, varsayımını reddet.
+
+## Hipotez testi 
+
+![](images/mahkeme_analojisi.svg){.nostretch fig-align="center" width="90%"}
+
+## Sıfır ve alternatif hipotezler
 
 Her hipotez testinde iki hipotez kurulur:
 
-1.  **Sıfır Hipotezi (H₀):** Genellikle "fark yoktur", "etki yoktur" veya "değişiklik yoktur" şeklinde ifade edilen, test edilmek istenen mevcut durum veya varsayımdır. Popülasyon parametresi hakkında belirli bir değeri öne sürer (örn. $H_0: \mu = 50$). Eşitlik içerir (=, ≤, ≥).
-2.  **Alternatif Hipotez (H₁ veya Hₐ):** Sıfır hipotezinin yanlış olduğuna inanıldığında kabul edilecek olan iddiadır. Araştırmacının kanıtlamaya çalıştığı şeyi temsil eder (örn. $H_1: \mu \neq 50$, $H_1: \mu > 50$, veya $H_1: \mu < 50$). Eşitlik içermez (≠, >, <).
+**H₀ (Sıfır hipotezi):** "Etki yoktur, fark yoktur, her şey normaldir." Masumiyet karinesi gibi — aksi kanıtlanana kadar geçerli.
 
-**Önemli:** H₀ ve H₁ birbirini dışlayan ve tüm olasılıkları kapsayan ifadeler olmalıdır.
+**H₁ (Alternatif hipotez):** "Bir etki vardır, bir fark vardır." Araştırmacının kanıtlamaya çalıştığı iddia.
 
-## Hipotez Örnekleri
+## Hipotez örnekleri
 
-**Durum 1:** Bir biyolog, belirli bir göldeki balıkların ortalama uzunluğunun 30 cm olup olmadığını test etmek istiyor.
+**Yeni gübre etkili mi?**
 
-*   $H_0: \mu = 30$ cm (Ortalama uzunluk 30 cm'dir)
-*   $H_1: \mu \neq 30$ cm (Ortalama uzunluk 30 cm değildir - *Çift Yönlü*)
+* H₀: μ = 5 ton/hektar (gübre verimi değiştirmiyor)
+* H₁: μ > 5 ton/hektar (gübre verimi artırıyor)
 
-**Durum 2:** Bir ilaç firması, yeni geliştirdiği ilacın kan basıncını düşürüp düşürmediğini test etmek istiyor (mevcut ortalama 140 mmHg).
+**İlaç kan basıncını düşürüyor mu?**
 
-*   $H_0: \mu \ge 140$ mmHg (İlaç kan basıncını düşürmüyor veya artırıyor)
-*   $H_1: \mu < 140$ mmHg (İlaç kan basıncını düşürüyor - *Tek Yönlü*)
+* H₀: μ ≥ 140 mmHg (ilaç etkisiz)
+* H₁: μ < 140 mmHg (ilaç düşürüyor)
 
-**Durum 3:** Bir ziraat mühendisi, yeni bir gübrenin mısır verimini artırıp artırmadığını araştırıyor (mevcut ortalama verim 5 ton/hektar).
+**Gen mutasyonu hastalık riskini etkiliyor mu?**
 
-*   $H_0: \mu \le 5$ ton/hektar (Yeni gübre verimi artırmıyor veya azaltıyor)
-*   $H_1: \mu > 5$ ton/hektar (Yeni gübre verimi artırıyor - *Tek Yönlü*)
+* H₀: μ_hasta = μ_sağlıklı (fark yok)
+* H₁: μ_hasta ≠ μ_sağlıklı (fark var)
 
-## Hipotez Testi Adımları
+## P-değeri nedir?
 
-1.  **Hipotezleri Belirle:** Sıfır (H₀) ve Alternatif (H₁) hipotezleri kur.
-2.  **Anlamlılık Düzeyini Seç ($\alpha$):** H₀'ı yanlışlıkla reddetme riskini belirle (genellikle 0.05, 0.01 veya 0.10).
-3.  **Uygun Test İstatistiğini Seç:** Veri tipine ve hipoteze uygun testi seç (örn. t-testi, Z-testi, ki-kare testi).
-4.  **Karar Kuralını Belirle:** Test istatistiğinin hangi değerlerde H₀'ın reddedileceğini belirle (kritik değerler veya p-değeri yaklaşımı).
-5.  **Test İstatistiğini Hesapla:** Örneklem verilerini kullanarak test istatistiğinin değerini hesapla.
-6.  **Karar Ver:** Hesaplanan test istatistiğini karar kuralıyla karşılaştırarak H₀'ı reddet veya reddetme.
-7.  **Sonucu Yorumla:** Test sonucunu problem bağlamında yorumla.
+P-değeri şu soruya cevap verir:
 
-## 
+> "H₀ doğru olsaydı, elimdeki veri kadar veya daha aşırı bir sonuç elde etme olasılığım ne kadardı?"
 
+* **Küçük p-değeri** (p ≤ 0.05): "Bu veri, H₀ altında çok olası değil. H₀'a karşı güçlü kanıt." → H₀ reddedilir
+* **Büyük p-değeri** (p > 0.05): "Bu veri, H₀ altında gayet olası. Kanıt yetersiz." → H₀ reddedilemez
 
-![]()
+> ⚠️ "H₀ reddedilemez" ile "H₀ doğrudur" aynı şey **değildir**! Mahkemede beraat etmek "masumiyetin kanıtlanması" değil, "suçluluğun kanıtlanamaması" demektir.
 
-:::footer
-Görsel Kaynak: []()
-:::
-
-## Anlamlılık Düzeyi ($\alpha$)
-
-*   Alfa ($\alpha$), sıfır hipotezi (H₀) doğruyken onu reddetme olasılığıdır (Tip I Hata olasılığı).
-*   Araştırmacı tarafından testten önce belirlenir. Yaygın değerler:
-    *   $\alpha = 0.05$ (%5 anlamlılık düzeyi)
-    *   $\alpha = 0.01$ (%1 anlamlılık düzeyi)
-    *   $\alpha = 0.10$ (%10 anlamlılık düzeyi)
-*   $\alpha = 0.05$ demek, H₀ doğru olsa bile, 100 deneyin 5'inde yanlışlıkla H₀'ı reddetme riskini göze almak demektir.
-
-## P-değeri (P-value)
-
-- P-değeri, sıfır hipotezi (H₀) doğru varsayıldığında, örneklemden elde edilen sonuç kadar veya daha aşırı (H₁ yönünde) sonuçların gözlenme olasılığıdır.
-  - Eğer sıfır hipotezi doğruysa, şansın bu verileri ne kadar iyi açıklayabileceğini belirtir.
-  - **Örnek:** Diyelim ki bir ilacın etkili olmadığını iddia eden bir sıfır hipotezimiz var (H₀: "İlaç etkisizdir"). 30 hasta üzerinde bir deney yaptık ve olumlu bir sonuç gözlemledik. P-değeri şu soruya cevap verir: "Eğer ilaç gerçekten etkisiz olsaydı (H₀ doğru olsaydı), bizim gördüğümüz kadar veya daha fazla olumlu sonucu şans eseri gözlemleme olasılığı nedir?"
-- **Küçük p-değeri (≤ $\alpha$):** Gözlenen veri H₀ altında pek olası değildir. H₀'a karşı güçlü kanıt sunar. H₀ reddedilir.
-- **Büyük p-değeri (> $\alpha$):** Gözlenen veri H₀ altında makul bir şekilde olasıdır. H₀'ı reddetmek için yeterli kanıt yoktur. H₀ reddedilemez (ama "kabul edildi" demekten kaçınılır).
-
-## 
-
-![]()
-
-:::footer
-Görsel Kaynak: []()
-:::
-
-## Karar Verme
-
-P-değeri yaklaşımı en yaygın olanıdır:
-
-*   Eğer **p-değeri ≤ $\alpha$** ise, sonuç istatistiksel olarak anlamlıdır ve **H₀ reddedilir**. Alternatif hipotez (H₁) desteklenir.
-*   Eğer **p-değeri > $\alpha$** ise, sonuç istatistiksel olarak anlamlı değildir ve **H₀ reddedilemez**. Alternatif hipotezi (H₁) desteklemek için yeterli kanıt yoktur.
-
-## Tip I ve Tip II Hatalar
-
-Hipotez testlerinde iki tür hata yapılabilir:
-
-*   **Tip I Hata:** Gerçekte doğru olan H₀ hipotezini reddetmek.
-    *   Olasılığı $\alpha$ (anlamlılık düzeyi) ile gösterilir.
-    *   "Yalancı Pozitif" - olmayan bir etkiyi var kabul etmek.
-*   **Tip II Hata:** Gerçekte yanlış olan H₀ hipotezini reddetmemek (yani yanlış H₀'ı kabul etmek).
-    *   Olasılığı $\beta$ ile gösterilir.
-    *   "Yalancı Negatif" - var olan bir etkiyi gözden kaçırmak.
-
-**Testin Gücü (Power):** Yanlış bir H₀ hipotezini doğru bir şekilde reddetme olasılığıdır (1 - $\beta$).
-
-## 
-
-![]()
-
-:::footer
-Görsel Kaynak: []()
-:::
-
-## Örnek: Tek Örneklem t-Testi
-
-**Senaryo:** Bir araştırmacı, `iris` veri setindeki 'setosa' türü çiçeklerin ortalama çanak yaprak uzunluğunun ($\mu$) 5.0 cm olup olmadığını test etmek istiyor. Anlamlılık düzeyi $\alpha = 0.05$.
-
-*   $H_0: \mu = 5.0$ cm
-*   $H_1: \mu \neq 5.0$ cm (Çift yönlü test)
-
-R'da `t.test()` fonksiyonunu kullanabiliriz. `mu` argümanı ile H₀'daki değeri belirtiriz.
+## P-değeri — para örneği ile
 
 ```{webr-r}
-# Sadece setosa türünü filtrele
-setosa_data <- iris[iris$Species == "setosa", ]
+# 20 atışta 18 yazı gelmesi: para hileli mi?
+# H0: p = 0.5 (adil para)
+# H1: p != 0.5 (hileli para)
 
-# Sepal.Length sütununu al
-setosa_sepal_length <- setosa_data$Sepal.Length
-
-# Tek örneklem t-testi yap (H0: mu = 5.0)
-test_result <- t.test(setosa_sepal_length, mu = 5.0)
-
-# Sonucu yazdır
-print(test_result)
+# Binom testi
+binom.test(x = 18, n = 20, p = 0.5)
 ```
 
-## Sonuçların Yorumlanması (t-Testi)
+## Anlamlılık düzeyi (α)
+
+α, H₀'ı yanlışlıkla reddetme riskimizin üst sınırıdır.
+
+* α = 0.05 → 100 testten 5'inde yanlışlıkla "etki var" deme riski
+* α = 0.01 → 100 testten 1'inde
+* α = 0.10 → 100 testten 10'unda
+
+**Karar kuralı basit:**
+
+* p ≤ α → H₀ reddedilir → "İstatistiksel olarak anlamlı"
+* p > α → H₀ reddedilemez → "Kanıt yetersiz"
+
+α değeri testten **önce** belirlenmelidir. Veriyi gördükten sonra α'yı değiştirmek bilimsel olarak etik olmaz!
+
+## Tip I ve Tip II hatalar
+
+![](images/tip1_tip2_hata.svg){.nostretch fig-align="center" width="90%"}
+
+## Hipotez testi adımları — özet
+
+1. **Hipotezleri kur:** H₀ ve H₁ belirle
+2. **α seç:** Genellikle 0.05
+3. **Veri topla ve test uygula:** Uygun istatistiksel testi seç
+4. **P-değerini hesapla**
+5. **Karar ver:** p ≤ α ise H₀ reddedilir
+6. **Yorumla:** Biyolojik bağlamda ne anlama geliyor?
+
+## Örnek: Tek örneklem t-testi
+
+Araştırmacı, yeni bir bitkisel ilacın farelerde kan glikoz seviyesini referans değer olan 100 mg/dL'den farklılaştırıp farklılaştırmadığını test ediyor.
+
+* H₀: μ = 100 mg/dL (ilaç etkisiz)
+* H₁: μ ≠ 100 mg/dL (ilaç kan glikozunu değiştiriyor)
+* α = 0.05
 
 ```{webr-r}
-# Sadece p-değerini görmek için:
-print(test_result$p.value)
+# 15 farenin kan glikoz değerleri (mg/dL)
+glikoz <- c(92, 97, 94, 90, 89, 96, 91, 88, 93, 95, 89, 94, 91, 92, 90)
 
-# Anlamlılık düzeyi
-alpha <- 0.05
+cat("Ortalama:", mean(glikoz), "mg/dL\n")
+cat("Standart sapma:", round(sd(glikoz), 2), "\n\n")
 
-# Karşılaştırma
-if (test_result$p.value <= alpha) {
-  print("P-değeri <= alpha. H0 reddedilir.")
+# Tek örneklem t-testi
+t.test(glikoz, mu = 100)
+```
+
+## Sonucun yorumlanması
+
+```{webr-r}
+glikoz <- c(92, 97, 94, 90, 89, 96, 91, 88, 93, 95, 89, 94, 91, 92, 90)
+sonuc <- t.test(glikoz, mu = 100)
+
+cat("t istatistiği:", round(sonuc$statistic, 2), "\n")
+cat("Serbestlik derecesi:", sonuc$parameter, "\n")
+cat("p-değeri:", format(sonuc$p.value, scientific = TRUE), "\n")
+cat("95% Güven aralığı: [", round(sonuc$conf.int[1], 2), ",",
+    round(sonuc$conf.int[2], 2), "]\n\n")
+
+if(sonuc$p.value <= 0.05) {
+  cat("Karar: p <= 0.05 → H0 REDDEDİLDİ\n")
+  cat("İlaç, farelerin kan glikoz seviyesini anlamlı şekilde değiştiriyor.\n")
 } else {
-  print("P-değeri > alpha. H0 reddedilemez.")
+  cat("Karar: p > 0.05 → H0 reddedilemez\n")
 }
 ```
 
-**Yorum:** Hesaplanan p-değeri (yaklaşık 0.85) belirlediğimiz anlamlılık düzeyi $\alpha=0.05$'ten çok daha büyüktür. Bu nedenle, H₀ hipotezini (yani setosa türünün ortalama çanak yaprak uzunluğunun 5.0 cm olduğu iddiasını) reddetmek için yeterli istatistiksel kanıt yoktur. Örneklem ortalaması (5.006 cm) 5.0 cm'den farklı olsa da, bu fark istatistiksel olarak anlamlı değildir ve örnekleme şansından kaynaklanıyor olabilir.
+## Görselleştirme
 
-## Ek Kaynaklar
+```{webr-r}
+glikoz <- c(92, 97, 94, 90, 89, 96, 91, 88, 93, 95, 89, 94, 91, 92, 90)
 
-*   [Khan Academy - Hypothesis Testing](https://www.khanacademy.org/math/statistics-probability/hypothesis-testing-one-sample) (İngilizce)
-*   [Yale Statlab - Hypothesis Testing](http://www.stat.yale.edu/Courses/1997-98/101/sigtest.htm) (İngilizce)
-*   [Scribbr - Hypothesis Testing Explained](https://www.scribbr.com/statistics/hypothesis-testing/) (İngilizce)
-*   Veri Bilimi Okulu - [Hipotez Testi](https://www.veribilimiokulu.com/hipotez-testi-nedir/) (Türkçe)
+boxplot(glikoz, main = "Farelerin Kan Glikoz Seviyeleri",
+        ylab = "Glikoz (mg/dL)", col = "steelblue")
+abline(h = 100, col = "red", lwd = 2, lty = 2)
+text(1.3, 100.5, "H₀: μ = 100", col = "red", cex = 0.9)
+```
+
+## Güven aralığı ve hipotez testi bağlantısı
+
+Bu iki kavram aslında aynı madalyonun iki yüzüdür:
+
+* Eğer %95 güven aralığı H₀'daki değeri **içermiyorsa** → p < 0.05 → H₀ reddedilir
+* Eğer %95 güven aralığı H₀'daki değeri **içeriyorsa** → p > 0.05 → H₀ reddedilemez
+
+```{webr-r}
+glikoz <- c(92, 97, 94, 90, 89, 96, 91, 88, 93, 95, 89, 94, 91, 92, 90)
+sonuc <- t.test(glikoz, mu = 100)
+
+cat("Güven aralığı: [", round(sonuc$conf.int[1], 2), ",",
+    round(sonuc$conf.int[2], 2), "]\n")
+cat("H₀ değeri (100) bu aralıkta mı?",
+    ifelse(100 >= sonuc$conf.int[1] & 100 <= sonuc$conf.int[2],
+           "EVET → H₀ reddedilemez", "HAYIR → H₀ reddedilir"), "\n")
+```
+
+## Soru
+
+Bir araştırmacı, kedilerin ortalama vücut ağırlığının 2.5 kg olup olmadığını test etmek istiyor. `cats` veri setini kullanarak hipotezi kurunuz, tek örneklem t-testi uygulayınız ve sonucu yorumlayınız.
+
+```{webr-r}
+library(MASS)
+data(cats)
+
+# Çözümünüzü buraya yazıp çalıştırınız
+
+```

@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 400" font-family="'Segoe UI', 'Helvetica Neue', sans-serif">
+  <rect width="900" height="400" fill="#ffffff" rx="12"/>
+
+  <text x="450" y="38" text-anchor="middle" fill="#1e293b" font-size="22" font-weight="700">Tip I ve Tip II Hatalar</text>
+
+  <!-- Header row -->
+  <rect x="300" y="60" width="270" height="45" rx="0" fill="#e2e8f0"/>
+  <text x="435" y="88" text-anchor="middle" fill="#1e293b" font-size="15" font-weight="700">H₀ gerçekte DOĞRU</text>
+  <rect x="570" y="60" width="270" height="45" rx="0" fill="#e2e8f0"/>
+  <text x="705" y="88" text-anchor="middle" fill="#1e293b" font-size="15" font-weight="700">H₀ gerçekte YANLIŞ</text>
+
+  <!-- Row labels -->
+  <rect x="60" y="105" width="240" height="60" rx="0" fill="#f1f5f9"/>
+  <text x="180" y="135" text-anchor="middle" fill="#1e293b" font-size="14" font-weight="700">H₀'ı REDDETTİK</text>
+  <text x="180" y="155" text-anchor="middle" fill="#64748b" font-size="12">(p ≤ α)</text>
+
+  <rect x="60" y="165" width="240" height="60" rx="0" fill="#f1f5f9"/>
+  <text x="180" y="195" text-anchor="middle" fill="#1e293b" font-size="14" font-weight="700">H₀'ı REDDETMEDİK</text>
+  <text x="180" y="215" text-anchor="middle" fill="#64748b" font-size="12">(p > α)</text>
+
+  <!-- Cell: Reject H0 + H0 True = Type I Error -->
+  <rect x="300" y="105" width="270" height="60" rx="0" fill="#fef2f2" stroke="#fecaca" stroke-width="2"/>
+  <text x="435" y="130" text-anchor="middle" fill="#dc2626" font-size="15" font-weight="700">❌ Tip I Hata (α)</text>
+  <text x="435" y="152" text-anchor="middle" fill="#dc2626" font-size="12">Yalancı Pozitif</text>
+
+  <!-- Cell: Reject H0 + H0 False = Correct (Power) -->
+  <rect x="570" y="105" width="270" height="60" rx="0" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="2"/>
+  <text x="705" y="130" text-anchor="middle" fill="#16a34a" font-size="15" font-weight="700">✓ Doğru Karar</text>
+  <text x="705" y="152" text-anchor="middle" fill="#16a34a" font-size="12">Güç (1 − β)</text>
+
+  <!-- Cell: Not Reject H0 + H0 True = Correct -->
+  <rect x="300" y="165" width="270" height="60" rx="0" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="2"/>
+  <text x="435" y="190" text-anchor="middle" fill="#16a34a" font-size="15" font-weight="700">✓ Doğru Karar</text>
+  <text x="435" y="212" text-anchor="middle" fill="#16a34a" font-size="12">(1 − α)</text>
+
+  <!-- Cell: Not Reject H0 + H0 False = Type II Error -->
+  <rect x="570" y="165" width="270" height="60" rx="0" fill="#fefce8" stroke="#fde68a" stroke-width="2"/>
+  <text x="705" y="190" text-anchor="middle" fill="#92400e" font-size="15" font-weight="700">⚠️ Tip II Hata (β)</text>
+  <text x="705" y="212" text-anchor="middle" fill="#92400e" font-size="12">Yalancı Negatif</text>
+
+  <!-- Examples -->
+  <rect x="60" y="250" width="380" height="130" rx="12" fill="#fef2f2" stroke="#fecaca" stroke-width="1"/>
+  <text x="250" y="278" text-anchor="middle" fill="#dc2626" font-size="15" font-weight="700">Tip I Hata Örnekleri</text>
+  <text x="80" y="305" fill="#334155" font-size="13">• Etkisiz ilacı "etkili" ilan etmek</text>
+  <text x="80" y="328" fill="#334155" font-size="13">• Sağlıklı kişiye "hasta" demek</text>
+  <text x="80" y="351" fill="#334155" font-size="13">• Olmayan gen ilişkisini "var" kabul etmek</text>
+  <text x="80" y="374" fill="#64748b" font-size="12">α = 0.05 → 100 testten 5'inde bu hata yapılır</text>
+
+  <rect x="460" y="250" width="380" height="130" rx="12" fill="#fefce8" stroke="#fde68a" stroke-width="1"/>
+  <text x="650" y="278" text-anchor="middle" fill="#92400e" font-size="15" font-weight="700">Tip II Hata Örnekleri</text>
+  <text x="480" y="305" fill="#334155" font-size="13">• Etkili ilacı "etkisiz" saymak</text>
+  <text x="480" y="328" fill="#334155" font-size="13">• Hasta kişiyi "sağlıklı" göndermek</text>
+  <text x="480" y="351" fill="#334155" font-size="13">• Gerçek gen ilişkisini gözden kaçırmak</text>
+  <text x="480" y="374" fill="#64748b" font-size="12">β azaltmak için: n artır veya α artır</text>
+</svg>

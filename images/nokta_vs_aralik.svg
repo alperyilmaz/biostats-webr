@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 480" font-family="'Segoe UI', 'Helvetica Neue', sans-serif">
+  <rect width="900" height="480" fill="#ffffff" rx="12"/>
+
+  <text x="450" y="40" text-anchor="middle" fill="#1e293b" font-size="28" font-weight="700">Nokta Tahmini vs Aralık Tahmini</text>
+
+  <!-- LEFT: Point estimate -->
+  <text x="220" y="80" text-anchor="middle" fill="#dc2626" font-size="22" font-weight="700">Nokta Tahmini</text>
+  <text x="220" y="108" text-anchor="middle" fill="#64748b" font-size="17">"Hedef 50 metre uzakta"</text>
+
+  <!-- Target -->
+  <circle cx="220" cy="245" r="100" fill="#fee2e2" stroke="#fecaca" stroke-width="1"/>
+  <circle cx="220" cy="245" r="72" fill="#fecaca" stroke="#fca5a5" stroke-width="1"/>
+  <circle cx="220" cy="245" r="44" fill="#fca5a5" stroke="#f87171" stroke-width="1"/>
+  <circle cx="220" cy="245" r="18" fill="#ef4444" stroke="#dc2626" stroke-width="1"/>
+
+  <!-- Single arrow -->
+  <text x="238" y="230" fill="#1e293b" font-size="28">🎯</text>
+
+  <text x="220" y="385" text-anchor="middle" fill="#334155" font-size="20" font-weight="700">x̄ = 172 cm</text>
+  <text x="220" y="415" text-anchor="middle" fill="#64748b" font-size="16">Tek bir sayı — ama ne kadar</text>
+  <text x="220" y="438" text-anchor="middle" fill="#64748b" font-size="16">güvenilir olduğunu bilmiyoruz</text>
+
+  <!-- RIGHT: Interval estimate -->
+  <text x="680" y="80" text-anchor="middle" fill="#16a34a" font-size="22" font-weight="700">Aralık Tahmini (Güven Aralığı)</text>
+  <text x="680" y="108" text-anchor="middle" fill="#64748b" font-size="17">"Hedef 47-53 metre arası"</text>
+
+  <!-- Target -->
+  <circle cx="680" cy="245" r="100" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1"/>
+  <circle cx="680" cy="245" r="72" fill="#bbf7d0" stroke="#86efac" stroke-width="1"/>
+  <circle cx="680" cy="245" r="44" fill="#86efac" stroke="#4ade80" stroke-width="1"/>
+  <circle cx="680" cy="245" r="18" fill="#22c55e" stroke="#16a34a" stroke-width="1"/>
+
+  <!-- Bracket showing interval -->
+  <line x1="625" y1="245" x2="735" y2="245" stroke="#16a34a" stroke-width="4"/>
+  <line x1="625" y1="230" x2="625" y2="260" stroke="#16a34a" stroke-width="4"/>
+  <line x1="735" y1="230" x2="735" y2="260" stroke="#16a34a" stroke-width="4"/>
+  <circle cx="680" cy="245" r="6" fill="#16a34a"/>
+
+  <text x="680" y="385" text-anchor="middle" fill="#334155" font-size="20" font-weight="700">[168, 176] cm</text>
+  <text x="680" y="415" text-anchor="middle" fill="#64748b" font-size="16">Bir aralık — gerçek değerin</text>
+  <text x="680" y="438" text-anchor="middle" fill="#64748b" font-size="16">burada olduğuna %95 güveniyoruz</text>
+
+  <!-- Middle arrow -->
+  <text x="450" y="240" text-anchor="middle" fill="#94a3b8" font-size="40">→</text>
+  <text x="450" y="275" text-anchor="middle" fill="#94a3b8" font-size="16">belirsizliği</text>
+  <text x="450" y="296" text-anchor="middle" fill="#94a3b8" font-size="16">gösterelim</text>
+</svg>

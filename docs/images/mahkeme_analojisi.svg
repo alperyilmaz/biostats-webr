@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" font-family="'Segoe UI', 'Helvetica Neue', sans-serif">
+  <rect width="900" height="520" fill="#ffffff" rx="12"/>
+
+  <text x="450" y="40" text-anchor="middle" fill="#1e293b" font-size="26" font-weight="700">Hipotez Testi = Mahkeme Davası</text>
+
+  <!-- LEFT: Court -->
+  <rect x="30" y="60" width="410" height="200" rx="12" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5"/>
+  <text x="235" y="92" text-anchor="middle" fill="#334155" font-size="20" font-weight="700">⚖️ Mahkeme</text>
+
+  <text x="55" y="125" fill="#334155" font-size="17">Başlangıç varsayımı:</text>
+  <text x="55" y="152" fill="#1e293b" font-size="19" font-weight="700">"Sanık masumdur"</text>
+  <text x="55" y="175" fill="#64748b" font-size="15">(aksi kanıtlanana kadar)</text>
+
+  <text x="55" y="210" fill="#334155" font-size="16">Kanıt güçlüyse → "Suçlu"</text>
+  <text x="55" y="235" fill="#334155" font-size="16">Kanıt yetersizse → Beraat</text>
+
+  <!-- RIGHT: Hypothesis test -->
+  <rect x="460" y="60" width="410" height="200" rx="12" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5"/>
+  <text x="665" y="92" text-anchor="middle" fill="#334155" font-size="20" font-weight="700">📊 Hipotez Testi</text>
+
+  <text x="485" y="125" fill="#334155" font-size="17">Başlangıç varsayımı:</text>
+  <text x="485" y="152" fill="#1e293b" font-size="19" font-weight="700">H₀: "Fark/etki yoktur"</text>
+  <text x="485" y="175" fill="#64748b" font-size="15">(aksi kanıtlanana kadar)</text>
+
+  <text x="485" y="210" fill="#334155" font-size="16">p ≤ α → H₀ reddedilir</text>
+  <text x="485" y="235" fill="#334155" font-size="16">p > α → H₀ reddedilemez</text>
+
+  <!-- Parallels -->
+  <rect x="30" y="280" width="840" height="220" rx="12" fill="#fefce8" stroke="#fde68a" stroke-width="1.5"/>
+
+  <text x="230" y="312" text-anchor="middle" fill="#92400e" font-size="19" font-weight="700">Mahkeme</text>
+  <text x="450" y="312" text-anchor="middle" fill="#94a3b8" font-size="17">↔</text>
+  <text x="670" y="312" text-anchor="middle" fill="#92400e" font-size="19" font-weight="700">İstatistik</text>
+
+  <line x1="50" y1="325" x2="850" y2="325" stroke="#fde68a" stroke-width="1"/>
+
+  <text x="230" y="355" text-anchor="middle" fill="#334155" font-size="17">Masumiyet karinesi</text>
+  <text x="450" y="355" text-anchor="middle" fill="#94a3b8" font-size="17">↔</text>
+  <text x="670" y="355" text-anchor="middle" fill="#334155" font-size="17">H₀ (sıfır hipotezi)</text>
+
+  <text x="230" y="390" text-anchor="middle" fill="#334155" font-size="17">Savcının kanıtları</text>
+  <text x="450" y="390" text-anchor="middle" fill="#94a3b8" font-size="17">↔</text>
+  <text x="670" y="390" text-anchor="middle" fill="#334155" font-size="17">Örneklem verisi</text>
+
+  <text x="230" y="425" text-anchor="middle" fill="#334155" font-size="17">"Makul şüphenin ötesinde"</text>
+  <text x="450" y="425" text-anchor="middle" fill="#94a3b8" font-size="17">↔</text>
+  <text x="670" y="425" text-anchor="middle" fill="#334155" font-size="17">p-değeri ≤ α</text>
+
+  <text x="230" y="460" text-anchor="middle" fill="#dc2626" font-size="17" font-weight="600">Masumu cezalandırmak</text>
+  <text x="450" y="460" text-anchor="middle" fill="#94a3b8" font-size="17">↔</text>
+  <text x="670" y="460" text-anchor="middle" fill="#dc2626" font-size="17" font-weight="600">Tip I Hata (yalancı pozitif)</text>
+
+  <text x="230" y="490" text-anchor="middle" fill="#b45309" font-size="17" font-weight="600">Suçluyu serbest bırakmak</text>
+  <text x="450" y="490" text-anchor="middle" fill="#94a3b8" font-size="17">↔</text>
+  <text x="670" y="490" text-anchor="middle" fill="#b45309" font-size="17" font-weight="600">Tip II Hata (yalancı negatif)</text>
+</svg>
