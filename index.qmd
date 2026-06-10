@@ -93,7 +93,7 @@
 
 ## Ders15
 
-**Teorik** (*23 Mayıs 2025*): Bilimsel tekrarlanabilirlik [Sunum linki](ders10.qmd)
+**Teorik** (*23 Mayıs 2025*): Bilimsel tekrarlanabilirlik [Sunum linki](ders-tekrarlanabilirlik.qmd)
 
 ## Ders16
 
